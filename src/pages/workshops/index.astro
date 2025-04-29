@@ -14,19 +14,7 @@ const Sortedworkshops: CollectionEntry<"workshops">[] = (
 
 const mostRecentArticle: CollectionEntry<"workshops"> = Sortedworkshops[0];
 const { Content } = await mostRecentArticle.render();
-// Prepare slides for carousel
-const chunkSize = 4;
-const slides = [];
-for (let i = 0; i < allWorkshops.length; i += chunkSize) {
-  slides.push(
-    allWorkshops.slice(i, i + chunkSize).map((item) => ({
-      slug: item.data.slug,
-      title: item.data.title,
-      description: item.data.description,
-      image: item.data.image || ''
-    }))
-  );
-}
+
 
 import { formatDate } from "../../utils";
 import type { CollectionEntry } from "astro:content";
@@ -52,9 +40,8 @@ import type { CollectionEntry } from "astro:content";
 
     <div class="bg-slate-100 px-2 py-10 max-w-full">
       <h2 class="text-2xl text-center font-bold mb-6 text-gray-800">
-        More Workshops
+        Past Workshops
       </h2>
-      <!-- <WorkshopComponent slides={slides} client:load /> -->
     </div>
   </section>
 </BaseLayout>
