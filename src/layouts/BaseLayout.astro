@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+interface Props {
+	title?: String	
+}
+const {title} = Astro.props
+import Navigation from "../components/Navigation";
+import Footer from '../components/footer.astro';
+import {SITE_TITLE} from "../constants"
+import Navbar from '../components/navbar.astro';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="moose_logo.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{SITE_TITLE} - {title}</title>
+	</head>
+	<body>
+		<nav><Navbar/></nav>
+		<slot />
+		<Footer><Footer/></Footer>
+		
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+  

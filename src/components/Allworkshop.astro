@@ -1,0 +1,130 @@
+---
+import Picture from '../assets/Gallery_Moose_Multiscale.webp';
+import { SITE_URL } from '../constants';
+
+interface SlideItem {
+  slug: string;
+  image: string;
+  title: string;
+}
+
+interface Props {
+  slides: SlideItem[][];
+}
+
+const { slides } = Astro.props;
+---
+
+<div class="relative max-w-full mx-auto overflow-hidden group" id="carousel-container">
+  <div class="flex transition-transform duration-500 ease-out" id="carousel-track">
+    {slides.map((slide, index) => (
+      <div class="flex-shrink-0 w-full flex flex-row justify-center sm:justify-start gap-4 px-2" style="scroll-snap-align: start;" data-key={index}>
+        {slide.map((item) => (
+          <a href={`${SITE_URL}workshop/${item.slug}`} class="block w-84 h-64 sm:w-3/2 md:w-1/2 lg:w-1/3 xl:w-1/4">
+            <div class="bg-slate-800 rounded-xl overflow-hidden h-auto sm:h-64 group">
+              <img
+                src={Picture.src}
+                alt={item.title}
+                class="object-fit w-full h-48 hover:opacity-90 transition-opacity"
+              />
+              <div class="p-3">
+                <h3 class="text-lg font-semibold text-white truncate">{item.title}</h3>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    ))}
+  </div>
+
+  <div class="flex justify-between items-center mt-6">
+    <button class="bg-slate-700 text-white px-4 py-2 rounded hover:bg-slate-600" id="prev-btn">‹</button>
+    <div class="flex space-x-2" id="carousel-indicators">
+      {slides.map((_, index) => (
+        <button
+          class="w-3 h-3 rounded-full bg-slate-400 hover:bg-slate-300 transition-colors"
+          data-index={index}
+          aria-label={`Go to slide ${index + 1}`}
+        ></button>
+      ))}
+    </div>
+    <button class="bg-slate-700 text-white px-4 py-2 rounded hover:bg-slate-600" id="next-btn">›</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    const track = document.getElementById('carousel-track');
+    const slides = document.querySelectorAll('#carousel-track > div');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const indicators = document.querySelectorAll('#carousel-indicators button');
+    let autoSlideInterval: ReturnType<typeof setInterval> | null;
+
+    if (!slides.length) {
+      console.warn("Carousel has no slides.");
+      return;
+    }
+
+    function updateSlide() {
+      if (track) {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('bg-slate-700', index === currentIndex);
+          indicator.classList.toggle('bg-slate-400', index !== currentIndex);
+        });
+      }
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+      updateSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+      updateSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      autoSlideInterval = setInterval(() => {
+        nextSlide();
+      }, 5000);
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+      }
+    }
+
+    prevBtn?.addEventListener('click', prevSlide);
+    nextBtn?.addEventListener('click', nextSlide);
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlide();
+        stopAutoSlide();
+        startAutoSlide();
+      });
+    });
+
+    const carouselContainer = document.getElementById('carousel-container');
+    carouselContainer?.addEventListener('mouseenter', stopAutoSlide);
+    carouselContainer?.addEventListener('mouseleave', startAutoSlide);
+
+    updateSlide();
+    startAutoSlide();
+
+    console.log("Carousel initialized with", slides.length, "slides");
+  });
+</script>
