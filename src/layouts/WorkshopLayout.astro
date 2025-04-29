@@ -1,0 +1,31 @@
+<!-- ---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import WorkshopComponent from "../components/workshop.astro"; // <- New Carousel Component
+import picture from "../assets/Gallery_Moose_Multiscale.webp";
+const allWorkshops: CollectionEntry<"workshops">[] = await getCollection("workshops");
+const { slug } = Astro.params;
+const workshop = allWorkshops.find((p) => p.data.slug === slug);
+
+if (!workshop) {
+  throw new Error(`Workshop not found for slug: ${slug}`);
+}
+
+// Prepare slides for the carousel
+const chunkSize = 8;
+const slides = [];
+for (let i = 0; i < allWorkshops.length; i += chunkSize) {
+  slides.push(
+    allWorkshops.slice(i, i + chunkSize).map((item) => ({
+      slug: item.data.slug,
+      image: item.data.image || picture.src, // fallback if missing
+      title: item.data.title,
+    }))
+  );
+}
+---
+
+<div class="bg-slate-100 text-white px-2 py-10 max-w-full">
+    <WorkshopComponent slides={slides} client:load/>
+</div> -->

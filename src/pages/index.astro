@@ -1,0 +1,259 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_TITLE, SITE_URL } from "../constants";
+import { funders } from "../assets/funders/funders";
+import Moose_Multiscale from "../assets/Gallery_Moose_Multiscale.webp";
+import { Image } from "astro:assets";
+import backgroundVideo from "../assets/traub2005moose.mp4";
+import Tutorial from "../components/start.jsx";
+---
+
+<BaseLayout title="Home">
+  <!-- Hero section -->
+
+  <div class="relative h-full isolate px-6 pt-2 pb-24 lg:px-8">
+    <!-- Background Video -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class="absolute inset-0 -z-10 w-full h-full object-cover object-center opacity-100"
+    >
+      <source src={backgroundVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- Overlay inset-0.25-->
+    <div class="absolute inset-0.25 -z-10 bg-black/.10"></div>
+
+    <!-- Foreground Content -->
+    <div class="flex items-center justify-center min-h-screen px-4">
+      <div class="max-w-2xl w-full text-center py-20 sm:py-24">
+        <h1
+          class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold text-stone-50 break-words"
+          style="text-shadow: 0 0 15px rgba(255,255,255,0.3);"
+        >
+          Multiscale Object Oriented Simulation Environment
+        </h1>
+
+        <div class="p-1">
+          <p
+            class="mt-6 backdrop-blur-xs bg-radial text-base sm:text-lg md:text-xl text-stone-100 max-w-xl mx-auto"
+          >
+            Designed to simulate neural systems ranging from subcellular
+            components and biochemical reactions to complex models of single
+            neurons, circuits, and large networks.
+          </p>
+        </div>
+
+        <div
+          class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="/documentation#getstarted"
+            class="rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-500 shadow-md"
+          >
+            Get started
+          </a>
+          <a
+            href="#"
+            class="text-sm font-semibold text-black bg-white rounded-md hover:text-indigo-600 px-5 py-3"
+          >
+            Learn more →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative overflow-hidden">
+    <div
+      class="absolute w-60 h-60 bg-fuchsia-100 rounded-full filter blur-3xl opacity-30 top-10 left-20"
+    >
+    </div>
+    <div
+      class="absolute w-60 h-60 bg-green-200 rounded-full filter blur-3xl opacity-30 top-32 right-32"
+    >
+    </div>
+    <!-- Tutorials List -->
+    <section class="py-10">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" id="#tutorials">
+          Tutorials
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="mb-3 text-3xl font-semibold">
+              Single Neuron Electrical Aspects
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Neurons modeled as equivalent electrical circuits.
+            </p>
+            <a
+              href="https://moose.ncbs.res.in/readthedocs/user/py/cookbook/elec.html"
+              class="text-blue-600 hover:text-purple-800 inline-flex items-center"
+              >Learn more →</a
+            >
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-3xl font-semibold mb-3">Chemical Bistables</h3>
+            <p class="text-gray-600 mb-4">
+              A bistable system has two stable equilibrium states.
+            </p>
+            <a
+              href="https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalBistables.html"
+              class="text-blue-600 hover:text-purple-800 inline-flex items-center"
+              >Learn more →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- News Section
+  <div class="bg-white py-10">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="mx-auto py-2 max-w-2xl">
+        <h2 class="text-4xl font-semibold  text-gray-900">
+          News
+        </h2>
+      </div>
+      <div
+        class="mt-10 grid grid-cols-1 gap-6 border-t border-gray-200 pt-10 bg-blue-50"
+      >
+        {
+          events.map((post) => (
+            <article class="flex flex-col max-w-xl p-2">
+              <div class="flex items-center gap-x-10 text-xs text-gray-500">
+                <time datetime={post.datetime}>{post.datetime}</time>
+                <span class="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">
+                  {post.typeOf}
+                </span>
+              </div>
+              <div class="mt-3 group">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-gray-600">
+                  <a href={post.link}>{post.heading}</a>
+                </h3>
+                <p class="mt-5 text-sm text-gray-600">{post.content}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Few tutorial -->
+  <Tutorial client:load />
+
+  <!-- <div class="relative overflow-hidden">
+    <div
+      class="absolute w-60 h-60 bg-fuchsia-100 rounded-full filter blur-3xl opacity-30 top-10 left-20"
+    >
+    </div>
+    <div
+      class="absolute w-60 h-60 bg-green-200 rounded-full filter blur-3xl opacity-30 top-32 right-32"
+    > -->
+    </div>
+    <!-- Publications Section -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Recent Publications</h2>
+        <div class="grid grid-row-1 md:grid-row-2 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-3">
+              Multi-scale Modeling of Neural Circuits
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Approaches to integrated modeling from molecular to network
+              levels.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 hover:text-blue-800 inline-flex items-center"
+              >Learn more <span class="ml-1">→</span></a
+            >
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-3">
+              Computational Methods for Neuronal Simulations
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Reviewing recent numerical methods for complex neural models.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 hover:text-blue-800 inline-flex items-center"
+              >Learn more <span class="ml-1">→</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funders Section -->
+    <div class="bg-white py-10 sm:py-15" id="funders">
+      <div class="mx-auto max-w-7xl px-5 py-3 lg:px-8 sm:text-center">
+        <h2 class="text-3xl font-semibold text-gray-900 sm:text-4xl">
+          Funders
+        </h2>
+        <div
+          class="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-5 lg:max-w-none lg:grid-cols-5"
+        >
+          {
+            funders.map((funder) => (
+              <Image
+                class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                src={funder.src}
+                alt={funder.name}
+                width="158"
+                height="48"
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-3">Get in Touch</h3>
+            <p class="text-gray-600 mb-4">
+              Join our community to connect with other MOOSE users.
+            </p>
+            <a
+              href="community.html#contact-us"
+              class="text-blue-600 hover:text-blue-800 inline-flex items-center"
+              >Learn more <span class="ml-1">→</span></a
+            >
+          </div>
+          <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-3">Events</h3>
+            <p class="text-gray-600 mb-4">
+              Explore workshops, webinars, and neuroscience events.
+            </p>
+            <a
+              href="/workshop"
+              class="text-blue-600 hover:text-blue-800 inline-flex items-center"
+              >Learn more <span class="ml-1">→</span></a
+            >
+          </div>
+          <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-3">Getting Started</h3>
+            <p class="text-gray-600 mb-4">
+              New to MOOSE? Begin your first simulation here.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 hover:text-blue-800 inline-flex items-center"
+              >Learn more <span class="ml-1">→</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+</BaseLayout>
