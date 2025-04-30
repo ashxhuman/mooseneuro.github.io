@@ -176,7 +176,7 @@ export default function Navigation() {
               onMouseLeave={() => handleMenuMouseLeave("docs")}
             >
               <a
-                href={SITE_URL + "documentation"}
+                href="documentation"
                 className="text-sm font-semibold text-gray-900 transition duration-200 hover:text-indigo-600 hover:border-b-2 hover:border-indigo-600 flex items-center gap-1"
               >
                 Documentation
@@ -283,7 +283,7 @@ export default function Navigation() {
 
             {/* Activity link (no dropdown) */}
             <a
-              href={SITE_URL + "activity"}
+              href="activity"
               className="text-sm font-semibold text-gray-900 transition duration-200 hover:text-indigo-600 hover:border-b-2 hover:border-indigo-600"
             >
               Activity
@@ -296,7 +296,7 @@ export default function Navigation() {
               onMouseLeave={() => handleMenuMouseLeave("community")}
             >
               <a
-                href={SITE_URL + "community"}
+                href="community"
                 className="text-sm font-semibold text-gray-900 transition duration-200 hover:text-indigo-600 hover:border-b-2 hover:border-indigo-600 flex items-center gap-1"
               >
                 Community
