@@ -6,7 +6,7 @@ import FAQ from "../components/Faq.astro";
 import header from "/public/moose_logo.png";
 
 const faq = await import.meta.glob("../content/faq.md", { eager: true });
-const teams = await import.meta.glob("../content/teams.md", { eager: true });
+const team = await import.meta.glob("../content/team.md", { eager: true });
 
 interface Item {
   name: string;
@@ -19,11 +19,11 @@ interface FaqItem {
   answer: string;
 }
 
-const teamsData = Object.values(teams)[0] as { frontmatter: { team: Item[] } };
+const teamData = Object.values(team)[0] as { frontmatter: { team: Item[] } };
 const faqData = Object.values(faq)[0] as {
   frontmatter: { title: string; items: FaqItem[] };
 };
-const Teams = teamsData.frontmatter.team;
+const Team = teamData.frontmatter.team;
 ---
 
 <BaseLayout title="Community">
@@ -96,12 +96,6 @@ const Teams = teamsData.frontmatter.team;
         <h2 class="text-5xl font-semibold  text-white sm:text-7xl">
           Community
         </h2>
-        <p
-          class="mt-8 text-lg font-medium  text-gray-300 sm:text-xl/8"
-        >
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
-        </p>
       </div>
       <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
         <div
@@ -111,7 +105,7 @@ const Teams = teamsData.frontmatter.team;
             >Community Guidelines <span aria-hidden="true">&rarr;</span></a
           >
           <a href="#team"
-            >Meet our leadership <span aria-hidden="true">&rarr;</span></a
+            >The MOOSE Team<span aria-hidden="true">&rarr;</span></a
           >
         </div>
       </div>
@@ -127,8 +121,6 @@ const Teams = teamsData.frontmatter.team;
           Meet our Team
         </h2>
         <p class="mt-6 text-lg/8 text-gray-600">
-          We’re a dynamic group of individuals who are passionate about what we
-          do
         </p>
       </div>
       <ul
@@ -136,7 +128,7 @@ const Teams = teamsData.frontmatter.team;
         class="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2"
       >
         {
-          Teams.map((team) => (
+          Team.map((team) => (
             <li>
               <div class="flex items-center gap-x-6">
                 <Image
