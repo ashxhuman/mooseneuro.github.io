@@ -27,15 +27,26 @@ import type { CollectionEntry } from "astro:content";
     </h1>
 
     <!--Latest workshop-->
-    <div class="grid grid-flow-col grid-rows-3 gap-4 p-12 pt-30">
-      <img src={mostRecentArticle.data.image} alt="" class="row-span-3" />
-      <h3 class="col-span-2 prose font-bold text-5xl">
-        {mostRecentArticle.data.title}
-      </h3>
-      <p class="prose lg:prose-xl">{mostRecentArticle.data.description}</p>
-    </div>
-    <div class="col-span-2 row-span-2 p-10 prose lg:prose-p">
-      <Content />
+    <div class="container mx-auto">
+      {/* Article Header */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 p-6">
+        <div class="md:row-span-2 md:col-span-1">
+          <img
+            src={mostRecentArticle.data.image || "/placeholder.svg"}
+            alt={mostRecentArticle.data.title}
+            class="max-w-full h-auto object-cover rounded-lg"
+          />
+        </div>
+        <div class="md:col-span-2 space-y-4">
+          <h3 class="font-bold text-4xl md:text-5xl">{mostRecentArticle.data.title}</h3>
+          <p class="prose lg:prose-xl">{mostRecentArticle.data.description}</p>
+        </div>
+      </div>
+
+      {/* Article Content */}
+      <div class="max-w-full p-6 md:p-10 prose lg:prose-lg mx-auto">
+        <Content />
+      </div>
     </div>
 
     <div class="bg-slate-100 px-2 py-10 max-w-full">

@@ -11,7 +11,6 @@ interface Item {
   image: string;
 }
 
-
 const teamData = Object.values(team)[0] as { frontmatter: { team: Item[] } };
 const Team = teamData.frontmatter.team;
 
@@ -23,6 +22,7 @@ interface SupportItem {
 
 const supportData = Object.values(support)[0] as {frontmatter: { title: string; description: string; entry: SupportItem[] }};
 const Support = supportData.frontmatter.items;
+
 ---
 
 <BaseLayout title="Community">
@@ -101,7 +101,7 @@ const Support = supportData.frontmatter.items;
           class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10"
           >	  
           <a href="#">Community Guidelines <span aria-hidden="true">&rarr;</span></a>
-	  <a href="#">Discussions and Support <span aria-hidden="true">&rarr;</span></a>
+	        <a href="#support">Discussions and Support <span aria-hidden="true">&rarr;</span></a>
           <a href="#team">The MOOSE Team<span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
@@ -131,7 +131,9 @@ const Support = supportData.frontmatter.items;
         </ul>
       </div>
     </div>
-  </div>  <!-- Team section -->
+  </div>  
+  
+  <!-- Team section -->
   <div class="bg-white py-24 sm:py-32" id="team">
     <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-2">
       <div class="max-w-xl">
