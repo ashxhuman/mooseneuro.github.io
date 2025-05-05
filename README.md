@@ -21,6 +21,11 @@ npx astro build
 ```
 in the repo root folder.
 
+# Preview
+After building, preview the build website with
+```
+npx astro preview
+```
 
 # Testing
 To test in development mode
