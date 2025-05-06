@@ -17,8 +17,8 @@ const carouselItems = [
   },
   {
     id: "3",
-    title: "Squid Giant AxonNeural Network Visualization",
-    description: "Graphical Tool for Simulating Hodgkin and Huxley's Classic Experiments on the Squid Giant Axon",
+    title: "Squid Giant Axon",
+    description: "Graphical tool for simulating Hodgkin and Huxley's classic experiments on the squid giant axon",
     link: "https://moose.ncbs.res.in/readthedocs/user/py/tutorials/Squid.html",
   },
 ];
