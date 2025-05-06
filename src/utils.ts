@@ -7,36 +7,34 @@ function formatDate(date: Date): string {
   return new Date(date).toLocaleDateString(undefined, options);
 }
 
-export { formatDate };
-
-import { parse } from 'bibtex-parse';
-import { CiteProc } from 'citeproc';
 import fs from 'fs';
+import path from 'path';
+import { parse } from 'bibtex-parse';
+import CSL from 'citeproc';
 
-// 1. Load your BibTeX file
-const bibtex = fs.readFileSync('./public/assets/publications.bib', 'utf-8');
+export function formatCitations() {
+  const bibtex = fs.readFileSync('./public/assets/publications.bib', 'utf-8');
+  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAA')
+  console.log(bibtex)
+  const citations = parse(bibtex); // parse into CSL-JSON
+  console.log('BBBBBBBBBBBBBBBBBBBBBBBBBBB')
+  console.log(citations)
+  const style = fs.readFileSync('./public/csl/apa-cv.csl', 'utf-8');
 
-// 2. Parse BibTeX to CSL-JSON
-export function getCitations() {
-  const entries = parse(bibtex);
-  return Object.values(entries);
-}
+  const locale = fs.readFileSync('./public/csl/locales-en-US.xml', 'utf-8');
+  console.log('#########################', typeof locale)
+  const sys = {
+    retrieveLocale: (lang) => locale,
+    retrieveItem: (id) => citations.find((item) => item.id === id),
+  };
 
-// 3. Initialize Citeproc
-export function formatCitations(style = 'apa-cv') {
-  const citations = getCitations();
-  const styleFile = fs.readFileSync(`./public/csl/${style}.csl`, 'utf-8');
-  
-  const citeproc = new CiteProc({
-    retrieveLocale: () => '',
-    retrieveItem: (id) => citations.find(item => item.id === id)
-  });
+  const citeproc = new CSL.Engine(sys, style);
+  citeproc.updateItems(citations.map((item) => item.id));
 
-  citeproc.updateItems(citations.map(item => item.id));
-  citeproc.setStyle(styleFile);
+  const [meta, entries] = citeproc.makeBibliography();
 
-  return citations.map(item => ({
+  return citations.map((item, i) => ({
     id: item.id,
-    citation: citeproc.makeBibliography()[1].join('')
+    citation: entries[i],
   }));
 }
