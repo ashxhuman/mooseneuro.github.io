@@ -6,19 +6,21 @@ const carouselItems = [
   {
     id: "1",
     title: "Chemical Oscillators",
-    description: "Tutorial on modling chemical systems in which the concentrations of one or more reactants undergoes periodic changes.",
+    description:
+      "Tutorial on modling chemical systems in which the concentrations of one or more reactants undergoes periodic changes.",
     link: "https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalOscillators.html",
   },
   {
     id: "2",
     title: "Chemical Bistable Systems",
     description: "Tutorials on modeling bistable chemical systems",
-    link: "https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalBistables.html"
+    link: "https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalBistables.html",
   },
   {
     id: "3",
     title: "Squid Giant Axon",
-    description: "Graphical tool for simulating Hodgkin and Huxley's classic experiments on the squid giant axon",
+    description:
+      "Graphical tool for simulating Hodgkin and Huxley's classic experiments on the squid giant axon",
     link: "https://moose.ncbs.res.in/readthedocs/user/py/tutorials/Squid.html",
   },
 ];
@@ -184,7 +186,7 @@ export default function Carousel() {
                 {Array.from({ length: maxIndex + 1 }).map((_, i) => (
                   <button
                     key={i}
-                    className={`w-2 h-2 rounded-full transition-all ${
+                    className={`w-2 h-2 p-2 rounded-full transition-all ${
                       i === currentIndex
                         ? "bg-white w-6"
                         : "bg-gray-600 hover:bg-gray-500"
