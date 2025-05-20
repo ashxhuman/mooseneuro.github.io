@@ -1,0 +1,89 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+import { getEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+const { slug } = Astro.params;
+import { formatDate } from "../../utils";
+import WorkshopComponent from "../../components/Allworkshop.astro";
+import { Button } from "@/components/ui/button";
+import WorkshopCarouselWrapper from "../../components/WorkshopCarouselWrapper.tsx";
+// export async function getStaticPaths() {
+//   const allWorkshops: CollectionEntry<"workshops">[] =
+//     await getCollection("workshops");
+
+//   return allWorkshops.map((entry) => ({
+//     params: {
+//       slug: entry.id,
+//     },
+//     props: { entry },
+//   }));
+// }
+
+// if (slug === undefined) {
+//   throw new Error("Slug is required");
+// }
+
+// const { entry } = Astro.props;
+
+// if (entry === undefined) {
+//   return Astro.redirect("/404");
+// }
+
+// // TypeScript needs explicit type assertion since entry could be undefined
+// const { Content } = await entry.render();
+export async function getStaticPaths() {
+  const allWorkshops = await getCollection("workshops");
+  return allWorkshops.map((entry) => ({
+    params: {
+      slug: entry.id,
+    },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title || "Workshop"}>
+  <h1 class="text-5xl text-black p-5 text-center box-border pt-30">
+    Workshops
+  </h1>
+  <div class="container m-auto p-6">
+
+    <section class="p-1">
+          <a
+      href="/workshops"
+      class="inline-block bg-gray-100 cursor-pointer hover:text-white"
+      ><Button>Latest Workshop</Button></a
+    >
+      <!--Latest workshop-->
+      <div class="container w-full">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 p-6 m-5">
+          <div class="md:row-span-2 md:col-span-1">
+            <img
+              src={entry.data.image || "/placeholder.svg"}
+              alt={entry.data.title}
+              class="max-w-full h-auto object-cover rounded-lg"
+            />
+          </div>
+          <div class="md:col-span-2 space-y-4">
+            <h3 class="font-bold text-4xl md:text-5xl">
+              {entry.data.title}
+            </h3>
+            <p class="prose lg:prose-s p-1">{entry.data.description}</p>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-full p-6 md:p-10 prose lg:prose-l mx-auto">
+        <Content />
+      </div>
+    </section>
+  </div>
+  <script>
+    const nav = document.getElementsByTagName("header")[0];
+    nav.classList.add("bg-black");
+  </script>
+</BaseLayout>

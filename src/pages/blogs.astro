@@ -1,15 +1,21 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogCarouselWrapper from "../components/BlogCarouselWrapper";
+import type { CollectionEntry } from "astro:content";
 ---
 
 <BaseLayout title="Blog">
-    <section class="p-12">
-    <h1 class="text-5xl text-black p-5 text-center box-border">Blog</h1>
-    <div class="prose lg:prose-xl text-center p-5">
-</section>
-</BaseLayout>
-<script>
+  <section class="p-12">
+    <h1 class="text-4xl text-black p-15 text-center box-border bg-amber-100">
+      Blog
+    </h1>
+    <BlogCarouselWrapper client:load>
+</Carousel>
+
+  </section>
+  <script>
     const nav = document.getElementsByTagName("header")[0];
-    nav.classList.add("bg-black")  
-</script>
+    nav.classList.add("bg-black");
+  </script>
+</BaseLayout>

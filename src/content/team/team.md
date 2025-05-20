@@ -8,7 +8,7 @@ team:
   - name: "Harsha Rani"
     designation: "Senior Developer"
     image: "/assets/team/harsha.jpg"
-	
+
   - name: "Subhasis Ray"
     designation: "Lead Developer"
     image: "/assets/team/subha.png"
@@ -29,4 +29,7 @@ team:
     designation: "UX Researcher"
     image: "/assets/team/deepa.png"
 
+  - name: "Pragathi R"
+    designation: "Frontend Engineer"
+    image: "/assets/team/pragathi.jpg"
 ---

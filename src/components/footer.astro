@@ -3,9 +3,10 @@ import "../styles/global.css";
 import bluesky from "../assets/social/128px-Bluesky_Logo.svg.png"
 import linkedin from "../assets/social/LI-In-Bug.png"
 import X from "../assets/social/x.com-logo-white.png"
+import  {Image}  from "astro:assets";
 ---
 
-<footer class="bg-gray-800 pt-10 text-white">
+<footer class="bg-gray-800 pt-10 text-white max-w-full mx-auto">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-8 grid grid-cols-1 gap-8 md:grid-cols-3">
         <!-- Social Media Column -->
@@ -13,24 +14,30 @@ import X from "../assets/social/x.com-logo-white.png"
           <h2 class="mb-4 text-xl font-semibold">Social Media</h2>
           <div class="flex space-x-4">
             <a href="https://x.com/mooseneurosim" class="text-gray-300 hover:text-white">
-              <img
-                src={X.src}
+              <Image
+                src={X}
                 alt="X"
                 class="h-6 w-auto"
+                width={50}
+                height={50}
               />
             </a>
             <a href="https://bsky.app/profile/moosesim.bsky.social" class="text-gray-300 hover:text-white">
-              <img
-                src={bluesky.src}
+              <Image
+                src={bluesky}
                 alt="Bluesky"
                 class="h-6 w-auto"
+                 width={50}
+                height={50}
               />
             </a>
             <a href="https://www.linkedin.com/in/moose-neuro-simulator-064088315/" class="text-gray-300 hover:text-white">
-              <img
-                src={linkedin.src}
+              <Image
+                src={linkedin}
                 alt="LinkedIn"
                 class="h-6 w-auto"
+                 width={50}
+                height={50}
               />
             </a>
             <!-- <a href="#" class="text-gray-300 hover:text-white">
@@ -48,7 +55,7 @@ import X from "../assets/social/x.com-logo-white.png"
           <h4 class="font-medium text-white">Resources</h4>
           <ul class="flex flex-col gap-y-3 text-gray-300">
             <li class="transition duration-100 hover:text-white">
-              <a href="/blog">Blog</a>
+              <a href="/blogs">Blog</a>
             </li>
             <li class="transition duration-100 hover:text-white">
                 <a href="mailto:mooseneuro@gmail.com">Contact Us</a>

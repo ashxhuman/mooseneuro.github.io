@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --font-display: "sans-serif";
+}
 @custom-variant dark (&:is(.dark *));
 @plugin "@tailwindcss/typography";
 
@@ -118,4 +121,20 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  background-color: #f1f5f9;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
 }

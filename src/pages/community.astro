@@ -3,17 +3,19 @@ import "../styles/global.css";
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import header from "/public/moose_logo.png";
+import { getEntry } from "astro:content";
 
-const team = await import.meta.glob("../content/team.md", { eager: true });
+//const team = await import.meta.glob("../content/team/team.md", { eager: true });
 interface Item {
   name: string;
   designation: string;
   image: string;
 }
 
-const teamData = Object.values(team)[0] as { frontmatter: { team: Item[] } };
-const Team = teamData.frontmatter.team;
-
+// const teamData = Object.values(team)[0] as { frontmatter: { team: Item[] } };
+// const Team = teamData.frontmatter.team;
+const { data } = await getEntry("team", "team");
+const Team : Item[] = data.team;
 const support = await import.meta.glob("../content/support.md", { eager: true });
 interface SupportItem {
   description: string;
@@ -108,7 +110,7 @@ const Support = supportData.frontmatter.items;
     </div>
   </div>
   <!-- Support section -->
-  <div class="bg-white py-24 sm:py-32" id="support">
+  <div class="bg-white py-14 sm:py-12" id="support">
     <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-2">
       <div class="max-w-xl">
         <h2 class="text-3xl font-semibold text-gray-900 sm:text-4xl">
@@ -116,13 +118,13 @@ const Support = supportData.frontmatter.items;
         </h2>
         <p>{supportData.frontmatter.description}</p>
         <ul role="list"  class="list-disc pl-5 space-y-3">
-          {Support.map((entry) => (
-            <li key={entry.url}>
+          {Support.map((entry:any) => (
+            <li data-key={entry.url}>
               <div>
                 <h3 class="text-base/7 font-semibold text-gray-900">
                   {entry.description}
                 </h3>
-                <p class="text-sm/6 font-semibold text-indigo-600">
+                <p class="text-sm/6 font-semibold text-indigo-600  hover:underline">
                   <a href={entry.url}>{entry.urltext}</a>
                 </p>
               </div>
@@ -134,7 +136,7 @@ const Support = supportData.frontmatter.items;
   </div>  
   
   <!-- Team section -->
-  <div class="bg-white py-24 sm:py-32" id="team">
+  <div class="bg-white py-14 sm:py-14" id="team">
     <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-2">
       <div class="max-w-xl">
         <h2
@@ -156,9 +158,9 @@ const Support = supportData.frontmatter.items;
                 <Image
                   class="size-16 rounded-full"
                   src={team.image}
-                  alt={team.name}
-                  width={480}
-                  height={480}
+                  alt="teamImage"
+                  width={250}
+                  height={250}
                 />
                 <div>
                   <h3 class="text-base/7 font-semibold  text-gray-900">
