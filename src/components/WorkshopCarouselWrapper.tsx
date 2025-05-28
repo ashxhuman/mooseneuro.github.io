@@ -11,29 +11,34 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function CarouselSpacing({ allworkshops }) {
   return (
-    <div className="w-full p-11">
-      <h2 className="text-center text-2xl font-bold mb-4">All Workshops</h2>
+    <div className="w-full p-12">
+      <h2 className="text-5xl font-semibold sm:text-3xl p-10 text-center text-black">
+        All Workshops
+      </h2>
       <Carousel className="w-full">
         <CarouselContent>
           {allworkshops.map((workshop: any) => (
             <CarouselItem
               key={workshop.id}
-              className="basis-2/3 md:basis-1/3 lg:basis-1/4"
+              className="basis-2/3 md:basis-2/3 lg:basis-1/4"
             >
-              <div className="p-2">
-                <Card className="w-full h-full">
-                  <CardContent className="flex aspect-square items-center justify-center">
+              <div className="h-full">
+                <Card className="w-full h-full border-bg-brand-primary py-0">
+                  <CardContent className="flex h-full w-full p-0">
                     <a
                       href={`/workshops/${workshop.id}`}
-                      className="text-center"
+                      className="flex h-full w-full items-center justify-center"
                     >
                       <img
-                        src={workshop.data.image || "/images/placeholder.png"}
+                        src={workshop.data.image || "/moose_logo.png"}
                         alt={workshop.data.title}
-                        className="object-cover"
+                        className="h-full w-full object-fit hover:border-1 hover:border-highlight-neon"
                       />
                     </a>
                   </CardContent>
+                  <p className="text-center h-15 text-sm">
+                    {workshop.data.title}
+                  </p>
                 </Card>
               </div>
             </CarouselItem>

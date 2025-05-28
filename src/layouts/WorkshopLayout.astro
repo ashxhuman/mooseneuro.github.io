@@ -1,31 +1,89 @@
-<!-- ---
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
+---
+import type { GetStaticPaths } from "astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import WorkshopComponent from "../components/workshop.astro"; // <- New Carousel Component
-import picture from "../assets/Gallery_Moose_Multiscale.webp";
-const allWorkshops: CollectionEntry<"workshops">[] = await getCollection("workshops");
+import { getCollection, render, getEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 const { slug } = Astro.params;
-const workshop = allWorkshops.find((p) => p.data.slug === slug);
-
-if (!workshop) {
-  throw new Error(`Workshop not found for slug: ${slug}`);
+import { formatDate } from "../utils";
+import WorkshopComponent from "../components/Allworkshop.astro";
+import { Button } from "@/components/ui/button";
+import WorkshopCarouselWrapper from "../components/WorkshopCarouselWrapper.tsx";
+import Allworkshop from "../components/Allworkshop.astro";
+export async function getStaticPaths() {
+  const allWorkshops = await getCollection("workshops");
+  return allWorkshops.map((entry) => ({
+    params: {
+      slug: entry.id,
+    },
+    props: { entry },
+  }));
 }
 
-// Prepare slides for the carousel
-const chunkSize = 8;
-const slides = [];
-for (let i = 0; i < allWorkshops.length; i += chunkSize) {
-  slides.push(
-    allWorkshops.slice(i, i + chunkSize).map((item) => ({
-      slug: item.data.slug,
-      image: item.data.image || picture.src, // fallback if missing
-      title: item.data.title,
-    }))
-  );
-}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
 ---
 
-<div class="bg-slate-100 text-white px-2 py-10 max-w-full">
-    <WorkshopComponent slides={slides} client:load/>
-</div> -->
+<BaseLayout title={entry.data.title || "Workshop"}>
+  <div class="m-auto p-6">
+    <section class="p-1">
+      <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <button
+            class="flex items-center justify-center bg-bg-card p-1 text-text-primary font-normal text-balance hover:bg-brand-secondary"
+          >
+            <a
+              href="/workshops"
+              class="m-0.5 text-black inline-flex items-center hover:text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-left-icon lucide-arrow-left"
+                ><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg
+              >Latest Workshop
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-5xl p-4">
+        <div
+          class="text-center flex flex-col md:flex-row overflow-hidden m-4 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+        >
+          <div class="relative w-full md:w-2/4 md:h-auto">
+            <img
+              src={entry.data.image || "/placeholder.svg"}
+              alt={entry.data.title}
+              class="max-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="relative w-full md:w-2/4 flex flex-col justify-between p-4"
+          >
+            <div class="m-4">
+              <h3 class="text-3xl font-bold text-gray-900">
+                {entry.data.title}
+              </h3>
+              <p
+                class="mt-2 text-xl p-8 text-left font-normal leading-6 antialiased text-gray-600"
+              >
+                {entry.data.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-full p-6 md:p-10 prose lg:prose-l mx-auto">
+        <Content />
+      </div>
+    </section>
+    <WorkshopCarouselWrapper allworkshops={allWorkshops} client:load />
+  </div>
+</BaseLayout>

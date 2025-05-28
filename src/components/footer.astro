@@ -1,91 +1,118 @@
 ---
 import "../styles/global.css";
-import bluesky from "../assets/social/128px-Bluesky_Logo.svg.png"
-import linkedin from "../assets/social/LI-In-Bug.png"
-import X from "../assets/social/x.com-logo-white.png"
-import  {Image}  from "astro:assets";
+import bluesky from "../assets/social/128px-Bluesky_Logo.svg.png";
+import linkedin from "../assets/social/LI-In-Bug.png";
+import X from "../assets/social/x.com-logo-white.png";
+import { Image } from "astro:assets";
 ---
 
+<!-- 
 <footer class="bg-gray-800 pt-10 text-white max-w-full mx-auto">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-        <!-- Social Media Column -->
-        <div>
-          <h2 class="mb-4 text-xl font-semibold">Social Media</h2>
-          <div class="flex space-x-4">
-            <a href="https://x.com/mooseneurosim" class="text-gray-300 hover:text-white">
-              <Image
-                src={X}
-                alt="X"
-                class="h-6 w-auto"
-                width={50}
-                height={50}
-              />
-            </a>
-            <a href="https://bsky.app/profile/moosesim.bsky.social" class="text-gray-300 hover:text-white">
-              <Image
-                src={bluesky}
-                alt="Bluesky"
-                class="h-6 w-auto"
-                 width={50}
-                height={50}
-              />
-            </a>
-            <a href="https://www.linkedin.com/in/moose-neuro-simulator-064088315/" class="text-gray-300 hover:text-white">
-              <Image
-                src={linkedin}
-                alt="LinkedIn"
-                class="h-6 w-auto"
-                 width={50}
-                height={50}
-              />
-            </a>
-            <!-- <a href="#" class="text-gray-300 hover:text-white">
-              <img
-                src="src/assets/social/yt_icon_rgb.png"
-                alt="YouTube"
-                class="h-6 w-auto"
-              />
-            </a> -->
-          </div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div>
+        <h2 class="mb-4 text-xl font-semibold">Social Media</h2>
+        <div class="flex space-x-4">
+          <a
+            href="https://x.com/mooseneurosim"
+            class="text-gray-300 hover:text-white"
+          >
+            <Image src={X} alt="X" class="h-6 w-auto" width={50} height={50} />
+          </a>
+          <a
+            href="https://bsky.app/profile/moosesim.bsky.social"
+            class="text-gray-300 hover:text-white"
+          >
+            <Image
+              src={bluesky}
+              alt="Bluesky"
+              class="h-6 w-auto"
+              width={50}
+              height={50}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/moose-neuro-simulator-064088315/"
+            class="text-gray-300 hover:text-white"
+          >
+            <Image
+              src={linkedin}
+              alt="LinkedIn"
+              class="h-6 w-auto"
+              width={50}
+              height={50}
+            />
+          </a>
         </div>
-  
-        <!-- Resources Column -->
-        <div class="flex flex-col gap-y-2 text-lg">
-          <h4 class="font-medium text-white">Resources</h4>
-          <ul class="flex flex-col gap-y-3 text-gray-300">
-            <li class="transition duration-100 hover:text-white">
-              <a href="/blogs">Blog</a>
-            </li>
-            <li class="transition duration-100 hover:text-white">
-                <a href="mailto:mooseneuro@gmail.com">Contact Us</a>
-            </li>
-            <li class="transition duration-100 hover:text-white">
-              <a href="https://moose.readthedocs.io/en/latest/index.html">Docs</a>
-            </li>
-          </ul>
-        </div>
-  
-        <!-- More Column
-        <div class="flex flex-col gap-y-2 text-lg">
-          <h4 class="font-medium text-white">More</h4>
-          <ul class="flex flex-col gap-y-3 text-gray-300">
-            <li class="transition duration-100 hover:text-white">
-              <a href="#">About Us</a>
-            </li>
-            <li class="transition duration-100 hover:text-white">
-              <a href="#">Contact</a>
-            </li>
-            <li class="transition duration-100 hover:text-white">
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-        </div> -->
       </div>
-  
-      <div class="mt-8 border-t border-gray-700 py-4 text-center text-gray-400">
-        <p>&copy; 2025 Moose Team</p>
+
+      <div class="flex flex-col gap-y-2 text-lg">
+        <h4 class="font-medium text-white">Resources</h4>
+        <ul class="flex flex-col gap-y-3 text-gray-300">
+          <li class="transition duration-100 hover:text-white">
+            <a href="/blogs">Blog</a>
+          </li>
+          <li class="transition duration-100 hover:text-white">
+            <a href="mailto:mooseneuro@gmail.com">Contact Us</a>
+          </li>
+          <li class="transition duration-100 hover:text-white">
+            <a href="https://moose.readthedocs.io/en/latest/index.html">Docs</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </footer>
-  
+    <div class="mt-8 border-t border-gray-700 py-4 text-center text-gray-400">
+      <p>&copy; 2025 Moose Team</p>
+    </div>
+  </div>
+</footer> -->
+
+<footer
+  class="footer footer-horizontal align-center bg-gradient-to-bl from-brand-tertiary to-black text-white text-normal rounded-t-sm p-6"
+>
+  <nav class="grid grid-flow-col gap-4 p-2 justify-center">
+    <a
+      href="mailto:mooseneuro@gmail.com"
+      class="link link-hover hover:border-b-2 border-highlight-neon">Contact</a
+    >
+  </nav>
+  <nav>
+    <div class="grid grid-flow-col gap-4 p-2 justify-center">
+        <div class="flex space-x-4">
+          <a
+            href="https://x.com/mooseneurosim"
+            class="text-gray-300 hover:text-white"
+          >
+            <Image src={X} alt="X" class="h-6 w-auto" width={50} height={50} />
+          </a>
+          <a
+            href="https://bsky.app/profile/moosesim.bsky.social"
+            class="text-gray-300 hover:text-white"
+          >
+            <Image
+              src={bluesky}
+              alt="Bluesky"
+              class="h-6 w-auto"
+              width={50}
+              height={50}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/moose-neuro-simulator-064088315/"
+            class="text-gray-300 hover:text-white"
+          >
+            <Image
+              src={linkedin}
+              alt="LinkedIn"
+              class="h-6 w-auto"
+              width={50}
+              height={50}
+            />
+          </a>
+        </div>
+    </div>
+    <aside class="grid justify-center p-1">
+      <p>Copyright © {new Date().getFullYear()} - MOOSE Team</p>
+    </aside>
+  </nav>
+</footer>
