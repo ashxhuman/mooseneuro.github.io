@@ -4,7 +4,7 @@ description: The first two-days hands-on workshop on MOOSE. This workshop is ope
 
 url: https://docs.google.com/forms/d/e/1FAIpQLSdc1yLm6ZBL6QKIC54gKrIRS_F_Ble1Q9qhhYeyxvKs78YwCg/viewform?usp=sharing
 image: "/assets/workshops/flyer_kolkata_2025_09_25_workshop.png"
-pubDate: 2025-05-01
+pubDate: 2025-05-05
 ---
 
 ## Date: September 25-26, 2025
