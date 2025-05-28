@@ -4,6 +4,7 @@ import path from "path";
 import { parse } from "bibtex-parse";
 import CSL from "citeproc";
 
+export function formatCitations() {
   const bibtex = fs.readFileSync("./public/assets/publications.bib", "utf-8");
   console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
   console.log(bibtex);
@@ -28,5 +29,4 @@ import CSL from "citeproc";
     id: item.id,
     citation: entries[i],
   }));
-
----
+}
