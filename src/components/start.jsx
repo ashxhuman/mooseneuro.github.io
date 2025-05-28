@@ -1,6 +1,7 @@
 // File: src/components/Carousel.jsx
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
 
 const carouselItems = [
   {
@@ -119,7 +120,7 @@ export default function Carousel() {
     if (typeof window !== "undefined") {
       const handleKeyDown = (e) => {
         if (e.key === "ArrowLeft") setCurrentIndex((i) => Math.max(0, i - 1));
-        else if (e.key === "ArrowRight")
+        else if (e.key === "MoveRight")
           setCurrentIndex((i) => Math.min(maxIndex, i + 1));
       };
       window.addEventListener("keydown", handleKeyDown);
@@ -134,7 +135,10 @@ export default function Carousel() {
 
   return (
     <ClientOnly fallback={<div>Loading carousel...</div>}>
-      <div className="bg-gradient-to-b from-slate-950 to-slate-900 text-white">
+      <h2 class="text-4xl font-semibold text-black text-center m-2 p-4 sm:mt-10 lg:mt-10">
+        Tutorials
+      </h2>
+      <div className="bg-gradient-to-b from-brand-primary to-brand-tertiary text-white">
         <div className="container mx-auto px-4 py-10">
           <div
             className="relative overflow-hidden"
@@ -157,22 +161,24 @@ export default function Carousel() {
                   className="flex-shrink-0 p-2"
                   style={{ width: `${100 / visibleSlides}%` }}
                 >
-                  <div className="h-full flex flex-col rounded-xl overflow-hidden bg-slate-900 text-white p-8 hover:bg-slate-800">
+                  <div className="h-full flex flex-col rounded-xl overflow-hidden bg-bg-section text-text-primary p-8">
                     <div className="flex-1">
                       <h2 className="text-2xl md:text-3xl font-bold mb-3">
                         {item.title}
                       </h2>
-                      <p className="text-slate-400 mb-6">{item.description}</p>
+                      <p className="text-text-subtle text-l mb-6">
+                        {item.description}
+                      </p>
                     </div>
                     {item.link && (
                       <a
                         href={item.link}
-                        className="inline-flex items-center text-blue-400 hover:text-blue-300 group"
+                        className="inline-flex items-center text-brand-primary hover:text-highlight-neon group"
                       >
-                        <span className="mr-2">Read more</span>
-                        <ArrowRight
-                          size={18}
-                          className="group-hover:translate-x-1 transition-transform"
+                        <span className="mr-2 text-base">Read More</span>
+                        <MoveRight
+                          size={20}
+                          className="group-hover:translate-x-1 transition-transform text-3xl"
                         />
                       </a>
                     )}

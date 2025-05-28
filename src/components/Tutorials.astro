@@ -1,0 +1,144 @@
+---
+import { Image } from "astro:assets";
+import moose_logo from "../assets/Gallery_Moose_Multiscale.webp";
+const cards = [
+  {
+    title: "Single Neuron Electrical Aspects",
+    description: " Neurons modeled as equivalent electrical circuits.",
+    image: "bg-red-50",
+    url: "https://moose.ncbs.res.in/readthedocs/user/py/cookbook/elec.html",
+  },
+  {
+    title: "Chemical Bistables",
+    description: "A bistable system has two stable equilibrium states.",
+    image: "bg-yellow-50",
+    url: "https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalBistables.html",
+  },
+];
+---
+
+<!-- <div class="relative overflow-hidden">
+    <section class="py-10">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-semibold text-brand-tertiary text-left mb-8 p-2" id="tutorials">
+          Tutorials
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-10 bg-blue-50 rounded-lg">
+            <h3 class="mb-3 text-4xl text-text-primary font-noraml">
+              Single Neuron Electrical Aspects
+            </h3>
+            <p class="text-xl text-text-subtle font-normal mb-4">
+              Neurons modeled as equivalent electrical circuits.
+            </p>
+            <a
+              href="https://moose.ncbs.res.in/readthedocs/user/py/cookbook/elec.html"
+             class="text-brand-tertiary hover:border-b-2 hover:border-highlight-neon inline-flex items-center"
+              >Learn more →</a
+            >
+          </div>
+          <div class="p-10 bg-blue-50 rounded-lg shadow-sm">
+            <h3 class="mb-3 text-4xl text-text-primary font-medium">Chemical Bistables</h3>
+            <p class="text-xl text-text-subtle font-normal mb-4">
+              A bistable system has two stable equilibrium states.
+            </p>
+            <a
+              href="https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalBistables.html"
+             class="text-brand-tertiary hover:border-b-2 hover:border-highlight-neon inline-flex items-center"
+              >Learn more →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> --><!-- 
+<div class="mx-auto max-w-full p-4">
+  <div class="flex flex-col md:flex-row overflow-hidden m-4 shadow-lg transition-shadow duration-300 hover:shadow-xl hover:shadow-highlight-neon/10">
+    <div class="relative w-full md:w-2/4 md:h-auto">
+      <Image src={moose_logo} alt="Moon" class="h-full w-full object-cover" />
+    </div>
+    <div class="relative w-full md:w-2/4 flex flex-col justify-between p-4 bg-gradient-to-tl to-brand-tertiary from-black/10">
+      <div class="absolute inset-0.25 -z-10 bg-black/10"></div>
+      <div>
+        <h3 class="text-2xl font-semibold text-bg-card">Single Neuron Electrical Aspects</h3>
+        <p class="mt-2 text-xl text-bg-base">Neurons modeled as equivalent electrical circuits.</p>
+      </div>
+      <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <button class="flex items-center justify-center bg-bg-card p-1 text-text-primary font-normal text-balance hover:bg-brand-secondary">
+            <a href="https://moose.ncbs.res.in/readthedocs/user/py/cookbook/elec.html" class="text-brand-tertiary inline-flex items-center hover:text-white">
+              Learn more →
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mx-auto max-w-full p-4">
+  <div class="flex flex-col md:flex-row-reverse overflow-hidden m-4 shadow-lg transition-shadow duration-300 hover:shadow-xl hover:shadow-highlight-neon/10">
+    <div class="relative w-full md:w-2/4 md:h-auto">
+      <Image src={moose_logo} alt="Moon" class="h-full w-full object-cover" />
+    </div>
+    <div class="relative w-full md:w-2/4 flex flex-col justify-between p-4 bg-gradient-to-tl to-brand-tertiary from-black/10">
+      <div class="absolute inset-0.25 -z-10 bg-black/10"></div>
+      <div>
+        <h3 class="text-2xl font-semibold text-bg-card">Chemical Bistables</h3>
+        <p class="mt-2 text-xl text-bg-base">A bistable system has two stable equilibrium states.</p>
+      </div>
+      <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <button class="flex items-center justify-center bg-bg-card p-1 text-text-primary font-normal text-balance hover:bg-brand-secondary">
+            <a href="https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalBistables.html" class="text-brand-tertiary inline-flex items-center hover:text-white">
+              Learn more →
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div
+  class="bg-gray-100 p-8 gap-4 max-w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3"
+>
+  {
+    cards.map((article: any) => (
+      <div class="relative w-full h-96 overflow-hidden bg-cover shadow-lg">
+        <div class="absolute top-0 right-0 h-full w-1 bg-blue-900" />
+        <div class="absolute top-0 right-0 h-1 w-full bg-blue-900" />
+
+        <div class="p-8 flex flex-col bg-gradient-to-bl from-stone-50/25 to-brand-secondary">
+          <h2 class="mb-8 text-2xl w-full h-10 leading-tight font-bold text-black">
+            {article.title}
+          </h2>
+          <div class="flex space-x-4 size-48">
+            <p class="text-xl font-medium text-brand-tertiary">
+              {article.description}
+            </p>
+          </div>
+          <a
+            href={article.url}
+            class=" inline-flex w-36 items-center rounded bg-white font-semibold text-highlight-neon shadow-sm transition-shadow px-5 py-2.5 mb-3 me-2"
+          >
+            Read More
+            <svg
+              class="ml-2 h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    ))
+  }
+</div>

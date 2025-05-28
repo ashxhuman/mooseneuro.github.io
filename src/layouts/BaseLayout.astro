@@ -1,10 +1,10 @@
 ---
 import '../styles/global.css';
+import '../main.js'
 interface Props {
 	title?: String	
 }
 const {title} = Astro.props
-import Navigation from "../components/Navigation";
 import Footer from '../components/footer.astro';
 import {SITE_TITLE} from "../constants"
 import Navbar from '../components/navbar.astro';
@@ -19,11 +19,10 @@ import Navbar from '../components/navbar.astro';
 		<meta name="description" content="Neuroscience Software" />
 		<title>{SITE_TITLE} | {title}</title>
 	</head>
-	<body>
+	<body class="font-sans">
 		<nav><Navbar/></nav>
 		<slot />
 		<Footer><Footer/></Footer>
-		
 	</body>
 </html>
 
@@ -35,5 +34,8 @@ import Navbar from '../components/navbar.astro';
 		height: 100%;
 	}
 </style>
-
-  
+<!-- <script>
+const nav = document.getElementsByTagName("header")[0];
+nav.classList.add("bg-black");
+</script>
+   -->

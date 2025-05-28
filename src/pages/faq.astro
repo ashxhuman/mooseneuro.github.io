@@ -6,13 +6,13 @@ const faq = await readFile("src/content/FAQ.html");
 ---
 
 <BaseLayout title="Software FAQ">
-    <section class="p-12">
-    <h1 class="text-5xl text-black p-5 text-center box-border">Frequently asked questions</h1>
+  <section class="p-12">
+    <h1
+      class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
+    >
+      Frequently asked questions
+    </h1>
     <div class="prose lg:prose-xl text-center p-5"></div>
     <div set:html={faq}></div>
-</section>
+  </section>
 </BaseLayout>
-<script>
-    const nav = document.getElementsByTagName("header")[0];
-    nav.classList.add("bg-black")  
-</script>

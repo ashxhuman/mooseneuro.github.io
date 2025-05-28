@@ -4,17 +4,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_TITLE, SITE_URL } from "../constants";
 import { funders } from "../assets/funders/funders";
 import Moose_Multiscale from "../assets/Gallery_Moose_Multiscale.webp";
-import  {Image}  from "astro:assets";
+import { Image } from "astro:assets";
 import Tutorial from "../components/start.jsx";
 import traub from "../assets/Traub2005.mp4";
 import Publication from "../components/publication.astro";
 import Features from "../components/features.astro";
+import Tutorials from "@/components/Tutorials.astro";
 ---
 
 <BaseLayout title="Home">
-  <!-- Hero section -->
-
-  <div class="relative h-full isolate px-6 pt-2 pb-24 lg:px-8">
+  <div class="relative max-h-screen isolate px-6 pt-2 lg:px-8 md:min-h-84">
     <!-- Background Video -->
     <video
       autoplay
@@ -26,14 +25,13 @@ import Features from "../components/features.astro";
       <source src={traub} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <!-- Overlay inset-0.25-->
     <div class="absolute inset-0.25 -z-10 bg-black/.10"></div>
 
     <!-- Foreground Content-->
-    <div class="flex items-center justify-center min-h-screen px-4">
-      <div class="max-w-2xl w-full text-center py-20 sm:py-24">
+    <div class="flex items-center justify-center px-4">
+      <div class="max-w-2xl text-center py-20 sm:py-24">
         <h1
-          class="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold text-white break-words"
+          class="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold text-white inset-1 break-words"
           style="text-shadow: 0 0 15px rgba(255,255,255,0.3);"
         >
           Multiscale Object Oriented Simulation Environment
@@ -52,18 +50,27 @@ import Features from "../components/features.astro";
         <div
           class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
-            href="https://moose.readthedocs.io/en/latest/user/py/quickstart/moose_quickstart.html"
-            class="rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white hover:bg-indigo-500 shadow-md"
+          <button
+            type="button"
+            class="inline-flex transition-all text-white bg-brand-tertiary inset-1 hover:bg-brand-primary focus:outline-none focus:ring-4 focus:ring-blue-600 font-normal rounded-lg text-base px-5 py-2.5 mb-2 me-2"
           >
-            Get started
-          </a>
-          <a
-            href="https://moose.readthedocs.io/en/latest/index.html"
-            class="text-sm font-semibold text-black bg-white rounded-md hover:text-indigo-600 px-5 py-3"
+            <a
+              href="https://moose.readthedocs.io/en/latest/user/py/quickstart/moose_quickstart.html"
+            >
+              Get started
+            </a>
+          </button>
+          <button
+            class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-black rounded-lg group bg-gradient-to-br from-brand-primary to-brand-tertiary group-hover:from-purple-600 group-hover:to-brand-primary hover:text-white focus:ring-4 focus:outline-4 focus:ring-red-900"
           >
-            Learn more →
-          </a>
+            <span
+              class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-transparent"
+            >
+              <a href="https://moose.readthedocs.io/en/latest/index.html">
+                Learn more →
+              </a>
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -71,50 +78,7 @@ import Features from "../components/features.astro";
 
   <!--Features section -->
   <Features />
-  <div class="relative overflow-hidden">
-    <div
-      class="absolute w-60 h-60 bg-fuchsia-100 rounded-full filter blur-3xl opacity-30 top-10 left-20"
-    >
-    </div>
-    <div
-      class="absolute w-60 h-60 bg-green-200 rounded-full filter blur-3xl opacity-30 top-32 right-32"
-    >
-    </div>
-    <!-- Tutorials List -->
-    <section class="py-10">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center" id="#tutorials">
-          Tutorials
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 class="mb-3 text-3xl font-semibold">
-              Single Neuron Electrical Aspects
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Neurons modeled as equivalent electrical circuits.
-            </p>
-            <a
-              href="https://moose.ncbs.res.in/readthedocs/user/py/cookbook/elec.html"
-              class="text-blue-600 hover:text-purple-800 inline-flex items-center"
-              >Learn more →</a
-            >
-          </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 class="text-3xl font-semibold mb-3">Chemical Bistables</h3>
-            <p class="text-gray-600 mb-4">
-              A bistable system has two stable equilibrium states.
-            </p>
-            <a
-              href="https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalBistables.html"
-              class="text-blue-600 hover:text-purple-800 inline-flex items-center"
-              >Learn more →</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+  <Tutorials />
   <!-- News Section
   <div class="bg-white py-10">
     <div class="mx-auto max-w-7xl px-6">
@@ -173,7 +137,9 @@ import Features from "../components/features.astro";
   <!-- Funders Section -->
   <div class="bg-white py-10 sm:py-15" id="funders">
     <div class="mx-auto max-w-7xl px-5 py-3 lg:px-8 sm:text-center">
-      <h2 class="text-3xl font-semibold text-gray-900 sm:text-4xl">Funders</h2>
+      <h2 class="font-semibold sm:text-4xl text-black text-center mb-8">
+        Funders
+      </h2>
       <div
         class="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-5 lg:max-w-none lg:grid-cols-5"
       >
@@ -197,36 +163,40 @@ import Features from "../components/features.astro";
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold mb-3">Blog</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-2xl text-text-primary font-semibold mb-3">
+            Read Our Blogs
+          </h3>
+          <p class="text-text-subtle font-normal mb-4">
             Explore insights, updates, and stories on our Software and
             community.
           </p>
           <a
             href="/blogs"
-            class="text-blue-600 hover:text-blue-800 inline-flex items-center"
+            class="text-brand-tertiary hover:border-b-2 hover:border-highlight-neon inline-flex items-center"
             >Learn more <span class="ml-1">→</span></a
           >
         </div>
         <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold mb-3">Events</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-xl text-text-primary font-semibold mb-3">Events</h3>
+          <p class="text-text-subtle font-normal mb-4">
             Explore insights, updates, and stories here.
           </p>
           <a
             href="/workshops"
-            class="text-blue-600 hover:text-blue-800 inline-flex items-center"
+            class="text-brand-tertiary hover:border-b-2 hover:border-highlight-neon inline-flex items-center"
             >Learn more <span class="ml-1">→</span></a
           >
         </div>
         <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
-          <h3 class="text-xl font-semibold mb-3">Discussion and support</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-xl text-text-primary font-semibold mb-3">
+            Discussion and Support
+          </h3>
+          <p class="text-text-subtle font-normal mb-4">
             Discussions related to MOOSE. Find help, ask questions, and share.
           </p>
           <a
             href="/community#support"
-            class="text-blue-600 hover:text-blue-800 inline-flex items-center"
+            class="text-brand-tertiary hover:border-b-2 hover:border-highlight-neon inline-flex items-center"
             >Learn more <span class="ml-1">→</span></a
           >
         </div>
@@ -234,3 +204,14 @@ import Features from "../components/features.astro";
     </div>
   </section>
 </BaseLayout>
+<script>
+  const nav = document.getElementsByTagName("header")[0];
+  nav.classList.remove("bg-black");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      nav.classList.add("bg-black");
+    } else {
+      nav.classList.remove("bg-black");
+    }
+  });
+</script>
