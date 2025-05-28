@@ -27,9 +27,9 @@ const relatedWorkshops = allWorkshops.filter(
 ---
 
 <BaseLayout title={entry.data.title}>
-  <main class="min-h-screen bg-gray-50">
+  <main class="min-h-screen ">
     <!-- Navigation Breadcrumb -->
-    <!-- <nav class="bg-white border-b border-gray-200">
+    <nav class="bg-white border-b border-gray-200 pt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex items-center space-x-2 text-sm">
           <a
@@ -56,12 +56,14 @@ const relatedWorkshops = allWorkshops.filter(
           >
         </div>
       </div>
-    </nav> -->
+    </nav>
 
     <!-- Hero Section -->
     <section class="bg-white border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-       <h1 class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center">
+        <h1
+          class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center"
+        >
           Workshops
         </h1>
       </div>
@@ -77,7 +79,7 @@ const relatedWorkshops = allWorkshops.filter(
                   src={entry.data.image ||
                     "/placeholder.svg?height=400&width=600"}
                   alt={entry.data.title}
-                  class="w-full h-64 lg:h-full object-cover"
+                  class="w-full h-full lg:h-full object-fit"
                 />
               </div>
             </div>
@@ -99,7 +101,7 @@ const relatedWorkshops = allWorkshops.filter(
     <section class="py-12 lg:py-16 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-blue-600 prose-a:hover:text-blue-800"
+          class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:text-justify prose-a:text-blue-600 prose-a:hover:text-blue-800"
         >
           <Content />
         </div>
