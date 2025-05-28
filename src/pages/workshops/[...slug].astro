@@ -48,7 +48,7 @@ const relatedWorkshops = allWorkshops.filter(
                 stroke-width="2"
                 d="M15 19l-7-7 7-7"></path>
             </svg>
-            Back to Workshops
+            Latest Workshops
           </a>
           <span class="text-gray-400">/</span>
           <span class="text-gray-900 font-medium truncate"
@@ -57,6 +57,7 @@ const relatedWorkshops = allWorkshops.filter(
         </div>
       </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="bg-white border-b border-gray-200">
@@ -77,9 +78,9 @@ const relatedWorkshops = allWorkshops.filter(
               <div class="aspect-w-16 aspect-h-9 lg:aspect-none lg:h-full">
                 <img
                   src={entry.data.image ||
-                    "/placeholder.svg?height=400&width=600"}
+                    "/moose_placeholder.svg"}
                   alt={entry.data.title}
-                  class="w-full h-full lg:h-full object-fit"
+                  class="w-full h-full lg:h-full object-contain bg-brand-secondary"
                 />
               </div>
             </div>
@@ -89,7 +90,7 @@ const relatedWorkshops = allWorkshops.filter(
                 {entry.data.title}
               </h2>
 
-              <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              <p class="text-lg text-gray-600 leading-relaxed mb-6 text-justify">
                 {entry.data.description}
               </p>
             </div>
@@ -121,7 +122,7 @@ const relatedWorkshops = allWorkshops.filter(
         </section>
       )
     }
-    <section class="py-12 lg:py-16 bg-brand-primary">
+    <!-- <section class="py-12 lg:py-16 bg-brand-primary">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -132,6 +133,6 @@ const relatedWorkshops = allWorkshops.filter(
           </a>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 </BaseLayout>

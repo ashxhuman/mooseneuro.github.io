@@ -30,9 +30,9 @@ export default function CarouselSpacing({ allworkshops }) {
                       className="flex h-full w-full items-center justify-center"
                     >
                       <img
-                        src={workshop.data.image || "/moose_logo.png"}
+                        src={workshop.data.image || "/moose_placeholder.svg"}
                         alt={workshop.data.title}
-                        className="h-full w-full object-fit hover:border-1 hover:border-highlight-neon"
+                        className="h-full w-full object-contain hover:border-1 hover:border-highlight-neon bg-brand-secondary"
                       />
                     </a>
                   </CardContent>

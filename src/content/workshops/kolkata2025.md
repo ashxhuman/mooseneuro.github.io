@@ -1,5 +1,5 @@
 ---
-title: "Multiscale Modeling with MOOSE, September 25-26, 2025 at CHINTA, Kolkata"
+title: "Multiscale Modeling with MOOSE, 25th-26th September 2025, at CHINTA, Kolkata, India"
 description: The first two-days hands-on workshop on MOOSE. This workshop is open to undergraduate, masters, and PhD students, and postdoctoral researchers. The sessions will consist of lectures introducing relevant topics in neuroscience followed by hands on computational modeling and simulation with MOOSE. See below for details and application.
 
 url: https://docs.google.com/forms/d/e/1FAIpQLSdc1yLm6ZBL6QKIC54gKrIRS_F_Ble1Q9qhhYeyxvKs78YwCg/viewform?usp=sharing
