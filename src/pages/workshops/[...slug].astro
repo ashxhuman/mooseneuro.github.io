@@ -27,7 +27,7 @@ const relatedWorkshops = allWorkshops.filter(
 ---
 
 <BaseLayout title={entry.data.title}>
-  <main class="min-h-screen ">
+  <main class="min-h-screen">
     <!-- Navigation Breadcrumb -->
     <nav class="bg-white border-b border-gray-200 pt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -58,8 +58,6 @@ const relatedWorkshops = allWorkshops.filter(
       </div>
     </nav>
 
-
-    <!-- Hero Section -->
     <section class="bg-white border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <h1
@@ -77,8 +75,7 @@ const relatedWorkshops = allWorkshops.filter(
             <div class="lg:w-1/2">
               <div class="aspect-w-16 aspect-h-9 lg:aspect-none lg:h-full">
                 <img
-                  src={entry.data.image ||
-                    "/moose_placeholder.svg"}
+                  src={entry.data.image || "/moose_placeholder.svg"}
                   alt={entry.data.title}
                   class="w-full h-full lg:h-full object-contain bg-brand-secondary"
                 />
@@ -90,7 +87,9 @@ const relatedWorkshops = allWorkshops.filter(
                 {entry.data.title}
               </h2>
 
-              <p class="text-lg text-gray-600 leading-relaxed mb-6 text-justify">
+              <p
+                class="text-lg text-gray-700 leading-relaxed mb-6 text-justify"
+              >
                 {entry.data.description}
               </p>
             </div>
@@ -102,7 +101,7 @@ const relatedWorkshops = allWorkshops.filter(
     <section class="py-12 lg:py-16 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:text-justify prose-a:text-blue-600 prose-a:hover:text-blue-800"
+          class="prose prose-lg max-w-screen tracking-tight prose-headings:text-gray-900 prose-p:text-black prose-p:text-justify antialiased prose-a:text-highlight-neon prose-a:hover:text-highlight-neon/90"
         >
           <Content />
         </div>
@@ -112,7 +111,7 @@ const relatedWorkshops = allWorkshops.filter(
     <!-- Related Workshops -->
     {
       relatedWorkshops.length > 0 && (
-        <section class="py-12 lg:py-16 bg-white border-t border-gray-200">
+        <section class="py-6 lg:py-8 bg-gray-50">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <WorkshopCarouselWrapper
               allworkshops={relatedWorkshops}

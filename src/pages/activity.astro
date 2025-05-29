@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const owner = "bhallalab";
+const owner = "mooseneuro";
 const repo = "moose-core";
 const contributor = await fetch(
   `https://api.github.com/repos/${owner}/${repo}/contributors`
@@ -19,17 +19,6 @@ const commits = await fetch(
   }
 );
 const commits_json = await commits.json();
-
-// const lang = await fetch(
-//   `https://api.github.com/repos/bhallalab/${repo}/languages`,
-//   {
-//     headers: {
-//       "User-Agent": "mooseneuro.github.io",
-//       Accept: "application/vnd.github.v3+json",
-//     },
-//   }
-// );
-// const lang_json = await lang.json();
 ---
 
 <BaseLayout title="Activity">
