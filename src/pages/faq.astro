@@ -1,8 +1,6 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { readFile } from "fs/promises";
-const faq = await readFile("src/content/FAQ.html");
 const FAQ = await import.meta.glob("../content/FAQ.md", { eager: true });
 const faq_content = Object.values(FAQ)[0];
 ---
