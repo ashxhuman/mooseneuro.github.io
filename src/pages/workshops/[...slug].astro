@@ -1,38 +1,11 @@
 ---
-import type { GetStaticPaths } from "astro";
+import { type GetStaticPaths } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection, render } from "astro:content";
-import { getEntry } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-const { slug } = Astro.params;
+import { type CollectionEntry } from "astro:content";
 import { formatDate } from "../../utils";
-import WorkshopComponent from "../../components/Allworkshop.astro";
-import { Button } from "@/components/ui/button";
 import WorkshopCarouselWrapper from "../../components/WorkshopCarouselWrapper.tsx";
-// export async function getStaticPaths() {
-//   const allWorkshops: CollectionEntry<"workshops">[] =
-//     await getCollection("workshops");
 
-//   return allWorkshops.map((entry) => ({
-//     params: {
-//       slug: entry.id,
-//     },
-//     props: { entry },
-//   }));
-// }
-
-// if (slug === undefined) {
-//   throw new Error("Slug is required");
-// }
-
-// const { entry } = Astro.props;
-
-// if (entry === undefined) {
-//   return Astro.redirect("/404");
-// }
-
-// // TypeScript needs explicit type assertion since entry could be undefined
-// const { Content } = await entry.render();
 export async function getStaticPaths() {
   const allWorkshops = await getCollection("workshops");
   return allWorkshops.map((entry) => ({
@@ -45,45 +18,120 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+
+// Get all workshops for the carousel, excluding current one
+const allWorkshops = await getCollection("workshops");
+const relatedWorkshops = allWorkshops.filter(
+  (workshop) => workshop.id !== entry.id
+);
 ---
 
-<BaseLayout title={entry.data.title || "Workshop"}>
-  <h1 class="text-5xl text-black p-5 text-center box-border pt-30">
-    Workshops
-  </h1>
-  <div class="container m-auto p-6">
-
-    <section class="p-1">
+<BaseLayout title={entry.data.title}>
+  <main class="min-h-screen">
+    <!-- Navigation Breadcrumb -->
+    <nav class="bg-white border-b border-gray-200 pt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center space-x-2 text-sm">
           <a
-      href="/workshops"
-      class="inline-block bg-gray-100 cursor-pointer hover:text-white"
-      ><Button>Latest Workshop</Button></a
-    >
-      <!--Latest workshop-->
-      <div class="container w-full">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 p-6 m-5">
-          <div class="md:row-span-2 md:col-span-1">
-            <img
-              src={entry.data.image || "/placeholder.svg"}
-              alt={entry.data.title}
-              class="max-w-full h-auto object-cover rounded-lg"
-            />
-          </div>
-          <div class="md:col-span-2 space-y-4">
-            <h3 class="font-bold text-4xl md:text-5xl">
-              {entry.data.title}
-            </h3>
-            <p class="prose lg:prose-s p-1">{entry.data.description}</p>
+            href="/workshops"
+            class="inline-flex items-center text-gray-500 hover:text-gray-700 transition-colors duration-200"
+          >
+            <svg
+              class="w-4 h-4 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Latest Workshops
+          </a>
+          <span class="text-gray-400">/</span>
+          <span class="text-gray-900 font-medium truncate"
+            >{entry.data.title}</span
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <h1
+          class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center"
+        >
+          Workshops
+        </h1>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="lg:flex">
+            <div class="lg:w-1/2">
+              <div class="aspect-w-16 aspect-h-9 lg:aspect-none lg:h-full">
+                <img
+                  src={entry.data.image || "/moose_placeholder.svg"}
+                  alt={entry.data.title}
+                  class="w-full h-full lg:h-full object-contain bg-brand-secondary"
+                />
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+              <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                {entry.data.title}
+              </h2>
+
+              <p
+                class="text-lg text-gray-700 leading-relaxed mb-6 text-justify"
+              >
+                {entry.data.description}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="max-w-full p-6 md:p-10 prose lg:prose-l mx-auto">
-        <Content />
+    </section>
+
+    <section class="py-12 lg:py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="prose prose-lg max-w-screen tracking-tight prose-headings:text-gray-900 prose-p:text-black prose-p:text-justify antialiased prose-a:text-highlight-neon prose-a:hover:text-highlight-neon/90"
+        >
+          <Content />
+        </div>
       </div>
     </section>
-  </div>
-  <script>
-    const nav = document.getElementsByTagName("header")[0];
-    nav.classList.add("bg-black");
-  </script>
+
+    <!-- Related Workshops -->
+    {
+      relatedWorkshops.length > 0 && (
+        <section class="py-6 lg:py-8 bg-gray-50">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <WorkshopCarouselWrapper
+              allworkshops={relatedWorkshops}
+              client:load
+            />
+          </div>
+        </section>
+      )
+    }
+    <!-- <section class="py-12 lg:py-16 bg-brand-primary">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/workshops"
+            class="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-lg text-white hover:bg-highlight-neon transition-colors duration-200"
+          >
+            Browse Latest Workshops
+          </a>
+        </div>
+      </div>
+    </section> -->
+  </main>
 </BaseLayout>

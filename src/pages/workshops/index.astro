@@ -1,54 +1,72 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const allWorkshops = await getCollection("workshops");
-
-const Sortedworkshops: CollectionEntry<"workshops">[] = (
-  await getCollection("workshops")
-).sort(
-  (a: CollectionEntry<"workshops">, b: CollectionEntry<"workshops">) =>
-    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
-const mostRecentArticle: CollectionEntry<"workshops"> = Sortedworkshops[0];
-const { Content } = await render(mostRecentArticle);
-
 import { formatDate } from "../../utils";
 import type { CollectionEntry } from "astro:content";
 import WorkshopCarouselWrapper from "../../components/WorkshopCarouselWrapper.tsx";
+const allWorkshops = await getCollection("workshops");
+const sortedWorkshops: CollectionEntry<"workshops">[] = allWorkshops.sort(
+  (a: CollectionEntry<"workshops">, b: CollectionEntry<"workshops">) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const mostRecentWorkshop: CollectionEntry<"workshops"> = sortedWorkshops[0];
+const { Content } = await render(mostRecentWorkshop);
 ---
 
 <BaseLayout title="Workshops">
-  <section class="p-1">
-    <h1 class="text-5xl text-black p-5 text-center box-border pt-20">
-      Workshops
-    </h1>
+  <main class="min-h-screen bg-gray-50">
+    <section class="bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <h1 class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center">
+          Workshops
+        </h1>
+        <p class="text-3xl sm:text-2xl lg:text-3xl p-2 mt-6 font-normal text-brand-secondary text-left border-b-2 border-brand-secondary">Upcoming</p>
+      </div>
+    </section>
 
-    <!--Latest workshop-->
-    <div class="container w-full">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-2 p-6">
-        <div class="md:row-span-2 md:col-span-1">
-          <img
-            src={mostRecentArticle.data.image || "/placeholder.svg"}
-            alt={mostRecentArticle.data.title}
-            class="max-w-full h-auto object-cover rounded-lg"
-          />
-        </div>
-        <div class="md:col-span-2 space-y-4">
-          <h3 class="font-bold text-4xl md:text-5xl">
-            {mostRecentArticle.data.title}
-          </h3>
-          <p class="prose lg:prose-s p-1">{mostRecentArticle.data.description}</p>
+    <section class="py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="lg:flex">
+            <div class="lg:w-1/2">
+              <div class="aspect-w-16 aspect-h-9 lg:aspect-none lg:h-full sm:h-full">
+                <img
+                  src={mostRecentWorkshop.data.image || "/moose_placeholder.svg"}
+                  alt={mostRecentWorkshop.data.title}
+                  class="w-full h-full lg:h-full object-fit"
+                />
+              </div>
+            </div>
+            
+            <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+              
+              <h2 class="text-4xl lg:text-4xl font-bold text-gray-900 mb-4">
+                {mostRecentWorkshop.data.title}
+              </h2>
+              
+              <p class="text-lg text-gray-700 leading-relaxed text-justify mb-6">
+                {mostRecentWorkshop.data.description}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="max-w-full p-6 md:p-10 prose lg:prose-l mx-auto">
-      <Content />
-    </div>
-    <WorkshopCarouselWrapper allworkshops={allWorkshops} client:load />
-  </section>
-  <script>
-    const nav = document.getElementsByTagName("header")[0];
-    nav.classList.add("bg-black");
-  </script>
+    </section>
+
+    {mostRecentWorkshop && (
+      <section class="py-12 lg:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="prose prose-lg max-w-screen tracking-tight prose-headings:text-gray-900 prose-p:text-black prose-p:text-justify antialiased prose-a:text-highlight-neon prose-a:hover:text-highlight-neon/90">
+            <Content />
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="py-6 lg:py-8 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <WorkshopCarouselWrapper allworkshops={allWorkshops} client:load />
+      </div>
+    </section>
+  </main>
 </BaseLayout>

@@ -1,14 +1,91 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const owner = "mooseneuro";
+const repo = "moose-core";
+const contributor = await fetch(
+  `https://api.github.com/repos/${owner}/${repo}/contributors`
+);
+const contributor_json = await contributor.json();
+
+const commits = await fetch(
+  `https://api.github.com/repos/${owner}/${repo}/commits`,
+  {
+    headers: {
+      "User-Agent": "mooseneuro.github.io",
+      Accept: "application/vnd.github.v3+json",
+    },
+  }
+);
+const commits_json = await commits.json();
 ---
 
 <BaseLayout title="Activity">
-    <section class="p-12">
-    <h1 class="text-5xl text-black p-5 text-center box-border">Activity Page</h1>
-</section>
+  <section class="p-4">
+    <h1
+      class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
+    >
+      Activity Page
+    </h1>
+    <article class="p-8 text-base text-left">
+      <h2 class="text-3xl font-normal sm:4xl">Commits</h2>
+      <ul class="list bg-base rounded-box shadow-md">
+        {
+          commits_json.slice(0, 10).map((commit: any) => (
+            <li class="list row p-4 pb-2 text-xs opacity-60 tracking-wide">
+              <img
+                src={commit.author?.avatar_url}
+                alt={commit.commit.author.login}
+                class="size-10 rounded-box"
+              />
+              <strong>Author:</strong> {commit.commit.author.name}
+              <br />
+              <strong class="list-col--wrap text-xs">Message:</strong>{" "}
+              {commit.commit.message.split("\n")[0]}
+              <br />
+              <strong>Date:</strong>{" "}
+              {new Date(commit.commit.author.date).toLocaleString()}
+              <br />
+              <strong>Revision:</strong> {commit.sha.substring(0, 7)}
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+    <article class="justify-center align-middle p-8 text-base text-left">
+      <h2 class="text-3xl font-normal sm:4xl">Contributors</h2>
+      <!--<aside>
+        <h2 class="text-2xl">language</h2>
+        <ul class="flex flex-col flex-wrap p-2">
+          {
+            Object.keys(lang_json).map((language: any) => (
+              <li>
+                <div class="p-5">
+                  <p>{language}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </aside> -->
+      <ul class="max-w-screen flex flex-row flex-wrap p-12">
+        {
+          contributor_json.map((user: any) => (
+            <li>
+              <div class="avatar max-w-84 flex-1/2">
+                <div class="w-24 rounded-md">
+                  <a href={user.html_url}>
+                    <img src={user.avatar_url} alt={user.login} />
+                  </a>
+                  <p>{user.login}</p>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </section>
 </BaseLayout>
-<script>
-    const nav = document.getElementsByTagName("header")[0];
-    nav.classList.add("bg-black")  
-</script>
+<script></script>

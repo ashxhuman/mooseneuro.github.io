@@ -1,39 +1,60 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import "../main.js";
 interface Props {
-	title?: String	
+  title?: String;
 }
-const {title} = Astro.props
-import Navigation from "../components/Navigation";
-import Footer from '../components/footer.astro';
-import {SITE_TITLE} from "../constants"
-import Navbar from '../components/navbar.astro';
+const { title } = Astro.props;
+import Footer from "../components/footer.astro";
+import { SITE_TITLE } from "../constants";
+import Navbar from "../components/navbar.astro";
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/moose_logo.png" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Neuroscience Software" />
-		<title>{SITE_TITLE} | {title}</title>
-	</head>
-	<body>
-		<nav><Navbar/></nav>
-		<slot />
-		<Footer><Footer/></Footer>
-		
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/moose_logo.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Neuroscience Software, MOOSE is the Multiscale Object-Oriented Simulation Environment. It is designed to simulate neural systems ranging from subcellular components and biochemical reactions to complex models of single neurons, circuits, and large networks. MOOSE can operate at many levels of detail, from stochastic chemical computations, to multicompartment single-neuron models, to spiking neuron network models. MOOSE is a simulation environment, not just a numerical engine. It provides the essentials by way of object-oriented representations of model concepts and fast numerical solvers, but its scope is much broader. It has a scripting interface with Python, graphical displays with Matplotlib, PyQt, and OpenGL, and support for many model formats."
+    />
+    <meta property="og:title" content="moose" />
+    <meta property="og:url" content="https://mooseneuro.github.io/" />
+     <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>{SITE_TITLE} | {title}</title>
+  </head>
+  <body class="font-sans">
+    <nav><Navbar /></nav>
+    <slot />
+    <Footer><Footer /></Footer>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
-
-  
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "moose",
+    "alternateName": [
+      "moose",
+      "mooseneuro",
+      "multiscale",
+      "neuroscience simulator",
+      "Multiscale Object-Oriented Simulation Environment"
+    ],
+    "url": "https://mooseneuro.github.io",
+    "applicationCategory": "Neuroscience",
+    "operatingSystem": "All"
+  }
+</script>
