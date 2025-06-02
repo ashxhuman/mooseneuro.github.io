@@ -1,32 +1,43 @@
 ---
 import fs from "fs";
 import path from "path";
-import { parse } from "bibtex-parse";
-import CSL from "citeproc";
+import Cite from "citation-js";
 
-export function formatCitations() {
+function formatCitations() {
   const bibtex = fs.readFileSync("./public/assets/publications.bib", "utf-8");
-  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
-  console.log(bibtex);
-  const citations = parse(bibtex); // parse into CSL-JSON
-  console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBB");
-  console.log(citations);
-  const style = fs.readFileSync("./public/csl/apa-cv.csl", "utf-8");
-
-  const locale = fs.readFileSync("./public/csl/locales-en-US.xml", "utf-8");
-  console.log("#########################", typeof locale);
-  const sys = {
-    retrieveLocale: (lang) => locale,
-    retrieveItem: (id) => citations.find((item) => item.id === id),
-  };
-
-  const citeproc = new CSL.Engine(sys, style);
-  citeproc.updateItems(citations.map((item) => item.id));
-
-  const [meta, entries] = citeproc.makeBibliography();
-
-  return citations.map((item, i) => ({
-    id: item.id,
-    citation: entries[i],
-  }));
+  const cite = new Cite(bibtex);
+  const output = cite.format("bibliography", {
+    format: "text",
+    template: "apa", // use "apa" style
+    lang: "en-US",
+  });
+  return output;
 }
+
+const citations = formatCitations()
+  .split("\n")
+  .filter((line) => line.trim().length > 0);
+---
+
+<section class="p-2 bg-white">
+  <h2
+    class="text-4xl flex-initial transform-border font-semibold text-black text-center p-2"
+  >
+    Publications
+  </h2>
+
+  <ul class="mx-auto list bg-base-100 rounded-box p-2">
+    {
+      citations.map((citation, index) => (
+        <li class="list-row" key={index}>
+          <div class="list-col-grow p-2 m-4 text-xl shadow-sm">
+            <div class="text-3xl font-thin opacity-90 tabular-nums text-highlight-neon">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+            <div class="italic text-xl font-normal text-gray-700" set:html={citation} />
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
