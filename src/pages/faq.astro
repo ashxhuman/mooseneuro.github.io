@@ -3,16 +3,18 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { readFile } from "fs/promises";
 const faq = await readFile("src/content/FAQ.html");
+const FAQ = await import.meta.glob("../content/FAQ.md", { eager: true });
+const faq_content = Object.values(FAQ)[0];
 ---
 
 <BaseLayout title="Software FAQ">
-  <section class="p-12">
-    <h1
-      class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
-    >
+  <section class="p-8">
+    <h1 class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
       Frequently asked questions
     </h1>
-    <div class="prose lg:prose-xl text-center p-5"></div>
-    <div set:html={faq}></div>
+    <div class="prose prose-a:hover:bg-indigo-200 prose-h3:text-m min-w-full lg:prose-l p-4 prose:text-left prose-h2:bg-red-100 prose-h2:text-2xl">
+      <faq_content.Content/>
+    </div>
+    <!-- <div set:html={faq}></div> -->
   </section>
 </BaseLayout>
