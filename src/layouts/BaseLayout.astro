@@ -4,6 +4,7 @@ import "../main.js";
 import Footer from "../components/footer.astro";
 import { SITE_TITLE } from "../constants";
 import Navbar from "../components/navbar.astro";
+import { seoData } from "../data/schema.js"
 
 interface Props {
   title?: String;
@@ -39,7 +40,7 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={image} />
-
+    <script type="application/ld+json" set:html={seoData}></script>
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <meta
       name="google-site-verification"
@@ -62,20 +63,3 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
     height: 100%;
   }
 </style>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "moose",
-    "alternateName": [
-      "moose",
-      "moose neuro",
-      "multiscale",
-      "neuroscience simulator",
-      "Multiscale Object-Oriented Simulation Environment"
-    ],
-    "url": "https://mooseneuro.github.io",
-    "applicationCategory": "Neuroscience",
-    "operatingSystem": "All"
-  }
-</script>
