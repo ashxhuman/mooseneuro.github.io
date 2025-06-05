@@ -19,6 +19,6 @@ export const seoData = [
     "applicationCategory": "ScientificApplication",
     "operatingSystem": "Linux, macOS, Windows",
     "programmingLanguage": "C++, Python",
-    "description": "MOOSE is an open-source multiscale neuroscience simulation environment for computational modeling of neural systems and biophysical processes.",
+    "description": "MOOSE is an open-source multiscale neuroscience simulation environment for computational modeling of neural systems and biophysical processes."
   }
 ];

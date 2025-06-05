@@ -134,7 +134,7 @@ export default function Carousel() {
   }, [startAutoPlay, stopAutoPlay]);
 
   return (
-    <ClientOnly fallback={<div>Loading carousel...</div>}>
+    <ClientOnly fallback={<div className="text-center text-5xl">Loading carousel...</div>}>
       <h2 class="text-4xl font-semibold text-black text-center m-2 p-4 sm:mt-10 lg:mt-10">
         Tutorials
       </h2>
@@ -166,14 +166,14 @@ export default function Carousel() {
                       <h2 className="text-2xl md:text-3xl font-bold mb-3">
                         {item.title}
                       </h2>
-                      <p className="text-text-subtle text-l mb-6">
+                      <p className="text-text-subtle font-normal text-l mb-6">
                         {item.description}
                       </p>
                     </div>
                     {item.link && (
                       <a
                         href={item.link}
-                        className="inline-flex items-center text-brand-primary hover:text-highlight-neon group"
+                        className="inline-flex w-fit items-center bg-bg-base font-medium text-highlight-neon hover:border-b-2 border-indigo-500 shadow-sm transition-shadow px-2 py-2.5 mb-3 me-2 group"
                       >
                         <span className="mr-2 text-base">Read More</span>
                         <MoveRight
