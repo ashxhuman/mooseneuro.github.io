@@ -26,18 +26,16 @@ const citations = formatCitations()
     Publications
   </h2>
 
-  <ul class="mx-auto list bg-base-100 rounded-box p-2">
-    {
-      citations.map((citation, index) => (
-        <li class="list-row" key={index}>
-          <div class="list-col-grow p-2 m-4 text-xl shadow-sm">
-            <div class="text-3xl font-thin opacity-90 tabular-nums text-highlight-neon">
-              {String(index + 1).padStart(2, "0")}
-            </div>
-            <div class="italic text-xl font-normal text-gray-700" set:html={citation} />
-          </div>
-        </li>
-      ))
-    }
-  </ul>
+ <ul class="mx-auto bg-base-100 rounded-box p-4 space-y-4">
+  {citations.map((citation, index) => (
+    <li class="flex items-start space-x-4" key={index}>
+      <div class="text-3xl font-thin opacity-90 tabular-nums text-highlight-neon min-w-[3rem] text-right">
+        {String(index + 1).padStart(2, "0")}
+      </div>
+      <div class="italic text-xl font-normal text-gray-700" set:html={citation} />
+    </li>
+  ))}
+</ul>
+
+
 </section>
