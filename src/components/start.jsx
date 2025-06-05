@@ -135,7 +135,7 @@ export default function Carousel() {
 
   return (
     <ClientOnly fallback={<div className="text-center text-5xl">Loading carousel...</div>}>
-      <h2 class="text-4xl font-semibold text-black text-center m-2 p-4 sm:mt-10 lg:mt-10">
+      <h2 className="text-4xl font-semibold text-black text-center m-2 p-4 sm:mt-10 lg:mt-10">
         Tutorials
       </h2>
       <div className="bg-gradient-to-b from-brand-primary to-brand-tertiary text-white">

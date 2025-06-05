@@ -19,7 +19,7 @@ const citations = formatCitations()
   .filter((line) => line.trim().length > 0);
 ---
 
-<section class="p-2 bg-white">
+<section class="p-2 bg-white max-full mx-auto">
   <h2
     class="text-4xl flex-initial transform-border font-semibold text-black text-center p-2"
   >
@@ -28,11 +28,12 @@ const citations = formatCitations()
 
  <ul class="mx-auto bg-base-100 rounded-box p-4 space-y-4">
   {citations.map((citation, index) => (
-    <li class="flex items-start space-x-4" key={index}>
-      <div class="text-3xl font-thin opacity-90 tabular-nums text-highlight-neon min-w-[3rem] text-right">
+    <li class="flex items-start space-x-2" key={index}>
+      <div class="text-3xl font-thin opacity-90 tabular-nums text-highlight-neon min-w-[3rem] text-wrap">
         {String(index + 1).padStart(2, "0")}
       </div>
-      <div class="italic text-xl font-normal text-gray-700" set:html={citation} />
+      <!--wrap-anywhere fix for citation -->
+      <div class="italic text-xl font-normal text-gray-700 wrap-anywhere" set:html={citation} />
     </li>
   ))}
 </ul>
