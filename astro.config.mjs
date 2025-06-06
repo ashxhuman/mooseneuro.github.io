@@ -6,11 +6,12 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-// https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
 export default defineConfig({
   site: "https://mooseneuro.github.io",
   base: "/",
-  integrations: [react()],
+  integrations: [react(), sitemap()],
 
   vite: {
     plugins: [tailwindcss()],
