@@ -124,39 +124,32 @@ import Tutorials from "@/components/Tutorials.astro";
       class="absolute w-60 h-60 bg-green-200 rounded-full filter blur-3xl opacity-30 top-32 right-32"
     > -->
 
-  <publication></publication>
   <!-- Publications Section -->
-  <!--
-    <section class="py-12 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Publications</h2>
-	<Publications />
-      </div>
-    </section>
--->
+
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <Publication />
+    </div>
+  </section>
   <!-- Funders Section -->
-  <div class="bg-white py-10 sm:py-15" id="funders">
-    <div class="mx-auto max-w-7xl px-5 py-3 lg:px-8 sm:text-center">
-      <h2 class="text-4xl flex-initial transform-border font-semibold text-black text-center p-2">
-        Funders
-      </h2>
-      <div
-        class="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-5 lg:max-w-none lg:grid-cols-5"
-      >
-        {
-          funders.map((funder) => (
-            <Image
-              class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src={funder.src}
-              alt={funder.name}
-              width={158}
-              height={48}
-            />
-          ))
-        }
-      </div>
+<div class="bg-white py-10 sm:py-15" id="funders">
+  <div class="mx-auto max-w-7xl px-5 py-3 lg:px-8 text-center">
+    <h2 class="text-4xl font-semibold text-black mb-8">Funders</h2>
+    
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-8 gap-y-10 justify-center">
+      {funders.map((funder) => (
+        <Image
+          class="max-h-12 w-auto object-contain"
+          src={funder.src}
+          alt={funder.name}
+          width={158}
+          height={48}
+        />
+      ))}
     </div>
   </div>
+</div>
+
 
   <!-- Call to Action Section -->
   <section class="py-12 bg-white">
@@ -202,7 +195,24 @@ import Tutorials from "@/components/Tutorials.astro";
         </div>
       </div>
     </div>
+
+    <!-- Subscribe -->
+
+
+
   </section>
+       <!-- <div class="bg-black p-8">
+  <div class="max-w-full flex flex-row mx-auto justify-around items-center">
+    <h2 class="text-4xl font-semibold tracking-tight text-white">Subscribe to our latest update</h2>
+    <div class=" flex max-w-full gap-x-4">
+      <label for="email-address" class="sr-only">Email address</label>
+      <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" placeholder="Enter your email" />
+      <button type="button" class="bg-brand-tertiary hover:bg-brand-primary inset-1 inline-flex rounded-lg px-3.5 py-2.5 text-base font-semibold text-white shadow-xs transition-all focus:ring-4 focus:ring-blue-600 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+        <a href=""> Subscribe </a>
+      </button>
+    </div>
+  </div>
+</div> -->
 </BaseLayout>
 <script>
   const nav = document.getElementsByTagName("header")[0];

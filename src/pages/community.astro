@@ -39,7 +39,7 @@ const guide = Object.values(guidelines)[0];
 
 //contribute
 const rawUrl =
-  "https://raw.githubusercontent.com/MooseNeuro/moose-core/master/CONTRIBUTING.md";
+  "https://raw.githubusercontent.com/MooseNeuro/moose-core/development/CONTRIBUTING.md";
 let markdownContent: string = "";
 const res = await fetch(rawUrl);
 markdownContent = await res.text();
@@ -186,7 +186,7 @@ const Contribute = marked(markdownContent);
             <li>
               <div class="flex items-center gap-x-6">
                 <Image
-                  class="size-16 rounded-full"
+                  class="size-30 rounded-full bg-gray-300 border-2 border-indigo-500 group-hover:border-0 group-hover:sm:w-[137px] group-hover:sm:h-[137px]"
                   src={team.image}
                   alt="teamImage"
                   width={250}
@@ -225,7 +225,7 @@ const Contribute = marked(markdownContent);
       </article>
     </div>
   </div>
-  <div class="bg-white py-14 sm:py-12" id="contribute">
+  <div class="bg-white py-8 sm:py-8" id="contribute">
     <div class="mx-auto max-w-7xl gap-20 px-6 lg:px-8">
       <div class="max-w-xl">
         <h2
@@ -235,7 +235,7 @@ const Contribute = marked(markdownContent);
         </h2>
       </div>
       <article
-        class="max-w-full p-6 text-text-primary md:p-2 prose text-normal mx-auto leading-6"
+      class="max-w-full p-6 text-text-primary md:p-2 prose font-normal mx-auto leading-6"
       >
         <div set:html={Contribute} />
       </article>
