@@ -5,7 +5,7 @@ Setting up the environment:
 Packages required for citation handling:
 
 ```
-npm install citeproc bibtex-parse
+npm install citeproc bibtex-parse remark-math
 ```
 
 Publications using moose are listed in
