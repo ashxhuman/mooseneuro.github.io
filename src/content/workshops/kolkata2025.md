@@ -18,7 +18,7 @@ CHINTA, 2nd Floor, Tower 1, Bengal Eco Intelligent Park, Block EM, Sector V, Sal
 
 ## To apply, complete this and submit: [Application form](https://docs.google.com/forms/d/e/1FAIpQLSdc1yLm6ZBL6QKIC54gKrIRS_F_Ble1Q9qhhYeyxvKs78YwCg/viewform)
 
-## Application deadline: 31 May, 2025, 11:59 PM IST ( Extended till 6th June, 2025, 11:59 PM IST )
+## Application deadline: 31 May, 2025, 11:59 PM IST (Extended till 6th June, 2025, 11:59 PM IST)
 
 A total of 20 participants will be selected from the applicant pool.
 
