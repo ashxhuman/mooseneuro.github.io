@@ -31,20 +31,26 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
     <link rel="icon" type="image/svg+xml" href="/moose_logo.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="keywords" content="MOOSE, Multiscale, Object-Oriented, Simulation, Environment, Neuroscience, Computational Neuroscience" />
-    
+    <meta
+      name="keywords"
+      content="MOOSE, Multiscale, Object-Oriented, Simulation, Environment, Neuroscience, Computational Neuroscience"
+    />
+
     <!-- Open Graph -->
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={image} />
-
-  {seoData.map((entry, i) => (
-  <script type="application/ld+json" key={i} set:html={JSON.stringify(entry)}></script>
-))}
-
-
+    {
+      seoData.map((entry, i) => (
+        <script
+          type="application/ld+json"
+          key={i}
+          set:html={JSON.stringify(entry)}
+        />
+      ))
+    }
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <meta
       name="google-site-verification"
@@ -52,7 +58,7 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
     />
     <title>{fullTitle}</title>
   </head>
-  <body class="font-sans">
+  <body>
     <nav><Navbar /></nav>
     <slot />
     <Footer />
@@ -62,6 +68,7 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
 <style>
   html,
   body {
+    font-family: sans-serif;
     margin: 0;
     width: 100%;
     height: 100%;
