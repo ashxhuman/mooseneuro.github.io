@@ -27,9 +27,33 @@ const relatedWorkshops = allWorkshops.filter(
 ---
 
 <BaseLayout title={entry.data.title}>
+  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <div
+      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+      aria-hidden="true"
+    >
+    </div>
+    <div
+      class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+      aria-hidden="true"
+    >
+    </div>
+
+    <div
+      class="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-center min-h-[10vh] text-center"
+    >
+      <div class="mx-auto max-w-2xl">
+        <h2
+          class="text-5xl font-semibold tracking-tight text-white sm:text-7xl"
+        >
+          Workshops
+        </h2>
+      </div>
+    </div>
+  </div>
   <main class="min-h-screen">
     <!-- Navigation Breadcrumb -->
-    <nav class="bg-white border-b border-gray-200 pt-20">
+    <nav class="bg-white border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex items-center space-x-2 text-sm">
           <a
@@ -57,16 +81,6 @@ const relatedWorkshops = allWorkshops.filter(
         </div>
       </div>
     </nav>
-
-    <section class="bg-white border-b border-gray-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <h1
-          class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center"
-        >
-          Workshops
-        </h1>
-      </div>
-    </section>
 
     <section class="py-12 lg:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
