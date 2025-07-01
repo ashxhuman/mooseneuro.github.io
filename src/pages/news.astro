@@ -109,32 +109,35 @@ const releaseHtml = marked(release);
             >GitHub: Release v4.1.1 Incremental Release over v4.1.0 "Jhangri" ·
             MooseNeuro/moose-core · GitHub</a
           >
-          <p class="text-2xl font-medium">
-            The latest release is now available to install from PyPI via "pip".
-            The incremental release further brings performance improvements, new
-            features, API updates, key bug fixes, more detailed documentation,
-            and enhanced stability.hashtag Trivia: Jhangri is an Indian sweet in
-            the shape of a flower. It is made of white-lentil (Vigna mungo)
-            batter, deep-fried in ornamental shapes to form the crunchy, golden
-            body, which is then soaked in sugar syrup lightly flavoured with
-            spices.
-          </p>
-
-          <!-- <div set:html={releaseHtml} /> -->
+          <div class="text-2xl font-normal p-4">
+            <p>
+              The latest release is now available to install from PyPI via"
+              pip". The incremental release further brings performance
+              improvements, new features, API updates, key bug fixes, more
+              detailed documentation, and enhanced stability.
+            </p>
+            <p>
+              Trivia: Jhangri is an Indian sweet in the shape of a flower. It is
+              made of white-lentil (Vigna mungo) batter, deep-fried in
+              ornamental shapes to form the crunchy, golden body, which is then
+              soaked in sugar syrup lightly flavoured with spices.
+            </p>
+            <!-- <div set:html={releaseHtml} /> -->
+          </div>
         </div>
       </div>
-    </article>
 
-    <script>
-      const nav = document.getElementsByTagName("header")[0];
-      nav.classList.remove("bg-black");
-      window.addEventListener("scroll", function () {
-        if (window.scrollY > 0) {
-          nav.classList.add("bg-black");
-        } else {
-          nav.classList.remove("bg-black");
-        }
-      });
-    </script>
+      <script>
+        const nav = document.getElementsByTagName("header")[0];
+        nav.classList.remove("bg-black");
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 0) {
+            nav.classList.add("bg-black");
+          } else {
+            nav.classList.remove("bg-black");
+          }
+        });
+      </script>
+    </article>
   </div>
 </BaseLayout>
