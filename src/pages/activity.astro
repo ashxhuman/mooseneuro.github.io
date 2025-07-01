@@ -4,88 +4,223 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const owner = "mooseneuro";
 const repo = "moose-core";
-const contributor = await fetch(
-  `https://api.github.com/repos/${owner}/${repo}/contributors`
-);
-const contributor_json = await contributor.json();
 
-const commits = await fetch(
-  `https://api.github.com/repos/${owner}/${repo}/commits`,
-  {
-    headers: {
-      "User-Agent": "mooseneuro.github.io",
-      Accept: "application/vnd.github.v3+json",
-    },
+let contributor_json = [];
+let commits_json = [];
+let release_json = [];
+
+try {
+  const contributor = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contributors?sha=development`
+  );
+  if (contributor.ok) {
+    contributor_json = await contributor.json();
   }
-);
-const commits_json = await commits.json();
+} catch (error) {
+  console.error("Error fetching contributors:", error);
+}
+
+try {
+  const commits = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/commits?sha=development`,
+    {
+      headers: {
+        "User-Agent": "mooseneuro.github.io",
+        Accept: "application/vnd.github.v3+json",
+      },
+    }
+  );
+  if (commits.ok) {
+    commits_json = await commits.json();
+  }
+} catch (error) {
+  console.error("Error fetching commits:", error);
+}
+
+try {
+  const release = await fetch(
+    `https://api.github.com/repos/MooseNeuro/moose-core/releases`,
+    {
+      headers: {
+        "User-Agent": "mooseneuro.github.io",
+        Accept: "application/vnd.github.v3+json",
+      },
+    }
+  );
+  if (release.ok) {
+    release_json = await release.json();
+  }
+} catch (error) {
+  console.error("Error fetching releases:", error);
+}
 ---
 
 <BaseLayout title="Activity">
-  <section class="p-4">
-    <h1
-      class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
+  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <div
+      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+      aria-hidden="true"
     >
-      Activity Page
-    </h1>
+      <div
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+        style="
+          clip-path: polygon(
+            74.1% 44.1%,
+            100% 61.6%,
+            97.5% 26.9%,
+            85.5% 0.1%,
+            80.7% 2%,
+            72.5% 32.5%,
+            60.2% 62.4%,
+            52.4% 68.1%,
+            47.5% 58.3%,
+            45.2% 34.5%,
+            27.5% 76.7%,
+            0.1% 64.9%,
+            17.9% 100%,
+            27.6% 76.8%,
+            76.1% 97.7%,
+            74.1% 44.1%
+          );
+        "
+      >
+      </div>
+    </div>
+    <div
+      class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+      aria-hidden="true"
+    >
+      <div
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+        style="
+          clip-path: polygon(
+            74.1% 44.1%,
+            100% 61.6%,
+            97.5% 26.9%,
+            85.5% 0.1%,
+            80.7% 2%,
+            72.5% 32.5%,
+            60.2% 62.4%,
+            52.4% 68.1%,
+            47.5% 58.3%,
+            45.2% 34.5%,
+            27.5% 76.7%,
+            0.1% 64.9%,
+            17.9% 100%,
+            27.6% 76.8%,
+            76.1% 97.7%,
+            74.1% 44.1%
+          );
+        "
+      >
+      </div>
+    </div>
+    <div class="mx-auto max-w-7xl px-6 h-[5rem] lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h1 class="text-5xl font-semibold text-white sm:text-7xl">Activity</h1>
+      </div>
+    </div>
+  </div>
+  <section class="p-4">
     <article class="p-8 text-base text-left">
-      <h2 class="text-3xl font-normal sm:4xl">Commits</h2>
-      <ul class="list bg-base rounded-box shadow-md">
-        {
-          commits_json.slice(0, 10).map((commit: any) => (
-            <li class="list row p-4 pb-2 text-xs opacity-60 tracking-wide">
-              <img
-                src={commit.author?.avatar_url}
-                alt={commit.commit.author.login}
-                class="size-10 rounded-box"
-              />
-              <strong>Author:</strong> {commit.commit.author.name}
-              <br />
-              <strong class="list-col--wrap text-xs">Message:</strong>{" "}
-              {commit.commit.message.split("\n")[0]}
-              <br />
-              <strong>Date:</strong>{" "}
-              {new Date(commit.commit.author.date).toLocaleString()}
-              <br />
-              <strong>Revision:</strong> {commit.sha.substring(0, 7)}
-            </li>
-          ))
-        }
-      </ul>
-    </article>
-    <article class="justify-center align-middle p-8 text-base text-left">
-      <h2 class="text-3xl font-normal sm:4xl">Contributors</h2>
-      <!--<aside>
-        <h2 class="text-2xl">language</h2>
-        <ul class="flex flex-col flex-wrap p-2">
+      <article class="justify-center align-middle p-8 text-base text-left">
+        <h2 class="text-3xl font-normal sm:text-4xl">Releases</h2>
+        <ul class="max-w-screen flex flex-row flex-wrap p-12 gap-6">
           {
-            Object.keys(lang_json).map((language: any) => (
-              <li>
-                <div class="p-5">
-                  <p>{language}</p>
+            release_json.map((release: any) => (
+              <li class="w-full">
+                <div class="rounded-md border p-14 shadow-md">
+                  {/* <a
+                    href={`https://github.com/${release.author.login}`}
+                    target="_blank"
+                  >
+                    <img
+                      src={release.author.avatar_url}
+                      alt={release.author.login}
+                      class="w-24 h-24 rounded-full mx-auto"
+                    />
+                  </a> */}
+                  <div class="mt-4 text-center">
+                    <p class="text-lg font-bold text-gray-800">
+                      {release.name || release.tag_name}
+                    </p>
+                    <p class="text-sm text-gray-600">
+                      {release.prerelease ? "Pre-release" : "Release"} -{" "}
+                      {new Date(release.published_at).toLocaleDateString()}
+                    </p>
+                    <a
+                      href={release.html_url}
+                      target="_blank"
+                      class="text-blue-500 underline text-sm mt-2 block"
+                    >
+                      View Release
+                    </a>
+                    {release.body && (
+                      <p class="text-xs text-gray-500 mt-2 line-clamp-3">
+                        {release.body.substring(0, 1000)}...
+                      </p>
+                    )}
+                  </div>
                 </div>
               </li>
             ))
           }
         </ul>
-      </aside> -->
-      <ul class="max-w-screen flex flex-row flex-wrap p-12">
-        {
-          contributor_json.map((user: any) => (
-            <li>
-              <div class="avatar max-w-84 flex-1/2">
-                <div class="w-24 rounded-md">
-                  <a href={user.html_url}>
-                    <img src={user.avatar_url} alt={user.login} />
-                  </a>
-                  <p>{user.login}</p>
-                </div>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
+      </article>
     </article>
+    <h2 class="text-3xl font-normal sm:text-4xl">Commits</h2>
+    <ul class="list bg-base rounded-box shadow-md">
+      {
+        commits_json.slice(0, 10).map((commit: any) => (
+          <li class="list row p-4 pb-2 text-xs opacity-60 tracking-wide">
+            <img
+              src={commit.author?.avatar_url || commit.committer?.avatar_url}
+              alt={commit.commit.author.name}
+              class="size-10 rounded-box"
+            />
+            <strong>Author:</strong> {commit.commit.author.name}
+            <br />
+            <strong class="list-col--wrap text-xs">Message:</strong>{" "}
+            {commit.commit.message.split("\n")[0]}
+            <br />
+            <strong>Date:</strong>{" "}
+            {new Date(commit.commit.author.date).toLocaleString()}
+            <br />
+            <strong>Revision:</strong> {commit.sha.substring(0, 7)}
+          </li>
+        ))
+      }
+    </ul>
   </section>
+  <article class="justify-center align-middle p-8 text-base text-left">
+    <h2 class="text-3xl font-normal sm:text-4xl">Contributors</h2>
+    <ul class="max-w-screen flex flex-row flex-wrap p-12">
+      {
+        contributor_json.map((user: any) => (
+          <li>
+            <div class="avatar max-w-84 flex-1/2">
+              <div class="w-24 rounded-md">
+                <a href={user.html_url}>
+                  <img src={user.avatar_url} alt={user.login} />
+                </a>
+                <p>{user.login}</p>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
 </BaseLayout>
-<script></script>
+
+<script>
+  const nav = document.getElementsByTagName("header")[0];
+  nav.classList.remove("bg-black");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      nav.classList.add("bg-black");
+    } else {
+      nav.classList.remove("bg-black");
+    }
+  });
+</script>
