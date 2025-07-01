@@ -8,20 +8,20 @@ import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 import { marked } from "marked";
 
-const release = await fetch(
-  "https://api.github.com/repos/MooseNeuro/moose-core/releases/tags/v4.1.1",
-  {
-    headers: { Accept: "application/vnd.github+json" },
-  }
-)
-  .then((res) => res.json())
-  .then((data) => data.body);
-// const rawUrl =
-//   "https://api.github.com/repos/MooseNeuro/moose-core/releases/tags/v4.1.1";
-// let markdownContent: string = "";
-// const res = await fetch(rawUrl);
-// markdownContent = await res.body;
-const releaseHtml = marked(release);
+// const release = await fetch(
+//   "https://api.github.com/repos/MooseNeuro/moose-core/releases/tags/v4.1.1",
+//   {
+//     headers: { Accept: "application/vnd.github+json" },
+//   }
+// )
+//   .then((res) => res.json())
+//   .then((data) => data.body);
+// // const rawUrl =
+// //   "https://api.github.com/repos/MooseNeuro/moose-core/releases/tags/v4.1.1";
+// // let markdownContent: string = "";
+// // const res = await fetch(rawUrl);
+// // markdownContent = await res.body;
+// const releaseHtml = marked(release);
 ---
 
 <BaseLayout title="Latest News">
@@ -101,18 +101,20 @@ const releaseHtml = marked(release);
             New Incremental Release of MOOSE v4.1.1 is here!
           </h3>
           <h6 class="font-normal">
-            v4.1.1 Incremental Release over v4.1.0 Jhangri !
+            v4.1.1 Incremental Release over v4.1.0 <span class="italic"
+              >Jhangri !</span
+            >
           </h6>
           <a
             href="https://github.com/MooseNeuro/moose-core/releases/tag/v4.1.1"
             class="text-sm text-indigo-900 hover:bg-indigo-400 leading-5"
-            >GitHub: Release v4.1.1 Incremental Release over v4.1.0 "Jhangri" ·
+            >GitHub: Release v4.1.1 Incremental Release over v4.1.0 Jhangri" ·
             MooseNeuro/moose-core · GitHub</a
           >
-          <div class="text-2xl font-normal p-4">
+          <div class="text-xl font-normal p-4">
             <p>
-              The latest release is now available to install from PyPI via"
-              pip". The incremental release further brings performance
+              The latest release is now available to install from PyPI via
+              "pip". The incremental release further brings performance
               improvements, new features, API updates, key bug fixes, more
               detailed documentation, and enhanced stability.
             </p>
