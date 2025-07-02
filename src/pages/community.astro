@@ -5,31 +5,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getEntry } from "astro:content";
 import { getCollection, render } from "astro:content";
 import { marked } from "marked";
-//const team = await import.meta.glob("../content/team/team.md", { eager: true });
+
 interface Item {
   name: string;
   designation: string;
   image: string;
 }
 
-// const teamData = Object.values(team)[0] as { frontmatter: { team: Item[] } };
-// const Team = teamData.frontmatter.team;
-const { data } = await getEntry("team", "team");
-const Team: Item[] = data.team;
-
-const support = await import.meta.glob("../content/support.md", {
-  eager: true,
-});
 interface SupportItem {
   description: string;
   urltext: string;
+  url: string;
 }
 
+// Get team data
+const { data } = await getEntry("team", "team");
+const Team: Item[] = data.team;
+
+// Get support data
+const support = await import.meta.glob("../content/support.md", {
+  eager: true,
+});
+
 const supportData = Object.values(support)[0] as {
-  frontmatter: { title: string; description: string; entry: SupportItem[] };
+  frontmatter: { title: string; description: string; items: SupportItem[] };
 };
 const Support = supportData.frontmatter.items;
 
+// Get guidelines
 const guidelines = await import.meta.glob(
   "../content/guidelines/CommunityGuidelines.md",
   { eager: true }
@@ -37,23 +40,32 @@ const guidelines = await import.meta.glob(
 
 const guide = Object.values(guidelines)[0];
 
-//contribute
+// Fetch contribute content
 const rawUrl =
   "https://raw.githubusercontent.com/MooseNeuro/moose-core/development/CONTRIBUTING.md";
 let markdownContent: string = "";
-const res = await fetch(rawUrl);
-markdownContent = await res.text();
+try {
+  const res = await fetch(rawUrl);
+  markdownContent = await res.text();
+} catch (error) {
+  console.error("Failed to fetch contributing guidelines:", error);
+  markdownContent = "Contributing guidelines are currently unavailable.";
+}
 const Contribute = marked(markdownContent);
 ---
 
 <BaseLayout title="Community">
-  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+  <!-- Hero section with mobile-first design -->
+  <div
+    class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32"
+  >
+    <!-- Background decorative elements - hidden on mobile for performance -->
     <div
-      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+      class="hidden lg:absolute lg:-top-10 lg:right-1/2 lg:-z-10 lg:mr-10 lg:block lg:transform-gpu lg:blur-3xl"
       aria-hidden="true"
     >
       <div
-        class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
         style="
           clip-path: polygon(
             74.1% 44.1%,
@@ -78,11 +90,11 @@ const Contribute = marked(markdownContent);
       </div>
     </div>
     <div
-      class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+      class="hidden lg:absolute lg:-top-52 lg:left-1/2 lg:-z-10 lg:-translate-x-1/2 lg:transform-gpu lg:blur-3xl"
       aria-hidden="true"
     >
       <div
-        class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
         style="
           clip-path: polygon(
             74.1% 44.1%,
@@ -106,51 +118,127 @@ const Contribute = marked(markdownContent);
       >
       </div>
     </div>
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:mx-0">
-        <h1 class="text-5xl font-semibold text-white sm:text-7xl">Community</h1>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
+        <h1 class="text-4xl font-semibold text-white sm:text-5xl lg:text-7xl">
+          Community
+        </h1>
       </div>
-      <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-        <div
-          class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10"
+
+      <!-- Mobile-optimized navigation -->
+      <div class="mx-auto mt-8 max-w-2xl lg:mx-0 lg:max-w-none lg:mt-10">
+        <nav
+          class="flex flex-col space-y-4 text-base font-semibold text-white sm:flex-row sm:space-y-0 sm:space-x-6 lg:space-x-10"
+          aria-label="Community navigation"
         >
-          <a href="#guidelines" class="hover:border-b-2 border-highlight-neon"
-            >Community Guidelines <span aria-hidden="true">&rarr;</span></a
+          <a
+            href="#guidelines"
+            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
           >
-          <a href="#support" class="hover:border-b-2 border-highlight-neon"
-            >Discussions and Support <span aria-hidden="true">&rarr;</span></a
+            <span>Community Guidelines</span>
+            <span aria-hidden="true" class="ml-2">&rarr;</span>
+          </a>
+          <a
+            href="#support"
+            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
           >
-          <a href="#team" class="hover:border-b-2 border-highlight-neon"
-            >The MOOSE Team<span aria-hidden="true">&rarr;</span></a
+            <span>Discussions and Support</span>
+            <span aria-hidden="true" class="ml-2">&rarr;</span>
+          </a>
+          <a
+            href="#team"
+            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
           >
-        </div>
+            <span>The MOOSE Team</span>
+            <span aria-hidden="true" class="ml-2">&rarr;</span>
+          </a>
+        </nav>
       </div>
     </div>
   </div>
+
   <!-- Support section -->
-  <div class="bg-white py-14 sm:py-12" id="support">
-    <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-2">
-      <div class="max-w-xl">
-        <h2 class="text-4xl font-semibold text-black sm:text-4xl">
-          {supportData.frontmatter.title}
+  <section class="bg-white py-12 sm:py-16" id="support">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div class="max-w-xl">
+          <h2 class="text-3xl font-semibold text-black sm:text-4xl">
+            {supportData.frontmatter.title}
+          </h2>
+          <p class="mt-4 text-base leading-7 text-gray-600">
+            {supportData.frontmatter.description}
+          </p>
+        </div>
+
+        <div class="lg:col-span-1">
+          <ul role="list" class="space-y-6">
+            {
+              Support.map((entry: SupportItem, index: number) => (
+                <li class="relative">
+                  <div class="rounded-lg border border-gray-200 p-4 transition-shadow hover:shadow-md">
+                    <h3 class="text-base font-semibold leading-7 text-gray-900">
+                      {entry.description}
+                    </h3>
+                    <p class="mt-2">
+                      <a
+                        href={entry.url}
+                        class="inline-flex items-center text-sm font-semibold text-highlight-neon transition-colors hover:text-highlight-neon/80 focus:outline-none focus:ring-2 focus:ring-highlight-neon focus:ring-offset-2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {entry.urltext}
+                        <span aria-hidden="true" class="ml-1">
+                          ↗
+                        </span>
+                      </a>
+                    </p>
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team section -->
+  <section class="bg-gray-50 py-12 sm:py-16" id="team">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center lg:text-left">
+        <h2 class="text-3xl font-semibold text-black sm:text-4xl">
+          Meet our Team
         </h2>
-        <p class="pt-4">{supportData.frontmatter.description}</p>
-        <ul role="list" class="list-disc pl-5 space-y-3">
+      </div>
+
+      <div class="mt-12">
+        <ul
+          role="list"
+          class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
           {
-            Support.map((entry: any) => (
-              <li data-key={entry.url}>
-                <div>
-                  <h3 class="text-base/7 font-semibold ">
-                    {entry.description}
-                  </h3>
-                  <p class="text-sm/6 font-semibold text-text-subtle capitalize">
-                    <a
-                      href={entry.url}
-                      class="normal-case hover:border-b-2 text-highlight-neon hover:border-highlight-neon"
-                    >
-                      {entry.urltext}
-                    </a>
-                  </p>
+            Team.map((member, index) => (
+              <li class="group">
+                <div class="flex flex-col items-center space-y-4 p-6 transition-shadow hover:shadow-md">
+                  <div class="relative">
+                    <Image
+                      class="h-24 w-24 rounded-full border-2 border-indigo-500 object-cover transition-transform group-hover:scale-105 sm:h-28 sm:w-28"
+                      src={member.image}
+                      alt={`${member.name} - ${member.designation}`}
+                      width={112}
+                      height={112}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <h3 class="text-base font-semibold text-gray-900">
+                      {member.name}
+                    </h3>
+                    <p class="mt-1 text-sm font-medium text-highlight-neon">
+                      {member.designation}
+                    </p>
+                  </div>
                 </div>
               </li>
             ))
@@ -158,85 +246,89 @@ const Contribute = marked(markdownContent);
         </ul>
       </div>
     </div>
-  </div>
-
-  <!-- Team section -->
-  <div class="bg-white py-14 sm:py-12" id="team">
-    <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-2">
-      <div class="max-w-xl">
-        <h2 class="text-4xl font-semibold text-black sm:text-4xl">
-          Meet our Team
-        </h2>
-      </div>
-      <ul
-        role="list"
-        class="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2"
-      >
-        {
-          Team.map((team) => (
-            <li>
-              <div class="flex items-center gap-x-6">
-                <Image
-                  class="size-30 rounded-full bg-gray-300 border-2 border-indigo-500 group-hover:border-0 group-hover:sm:w-[137px] group-hover:sm:h-[137px]"
-                  src={team.image}
-                  alt="teamImage"
-                  width={250}
-                  height={250}
-                />
-                <div>
-                  <h3 class="text-base/7 font-semibold text-gray-900">
-                    {team.name}
-                  </h3>
-                  <p class="text-sm/6 font-semibold text-highlight-neon">
-                    {team.designation}
-                  </p>
-                </div>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </div>
+  </section>
 
   <!-- Guidelines section -->
-  <div class="bg-white py-14 sm:py-12" id="guidelines">
-    <div class="mx-auto max-w-7xl gap-20 px-6 lg:px-8">
+  <section class="bg-white py-12 sm:py-16" id="guidelines">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="max-w-xl">
-        <h2 class="text-4xl font-semibold black sm:text-4xl">
+        <h2 class="text-3xl font-semibold text-black sm:text-4xl">
           {guide.frontmatter.title}
         </h2>
       </div>
       <article
-        class="max-w-full p-6 text-text-primary md:p-2 prose text-normal leading-6 mx-auto"
+        class="prose prose-gray mt-8 max-w-none prose-headings:text-gray-900 prose-links:text-highlight-neon hover:prose-links:text-highlight-neon/80"
       >
         <guide.Content />
       </article>
     </div>
-  </div>
-  <div class="bg-white py-8 sm:py-8" id="contribute">
-    <div class="mx-auto max-w-7xl gap-20 px-6 lg:px-8">
+  </section>
+
+  <!-- Contribute section -->
+  <section class="bg-gray-50 py-12 sm:py-16" id="contribute">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="max-w-xl">
-        <h2 class="text-4xl font-semibold text-black sm:text-4xl">
+        <h2 class="text-3xl font-semibold text-black sm:text-4xl">
           How to Contribute?
         </h2>
       </div>
       <article
-        class="max-w-full p-6 text-text-primary md:p-2 prose font-normal mx-auto leading-6"
+        class="prose prose-gray mt-8 max-w-none prose-headings:text-gray-900 prose-links:text-highlight-neon hover:prose-links:text-highlight-neon/80 prose-img:rounded-lg"
       >
         <div set:html={Contribute} />
       </article>
     </div>
-  </div>
+  </section>
 </BaseLayout>
+
 <script>
+  // Improved mobile-friendly navigation behavior
   const nav = document.getElementsByTagName("header")[0];
-  nav.classList.remove("bg-black");
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 0) {
-      nav.classList.add("bg-black");
-    } else {
-      nav.classList.remove("bg-black");
+  if (nav) {
+    nav.classList.remove("bg-black");
+
+    let ticking = false;
+
+    function updateNav() {
+      if (window.scrollY > 50) {
+        nav.classList.add("bg-black");
+      } else {
+        nav.classList.remove("bg-black");
+      }
+      ticking = false;
     }
+
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateNav);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", requestTick, { passive: true });
+  }
+
+  // Smooth scrolling for anchor links (mobile-friendly)
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          const headerHeight = nav ? nav.offsetHeight : 0;
+          const targetPosition = targetElement.offsetTop - headerHeight - 20;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
   });
 </script>

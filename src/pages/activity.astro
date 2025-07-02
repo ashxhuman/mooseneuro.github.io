@@ -57,7 +57,9 @@ try {
 ---
 
 <BaseLayout title="Activity">
-  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+  <div
+    class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32"
+  >
     <div
       class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
       aria-hidden="true"
@@ -116,42 +118,33 @@ try {
       >
       </div>
     </div>
-    <div class="mx-auto max-w-7xl px-6 h-[5rem] lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
-        <h1 class="text-5xl font-semibold text-white sm:text-7xl">Activity</h1>
+        <h1 class="text-4xl font-semibold text-white sm:text-5xl lg:text-7xl">
+          Activity
+        </h1>
       </div>
     </div>
   </div>
 
-  <section class="bg-white px-24 sm:py-12">
-    <article class="justify-center align-middle text-base">
-      <h2 class="text-4xl font-normal sm:text-4xl mb-6">Releases</h2>
-      <ul class="max-w-screen flex flex-col gap-6 p-2">
+  <section class="bg-white px-4 sm:px-8 lg:px-24 py-8 sm:py-12">
+    <!-- Releases Section -->
+    <article class="justify-center align-middle text-base mb-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal mb-6">
+        Releases
+      </h2>
+      <ul class="max-w-screen flex flex-col gap-4 sm:gap-6">
         {
           release_json.map((release: any) => (
             <li class="w-full">
-              <div class="rounded-md border p-8 bg-white shadow-sm hover:shadow-md transition-shadow">
-                {/* 
-            <a
-              href={`https://github.com/${release.author.login}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={release.author.avatar_url}
-                alt={release.author.login}
-                class="w-24 h-24 rounded-full mx-auto"
-              />
-            </a> 
-            */}
-
-                <div class="mt-4 text-center">
-                  <p class="text-4xl font-bold text-gray-800 mb-2">
+              <div class="rounded-md border p-4 sm:p-6 lg:p-8 bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="text-center">
+                  <p class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-800 mb-2 break-words">
                     {release.name || release.tag_name}
                   </p>
 
-                  <p class="text-3xl text-gray-600 mb-3">
-                    {release.prerelease ? "Pre-release" : "Release"}-{" "}
+                  <p class="text-lg sm:text-xl lg:text-3xl text-gray-600 mb-3">
+                    {release.prerelease ? "Pre-release" : "Release"} -{" "}
                     {new Date(release.published_at).toLocaleDateString()}
                   </p>
 
@@ -165,7 +158,7 @@ try {
                   </a>
 
                   {release.body && (
-                    <div class="text-sm text-gray-700 mt-4 text-left bg-gray-50 p-4 prose prose-sm max-w-none">
+                    <div class="text-sm text-gray-700 mt-4 text-left bg-gray-50 p-3 sm:p-4 rounded prose prose-sm max-w-none overflow-x-auto">
                       <div set:html={marked.parse(release.body)} />
                     </div>
                   )}
@@ -177,44 +170,41 @@ try {
       </ul>
     </article>
 
-    <article class="justify-center align-middle text-base py-3">
-      <h2 class="text-3xl font-normal sm:text-4xl">Commits</h2>
-      <ul class="list bg-base rounded-box shadow-md">
+    <!-- Commits Section -->
+    <article class="justify-center align-middle text-base py-3 mb-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal mb-6">
+        Recent Commits
+      </h2>
+      <ul class="space-y-4">
         {
           commits_json.slice(0, 10).map((commit: any) => (
-            <li class="list row p-4 pb-2 text-xs opacity-60 tracking-wide">
-              <img
-                src={commit.author?.avatar_url || commit.committer?.avatar_url}
-                alt={commit.commit.author.name}
-                class="size-10 rounded-box"
-              />
-              <strong>Author:</strong> {commit.commit.author.name}
-              <br />
-              <strong class="list-col--wrap text-xs">Message:</strong>{" "}
-              {commit.commit.message.split("\n")[0]}
-              <br />
-              <strong>Date:</strong>{" "}
-              {new Date(commit.commit.author.date).toLocaleString()}
-              <br />
-              <strong>Revision:</strong> {commit.sha.substring(0, 7)}
-            </li>
-          ))
-        }
-      </ul>
-    </article>
-
-    <article class="justify-center align-middle text-base text-left py-3">
-      <h2 class="text-3xl font-normal sm:text-4xl">Contributors</h2>
-      <ul class="max-w-screen flex flex-row flex-wrap p-12">
-        {
-          contributor_json.map((user: any) => (
-            <li>
-              <div class="avatar max-w-84 flex-1/2">
-                <div class="w-24 rounded-md">
-                  <a href={user.html_url}>
-                    <img src={user.avatar_url} alt={user.login} />
-                  </a>
-                  <p>{user.login}</p>
+            <li class="bg-gray-50 rounded-lg p-4 shadow-sm">
+              <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <div class="flex-shrink-0 self-start">
+                  <img
+                    src={
+                      commit.author?.avatar_url || commit.committer?.avatar_url
+                    }
+                    alt={commit.commit.author.name}
+                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-sm text-gray-600 mb-2">
+                    <span class="font-medium text-gray-900">
+                      {commit.commit.author.name}
+                    </span>
+                    <span class="mx-1">•</span>
+                    <span class="font-mono text-xs bg-gray-200 px-2 py-1 rounded">
+                      {commit.sha.substring(0, 7)}
+                    </span>
+                  </div>
+                  <p class="text-sm sm:text-base text-gray-800 mb-2 break-words">
+                    {commit.commit.message.split("\n")[0]}
+                  </p>
+                  <p class="text-xs text-gray-500">
+                    {new Date(commit.commit.author.date).toLocaleString()}
+                  </p>
                 </div>
               </div>
             </li>
@@ -222,17 +212,51 @@ try {
         }
       </ul>
     </article>
+
+    <!-- Contributors Section -->
+    <article class="justify-center align-middle text-base text-left py-3">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal mb-6">
+        Contributors
+      </h2>
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6"
+      >
+        {
+          contributor_json.map((user: any) => (
+            <div class="flex flex-col items-center text-center">
+              <a
+                href={user.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src={user.avatar_url}
+                  alt={user.login}
+                  class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-lg shadow-sm mb-2"
+                />
+                <p class="text-xs sm:text-sm text-gray-700 font-medium truncate w-full">
+                  {user.login}
+                </p>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </article>
   </section>
 </BaseLayout>
 
 <script>
   const nav = document.getElementsByTagName("header")[0];
-  nav.classList.remove("bg-black");
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 0) {
-      nav.classList.add("bg-black");
-    } else {
-      nav.classList.remove("bg-black");
-    }
-  });
+  if (nav) {
+    nav.classList.remove("bg-black");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        nav.classList.add("bg-black");
+      } else {
+        nav.classList.remove("bg-black");
+      }
+    });
+  }
 </script>

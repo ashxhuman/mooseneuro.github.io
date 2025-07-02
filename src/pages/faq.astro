@@ -1,18 +1,32 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Load the .md file as an Astro component
 const FAQ = await import.meta.glob("../content/FAQ.md", { eager: true });
 const faq_content = Object.values(FAQ)[0];
+const FAQComponent = faq_content.Content;
 ---
 
 <BaseLayout title="Software FAQ">
-  <section class="p-8">
-    <h1 class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-      Frequently asked questions
+  <section class="p-4 sm:p-6 lg:p-8">
+    <h1
+      class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal text-gray-900 text-center px-2 sm:px-4 lg:px-8 py-8 sm:py-12 lg:py-16 xl:py-20"
+    >
+      Frequently Asked Questions
     </h1>
-    <div class="prose prose-a:hover:bg-indigo-200 prose-h3:text-m min-w-full lg:prose-l p-4 prose:text-left prose-h2:bg-red-100 prose-h2:text-2xl">
-      <faq_content.Content/>
+
+    <div
+      class="prose prose-sm sm:prose-base lg:prose-lg max-w-none mx-auto
+             prose-a:hover:bg-indigo-200 prose-a:transition-colors prose-a:duration-200
+             prose-h2:bg-red-100 prose-h2:text-lg sm:prose-h2:text-xl lg:prose-h2:text-2xl prose-h2:px-3 prose-h2:py-2 prose-h2:rounded-md prose-h2:mb-4
+             prose-h3:text-base sm:prose-h3:text-lg lg:prose-h3:text-xl prose-h3:mb-3
+             prose-p:text-sm sm:prose-p:text-base prose-p:leading-relaxed prose-p:mb-4
+             prose-ul:text-sm sm:prose-ul:text-base prose-ul:mb-4
+             prose-ol:text-sm sm:prose-ol:text-base prose-ol:mb-4
+             px-2 sm:px-4 lg:px-6"
+    >
+      <FAQComponent />
     </div>
-    <!-- <div set:html={faq}></div> -->
   </section>
 </BaseLayout>
