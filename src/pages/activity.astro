@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { marked } from "marked";
 
 const owner = "mooseneuro";
 const repo = "moose-core";
@@ -121,96 +122,107 @@ try {
       </div>
     </div>
   </div>
-  <section class="p-4">
-    <article class="p-8 text-base text-left">
-      <article class="justify-center align-middle p-8 text-base text-left">
-        <h2 class="text-3xl font-normal sm:text-4xl">Releases</h2>
-        <ul class="max-w-screen flex flex-row flex-wrap p-12 gap-6">
-          {
-            release_json.map((release: any) => (
-              <li class="w-full">
-                <div class="rounded-md border p-14 shadow-md">
-                  {/* <a
-                    href={`https://github.com/${release.author.login}`}
+
+  <section class="bg-white px-24 sm:py-12">
+    <article class="justify-center align-middle text-base">
+      <h2 class="text-4xl font-normal sm:text-4xl mb-6">Releases</h2>
+      <ul class="max-w-screen flex flex-col gap-6 p-2">
+        {
+          release_json.map((release: any) => (
+            <li class="w-full">
+              <div class="rounded-md border p-8 bg-white shadow-sm hover:shadow-md transition-shadow">
+                {/* 
+            <a
+              href={`https://github.com/${release.author.login}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={release.author.avatar_url}
+                alt={release.author.login}
+                class="w-24 h-24 rounded-full mx-auto"
+              />
+            </a> 
+            */}
+
+                <div class="mt-4 text-center">
+                  <p class="text-4xl font-bold text-gray-800 mb-2">
+                    {release.name || release.tag_name}
+                  </p>
+
+                  <p class="text-3xl text-gray-600 mb-3">
+                    {release.prerelease ? "Pre-release" : "Release"}-{" "}
+                    {new Date(release.published_at).toLocaleDateString()}
+                  </p>
+
+                  <a
+                    href={release.html_url}
                     target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-block text-blue-500 hover:text-blue-700 underline text-sm mb-4 transition-colors"
                   >
-                    <img
-                      src={release.author.avatar_url}
-                      alt={release.author.login}
-                      class="w-24 h-24 rounded-full mx-auto"
-                    />
-                  </a> */}
-                  <div class="mt-4 text-center">
-                    <p class="text-lg font-bold text-gray-800">
-                      {release.name || release.tag_name}
-                    </p>
-                    <p class="text-sm text-gray-600">
-                      {release.prerelease ? "Pre-release" : "Release"} -{" "}
-                      {new Date(release.published_at).toLocaleDateString()}
-                    </p>
-                    <a
-                      href={release.html_url}
-                      target="_blank"
-                      class="text-blue-500 underline text-sm mt-2 block"
-                    >
-                      View Release
-                    </a>
-                    {release.body && (
-                      <p class="text-xs text-gray-500 mt-2 line-clamp-3">
-                        {release.body.substring(0, 1000)}...
-                      </p>
-                    )}
-                  </div>
+                    View Release
+                  </a>
+
+                  {release.body && (
+                    <div class="text-sm text-gray-700 mt-4 text-left bg-gray-50 p-4 prose prose-sm max-w-none">
+                      <div set:html={marked.parse(release.body)} />
+                    </div>
+                  )}
                 </div>
-              </li>
-            ))
-          }
-        </ul>
-      </article>
-    </article>
-    <h2 class="text-3xl font-normal sm:text-4xl">Commits</h2>
-    <ul class="list bg-base rounded-box shadow-md">
-      {
-        commits_json.slice(0, 10).map((commit: any) => (
-          <li class="list row p-4 pb-2 text-xs opacity-60 tracking-wide">
-            <img
-              src={commit.author?.avatar_url || commit.committer?.avatar_url}
-              alt={commit.commit.author.name}
-              class="size-10 rounded-box"
-            />
-            <strong>Author:</strong> {commit.commit.author.name}
-            <br />
-            <strong class="list-col--wrap text-xs">Message:</strong>{" "}
-            {commit.commit.message.split("\n")[0]}
-            <br />
-            <strong>Date:</strong>{" "}
-            {new Date(commit.commit.author.date).toLocaleString()}
-            <br />
-            <strong>Revision:</strong> {commit.sha.substring(0, 7)}
-          </li>
-        ))
-      }
-    </ul>
-  </section>
-  <article class="justify-center align-middle p-8 text-base text-left">
-    <h2 class="text-3xl font-normal sm:text-4xl">Contributors</h2>
-    <ul class="max-w-screen flex flex-row flex-wrap p-12">
-      {
-        contributor_json.map((user: any) => (
-          <li>
-            <div class="avatar max-w-84 flex-1/2">
-              <div class="w-24 rounded-md">
-                <a href={user.html_url}>
-                  <img src={user.avatar_url} alt={user.login} />
-                </a>
-                <p>{user.login}</p>
               </div>
-            </div>
-          </li>
-        ))
-      }
-    </ul>
-  </article>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+
+    <article class="justify-center align-middle text-base py-3">
+      <h2 class="text-3xl font-normal sm:text-4xl">Commits</h2>
+      <ul class="list bg-base rounded-box shadow-md">
+        {
+          commits_json.slice(0, 10).map((commit: any) => (
+            <li class="list row p-4 pb-2 text-xs opacity-60 tracking-wide">
+              <img
+                src={commit.author?.avatar_url || commit.committer?.avatar_url}
+                alt={commit.commit.author.name}
+                class="size-10 rounded-box"
+              />
+              <strong>Author:</strong> {commit.commit.author.name}
+              <br />
+              <strong class="list-col--wrap text-xs">Message:</strong>{" "}
+              {commit.commit.message.split("\n")[0]}
+              <br />
+              <strong>Date:</strong>{" "}
+              {new Date(commit.commit.author.date).toLocaleString()}
+              <br />
+              <strong>Revision:</strong> {commit.sha.substring(0, 7)}
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+
+    <article class="justify-center align-middle text-base text-left py-3">
+      <h2 class="text-3xl font-normal sm:text-4xl">Contributors</h2>
+      <ul class="max-w-screen flex flex-row flex-wrap p-12">
+        {
+          contributor_json.map((user: any) => (
+            <li>
+              <div class="avatar max-w-84 flex-1/2">
+                <div class="w-24 rounded-md">
+                  <a href={user.html_url}>
+                    <img src={user.avatar_url} alt={user.login} />
+                  </a>
+                  <p>{user.login}</p>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </section>
 </BaseLayout>
 
 <script>
