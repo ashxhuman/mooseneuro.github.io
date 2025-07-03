@@ -93,7 +93,7 @@ import { marked } from "marked";
 
   <div class="mx-auto max-w-7xl gap-20 px-6 lg:px-8">
     <article
-      class="max-w-full p-6 text-text-primary md:p-2 prose font-normal mx-auto leading-5"
+      class="max-w-full p-6 text-text-primary md:p-2 prose font-normal mx-auto leading-5 text-justify"
     >
       <div class="max-w-full">
         <div class="font-bold text-black sm:text-4xl p-4">
@@ -101,17 +101,18 @@ import { marked } from "marked";
             New Incremental Release of MOOSE v4.1.1 is here!
           </h3>
           <h6 class="font-normal">
-            v4.1.1 Incremental Release over v4.1.0 <span class="italic"
+            v4.1.1 - Incremental Release over v4.1.0 <span class="italic"
               >Jhangri !</span
             >
           </h6>
           <a
             href="https://github.com/MooseNeuro/moose-core/releases/tag/v4.1.1"
             class="text-sm text-indigo-900 hover:bg-indigo-400 leading-5"
-            >GitHub: Release v4.1.1 Incremental Release over v4.1.0 Jhangri" ·
-            MooseNeuro/moose-core · GitHub</a
           >
-          <div class="text-xl font-normal p-4">
+            <span>GitHub:</span> Release v4.1.1 Incremental Release over v4.1.0 Jhangri"
+            · MooseNeuro/moose-core · GitHub</a
+          >
+          <div class="text-lg sm:text-xl font-normal">
             <p>
               The latest release is now available to install from PyPI via
               "pip". The incremental release further brings performance
@@ -119,27 +120,25 @@ import { marked } from "marked";
               detailed documentation, and enhanced stability.
             </p>
             <p>
-              Trivia: Jhangri is an Indian sweet in the shape of a flower. It is
-              made of white-lentil (Vigna mungo) batter, deep-fried in
-              ornamental shapes to form the crunchy, golden body, which is then
-              soaked in sugar syrup lightly flavoured with spices.
+              Trivia: <span class="italic">Jhangri</span> is an Indian sweet in the
+              shape of a flower. It is made of white-lentil batter, deep-fried in
+              ornamental shapes to form the crunchy, golden body, which is then soaked
+              in sugar syrup lightly flavoured with spices.
             </p>
-            <!-- <div set:html={releaseHtml} /> -->
           </div>
         </div>
       </div>
-
-      <script>
-        const nav = document.getElementsByTagName("header")[0];
-        nav.classList.remove("bg-black");
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 0) {
-            nav.classList.add("bg-black");
-          } else {
-            nav.classList.remove("bg-black");
-          }
-        });
-      </script>
     </article>
   </div>
 </BaseLayout>
+<script>
+  const nav = document.getElementsByTagName("header")[0];
+  nav.classList.remove("bg-black");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      nav.classList.add("bg-black");
+    } else {
+      nav.classList.remove("bg-black");
+    }
+  });
+</script>
