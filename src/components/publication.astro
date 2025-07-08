@@ -12,8 +12,8 @@ const citations = getCitations();
 
   <ul class="mx-auto bg-base-100 rounded-box p-4 space-y-4">
     {
-      citations.map((citation, index) => (
-        <li class="flex items-start space-x-2" key={index}>
+      citations.map((citation: string, index: number) => (
+        <li class="flex items-start space-x-2">
           <div class="text-3xl font-thin opacity-90 tabular-nums text-highlight-neon min-w-[3rem] text-wrap">
             {String(index + 1).padStart(2, "0")}
           </div>
