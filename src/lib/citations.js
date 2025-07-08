@@ -26,9 +26,9 @@ export function getCitations() {
       lang: "en-US",
     });
 
-    const cleanCitation = citation.replace(/^<div[^>]*>|<\/div>$/g, "");
+    const formatedCitation = citation.replace(/^<div[^>]*>|<\/div>$/g, "");
 
-    return convertDOIsToLinks(cleanCitation);
+    return convertDOIsToLinks(formatedCitation);
   });
 
   return citations;
