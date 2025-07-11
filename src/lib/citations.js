@@ -12,17 +12,24 @@ export function getCitations() {
   const bibtex = fs.readFileSync("./public/assets/publications.bib", "utf-8");
   const cite = new Cite(bibtex);
 
-  const rawHtml = cite.format("bibliography", {
-    format: "text",
-    template: "apa",
-    lang: "en-US",
+  // Sort by year in descending order (newest first)
+  const sortedData = cite.data.sort((a, b) => {
+    const yearA = parseInt(a.year) || 0;
+    const yearB = parseInt(b.year) || 0;
+    return yearB - yearA;
   });
 
-  const htmlWithLinks = convertDOIsToLinks(rawHtml);
+  const citations = sortedData.map((item) => {
+    const citation = new Cite(item).format("bibliography", {
+      format: "html",
+      template: "apa",
+      lang: "en-US",
+    });
 
-  const citations = htmlWithLinks
-    .split("\n")
-    .filter((line) => line.trim().length > 0);
+    const formatedCitation = citation.replace(/^<div[^>]*>|<\/div>$/g, "");
+
+    return convertDOIsToLinks(formatedCitation);
+  });
 
   return citations;
 }

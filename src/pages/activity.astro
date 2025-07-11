@@ -6,9 +6,9 @@ import { marked } from "marked";
 const owner = "mooseneuro";
 const repo = "moose-core";
 
-let contributor_json = [];
-let commits_json = [];
-let release_json = [];
+let contributor_json: any[] = [];
+let commits_json: any[] = [];
+let release_json: any[] = [];
 
 try {
   const contributor = await fetch(
@@ -50,6 +50,15 @@ try {
   );
   if (release.ok) {
     release_json = await release.json();
+    if (release_json.length > 0) {
+      const firstRelease = release_json[0];
+      const aboutIndex = firstRelease.body.indexOf("# New Features");
+      const newFeatIndex = firstRelease.body.indexOf("# LICENSE");
+      const afterNewFeat = firstRelease.body.substring(
+        aboutIndex,
+        firstRelease.body.length
+      );
+    }
   }
 } catch (error) {
   console.error("Error fetching releases:", error);
@@ -129,16 +138,16 @@ try {
 
   <section class="bg-white px-4 sm:px-8 lg:px-24 py-8 sm:py-12">
     <!-- Releases Section -->
-    <article class="justify-center align-middle text-base mb-12">
+    <article class="justify-start text-base mb-12">
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal mb-6">
         Releases
       </h2>
       <ul class="max-w-screen flex flex-col gap-4 sm:gap-6">
         {
-          release_json.map((release: any) => (
+          release_json.slice(0, 1).map((release: any) => (
             <li class="w-full">
               <div class="rounded-md border p-4 sm:p-6 lg:p-8 bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-center">
+                <div class="text-left">
                   <p class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-800 mb-2 break-words">
                     {release.name || release.tag_name}
                   </p>
@@ -159,7 +168,22 @@ try {
 
                   {release.body && (
                     <div class="text-sm text-gray-700 mt-4 text-left bg-gray-50 p-3 sm:p-4 rounded prose prose-sm max-w-none overflow-x-auto">
-                      <div set:html={marked.parse(release.body)} />
+                      {/* if we want to show New Features till LICENSE */}
+                      {/* <div
+                        set:html={marked.parse(
+                          (() => {
+                            const aboutIndex =
+                              release.body.indexOf("# New Features");
+                            if (aboutIndex !== -1) {
+                              return release.body.substring(aboutIndex);
+                            }
+                            return release.body;
+                          })()
+                        )}
+                      /> */}
+                      <div
+                        set:html={marked.parse(release.body.substring(0, 470))}
+                      />
                     </div>
                   )}
                 </div>
