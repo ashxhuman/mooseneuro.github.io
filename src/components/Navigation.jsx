@@ -229,7 +229,7 @@ export default function Navigation() {
               onMouseLeave={() => handleMenuMouseLeave("software")}
             >
               <a
-                href="https://github.com/BhallaLab/moose-core/releases/"
+                href="https://github.com/mooseneuro/moose-core/releases/"
                 className="text-sm font-semibold text-gray-900 transition duration-200 hover:text-indigo-600 hover:border-b-2 hover:border-indigo-600 flex items-center gap-1"
               >
                 Software
@@ -344,7 +344,7 @@ export default function Navigation() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-              href="https://github.com/BhallaLab/moose"
+              href="https://github.com/mooseneuro/moose"
               className="text-sm font-semibold text-gray-900 transition duration-200 hover:text-indigo-600"
             >
               <svg
@@ -597,7 +597,7 @@ export default function Navigation() {
                   </div>
                   <div className="py-6">
                     <a
-                      href="https://github.com/BhallaLab/moose"
+                      href="https://github.com/mooseneuro/moose"
                       className="-mx-3 flex items-center rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       <svg
