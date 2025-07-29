@@ -7,14 +7,16 @@ import type { CollectionEntry } from "astro:content";
 
 <BaseLayout title="Blog">
   <section class="p-12 h-full">
-    <h1 class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    <h1
+      class="text-5xl sm:text-5xl lg:text-6xl font-normal text-gray-900 text-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20"
+    >
       MOOSE Blog
     </h1>
     <BlogCarouselWrapper client:load />
   </section>
   <h3 class="text-4xl p-12 text-center text-brand-secondary">Coming Soon...</h3>
-  <script>
-    const nav = document.getElementsByTagName("header")[0];
-    nav.classList.add("bg-black");
-  </script>
 </BaseLayout>
+<script>
+  const nav = document.getElementsByTagName("header")[0];
+  nav.classList.add("bg-black");
+</script>

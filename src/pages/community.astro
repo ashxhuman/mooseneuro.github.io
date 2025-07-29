@@ -127,7 +127,7 @@ const Contribute = marked(markdownContent);
       </div>
 
       <!-- Mobile-optimized navigation -->
-      <div class="mx-auto mt-8 max-w-2xl lg:mx-0 lg:max-w-none lg:mt-10">
+      <div class="mx-auto m-8 max-w-2xl lg:mx-0 lg:max-w-none lg:mt-10">
         <nav
           class="flex flex-col space-y-4 text-base font-semibold text-white sm:flex-row sm:space-y-0 sm:space-x-6 lg:space-x-10"
           aria-label="Community navigation"
@@ -162,6 +162,19 @@ const Contribute = marked(markdownContent);
           </a>
         </nav>
       </div>
+      <nav
+        class="flex flex-col space-y-4 text-base font-semibold text-white sm:flex-row sm:space-y-0 sm:space-x-6 lg:space-x-23"
+      >
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeA8-Q3vlefGG1mMY20ZIrfZLOQdsiOh0S6Q7lXsG4s97u03A/viewform"
+          class="group flex items-center justify-between rounded-lg border border-b-2 px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
+        >
+          <span
+            >Take the survey for Neuroscience Software Development: A Request
+            for Community Input</span
+          >
+        </a>
+      </nav>
     </div>
   </div>
 
@@ -286,56 +299,55 @@ const Contribute = marked(markdownContent);
       </article>
     </div>
   </section>
-</BaseLayout>
 
-<script>
-  // Improved mobile-friendly navigation behavior
-  const nav = document.getElementsByTagName("header")[0];
-  if (nav) {
-    nav.classList.remove("bg-black");
+  <script>
+    // Improved mobile-friendly navigation behavior
+    const nav = document.getElementsByTagName("header")[0];
+    if (nav) {
+      nav.classList.remove("bg-black");
 
-    let ticking = false;
+      let ticking = false;
 
-    function updateNav() {
-      if (window.scrollY > 50) {
-        nav.classList.add("bg-black");
-      } else {
-        nav.classList.remove("bg-black");
-      }
-      ticking = false;
-    }
-
-    function requestTick() {
-      if (!ticking) {
-        requestAnimationFrame(updateNav);
-        ticking = true;
-      }
-    }
-
-    window.addEventListener("scroll", requestTick, { passive: true });
-  }
-
-  // Smooth scrolling for anchor links (mobile-friendly)
-  document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute("href");
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-          const headerHeight = nav ? nav.offsetHeight : 0;
-          const targetPosition = targetElement.offsetTop - headerHeight - 20;
-
-          window.scrollTo({
-            top: targetPosition,
-            behavior: "smooth",
-          });
+      function updateNav() {
+        if (window.scrollY > 50) {
+          nav.classList.add("bg-black");
+        } else {
+          nav.classList.remove("bg-black");
         }
+        ticking = false;
+      }
+
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(updateNav);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener("scroll", requestTick, { passive: true });
+    }
+
+    // Smooth scrolling for anchor links (mobile-friendly)
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('a[href^="#"]');
+
+      links.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            const headerHeight = nav ? nav.offsetHeight : 0;
+            const targetPosition = targetElement.offsetTop - headerHeight - 20;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
+</BaseLayout>
