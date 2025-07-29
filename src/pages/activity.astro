@@ -69,8 +69,9 @@ try {
   <div
     class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32"
   >
+    <!-- Background decorative elements - hidden on mobile for performance -->
     <div
-      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+      class="hidden lg:absolute lg:-top-10 lg:right-1/2 lg:-z-10 lg:mr-10 lg:block lg:transform-gpu lg:blur-3xl"
       aria-hidden="true"
     >
       <div
@@ -99,7 +100,7 @@ try {
       </div>
     </div>
     <div
-      class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+      class="hidden lg:absolute lg:-top-52 lg:left-1/2 lg:-z-10 lg:-translate-x-1/2 lg:transform-gpu lg:blur-3xl"
       aria-hidden="true"
     >
       <div
@@ -127,18 +128,50 @@ try {
       >
       </div>
     </div>
+
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:mx-0">
+      <div class="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
         <h1 class="text-4xl font-semibold text-white sm:text-5xl lg:text-7xl">
           Activity
         </h1>
+      </div>
+
+      <!-- Mobile-optimized navigation -->
+      <div class="mx-auto mt-8 max-w-2xl lg:mx-0 lg:max-w-none lg:mt-10">
+        <nav
+          class="flex flex-col space-y-4 text-base font-semibold text-white sm:flex-row sm:space-y-0 sm:space-x-6 lg:space-x-10"
+          aria-label="Community navigation"
+        >
+          <a
+            href="#release"
+            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
+          >
+            <span>Release</span>
+            <span aria-hidden="true" class="ml-2">&rarr;</span>
+          </a>
+
+          <a
+            href="#commits"
+            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
+          >
+            <span>Recent Commits</span>
+            <span aria-hidden="true" class="ml-2">&rarr;</span>
+          </a>
+          <a
+            href="#contributor"
+            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
+          >
+            <span>Contributors</span>
+            <span aria-hidden="true" class="ml-2">&rarr;</span>
+          </a>
+        </nav>
       </div>
     </div>
   </div>
 
   <section class="bg-white px-4 sm:px-8 lg:px-24 py-8 sm:py-12">
     <!-- Releases Section -->
-    <article class="justify-start text-base mb-12">
+    <article class="justify-start text-base mb-12" id="#Release">
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal mb-6">
         Releases
       </h2>
@@ -195,7 +228,10 @@ try {
     </article>
 
     <!-- Commits Section -->
-    <article class="justify-center align-middle text-base py-3 mb-12">
+    <article
+      class="justify-center align-middle text-base py-3 mb-12"
+      id="commits"
+    >
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal mb-6">
         Recent Commits
       </h2>
@@ -238,7 +274,10 @@ try {
     </article>
 
     <!-- Contributors Section -->
-    <article class="justify-center align-middle text-base text-left py-3">
+    <article
+      class="justify-center align-middle text-base text-left py-3"
+      id="contributor"
+    >
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-normal mb-6">
         Contributors
       </h2>
