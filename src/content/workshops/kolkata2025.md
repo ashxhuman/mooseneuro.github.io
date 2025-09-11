@@ -56,6 +56,10 @@ Day 2: Diving Deeper: Synaptic Dynamics and Signaling Pathways
 
 - Advanced Neuronal Modeling using Python Scripting
 
+<a href="/assets/workshops/Programme_schedule.pdf" target="_blank" rel="noopener noreferrer">
+  Programme Schedule
+</a>
+
 ## Support
 
 All participants will be provided free accommodation and partial reimbursement for travel expenses.
