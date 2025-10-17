@@ -72,3 +72,12 @@ We thank the Kavli Foundation for support through the EOSS Grant Cycle 6.
 ## Contact Information
 
 Email: mooseneuro@gmail.com
+
+<div style="text-align: center;">
+  <img src="/assets/workshops/kolkata_2025_workshop.jpeg" 
+       alt="Kolkata 2025 Workshop Group Photo" 
+       width="1000" 
+       height="300"
+       text-align: center>
+       <p style="text-align: center;">Kolkata 2025 workshop group picture</p>
+</div>
