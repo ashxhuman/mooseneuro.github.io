@@ -32,4 +32,8 @@ team:
   - name: "Pragathi R"
     designation: "Frontend Engineer"
     image: "/assets/team/pragathi.jpg"
+
+  - name: "Banhita Maitra"
+    designation: "Technical Writer"
+    image: "/assets/team/banhita.jpg"
 ---

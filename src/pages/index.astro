@@ -132,24 +132,27 @@ import Tutorials from "@/components/Tutorials.astro";
     </div>
   </section>
   <!-- Funders Section -->
-<div class="bg-white py-10 sm:py-15" id="funders">
-  <div class="mx-auto max-w-7xl px-5 py-3 lg:px-8 text-center">
-    <h2 class="text-4xl font-semibold text-black mb-8">Funders</h2>
-    
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-8 gap-y-10 justify-center">
-      {funders.map((funder) => (
-        <Image
-          class="max-h-12 w-auto object-contain"
-          src={funder.src}
-          alt={funder.name}
-          width={158}
-          height={48}
-        />
-      ))}
+  <div class="bg-white py-10 sm:py-15" id="funders">
+    <div class="mx-auto max-w-7xl px-5 py-3 lg:px-8 text-center">
+      <h2 class="text-4xl font-semibold text-black mb-8">Funders</h2>
+
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-8 gap-y-10 justify-center"
+      >
+        {
+          funders.map((funder) => (
+            <Image
+              class="max-h-12 w-auto object-contain"
+              src={funder.src}
+              alt={funder.name}
+              width={158}
+              height={48}
+            />
+          ))
+        }
+      </div>
     </div>
   </div>
-</div>
-
 
   <!-- Call to Action Section -->
   <section class="py-12 bg-white">
@@ -160,8 +163,7 @@ import Tutorials from "@/components/Tutorials.astro";
             Read Our Blogs
           </h3>
           <p class="text-text-subtle font-normal mb-4">
-            Explore insights, updates, and stories on our Software and
-            community.
+            Explore insights, updates, and stories here.
           </p>
           <a
             href="/blogs"
@@ -172,7 +174,7 @@ import Tutorials from "@/components/Tutorials.astro";
         <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
           <h3 class="text-xl text-text-primary font-semibold mb-3">Events</h3>
           <p class="text-text-subtle font-normal mb-4">
-            Explore insights, updates, and stories here.
+            Workshops and events featuring MOOSE.
           </p>
           <a
             href="/workshops"
@@ -197,11 +199,8 @@ import Tutorials from "@/components/Tutorials.astro";
     </div>
 
     <!-- Subscribe -->
-
-
-
   </section>
-       <!-- <div class="bg-black p-8">
+  <!-- <div class="bg-black p-8">
   <div class="max-w-full flex flex-row mx-auto justify-around items-center">
     <h2 class="text-4xl font-semibold tracking-tight text-white">Subscribe to our latest update</h2>
     <div class=" flex max-w-full gap-x-4">
