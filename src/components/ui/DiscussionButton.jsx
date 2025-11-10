@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const FloatingButton = ({
   href = "https://github.com/orgs/MooseNeuro/discussions",
   icon = "groups_2",
-  label = "Ask questions, request features, and collaborate with others through GitHub Discussions.",
+  label = "Ask queries, discuss ideas, and collaborate with others through GitHub Discussions.",
   openInNewTab = true,
 }) => {
   useEffect(() => {
