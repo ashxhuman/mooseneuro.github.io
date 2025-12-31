@@ -3,9 +3,9 @@ import "../styles/global.css";
 import "../main.js";
 import Footer from "../components/footer.astro";
 import { SITE_TITLE } from "../constants";
-import Navbar from "../components/Navbar.tsx";
+import Navbar from "@/components/Navbar";
 import { seoData } from "../data/schema";
-import Banner from "@/components/banner.jsx";
+import Banner from "@/components/banner";
 import DiscussionButton from "@/components/ui/DiscussionButton.jsx";
 interface Props {
   title?: string;
@@ -18,7 +18,7 @@ const {
   title = "Multiscale Object-Oriented Simulation Environment",
   description = "Multiscale Object-Oriented Simulation Environment (MOOSE) It is designed to simulate neural systems ranging from subcellular components and biochemical reactions to complex models of single neurons, circuits, and large networks. MOOSE can operate at many levels of detail, from stochastic chemical computations, to multicompartment single-neuron models, to spiking neuron network models MOOSE is a simulation environment, not just a numerical engine. It provides the essentials by way of object-oriented representations of model concepts and fast numerical solvers, but its scope is much broader. It has a scripting interface with Python, graphical displays with Matplotlib, PyQt, and OpenGL, and support for many model formats",
   url = "https://mooseneuro.org",
-  image = "https://mooseneuro.github.io/moose_logo.png",
+  image = "https://mooseneuro.org/moose_logo.png",
 } = Astro.props;
 
 const fullTitle = `${SITE_TITLE} | ${title}`;
@@ -73,10 +73,10 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
     <title>{fullTitle}</title>
   </head>
   <body>
-    <Banner client:load />
-    <Navbar client:load />
+    <Banner client:only="react" />
+    <Navbar client:only="react" />
     <slot />
-    <DiscussionButton client:load />
+    <DiscussionButton client:only="react" />
     <Footer />
   </body>
 </html>

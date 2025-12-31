@@ -6,6 +6,7 @@ import react from "@astrojs/react";
 
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
+
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
