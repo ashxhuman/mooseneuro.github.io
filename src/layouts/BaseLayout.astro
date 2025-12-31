@@ -3,9 +3,9 @@ import "../styles/global.css";
 import "../main.js";
 import Footer from "../components/footer.astro";
 import { SITE_TITLE } from "../constants";
-import Navbar from "../components/navbar.astro";
+import Navbar from "../components/Navbar.tsx";
 import { seoData } from "../data/schema";
-import Banner from "@/components/banner";
+import Banner from "@/components/banner.jsx";
 import DiscussionButton from "@/components/ui/DiscussionButton.jsx";
 interface Props {
   title?: string;
@@ -17,7 +17,7 @@ interface Props {
 const {
   title = "Multiscale Object-Oriented Simulation Environment",
   description = "Multiscale Object-Oriented Simulation Environment (MOOSE) It is designed to simulate neural systems ranging from subcellular components and biochemical reactions to complex models of single neurons, circuits, and large networks. MOOSE can operate at many levels of detail, from stochastic chemical computations, to multicompartment single-neuron models, to spiking neuron network models MOOSE is a simulation environment, not just a numerical engine. It provides the essentials by way of object-oriented representations of model concepts and fast numerical solvers, but its scope is much broader. It has a scripting interface with Python, graphical displays with Matplotlib, PyQt, and OpenGL, and support for many model formats",
-  url = "https://mooseneuro.github.io",
+  url = "https://mooseneuro.org",
   image = "https://mooseneuro.github.io/moose_logo.png",
 } = Astro.props;
 
@@ -36,6 +36,7 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
       name="keywords"
       content="MOOSE, Multiscale, Object-Oriented, Simulation, Environment, Neuroscience, Computational Neuroscience"
     />
+    <link rel="canonical" href={url} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={fullTitle} />
@@ -43,6 +44,14 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content={description} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content={description} />
     {
       seoData.map((entry, i) => (
         <script
@@ -57,11 +66,15 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
       name="google-site-verification"
       content="ZdYKUM9RmgkiehJGih7Yw3goFaqWYwVo8Z0M_M_P8JQ"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>{fullTitle}</title>
   </head>
   <body>
     <Banner client:load />
-    <nav><Navbar /></nav>
+    <Navbar client:load />
     <slot />
     <DiscussionButton client:load />
     <Footer />

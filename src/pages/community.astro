@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getEntry } from "astro:content";
 import { getCollection, render } from "astro:content";
+import Hero from "../components/Hero.astro";
 import { marked } from "marked";
 
 interface Item {
@@ -55,113 +56,41 @@ const Contribute = marked(markdownContent);
 ---
 
 <BaseLayout title="Community">
-  <!-- Hero section with mobile-first design -->
-  <div
-    class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32"
-  >
-    <!-- Background decorative elements - hidden on mobile for performance -->
-    <div
-      class="hidden lg:absolute lg:-top-10 lg:right-1/2 lg:-z-10 lg:mr-10 lg:block lg:transform-gpu lg:blur-3xl"
-      aria-hidden="true"
-    >
-      <div
-        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-        style="
-          clip-path: polygon(
-            74.1% 44.1%,
-            100% 61.6%,
-            97.5% 26.9%,
-            85.5% 0.1%,
-            80.7% 2%,
-            72.5% 32.5%,
-            60.2% 62.4%,
-            52.4% 68.1%,
-            47.5% 58.3%,
-            45.2% 34.5%,
-            27.5% 76.7%,
-            0.1% 64.9%,
-            17.9% 100%,
-            27.6% 76.8%,
-            76.1% 97.7%,
-            74.1% 44.1%
-          );
-        "
+  <Hero title="Community">
+    <div slot="actions">
+      <nav
+        class="flex flex-col space-y-4 text-base font-semibold text-white sm:flex-row sm:space-y-0 sm:space-x-6 lg:space-x-10"
+        aria-label="Community navigation"
       >
-      </div>
-    </div>
-    <div
-      class="hidden lg:absolute lg:-top-52 lg:left-1/2 lg:-z-10 lg:-translate-x-1/2 lg:transform-gpu lg:blur-3xl"
-      aria-hidden="true"
-    >
-      <div
-        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-        style="
-          clip-path: polygon(
-            74.1% 44.1%,
-            100% 61.6%,
-            97.5% 26.9%,
-            85.5% 0.1%,
-            80.7% 2%,
-            72.5% 32.5%,
-            60.2% 62.4%,
-            52.4% 68.1%,
-            47.5% 58.3%,
-            45.2% 34.5%,
-            27.5% 76.7%,
-            0.1% 64.9%,
-            17.9% 100%,
-            27.6% 76.8%,
-            76.1% 97.7%,
-            74.1% 44.1%
-          );
-        "
-      >
-      </div>
-    </div>
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
-        <h1 class="text-4xl font-semibold text-white sm:text-5xl lg:text-7xl">
-          Community
-        </h1>
-      </div>
-
-      <!-- Mobile-optimized navigation -->
-      <div class="mx-auto m-8 max-w-2xl lg:mx-0 lg:max-w-none lg:mt-10">
-        <nav
-          class="flex flex-col space-y-4 text-base font-semibold text-white sm:flex-row sm:space-y-0 sm:space-x-6 lg:space-x-10"
-          aria-label="Community navigation"
+        <a
+          href="#support"
+          class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
         >
-          <a
-            href="#support"
-            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
-          >
-            <span>Discussions and Support</span>
-            <span aria-hidden="true" class="ml-2">&rarr;</span>
-          </a>
-          <a
-            href="#team"
-            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
-          >
-            <span>The MOOSE Team</span>
-            <span aria-hidden="true" class="ml-2">&rarr;</span>
-          </a>
-          <a
-            href="#guidelines"
-            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
-          >
-            <span>Community Guidelines</span>
-            <span aria-hidden="true" class="ml-2">&rarr;</span>
-          </a>
-          <a
-            href="#contribute"
-            class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
-          >
-            <span>Contribute</span>
-            <span aria-hidden="true" class="ml-2">&rarr;</span>
-          </a>
-        </nav>
-      </div>
+          <span>Discussions and Support</span>
+          <span aria-hidden="true" class="ml-2">&rarr;</span>
+        </a>
+        <a
+          href="#team"
+          class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
+        >
+          <span>The MOOSE Team</span>
+          <span aria-hidden="true" class="ml-2">&rarr;</span>
+        </a>
+        <a
+          href="#guidelines"
+          class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
+        >
+          <span>Community Guidelines</span>
+          <span aria-hidden="true" class="ml-2">&rarr;</span>
+        </a>
+        <a
+          href="#contribute"
+          class="group flex items-center justify-between rounded-lg border border-transparent px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
+        >
+          <span>Contribute</span>
+          <span aria-hidden="true" class="ml-2">&rarr;</span>
+        </a>
+      </nav>
       <nav
         class="flex flex-col space-y-4 text-base font-semibold text-white sm:flex-row sm:space-y-0 sm:space-x-6 lg:space-x-23"
       >
@@ -170,13 +99,13 @@ const Contribute = marked(markdownContent);
           class="group flex items-center justify-between rounded-lg border border-b-2 px-3 py-2 transition-colors hover:border-highlight-neon focus:border-highlight-neon focus:outline-none sm:justify-start"
         >
           <span
-            >Take the survey for Neuroscience Software Development: A Request
-            for Community Input</span
+            >Take the survey for Neuroscience Software Development: A Request for
+            Community Input</span
           >
         </a>
       </nav>
     </div>
-  </div>
+  </Hero>
 
   <!-- Support section -->
   <section class="bg-white py-12 sm:py-16" id="support">

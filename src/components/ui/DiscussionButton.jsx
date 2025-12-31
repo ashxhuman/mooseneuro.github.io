@@ -1,26 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-const FloatingButton = ({
+export default function FloatingButton({
   href = "https://github.com/orgs/MooseNeuro/discussions",
   icon = "groups_2",
   label = "Ask queries, discuss ideas, and collaborate with others through GitHub Discussions.",
   openInNewTab = true,
-}) => {
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href =
-      "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=groups_2";
-    document.head.appendChild(link);
-
-    return () => {
-      document.head.removeChild(link);
-    };
-  }, []);
-
+}) {
   const handleClick = () => {
     if (!href) return;
-
     if (openInNewTab) {
       window.open(href, "_blank", "noopener,noreferrer");
     } else {
@@ -41,6 +28,4 @@ const FloatingButton = ({
       </div>
     </button>
   );
-};
-
-export default FloatingButton;
+}

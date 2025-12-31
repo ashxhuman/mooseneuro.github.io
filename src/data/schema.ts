@@ -3,7 +3,7 @@ export const seoData = [
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "MOOSE Neuro",
-    url: "https://mooseneuro.github.io/",
+    url: "https://mooseneuro.org/",
     description:
       "MOOSE is an open-source neuroscience simulator for modelling brain systems at multiple scales, including ion channels, cells, and networks.",
     inLanguage: "en",

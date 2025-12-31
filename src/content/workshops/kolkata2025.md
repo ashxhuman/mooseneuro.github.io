@@ -79,5 +79,5 @@ Email: mooseneuro@gmail.com
        width="1000" 
        height="300"
        text-align: center>
-       <p style="text-align: center;">Kolkata 2025 wdeorkshop group picture</p>
+       <p style="text-align: center;">Kolkata 2025 workshop group picture</p>
 </div>
