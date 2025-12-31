@@ -15,7 +15,7 @@ export default function Navbar() {
       document.body.classList.remove("overflow-hidden");
     }
 
-    const onKeyDown = (e: KeyboardEvent) => {
+    const onKeyDown = (e) => {
       if (e.key === "Escape") {
         setMobileOpen(false);
       }
