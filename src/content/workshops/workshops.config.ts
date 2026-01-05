@@ -9,6 +9,7 @@ const workshops = defineCollection({
     url: z.string(),
     image: z.string(),
     pubDate: z.date(),
+    carouselheading: z.string(),
   }),
 });
 
