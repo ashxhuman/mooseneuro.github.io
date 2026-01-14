@@ -1,0 +1,107 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { formatDate } from "@/utils";
+
+export async function getStaticPaths() {
+  const allNews = await getCollection("news");
+  return allNews.map((news_item) => ({
+    params: { slug: news_item.slug },
+    props: news_item,
+  }));
+}
+
+const news_item = Astro.props;
+const { Content } = await news_item.render();
+
+// Get all news for related articles, excluding current one
+const allNews = await getCollection("news");
+const relatedNews = allNews
+  .filter((item) => item.slug !== news_item.slug)
+  .slice(0, 3); // Show 3 related articles
+---
+
+<BaseLayout title={news_item.data.title}>
+  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 h-[5rem] lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h1 class="text-5xl font-semibold text-white sm:text-7xl">News</h1>
+      </div>
+    </div>
+  </div>
+
+  <main class="min-h-screen">
+    <!-- Navigation Breadcrumb -->
+    <nav class="bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center space-x-2 text-sm">
+          <a
+            href="/news"
+            class="inline-flex items-center text-gray-500 hover:text-gray-700 transition-colors duration-200"
+          >
+            <svg
+              class="w-4 h-4 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"></path>
+            </svg>
+            All News
+          </a>
+          <span class="text-gray-400">/</span>
+          <span class="text-gray-900 font-medium truncate">
+            {news_item.data.title}
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="py-12 lg:py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-y-4 mb-8">
+          <h1 class="text-4xl font-extrabold">{news_item.data.title}</h1>
+          <div class="flex items-center gap-x-4 text-sm text-gray-500">
+            <span>By {news_item.data.author}</span>
+            <time datetime={news_item.data.date.toISOString()}>
+              {formatDate(news_item.data.date)}
+            </time>
+          </div>
+        </div>
+        <article class="prose dark:prose-invert max-w-none">
+          <Content />
+        </article>
+      </div>
+    </section>
+
+    <!-- Related News -->
+    {
+      relatedNews.length > 0 && (
+        <section class="py-12 lg:py-16 bg-gray-50">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-center mb-8">Related News</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {relatedNews.map((relatedItem) => (
+                <a
+                  href={`/news/${relatedItem.slug}/`}
+                  class="block p-6 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100"
+                >
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                    {relatedItem.data.title}
+                  </h5>
+                  <p class="font-normal text-gray-700">
+                    {formatDate(relatedItem.data.date)}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
+  </main>
+</BaseLayout>
