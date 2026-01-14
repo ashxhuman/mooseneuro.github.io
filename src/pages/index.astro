@@ -80,18 +80,18 @@ const callToActionItems = [
               class="inline-flex transition-all text-white bg-brand-tertiary inset-1 hover:bg-brand-primary focus:outline-none focus:ring-4 focus:ring-blue-600 font-normal rounded-lg text-base px-5 py-2.5"
             >
               <a
-                href="https://moose.readthedocs.io/en/latest/user/py/quickstart/moose_quickstart.html"
+                href="https://moose.readthedocs.io/en/latest/user/py/quickstart/moose_quickstart.html" class="group group-hover:from-purple-600 group-hover:to-brand-primary"
               >
                 Get started
               </a>
             </button>
             <button
-              class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-black rounded-lg group bg-gradient-to-br from-brand-primary to-brand-tertiary group-hover:from-purple-600 group-hover:to-brand-primary hover:text-white focus:ring-4 focus:outline-4 focus:ring-red-900"
+              class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-black rounded-lg group bg-gradient-to-br from-brand-primary to-brand-tertiary  hover:text-white focus:ring-4 focus:outline-4 focus:ring-red-900"
             >
               <span
                 class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-transparent"
               >
-                <a href="https://moose.readthedocs.io/en/latest/index.html">
+                <a href="https://moose.readthedocs.io/en/latest/index.html" class="group group-hover:from-purple-600 group-hover:to-brand-primary">
                   Learn more →
                 </a>
               </span>
@@ -99,19 +99,29 @@ const callToActionItems = [
           </div>
           <div>
             <button>
-              <a
-                id="jardesigner-button"
-                href="https://jardesigner.mooseneuro.org"
-                class="relative inline-flex items-center justify-center p-0.5 w-48 overflow-hidden text-xl font-medium text-white rounded-lg group bg-gradient-to-br from-brand-primary to-brand-tertiary group-hover:from-purple-600 group-hover:to-brand-primary hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
-                title="A web-based GUI for MOOSE"
-              >
-                <span
-                  class="relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+              <div class="relative group">
+                <a
+                  id="jardesigner-button"
+                  href="https://jardesigner.mooseneuro.org"
+                  class="inline-flex items-center justify-center p-0.5 w-48 overflow-hidden text-xl font-medium text-white rounded-lg bg-gradient-to-br from-brand-primary to-brand-tertiary hover:from-purple-600 hover:to-brand-primary hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
                 >
-              
-                  Jardesigner
-                </span>
-              </a>
+                  <span
+                    class="relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+                  >
+                    Jardesigner
+                  </span>
+                </a>
+                <div
+                  id="jardesigner-tooltip"
+                  class="absolute z-50 left-full top-1/2 -translate-y-1/2 ml-3 w-max bg-gray-900 text-white text-sm px-3 py-2 rounded whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                >
+                  A web-based GUI for MOOSE
+                  <div
+                    class="absolute right-full top-1/2 -translate-y-1/2 border-8 border-transparent border-r-gray-900"
+                  >
+                  </div>
+                </div>
+              </div>
             </button>
           </div>
         </div>
@@ -182,6 +192,8 @@ const callToActionItems = [
 </BaseLayout>
 
 <script>
+  import { addIssueToContext } from "astro:schema";
+
   const nav = document.getElementsByTagName("header")[0];
   nav.classList.remove("bg-black");
   window.addEventListener("scroll", function () {

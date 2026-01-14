@@ -10,5 +10,3 @@ date: 2026-01-14
 
 Incremental Release 4.1.4 improves stability, correctness, and usability. It fixes rare issues with evaluation and crashes in function objects, stabilizes expression parsing, and simplifies the Function API. SWC morphology import is enhanced with a clearer hierarchical naming scheme for dendritic compartments, making neuron structures easier to interpret and debug.
 
-The build instructions are for developers/advanced users and github workflow are part of repository maintenance.
-
