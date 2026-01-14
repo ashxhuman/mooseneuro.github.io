@@ -1,0 +1,64 @@
+---
+import NewsLayout from "@/layouts/NewsLayout.astro";
+import { getCollection } from "astro:content";
+import { formatDate } from "@/utils";
+
+const news = await getCollection("news");
+
+const sortedNews = news.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<NewsLayout title="News">
+  <div class="flex flex-col gap-y-4 p-10">
+    <p class="text-center text-indigo-400 text-4xl font-bold mb-10">Latest news and updates from the MOOSE community.</p>
+    <ul class="space-y-8 grid grid-cols-1 p-10 mx-10 w-full">
+      {
+        sortedNews.map((newsItem) => (
+          <li>
+            <div class="max-w-xl mx-auto rounded-2xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  <a href={`/news/${newsItem.slug}/`}>{newsItem.data.title}</a>
+                </h3>
+
+                <div class="flex items-center gap-3 text-sm text-gray-500 mb-4">
+                  <span class="font-medium text-gray-700">
+                    {newsItem.data.author}
+                  </span>
+                  <span class="w-1 h-1 bg-gray-400 rounded-full" />
+                  <time datetime={newsItem.data.date.toISOString()}>
+                    {formatDate(newsItem.data.date)}
+                  </time>
+                </div>
+
+                <div class="border-t border-gray-200 mb-4" />
+
+                <a
+                  href={`/news/${newsItem.slug}/`}
+                  class="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+                >
+                  Read more
+                  <svg
+                    class="ml-1 h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</NewsLayout>
