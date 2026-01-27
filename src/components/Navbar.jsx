@@ -5,8 +5,9 @@ import { navItems } from "./nav-data";
 import DesktopDropdown from "./DesktopDropdown";
 import MobileDropdown from "./MobileDropdown";
 
-export default function Navbar() {
+export default function Navbar({ transparentOnTop = false }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (mobileOpen) {
@@ -28,11 +29,32 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
+  useEffect(() => {
+    if (!transparentOnTop) {
+      setScrolled(true);
+      return;
+    }
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [transparentOnTop]);
+
+
   const closeMobileMenu = () => setMobileOpen(false);
+
+  const headerClass = `fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+    scrolled ? 'bg-black' : 'bg-transparent'
+  }`;
 
   return (
     <div className="relative md:absolute">
-      <header className="fixed inset-x-0 top-0 z-50 bg-black">
+      <header className={headerClass}>
         <nav
           className="flex items-center justify-between p-3 lg:px-8"
           aria-label="Global"

@@ -196,7 +196,7 @@ export default function Banner() {
       </div>
 
       {/* CSS styles injected via style tag */}
-      <style jsx global>{`
+      <style>{`
         :root {
           --banner-height: 0px; /* Hidden by default */
         }
