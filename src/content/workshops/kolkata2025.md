@@ -8,6 +8,10 @@ carouselheading: "Multiscale Modeling with MOOSE, September 25th-26th 2025, at C
 pubDate: 2025-05-05
 ---
 
+<a href="/assets/workshops/MOOSE2025_WorkshopRecap.pdf" target="_blank" rel="noopener noreferrer">
+  Workshop Recap
+</a>
+
 ## Date: September 25-26, 2025
 
 ## Venue:
