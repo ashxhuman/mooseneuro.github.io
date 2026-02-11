@@ -21,3 +21,9 @@ Inspired by collaborative learning environments, this webinar is community-drive
 The webinar aims to provide participants with a concept-driven introduction and overview of computational neuroscience and MOOSE, supported by live demonstrations, interactive discussions, and breakout rooms to create a comfortable environment for engaging with the MOOSE team.
 
 Come to explore, discuss, and connect!
+
+<div align="center">
+    <img src="../../assets/news/Webinar_2026_Flyer.png"
+         alt="Poster_Webinar_2026"
+         width="500" height="200">
+</div>
