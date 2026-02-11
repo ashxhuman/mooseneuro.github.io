@@ -1,6 +1,5 @@
 ---
 title: "New Incremental Release of MOOSE v4.1.4 is here!"
-author: "MOOSE Team"
 date: 2026-01-14
 ---
 
