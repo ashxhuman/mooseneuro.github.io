@@ -4,7 +4,6 @@ const news = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    author: z.string(),
     date: z.date(),
   }),
 });
