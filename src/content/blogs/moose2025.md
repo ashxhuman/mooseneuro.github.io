@@ -1,14 +1,15 @@
 ---
-title: "Multiscale Modelling with MOOSE"
+title: "Multiscale Modeling with MOOSE : Our 2025 Workshop Recap"
 date: 2026-02-23
 author: "Parita Mehta"
 authorimage: "/assets/team/parita.png"
-designation: "Community Manager for MOOSE, NCBS-TIFR"
+designation: "Community Manager for MOOSE"
+affiliation: "NCBS-TIFR"
 image: "/assets/blogs/moose2025/group_picture.jpg"
 ---
 <div class="text-center">
 	<h2 class="text-3xl font-bold">
-		Multiscale Modelling with MOOSE
+		Multiscale Modeling with MOOSE : Our 2025 Workshop Recap	
 	</h2>
 	<h3 class="text-xl text-gray-600 mt-2">
 		From neurophysiology to building multiscale neuronal networks.
