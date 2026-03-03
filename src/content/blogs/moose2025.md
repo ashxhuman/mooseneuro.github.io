@@ -1,6 +1,6 @@
 ---
 title: "Multiscale Modeling with MOOSE : Our 2025 Workshop Recap"
-date: 2026-02-23
+date: 2026-03-23
 author: "Parita Mehta"
 authorimage: "/assets/team/parita.png"
 designation: "Community Manager for MOOSE"
