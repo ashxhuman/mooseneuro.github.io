@@ -7,6 +7,7 @@ const blogs = defineCollection({
     author: z.string().optional(),
     authorimage: z.string().optional(),
     designation: z.string().optional(),
+    affiliation: z.string().optional(),
     date: z.date(),
     image: z.string().optional(),
     socialLinks: z.object({
