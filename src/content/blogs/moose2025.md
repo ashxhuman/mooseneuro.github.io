@@ -1,6 +1,6 @@
 ---
-title: "Multiscale Modeling with MOOSE : Our 2025 Workshop Recap"
-date: 2026-03-03
+title: "Multiscale Modeling with MOOSE :<br> 2025 Workshop Recap"
+date: 2026-03-05
 author: "Parita Mehta"
 authorimage: "/assets/team/parita.png"
 designation: "Community Manager for MOOSE"
@@ -9,7 +9,7 @@ image: "/assets/blogs/moose2025/group_picture.jpg"
 ---
 <div class="text-center">
 	<h2 class="text-3xl font-bold">
-		Multiscale Modeling with MOOSE : Our 2025 Workshop Recap	
+		Multiscale Modeling with MOOSE : <br> 2025 Workshop Recap	
 	</h2>
 	<h3 class="text-xl text-gray-600 mt-2">
 		From neurophysiology to building multiscale neuronal networks.
@@ -74,4 +74,4 @@ To know more about MOOSE, follow our GitHub organisation page, and come be part 
 
 Stay updated with the news [here](https://www.mooseneuro.org/news/). You can also follow us on [BlueSkySocial](https://bsky.app/profile/moosesim.bsky.social), [LinkedIn](https://www.linkedin.com/in/moose-neuro-simulator-064088315/), and [X](https://x.com/mooseneurosim). 
 
-*Acknowledgements: I thank Gautham Dathatreyan (T.A. for our workshop) for helping us in summarising this workshop recap.*
+*Acknowledgements: Parita Mehta thanks Gautham Dathatreyan (T.A. for our workshop) for helping us in summarising this workshop recap.*

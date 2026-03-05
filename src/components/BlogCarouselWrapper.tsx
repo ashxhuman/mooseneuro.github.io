@@ -37,8 +37,7 @@ export default function BlogCarouselWrapper({ blogs }: Props) {
                   />
                 )}
                 <div className="p-3 sm:p-5 flex-1 flex flex-col justify-between absolute bottom-0 left-0 right-0 bg-black/40">
-                  <h3 className="font-semibold text-2xl sm:text-4xl md:text-5xl h-full line-clamp-2 text-white">
-                    {blog.data.title}
+                  <h3 className="font-semibold text-lg sm:text-2xl md:text-4xl lg:text-5xl line-clamp-3 sm:line-clamp-2 text-white" dangerouslySetInnerHTML={{ __html: blog.data.title }}>
                   </h3>
                   <div className="flex items-center gap-3 text-xs sm:text-sm text-gray-100 mb-2 sm:mb-4">
                     <time dateTime={new Date(blog.data.date).toISOString()} className="text-xs sm:text-sm">
