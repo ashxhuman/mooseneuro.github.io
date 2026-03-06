@@ -48,15 +48,16 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
     <meta property="og:url" content={url} />
     <meta property="og:type" content={ogType} />
     <meta property="og:image" content={image} />
-    <meta property="og:image:alt" content={description} />
+    <meta property="og:image:secure_url" content={image} />
+    <meta property="og:image:alt" content={title} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
-    <meta name="twitter:image:alt" content={description} />
-
+    <meta name="twitter:image:alt" content={title} />
+    <meta name="twitter:url" content={url} />
     {
       seoData.map((entry, i) => (
         <script
