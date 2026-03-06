@@ -5,6 +5,7 @@ import { formatDate } from "@/utils";
 import bluesky from "@/assets/social/128px-Bluesky_Logo.svg.png";
 import linkedin from "@/assets/social/LI-In-Bug.png";
 import X from "@/assets/social/x-logo-black.png";
+import BlogsLayout from "@/layouts/BlogsLayout.astro";
 
 export async function getStaticPaths() {
   const allBlogs = await getCollection("blogs");
@@ -26,12 +27,21 @@ const relatedBlogs = allBlogs
 // Create share URLs
 const currentUrl = `${Astro.url.origin}/blogs/${blog.slug}`;
 const title = blog.data.title;
+const image = blog.data.image
+  ? blog.data.image.startsWith("http")
+    ? blog.data.image
+    : `${Astro.url.origin}${blog.data.image}`
+  : undefined;
 const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(title)}`;
 const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
 const blueskyShareUrl = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${title} ${currentUrl}`)}`;
 ---
 
-<BaseLayout title={blog.data.title}>
+<BlogsLayout   
+  title={title}
+  image={image}
+  url={currentUrl}>
+  
   <!-- Hero Section with Featured Image as Background -->
   {blog.data.image ? (
     <div
@@ -267,4 +277,4 @@ const blueskyShareUrl = `https://bsky.app/intent/compose?text=${encodeURICompone
       </div>
     </article>
   </main>
-</BaseLayout>
+</BlogsLayout>
