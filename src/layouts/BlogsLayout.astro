@@ -1,10 +1,21 @@
 ---
 import Hero from "../components/Hero.astro";
-import { getCollection } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
+
+const {
+  title = "Blogs",
+  image,
+  url,
+  showHero = true,
+  heroTitle = "Blogs",
+} = Astro.props;
 ---
 
-<BaseLayout title="Blogs">
-  <Hero title="Blogs" />
+<BaseLayout
+  title={title}
+  image={image}
+  url={url}
+  ogType="article"
+>
   <slot />
 </BaseLayout>
