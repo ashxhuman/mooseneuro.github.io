@@ -1,10 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "@/layouts/BaseLayout.astro";
 import { formatDate } from "@/utils";
 import bluesky from "@/assets/social/128px-Bluesky_Logo.svg.png";
 import linkedin from "@/assets/social/LI-In-Bug.png";
 import X from "@/assets/social/x-logo-black.png";
+import WhatsApp from "@/assets/WhatsApp.png";
+import Email from "@/assets/Email.png";
 import BlogsLayout from "@/layouts/BlogsLayout.astro";
 
 export async function getStaticPaths() {
@@ -38,6 +39,8 @@ const image = blog.data.image
 const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(title)}`;
 const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
 const blueskyShareUrl = `https://bsky.app/intent/compose?text=${encodeURIComponent(`${title} ${currentUrl}`)}`;
+const whatsAppShareUrl = `https://wa.me/?text=${encodeURIComponent(`${title} ${currentUrl}`)}`;
+const emailShareUrl = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(currentUrl)}`;
 ---
 
 <BlogsLayout   
@@ -139,6 +142,23 @@ const blueskyShareUrl = `https://bsky.app/intent/compose?text=${encodeURICompone
             >
               <img src={bluesky.src} alt="Bluesky" class="w-4 h-4" />
             </a>
+                          </a>              <a
+                href={whatsAppShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Share on WhatsApp"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors hover:scale-110"
+              >
+                <img src={WhatsApp.src} alt="Bluesky" class="w-5 h-5" />
+              </a>              </a>              <a
+                href={emailShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Share on WhatsApp"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors hover:scale-110"
+              >
+                <img src={Email.src} alt="Bluesky" class="w-5 h-5" />
+              </a>
           </div>
         </div>
       </div>
@@ -178,6 +198,22 @@ const blueskyShareUrl = `https://bsky.app/intent/compose?text=${encodeURICompone
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors hover:scale-110"
               >
                 <img src={bluesky.src} alt="Bluesky" class="w-5 h-5" />
+              </a>              <a
+                href={whatsAppShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Share on WhatsApp"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors hover:scale-110"
+              >
+                <img src={WhatsApp.src} alt="Bluesky" class="w-5 h-5" />
+              </a>              </a>              <a
+                href={emailShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Share on WhatsApp"
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors hover:scale-110"
+              >
+                <img src={Email.src} alt="Bluesky" class="w-5 h-5" />
               </a>
             </div>
               {blog.data.author && (
