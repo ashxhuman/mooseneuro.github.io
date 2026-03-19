@@ -37,7 +37,7 @@ Come to explore, discuss, and connect!
   <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <img src="/assets/team/subha.png" alt="Dr. Subhasis Ray" style="width:112px;height:112px;border-radius:50%;border:2px solid #4f46e5;object-fit:cover;margin-bottom:1rem;" />
     <h4 style="margin: 0.5rem 0;">Dr. Subhasis Ray</h4>
-    <p style="margin: 0;">Assistant Professor, CHINTA, (TCG CREST)</p>
+    <p style="margin: 0;">Associate Professor, CHINTA, (TCG CREST)</p>
   </div>
   <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <img src="/assets/team/parita.png" alt="Parita Mehta" style="width:112px;height:112px;border-radius:50%;border:2px solid #4f46e5;object-fit:cover;margin-bottom:1rem;" />
