@@ -6,6 +6,9 @@ on:
   workflow_dispatch:
 
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: read
   pages: write
@@ -13,35 +16,22 @@ permissions:
 
 jobs:
   build:
-    if: github.repository == 'MooseNeuro/mooseneuro.github.io'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Clean install dependencies (to fix Rollup issue)
-        run: |
-          rm -rf node_modules package-lock.json || true
-          npm install
-
-      - name: List project contents
-        run: ls -R
-
       - name: Build and upload your site
-        uses: withastro/action@v3
+        uses: withastro/action@v6
         with:
           path: .
-          node-version: 20 
-          package-manager: npm 
+          node-version: 24
+          package-manager: npm
 
   deploy:
+    if: github.repository == 'MooseNeuro/mooseneuro.github.io'
     needs: build
     runs-on: ubuntu-latest
     environment:
