@@ -1,23 +1,23 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { formatDate } from "@/utils";
 
 export async function getStaticPaths() {
   const allNews = await getCollection("news");
   return allNews.map((news_item) => ({
-    params: { slug: news_item.slug },
+    params: { slug: news_item.id },
     props: news_item,
   }));
 }
 
 const news_item = Astro.props;
-const { Content } = await news_item.render();
+const { Content } = await render(news_item);
 
 // Get all news for related articles, excluding current one
 const allNews = await getCollection("news");
 const relatedNews = allNews
-  .filter((item) => item.slug !== news_item.slug)
+  .filter((item) => item.id !== news_item.id)
   .slice(0, 3); // Show 3 related articles
 ---
 
@@ -86,7 +86,7 @@ const relatedNews = allNews
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedNews.map((relatedItem) => (
                 <a
-                  href={`/news/${relatedItem.slug}/`}
+                  href={`/news/${relatedItem.id}/`}
                   class="block p-6 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100"
                 >
                   <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
