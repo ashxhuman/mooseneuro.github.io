@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import { formatDate } from "@/utils";
 import bluesky from "@/assets/social/128px-Bluesky_Logo.svg.png";
 import linkedin from "@/assets/social/LI-In-Bug.png";
@@ -11,22 +11,22 @@ import BlogsLayout from "@/layouts/BlogsLayout.astro";
 export async function getStaticPaths() {
   const allBlogs = await getCollection("blogs");
   return allBlogs.map((blog) => ({
-    params: { slug: blog.slug },
+    params: { slug: blog.id },
     props: blog,
   }));
 }
 
 const blog = Astro.props;
-const { Content } = await blog.render();
+const { Content } = await render(blog);
 
 // Get all blogs for related articles, excluding current one
 const allBlogs = await getCollection("blogs");
 const relatedBlogs = allBlogs
-  .filter((item) => item.slug !== blog.slug)
+  .filter((item) => item.id !== blog.id)
   .slice(0, 3);
 
 // Create share URLs
-const currentUrl = `${Astro.url.origin}/blogs/${blog.slug}`;
+const currentUrl = `${Astro.url.origin}/blogs/${blog.id}`;
 const title = blog.data.title;
 const siteUrl = Astro.site?.origin ?? Astro.url.origin;
 
@@ -289,7 +289,7 @@ const emailShareUrl = `mailto:?subject=${encodeURIComponent(title)}&body=${encod
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {relatedBlogs.map((relatedBlog) => (
               <a
-                href={`/blogs/${relatedBlog.slug}`}
+                href={`/blogs/${relatedBlog.id}`}
                 class="group"
               >
                 <div class="relative overflow-hidden rounded-lg bg-gray-100 h-48 mb-3">

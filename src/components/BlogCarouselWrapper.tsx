@@ -14,7 +14,6 @@ interface BlogPost {
     image?: string;
     date: Date;
   };
-  slug: string;
 }
 
 interface Props {
@@ -26,8 +25,8 @@ export default function BlogCarouselWrapper({ blogs }: Props) {
     <Carousel className="w-full p-4 sm:p-10">
       <CarouselContent>
         {blogs.map((blog) => (
-          <CarouselItem key={blog.slug} className="pl-4 sm:pl-6 object-cover">
-            <a href={`/blogs/${blog.slug}`} className="block w-full h-64 sm:h-80 md:h-[600px]">
+          <CarouselItem key={blog.id} className="pl-4 sm:pl-6 object-cover">
+            <a href={`/blogs/${blog.id}`} className="block w-full h-64 sm:h-80 md:h-[600px]">
               <div className="w-full h-full flex flex-col relative">
                 {blog.data.image && (
                   <img
