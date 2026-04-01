@@ -24,9 +24,9 @@ CHINTA, 2nd Floor, Tower 1, Bengal Eco Intelligent Park, Block EM, Sector V, Sal
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.101014122415!2d88.42473697453391!3d22.575324979489817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275b0941c4b39%3A0xeac679d61b1f6e92!2sBengal%20Eco%20Intelligent%20Park%2C%20EM%20Block%2C%20Sector%20V%2C%20Bidhannagar%2C%20Kolkata%2C%20West%20Bengal%20700091!5e0!3m2!1sen!2sin!4v1746460503923!5m2!1sen!2sin" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-## Registration form: [registration form](https://forms.gle/AMeuMm5Ces2ceEBYA)
+## Registration form: [Link](https://forms.gle/AMeuMm5Ces2ceEBYA)
 
-### Application Deadline: 21st April 2026, 23:59 IST
+## Application Deadline: 21st April 2026, 23:59 IST
 
 ## What to Expect
 
