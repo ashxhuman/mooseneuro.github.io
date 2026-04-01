@@ -4,11 +4,11 @@ description: |
   
   <p style="margin-top: 0.75rem;">A One-Day Immersive Hands-On Workshop</p>
 
-  <p style="margin-top: 0.75rem;"> Join us at CHINTA, TCG CREST, for a focused one-day immersive workshop on multiscale modelling with MOOSE — a powerful open-source simulator for computational modelling in neuroscience and systems biology. </p>
+  <p style="margin-top: 0.75rem;"> Join us at CHINTA, TCG CREST, for a focused one-day immersive workshop on multiscale modelling with MOOSE - a powerful open-source simulator for computational modelling in neuroscience and systems biology. </p>
 
-  <p style="margin-top: 0.75rem;">This workshop is designed for students and researchers looking to get started with multiscale brain modelling, from molecular and cellular mechanisms to network-scale neural dynamics. The program will feature expert-led lectures, guided tutorials, and intensive hands-on sessions, building from foundational concepts in neuroscience to simulating in MOOSE with Python Scripting and its GUI <a href="https://jardesigner.mooseneuro.org/" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline; font-size: 15px;">Jardesigner</a> (especially for those with no background in coding).</p>
+  <p style="margin-top: 0.75rem;">This workshop is designed for students and researchers looking to get started with multiscale brain modelling, from molecular and cellular mechanisms to network-scale neural dynamics. The program will feature expert-led lectures, guided tutorials, and intensive hands-on sessions, building from foundational concepts in neuroscience to simulating in MOOSE with Python Scripting and its GUI <a href="https://jardesigner.mooseneuro.org/" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">Jardesigner</a> (especially for those with no background in coding).</p>
 
-  <p style="margin-top: 0.75rem;">This workshop is a prelude to <strong>MOOSE 2026</strong> — our expanded multi-day international workshop coming later this year in October.</p>
+  <p style="margin-top: 0.75rem;">This workshop is a prelude to <a href="/workshops/moose2026" style="color: blue; text-decoration: underline;" ><strong>MOOSE 2026</strong></a> - our expanded multi-day international workshop coming later this year in October.</p>
 
 url: "https://forms.gle/AMeuMm5Ces2ceEBYA"
 image: "/assets/workshops/MOOSE2026_1dayWorkshop_Flyer.png"
