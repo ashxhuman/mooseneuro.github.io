@@ -14,6 +14,7 @@ import Features from "../components/features.tsx";
 import Tutorials from "@/components/Tutorials.astro";
 import InfoCard from "../components/InfoCard.astro";
 import jardesigner from "../assets/jardesigner_logo.svg";
+import jardesignerSWC from "../assets/Jardesigner_swc.mp4"
 
 const callToActionItems = [
   {
@@ -112,7 +113,11 @@ const callToActionItems = [
                   href="https://jardesigner.mooseneuro.org"
                   class="inline-flex items-center justify-center p-0.5 w-50 h-14 overflow-hidden text-xl font-bold text-white rounded-lg bg-gradient-to-br from-brand-primary to-brand-tertiary hover:from-purple-600 hover:to-brand-primary hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
                 >
-                <img src={jardesigner.src} alt="jardesigner_logo" class="w-15 h-8 ml-4 -m-2 bg-white rounded-full">
+                  <img
+                    src={jardesigner.src}
+                    alt="jardesigner_logo"
+                    class="w-15 h-8 ml-4 -m-2 bg-white rounded-full"
+                  />
                   <span
                     class="relative px-5 py-2.5 transition-all ease-in duration-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
                   >
@@ -140,6 +145,53 @@ const callToActionItems = [
   <!--Features section -->
   <Features />
 
+  <!-- Video Section -->
+  <section class="py-16 bg-purple-50">
+    <div class="max-w-full mx-auto my-1 px-4 sm:px-6 lg:px-16">
+      <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <!-- Left: Caption & Description -->
+        <div class="lg:w-1/2 flex flex-col justify-center">
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+          >
+            Importing and Visualizing Neuronal Morphologies in Jardesigner
+          </h2>
+          <div>
+            <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+              This video shows how to import and visualize neuronal structures
+              in Jardesigner using SWC files. It walks you through the process
+              step by step — from loading the morphology to exploring its
+              structure and understanding how it looks in a simulation
+              environment.
+            </p>
+            <p class="text-gray-600 text-base sm:text-lg leading-relaxed mt-4">
+              Jardesigner makes it easy to work with complex neuronal models,
+              helping students, teachers, and researchers to explore and
+              analyze.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Video Embed -->
+        <div class="lg:w-2/3 aspect-video w-full">
+          <div class="aspect-video rounded-xl">
+            <video
+              autoplay
+              muted
+              loop  
+              playsinline
+              controls
+              class="w-full h-full object-fit"
+            >
+              <source src={jardesignerSWC} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- <Tutorials /> -->
   <!-- Few tutorial -->
   <!-- <Tutorial client:load /> -->
@@ -155,64 +207,82 @@ const callToActionItems = [
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 bg-white">
     <!-- Funders Section -->
     <div class="md:col-span-2 p-10" id="funders">
-      <h2 class="text-3xl sm:text-4xl font-semibold text-black mb-6 sm:mb-8 text-center">
+      <h2
+        class="text-3xl sm:text-4xl font-semibold text-black mb-6 sm:mb-8 text-center"
+      >
         Funders
       </h2>
-      <div class="flex flex-wrap md:flex-nowrap gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-10 place-items-center">
-        {funders.map((funder) => (
-          <div class="flex items-center justify-center w-full">
-            <img
-              class="h-18 w-auto object-contain mx-auto"
-              src={funder.src.src}
-              alt={funder.name}
-              width={200}
-              height={200}
-              loading="lazy"
-            />
-          </div>
-        ))}
+      <div
+        class="flex flex-wrap md:flex-nowrap gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-10 place-items-center"
+      >
+        {
+          funders.map((funder) => (
+            <div class="flex items-center justify-center w-full">
+              <img
+                class="h-18 w-auto object-contain mx-auto"
+                src={funder.src.src}
+                alt={funder.name}
+                width={200}
+                height={200}
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
       </div>
     </div>
 
     <!-- Supported By Section -->
     <div class="p-10" id="supportedBy">
-      <h2 class="text-3xl sm:text-4xl font-semibold text-black mb-6 sm:mb-8 text-center">
+      <h2
+        class="text-3xl sm:text-4xl font-semibold text-black mb-6 sm:mb-8 text-center"
+      >
         Supported By
       </h2>
-      <div class="flex flex-wrap md:flex-nowrap gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-10 place-items-center">
-        {supportedBy.map((supporter) => (
-          <div class="flex items-center justify-center w-full">
-            <img
-              class="h-18 w-auto object-contain mx-auto"
-              src={supporter.src.src}
-              alt={supporter.name}
-              width={200}
-              height={200}
-              loading="lazy"
-            />
-          </div>
-        ))}
+      <div
+        class="flex flex-wrap md:flex-nowrap gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-10 place-items-center"
+      >
+        {
+          supportedBy.map((supporter) => (
+            <div class="flex items-center justify-center w-full">
+              <img
+                class="h-18 w-auto object-contain mx-auto"
+                src={supporter.src.src}
+                alt={supporter.name}
+                width={200}
+                height={200}
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
       </div>
     </div>
 
     <!-- Past Funder Section -->
     <div class="p-10" id="pastfunders">
-      <h2 class="text-3xl sm:text-4xl font-semibold text-black mb-6 sm:mb-8 text-center">
+      <h2
+        class="text-3xl sm:text-4xl font-semibold text-black mb-6 sm:mb-8 text-center"
+      >
         Past Funders
       </h2>
-      <div class="flex flex-wrap md:flex-nowrap gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-10 place-items-center">
-        {pastFunders.map((funders) => (
+      <div
+        class="flex flex-wrap md:flex-nowrap gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-10 place-items-center"
+      >
+        {
+          pastFunders.map((funders) => (
             <div class="flex items-center justify-center w-full">
               <img
-                  class="h-18 w-auto object-contain mx-auto"
-                  src={funders.src.src}
-                  alt={funders.name}
-                  width={200}
-                  height={200}
-                  loading="lazy"
+                class="h-18 w-auto object-contain mx-auto"
+                src={funders.src.src}
+                alt={funders.name}
+                width={200}
+                height={200}
+                loading="lazy"
               />
             </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </div>
@@ -233,5 +303,3 @@ const callToActionItems = [
     </div>
   </section>
 </BaseLayout>
-
-
