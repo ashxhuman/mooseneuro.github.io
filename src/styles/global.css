@@ -96,3 +96,18 @@ article.prose a {
 article.prose a:hover {
   color: #1d4ed8 !important;
 }
+
+/* Inline code styling */
+article.prose :not(pre) > code {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  padding: 0.125rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-weight: 500;
+}
+
+article.prose :not(pre) > code::before,
+article.prose :not(pre) > code::after {
+  content: '' !important;
+}
