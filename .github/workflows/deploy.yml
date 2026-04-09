@@ -21,7 +21,27 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v6
         with:
-          submodules: true
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Sphinx dependencies
+        run: pip install -r docs/requirements.txt
+
+      - name: Build Sphinx docs
+        env:
+          MOOSE_CORE_PATH: ${{ github.workspace }}/docs/moose-core
+          MOOSE_EXAMPLES_PATH: ${{ github.workspace }}/docs/moose-examples
+        run: sphinx-build -b html docs/source public/docs
+
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
+
+      - name: Build Doxygen docs
+        run: cd docs/doxygen && doxygen Doxyfile
 
       - name: Build and upload your site
         uses: withastro/action@v6
