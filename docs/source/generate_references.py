@@ -12,7 +12,7 @@ import sys
 
 import moose
 
-OUT_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'references')
+OUT_DIR = os.path.join(os.path.dirname(__file__), 'references')
 os.makedirs(OUT_DIR, exist_ok=True)
 
 

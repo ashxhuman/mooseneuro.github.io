@@ -45,9 +45,8 @@ Interpolation
 .. automodule:: interpol2d
    :members:
    :no-index:
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/interpol2d.py
+.. literalinclude:: ../../../../moose-examples/snippets/interpol2d.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end 
 
 SymCompartment

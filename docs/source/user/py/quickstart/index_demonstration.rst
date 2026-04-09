@@ -12,37 +12,32 @@ Load and Run a Model
   :members:
   :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadKineticModel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadKineticModel.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
 .. automodule:: loadCspaceModel
    :members:
    :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadCspaceModel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadCspaceModel.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadCspaceModel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadCspaceModel.py
    :language: python
-   :start-after: # block 2 start
    :end-before: # block 2 end
 
 .. automodule:: loadSbmlmodel
    :members:
    :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadSbmlmodel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadSbmlmodel.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadSbmlmodel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadSbmlmodel.py
    :language: python
-   :start-after: # block 2 start
    :end-before: # block 2 end
 
 Start, Stop and setting the clocks 
@@ -52,38 +47,32 @@ Start, Stop and setting the clocks
   :members:
   :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/startstop.py
+.. literalinclude:: ../../../../moose-examples/snippets/startstop.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/startstop.py
+.. literalinclude:: ../../../../moose-examples/snippets/startstop.py
    :language: python
-   :start-after: # block 2 start
    :end-before: # block 2 end
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/startstop.py
+.. literalinclude:: ../../../../moose-examples/snippets/startstop.py
    :language: python
-   :start-after: # block 3 start
    :end-before: # block 3 end
 
 .. automodule:: stimtable
   :members:
   :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/stimtable.py
+.. literalinclude:: ../../../../moose-examples/snippets/stimtable.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/stimtable.py
+.. literalinclude:: ../../../../moose-examples/snippets/stimtable.py
    :language: python
-   :start-after: # block 2 start
    :end-before: # block 2 end
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/stimtable.py
+.. literalinclude:: ../../../../moose-examples/snippets/stimtable.py
    :language: python
-   :start-after: # block 3 start
    :end-before: # block 3 end
 
 Run Python from MOOSE

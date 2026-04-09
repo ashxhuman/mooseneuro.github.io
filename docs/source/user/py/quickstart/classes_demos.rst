@@ -65,15 +65,13 @@ Interpolation
   :members:
   :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/interpol.py
+.. literalinclude:: ../../../../moose-examples/snippets/interpol.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadKineticModel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadKineticModel.py
    :language: python
-   :start-after: # block 2 start
    :end-before: # block 2 end
 
 2-dimentional interpolation
@@ -82,9 +80,8 @@ Interpolation
 .. automodule:: interpol2d
    :members:
    :no-index:
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/interpol2d.py
+.. literalinclude:: ../../../../moose-examples/snippets/interpol2d.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end 
 
 SymCompartment

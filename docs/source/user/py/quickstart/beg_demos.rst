@@ -12,35 +12,30 @@ Load and Run a Model
   :members:
   :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadKineticModel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadKineticModel.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
 .. automodule:: loadCspaceModel
    :members:
    :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadCspaceModel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadCspaceModel.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadCspaceModel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadCspaceModel.py
    :language: python
-   :start-after: # block 2 start
    :end-before: # block 2 end
 
 .. automodule:: loadSbmlmodel
    :members:
    :no-index:
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadSbmlmodel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadSbmlmodel.py
    :language: python
-   :start-after: # block 1 start
    :end-before: # block 1 end
 
-.. literalinclude:: ../../../../../moose-core/moose-examples/snippets/loadSbmlmodel.py
+.. literalinclude:: ../../../../moose-examples/snippets/loadSbmlmodel.py
    :language: python
-   :start-after: # block 2 start
    :end-before: # block 2 end
