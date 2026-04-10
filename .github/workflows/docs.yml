@@ -1,0 +1,50 @@
+name: Build Docs
+
+on:
+  # push:
+  #   branches: [main]
+  # workflow_call:
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Sphinx dependencies
+        run: pip install -r docs/requirements.txt
+
+      - name: Build Sphinx docs
+        env:
+          MOOSE_CORE_PATH: ${{ github.workspace }}/docs/moose-core
+          MOOSE_EXAMPLES_PATH: ${{ github.workspace }}/docs/moose-examples
+        run: sphinx-build -b html docs/source public/docs
+
+      - name: Add CNAME for docs subdomain
+        run: echo "docs.mooseneuro.org" > public/docs/CNAME
+
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
+
+      - name: Build Doxygen docs
+        run: cd docs/doxygen && doxygen Doxyfile
+
+      - name: Upload docs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-docs
+          path: |
+            public/docs
+            public/doxygen

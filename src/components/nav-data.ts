@@ -21,19 +21,19 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Documentation",
-    href: "https://moose-doc.readthedocs.io/en/latest/index.html#",
+    href: "/docs",
     dropdown: [
       {
         title: "Introduction",
-        href: "https://moose-doc.readthedocs.io/en/latest/introduction/introduction.html",
+        href: "https://docs.mooseneuro.org/introduction/introduction.html",
       },
       {
         title: "Quick Start",
-        href: "https://moose-doc.readthedocs.io/en/latest/user/py/quickstart/index_qs.html",
+        href: "https://docs.mooseneuro.org/user/py/quickstart/index_qs.html",
       },
       {
         title: "Cookbook Examples",
-        href: "https://moose-doc.readthedocs.io/en/latest/user/py/cookbook/index_ckbk.html",
+        href: "https://docs.mooseneuro.org/user/py/cookbook/index_ckbk.html",
       },
       {
         title: "FAQ",
