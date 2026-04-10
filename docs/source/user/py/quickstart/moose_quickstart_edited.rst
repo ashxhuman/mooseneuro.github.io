@@ -14,11 +14,10 @@ MOOSE is based on an object-based approach. Biological concepts are mapped into 
 
 MOOSE provides support for several model formats, including SBML, NeuroML, GENESIS kkit, and cell.p for models, HDF5 and NSDF for data writing. MOOSE uses SI units for all calculations.
 
-Contents:
-
 .. contents::
    :local:
    :depth: 1
+   :class: this-will-duplicate-information-and-it-is-still-useful-here
 
 Coding basics and how to use this document
 ==========================================

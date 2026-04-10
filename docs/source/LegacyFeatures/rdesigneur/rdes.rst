@@ -11,11 +11,9 @@ By: Upi Bhalla
 
 .. --------------
 
-Contents
---------
-
 .. contents::
    :depth: 3
+   :class: this-will-duplicate-information-and-it-is-still-useful-here
 
 Introduction
 ------------

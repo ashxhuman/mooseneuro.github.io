@@ -474,9 +474,11 @@ def _is_equation(line):
     eq_match = re.search(r'(?<![<>!=])=(?!=)', s)
     if not eq_match:
         return False
-    # If the LHS contains a comma, it's prose not math
+    # If the LHS contains a comma or multiple words, it's prose not math
     lhs = s[:eq_match.start()]
     if ',' in lhs:
+        return False
+    if len(lhs.split()) > 2:
         return False
     # Allow spaces between d and variable: d Vm /dt, d u / dt, dVm/dt
     has_deriv = bool(re.search(r'd\s*\w+\s*/\s*d\w+', s))

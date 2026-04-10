@@ -8,6 +8,7 @@
    /user/py/quickstart/qs_GUI.rst
    /user/py/quickstart/index_qs.rst
    /user/py/cookbook/index_ckbk
+   /user/py/graphics/index_graphics
    /user/py/references
    doxygen
    known_issues
