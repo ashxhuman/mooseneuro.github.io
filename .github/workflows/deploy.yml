@@ -14,23 +14,13 @@ permissions:
   id-token: write
 
 jobs:
-  build-docs:
-    uses: ./.github/workflows/docs.yml
-
   build-site:
     runs-on: ubuntu-latest
-    needs: build-docs
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
           submodules: recursive
-
-      - name: Download built docs
-        uses: actions/download-artifact@v4
-        with:
-          name: built-docs
-          path: public
 
       - name: Build and upload site
         uses: withastro/action@v6
