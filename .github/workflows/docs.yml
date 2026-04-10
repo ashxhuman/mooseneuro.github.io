@@ -32,6 +32,9 @@ jobs:
           MOOSE_EXAMPLES_PATH: ${{ github.workspace }}/docs/moose-examples
         run: sphinx-build -b html docs/source public/docs
 
+      - name: Add CNAME for docs subdomain
+        run: echo "docs.mooseneuro.org" > public/docs/CNAME
+
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
 
