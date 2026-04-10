@@ -25,15 +25,15 @@ export const navItems: NavItem[] = [
     dropdown: [
       {
         title: "Introduction",
-        href: "https://docs.mooseneuro.org/introduction/introduction.html",
+        href: "https://mooseneuro.org/docs/introduction/introduction.html",
       },
       {
         title: "Quick Start",
-        href: "https://docs.mooseneuro.org/user/py/quickstart/index_qs.html",
+        href: "https://mooseneuro.org/docs/user/py/quickstart/index_qs.html",
       },
       {
         title: "Cookbook Examples",
-        href: "https://docs.mooseneuro.org/user/py/cookbook/index_ckbk.html",
+        href: "https://mooseneuro.org/docs/user/py/cookbook/index_ckbk.html",
       },
       {
         title: "FAQ",
