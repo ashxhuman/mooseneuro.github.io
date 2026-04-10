@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="IntFire_8h" kind="file" language="C++">
+    <compoundname>IntFire.h</compoundname>
+    <includedby refid="testAsync_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/testAsync.cpp</includedby>
+    <includedby refid="IntFire_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/IntFire.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/testAsync.cpp</label>
+        <link refid="testAsync_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/IntFire.cpp</label>
+        <link refid="IntFire_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/IntFire.h</label>
+        <link refid="IntFire_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classIntFire" prot="public">IntFire</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2010<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_INT_FIRE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_INT_FIRE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classIntFire" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classIntFire" kindref="compound">IntFire</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16" refid="classIntFire_1a183d2a02c1cf1031fa0e8cdfc01af882" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a183d2a02c1cf1031fa0e8cdfc01af882" kindref="member">testStandaloneIntFire</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a8c9707914c5af55f76b5ab6024a23838" kindref="member">testSynapse</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classIntFire_1ab3b7c4a7b34d380ac253ab6b2878ebf6" kindref="member">IntFire</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classIntFire_1ab3b7c4a7b34d380ac253ab6b2878ebf6" kindref="member">IntFire</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thresh,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tau<sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classIntFire_1ab0f736b282453bfb2834c8746e892c41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1ab0f736b282453bfb2834c8746e892c41" kindref="member">innerAddSpike</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>synIndex,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Field<sp/>assignment<sp/>stuff.</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a97f82ff2a078efb260717b65cb16350b" kindref="member">setVm</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1aeda0f5ab5a469c4d1b44f2b1c35fd2c0" kindref="member">getVm</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1add5fa4d178635ed60bb45246be08a2ba" kindref="member">setTau</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1ad7874533cf02d7e75a25bf0a2bedb9c1" kindref="member">getTau</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a8f480ea8ce80bf81943a4c669ecfa2ab" kindref="member">setThresh</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a82c3d9e01eac05cb8c47d6d1d4241a9e" kindref="member">getThresh</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1adfa548f9a761f2baa6f8a5de8854ad9d" kindref="member">setRefractoryPeriod</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a70b912557f25c9f4858e77e63193c1bf" kindref="member">getRefractoryPeriod</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Dest<sp/>Func</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a15b960dcbf1b0d4b405799fa04eec616" kindref="member">activation</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a8e768c0b5b1ed9724e9d7ce02829c8d5" kindref="member">process</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a31d94b8e476cad78d39bc3f9ffd1f32e" kindref="member">reinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/><sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classIntFire_1aff3833e9d1cc63f77a391f13779a7e35" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50" refid="classIntFire_1adb34f8a71f4334d89139d714ebe77532" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1adb34f8a71f4334d89139d714ebe77532" kindref="member">Vm_</ref>;<sp/></highlight><highlight class="comment">//<sp/>State<sp/>variable:<sp/>Membrane<sp/>potential.<sp/>Resting<sp/>pot<sp/>is<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classIntFire_1a880da34c70cd30c5880e4596759f1658" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a880da34c70cd30c5880e4596759f1658" kindref="member">thresh_</ref>;<sp/></highlight><highlight class="comment">//<sp/>Firing<sp/>threshold</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classIntFire_1a41c7b9bd1d0578f27c4b0a078ba4386b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a41c7b9bd1d0578f27c4b0a078ba4386b" kindref="member">tau_</ref>;<sp/></highlight><highlight class="comment">//<sp/>Time<sp/>course<sp/>of<sp/>membrane<sp/>settling.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classIntFire_1a3a8c9a175befcc009d47855c2b847101" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a3a8c9a175befcc009d47855c2b847101" kindref="member">refractoryPeriod_</ref>;<sp/></highlight><highlight class="comment">//<sp/>Minimum<sp/>time<sp/>between<sp/>successive<sp/>spikes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classIntFire_1a0a66171757754834ca7fbb7996a97ad8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a0a66171757754834ca7fbb7996a97ad8" kindref="member">lastSpike_</ref>;<sp/></highlight><highlight class="comment">//<sp/>Time<sp/>of<sp/>last<sp/>action<sp/>potential.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classIntFire_1a7cf8df5f529b4e504b605e245de73089" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIntFire_1a7cf8df5f529b4e504b605e245de73089" kindref="member">activation_</ref>;<sp/></highlight><highlight class="comment">//<sp/>Total<sp/>synaptic<sp/>activation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_INT_FIRE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/IntFire.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classExternReac" kind="class" language="C++" prot="public">
+    <compoundname>ExternReac</compoundname>
+    <basecompoundref refid="classRateTerm" prot="public" virt="non-virtual">RateTerm</basecompoundref>
+    <derivedcompoundref refid="classFuncRate" prot="public" virt="non-virtual">FuncRate</derivedcompoundref>
+    <includes refid="RateTerm_8h" local="no">RateTerm.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classExternReac_1a37e229b9b2cc6c6a061d97fd9489634d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classRateTerm" kindref="compound">RateTerm</ref> *</type>
+        <definition>RateTerm * ExternReac::copyWithVolScaling</definition>
+        <argsstring>(double vol, double sub, double prd) const</argsstring>
+        <name>copyWithVolScaling</name>
+        <qualifiedname>ExternReac::copyWithVolScaling</qualifiedname>
+        <reimplements refid="classRateTerm_1a1ed45d040641861c18c1e896c2512e90">copyWithVolScaling</reimplements>
+        <reimplementedby refid="classFuncRate_1a1a1d41e75591df8cbb3b5192a346400b">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classFuncReac_1a260022d0af68d05324d2546ebcdb3d7c">copyWithVolScaling</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>prd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duplicates rate term and then applies volume scaling. Arguments are volume of reference voxel, product of vol/refVol for all substrates: applied to R1 product of vol/refVol for all products: applied to R2</para>
+<para>Note that unless the reaction is cross-compartment, the vol/refVol will be one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="267" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="267" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classExternReac_1ad265194288c77054ed6b5b3788fd46b5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double ExternReac::getR1</definition>
+        <argsstring>() const</argsstring>
+        <name>getR1</name>
+        <qualifiedname>ExternReac::getR1</qualifiedname>
+        <reimplements refid="classRateTerm_1a59765605f8379adff7e8d53f9fa691e3">getR1</reimplements>
+        <reimplementedby refid="classFuncRate_1a5d30239aba1a0768ae923de8e2a15d6c">getR1</reimplementedby>
+        <briefdescription>
+<para>Used by Zombie to return rate terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="245" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="245" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classExternReac_1a4545b555adfbe40f2badf1eaae823d8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double ExternReac::getR2</definition>
+        <argsstring>() const</argsstring>
+        <name>getR2</name>
+        <qualifiedname>ExternReac::getR2</qualifiedname>
+        <reimplements refid="classRateTerm_1af29746384131d9238627a763c795739c">getR2</reimplements>
+        <briefdescription>
+<para>Used by Zombie to return rate terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="250" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classExternReac_1a04f289a7f892a7dc328a923a3d9451f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int ExternReac::getReactants</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;molIndex) const</argsstring>
+        <name>getReactants</name>
+        <qualifiedname>ExternReac::getReactants</qualifiedname>
+        <reimplements refid="classRateTerm_1af4d74f9d0b9e5c0d5dd42536e99c73d1">getReactants</reimplements>
+        <reimplementedby refid="classFuncRate_1aedce749d1c83cf817a58800572de498d">getReactants</reimplementedby>
+        <reimplementedby refid="classFuncReac_1ae823f3ba14f3c3d4a719b0749169f30e">getReactants</reimplementedby>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>molIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finds the reactant indices in the vector S. It returns the number of substrates found, which are the first entries in molIndex. The products are the remaining ones. Note that it does NOT find products for unidirectional reactions, which is a bit of a problem. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="255" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="255" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classExternReac_1acc87c8c1450d1693e84792510494a193" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double ExternReac::operator()</definition>
+        <argsstring>(const double *S) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>ExternReac::operator()</qualifiedname>
+        <reimplements refid="classRateTerm_1a47058d3e308f2499045035f4f76a9ec6">operator()</reimplements>
+        <reimplementedby refid="classFuncRate_1ab82985ce0b81640207fcb13e8c09815c">operator()</reimplementedby>
+        <reimplementedby refid="classFuncReac_1a245b28caa4148981a5d0fb98fd4fd8c9">operator()</reimplementedby>
+        <param>
+          <type>const double *</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Computes the rate. The argument is the molecule array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="225" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="225" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classExternReac_1aa4240abdc85f23ed33e3b5dcd92359bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ExternReac::rescaleVolume</definition>
+        <argsstring>(short comptIndex, const vector&lt; short &gt; &amp;compartmentLookup, double ratio)</argsstring>
+        <name>rescaleVolume</name>
+        <qualifiedname>ExternReac::rescaleVolume</qualifiedname>
+        <reimplements refid="classRateTerm_1ab6098472ad4346f4a5325b4c408fadbd">rescaleVolume</reimplements>
+        <param>
+          <type>short</type>
+          <declname>comptIndex</declname>
+        </param>
+        <param>
+          <type>const vector&lt; short &gt; &amp;</type>
+          <declname>compartmentLookup</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used to rescale the <ref refid="classRateTerm" kindref="compound">RateTerm</ref> kinetics when the compartment volume changes. This is needed because the kinetics are in extensive units, that is, mol numbers, rather than in intensive units like concentration. So when the volume changes the rate terms change. Each Rate term checks if any of its reactant molecules are affected, and if so, rescales. Ratio is newVol / oldVol </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="261" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="261" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classExternReac_1acde3d620c1c91b78d32fe02cbcc2272e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ExternReac::setR1</definition>
+        <argsstring>(double k1)</argsstring>
+        <name>setR1</name>
+        <qualifiedname>ExternReac::setR1</qualifiedname>
+        <reimplements refid="classRateTerm_1ad6eefe002f1444d133e8e65263b7a51b">setR1</reimplements>
+        <param>
+          <type>double</type>
+          <declname>k1</declname>
+        </param>
+        <briefdescription>
+<para>Used by Zombie to assign rate terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="235" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classExternReac_1a669c9bc33a149e21b54a7e32acc7fd25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ExternReac::setR2</definition>
+        <argsstring>(double k2)</argsstring>
+        <name>setR2</name>
+        <qualifiedname>ExternReac::setR2</qualifiedname>
+        <reimplements refid="classRateTerm_1af99710d5df81d4deee95303a615a63d1">setR2</reimplements>
+        <param>
+          <type>double</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+<para>Used by Zombie to assign rate terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="240" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="240" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classExternReac_1afd3413c0b1c04d67ecd596f4d5523d8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ExternReac::setRates</definition>
+        <argsstring>(double k1, double k2)</argsstring>
+        <name>setRates</name>
+        <qualifiedname>ExternReac::setRates</qualifiedname>
+        <reimplements refid="classRateTerm_1a39cdb3995b885bb809fe50ad0bf62da9">setRates</reimplements>
+        <param>
+          <type>double</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign the rates. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="230" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="230" bodyend="233"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ExternReac</label>
+        <link refid="classExternReac"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FuncRate</label>
+        <link refid="classFuncRate"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FuncReac</label>
+        <link refid="classFuncReac"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ExternReac</label>
+        <link refid="classExternReac"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="220" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="221" bodyend="274"/>
+    <listofallmembers>
+      <member refid="classExternReac_1a37e229b9b2cc6c6a061d97fd9489634d" prot="public" virt="virtual"><scope>ExternReac</scope><name>copyWithVolScaling</name></member>
+      <member refid="classRateTerm_1a211734fd07c0ef1949907d832d9d03fd" prot="public" virt="non-virtual"><scope>ExternReac</scope><name>EPSILON</name></member>
+      <member refid="classExternReac_1ad265194288c77054ed6b5b3788fd46b5" prot="public" virt="virtual"><scope>ExternReac</scope><name>getR1</name></member>
+      <member refid="classExternReac_1a4545b555adfbe40f2badf1eaae823d8b" prot="public" virt="virtual"><scope>ExternReac</scope><name>getR2</name></member>
+      <member refid="classExternReac_1a04f289a7f892a7dc328a923a3d9451f4" prot="public" virt="virtual"><scope>ExternReac</scope><name>getReactants</name></member>
+      <member refid="classExternReac_1acc87c8c1450d1693e84792510494a193" prot="public" virt="virtual"><scope>ExternReac</scope><name>operator()</name></member>
+      <member refid="classRateTerm_1a3fe9a3f2a9c5701276de7aaf89e4bd06" prot="public" virt="non-virtual"><scope>ExternReac</scope><name>RateTerm</name></member>
+      <member refid="classExternReac_1aa4240abdc85f23ed33e3b5dcd92359bc" prot="public" virt="virtual"><scope>ExternReac</scope><name>rescaleVolume</name></member>
+      <member refid="classExternReac_1acde3d620c1c91b78d32fe02cbcc2272e" prot="public" virt="virtual"><scope>ExternReac</scope><name>setR1</name></member>
+      <member refid="classExternReac_1a669c9bc33a149e21b54a7e32acc7fd25" prot="public" virt="virtual"><scope>ExternReac</scope><name>setR2</name></member>
+      <member refid="classExternReac_1afd3413c0b1c04d67ecd596f4d5523d8a" prot="public" virt="virtual"><scope>ExternReac</scope><name>setRates</name></member>
+      <member refid="classRateTerm_1a097b1971a7652a8771245f17f28356a1" prot="public" virt="virtual"><scope>ExternReac</scope><name>~RateTerm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

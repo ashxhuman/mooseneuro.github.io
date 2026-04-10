@@ -1,0 +1,1317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="HSolve_8cpp" kind="file" language="C++">
+    <compoundname>HSolve.cpp</compoundname>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes refid="global_8h" local="yes">../basecode/global.h</includes>
+    <includes refid="ElementValueFinfo_8h" local="yes">../basecode/ElementValueFinfo.h</includes>
+    <includes refid="HSolveStruct_8h" local="yes">HSolveStruct.h</includes>
+    <includes refid="HinesMatrix_8h" local="yes">HinesMatrix.h</includes>
+    <includes refid="HSolvePassive_8h" local="yes">HSolvePassive.h</includes>
+    <includes refid="RateLookup_8h" local="yes">RateLookup.h</includes>
+    <includes refid="HSolveActive_8h" local="yes">HSolveActive.h</includes>
+    <includes refid="HSolve_8h" local="yes">HSolve.h</includes>
+    <includes refid="Compartment_8h" local="yes">../biophysics/Compartment.h</includes>
+    <includes refid="ZombieCompartment_8h" local="yes">ZombieCompartment.h</includes>
+    <includes refid="CaConcBase_8h" local="yes">../biophysics/CaConcBase.h</includes>
+    <includes refid="ZombieCaConc_8h" local="yes">ZombieCaConc.h</includes>
+    <includes refid="HHGate_8h" local="yes">../biophysics/HHGate.h</includes>
+    <includes refid="ChanBase_8h" local="yes">../biophysics/ChanBase.h</includes>
+    <includes refid="ChanCommon_8h" local="yes">../biophysics/ChanCommon.h</includes>
+    <includes refid="HHChannel_8h" local="yes">../biophysics/HHChannel.h</includes>
+    <includes refid="CaConc_8h" local="yes">../biophysics/CaConc.h</includes>
+    <includes refid="ZombieHHChannel_8h" local="yes">ZombieHHChannel.h</includes>
+    <includes refid="Shell_8h" local="yes">../shell/Shell.h</includes>
+    <includes local="no">chrono</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="29">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="18">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="22">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="24">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="50">
+        <label>../basecode/ElementValueFinfo.h</label>
+        <link refid="ElementValueFinfo_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="28">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="42">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="41">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="17">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="26">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="33">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="14">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="27">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="39">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="23">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="20">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="15">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="35">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="32">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="37">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="34">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="31">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="38">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="13">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="44">
+        <label>../basecode/global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>../biophysics/CaConc.h</label>
+        <link refid="CaConc_8h"/>
+      </node>
+      <node id="77">
+        <label>../biophysics/CaConcBase.h</label>
+        <link refid="CaConcBase_8h"/>
+      </node>
+      <node id="70">
+        <label>../biophysics/ChanBase.h</label>
+        <link refid="ChanBase_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>../biophysics/ChanCommon.h</label>
+        <link refid="ChanCommon_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>../biophysics/Compartment.h</label>
+        <link refid="Compartment_8h"/>
+      </node>
+      <node id="55">
+        <label>../biophysics/CompartmentBase.h</label>
+        <link refid="CompartmentBase_8h"/>
+      </node>
+      <node id="73">
+        <label>../biophysics/HHChannel.h</label>
+        <link refid="HHChannel_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>../biophysics/HHChannelBase.h</label>
+        <link refid="HHChannelBase_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>../biophysics/HHGate.h</label>
+        <link refid="HHGate_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>HHGateBase.h</label>
+        <link refid="HHGateBase_8h"/>
+      </node>
+      <node id="78">
+        <label>../biophysics/SpikeGen.h</label>
+        <link refid="SpikeGen_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolve.cpp</label>
+        <link refid="HSolve_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>HSolve.h</label>
+        <link refid="HSolve_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>HSolveActive.h</label>
+        <link refid="HSolveActive_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>HSolvePassive.h</label>
+        <link refid="HSolvePassive_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>HSolveStruct.h</label>
+        <link refid="HSolveStruct_8h"/>
+      </node>
+      <node id="57">
+        <label>HSolveUtils.h</label>
+        <link refid="HSolveUtils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>HinesMatrix.h</label>
+        <link refid="HinesMatrix_8h"/>
+      </node>
+      <node id="74">
+        <label>RateLookup.h</label>
+        <link refid="RateLookup_8h"/>
+      </node>
+      <node id="87">
+        <label>ZombieCaConc.h</label>
+        <link refid="ZombieCaConc_8h"/>
+      </node>
+      <node id="81">
+        <label>ZombieCompartment.h</label>
+        <link refid="ZombieCompartment_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>ZombieHHChannel.h</label>
+        <link refid="ZombieHHChannel_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="84">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>../randnum/RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="90">
+        <label>../shell/Shell.h</label>
+        <link refid="Shell_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>current_function.hpp</label>
+        <link refid="current__function_8hpp"/>
+      </node>
+      <node id="47">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>simple_assert.hpp</label>
+        <link refid="simple__assert_8hpp"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>../utility/simple_test.hpp</label>
+        <link refid="simple__test_8hpp"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>testing_macros.hpp</label>
+        <link refid="testing__macros_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="66">
+        <label>assert.h</label>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="51">
+        <label>cctype</label>
+      </node>
+      <node id="80">
+        <label>chrono</label>
+      </node>
+      <node id="63">
+        <label>cmath</label>
+      </node>
+      <node id="67">
+        <label>cstdlib</label>
+      </node>
+      <node id="30">
+        <label>cstring</label>
+      </node>
+      <node id="45">
+        <label>ctime</label>
+      </node>
+      <node id="60">
+        <label>exception</label>
+      </node>
+      <node id="48">
+        <label>fstream</label>
+      </node>
+      <node id="49">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="62">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="83">
+        <label>random</label>
+      </node>
+      <node id="76">
+        <label>set</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="61">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="46">
+        <label>valarray</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="HSolve_8cpp_1aa24e1a70969a62a3dd11bb8c99510aaa" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo* hsolveCinfo</definition>
+        <argsstring></argsstring>
+        <name>hsolveCinfo</name>
+        <initializer>= <ref refid="classHSolve_1a3d60964bbc6441f73c04fe702faba848" kindref="member">HSolve::initCinfo</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolve.cpp" line="195" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolve.cpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="HSolve_8cpp_1abff61e37e941070d2f7f50dde2ada11f" prot="public" static="no" extern="yes" mutable="no">
+        <type>map&lt; string, double &gt;</type>
+        <definition>map&lt;string, double&gt; solverProfMap</definition>
+        <argsstring></argsstring>
+        <name>solverProfMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolve.cpp" line="35" column="12" declfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolve.cpp" declline="35" declcolumn="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/>copyright<sp/>(C)<sp/>2003-2007<sp/>Upinder<sp/>S.<sp/>Bhalla,<sp/>Niraj<sp/>Dudani<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/global.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/ElementValueFinfo.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HSolveStruct_8h" kindref="compound">HSolveStruct.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HinesMatrix_8h" kindref="compound">HinesMatrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HSolvePassive_8h" kindref="compound">HSolvePassive.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RateLookup_8h" kindref="compound">RateLookup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HSolveActive_8h" kindref="compound">HSolveActive.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HSolve_8h" kindref="compound">HSolve.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/Compartment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ZombieCompartment_8h" kindref="compound">ZombieCompartment.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/CaConcBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ZombieCaConc_8h" kindref="compound">ZombieCaConc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/HHGate.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/ChanBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/ChanCommon.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/HHChannel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/CaConc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ZombieHHChannel_8h" kindref="compound">ZombieHHChannel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../shell/Shell.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>defined<sp/>in<sp/>global.h<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>map&lt;string,<sp/>double&gt;<sp/><ref refid="namespacemoose_1aa450d404ebb085e60b6a4c4ca29aa9ab" kindref="member">solverProfMap</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classHSolve_1a3d60964bbc6441f73c04fe702faba848" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classHSolve_1a3d60964bbc6441f73c04fe702faba848" kindref="member">HSolve::initCinfo</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/><ref refid="classHSolve_1aad6ce3589e253fe6ad19cb4c247f83d2" kindref="member">process</ref>(</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;process&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handles<sp/>&apos;process&apos;<sp/>call:<sp/>Solver<sp/>advances<sp/>by<sp/>one<sp/>time-step.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classProcOpFunc" kindref="compound">ProcOpFunc&lt; HSolve &gt;</ref>(<sp/>&amp;<ref refid="classHSolve_1aad6ce3589e253fe6ad19cb4c247f83d2" kindref="member">HSolve::process</ref><sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/><ref refid="classHSolve_1a8d6ce28ba426ce033ddf0d8bba021bdc" kindref="member">reinit</ref>(</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;reinit&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handles<sp/>&apos;reinit&apos;<sp/>call:<sp/>Solver<sp/>reads<sp/>in<sp/>model.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classProcOpFunc" kindref="compound">ProcOpFunc&lt; HSolve &gt;</ref>(<sp/>&amp;<ref refid="classHSolve_1a8d6ce28ba426ce033ddf0d8bba021bdc" kindref="member">HSolve::reinit</ref><sp/>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>processShared[]<sp/>=</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1aad6ce3589e253fe6ad19cb4c247f83d2" kindref="member">process</ref>,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1a8d6ce28ba426ce033ddf0d8bba021bdc" kindref="member">reinit</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classSharedFinfo" kindref="compound">SharedFinfo</ref><sp/>proc(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;proc&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handles<sp/>&apos;reinit&apos;<sp/>and<sp/>&apos;process&apos;<sp/>calls<sp/>from<sp/>a<sp/>clock.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processShared,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>processShared<sp/>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, Id &gt;</ref><sp/>seed(</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;seed&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Use<sp/>this<sp/>field<sp/>to<sp/>specify<sp/>path<sp/>to<sp/>a<sp/>&apos;seed&apos;<sp/>compartment,<sp/>that<sp/>is,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;any<sp/>compartment<sp/>within<sp/>a<sp/>neuron.<sp/>The<sp/>HSolve<sp/>object<sp/>uses<sp/>this<sp/>seed<sp/>as<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;a<sp/>handle<sp/>to<sp/>discover<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>neuronal<sp/>model,<sp/>which<sp/>means<sp/>all<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>remaining<sp/>compartments,<sp/>channels,<sp/>synapses,<sp/>etc.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1ad942c2b8706af98d3665c69a52f79480" kindref="member">HSolve::setSeed</ref>,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1acff5f9e3203d3652bec1ee4386786439" kindref="member">HSolve::getSeed</ref></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt; HSolve, string &gt;</ref><sp/>target(</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;target&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specifies<sp/>the<sp/>path<sp/>to<sp/>a<sp/>compartmental<sp/>model<sp/>to<sp/>be<sp/>taken<sp/>over.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>can<sp/>be<sp/>the<sp/>path<sp/>to<sp/>any<sp/>container<sp/>object<sp/>that<sp/>has<sp/>the<sp/>model<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;under<sp/>it<sp/>(found<sp/>by<sp/>performing<sp/>a<sp/>deep<sp/>search).<sp/>Alternatively,<sp/>this<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;can<sp/>also<sp/>be<sp/>the<sp/>path<sp/>to<sp/>any<sp/>compartment<sp/>within<sp/>the<sp/>neuron.<sp/>This<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;compartment<sp/>will<sp/>be<sp/>used<sp/>as<sp/>a<sp/>handle<sp/>to<sp/>discover<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;model,<sp/>which<sp/>means<sp/>all<sp/>the<sp/>remaining<sp/>compartments,<sp/>channels,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;synapses,<sp/>etc.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1a4d36de840ae2ff289981e77f779eb9dc" kindref="member">HSolve::setPath</ref>,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1aa4e641078ad0c159d1f685d0e5d509da" kindref="member">HSolve::getPath</ref></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, double &gt;</ref><sp/>dt(</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dt&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>time-step<sp/>for<sp/>this<sp/>solver.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1af09c133b409e2bba80dac44caf703b03" kindref="member">HSolve::setDt</ref>,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1abe2f63371ebb5a808bda381cb38ad06e" kindref="member">HSolve::getDt</ref></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, int &gt;</ref><sp/>caAdvance(</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;caAdvance&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>flag<sp/>determines<sp/>how<sp/>current<sp/>flowing<sp/>into<sp/>a<sp/>calcium<sp/>pool<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;is<sp/>computed.<sp/>A<sp/>value<sp/>of<sp/>0<sp/>means<sp/>that<sp/>the<sp/>membrane<sp/>potential<sp/>at<sp/>the<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;beginning<sp/>of<sp/>the<sp/>time-step<sp/>is<sp/>used<sp/>for<sp/>the<sp/>calculation.<sp/>This<sp/>is<sp/>how<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;GENESIS<sp/>does<sp/>its<sp/>computations.<sp/>A<sp/>value<sp/>of<sp/>1<sp/>means<sp/>the<sp/>membrane<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;potential<sp/>at<sp/>the<sp/>middle<sp/>of<sp/>the<sp/>time-step<sp/>is<sp/>used.<sp/>This<sp/>is<sp/>the<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;correct<sp/>way<sp/>of<sp/>integration,<sp/>and<sp/>is<sp/>the<sp/>default<sp/>way.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1aa681e676ac04355cc05742c83b748de2" kindref="member">HSolve::setCaAdvance</ref>,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1afc6dca6514348252fb28947b6a6a329b" kindref="member">HSolve::getCaAdvance</ref></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, int &gt;</ref><sp/>vDiv(</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vDiv&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specifies<sp/>number<sp/>of<sp/>divisions<sp/>for<sp/>lookup<sp/>tables<sp/>of<sp/>voltage-sensitive<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;channels.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1ac63244e68efd21f8102d324ef7fcfbd2" kindref="member">HSolve::setVDiv</ref>,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1afa0b368a91cd8e591f6f62d2326a911d" kindref="member">HSolve::getVDiv</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, double &gt;</ref><sp/>vMin(</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vMin&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specifies<sp/>the<sp/>lower<sp/>bound<sp/>for<sp/>lookup<sp/>tables<sp/>of<sp/>voltage-sensitive<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;channels.<sp/>Default<sp/>is<sp/>to<sp/>automatically<sp/>decide<sp/>based<sp/>on<sp/>the<sp/>tables<sp/>of<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>channels<sp/>that<sp/>the<sp/>solver<sp/>reads<sp/>in.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1a6cd8d5ac0b9f512ac88ce3bdee7e21cf" kindref="member">HSolve::setVMin</ref>,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1a394f3048881f7ea9455abf5c523f4020" kindref="member">HSolve::getVMin</ref></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, double &gt;</ref><sp/>vMax(</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vMax&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specifies<sp/>the<sp/>upper<sp/>bound<sp/>for<sp/>lookup<sp/>tables<sp/>of<sp/>voltage-sensitive<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;channels.<sp/>Default<sp/>is<sp/>to<sp/>automatically<sp/>decide<sp/>based<sp/>on<sp/>the<sp/>tables<sp/>of<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>channels<sp/>that<sp/>the<sp/>solver<sp/>reads<sp/>in.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1abb8ebf7a2be79e22f242945192362999" kindref="member">HSolve::setVMax</ref>,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1a7159fdee8cbcd6970de1a7a523391af4" kindref="member">HSolve::getVMax</ref></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, int &gt;</ref><sp/>caDiv(</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;caDiv&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specifies<sp/>number<sp/>of<sp/>divisions<sp/>for<sp/>lookup<sp/>tables<sp/>of<sp/>calcium-sensitive<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;channels.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1a2d9d63b229e5c0843f59d5c595bd6925" kindref="member">HSolve::setCaDiv</ref>,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1ad1f1b1533ef104ad755652785e736327" kindref="member">HSolve::getCaDiv</ref></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, double &gt;</ref><sp/>caMin(</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;caMin&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specifies<sp/>the<sp/>lower<sp/>bound<sp/>for<sp/>lookup<sp/>tables<sp/>of<sp/>calcium-sensitive<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;channels.<sp/>Default<sp/>is<sp/>to<sp/>automatically<sp/>decide<sp/>based<sp/>on<sp/>the<sp/>tables<sp/>of<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>channels<sp/>that<sp/>the<sp/>solver<sp/>reads<sp/>in.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1ad6dace2410827e46d37156cdf515f00a" kindref="member">HSolve::setCaMin</ref>,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1ac669b098da44cbe7ef2e673ea27e5a67" kindref="member">HSolve::getCaMin</ref></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; HSolve, double &gt;</ref><sp/>caMax(</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;caMax&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specifies<sp/>the<sp/>upper<sp/>bound<sp/>for<sp/>lookup<sp/>tables<sp/>of<sp/>calcium-sensitive<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;channels.<sp/>Default<sp/>is<sp/>to<sp/>automatically<sp/>decide<sp/>based<sp/>on<sp/>the<sp/>tables<sp/>of<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>channels<sp/>that<sp/>the<sp/>solver<sp/>reads<sp/>in.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1a9144633075c158ae44dadfe8d5753f43" kindref="member">HSolve::setCaMax</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classHSolve_1a552f30356abca6ee22f028eaeba3a24e" kindref="member">HSolve::getCaMax</ref></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>hsolveFinfos[]<sp/>=</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;seed,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;target,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;dt,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;caAdvance,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;vDiv,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;vMin,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;vMax,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;caDiv,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;caMin,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;caMax,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;proc,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shared</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>doc[]<sp/>=</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;HSolve&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Author&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Niraj<sp/>Dudani,<sp/>2007,<sp/>NCBS&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;HSolve:<sp/>Hines<sp/>solver,<sp/>for<sp/>solving<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;branching<sp/>neuron<sp/>models.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDinfo" kindref="compound">Dinfo&lt; HSolve &gt;</ref><sp/>dinfo;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref><sp/><ref refid="HSolve_8cpp_1aa24e1a70969a62a3dd11bb8c99510aaa" kindref="member">hsolveCinfo</ref>(</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;HSolve&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" kindref="member">Neutral::initCinfo</ref>(),</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hsolveFinfos,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>hsolveFinfos<sp/>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>),</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;dinfo,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doc,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(doc)/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="HSolve_8cpp_1aa24e1a70969a62a3dd11bb8c99510aaa" kindref="member">hsolveCinfo</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="HSolve_8cpp_1aa24e1a70969a62a3dd11bb8c99510aaa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="HSolve_8cpp_1aa24e1a70969a62a3dd11bb8c99510aaa" kindref="member">hsolveCinfo</ref><sp/>=<sp/><ref refid="classHSolve_1a3d60964bbc6441f73c04fe702faba848" kindref="member">HSolve::initCinfo</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="classHSolve_1ab11748a5d2e776225efb02c54ea3f33e" refkind="member"><highlight class="normal"><ref refid="classHSolve_1ab11748a5d2e776225efb02c54ea3f33e" kindref="member">HSolve::HSolve</ref>()</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>dt_(<sp/>50e-6<sp/>)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="classHSolve_1a1fadf7cb757bf5669e45b6a95433e1ee" refkind="member"><highlight class="normal"><ref refid="classHSolve_1a1fadf7cb757bf5669e45b6a95433e1ee" kindref="member">HSolve::~HSolve</ref>()</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1a423981576f253b33c6e9091cb3ae0ea6" kindref="member">unzombify</ref>();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>p<sp/>=<sp/>getenv(<sp/></highlight><highlight class="stringliteral">&quot;MOOSE_SHOW_SOLVER_PERF&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>p<sp/>!=<sp/>NULL<sp/>)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Info:<sp/>HSolve<sp/>took<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classHSolve_1acfb98fa7e9315b36a5a554c58767ee02" kindref="member">totalTime_</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>seconds<sp/>and<sp/>took<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>numSteps_</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>steps.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="comment">//<sp/>Dest<sp/>function<sp/>definitions</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="classHSolve_1aad6ce3589e253fe6ad19cb4c247f83d2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1aad6ce3589e253fe6ad19cb4c247f83d2" kindref="member">HSolve::process</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>hsolve,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1a7a34bd59cb00ccc8b6748328d12b9994" kindref="member">t0_</ref><sp/>=<sp/>high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" kindref="member">HSolveActive::step</ref>(<sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1a7a71190677c36f321d84fe31471f6988" kindref="member">t1_</ref><sp/>=<sp/>high_resolution_clock::now();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1aa3570185420f61c7bd674b725dce0178" kindref="member">addSolverProf</ref>(<sp/></highlight><highlight class="stringliteral">&quot;HSolve&quot;</highlight><highlight class="normal">,<sp/>duration_cast&lt;duration&lt;double&gt;&gt;(<ref refid="classHSolve_1a7a71190677c36f321d84fe31471f6988" kindref="member">t1_</ref><sp/>-<sp/><ref refid="classHSolve_1a7a34bd59cb00ccc8b6748328d12b9994" kindref="member">t0_</ref>).count(),<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="classHSolve_1a8d6ce28ba426ce033ddf0d8bba021bdc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a8d6ce28ba426ce033ddf0d8bba021bdc" kindref="member">HSolve::reinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>hsolve,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1ae3d486d151d7e1f01aaee9d376df8806" kindref="member">dt_</ref><sp/>=<sp/>p-&gt;<ref refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" kindref="member">dt</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" kindref="member">HSolveActive::reinit</ref>(<sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="classHSolve_1aa86d341407e0eb9928b085c9df38b06c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1aa86d341407e0eb9928b085c9df38b06c" kindref="member">HSolve::zombify</ref>(<sp/><ref refid="classEref" kindref="compound">Eref</ref><sp/>hsolve<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="236"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>Id<sp/>&gt;::const_iterator<sp/>i;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>ObjId<sp/>&gt;<sp/>temp;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" kindref="member">compartmentId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" kindref="member">compartmentId_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref>(<sp/>*i,<sp/>0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" kindref="member">compartmentId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" kindref="member">compartmentId_</ref>.end();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1CompartmentBase_1a58b5cedfccc5f14cf368caf446b57632" kindref="member">CompartmentBase::zombify</ref>(<sp/>i-&gt;eref().element(),</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classZombieCompartment_1a12aa5199ad8afd5f6da20814c12c3b65" kindref="member">ZombieCompartment::initCinfo</ref>(),<sp/>hsolve.<ref refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" kindref="member">id</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>temp.clear();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" kindref="member">caConcId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" kindref="member">caConcId_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref>(<sp/>*i,<sp/>0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shell::dropClockMsgs(<sp/>temp,<sp/>&quot;process&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" kindref="member">caConcId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" kindref="member">caConcId_</ref>.end();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCaConcBase_1a6f85962bb1f7f8dc2085c30042632819" kindref="member">CaConcBase::zombify</ref>(<sp/>i-&gt;eref().element(),<sp/><ref refid="classZombieCaConc_1adeaaa39d51af18e0212ebce3b4013c3e" kindref="member">ZombieCaConc::initCinfo</ref>(),<sp/>hsolve.<ref refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" kindref="member">id</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>temp.clear();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" kindref="member">channelId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" kindref="member">channelId_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref>(<sp/>*i,<sp/>0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" kindref="member">channelId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" kindref="member">channelId_</ref>.end();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHHChannelBase_1a8a7d720cbe717c42de49cefeb599c89f" kindref="member">HHChannelBase::zombify</ref>(<sp/>i-&gt;eref().element(),</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classZombieHHChannel_1a053651075b45b62fe292f13cf25cc4fa" kindref="member">ZombieHHChannel::initCinfo</ref>(),<sp/>hsolve.<ref refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" kindref="member">id</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="classHSolve_1a423981576f253b33c6e9091cb3ae0ea6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a423981576f253b33c6e9091cb3ae0ea6" kindref="member">HSolve::unzombify</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="265"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>Id<sp/>&gt;::const_iterator<sp/>i;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" kindref="member">compartmentId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" kindref="member">compartmentId_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i-&gt;element()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1CompartmentBase_1a58b5cedfccc5f14cf368caf446b57632" kindref="member">CompartmentBase::zombify</ref>(<sp/>i-&gt;eref().element(),</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1Compartment_1aa5bd02bc40798f360f386c918ec52f2d" kindref="member">Compartment::initCinfo</ref>(),<sp/><ref refid="classId" kindref="compound">Id</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" kindref="member">caConcId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" kindref="member">caConcId_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i-&gt;element()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCaConcBase_1a6f85962bb1f7f8dc2085c30042632819" kindref="member">CaConcBase::zombify</ref>(<sp/>i-&gt;eref().element(),<sp/><ref refid="classCaConc_1a5364ccac336082a8a1f38ba233e6f868" kindref="member">CaConc::initCinfo</ref>(),<sp/><ref refid="classId" kindref="compound">Id</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" kindref="member">channelId_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" kindref="member">channelId_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i-&gt;element()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHHChannelBase_1a8a7d720cbe717c42de49cefeb599c89f" kindref="member">HHChannelBase::zombify</ref>(<sp/>i-&gt;eref().element(),</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" kindref="member">HHChannel::initCinfo</ref>(),<sp/><ref refid="classId" kindref="compound">Id</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="classHSolve_1a2e768e9eb17b2c732c9129c018889f79" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a2e768e9eb17b2c732c9129c018889f79" kindref="member">HSolve::setup</ref>(<sp/><ref refid="classEref" kindref="compound">Eref</ref><sp/>hsolve<sp/>)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>solver.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" kindref="member">HSolveActive::setup</ref>(<sp/><ref refid="classHSolve_1a1226c75bec5ccb56801e31286f0c1030" kindref="member">seed_</ref>,<sp/><ref refid="classHSolve_1ae3d486d151d7e1f01aaee9d376df8806" kindref="member">dt_</ref><sp/>);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1a23ee1b6f33568fffcc8e93cecd83adbf" kindref="member">mapIds</ref>();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1aa86d341407e0eb9928b085c9df38b06c" kindref="member">zombify</ref>(<sp/>hsolve<sp/>);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="comment">//<sp/>Field<sp/>function<sp/>definitions</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="classHSolve_1ad942c2b8706af98d3665c69a52f79480" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1ad942c2b8706af98d3665c69a52f79480" kindref="member">HSolve::setSeed</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>seed<sp/>)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!seed.element()-&gt;cinfo()-&gt;isA(<sp/></highlight><highlight class="stringliteral">&quot;Compartment&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>HSolve::setSeed():<sp/>Seed<sp/>object<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>seed.path()</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>is<sp/>not<sp/>derived<sp/>from<sp/>type<sp/>&apos;Compartment&apos;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1a1226c75bec5ccb56801e31286f0c1030" kindref="member">seed_</ref><sp/>=<sp/>seed;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="classHSolve_1acff5f9e3203d3652bec1ee4386786439" refkind="member"><highlight class="normal"><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classHSolve_1acff5f9e3203d3652bec1ee4386786439" kindref="member">HSolve::getSeed</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="311"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a1226c75bec5ccb56801e31286f0c1030" kindref="member">seed_</ref>;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="classHSolve_1a4d36de840ae2ff289981e77f779eb9dc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a4d36de840ae2ff289981e77f779eb9dc" kindref="member">HSolve::setPath</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>hsolve,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path<sp/>)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classHSolve_1ae3d486d151d7e1f01aaee9d376df8806" kindref="member">dt_</ref><sp/>==<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>HSolve::setPath():<sp/>Must<sp/>set<sp/>&apos;dt&apos;<sp/>first.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1a1226c75bec5ccb56801e31286f0c1030" kindref="member">seed_</ref><sp/>=<sp/><ref refid="classHSolve_1a4bda8efd59708cad9faeb2dee2ee5768" kindref="member">deepSearchForCompartment</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref>(<sp/>path<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classHSolve_1a1226c75bec5ccb56801e31286f0c1030" kindref="member">seed_</ref><sp/>==<sp/><ref refid="classId" kindref="compound">Id</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Warning:<sp/>HSolve::setPath():<sp/>No<sp/>compartments<sp/>found<sp/>at<sp/>or<sp/>below<sp/>&apos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>path<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cout<sp/>&lt;&lt;<sp/>&quot;HSolve:<sp/>Seed<sp/>compartment<sp/>found<sp/>at<sp/>&apos;&quot;<sp/>&lt;&lt;<sp/>seed_.path()<sp/>&lt;&lt;<sp/>&quot;&apos;.\n&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolve_1a175f66a68c1eb108725154e052c47920" kindref="member">path_</ref><sp/>=<sp/>path;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolve_1a2e768e9eb17b2c732c9129c018889f79" kindref="member">setup</ref>(<sp/>hsolve<sp/>);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="classHSolve_1aa4e641078ad0c159d1f685d0e5d509da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1aa4e641078ad0c159d1f685d0e5d509da" kindref="member">HSolve::getPath</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="337"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a175f66a68c1eb108725154e052c47920" kindref="member">path_</ref>;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346" refid="classHSolve_1a4bda8efd59708cad9faeb2dee2ee5768" refkind="member"><highlight class="normal"><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classHSolve_1a4bda8efd59708cad9faeb2dee2ee5768" kindref="member">HSolve::deepSearchForCompartment</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>base<sp/>)</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="349"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>&apos;cstack&apos;<sp/>is<sp/>a<sp/>stack-of-stacks<sp/>used<sp/>to<sp/>perform<sp/>the<sp/>depth-first<sp/>search.</highlight></codeline>
+<codeline lineno="350"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>The<sp/>0th<sp/>entry<sp/>in<sp/>&apos;cstack&apos;<sp/>is<sp/>a<sp/>stack<sp/>containing<sp/>simply<sp/>the<sp/>base.</highlight></codeline>
+<codeline lineno="351"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>The<sp/>i-th<sp/>entry<sp/>in<sp/>&apos;cstack&apos;<sp/>contains<sp/>children<sp/>of<sp/>the<sp/>node<sp/>at<sp/>the<sp/>top</highlight></codeline>
+<codeline lineno="352"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>of<sp/>the<sp/>stack<sp/>at<sp/>position<sp/>(<sp/>i<sp/>-<sp/>1<sp/>).</highlight></codeline>
+<codeline lineno="353"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>Hence,<sp/>at<sp/>any<sp/>time,<sp/>the<sp/>top<sp/>of<sp/>the<sp/>i-th<sp/>stack<sp/>is<sp/>the<sp/>i-th<sp/>node<sp/>on</highlight></codeline>
+<codeline lineno="354"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>the<sp/>ancestral<sp/>path<sp/>from<sp/>the<sp/>&apos;base&apos;<sp/>node<sp/>to<sp/>the<sp/>&apos;current&apos;<sp/>node</highlight></codeline>
+<codeline lineno="355"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>(more<sp/>below)<sp/>which<sp/>is<sp/>being<sp/>examined.<sp/>Also,<sp/>the<sp/>remaining<sp/>nodes<sp/>in</highlight></codeline>
+<codeline lineno="356"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>the<sp/>i-th<sp/>stack<sp/>are<sp/>the<sp/>siblings<sp/>of<sp/>this<sp/>ancestor.</highlight></codeline>
+<codeline lineno="357"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="358"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>&apos;current&apos;<sp/>is<sp/>the<sp/>node<sp/>at<sp/>the<sp/>top<sp/>of<sp/>the<sp/>top<sp/>of<sp/>&apos;cstack&apos;.<sp/>If<sp/>this<sp/>node<sp/>is</highlight></codeline>
+<codeline lineno="359"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>a<sp/>Compartment,<sp/>then<sp/>the<sp/>search<sp/>is<sp/>completed,<sp/>returning<sp/>&apos;current&apos;.</highlight></codeline>
+<codeline lineno="360"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>Otherwise,<sp/>the<sp/>children<sp/>of<sp/>&apos;current&apos;<sp/>are<sp/>pushed<sp/>onto<sp/>&apos;cstack&apos;<sp/>for<sp/>a</highlight></codeline>
+<codeline lineno="361"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>deeper<sp/>search.<sp/>If<sp/>the<sp/>deeper<sp/>search<sp/>yields<sp/>nothing,<sp/>then<sp/>this</highlight></codeline>
+<codeline lineno="362"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>&apos;current&apos;<sp/>node<sp/>is<sp/>discarded.<sp/>When<sp/>an<sp/>entire<sp/>stack<sp/>of<sp/>siblings<sp/>is</highlight></codeline>
+<codeline lineno="363"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>exhausted<sp/>in<sp/>this<sp/>way,<sp/>then<sp/>this<sp/>empty<sp/>stack<sp/>is<sp/>discarded,<sp/>and</highlight></codeline>
+<codeline lineno="364"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>the<sp/>search<sp/>moves<sp/>1<sp/>level<sp/>up.</highlight></codeline>
+<codeline lineno="365"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="366"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>&apos;result&apos;<sp/>is<sp/>a<sp/>blank<sp/>Id<sp/>(moose<sp/>root<sp/>element)<sp/>if<sp/>the<sp/>search<sp/>failed.</highlight></codeline>
+<codeline lineno="367"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>Otherwise,<sp/>it<sp/>is<sp/>a<sp/>compartment<sp/>that<sp/>was<sp/>found<sp/>under<sp/>&apos;base&apos;.</highlight></codeline>
+<codeline lineno="368"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>Id<sp/>&gt;<sp/>&gt;<sp/>cstack(<sp/>1,<sp/>vector&lt;<sp/>Id<sp/>&gt;(<sp/>1,<sp/>base<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>current;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>result;</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>!cstack.empty()<sp/>)</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>cstack.back().empty()<sp/>)</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cstack.pop_back();</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!cstack.empty()<sp/>)</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cstack.back().pop_back();</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current<sp/>=<sp/>cstack.back().back();</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(<sp/>current()-&gt;cinfo()<sp/>==<sp/>moose::Compartment::initCinfo()<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compartment<sp/>is<sp/>base<sp/>class<sp/>for<sp/>SymCompartment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>current.<ref refid="classId_1a574e06330597163aef0ea4c99de7ff4a" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a71378b635327a694971a29e946f6e886" kindref="member">isA</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Compartment&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>current;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cstack.push_back(<sp/><ref refid="classHSolve_1aee9d77fd67c115c4bd44853e080b33f3" kindref="member">children</ref>(<sp/>current<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398" refid="classHSolve_1aee9d77fd67c115c4bd44853e080b33f3" refkind="member"><highlight class="normal">vector&lt;<sp/>Id<sp/>&gt;<sp/><ref refid="classHSolve_1aee9d77fd67c115c4bd44853e080b33f3" kindref="member">HSolve::children</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>obj<sp/>)</highlight></codeline>
+<codeline lineno="399"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>return<sp/>Field&lt;<sp/>vector&lt;<sp/>Id<sp/>&gt;<sp/>&gt;::get(<sp/>obj,<sp/>&quot;children&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>return<sp/>Field&lt;<sp/>vector&lt;<sp/>Id<sp/>&gt;<sp/>&gt;::fastGet(<sp/>obj.eref(),<sp/>&quot;children&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>return<sp/>localGet&lt;<sp/>Neutral,<sp/>vector&lt;<sp/>Id<sp/>&gt;<sp/>&gt;(<sp/>obj.eref(),<sp/>&quot;children&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>Id<sp/>&gt;<sp/>c;</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classNeutral_1aa7d356ebdc188aa0ba82c5d3d28e118d" kindref="member">Neutral::children</ref>(<sp/>obj.<ref refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" kindref="member">eref</ref>(),<sp/>c<sp/>);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
+<codeline lineno="407"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409" refid="classHSolve_1af09c133b409e2bba80dac44caf703b03" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1af09c133b409e2bba80dac44caf703b03" kindref="member">HSolve::setDt</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt<sp/>)</highlight></codeline>
+<codeline lineno="410"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dt<sp/>&lt;<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>HSolve:<sp/>&apos;dt&apos;<sp/>must<sp/>be<sp/>positive.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolve_1ae3d486d151d7e1f01aaee9d376df8806" kindref="member">dt_</ref><sp/>=<sp/>dt;</highlight></codeline>
+<codeline lineno="418"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420" refid="classHSolve_1abe2f63371ebb5a808bda381cb38ad06e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1abe2f63371ebb5a808bda381cb38ad06e" kindref="member">HSolve::getDt</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="421"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1ae3d486d151d7e1f01aaee9d376df8806" kindref="member">dt_</ref>;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425" refid="classHSolve_1aa681e676ac04355cc05742c83b748de2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1aa681e676ac04355cc05742c83b748de2" kindref="member">HSolve::setCaAdvance</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>caAdvance<sp/>)</highlight></codeline>
+<codeline lineno="426"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>caAdvance<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>caAdvance<sp/>!=<sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>HSolve:<sp/>caAdvance<sp/>should<sp/>be<sp/>either<sp/>0<sp/>or<sp/>1.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" kindref="member">caAdvance_</ref><sp/>=<sp/>caAdvance;</highlight></codeline>
+<codeline lineno="434"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436" refid="classHSolve_1afc6dca6514348252fb28947b6a6a329b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1afc6dca6514348252fb28947b6a6a329b" kindref="member">HSolve::getCaAdvance</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="437"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" kindref="member">caAdvance_</ref>;</highlight></codeline>
+<codeline lineno="439"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="classHSolve_1ac63244e68efd21f8102d324ef7fcfbd2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1ac63244e68efd21f8102d324ef7fcfbd2" kindref="member">HSolve::setVDiv</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vDiv<sp/>)</highlight></codeline>
+<codeline lineno="442"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1af17f0bc719614f769b0e0b705d564039" kindref="member">vDiv_</ref><sp/>=<sp/>vDiv;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446" refid="classHSolve_1afa0b368a91cd8e591f6f62d2326a911d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1afa0b368a91cd8e591f6f62d2326a911d" kindref="member">HSolve::getVDiv</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="447"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1af17f0bc719614f769b0e0b705d564039" kindref="member">vDiv_</ref>;</highlight></codeline>
+<codeline lineno="449"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451" refid="classHSolve_1a6cd8d5ac0b9f512ac88ce3bdee7e21cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a6cd8d5ac0b9f512ac88ce3bdee7e21cf" kindref="member">HSolve::setVMin</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vMin<sp/>)</highlight></codeline>
+<codeline lineno="452"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a4b213165632ab9fe77ed5241a10282b9" kindref="member">vMin_</ref><sp/>=<sp/>vMin;</highlight></codeline>
+<codeline lineno="454"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="456" refid="classHSolve_1a394f3048881f7ea9455abf5c523f4020" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a394f3048881f7ea9455abf5c523f4020" kindref="member">HSolve::getVMin</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="457"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a4b213165632ab9fe77ed5241a10282b9" kindref="member">vMin_</ref>;</highlight></codeline>
+<codeline lineno="459"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461" refid="classHSolve_1abb8ebf7a2be79e22f242945192362999" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1abb8ebf7a2be79e22f242945192362999" kindref="member">HSolve::setVMax</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vMax<sp/>)</highlight></codeline>
+<codeline lineno="462"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a1dabcfdd16bef6b18330e3a2c7485efe" kindref="member">vMax_</ref><sp/>=<sp/>vMax;</highlight></codeline>
+<codeline lineno="464"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466" refid="classHSolve_1a7159fdee8cbcd6970de1a7a523391af4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a7159fdee8cbcd6970de1a7a523391af4" kindref="member">HSolve::getVMax</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="467"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a1dabcfdd16bef6b18330e3a2c7485efe" kindref="member">vMax_</ref>;</highlight></codeline>
+<codeline lineno="469"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="471" refid="classHSolve_1a2d9d63b229e5c0843f59d5c595bd6925" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a2d9d63b229e5c0843f59d5c595bd6925" kindref="member">HSolve::setCaDiv</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>caDiv<sp/>)</highlight></codeline>
+<codeline lineno="472"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a48a81a94f3840255662704d8f9d0aa22" kindref="member">caDiv_</ref><sp/>=<sp/>caDiv;</highlight></codeline>
+<codeline lineno="474"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476" refid="classHSolve_1ad1f1b1533ef104ad755652785e736327" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1ad1f1b1533ef104ad755652785e736327" kindref="member">HSolve::getCaDiv</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="477"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a48a81a94f3840255662704d8f9d0aa22" kindref="member">caDiv_</ref>;</highlight></codeline>
+<codeline lineno="479"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481" refid="classHSolve_1ad6dace2410827e46d37156cdf515f00a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1ad6dace2410827e46d37156cdf515f00a" kindref="member">HSolve::setCaMin</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>caMin<sp/>)</highlight></codeline>
+<codeline lineno="482"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a52e05db023c4642cda092f476ccae8b5" kindref="member">caMin_</ref><sp/>=<sp/>caMin;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight></codeline>
+<codeline lineno="486" refid="classHSolve_1ac669b098da44cbe7ef2e673ea27e5a67" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1ac669b098da44cbe7ef2e673ea27e5a67" kindref="member">HSolve::getCaMin</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="487"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a52e05db023c4642cda092f476ccae8b5" kindref="member">caMin_</ref>;</highlight></codeline>
+<codeline lineno="489"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491" refid="classHSolve_1a9144633075c158ae44dadfe8d5753f43" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a9144633075c158ae44dadfe8d5753f43" kindref="member">HSolve::setCaMax</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>caMax<sp/>)</highlight></codeline>
+<codeline lineno="492"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a8eb9befb7809ca38e895933eb2836b7e" kindref="member">caMax_</ref><sp/>=<sp/>caMax;</highlight></codeline>
+<codeline lineno="494"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="496" refid="classHSolve_1a552f30356abca6ee22f028eaeba3a24e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1a552f30356abca6ee22f028eaeba3a24e" kindref="member">HSolve::getCaMax</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="497"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a8eb9befb7809ca38e895933eb2836b7e" kindref="member">caMax_</ref>;</highlight></codeline>
+<codeline lineno="499"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501" refid="classHSolve_1aff3fe0378a0b533030ba2a3cbcbc9db5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>set&lt;string&gt;&amp;<sp/><ref refid="classHSolve_1aff3fe0378a0b533030ba2a3cbcbc9db5" kindref="member">HSolve::handledClasses</ref>()</highlight></codeline>
+<codeline lineno="502"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>set&lt;string&gt;<sp/>classes;</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(classes.empty())</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>classes.insert(</highlight><highlight class="stringliteral">&quot;CaConc&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>classes.insert(</highlight><highlight class="stringliteral">&quot;ZombieCaConc&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>classes.insert(</highlight><highlight class="stringliteral">&quot;HHChannel&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>classes.insert(</highlight><highlight class="stringliteral">&quot;ZombieHHChannel&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>classes.insert(</highlight><highlight class="stringliteral">&quot;Compartment&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>classes.insert(</highlight><highlight class="stringliteral">&quot;SymCompartment&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>classes.insert(</highlight><highlight class="stringliteral">&quot;ZombieCompartment&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>classes;</highlight></codeline>
+<codeline lineno="515"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"></highlight></codeline>
+<codeline lineno="521" refid="classHSolve_1ad91c61907f52ae31be02456ee612d974" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolve_1ad91c61907f52ae31be02456ee612d974" kindref="member">HSolve::deleteIncomingMessages</ref>(<sp/><ref refid="classElement" kindref="compound">Element</ref><sp/>*<sp/>orig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>finfo)</highlight></codeline>
+<codeline lineno="522"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/>*<sp/>concenDest<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(orig-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a7642d2a9ffe54cc8008df39de171ab63" kindref="member">findFinfo</ref>(finfo));</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(concenDest);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>mid<sp/>=<sp/>orig-&gt;<ref refid="classElement_1a3c07cf6355e6127827ce67682e3bb2a0" kindref="member">findCaller</ref>(concenDest-&gt;<ref refid="classDestFinfo_1a6efef23ddcfbaef03eca8aa75fdd98cd" kindref="member">getFid</ref>());</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<sp/>mid.<ref refid="classObjId_1a79e041eb24b2bcfcdf62a488cf7b0572" kindref="member">bad</ref>())</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMsg" kindref="compound">Msg</ref><sp/>*<sp/>msg<sp/>=<sp/><ref refid="classMsg_1a1a57001709e44ab056a704c24760c105" kindref="member">Msg::getMsg</ref>(mid);</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(msg);</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>other<sp/>=<sp/>msg-&gt;<ref refid="classMsg_1a326ed96ece35f632b16de59838db6c29" kindref="member">findOtherEnd</ref>(orig-&gt;<ref refid="classElement_1a934907c01faf58e21f545d53a54cfefc" kindref="member">id</ref>());</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classElement" kindref="compound">Element</ref><sp/>*<sp/>otherEl<sp/>=<sp/>other.<ref refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" kindref="member">id</ref>.<ref refid="classId_1a574e06330597163aef0ea4c99de7ff4a" kindref="member">element</ref>();</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(otherEl<sp/>&amp;&amp;<sp/><sp/><ref refid="classHSolve_1aff3fe0378a0b533030ba2a3cbcbc9db5" kindref="member">HSolve::handledClasses</ref>().find(otherEl-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" kindref="member">name</ref>())<sp/>!=<sp/><ref refid="classHSolve_1aff3fe0378a0b533030ba2a3cbcbc9db5" kindref="member">HSolve::handledClasses</ref>().end())</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMsg_1a9054f484d20ef3f0cf1e21b366e7da4d" kindref="member">Msg::deleteMsg</ref>(mid);</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Have<sp/>to<sp/>do<sp/>this<sp/>otherwise<sp/>it<sp/>is<sp/>an<sp/>infinite<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mid<sp/>=<sp/>orig-&gt;<ref refid="classElement_1a3c07cf6355e6127827ce67682e3bb2a0" kindref="member">findCaller</ref>(concenDest-&gt;<ref refid="classDestFinfo_1a6efef23ddcfbaef03eca8aa75fdd98cd" kindref="member">getFid</ref>());</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="542"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><ref refid="classId" kindref="compound">Id</ref><sp/>create_testobject(vector&lt;Id&gt;<sp/>&amp;<sp/>container,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>classname,<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>parent,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name,<sp/>vector&lt;int&gt;<sp/>dims)</highlight></codeline>
+<codeline lineno="548"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classShell" kindref="compound">Shell</ref><sp/>*<sp/>shell<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><sp/><ref refid="classShell" kindref="compound">Shell</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref>(),<sp/>0<sp/>).<ref refid="classObjId_1a1e5933713d6a73550b0923cf63f5bfd8" kindref="member">data</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>nid<sp/>=<sp/>shell-&gt;<ref refid="classShell_1a07391050d7d5c777fd0a366a78cea81e" kindref="member">doCreate</ref>(<sp/>classname,<sp/>parent,<sp/>name,<sp/>dims<sp/>);</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/>container.push_back(nid);</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nid;</highlight></codeline>
+<codeline lineno="553"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear_testobjects(vector&lt;Id&gt;&amp;<sp/>container)</highlight></codeline>
+<codeline lineno="556"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classShell" kindref="compound">Shell</ref><sp/>*<sp/>shell<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><sp/><ref refid="classShell" kindref="compound">Shell</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref>(),<sp/>0<sp/>).<ref refid="classObjId_1a1e5933713d6a73550b0923cf63f5bfd8" kindref="member">data</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!container.empty())</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>container.back();</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shell-&gt;<ref refid="classShell_1a74637ee170d32fb96218a2371657b717" kindref="member">doDelete</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>container.pop_back();</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="564"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>testHSolvePassiveSingleComp()</highlight></codeline>
+<codeline lineno="568"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classShell" kindref="compound">Shell</ref><sp/>*<sp/>shell<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><sp/><ref refid="classShell" kindref="compound">Shell</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref>(),<sp/>0<sp/>).<ref refid="classObjId_1a1e5933713d6a73550b0923cf63f5bfd8" kindref="member">data</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>int<sp/>&gt;<sp/>dims(<sp/>1,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Id&gt;<sp/>to_cleanup;</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>nid<sp/>=<sp/>create_testobject(to_cleanup,<sp/></highlight><highlight class="stringliteral">&quot;Neuron&quot;</highlight><highlight class="normal">,<sp/><ref refid="classId" kindref="compound">Id</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;n&quot;</highlight><highlight class="normal">,<sp/>dims<sp/>);</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>comptId<sp/>=<sp/>create_testobject(to_cleanup,<sp/></highlight><highlight class="stringliteral">&quot;Compartment&quot;</highlight><highlight class="normal">,<sp/>nid,<sp/></highlight><highlight class="stringliteral">&quot;compt&quot;</highlight><highlight class="normal">,<sp/>dims<sp/>);</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>hsolve<sp/>=<sp/>create_testobject(to_cleanup,<sp/></highlight><highlight class="stringliteral">&quot;HSolve&quot;</highlight><highlight class="normal">,<sp/>nid,<sp/></highlight><highlight class="stringliteral">&quot;solver&quot;</highlight><highlight class="normal">,<sp/>dims);</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classField_1a54d309d8d4b5304d70475275b39ff40e" kindref="member">Field&lt;string&gt;::set</ref>(hsolve,<sp/></highlight><highlight class="stringliteral">&quot;target&quot;</highlight><highlight class="normal">,<sp/>nid.<ref refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" kindref="member">path</ref>());</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/>to_cleanup.push_back(nid);</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/>clear_testobjects(to_cleanup);</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>flush;</highlight></codeline>
+<codeline lineno="579"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"></highlight></codeline>
+<codeline lineno="581"><highlight class="normal"></highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight></codeline>
+<codeline lineno="583"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolve.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1959 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classGsolve" kind="class" language="C++" prot="public">
+    <compoundname>Gsolve</compoundname>
+    <basecompoundref refid="classKsolveBase" prot="public" virt="non-virtual">KsolveBase</basecompoundref>
+    <includes refid="Gsolve_8h" local="no">Gsolve.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGsolve_1a17578f32c0bc1f281a60443c55a42e0b" prot="private" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id Gsolve::dsolve_</definition>
+        <argsstring></argsstring>
+        <name>dsolve_</name>
+        <qualifiedname>Gsolve::dsolve_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of diffusion solver, needed for coordinating numerics. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="171" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="171" bodyend="-1"/>
+        <referencedby refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" compoundref="Gsolve_8cpp" startline="239" endline="251">Gsolve</referencedby>
+        <referencedby refid="classGsolve_1a8274a5da4e85e81f275081939d21ea60" compoundref="Gsolve_8cpp" startline="940" endline="958">setDsolve</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1a61ec73784931a6021aba9b70e0ad7dd5" prot="private" static="no" mutable="no">
+        <type><ref refid="classKsolveBase" kindref="compound">KsolveBase</ref> *</type>
+        <definition>KsolveBase* Gsolve::dsolvePtr_</definition>
+        <argsstring></argsstring>
+        <name>dsolvePtr_</name>
+        <qualifiedname>Gsolve::dsolvePtr_</qualifiedname>
+        <briefdescription>
+<para>Pointer to diffusion solver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="174" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" compoundref="Gsolve_8cpp" startline="239" endline="251">Gsolve</referencedby>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+        <referencedby refid="classGsolve_1a8274a5da4e85e81f275081939d21ea60" compoundref="Gsolve_8cpp" startline="940" endline="958">setDsolve</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1a5aa0fa6d34348b56f7c55938687fd3d6" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Gsolve::grainSize_</definition>
+        <argsstring></argsstring>
+        <name>grainSize_</name>
+        <qualifiedname>Gsolve::grainSize_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="149" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+        <referencedby refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Gsolve::numThreads_</definition>
+        <argsstring></argsstring>
+        <name>numThreads_</name>
+        <qualifiedname>Gsolve::numThreads_</qualifiedname>
+        <briefdescription>
+<para>Number of threads to use when parallel version of <ref refid="classGsolve" kindref="compound">Gsolve</ref> is used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="148" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="148" bodyend="-1"/>
+        <referencedby refid="classGsolve_1afa2e018a9dbd20913106fa8d0e959293" compoundref="Gsolve_8cpp" startline="1157" endline="1160">getNumThreads</referencedby>
+        <referencedby refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" compoundref="Gsolve_8cpp" startline="239" endline="251">Gsolve</referencedby>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+        <referencedby refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</referencedby>
+        <referencedby refid="classGsolve_1ab86912acac5b08952955737e4d94a759" compoundref="Gsolve_8cpp" startline="1162" endline="1165">setNumThreads</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classGssaVoxelPools" kindref="compound">GssaVoxelPools</ref> &gt;</type>
+        <definition>vector&lt; GssaVoxelPools &gt; Gsolve::pools_</definition>
+        <argsstring></argsstring>
+        <name>pools_</name>
+        <qualifiedname>Gsolve::pools_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Each <ref refid="classVoxelPools" kindref="compound">VoxelPools</ref> entry handles all the pools in a single voxel. Each entry knows how to update itself in order to complete the kinetic calculations for that voxel. The ksolver does multinode management by indexing only the subset of entries present on this node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="160" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="classGsolve_1a8d03efe04937ea9c76102fdc4599de6b" compoundref="Gsolve_8cpp" startline="574" endline="584">advance_chunk</referencedby>
+        <referencedby refid="classGsolve_1ae3263e36e69b24e76d8f5788c04539c0" compoundref="Gsolve_8cpp" startline="1061" endline="1082">getBlock</referencedby>
+        <referencedby refid="classGsolve_1a8235e5b90e20752b0206a3ec414cc3ae" compoundref="Gsolve_8cpp" startline="1016" endline="1022">getConcInit</referencedby>
+        <referencedby refid="classGsolve_1a585e65a543d2a4e4ecb2a3a269369dd0" compoundref="Gsolve_8cpp" startline="985" endline="991">getN</referencedby>
+        <referencedby refid="classGsolve_1a625180e1ae2e55e2c572e7a368176cd7" compoundref="Gsolve_8cpp" startline="316" endline="319">getNumAllVoxels</referencedby>
+        <referencedby refid="classGsolve_1ac2adf9d6790ce2e0746aeb961f397845" compoundref="Gsolve_8cpp" startline="364" endline="372">getNumFire</referencedby>
+        <referencedby refid="classGsolve_1ae4611942a86525ea466e7f07a68bbb26" compoundref="Gsolve_8cpp" startline="311" endline="314">getNumLocalVoxels</referencedby>
+        <referencedby refid="classGsolve_1abc65b1993348b637fac781d24ac12da8" compoundref="Gsolve_8cpp" startline="1054" endline="1059">getNumPools</referencedby>
+        <referencedby refid="classGsolve_1a9c6fd61816d1aa0a15a901cf85c85a6a" compoundref="Gsolve_8cpp" startline="332" endline="340">getNvec</referencedby>
+        <referencedby refid="classGsolve_1ad433baf09ca930e8c4b3715af4809311" compoundref="Gsolve_8cpp" startline="993" endline="999">getR1</referencedby>
+        <referencedby refid="classGsolve_1a76294512f5fb25c72f87402c999b6653" compoundref="Gsolve_8cpp" startline="1024" endline="1028">getVolumeOfPool</referencedby>
+        <referencedby refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" compoundref="Gsolve_8cpp" startline="932" endline="938">getVoxelIndex</referencedby>
+        <referencedby refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" compoundref="Gsolve_8cpp" startline="239" endline="251">Gsolve</referencedby>
+        <referencedby refid="classGsolve_1a4fbcc19fc518c9fc5f4aad6b64f9d155" compoundref="Gsolve_8cpp" startline="623" endline="630">initReinit</referencedby>
+        <referencedby refid="classGsolve_1ae23b70b9010bcfdc359dcbafb6fade3c" compoundref="Gsolve_8cpp" startline="1143" endline="1148">pools</referencedby>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">rebuildGssaSystem</referencedby>
+        <referencedby refid="classGsolve_1afbe3d81cfa938280aa7bdc927662ae6c" compoundref="Gsolve_8cpp" startline="562" endline="572">recalcTimeChunk</referencedby>
+        <referencedby refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</referencedby>
+        <referencedby refid="classGsolve_1a28b2eef67f156528448a96cbb76e21c2" compoundref="Gsolve_8cpp" startline="1084" endline="1104">setBlock</referencedby>
+        <referencedby refid="classGsolve_1ac870aa97d290f08d6bfc53b605c99bb8" compoundref="Gsolve_8cpp" startline="272" endline="287">setCompartment</referencedby>
+        <referencedby refid="classGsolve_1ae9dacc0488b805d5cbaf49b206e6fa6e" compoundref="Gsolve_8cpp" startline="1001" endline="1014">setConcInit</referencedby>
+        <referencedby refid="classGsolve_1a90b6c968aaa0c4fb5aa199e9606e8aab" compoundref="Gsolve_8cpp" startline="965" endline="983">setN</referencedby>
+        <referencedby refid="classGsolve_1a8ffa6d689ca72069116545b459414eb6" compoundref="Gsolve_8cpp" startline="322" endline="330">setNumAllVoxels</referencedby>
+        <referencedby refid="classGsolve_1a0dc52535f4560916c01c7716fa519529" compoundref="Gsolve_8cpp" startline="1040" endline="1048">setNumPools</referencedby>
+        <referencedby refid="classGsolve_1aa4839e4180f01a7d984d30aaca5a1096" compoundref="Gsolve_8cpp" startline="342" endline="362">setNvec</referencedby>
+        <referencedby refid="classGsolve_1a33b9c134d16510980d5563d84d0078fc" compoundref="Gsolve_8cpp" startline="294" endline="309">setStoich</referencedby>
+        <referencedby refid="classGsolve_1a921766c55ce81931a99d04e891c13dee" compoundref="Gsolve_8cpp" startline="1122" endline="1139">updateRateTerms</referencedby>
+        <referencedby refid="classGsolve_1a0c9b99f7f533fd7a76be35c50cd572a9" compoundref="Gsolve_8cpp" startline="1107" endline="1120">updateVoxelVol</referencedby>
+        <referencedby refid="classGsolve_1aca890cc327b6809f57ffc9728734dec9" compoundref="Gsolve_8cpp" startline="1150" endline="1155">volume</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1aadd1c443e136341da22a51eacf1b08d5" prot="private" static="no" mutable="no">
+        <type><ref refid="classmoose_1_1RNG" kindref="compound">moose::RNG</ref></type>
+        <definition>moose::RNG Gsolve::rng_</definition>
+        <argsstring></argsstring>
+        <name>rng_</name>
+        <qualifiedname>Gsolve::rng_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="180" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="180" bodyend="-1"/>
+        <referencedby refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" compoundref="Gsolve_8cpp" startline="239" endline="251">Gsolve</referencedby>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Gsolve::rngSeedOffset_</definition>
+        <argsstring></argsstring>
+        <name>rngSeedOffset_</name>
+        <qualifiedname>Gsolve::rngSeedOffset_</qualifiedname>
+        <briefdescription>
+<para>Offset * voxIdx is added to rng seed for each voxel to get indept. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="183" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="classGsolve_1ab95cfeafa98533ecf2211d75ec8dbd33" compoundref="Gsolve_8cpp" startline="386" endline="389">getRngSeedOffset</referencedby>
+        <referencedby refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" compoundref="Gsolve_8cpp" startline="239" endline="251">Gsolve</referencedby>
+        <referencedby refid="classGsolve_1a4fbcc19fc518c9fc5f4aad6b64f9d155" compoundref="Gsolve_8cpp" startline="623" endline="630">initReinit</referencedby>
+        <referencedby refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</referencedby>
+        <referencedby refid="classGsolve_1af06ca784cebe4408dbab2df61abdebec" compoundref="Gsolve_8cpp" startline="391" endline="394">setRngSeedOffset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1a7f21f6826f94fa19fb5471141b86d41c" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Gsolve::startVoxel_</definition>
+        <argsstring></argsstring>
+        <name>startVoxel_</name>
+        <qualifiedname>Gsolve::startVoxel_</qualifiedname>
+        <briefdescription>
+<para>First voxel indexed on the current node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="163" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="163" bodyend="-1"/>
+        <referencedby refid="classGsolve_1ae3263e36e69b24e76d8f5788c04539c0" compoundref="Gsolve_8cpp" startline="1061" endline="1082">getBlock</referencedby>
+        <referencedby refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" compoundref="Gsolve_8cpp" startline="932" endline="938">getVoxelIndex</referencedby>
+        <referencedby refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" compoundref="Gsolve_8cpp" startline="239" endline="251">Gsolve</referencedby>
+        <referencedby refid="classGsolve_1a28b2eef67f156528448a96cbb76e21c2" compoundref="Gsolve_8cpp" startline="1084" endline="1104">setBlock</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1a589a86a6287fac434034fe1203a10c84" prot="private" static="no" mutable="no">
+        <type><ref refid="classStoich" kindref="compound">Stoich</ref> *</type>
+        <definition>Stoich* Gsolve::stoichPtr_</definition>
+        <argsstring></argsstring>
+        <name>stoichPtr_</name>
+        <qualifiedname>Gsolve::stoichPtr_</qualifiedname>
+        <briefdescription>
+<para>Utility ptr used to help Pool <ref refid="classId" kindref="compound">Id</ref> lookups by the <ref refid="classKsolve" kindref="compound">Ksolve</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="166" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="166" bodyend="-1"/>
+        <referencedby refid="classGsolve_1ad15ab23459af91a514ab945914a639ea" compoundref="Gsolve_8cpp" startline="781" endline="836">fillIncrementFuncDep</referencedby>
+        <referencedby refid="classGsolve_1a32d30dfc9149e4589b9ad99108aab01d" compoundref="Gsolve_8cpp" startline="667" endline="705">fillMmEnzDep</referencedby>
+        <referencedby refid="classGsolve_1a8353dba4e64c9dc91704a1864716c535" compoundref="Gsolve_8cpp" startline="718" endline="765">fillPoolFuncDep</referencedby>
+        <referencedby refid="classGsolve_1a8615a2d5e031ac88b6584ad9d52edae2" compoundref="Gsolve_8cpp" startline="927" endline="930">getPoolIndex</referencedby>
+        <referencedby refid="classGsolve_1a4fbcc19fc518c9fc5f4aad6b64f9d155" compoundref="Gsolve_8cpp" startline="623" endline="630">initReinit</referencedby>
+        <referencedby refid="classGsolve_1a45d1b7547fd26e4c7fcbddfb76e09f77" compoundref="Gsolve_8cpp" startline="908" endline="922">makeReacDepsUnique</referencedby>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">rebuildGssaSystem</referencedby>
+        <referencedby refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</referencedby>
+        <referencedby refid="classGsolve_1a33b9c134d16510980d5563d84d0078fc" compoundref="Gsolve_8cpp" startline="294" endline="309">setStoich</referencedby>
+        <referencedby refid="classGsolve_1a921766c55ce81931a99d04e891c13dee" compoundref="Gsolve_8cpp" startline="1122" endline="1139">updateRateTerms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" prot="private" static="no" mutable="no">
+        <type><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref></type>
+        <definition>GssaSystem Gsolve::sys_</definition>
+        <argsstring></argsstring>
+        <name>sys_</name>
+        <qualifiedname>Gsolve::sys_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="151" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="151" bodyend="-1"/>
+        <referencedby refid="classGsolve_1a8d03efe04937ea9c76102fdc4599de6b" compoundref="Gsolve_8cpp" startline="574" endline="584">advance_chunk</referencedby>
+        <referencedby refid="classGsolve_1ad15ab23459af91a514ab945914a639ea" compoundref="Gsolve_8cpp" startline="781" endline="836">fillIncrementFuncDep</referencedby>
+        <referencedby refid="classGsolve_1a32d30dfc9149e4589b9ad99108aab01d" compoundref="Gsolve_8cpp" startline="667" endline="705">fillMmEnzDep</referencedby>
+        <referencedby refid="classGsolve_1a8353dba4e64c9dc91704a1864716c535" compoundref="Gsolve_8cpp" startline="718" endline="765">fillPoolFuncDep</referencedby>
+        <referencedby refid="classGsolve_1a72914b566a16a08bd2455af3217e1086" compoundref="Gsolve_8cpp" startline="375" endline="378">getRandInit</referencedby>
+        <referencedby refid="classGsolve_1a4fbcc19fc518c9fc5f4aad6b64f9d155" compoundref="Gsolve_8cpp" startline="623" endline="630">initReinit</referencedby>
+        <referencedby refid="classGsolve_1a45d1b7547fd26e4c7fcbddfb76e09f77" compoundref="Gsolve_8cpp" startline="908" endline="922">makeReacDepsUnique</referencedby>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">rebuildGssaSystem</referencedby>
+        <referencedby refid="classGsolve_1afbe3d81cfa938280aa7bdc927662ae6c" compoundref="Gsolve_8cpp" startline="562" endline="572">recalcTimeChunk</referencedby>
+        <referencedby refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</referencedby>
+        <referencedby refid="classGsolve_1ae9dacc0488b805d5cbaf49b206e6fa6e" compoundref="Gsolve_8cpp" startline="1001" endline="1014">setConcInit</referencedby>
+        <referencedby refid="classGsolve_1a90b6c968aaa0c4fb5aa199e9606e8aab" compoundref="Gsolve_8cpp" startline="965" endline="983">setN</referencedby>
+        <referencedby refid="classGsolve_1a8ffa6d689ca72069116545b459414eb6" compoundref="Gsolve_8cpp" startline="322" endline="330">setNumAllVoxels</referencedby>
+        <referencedby refid="classGsolve_1a0dc52535f4560916c01c7716fa519529" compoundref="Gsolve_8cpp" startline="1040" endline="1048">setNumPools</referencedby>
+        <referencedby refid="classGsolve_1aa4839e4180f01a7d984d30aaca5a1096" compoundref="Gsolve_8cpp" startline="342" endline="362">setNvec</referencedby>
+        <referencedby refid="classGsolve_1a55dfd484e0793aae84fb5ca2ce9f3ef9" compoundref="Gsolve_8cpp" startline="380" endline="383">setRandInit</referencedby>
+        <referencedby refid="classGsolve_1a33b9c134d16510980d5563d84d0078fc" compoundref="Gsolve_8cpp" startline="294" endline="309">setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGsolve_1a2934b3fdd36523b2872636564e09cf78" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Gsolve::useClockedUpdate_</definition>
+        <argsstring></argsstring>
+        <name>useClockedUpdate_</name>
+        <qualifiedname>Gsolve::useClockedUpdate_</qualifiedname>
+        <briefdescription>
+<para>Flag: True if atot should be updated every clock tick. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="177" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="177" bodyend="-1"/>
+        <referencedby refid="classGsolve_1a618ffd41b104ce4b69c0b9d4177fdac2" compoundref="Gsolve_8cpp" startline="396" endline="399">getClockedUpdate</referencedby>
+        <referencedby refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" compoundref="Gsolve_8cpp" startline="239" endline="251">Gsolve</referencedby>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+        <referencedby refid="classGsolve_1a7fc61737ae8097d34e6b56b127135d90" compoundref="Gsolve_8cpp" startline="401" endline="404">setClockedUpdate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGsolve_1a8d03efe04937ea9c76102fdc4599de6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Gsolve::advance_chunk</definition>
+        <argsstring>(const size_t begin, const size_t end, ProcPtr p)</argsstring>
+        <name>advance_chunk</name>
+        <qualifiedname>Gsolve::advance_chunk</qualifiedname>
+        <param>
+          <type>const size_t</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="118" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="574" bodyend="584"/>
+        <references refid="classGssaVoxelPools_1a74bee940e747819eafbdb179df6833e9" compoundref="GssaVoxelPools_8cpp" startline="162" endline="211">GssaVoxelPools::advance</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ad15ab23459af91a514ab945914a639ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::fillIncrementFuncDep</definition>
+        <argsstring>()</argsstring>
+        <name>fillIncrementFuncDep</name>
+        <qualifiedname>Gsolve::fillIncrementFuncDep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Here we fill in the dependencies involving incrementFuncs. These are the functions that evaluate an expression that specifies rate of change of # of a target molecule. There are two dependencies:<orderedlist>
+<listitem><para>When a reaction fires, all the incrementFuncs that depend on the reactants must update their rates. This is added to sys_.dependency[] which is the usual handler for reac dependencies. Note that the inputs to the incrementFuncs are NOT present in the stoichiometry matrix, so this has to be done as a separate step.</para>
+</listitem><listitem><para>When the incrementFunc fires, then downstream reacs must update their rates. This is handled by default with the regular dependency calculations, since incrementFuncs are treated like regular reactions. </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="77" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="781" bodyend="836"/>
+        <references refid="classGssaSystem_1ab8e03659f22c701d94b37a83c8faae0a" compoundref="GssaSystem_8h" startline="25">GssaSystem::dependency</references>
+        <references refid="classGssaSystem_1a9860c91d3df8b238753d06829cf0018d" compoundref="GssaSystem_8h" startline="26">GssaSystem::dependentMathExpn</references>
+        <references refid="classFuncRate_1af3420f38903797f90d7ee2e07d1bf004" compoundref="FuncRateTerm_8h" startline="54" endline="57">FuncRate::getFuncArgIndex</references>
+        <references refid="classStoich_1ab73081eaab28cb65be3ceb376f559e73" compoundref="Stoich_8cpp" startline="540" endline="544">Stoich::getNumAllPools</references>
+        <references refid="classStoich_1a39d1868cebe3c20837e974cbb1d336de" compoundref="Stoich_8cpp" startline="589" endline="592">Stoich::getNumRates</references>
+        <references refid="classStoich_1a05ba653fd2112861f21bd2c27b3a76a3" compoundref="Stoich_8cpp" startline="608" endline="611">Stoich::getRateTerms</references>
+        <references refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" compoundref="SparseMatrix_8h" startline="288" endline="307">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <references refid="classGssaSystem_1ae94a9cd90ae9919d075a72c8f4adbd2f" compoundref="GssaSystem_8h" startline="30">GssaSystem::transposeN</references>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">rebuildGssaSystem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a32d30dfc9149e4589b9ad99108aab01d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::fillMmEnzDep</definition>
+        <argsstring>()</argsstring>
+        <name>fillMmEnzDep</name>
+        <qualifiedname>Gsolve::fillMmEnzDep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fill in dependency list for all MMEnzs on reactions. The dependencies of <ref refid="classMMenz" kindref="compound">MMenz</ref> products are already in the system, so here we just need to add cases where any reaction product is the <ref refid="classEnz" kindref="compound">Enz</ref> of an MMEnz. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="75" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="667" bodyend="705"/>
+        <references refid="classGssaSystem_1ab8e03659f22c701d94b37a83c8faae0a" compoundref="GssaSystem_8h" startline="25">GssaSystem::dependency</references>
+        <references refid="classStoich_1a39d1868cebe3c20837e974cbb1d336de" compoundref="Stoich_8cpp" startline="589" endline="592">Stoich::getNumRates</references>
+        <references refid="classRateTerm_1af4d74f9d0b9e5c0d5dd42536e99c73d1">RateTerm::getReactants</references>
+        <references refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" compoundref="SparseMatrix_8h" startline="288" endline="307">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classStoich_1af2b9736960591ad0546403023c1a3e57" compoundref="Stoich_8cpp" startline="602" endline="606">Stoich::rates</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <references refid="classGssaSystem_1ae94a9cd90ae9919d075a72c8f4adbd2f" compoundref="GssaSystem_8h" startline="30">GssaSystem::transposeN</references>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">rebuildGssaSystem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a8353dba4e64c9dc91704a1864716c535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::fillPoolFuncDep</definition>
+        <argsstring>()</argsstring>
+        <name>fillPoolFuncDep</name>
+        <qualifiedname>Gsolve::fillPoolFuncDep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Here we fill in the dependencies involving poolFuncs. These are the functions that evaluate an expression and assign directly to the </para>
+<sect1 id="classGsolve_1autotoc_md3">
+<title>of a target molecule.</title>
+<para>There are two dependencies:<orderedlist>
+<listitem><para>When a reaction fires, all the Functions that depend on the reactants must update their target molecule. This is in sys_.dependentMathExpn[].</para>
+</listitem><listitem><para>All the reactions that depend on the updated target molecules must now recompute their propensity. This, along with other reac dependencies, is in sys_.dependency[]. </para>
+</listitem></orderedlist>
+</para>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="76" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="718" bodyend="765"/>
+        <references refid="classGssaSystem_1ab8e03659f22c701d94b37a83c8faae0a" compoundref="GssaSystem_8h" startline="25">GssaSystem::dependency</references>
+        <references refid="classGssaSystem_1a9860c91d3df8b238753d06829cf0018d" compoundref="GssaSystem_8h" startline="26">GssaSystem::dependentMathExpn</references>
+        <references refid="classStoich_1afd7fb3bb505a154b63ec335ebaec4f8c" compoundref="Stoich_8cpp" startline="618" endline="623">Stoich::funcs</references>
+        <references refid="classStoich_1ab73081eaab28cb65be3ceb376f559e73" compoundref="Stoich_8cpp" startline="540" endline="544">Stoich::getNumAllPools</references>
+        <references refid="classStoich_1a5aebbff425fb1c8909108aa7c27b753d" compoundref="Stoich_8cpp" startline="613" endline="616">Stoich::getNumFuncs</references>
+        <references refid="classStoich_1a39d1868cebe3c20837e974cbb1d336de" compoundref="Stoich_8cpp" startline="589" endline="592">Stoich::getNumRates</references>
+        <references refid="classFuncTerm_1a45407a743aaa9d06fa04ae6a6fd08a7b" compoundref="FuncTerm_8cpp" startline="62" endline="65">FuncTerm::getReactantIndex</references>
+        <references refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" compoundref="SparseMatrix_8h" startline="288" endline="307">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classSparseMatrix_1a5d8d69c9a34cbf241483691d6eda63a8" compoundref="SparseMatrix_8h" startline="314" endline="334">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classStoich_1a2e9ff77fe6dbfb8dd3b92602ab32ccc1" compoundref="Stoich_8cpp" startline="1197" endline="1200">Stoich::getStoichiometryMatrix</references>
+        <references refid="classFuncTerm_1a35423df60396834511fe5926cbe70398" compoundref="FuncTerm_8cpp" startline="111" endline="114">FuncTerm::getTarget</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <references refid="classGssaSystem_1ae94a9cd90ae9919d075a72c8f4adbd2f" compoundref="GssaSystem_8h" startline="30">GssaSystem::transposeN</references>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">rebuildGssaSystem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ae3263e36e69b24e76d8f5788c04539c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::getBlock</definition>
+        <argsstring>(vector&lt; double &gt; &amp;values) const</argsstring>
+        <name>getBlock</name>
+        <qualifiedname>Gsolve::getBlock</qualifiedname>
+        <reimplements refid="classKsolveBase_1a8ec5a60cca2fe836a5821f171907db34">getBlock</reimplements>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets block of data. The first 4 entries are passed in on the &apos;values&apos; vector: the start voxel, numVoxels, start pool#, numPools. These are followed by numVoxels * numPools of data values which are filled in by the function. We assert that the entire requested block is present in this <ref refid="classKsolveBase" kindref="compound">KsolveBase</ref>. The block is organized as an array of arrays of voxels; values[pool#][voxel#]</para>
+<para>Note that numVoxels and numPools are the number in the current block, not the upper limit of the block. So values.size() == 4 + numPools * numVoxels. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="108" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1061" bodyend="1082"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classVoxelPoolsBase_1a14f40161f05d91149be12bdcd5fc5f79" compoundref="VoxelPoolsBase_8cpp" startline="57" endline="60">VoxelPoolsBase::S</references>
+        <references refid="classVoxelPoolsBase_1ab77b743ec417b4879106490e5663816b" compoundref="VoxelPoolsBase_8cpp" startline="82" endline="85">VoxelPoolsBase::size</references>
+        <references refid="classGsolve_1a7f21f6826f94fa19fb5471141b86d41c" compoundref="Gsolve_8h" startline="163">startVoxel_</references>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a618ffd41b104ce4b69c0b9d4177fdac2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gsolve::getClockedUpdate</definition>
+        <argsstring>() const</argsstring>
+        <name>getClockedUpdate</name>
+        <qualifiedname>Gsolve::getClockedUpdate</qualifiedname>
+        <briefdescription>
+<para>Flag: returns true if randomized round to integers is done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="133" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="396" bodyend="399"/>
+        <references refid="classGsolve_1a2934b3fdd36523b2872636564e09cf78" compoundref="Gsolve_8h" startline="177">useClockedUpdate_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1aa0a4a001239407a76939433929adbe5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id Gsolve::getCompartment</definition>
+        <argsstring>() const</argsstring>
+        <name>getCompartment</name>
+        <qualifiedname>Gsolve::getCompartment</qualifiedname>
+        <briefdescription>
+<para>Inherited from <ref refid="classKsolveBase" kindref="compound">KsolveBase</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="31" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="289" bodyend="292"/>
+        <references refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" compoundref="KsolveBase_8h" startline="148">KsolveBase::compartment_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a8235e5b90e20752b0206a3ec414cc3ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Gsolve::getConcInit</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getConcInit</name>
+        <qualifiedname>Gsolve::getConcInit</qualifiedname>
+        <reimplements refid="classKsolveBase_1add0a414442478504ccc459f7693a8e98">getConcInit</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>get initial conc of molecules in given pool and voxel. Bdry cond. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="103" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1016" bodyend="1022"/>
+        <references refid="classVoxelPoolsBase_1a4d43731c339c22c7943759f82f87d770" compoundref="VoxelPoolsBase_8cpp" startline="176" endline="179">VoxelPoolsBase::getConcInit</references>
+        <references refid="classGsolve_1a8615a2d5e031ac88b6584ad9d52edae2" compoundref="Gsolve_8cpp" startline="927" endline="930">getPoolIndex</references>
+        <references refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" compoundref="Gsolve_8cpp" startline="932" endline="938">getVoxelIndex</references>
+        <references refid="Gsolve_8cpp_1a446d632a5f5fde450d5e36d8199f5a4f" compoundref="Gsolve_8cpp" startline="54">OFFNODE</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1abb3681ca2aad48fb2231e259234a7336" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Gsolve::getDiffConst</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getDiffConst</name>
+        <qualifiedname>Gsolve::getDiffConst</qualifiedname>
+        <reimplements refid="classKsolveBase_1a368de20038938fa1e75ce659a36d7e75">getDiffConst</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Diffusion constant: Only one per pool, voxel number is ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="106" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1035" bodyend="1038"/>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a585e65a543d2a4e4ecb2a3a269369dd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Gsolve::getN</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getN</name>
+        <qualifiedname>Gsolve::getN</qualifiedname>
+        <reimplements refid="classKsolveBase_1ad40e63ce9bb94cfe89cb299b02dac4c5">getN</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Get # of molecules in given pool and voxel. Varies with time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="100" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="985" bodyend="991"/>
+        <references refid="classVoxelPoolsBase_1a3ebc384ed8c94aab9df2a6ab2fa56e32" compoundref="VoxelPoolsBase_8cpp" startline="158" endline="161">VoxelPoolsBase::getN</references>
+        <references refid="classGsolve_1a8615a2d5e031ac88b6584ad9d52edae2" compoundref="Gsolve_8cpp" startline="927" endline="930">getPoolIndex</references>
+        <references refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" compoundref="Gsolve_8cpp" startline="932" endline="938">getVoxelIndex</references>
+        <references refid="Gsolve_8cpp_1a446d632a5f5fde450d5e36d8199f5a4f" compoundref="Gsolve_8cpp" startline="54">OFFNODE</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a625180e1ae2e55e2c572e7a368176cd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Gsolve::getNumAllVoxels</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumAllVoxels</name>
+        <qualifiedname>Gsolve::getNumAllVoxels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="35" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="316" bodyend="319"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ac2adf9d6790ce2e0746aeb961f397845" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; Gsolve::getNumFire</definition>
+        <argsstring>(unsigned int voxel) const</argsstring>
+        <name>getNumFire</name>
+        <qualifiedname>Gsolve::getNumFire</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="86" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="364" bodyend="372"/>
+        <references refid="classGssaVoxelPools_1ac64a6f93a371185a76657e3f422c34b8" compoundref="GssaVoxelPools_8cpp" startline="256" endline="259">GssaVoxelPools::numFire</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ae4611942a86525ea466e7f07a68bbb26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Gsolve::getNumLocalVoxels</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumLocalVoxels</name>
+        <qualifiedname>Gsolve::getNumLocalVoxels</qualifiedname>
+        <reimplements refid="classKsolveBase_1af40d2f9505790ca14f69a38695b386f1">getNumLocalVoxels</reimplements>
+        <briefdescription>
+<para>Number of voxels here. pools_.size() == getNumLocalVoxels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="34" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="311" bodyend="314"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1abc65b1993348b637fac781d24ac12da8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Gsolve::getNumPools</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumPools</name>
+        <qualifiedname>Gsolve::getNumPools</qualifiedname>
+        <reimplements refid="classKsolveBase_1a1768b9e29d85cda21e9a4f275264879a">getNumPools</reimplements>
+        <briefdescription>
+<para>Inherited. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="48" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1054" bodyend="1059"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classVoxelPoolsBase_1ab77b743ec417b4879106490e5663816b" compoundref="VoxelPoolsBase_8cpp" startline="82" endline="85">VoxelPoolsBase::size</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1afa2e018a9dbd20913106fa8d0e959293" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Gsolve::getNumThreads</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumThreads</name>
+        <qualifiedname>Gsolve::getNumThreads</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="137" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1157" bodyend="1160"/>
+        <references refid="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" compoundref="Gsolve_8h" startline="148">numThreads_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+        <referencedby refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a9c6fd61816d1aa0a15a901cf85c85a6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; Gsolve::getNvec</definition>
+        <argsstring>(unsigned int voxel) const</argsstring>
+        <name>getNvec</name>
+        <qualifiedname>Gsolve::getNvec</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <briefdescription>
+<para>Returns the vector of pool Num at the specified voxel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="54" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="332" bodyend="340"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classVoxelPoolsBase_1af5e1c75777f866323c53c267f6eae9c5" compoundref="VoxelPoolsBase_8cpp" startline="62" endline="65">VoxelPoolsBase::Svec</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a8615a2d5e031ac88b6584ad9d52edae2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Gsolve::getPoolIndex</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getPoolIndex</name>
+        <qualifiedname>Gsolve::getPoolIndex</qualifiedname>
+        <reimplements refid="classKsolveBase_1a3b71d6a2a0eb70283a7300ca74fd1b6b">getPoolIndex</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>er</declname>
+        </param>
+        <briefdescription>
+<para>Return pool index, using <ref refid="classStoich" kindref="compound">Stoich</ref> ptr to do lookup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="84" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="927" bodyend="930"/>
+        <references refid="classStoich_1a0eeca8773e3b19ad9b771a9efc66d5ed" compoundref="Stoich_8cpp" startline="1391" endline="1398">Stoich::convertIdToPoolIndex</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <referencedby refid="classGsolve_1a8235e5b90e20752b0206a3ec414cc3ae" compoundref="Gsolve_8cpp" startline="1016" endline="1022">getConcInit</referencedby>
+        <referencedby refid="classGsolve_1a585e65a543d2a4e4ecb2a3a269369dd0" compoundref="Gsolve_8cpp" startline="985" endline="991">getN</referencedby>
+        <referencedby refid="classGsolve_1ae9dacc0488b805d5cbaf49b206e6fa6e" compoundref="Gsolve_8cpp" startline="1001" endline="1014">setConcInit</referencedby>
+        <referencedby refid="classGsolve_1a90b6c968aaa0c4fb5aa199e9606e8aab" compoundref="Gsolve_8cpp" startline="965" endline="983">setN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ad433baf09ca930e8c4b3715af4809311" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Gsolve::getR1</definition>
+        <argsstring>(unsigned int reacIdx, const Eref &amp;e) const</argsstring>
+        <name>getR1</name>
+        <qualifiedname>Gsolve::getR1</qualifiedname>
+        <reimplements refid="classKsolveBase_1a3d2a8c2754fb4982be6fa1cd9a4da231">getR1</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>reacIdx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get rate const in a given reac and voxel. Usually fixed but may vary if the reac is controlled by a function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="101" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="993" bodyend="999"/>
+        <references refid="classVoxelPoolsBase_1a2c4c0263d71fccd67d8a3b377d11e3da" compoundref="VoxelPoolsBase_8cpp" startline="163" endline="166">VoxelPoolsBase::getR1</references>
+        <references refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" compoundref="Gsolve_8cpp" startline="932" endline="938">getVoxelIndex</references>
+        <references refid="Gsolve_8cpp_1a446d632a5f5fde450d5e36d8199f5a4f" compoundref="Gsolve_8cpp" startline="54">OFFNODE</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a72914b566a16a08bd2455af3217e1086" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gsolve::getRandInit</definition>
+        <argsstring>() const</argsstring>
+        <name>getRandInit</name>
+        <qualifiedname>Gsolve::getRandInit</qualifiedname>
+        <briefdescription>
+<para>Flag: returns true if randomized round to integers is done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="123" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="375" bodyend="378"/>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <references refid="classGssaSystem_1acd5e79ac3a4ce1ddd38299c56d528916" compoundref="GssaSystem_8h" startline="45">GssaSystem::useRandInit</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ab95cfeafa98533ecf2211d75ec8dbd33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Gsolve::getRngSeedOffset</definition>
+        <argsstring>() const</argsstring>
+        <name>getRngSeedOffset</name>
+        <qualifiedname>Gsolve::getRngSeedOffset</qualifiedname>
+        <briefdescription>
+<para>return rngSeedOffset used to give distinct rand seeds to each voxel </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="128" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="386" bodyend="389"/>
+        <references refid="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" compoundref="Gsolve_8h" startline="183">rngSeedOffset_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a0b72994da9d396c320da5d0fa4632845" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id Gsolve::getStoich</definition>
+        <argsstring>() const</argsstring>
+        <name>getStoich</name>
+        <qualifiedname>Gsolve::getStoich</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="29" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="267" bodyend="270"/>
+        <references refid="classKsolveBase_1a9e72d9f4802cc71fed341ce73629e651" compoundref="KsolveBase_8h" startline="145">KsolveBase::stoich_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a76294512f5fb25c72f87402c999b6653" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Gsolve::getVolumeOfPool</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getVolumeOfPool</name>
+        <qualifiedname>Gsolve::getVolumeOfPool</qualifiedname>
+        <reimplements refid="classKsolveBase_1a81a853fdb7109561a6c060aaa37dda0d">getVolumeOfPool</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Return volume of pool e. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="104" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1024" bodyend="1028"/>
+        <references refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" compoundref="VoxelPoolsBase_8cpp" startline="92" endline="95">VoxelPoolsBase::getVolume</references>
+        <references refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" compoundref="Gsolve_8cpp" startline="932" endline="938">getVoxelIndex</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Gsolve::getVoxelIndex</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getVoxelIndex</name>
+        <qualifiedname>Gsolve::getVoxelIndex</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="85" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="932" bodyend="938"/>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="Gsolve_8cpp_1a446d632a5f5fde450d5e36d8199f5a4f" compoundref="Gsolve_8cpp" startline="54">OFFNODE</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGsolve_1a7f21f6826f94fa19fb5471141b86d41c" compoundref="Gsolve_8h" startline="163">startVoxel_</references>
+        <referencedby refid="classGsolve_1a8235e5b90e20752b0206a3ec414cc3ae" compoundref="Gsolve_8cpp" startline="1016" endline="1022">getConcInit</referencedby>
+        <referencedby refid="classGsolve_1a585e65a543d2a4e4ecb2a3a269369dd0" compoundref="Gsolve_8cpp" startline="985" endline="991">getN</referencedby>
+        <referencedby refid="classGsolve_1ad433baf09ca930e8c4b3715af4809311" compoundref="Gsolve_8cpp" startline="993" endline="999">getR1</referencedby>
+        <referencedby refid="classGsolve_1a76294512f5fb25c72f87402c999b6653" compoundref="Gsolve_8cpp" startline="1024" endline="1028">getVolumeOfPool</referencedby>
+        <referencedby refid="classGsolve_1ae9dacc0488b805d5cbaf49b206e6fa6e" compoundref="Gsolve_8cpp" startline="1001" endline="1014">setConcInit</referencedby>
+        <referencedby refid="classGsolve_1a90b6c968aaa0c4fb5aa199e9606e8aab" compoundref="Gsolve_8cpp" startline="965" endline="983">setN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gsolve::Gsolve</definition>
+        <argsstring>()</argsstring>
+        <name>Gsolve</name>
+        <qualifiedname>Gsolve::Gsolve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="20" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="239" bodyend="251"/>
+        <references refid="classGsolve_1a17578f32c0bc1f281a60443c55a42e0b" compoundref="Gsolve_8h" startline="171">dsolve_</references>
+        <references refid="classGsolve_1a61ec73784931a6021aba9b70e0ad7dd5" compoundref="Gsolve_8h" startline="174">dsolvePtr_</references>
+        <references refid="namespacemoose_1af11fafc8784f91ca3dcc03c07e912701" compoundref="setupenv_8cpp" startline="100" endline="113">moose::getEnvInt</references>
+        <references refid="namespacemoose_1ab4eece6df5cb87722952f36d8aea6d98" compoundref="randnum_8cpp" startline="42" endline="45">moose::getGlobalSeed</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" compoundref="Gsolve_8h" startline="148">numThreads_</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGsolve_1aadd1c443e136341da22a51eacf1b08d5" compoundref="Gsolve_8h" startline="180">rng_</references>
+        <references refid="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" compoundref="Gsolve_8h" startline="183">rngSeedOffset_</references>
+        <references refid="classmoose_1_1RNG_1ad310f016166b1548e23fb8f3b54f83d7" compoundref="RNG_8cpp" startline="41" endline="50">moose::RNG::setSeed</references>
+        <references refid="classGsolve_1a7f21f6826f94fa19fb5471141b86d41c" compoundref="Gsolve_8h" startline="163">startVoxel_</references>
+        <references refid="classGsolve_1a2934b3fdd36523b2872636564e09cf78" compoundref="Gsolve_8h" startline="177">useClockedUpdate_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a798ac1f508c87e9eb73d471e70eca611" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::initProc</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>initProc</name>
+        <qualifiedname>Gsolve::initProc</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="61" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="620" bodyend="621"/>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a4fbcc19fc518c9fc5f4aad6b64f9d155" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::initReinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>initReinit</name>
+        <qualifiedname>Gsolve::initReinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="62" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="623" bodyend="630"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1a3a83f5ee0406fe9fffda7546c3aaeabc" compoundref="GssaVoxelPools_8cpp" startline="213" endline="254">GssaVoxelPools::reinit</references>
+        <references refid="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" compoundref="Gsolve_8h" startline="183">rngSeedOffset_</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a589c6a43e4fa43e24602a909aeb59827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::insertMathDepReacs</definition>
+        <argsstring>(unsigned int mathDepIndex, unsigned int firedReac)</argsstring>
+        <name>insertMathDepReacs</name>
+        <qualifiedname>Gsolve::insertMathDepReacs</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>mathDepIndex</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>firedReac</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inserts reactions that depend on molecules modified by the specified MathExpn, into the dependency list. Later. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="78" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="891" bodyend="904"/>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a45d1b7547fd26e4c7fcbddfb76e09f77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::makeReacDepsUnique</definition>
+        <argsstring>()</argsstring>
+        <name>makeReacDepsUnique</name>
+        <qualifiedname>Gsolve::makeReacDepsUnique</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>STL stuff follows, with the usual weirdness.</para>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="79" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="908" bodyend="922"/>
+        <references refid="classGssaSystem_1ab8e03659f22c701d94b37a83c8faae0a" compoundref="GssaSystem_8h" startline="25">GssaSystem::dependency</references>
+        <references refid="classStoich_1a39d1868cebe3c20837e974cbb1d336de" compoundref="Stoich_8cpp" startline="589" endline="592">Stoich::getNumRates</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">rebuildGssaSystem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a2e03b204ddf980a4cafe464d91f1f840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGsolve" kindref="compound">Gsolve</ref> &amp;</type>
+        <definition>Gsolve &amp; Gsolve::operator=</definition>
+        <argsstring>(const Gsolve &amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Gsolve::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classGsolve" kindref="compound">Gsolve</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="24" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="253" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ae23b70b9010bcfdc359dcbafb6fade3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classVoxelPoolsBase" kindref="compound">VoxelPoolsBase</ref> *</type>
+        <definition>VoxelPoolsBase * Gsolve::pools</definition>
+        <argsstring>(unsigned int i)</argsstring>
+        <name>pools</name>
+        <qualifiedname>Gsolve::pools</qualifiedname>
+        <reimplements refid="classKsolveBase_1ae2081756c2fa7b8aef28bbc34f314e94">pools</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Return a pointer to the specified VoxelPool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="50" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1143" bodyend="1148"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::process</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>process</name>
+        <qualifiedname>Gsolve::process</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="59" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="410" bodyend="560"/>
+        <references refid="classGssaVoxelPools_1a74bee940e747819eafbdb179df6833e9" compoundref="GssaVoxelPools_8cpp" startline="162" endline="211">GssaVoxelPools::advance</references>
+        <references refid="classGsolve_1a8d03efe04937ea9c76102fdc4599de6b" compoundref="Gsolve_8cpp" startline="574" endline="584">advance_chunk</references>
+        <references refid="numutil_8h_1a2ebbef1d22f42f5542acfa9b80c76b7b" compoundref="numutil_8cpp" startline="62" endline="76">approximateWithInteger</references>
+        <references refid="classProcInfo_1a6343499a8c6e17affc28b69181d2b2cb" compoundref="ProcInfo_8h" startline="19">ProcInfo::currTime</references>
+        <references refid="classGsolve_1a61ec73784931a6021aba9b70e0ad7dd5" compoundref="Gsolve_8h" startline="174">dsolvePtr_</references>
+        <references refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" compoundref="ProcInfo_8h" startline="18">ProcInfo::dt</references>
+        <references refid="classGsolve_1ae3263e36e69b24e76d8f5788c04539c0" compoundref="Gsolve_8cpp" startline="1061" endline="1082">getBlock</references>
+        <references refid="classKsolveBase_1a8ec5a60cca2fe836a5821f171907db34">KsolveBase::getBlock</references>
+        <references refid="classGsolve_1ae4611942a86525ea466e7f07a68bbb26" compoundref="Gsolve_8cpp" startline="311" endline="314">getNumLocalVoxels</references>
+        <references refid="classStoich_1a9b29e415b8c69dc92a59c06d943d1094" compoundref="Stoich_8cpp" startline="525" endline="528">Stoich::getNumVarPools</references>
+        <references refid="classGsolve_1a5aa0fa6d34348b56f7c55938687fd3d6" compoundref="Gsolve_8h" startline="149">grainSize_</references>
+        <references refid="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" compoundref="Gsolve_8h" startline="148">numThreads_</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1aa67869cf153fd4efc6b9b143b60a3a32" compoundref="GssaVoxelPools_8cpp" startline="151" endline="160">GssaVoxelPools::recalcTime</references>
+        <references refid="classGsolve_1afbe3d81cfa938280aa7bdc927662ae6c" compoundref="Gsolve_8cpp" startline="562" endline="572">recalcTimeChunk</references>
+        <references refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" compoundref="GssaVoxelPools_8cpp" startline="130" endline="144">GssaVoxelPools::refreshAtot</references>
+        <references refid="classGsolve_1aadd1c443e136341da22a51eacf1b08d5" compoundref="Gsolve_8h" startline="180">rng_</references>
+        <references refid="classGsolve_1a28b2eef67f156528448a96cbb76e21c2" compoundref="Gsolve_8cpp" startline="1084" endline="1104">setBlock</references>
+        <references refid="classKsolveBase_1a9104a48730d53b4fde53b4cde7805bdc">KsolveBase::setBlock</references>
+        <references refid="classKsolveBase_1aee0cc3f669082a7a732f22b8b4319947" compoundref="KsolveBase_8cpp" startline="39" endline="40">KsolveBase::setPrev</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <references refid="classKsolveBase_1a34c11a2dce316e45706d12cdbfa054ff" compoundref="KsolveBase_8cpp" startline="36" endline="37">KsolveBase::updateJunctions</references>
+        <references refid="classGsolve_1a2934b3fdd36523b2872636564e09cf78" compoundref="Gsolve_8h" startline="177">useClockedUpdate_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::rebuildGssaSystem</definition>
+        <argsstring>()</argsstring>
+        <name>rebuildGssaSystem</name>
+        <qualifiedname>Gsolve::rebuildGssaSystem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="74" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="635" bodyend="659"/>
+        <references refid="classStoich_1a08295665d027898de0471e13921af9d6" compoundref="Stoich_8cpp" startline="1177" endline="1195">Stoich::convertRatesToStochasticForm</references>
+        <references refid="classGssaSystem_1ab8e03659f22c701d94b37a83c8faae0a" compoundref="GssaSystem_8h" startline="25">GssaSystem::dependency</references>
+        <references refid="classGsolve_1ad15ab23459af91a514ab945914a639ea" compoundref="Gsolve_8cpp" startline="781" endline="836">fillIncrementFuncDep</references>
+        <references refid="classGsolve_1a32d30dfc9149e4589b9ad99108aab01d" compoundref="Gsolve_8cpp" startline="667" endline="705">fillMmEnzDep</references>
+        <references refid="classGsolve_1a8353dba4e64c9dc91704a1864716c535" compoundref="Gsolve_8cpp" startline="718" endline="765">fillPoolFuncDep</references>
+        <references refid="classKinSparseMatrix_1a8c561b9e38dc8511270fa3c9cac562ed" compoundref="KinSparseMatrix_8cpp" startline="56" endline="98">KinSparseMatrix::getGillespieDependence</references>
+        <references refid="classStoich_1aa81bfbaf5389d4ee173aa18cfaf15fd4" compoundref="Stoich_8cpp" startline="595" endline="600">Stoich::getNumCoreRates</references>
+        <references refid="classStoich_1a86f47a6a3bddbdcf16fa7dad956a4287" compoundref="Stoich_8cpp" startline="546" endline="549">Stoich::getNumProxyPools</references>
+        <references refid="classStoich_1a39d1868cebe3c20837e974cbb1d336de" compoundref="Stoich_8cpp" startline="589" endline="592">Stoich::getNumRates</references>
+        <references refid="classStoich_1a9b29e415b8c69dc92a59c06d943d1094" compoundref="Stoich_8cpp" startline="525" endline="528">Stoich::getNumVarPools</references>
+        <references refid="classStoich_1a05ba653fd2112861f21bd2c27b3a76a3" compoundref="Stoich_8cpp" startline="608" endline="611">Stoich::getRateTerms</references>
+        <references refid="classStoich_1a2e9ff77fe6dbfb8dd3b92602ab32ccc1" compoundref="Stoich_8cpp" startline="1197" endline="1200">Stoich::getStoichiometryMatrix</references>
+        <references refid="classGssaSystem_1a0f8aee7a87f57808f4644583ece30d79" compoundref="GssaSystem_8h" startline="50">GssaSystem::isReady</references>
+        <references refid="classGsolve_1a45d1b7547fd26e4c7fcbddfb76e09f77" compoundref="Gsolve_8cpp" startline="908" endline="922">makeReacDepsUnique</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1ad9475a2a68725d33a9de874bcfb3b6ac" compoundref="GssaVoxelPools_8cpp" startline="118" endline="123">GssaVoxelPools::setNumReac</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <references refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" compoundref="SparseMatrix_8h" startline="456" endline="523">SparseMatrix&lt; T &gt;::transpose</references>
+        <references refid="classGssaSystem_1ae94a9cd90ae9919d075a72c8f4adbd2f" compoundref="GssaSystem_8h" startline="30">GssaSystem::transposeN</references>
+        <references refid="classKinSparseMatrix_1aa08875dc6fc943aef61bea82d9ff1862" compoundref="KinSparseMatrix_8cpp" startline="134" endline="156">KinSparseMatrix::truncateRow</references>
+        <references refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" compoundref="GssaVoxelPools_8cpp" startline="265" endline="280">GssaVoxelPools::updateAllRateTerms</references>
+        <referencedby refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1afbe3d81cfa938280aa7bdc927662ae6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Gsolve::recalcTimeChunk</definition>
+        <argsstring>(const size_t begin, const size_t end, ProcPtr p)</argsstring>
+        <name>recalcTimeChunk</name>
+        <qualifiedname>Gsolve::recalcTimeChunk</qualifiedname>
+        <param>
+          <type>const size_t</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="119" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="562" bodyend="572"/>
+        <references refid="classProcInfo_1a6343499a8c6e17affc28b69181d2b2cb" compoundref="ProcInfo_8h" startline="19">ProcInfo::currTime</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1aa67869cf153fd4efc6b9b143b60a3a32" compoundref="GssaVoxelPools_8cpp" startline="151" endline="160">GssaVoxelPools::recalcTime</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::reinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>reinit</name>
+        <qualifiedname>Gsolve::reinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="60" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="586" bodyend="615"/>
+        <references refid="classGsolve_1afa2e018a9dbd20913106fa8d0e959293" compoundref="Gsolve_8cpp" startline="1157" endline="1160">getNumThreads</references>
+        <references refid="classGsolve_1a5aa0fa6d34348b56f7c55938687fd3d6" compoundref="Gsolve_8h" startline="149">grainSize_</references>
+        <references refid="classGssaSystem_1a0f8aee7a87f57808f4644583ece30d79" compoundref="GssaSystem_8h" startline="50">GssaSystem::isReady</references>
+        <references refid="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" compoundref="Gsolve_8h" startline="148">numThreads_</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">rebuildGssaSystem</references>
+        <references refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" compoundref="GssaVoxelPools_8cpp" startline="130" endline="144">GssaVoxelPools::refreshAtot</references>
+        <references refid="classGssaVoxelPools_1a3a83f5ee0406fe9fffda7546c3aaeabc" compoundref="GssaVoxelPools_8cpp" startline="213" endline="254">GssaVoxelPools::reinit</references>
+        <references refid="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" compoundref="Gsolve_8h" startline="183">rngSeedOffset_</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a28b2eef67f156528448a96cbb76e21c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setBlock</definition>
+        <argsstring>(const vector&lt; double &gt; &amp;values)</argsstring>
+        <name>setBlock</name>
+        <qualifiedname>Gsolve::setBlock</qualifiedname>
+        <reimplements refid="classKsolveBase_1a9104a48730d53b4fde53b4cde7805bdc">setBlock</reimplements>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets block of data. The first 4 entries on the &apos;values&apos; vector are the start voxel, numVoxels, start pool#, numPools. These are followed by numVoxels * numPools of data values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="109" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1084" bodyend="1104"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classVoxelPoolsBase_1ab77b743ec417b4879106490e5663816b" compoundref="VoxelPoolsBase_8cpp" startline="82" endline="85">VoxelPoolsBase::size</references>
+        <references refid="classGsolve_1a7f21f6826f94fa19fb5471141b86d41c" compoundref="Gsolve_8h" startline="163">startVoxel_</references>
+        <references refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" compoundref="VoxelPoolsBase_8cpp" startline="67" endline="70">VoxelPoolsBase::varS</references>
+        <referencedby refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a7fc61737ae8097d34e6b56b127135d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::setClockedUpdate</definition>
+        <argsstring>(bool val)</argsstring>
+        <name>setClockedUpdate</name>
+        <qualifiedname>Gsolve::setClockedUpdate</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Flag: set true if randomized round to integers is to be done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="135" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="401" bodyend="404"/>
+        <references refid="classGsolve_1a2934b3fdd36523b2872636564e09cf78" compoundref="Gsolve_8h" startline="177">useClockedUpdate_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ac870aa97d290f08d6bfc53b605c99bb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setCompartment</definition>
+        <argsstring>(Id compt)</argsstring>
+        <name>setCompartment</name>
+        <qualifiedname>Gsolve::setCompartment</qualifiedname>
+        <reimplements refid="classKsolveBase_1a6ed77ac8af133e020a81d2fcca38a124">setCompartment</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>compartment</declname>
+        </param>
+        <briefdescription>
+<para>Assigns compartment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="32" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="272" bodyend="287"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" compoundref="KsolveBase_8h" startline="148">KsolveBase::compartment_</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classVoxelPoolsBase_1ae1ddc05cd455fdde8ceb51673a61d674" compoundref="VoxelPoolsBase_8cpp" startline="87" endline="90">VoxelPoolsBase::setVolume</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ae9dacc0488b805d5cbaf49b206e6fa6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setConcInit</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setConcInit</name>
+        <qualifiedname>Gsolve::setConcInit</qualifiedname>
+        <reimplements refid="classKsolveBase_1a1fbdc3623dd0a5aa64ed53b1b6b1ba99">setConcInit</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Set initial conc of molecules in given pool and voxel. Bdry cond. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="102" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1001" bodyend="1014"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classEref_1a47b59ab86165cceb0bde80c76c3f7fa2" compoundref="Eref_8h" startline="30" endline="33">Eref::element</references>
+        <references refid="classGsolve_1a8615a2d5e031ac88b6584ad9d52edae2" compoundref="Gsolve_8cpp" startline="927" endline="930">getPoolIndex</references>
+        <references refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" compoundref="Gsolve_8cpp" startline="932" endline="938">getVoxelIndex</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classGssaSystem_1a0f8aee7a87f57808f4644583ece30d79" compoundref="GssaSystem_8h" startline="50">GssaSystem::isReady</references>
+        <references refid="Gsolve_8cpp_1a446d632a5f5fde450d5e36d8199f5a4f" compoundref="Gsolve_8cpp" startline="54">OFFNODE</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" compoundref="GssaVoxelPools_8cpp" startline="130" endline="144">GssaVoxelPools::refreshAtot</references>
+        <references refid="classVoxelPoolsBase_1aad9070d9804ae9f2afc9b33212f04432" compoundref="VoxelPoolsBase_8cpp" startline="169" endline="174">VoxelPoolsBase::setConcInit</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a7bcab9d63125af79fb9b7a416ce7724c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setDiffConst</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setDiffConst</name>
+        <qualifiedname>Gsolve::setDiffConst</qualifiedname>
+        <reimplements refid="classKsolveBase_1a5f66248bc41afc44ff5ac3ffbf7a5d9e">setDiffConst</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Diffusion constant: Only one per pool, voxel number is ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="105" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1030" bodyend="1033"/>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a8274a5da4e85e81f275081939d21ea60" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setDsolve</definition>
+        <argsstring>(Id dsolve)</argsstring>
+        <name>setDsolve</name>
+        <qualifiedname>Gsolve::setDsolve</qualifiedname>
+        <reimplements refid="classKsolveBase_1a534e6625f3e995b07a0e867634ed819d">setDsolve</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>dsolve</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited. Needed for reac-diff calculations so the <ref refid="classGsolve" kindref="compound">Gsolve</ref> can orchestrate the data transfer between the itself and the diffusion solver. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="93" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="940" bodyend="958"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classGsolve_1a17578f32c0bc1f281a60443c55a42e0b" compoundref="Gsolve_8h" startline="171">dsolve_</references>
+        <references refid="classGsolve_1a61ec73784931a6021aba9b70e0ad7dd5" compoundref="Gsolve_8h" startline="174">dsolvePtr_</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" compoundref="Cinfo_8cpp" startline="301" endline="304">Cinfo::name</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a90b6c968aaa0c4fb5aa199e9606e8aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setN</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setN</name>
+        <qualifiedname>Gsolve::setN</qualifiedname>
+        <reimplements refid="classKsolveBase_1ab9f3d8b0ce33886df13377a90d11a114">setN</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Set # of molecules in given pool and voxel. Varies with time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="99" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="965" bodyend="983"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classEref_1a47b59ab86165cceb0bde80c76c3f7fa2" compoundref="Eref_8h" startline="30" endline="33">Eref::element</references>
+        <references refid="classGsolve_1a8615a2d5e031ac88b6584ad9d52edae2" compoundref="Gsolve_8cpp" startline="927" endline="930">getPoolIndex</references>
+        <references refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" compoundref="Gsolve_8cpp" startline="932" endline="938">getVoxelIndex</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classGssaSystem_1a0f8aee7a87f57808f4644583ece30d79" compoundref="GssaSystem_8h" startline="50">GssaSystem::isReady</references>
+        <references refid="Gsolve_8cpp_1a446d632a5f5fde450d5e36d8199f5a4f" compoundref="Gsolve_8cpp" startline="54">OFFNODE</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" compoundref="GssaVoxelPools_8cpp" startline="130" endline="144">GssaVoxelPools::refreshAtot</references>
+        <references refid="classVoxelPoolsBase_1a89dadc3f6348282a295a8a29e8338829" compoundref="VoxelPoolsBase_8cpp" startline="151" endline="156">VoxelPoolsBase::setN</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a8ffa6d689ca72069116545b459414eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setNumAllVoxels</definition>
+        <argsstring>(unsigned int num)</argsstring>
+        <name>setNumAllVoxels</name>
+        <qualifiedname>Gsolve::setNumAllVoxels</qualifiedname>
+        <reimplements refid="classKsolveBase_1af389b5ffd2f6610c1055d4e7ebfc52ed">setNumAllVoxels</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns the number of voxels used in the entire reac-diff system. Note that fewer than this may be used on any given node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="41" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="322" bodyend="330"/>
+        <references refid="classGssaSystem_1a0f8aee7a87f57808f4644583ece30d79" compoundref="GssaSystem_8h" startline="50">GssaSystem::isReady</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a0dc52535f4560916c01c7716fa519529" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setNumPools</definition>
+        <argsstring>(unsigned int num)</argsstring>
+        <name>setNumPools</name>
+        <qualifiedname>Gsolve::setNumPools</qualifiedname>
+        <reimplements refid="classKsolveBase_1adf0f983baa0743630743693a72f8e0ff">setNumPools</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns number of different pools (chemical species) present in each voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="47" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1040" bodyend="1048"/>
+        <references refid="classGssaSystem_1a0f8aee7a87f57808f4644583ece30d79" compoundref="GssaSystem_8h" startline="50">GssaSystem::isReady</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classVoxelPoolsBase_1aacd119b7fc41a573c1fcb477a7fc4325" compoundref="VoxelPoolsBase_8cpp" startline="40" endline="44">VoxelPoolsBase::resizeArrays</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+        <referencedby refid="classGsolve_1a7ce31da61b1e7870554a1d17d8eade5a" compoundref="Gsolve_8cpp" startline="1050" endline="1052">setNumVarTotPools</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1ab86912acac5b08952955737e4d94a759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::setNumThreads</definition>
+        <argsstring>(unsigned int x)</argsstring>
+        <name>setNumThreads</name>
+        <qualifiedname>Gsolve::setNumThreads</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="138" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1162" bodyend="1165"/>
+        <references refid="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" compoundref="Gsolve_8h" startline="148">numThreads_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a7ce31da61b1e7870554a1d17d8eade5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setNumVarTotPools</definition>
+        <argsstring>(unsigned int var, unsigned int tot)</argsstring>
+        <name>setNumVarTotPools</name>
+        <qualifiedname>Gsolve::setNumVarTotPools</qualifiedname>
+        <reimplements refid="classKsolveBase_1a8f47a8420787019bb6242c930a6bc8ef">setNumVarTotPools</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>tot</declname>
+        </param>
+        <briefdescription>
+<para>Inherited. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="49" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1050" bodyend="1052"/>
+        <references refid="classGsolve_1a0dc52535f4560916c01c7716fa519529" compoundref="Gsolve_8cpp" startline="1040" endline="1048">setNumPools</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1aa4839e4180f01a7d984d30aaca5a1096" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::setNvec</definition>
+        <argsstring>(unsigned int voxel, vector&lt; double &gt; vec)</argsstring>
+        <name>setNvec</name>
+        <qualifiedname>Gsolve::setNvec</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="55" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="342" bodyend="362"/>
+        <references refid="classGssaSystem_1a0f8aee7a87f57808f4644583ece30d79" compoundref="GssaSystem_8h" startline="50">GssaSystem::isReady</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" compoundref="GssaVoxelPools_8cpp" startline="130" endline="144">GssaVoxelPools::refreshAtot</references>
+        <references refid="classVoxelPoolsBase_1ab77b743ec417b4879106490e5663816b" compoundref="VoxelPoolsBase_8cpp" startline="82" endline="85">VoxelPoolsBase::size</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <references refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" compoundref="VoxelPoolsBase_8cpp" startline="67" endline="70">VoxelPoolsBase::varS</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a55dfd484e0793aae84fb5ca2ce9f3ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::setRandInit</definition>
+        <argsstring>(bool val)</argsstring>
+        <name>setRandInit</name>
+        <qualifiedname>Gsolve::setRandInit</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Flag: set true if randomized round to integers is to be done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="125" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="380" bodyend="383"/>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <references refid="classGssaSystem_1acd5e79ac3a4ce1ddd38299c56d528916" compoundref="GssaSystem_8h" startline="45">GssaSystem::useRandInit</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1af06ca784cebe4408dbab2df61abdebec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::setRngSeedOffset</definition>
+        <argsstring>(int val)</argsstring>
+        <name>setRngSeedOffset</name>
+        <qualifiedname>Gsolve::setRngSeedOffset</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>assign rngSeedOffset used to give distinct rand seeds to each voxel </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="130" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="391" bodyend="394"/>
+        <references refid="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" compoundref="Gsolve_8h" startline="183">rngSeedOffset_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a33b9c134d16510980d5563d84d0078fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::setStoich</definition>
+        <argsstring>(Id stoich)</argsstring>
+        <name>setStoich</name>
+        <qualifiedname>Gsolve::setStoich</qualifiedname>
+        <reimplements refid="classKsolveBase_1a9e9932e226ac800600ca20ccd6f3b1e8">setStoich</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>stoich</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Informs the ZPI about the stoich, used during subsequent computations. Called to wrap up the model building. The <ref refid="classStoich" kindref="compound">Stoich</ref> does this call after it has set up its own path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="30" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="294" bodyend="309"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classStoich_1ab73081eaab28cb65be3ceb376f559e73" compoundref="Stoich_8cpp" startline="540" endline="544">Stoich::getNumAllPools</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classGssaSystem_1a0f8aee7a87f57808f4644583ece30d79" compoundref="GssaSystem_8h" startline="50">GssaSystem::isReady</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1aeaf1dcd115f3d768b87bf0c9f7400fcb" compoundref="GssaVoxelPools_8cpp" startline="329" endline="332">GssaVoxelPools::setStoich</references>
+        <references refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" compoundref="GssaSystem_8h" startline="31">GssaSystem::stoich</references>
+        <references refid="classKsolveBase_1a9e72d9f4802cc71fed341ce73629e651" compoundref="KsolveBase_8h" startline="145">KsolveBase::stoich_</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" compoundref="Gsolve_8h" startline="151">sys_</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a921766c55ce81931a99d04e891c13dee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gsolve::updateRateTerms</definition>
+        <argsstring>(unsigned int index)</argsstring>
+        <name>updateRateTerms</name>
+        <qualifiedname>Gsolve::updateRateTerms</qualifiedname>
+        <reimplements refid="classKsolveBase_1a46970a57772a80ba178c56ff1a8ffdf0">updateRateTerms</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rescale specified voxel rate term following rate constant change or volume change. If index == ~0U then does all terms. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="115" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1122" bodyend="1139"/>
+        <references refid="classStoich_1aa81bfbaf5389d4ee173aa18cfaf15fd4" compoundref="Stoich_8cpp" startline="595" endline="600">Stoich::getNumCoreRates</references>
+        <references refid="classStoich_1a39d1868cebe3c20837e974cbb1d336de" compoundref="Stoich_8cpp" startline="589" endline="592">Stoich::getNumRates</references>
+        <references refid="classStoich_1a05ba653fd2112861f21bd2c27b3a76a3" compoundref="Stoich_8cpp" startline="608" endline="611">Stoich::getRateTerms</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" compoundref="Gsolve_8h" startline="166">stoichPtr_</references>
+        <references refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" compoundref="GssaVoxelPools_8cpp" startline="265" endline="280">GssaVoxelPools::updateAllRateTerms</references>
+        <references refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795" compoundref="GssaVoxelPools_8cpp" startline="282" endline="298">GssaVoxelPools::updateRateTerms</references>
+        <referencedby refid="classGsolve_1a0c9b99f7f533fd7a76be35c50cd572a9" compoundref="Gsolve_8cpp" startline="1107" endline="1120">updateVoxelVol</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a0c9b99f7f533fd7a76be35c50cd572a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gsolve::updateVoxelVol</definition>
+        <argsstring>(vector&lt; double &gt; vols)</argsstring>
+        <name>updateVoxelVol</name>
+        <qualifiedname>Gsolve::updateVoxelVol</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>vols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles request to change volumes of voxels in this <ref refid="classKsolve" kindref="compound">Ksolve</ref>, and all cascading effects of this. At this point it won&apos;t handle change in size of voxel array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="69" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1107" bodyend="1120"/>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+        <references refid="classGssaVoxelPools_1a1a4ecc59c4d07dfb139574c44d74196f" compoundref="GssaVoxelPools_8cpp" startline="335" endline="339">GssaVoxelPools::setVolumeAndDependencies</references>
+        <references refid="classGsolve_1a921766c55ce81931a99d04e891c13dee" compoundref="Gsolve_8cpp" startline="1122" endline="1139">updateRateTerms</references>
+        <referencedby refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" compoundref="Gsolve_8cpp" startline="56" endline="231">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1aca890cc327b6809f57ffc9728734dec9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Gsolve::volume</definition>
+        <argsstring>(unsigned int i) const</argsstring>
+        <name>volume</name>
+        <qualifiedname>Gsolve::volume</qualifiedname>
+        <reimplements refid="classKsolveBase_1a03d245fc3a6cb8621f49dc94655ecb97">volume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Inherited. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="51" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="1150" bodyend="1155"/>
+        <references refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" compoundref="VoxelPoolsBase_8cpp" startline="92" endline="95">VoxelPoolsBase::getVolume</references>
+        <references refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" compoundref="Gsolve_8h" startline="160">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classGsolve_1a88586acbc403ab5022e6e477f9a6bc30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Gsolve::~Gsolve</definition>
+        <argsstring>()</argsstring>
+        <name>~Gsolve</name>
+        <qualifiedname>Gsolve::~Gsolve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="21" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="258" bodyend="261"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * Gsolve::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>Gsolve::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="141" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp" bodystart="56" bodyend="231"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classGsolve_1a618ffd41b104ce4b69c0b9d4177fdac2" compoundref="Gsolve_8cpp" startline="396" endline="399">getClockedUpdate</references>
+        <references refid="classGsolve_1aa0a4a001239407a76939433929adbe5e" compoundref="Gsolve_8cpp" startline="289" endline="292">getCompartment</references>
+        <references refid="classGsolve_1a625180e1ae2e55e2c572e7a368176cd7" compoundref="Gsolve_8cpp" startline="316" endline="319">getNumAllVoxels</references>
+        <references refid="classGsolve_1ac2adf9d6790ce2e0746aeb961f397845" compoundref="Gsolve_8cpp" startline="364" endline="372">getNumFire</references>
+        <references refid="classGsolve_1ae4611942a86525ea466e7f07a68bbb26" compoundref="Gsolve_8cpp" startline="311" endline="314">getNumLocalVoxels</references>
+        <references refid="classGsolve_1abc65b1993348b637fac781d24ac12da8" compoundref="Gsolve_8cpp" startline="1054" endline="1059">getNumPools</references>
+        <references refid="classGsolve_1afa2e018a9dbd20913106fa8d0e959293" compoundref="Gsolve_8cpp" startline="1157" endline="1160">getNumThreads</references>
+        <references refid="classGsolve_1a9c6fd61816d1aa0a15a901cf85c85a6a" compoundref="Gsolve_8cpp" startline="332" endline="340">getNvec</references>
+        <references refid="classGsolve_1a72914b566a16a08bd2455af3217e1086" compoundref="Gsolve_8cpp" startline="375" endline="378">getRandInit</references>
+        <references refid="classGsolve_1ab95cfeafa98533ecf2211d75ec8dbd33" compoundref="Gsolve_8cpp" startline="386" endline="389">getRngSeedOffset</references>
+        <references refid="classGsolve_1a0b72994da9d396c320da5d0fa4632845" compoundref="Gsolve_8cpp" startline="267" endline="270">getStoich</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classGsolve_1a798ac1f508c87e9eb73d471e70eca611" compoundref="Gsolve_8cpp" startline="620" endline="621">initProc</references>
+        <references refid="classGsolve_1a4fbcc19fc518c9fc5f4aad6b64f9d155" compoundref="Gsolve_8cpp" startline="623" endline="630">initReinit</references>
+        <references refid="classLookupValueFinfo_1ae091b10e988ce9da6099127e1374293b" compoundref="LookupValueFinfo_8h" startline="46" endline="62">LookupValueFinfo&lt; T, L, F &gt;::LookupValueFinfo</references>
+        <references refid="classOpFunc1_1abc0aeb50c1657a6777c508d17c872809" compoundref="OpFunc_8h" startline="31" endline="33">OpFunc1&lt; T, A &gt;::OpFunc1</references>
+        <references refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" compoundref="Gsolve_8cpp" startline="410" endline="560">process</references>
+        <references refid="classProcOpFunc_1a09abf4cb6cd3d1ed513fee1ed18054f4" compoundref="ProcOpFunc_8h" startline="76" endline="78">ProcOpFunc&lt; T &gt;::ProcOpFunc</references>
+        <references refid="classReadOnlyLookupValueFinfo_1a3aa6c363601e4483657919db3355ff1a" compoundref="LookupValueFinfo_8h" startline="104" endline="115">ReadOnlyLookupValueFinfo&lt; T, L, F &gt;::ReadOnlyLookupValueFinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" compoundref="Gsolve_8cpp" startline="586" endline="615">reinit</references>
+        <references refid="classGsolve_1a7fc61737ae8097d34e6b56b127135d90" compoundref="Gsolve_8cpp" startline="401" endline="404">setClockedUpdate</references>
+        <references refid="classGsolve_1ac870aa97d290f08d6bfc53b605c99bb8" compoundref="Gsolve_8cpp" startline="272" endline="287">setCompartment</references>
+        <references refid="classGsolve_1a8ffa6d689ca72069116545b459414eb6" compoundref="Gsolve_8cpp" startline="322" endline="330">setNumAllVoxels</references>
+        <references refid="classGsolve_1a0dc52535f4560916c01c7716fa519529" compoundref="Gsolve_8cpp" startline="1040" endline="1048">setNumPools</references>
+        <references refid="classGsolve_1ab86912acac5b08952955737e4d94a759" compoundref="Gsolve_8cpp" startline="1162" endline="1165">setNumThreads</references>
+        <references refid="classGsolve_1aa4839e4180f01a7d984d30aaca5a1096" compoundref="Gsolve_8cpp" startline="342" endline="362">setNvec</references>
+        <references refid="classGsolve_1a55dfd484e0793aae84fb5ca2ce9f3ef9" compoundref="Gsolve_8cpp" startline="380" endline="383">setRandInit</references>
+        <references refid="classGsolve_1af06ca784cebe4408dbab2df61abdebec" compoundref="Gsolve_8cpp" startline="391" endline="394">setRngSeedOffset</references>
+        <references refid="classGsolve_1a33b9c134d16510980d5563d84d0078fc" compoundref="Gsolve_8cpp" startline="294" endline="309">setStoich</references>
+        <references refid="classSharedFinfo_1a64b94efcbd56f0e785f92d027541ae29" compoundref="SharedFinfo_8cpp" startline="16" endline="30">SharedFinfo::SharedFinfo</references>
+        <references refid="classGsolve_1a0c9b99f7f533fd7a76be35c50cd572a9" compoundref="Gsolve_8cpp" startline="1107" endline="1120">updateVoxelVol</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Gsolve</label>
+        <link refid="classGsolve"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KsolveBase</label>
+        <link refid="classKsolveBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Gsolve</label>
+        <link refid="classGsolve"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-sys_</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-pools_</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-stoichPtr_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-dsolve_</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-dsolvePtr_</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>-rng_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GssaSystem</label>
+        <link refid="classGssaSystem"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+transposeN</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+stoich</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>GssaVoxelPools</label>
+        <link refid="classGssaVoxelPools"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-v_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-numFire_</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>-rng_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="22">
+        <label>K</label>
+      </node>
+      <node id="5">
+        <label>KinSparseMatrix</label>
+        <link refid="classKinSparseMatrix"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-rowTruncated_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KsolveBase</label>
+        <link refid="classKsolveBase"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#compartment_</edgelabel>
+          <edgelabel>#stoich_</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="10">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SparseMatrix&lt; int &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Stoich</label>
+        <link refid="classStoich"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-compartment_</edgelabel>
+          <edgelabel>-dsolve_</edgelabel>
+          <edgelabel>-ksolve_</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-dinterface_</edgelabel>
+          <edgelabel>-kinterface_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-funcTarget_</edgelabel>
+          <edgelabel>-species_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-N_</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-bufPoolVec_</edgelabel>
+          <edgelabel>-enzVec_</edgelabel>
+          <edgelabel>-funcTargetPoolVec_</edgelabel>
+          <edgelabel>-incrementFuncVec_</edgelabel>
+          <edgelabel>-mmEnzVec_</edgelabel>
+          <edgelabel>-offSolverEnzVec_</edgelabel>
+          <edgelabel>-offSolverMMenzVec_</edgelabel>
+          <edgelabel>-offSolverPoolVec_</edgelabel>
+          <edgelabel>-offSolverReacVec_</edgelabel>
+          <edgelabel>-poolFuncVec_</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>T</label>
+      </node>
+      <node id="15">
+        <label>VoxelPoolsBase</label>
+        <link refid="classVoxelPoolsBase"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>#stoichPtr_</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>#rates_</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-Cinit_</edgelabel>
+          <edgelabel>-S_</edgelabel>
+          <edgelabel>-xReacScaleProducts_</edgelabel>
+          <edgelabel>-xReacScaleSubstrates_</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-proxyPoolVoxels_</edgelabel>
+          <edgelabel>-proxyTransferIndex_</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-proxyComptMap_</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>std::map&lt; Id, unsigned int &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="template-instance">
+          <edgelabel>&lt; Id, unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>moose::RNG</label>
+        <link refid="classmoose_1_1RNG"/>
+      </node>
+      <node id="21">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>std::vector&lt; GssaVoxelPools &gt;</label>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; GssaVoxelPools &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>std::vector&lt; Id &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; Id &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>std::vector&lt; RateTerm * &gt;</label>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; RateTerm * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>std::vector&lt; vector&lt; unsigned int &gt; &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; vector&lt; unsigned int &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" line="17" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h" bodystart="18" bodyend="184"/>
+    <listofallmembers>
+      <member refid="classGsolve_1a8d03efe04937ea9c76102fdc4599de6b" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>advance_chunk</name></member>
+      <member refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" prot="protected" virt="non-virtual"><scope>Gsolve</scope><name>compartment_</name></member>
+      <member refid="classGsolve_1a17578f32c0bc1f281a60443c55a42e0b" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>dsolve_</name></member>
+      <member refid="classGsolve_1a61ec73784931a6021aba9b70e0ad7dd5" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>dsolvePtr_</name></member>
+      <member refid="classGsolve_1ad15ab23459af91a514ab945914a639ea" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>fillIncrementFuncDep</name></member>
+      <member refid="classGsolve_1a32d30dfc9149e4589b9ad99108aab01d" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>fillMmEnzDep</name></member>
+      <member refid="classGsolve_1a8353dba4e64c9dc91704a1864716c535" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>fillPoolFuncDep</name></member>
+      <member refid="classGsolve_1ae3263e36e69b24e76d8f5788c04539c0" prot="public" virt="virtual"><scope>Gsolve</scope><name>getBlock</name></member>
+      <member refid="classGsolve_1a618ffd41b104ce4b69c0b9d4177fdac2" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getClockedUpdate</name></member>
+      <member refid="classGsolve_1aa0a4a001239407a76939433929adbe5e" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getCompartment</name></member>
+      <member refid="classGsolve_1a8235e5b90e20752b0206a3ec414cc3ae" prot="public" virt="virtual"><scope>Gsolve</scope><name>getConcInit</name></member>
+      <member refid="classGsolve_1abb3681ca2aad48fb2231e259234a7336" prot="public" virt="virtual"><scope>Gsolve</scope><name>getDiffConst</name></member>
+      <member refid="classKsolveBase_1a6e3db0642c4753eedda7558aa87d83fe" prot="public" virt="virtual"><scope>Gsolve</scope><name>getMotorConst</name></member>
+      <member refid="classGsolve_1a585e65a543d2a4e4ecb2a3a269369dd0" prot="public" virt="virtual"><scope>Gsolve</scope><name>getN</name></member>
+      <member refid="classGsolve_1a625180e1ae2e55e2c572e7a368176cd7" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getNumAllVoxels</name></member>
+      <member refid="classGsolve_1ac2adf9d6790ce2e0746aeb961f397845" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getNumFire</name></member>
+      <member refid="classGsolve_1ae4611942a86525ea466e7f07a68bbb26" prot="public" virt="virtual"><scope>Gsolve</scope><name>getNumLocalVoxels</name></member>
+      <member refid="classGsolve_1abc65b1993348b637fac781d24ac12da8" prot="public" virt="virtual"><scope>Gsolve</scope><name>getNumPools</name></member>
+      <member refid="classGsolve_1afa2e018a9dbd20913106fa8d0e959293" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getNumThreads</name></member>
+      <member refid="classGsolve_1a9c6fd61816d1aa0a15a901cf85c85a6a" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getNvec</name></member>
+      <member refid="classGsolve_1a8615a2d5e031ac88b6584ad9d52edae2" prot="public" virt="virtual"><scope>Gsolve</scope><name>getPoolIndex</name></member>
+      <member refid="classGsolve_1ad433baf09ca930e8c4b3715af4809311" prot="public" virt="virtual"><scope>Gsolve</scope><name>getR1</name></member>
+      <member refid="classGsolve_1a72914b566a16a08bd2455af3217e1086" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getRandInit</name></member>
+      <member refid="classGsolve_1ab95cfeafa98533ecf2211d75ec8dbd33" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getRngSeedOffset</name></member>
+      <member refid="classGsolve_1a0b72994da9d396c320da5d0fa4632845" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getStoich</name></member>
+      <member refid="classGsolve_1a76294512f5fb25c72f87402c999b6653" prot="public" virt="virtual"><scope>Gsolve</scope><name>getVolumeOfPool</name></member>
+      <member refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>getVoxelIndex</name></member>
+      <member refid="classGsolve_1a5aa0fa6d34348b56f7c55938687fd3d6" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>grainSize_</name></member>
+      <member refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>Gsolve</name></member>
+      <member refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>initCinfo</name></member>
+      <member refid="classGsolve_1a798ac1f508c87e9eb73d471e70eca611" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>initProc</name></member>
+      <member refid="classGsolve_1a4fbcc19fc518c9fc5f4aad6b64f9d155" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>initReinit</name></member>
+      <member refid="classGsolve_1a589c6a43e4fa43e24602a909aeb59827" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>insertMathDepReacs</name></member>
+      <member refid="classKsolveBase_1a3b911b76cf8a87cd0edd98037400bdae" prot="protected" virt="non-virtual"><scope>Gsolve</scope><name>isBuilt_</name></member>
+      <member refid="classKsolveBase_1a072e837ebdff10d0c597f030a1890b0b" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>KsolveBase</name></member>
+      <member refid="classGsolve_1a45d1b7547fd26e4c7fcbddfb76e09f77" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>makeReacDepsUnique</name></member>
+      <member refid="classKsolveBase_1aa2faf565d1f4c22045e0a203fca6603b" prot="public" virt="virtual"><scope>Gsolve</scope><name>notifyAddMsgDestPool</name></member>
+      <member refid="classKsolveBase_1a9c346e62e1928ec519ff994e7174ad07" prot="public" virt="virtual"><scope>Gsolve</scope><name>notifyAddMsgSrcPool</name></member>
+      <member refid="classKsolveBase_1aa8569740017fad3818a8cfaa412feb89" prot="public" virt="virtual"><scope>Gsolve</scope><name>notifyAddPool</name></member>
+      <member refid="classKsolveBase_1a32fd09c76e55ab3f1c57a8fc7a7df585" prot="public" virt="virtual"><scope>Gsolve</scope><name>notifyDestroyPool</name></member>
+      <member refid="classKsolveBase_1a3f7c84fc7d53e7b35ccf783121268a21" prot="public" virt="virtual"><scope>Gsolve</scope><name>notifyRemovePool</name></member>
+      <member refid="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>numThreads_</name></member>
+      <member refid="classGsolve_1a2e03b204ddf980a4cafe464d91f1f840" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>operator=</name></member>
+      <member refid="classGsolve_1ae23b70b9010bcfdc359dcbafb6fade3c" prot="public" virt="virtual"><scope>Gsolve</scope><name>pools</name></member>
+      <member refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>pools_</name></member>
+      <member refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>process</name></member>
+      <member refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>rebuildGssaSystem</name></member>
+      <member refid="classGsolve_1afbe3d81cfa938280aa7bdc927662ae6c" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>recalcTimeChunk</name></member>
+      <member refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>reinit</name></member>
+      <member refid="classGsolve_1aadd1c443e136341da22a51eacf1b08d5" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>rng_</name></member>
+      <member refid="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>rngSeedOffset_</name></member>
+      <member refid="classGsolve_1a28b2eef67f156528448a96cbb76e21c2" prot="public" virt="virtual"><scope>Gsolve</scope><name>setBlock</name></member>
+      <member refid="classGsolve_1a7fc61737ae8097d34e6b56b127135d90" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>setClockedUpdate</name></member>
+      <member refid="classGsolve_1ac870aa97d290f08d6bfc53b605c99bb8" prot="public" virt="virtual"><scope>Gsolve</scope><name>setCompartment</name></member>
+      <member refid="classGsolve_1ae9dacc0488b805d5cbaf49b206e6fa6e" prot="public" virt="virtual"><scope>Gsolve</scope><name>setConcInit</name></member>
+      <member refid="classGsolve_1a7bcab9d63125af79fb9b7a416ce7724c" prot="public" virt="virtual"><scope>Gsolve</scope><name>setDiffConst</name></member>
+      <member refid="classGsolve_1a8274a5da4e85e81f275081939d21ea60" prot="public" virt="virtual"><scope>Gsolve</scope><name>setDsolve</name></member>
+      <member refid="classKsolveBase_1a0109b576e8726d6035b305b9df60ef76" prot="public" virt="virtual"><scope>Gsolve</scope><name>setIsBuffered</name></member>
+      <member refid="classKsolveBase_1a3caf6ea4c3d8bb7fe1e8e2b4eb1f659d" prot="public" virt="virtual"><scope>Gsolve</scope><name>setMotorConst</name></member>
+      <member refid="classGsolve_1a90b6c968aaa0c4fb5aa199e9606e8aab" prot="public" virt="virtual"><scope>Gsolve</scope><name>setN</name></member>
+      <member refid="classGsolve_1a8ffa6d689ca72069116545b459414eb6" prot="public" virt="virtual"><scope>Gsolve</scope><name>setNumAllVoxels</name></member>
+      <member refid="classGsolve_1a0dc52535f4560916c01c7716fa519529" prot="public" virt="virtual"><scope>Gsolve</scope><name>setNumPools</name></member>
+      <member refid="classGsolve_1ab86912acac5b08952955737e4d94a759" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>setNumThreads</name></member>
+      <member refid="classGsolve_1a7ce31da61b1e7870554a1d17d8eade5a" prot="public" virt="virtual"><scope>Gsolve</scope><name>setNumVarTotPools</name></member>
+      <member refid="classGsolve_1aa4839e4180f01a7d984d30aaca5a1096" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>setNvec</name></member>
+      <member refid="classKsolveBase_1aee0cc3f669082a7a732f22b8b4319947" prot="public" virt="virtual"><scope>Gsolve</scope><name>setPrev</name></member>
+      <member refid="classGsolve_1a55dfd484e0793aae84fb5ca2ce9f3ef9" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>setRandInit</name></member>
+      <member refid="classGsolve_1af06ca784cebe4408dbab2df61abdebec" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>setRngSeedOffset</name></member>
+      <member refid="classGsolve_1a33b9c134d16510980d5563d84d0078fc" prot="public" virt="virtual"><scope>Gsolve</scope><name>setStoich</name></member>
+      <member refid="classGsolve_1a7f21f6826f94fa19fb5471141b86d41c" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>startVoxel_</name></member>
+      <member refid="classKsolveBase_1a9e72d9f4802cc71fed341ce73629e651" prot="protected" virt="non-virtual"><scope>Gsolve</scope><name>stoich_</name></member>
+      <member refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>stoichPtr_</name></member>
+      <member refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>sys_</name></member>
+      <member refid="classKsolveBase_1a34c11a2dce316e45706d12cdbfa054ff" prot="public" virt="virtual"><scope>Gsolve</scope><name>updateJunctions</name></member>
+      <member refid="classGsolve_1a921766c55ce81931a99d04e891c13dee" prot="public" virt="virtual"><scope>Gsolve</scope><name>updateRateTerms</name></member>
+      <member refid="classGsolve_1a0c9b99f7f533fd7a76be35c50cd572a9" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>updateVoxelVol</name></member>
+      <member refid="classGsolve_1a2934b3fdd36523b2872636564e09cf78" prot="private" virt="non-virtual"><scope>Gsolve</scope><name>useClockedUpdate_</name></member>
+      <member refid="classGsolve_1aca890cc327b6809f57ffc9728734dec9" prot="public" virt="virtual"><scope>Gsolve</scope><name>volume</name></member>
+      <member refid="classGsolve_1a88586acbc403ab5022e6e477f9a6bc30" prot="public" virt="non-virtual"><scope>Gsolve</scope><name>~Gsolve</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

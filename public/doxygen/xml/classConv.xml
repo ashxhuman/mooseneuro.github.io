@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classConv" kind="class" language="C++" prot="public">
+    <compoundname>Conv</compoundname>
+    <includes refid="Conv_8h" local="no">Conv.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classConv_1a96d12b27984c7f3f0be3da91c92e8bf4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>static const T &amp; Conv&lt; T &gt;::buf2val</definition>
+        <argsstring>(double **buf)</argsstring>
+        <name>buf2val</name>
+        <qualifiedname>Conv::buf2val</qualifiedname>
+        <param>
+          <type>double **</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" line="44" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" bodystart="44" bodyend="48"/>
+        <references refid="classConv_1a095c6e6841db85c717c24e2687658e2e" compoundref="Conv_8h" startline="38" endline="41">Conv&lt; T &gt;::size</references>
+      </memberdef>
+      <memberdef kind="function" id="classConv_1a545962d3cdd0a1364016813da6fd9b33" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Conv&lt; T &gt;::rttiType</definition>
+        <argsstring>()</argsstring>
+        <name>rttiType</name>
+        <qualifiedname>Conv::rttiType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" line="82" column="23" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" bodystart="82" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classConv_1a095c6e6841db85c717c24e2687658e2e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>static unsigned int Conv&lt; T &gt;::size</definition>
+        <argsstring>(const T &amp;val)</argsstring>
+        <name>size</name>
+        <qualifiedname>Conv::size</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size, in units of sizeof(double). So a double would be 1, something with 1 chars would be 1 as well, but something with 9 chars would be 2. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" line="38" column="29" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" bodystart="38" bodyend="41"/>
+        <referencedby refid="classConv_1a96d12b27984c7f3f0be3da91c92e8bf4" compoundref="Conv_8h" startline="44" endline="48">Conv&lt; T &gt;::buf2val</referencedby>
+        <referencedby refid="classConv_1accd2ae28c834ed5fa8c1ff3859229bbe" compoundref="Conv_8h" startline="56" endline="59">Conv&lt; T &gt;::val2buf</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classConv_1a6d84ca6220e8f49f7ee8fff018cc125b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Conv&lt; T &gt;::str2val</definition>
+        <argsstring>(T &amp;val, const string &amp;s)</argsstring>
+        <name>str2val</name>
+        <qualifiedname>Conv::str2val</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default conversion from string just puts the string into the char* pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" line="65" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classConv_1accd2ae28c834ed5fa8c1ff3859229bbe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Conv&lt; T &gt;::val2buf</definition>
+        <argsstring>(const T &amp;val, double **buf)</argsstring>
+        <name>val2buf</name>
+        <qualifiedname>Conv::val2buf</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>double **</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts data contents into double* buf. Buf must be allocated ahead of time. Returns size of value. Needs to be specialized for variable size and pointer-containing types T. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" line="56" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" bodystart="56" bodyend="59"/>
+        <references refid="classConv_1a095c6e6841db85c717c24e2687658e2e" compoundref="Conv_8h" startline="38" endline="41">Conv&lt; T &gt;::size</references>
+      </memberdef>
+      <memberdef kind="function" id="classConv_1a848d1535b2a2168aa4339fd9e6e1be8a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Conv&lt; T &gt;::val2str</definition>
+        <argsstring>(string &amp;s, const T &amp;val)</argsstring>
+        <name>val2str</name>
+        <qualifiedname>Conv::val2str</qualifiedname>
+        <param>
+          <type>string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default conversion into string just puts the char* representation into the string. Arguably a bad way to do it. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" line="74" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" bodystart="74" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Conv&lt; T &gt;</label>
+        <link refid="classConv"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" line="30" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Conv.h" bodystart="31" bodyend="158"/>
+    <listofallmembers>
+      <member refid="classConv_1a96d12b27984c7f3f0be3da91c92e8bf4" prot="public" virt="non-virtual"><scope>Conv</scope><name>buf2val</name></member>
+      <member refid="classConv_1a545962d3cdd0a1364016813da6fd9b33" prot="public" virt="non-virtual"><scope>Conv</scope><name>rttiType</name></member>
+      <member refid="classConv_1a095c6e6841db85c717c24e2687658e2e" prot="public" virt="non-virtual"><scope>Conv</scope><name>size</name></member>
+      <member refid="classConv_1a6d84ca6220e8f49f7ee8fff018cc125b" prot="public" virt="non-virtual"><scope>Conv</scope><name>str2val</name></member>
+      <member refid="classConv_1accd2ae28c834ed5fa8c1ff3859229bbe" prot="public" virt="non-virtual"><scope>Conv</scope><name>val2buf</name></member>
+      <member refid="classConv_1a848d1535b2a2168aa4339fd9e6e1be8a" prot="public" virt="non-virtual"><scope>Conv</scope><name>val2str</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

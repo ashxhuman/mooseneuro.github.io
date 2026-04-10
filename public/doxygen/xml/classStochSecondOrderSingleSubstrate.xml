@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classStochSecondOrderSingleSubstrate" kind="class" language="C++" prot="public">
+    <compoundname>StochSecondOrderSingleSubstrate</compoundname>
+    <basecompoundref refid="classZeroOrder" prot="public" virt="non-virtual">ZeroOrder</basecompoundref>
+    <includes refid="RateTerm_8h" local="no">RateTerm.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classStochSecondOrderSingleSubstrate_1a473e851174ee43377e9ceb386eeefde4" prot="private" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int StochSecondOrderSingleSubstrate::y_</definition>
+        <argsstring></argsstring>
+        <name>y_</name>
+        <qualifiedname>StochSecondOrderSingleSubstrate::y_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="508" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="508" bodyend="-1"/>
+        <referencedby refid="classStochSecondOrderSingleSubstrate_1a7bd32436d3f3d792d3a30414cd9b9174" compoundref="RateTerm_8h" startline="500" endline="505">copyWithVolScaling</referencedby>
+        <referencedby refid="classStochSecondOrderSingleSubstrate_1aa4ca1ec42c693b5b9ea7d30bd4db8be1" compoundref="RateTerm_8h" startline="485" endline="491">getReactants</referencedby>
+        <referencedby refid="classStochSecondOrderSingleSubstrate_1a932c63dfc97c5a00b30221be049882d8" compoundref="RateTerm_8h" startline="477" endline="483">operator()</referencedby>
+        <referencedby refid="classStochSecondOrderSingleSubstrate_1a6c601680f921ae18634d14026c6fb9d1" compoundref="RateTerm_8h" startline="493" endline="498">rescaleVolume</referencedby>
+        <referencedby refid="classStochSecondOrderSingleSubstrate_1a015b49a89b945a2355ff095442bf00fc" compoundref="RateTerm_8h" startline="473" endline="475">StochSecondOrderSingleSubstrate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStochSecondOrderSingleSubstrate_1a7bd32436d3f3d792d3a30414cd9b9174" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classRateTerm" kindref="compound">RateTerm</ref> *</type>
+        <definition>RateTerm * StochSecondOrderSingleSubstrate::copyWithVolScaling</definition>
+        <argsstring>(double vol, double sub, double prd) const</argsstring>
+        <name>copyWithVolScaling</name>
+        <qualifiedname>StochSecondOrderSingleSubstrate::copyWithVolScaling</qualifiedname>
+        <reimplements refid="classRateTerm_1a1ed45d040641861c18c1e896c2512e90">copyWithVolScaling</reimplements>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>prd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duplicates rate term and then applies volume scaling. Arguments are volume of reference voxel, product of vol/refVol for all substrates: applied to R1 product of vol/refVol for all products: applied to R2</para>
+<para>Note that unless the reaction is cross-compartment, the vol/refVol will be one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="500" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="500" bodyend="505"/>
+        <references refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" compoundref="RateTerm_8h" startline="341">ZeroOrder::k_</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classStochSecondOrderSingleSubstrate_1a015b49a89b945a2355ff095442bf00fc" compoundref="RateTerm_8h" startline="473" endline="475">StochSecondOrderSingleSubstrate</references>
+        <references refid="classStochSecondOrderSingleSubstrate_1a473e851174ee43377e9ceb386eeefde4" compoundref="RateTerm_8h" startline="508">y_</references>
+      </memberdef>
+      <memberdef kind="function" id="classStochSecondOrderSingleSubstrate_1aa4ca1ec42c693b5b9ea7d30bd4db8be1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int StochSecondOrderSingleSubstrate::getReactants</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;molIndex) const</argsstring>
+        <name>getReactants</name>
+        <qualifiedname>StochSecondOrderSingleSubstrate::getReactants</qualifiedname>
+        <reimplements refid="classRateTerm_1af4d74f9d0b9e5c0d5dd42536e99c73d1">getReactants</reimplements>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>molIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finds the reactant indices in the vector S. It returns the number of substrates found, which are the first entries in molIndex. The products are the remaining ones. Note that it does NOT find products for unidirectional reactions, which is a bit of a problem. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="485" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="485" bodyend="491"/>
+        <references refid="classStochSecondOrderSingleSubstrate_1a473e851174ee43377e9ceb386eeefde4" compoundref="RateTerm_8h" startline="508">y_</references>
+      </memberdef>
+      <memberdef kind="function" id="classStochSecondOrderSingleSubstrate_1a932c63dfc97c5a00b30221be049882d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double StochSecondOrderSingleSubstrate::operator()</definition>
+        <argsstring>(const double *S) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>StochSecondOrderSingleSubstrate::operator()</qualifiedname>
+        <reimplements refid="classRateTerm_1a47058d3e308f2499045035f4f76a9ec6">operator()</reimplements>
+        <param>
+          <type>const double *</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Computes the rate. The argument is the molecule array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="477" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="477" bodyend="483"/>
+        <references refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" compoundref="RateTerm_8h" startline="341">ZeroOrder::k_</references>
+        <references refid="classStochSecondOrderSingleSubstrate_1a473e851174ee43377e9ceb386eeefde4" compoundref="RateTerm_8h" startline="508">y_</references>
+      </memberdef>
+      <memberdef kind="function" id="classStochSecondOrderSingleSubstrate_1a6c601680f921ae18634d14026c6fb9d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void StochSecondOrderSingleSubstrate::rescaleVolume</definition>
+        <argsstring>(short comptIndex, const vector&lt; short &gt; &amp;compartmentLookup, double ratio)</argsstring>
+        <name>rescaleVolume</name>
+        <qualifiedname>StochSecondOrderSingleSubstrate::rescaleVolume</qualifiedname>
+        <reimplements refid="classRateTerm_1ab6098472ad4346f4a5325b4c408fadbd">rescaleVolume</reimplements>
+        <param>
+          <type>short</type>
+          <declname>comptIndex</declname>
+        </param>
+        <param>
+          <type>const vector&lt; short &gt; &amp;</type>
+          <declname>compartmentLookup</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used to rescale the <ref refid="classRateTerm" kindref="compound">RateTerm</ref> kinetics when the compartment volume changes. This is needed because the kinetics are in extensive units, that is, mol numbers, rather than in intensive units like concentration. So when the volume changes the rate terms change. Each Rate term checks if any of its reactant molecules are affected, and if so, rescales. Ratio is newVol / oldVol </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="493" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="493" bodyend="498"/>
+        <references refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" compoundref="RateTerm_8h" startline="341">ZeroOrder::k_</references>
+        <references refid="classStochSecondOrderSingleSubstrate_1a473e851174ee43377e9ceb386eeefde4" compoundref="RateTerm_8h" startline="508">y_</references>
+      </memberdef>
+      <memberdef kind="function" id="classStochSecondOrderSingleSubstrate_1a015b49a89b945a2355ff095442bf00fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>StochSecondOrderSingleSubstrate::StochSecondOrderSingleSubstrate</definition>
+        <argsstring>(double k, unsigned int y)</argsstring>
+        <name>StochSecondOrderSingleSubstrate</name>
+        <qualifiedname>StochSecondOrderSingleSubstrate::StochSecondOrderSingleSubstrate</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="473" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="473" bodyend="475"/>
+        <references refid="classStochSecondOrderSingleSubstrate_1a473e851174ee43377e9ceb386eeefde4" compoundref="RateTerm_8h" startline="508">y_</references>
+        <references refid="classZeroOrder_1ad578154a7360bc42bd883465270b8dbf" compoundref="RateTerm_8h" startline="279" endline="283">ZeroOrder::ZeroOrder</references>
+        <referencedby refid="classStoich_1a08295665d027898de0471e13921af9d6" compoundref="Stoich_8cpp" startline="1177" endline="1195">Stoich::convertRatesToStochasticForm</referencedby>
+        <referencedby refid="classStochSecondOrderSingleSubstrate_1a7bd32436d3f3d792d3a30414cd9b9174" compoundref="RateTerm_8h" startline="500" endline="505">copyWithVolScaling</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The reason for this class is that if we have a single substrate acting in 2nd order, we must account for the removal of one molecule halfway through the reaction. This has a major effect when there is only one molecule to start with: the eventual # would become negative if we didn&apos;t do this correction! </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="1">
+        <label>StochSecondOrderSingleSubstrate</label>
+        <link refid="classStochSecondOrderSingleSubstrate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ZeroOrder</label>
+        <link refid="classZeroOrder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="1">
+        <label>StochSecondOrderSingleSubstrate</label>
+        <link refid="classStochSecondOrderSingleSubstrate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ZeroOrder</label>
+        <link refid="classZeroOrder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="470" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="471" bodyend="509"/>
+    <listofallmembers>
+      <member refid="classStochSecondOrderSingleSubstrate_1a7bd32436d3f3d792d3a30414cd9b9174" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>copyWithVolScaling</name></member>
+      <member refid="classRateTerm_1a211734fd07c0ef1949907d832d9d03fd" prot="public" virt="non-virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>EPSILON</name></member>
+      <member refid="classZeroOrder_1a4f1253a6b404035ac256fc9c873b8074" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>getR1</name></member>
+      <member refid="classZeroOrder_1af276750427ae4d85a4fe10ca3285f371" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>getR2</name></member>
+      <member refid="classStochSecondOrderSingleSubstrate_1aa4ca1ec42c693b5b9ea7d30bd4db8be1" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>getReactants</name></member>
+      <member refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" prot="protected" virt="non-virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>k_</name></member>
+      <member refid="classStochSecondOrderSingleSubstrate_1a932c63dfc97c5a00b30221be049882d8" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>operator()</name></member>
+      <member refid="classRateTerm_1a3fe9a3f2a9c5701276de7aaf89e4bd06" prot="public" virt="non-virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>RateTerm</name></member>
+      <member refid="classStochSecondOrderSingleSubstrate_1a6c601680f921ae18634d14026c6fb9d1" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>rescaleVolume</name></member>
+      <member refid="classZeroOrder_1a128619ce58b35a0f4507ec69a3eb30f4" prot="public" virt="non-virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>setK</name></member>
+      <member refid="classZeroOrder_1a4c4982b8242f448f63a1377f2b867998" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>setR1</name></member>
+      <member refid="classZeroOrder_1a2c84e13c671f27cea28f56957b9eceab" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>setR2</name></member>
+      <member refid="classZeroOrder_1af20df8df444598cdd6f23584b278b5f1" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>setRates</name></member>
+      <member refid="classStochSecondOrderSingleSubstrate_1a015b49a89b945a2355ff095442bf00fc" prot="public" virt="non-virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>StochSecondOrderSingleSubstrate</name></member>
+      <member refid="classStochSecondOrderSingleSubstrate_1a473e851174ee43377e9ceb386eeefde4" prot="private" virt="non-virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>y_</name></member>
+      <member refid="classZeroOrder_1ad578154a7360bc42bd883465270b8dbf" prot="public" virt="non-virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>ZeroOrder</name></member>
+      <member refid="classRateTerm_1a097b1971a7652a8771245f17f28356a1" prot="public" virt="virtual"><scope>StochSecondOrderSingleSubstrate</scope><name>~RateTerm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="NeuroNode_8h" kind="file" language="C++">
+    <compoundname>NeuroNode.h</compoundname>
+    <includedby refid="CylMesh_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/CylMesh.cpp</includedby>
+    <includedby refid="EndoMesh_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp</includedby>
+    <includedby refid="NeuroMesh_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp</includedby>
+    <includedby refid="NeuroNode_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroNode.cpp</includedby>
+    <includedby refid="PsdMesh_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp</includedby>
+    <includedby refid="SpineMesh_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp</includedby>
+    <includedby refid="testMesh_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/testMesh.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/CylMesh.cpp</label>
+        <link refid="CylMesh_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp</label>
+        <link refid="EndoMesh_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp</label>
+        <link refid="NeuroMesh_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroNode.cpp</label>
+        <link refid="NeuroNode_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroNode.h</label>
+        <link refid="NeuroNode_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp</label>
+        <link refid="PsdMesh_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp</label>
+        <link refid="SpineMesh_8cpp"/>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/testMesh.cpp</label>
+        <link refid="testMesh_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classNeuroNode" prot="public">NeuroNode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2012<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_NEURO_NODE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_NEURO_NODE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classNeuroNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classNeuroNode" kindref="compound">NeuroNode</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCylBase" kindref="compound">CylBase</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classNeuroNode_1a3ad09aee31a3c611a7c7c96396966c5a" kindref="member">NeuroNode</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCylBase" kindref="compound">CylBase</ref>&amp;<sp/>cb,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" kindref="member">parent</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/><ref refid="classNeuroNode_1a8913f50b86058a881d676c763e0e87d9" kindref="member">children</ref>,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a316d4514ed00279786617c1ec3ec9524" kindref="member">startFid_</ref>,<sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classNeuroNode_1ad8fc3f43e0851b0d42ea6bdf2cdd6552" kindref="member">elecCompt</ref>,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1acb04ee41b11be6734d55c6e732ce1f5e" kindref="member">isSphere</ref><sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classNeuroNode_1a3ad09aee31a3c611a7c7c96396966c5a" kindref="member">NeuroNode</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classNeuroNode_1ad8fc3f43e0851b0d42ea6bdf2cdd6552" kindref="member">elecCompt</ref><sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classNeuroNode_1a3ad09aee31a3c611a7c7c96396966c5a" kindref="member">NeuroNode</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" kindref="member">parent</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" kindref="member">startFid</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classNeuroNode_1ad8fc3f43e0851b0d42ea6bdf2cdd6552" kindref="member">elecCompt</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" kindref="member">isDummyNode</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>True<sp/>if<sp/>CylBase::numDivs<sp/>is<sp/>zero.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1acb04ee41b11be6734d55c6e732ce1f5e" kindref="member">isSphere</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1af1858612be5b6a0ed0c354973f65a696" kindref="member">isStartNode</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>True<sp/>if<sp/>startFid_<sp/>==<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/><ref refid="classNeuroNode_1a8913f50b86058a881d676c763e0e87d9" kindref="member">children</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a1da7ecae82cfc5986fd439532c9239fa" kindref="member">addChild</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>child<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a3e4047fa5dbfa81196209eae9a59dd81" kindref="member">clearChildren</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1aed87b940e98993da7fb1ffb080e99793" kindref="member">setParent</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" kindref="member">parent</ref><sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a53d5ec1406e8f5edfe0d07a458d02df6" kindref="member">setStartFid</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>f<sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a70b74d5099ec3b1d38c222eebe56bfed" kindref="member">calculateLength</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCylBase" kindref="compound">CylBase</ref>&amp;<sp/><ref refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" kindref="member">parent</ref><sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>set<sp/>of<sp/>calls<sp/>for<sp/>safely<sp/>generating<sp/>a<sp/>tree<sp/>by<sp/>traversing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compartment<sp/>messages.<sp/>Designed<sp/>to<sp/>be<sp/>somewhat<sp/>resilient,<sp/>even</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>when<sp/>given<sp/>a<sp/>badly<sp/>set<sp/>up<sp/>neuron.</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a6eae291497c4d5ff2712d5ad9e32ca6b" kindref="member">findConnectedCompartments</ref>(</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>map&lt;<sp/>Id,<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>nodeMap,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes<sp/>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a2e553d00ff11c5e7b48bb65e9779694d" kindref="member">removeDisconnectedNodes</ref>(</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes<sp/>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a404d2f350d2feaa18e9fa37b2a2349f1" kindref="member">findStartNode</ref>(</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes<sp/>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1aea2a6aafd3983bceba49a328b0fc9cfc" kindref="member">traverse</ref>(</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start<sp/>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1acdf243cc0f385318850b69249a412e87" kindref="member">innerTraverse</ref>(</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>tree,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>seen</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a3f4fe78639e7175e0a9e157c937fe4f7" kindref="member">buildTree</ref>(<sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>ObjId<sp/>&gt;<sp/>elist<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1aba7020383a8baff44448479b5eece512" kindref="member">buildSpinyTree</ref>(</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>ObjId<sp/>&gt;&amp;<sp/>elist,<sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>Id<sp/>&gt;&amp;<sp/>shaftId,<sp/>vector&lt;<sp/>Id<sp/>&gt;&amp;<sp/>headId,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>spineParent<sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a5112d93502d92cbed21f55bd09528e18" kindref="member">setParentAndChildren</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dendParent,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>unordered_map&lt;<sp/>Id,<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>dendMap<sp/>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1ab36c957a7d9ec6db4c8d8a69cd835d37" kindref="member">filterSpines</ref>(<sp/>vector&lt;<sp/>NeuroNode<sp/>&gt;&amp;<sp/>nodes,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>Id<sp/>&gt;&amp;<sp/>shaftId,<sp/>vector&lt;<sp/>Id<sp/>&gt;&amp;<sp/>headId,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/><ref refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" kindref="member">parent</ref><sp/>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="197" refid="classNeuroNode_1a0814b8777d637bf21b0403d9ddbf12fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a0814b8777d637bf21b0403d9ddbf12fe" kindref="member">parent_</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="classNeuroNode_1a28147ab41db0a40d574d8030ebca4d58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<ref refid="classNeuroNode_1a28147ab41db0a40d574d8030ebca4d58" kindref="member">children_</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="classNeuroNode_1a316d4514ed00279786617c1ec3ec9524" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1a316d4514ed00279786617c1ec3ec9524" kindref="member">startFid_</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="classNeuroNode_1a54fd7d1faadc39cc13d9f3b3b3b7d5a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classNeuroNode_1a54fd7d1faadc39cc13d9f3b3b3b7d5a9" kindref="member">elecCompt_</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="classNeuroNode_1af6ac6f28166336ad16f5a1591477a5d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classNeuroNode_1af6ac6f28166336ad16f5a1591477a5d3" kindref="member">isSphere_</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>spines<sp/>we<sp/>will<sp/>also<sp/>need<sp/>a<sp/>double<sp/>to<sp/>indicate<sp/>position<sp/>along</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>parent<sp/>dendrite.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>_NEURO_NODE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroNode.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classStencil" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Stencil</compoundname>
+    <derivedcompoundref refid="classCuboidStencil" prot="public" virt="non-virtual">CuboidStencil</derivedcompoundref>
+    <derivedcompoundref refid="classDummyStencil" prot="public" virt="non-virtual">DummyStencil</derivedcompoundref>
+    <derivedcompoundref refid="classLineStencil" prot="public" virt="non-virtual">LineStencil</derivedcompoundref>
+    <derivedcompoundref refid="classRectangleStencil" prot="public" virt="non-virtual">RectangleStencil</derivedcompoundref>
+    <includes refid="Stencil_8h" local="no">Stencil.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStencil_1a8b6a62b116c865fc3adeab0f707d226a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Stencil::addFlux</definition>
+        <argsstring>(unsigned int meshIndex, vector&lt; double &gt; &amp;f, const vector&lt; vector&lt; double &gt; &gt; &amp;S, const vector&lt; double &gt; &amp;diffConst) const =0</argsstring>
+        <name>addFlux</name>
+        <qualifiedname>Stencil::addFlux</qualifiedname>
+        <reimplementedby refid="classDummyStencil_1ad8d1b9b04cc6d73d33486d71dd70f68b">addFlux</reimplementedby>
+        <reimplementedby refid="classLineStencil_1a1ce6016928d2123b00ae2af3e8130be7">addFlux</reimplementedby>
+        <reimplementedby refid="classRectangleStencil_1ae90c81bc96998c8f383a8d9857381f5d">addFlux</reimplementedby>
+        <reimplementedby refid="classCuboidStencil_1a51a90396fcff2bebf406dccccba44da5">addFlux</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>diffConst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>computes the <ref refid="classFlux" kindref="compound">Flux</ref> f in the voxel on meshIndex. Takes the matrix of molNumber[meshIndex][pool] and the vector of diffusionConst[pool] as arguments. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="25" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classStencil_1a2be38ed2fbf48ae6936287e24047d220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Stencil::Stencil</definition>
+        <argsstring>()</argsstring>
+        <name>Stencil</name>
+        <qualifiedname>Stencil::Stencil</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="16" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" bodystart="84" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classStencil_1a007f043b19ab256586ef6c61d6d67bd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Stencil::~Stencil</definition>
+        <argsstring>()</argsstring>
+        <name>~Stencil</name>
+        <qualifiedname>Stencil::~Stencil</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="18" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" bodystart="87" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CuboidStencil</label>
+        <link refid="classCuboidStencil"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DummyStencil</label>
+        <link refid="classDummyStencil"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LineStencil</label>
+        <link refid="classLineStencil"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>RectangleStencil</label>
+        <link refid="classRectangleStencil"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Stencil</label>
+        <link refid="classStencil"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Stencil</label>
+        <link refid="classStencil"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="13" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" bodystart="14" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classStencil_1a8b6a62b116c865fc3adeab0f707d226a" prot="public" virt="pure-virtual"><scope>Stencil</scope><name>addFlux</name></member>
+      <member refid="classStencil_1a2be38ed2fbf48ae6936287e24047d220" prot="public" virt="non-virtual"><scope>Stencil</scope><name>Stencil</name></member>
+      <member refid="classStencil_1a007f043b19ab256586ef6c61d6d67bd7" prot="public" virt="virtual"><scope>Stencil</scope><name>~Stencil</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

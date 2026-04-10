@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="OneToOneMsg_8h" kind="file" language="C++">
+    <compoundname>OneToOneMsg.h</compoundname>
+    <includedby refid="testAsync_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/testAsync.cpp</includedby>
+    <includedby refid="Msg_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/Msg.cpp</includedby>
+    <includedby refid="OneToOneMsg_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/OneToOneMsg.cpp</includedby>
+    <includedby refid="pymoose_2Finfo_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/Finfo.h</includedby>
+    <includedby refid="helper_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/helper.cpp</includedby>
+    <includedby refid="Shell_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/Shell.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/testAsync.cpp</label>
+        <link refid="testAsync_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/Msg.cpp</label>
+        <link refid="Msg_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/OneToOneMsg.cpp</label>
+        <link refid="OneToOneMsg_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/OneToOneMsg.h</label>
+        <link refid="OneToOneMsg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/Finfo.cpp</label>
+        <link refid="pymoose_2Finfo_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/Finfo.h</label>
+        <link refid="pymoose_2Finfo_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/MooseVec.cpp</label>
+        <link refid="MooseVec_8cpp"/>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/helper.cpp</label>
+        <link refid="helper_8cpp"/>
+      </node>
+      <node id="9">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/pymoose.cpp</label>
+        <link refid="pymoose_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/Shell.cpp</label>
+        <link refid="Shell_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classOneToOneMsg" prot="public">OneToOneMsg</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2009<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ONE_TO_ONE_MSG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ONE_TO_ONE_MSG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classOneToOneMsg" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classOneToOneMsg" kindref="compound">OneToOneMsg</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classMsg" kindref="compound">Msg</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24" refid="classOneToOneMsg_1a523be2d5829983a597a5069d6c05d831" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMsg_1af3de05897dc7602c64678a31c58ebece" kindref="member">Msg::initMsgManagers</ref>();<sp/></highlight><highlight class="comment">//<sp/>for<sp/>initializing<sp/>Id.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classOneToOneMsg" kindref="compound">OneToOneMsg</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/><ref refid="classMsg_1a5be9f4dd643f5f662e8fb3c029273390" kindref="member">e1</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/><ref refid="classMsg_1a893ed6b44cd4c529f0f10af38ae6743a" kindref="member">e2</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>msgIndex);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classOneToOneMsg_1a75756229b848d89602a8d33f77648034" kindref="member">~OneToOneMsg</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEref" kindref="compound">Eref</ref><sp/><ref refid="classOneToOneMsg_1a74b68bd852a8442bfb5968418153456c" kindref="member">firstTgt</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>src<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classOneToOneMsg_1a252571a542e233243f8e3bc96afc8ae9" kindref="member">sources</ref>(<sp/>vector&lt;<sp/>vector&lt;<sp/>Eref<sp/>&gt;<sp/>&gt;&amp;<sp/>v<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classOneToOneMsg_1a7e7645918ebba191a45173dc4a3a6c14" kindref="member">targets</ref>(<sp/>vector&lt;<sp/>vector&lt;<sp/>Eref<sp/>&gt;<sp/>&gt;&amp;<sp/>v<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classOneToOneMsg_1a1078584c7f0da1fbf1092dfa76bcb6d8" kindref="member">managerId</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/><ref refid="classOneToOneMsg_1a1e85ba35796650d2b0c96aef7c346b29" kindref="member">findOtherEnd</ref>(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>end<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMsg" kindref="compound">Msg</ref>*<sp/><ref refid="classOneToOneMsg_1a88241eab1ceebe5863224d655c665f39" kindref="member">copy</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>origSrc,<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>newSrc,<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>newTgt,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="header_8h_1a00318fd541f34c074d6e67a051d2b573" kindref="member">FuncId</ref><sp/>fid,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classOneToOneMsg_1a6a74f3cd57e76f59cb76c121207ebb1e" kindref="member">numMsg</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classOneToOneMsg_1a90da252ebe4543473ddf201f51140ab7" kindref="member">lookupMsg</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classOneToOneMsg_1a96552e7303f52d29c15311fa1922949f" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48" refid="classOneToOneMsg_1a8ddcac7f5cc27824384967d75f39291b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="header_8h_1a2e7643c6cb2aa8c57f0b0146611703ab" kindref="member">DataId</ref><sp/><ref refid="classOneToOneMsg_1a8ddcac7f5cc27824384967d75f39291b" kindref="member">i1_</ref>;</highlight></codeline>
+<codeline lineno="49" refid="classOneToOneMsg_1a009974f70816ea41b93df10e78136911" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="header_8h_1a2e7643c6cb2aa8c57f0b0146611703ab" kindref="member">DataId</ref><sp/><ref refid="classOneToOneMsg_1a009974f70816ea41b93df10e78136911" kindref="member">i2_</ref>;</highlight></codeline>
+<codeline lineno="50" refid="classOneToOneMsg_1aa10931b0c23c121020058266fd394f2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classOneToOneMsg_1aa10931b0c23c121020058266fd394f2c" kindref="member">managerId_</ref>;</highlight></codeline>
+<codeline lineno="51" refid="classOneToOneMsg_1a580279d8e6db5aab1427218025f15aee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>vector&lt;<sp/>OneToOneMsg*<sp/>&gt;<sp/><ref refid="classOneToOneMsg_1a580279d8e6db5aab1427218025f15aee" kindref="member">msg_</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_ONE_TO_ONE_MSG_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/OneToOneMsg.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMeshEntry" kind="class" language="C++" prot="public">
+    <compoundname>MeshEntry</compoundname>
+    <includes refid="MeshEntry_8h" local="no">MeshEntry.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+        <definition>const ChemCompt* MeshEntry::parent_</definition>
+        <argsstring></argsstring>
+        <name>parent_</name>
+        <qualifiedname>MeshEntry::parent_</qualifiedname>
+        <briefdescription>
+<para>Volume or area. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="128" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="classMeshEntry_1ab63621e97772e8f8a1abbcbed9477127" compoundref="MeshEntry_8cpp" startline="242" endline="245">getCoordinates</referencedby>
+        <referencedby refid="classMeshEntry_1af58f59c553ae651de1ad86785aeaa5ab" compoundref="MeshEntry_8cpp" startline="253" endline="256">getDiffusionArea</referencedby>
+        <referencedby refid="classMeshEntry_1a7aebe154416515153f0be9bf48d07a52" compoundref="MeshEntry_8cpp" startline="259" endline="262">getDiffusionScaling</referencedby>
+        <referencedby refid="classMeshEntry_1a6c1e4c67c9fd0bcf82d840a3202f6e08" compoundref="MeshEntry_8cpp" startline="232" endline="235">getDimensions</referencedby>
+        <referencedby refid="classMeshEntry_1a67d8e8e43f898013c21d02301ac7f695" compoundref="MeshEntry_8cpp" startline="237" endline="240">getMeshType</referencedby>
+        <referencedby refid="classMeshEntry_1a9ca18100db6eca41ed982494f363725e" compoundref="MeshEntry_8cpp" startline="247" endline="250">getNeighbors</referencedby>
+        <referencedby refid="classMeshEntry_1aba28e3a5b0da7a8ec6f9b6d144ae508a" compoundref="MeshEntry_8cpp" startline="226" endline="230">getVolume</referencedby>
+        <referencedby refid="classMeshEntry_1a0bea16f3ff54c8de98bbba260c4cf303" compoundref="MeshEntry_8cpp" startline="183" endline="185">MeshEntry</referencedby>
+        <referencedby refid="classMeshEntry_1a5b0fd763eef44c6f0a628b155d01d266" compoundref="MeshEntry_8cpp" startline="187" endline="189">MeshEntry</referencedby>
+        <referencedby refid="classMeshEntry_1a21da1c171c5a4e41044e080a63ba05f8" compoundref="MeshEntry_8cpp" startline="267" endline="276">triggerRemesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMeshEntry_1aa86631c81b4682adf0d54f047d0f2c12" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MeshEntry::volume_</definition>
+        <argsstring></argsstring>
+        <name>volume_</name>
+        <qualifiedname>MeshEntry::volume_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="127" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMeshEntry_1a6c762b517e594f80f52a790e9effb071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshEntry::extent</definition>
+        <argsstring>(DataId di, double volume, double area, double perimeter)</argsstring>
+        <name>extent</name>
+        <qualifiedname>MeshEntry::extent</qualifiedname>
+        <param>
+          <type><ref refid="header_8h_1a2e7643c6cb2aa8c57f0b0146611703ab" kindref="member">DataId</ref></type>
+          <declname>di</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>area</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>perimeter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="108" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1ab63621e97772e8f8a1abbcbed9477127" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MeshEntry::getCoordinates</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getCoordinates</name>
+        <qualifiedname>MeshEntry::getCoordinates</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Coords that define current <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref>. Usually generated on the fly by passing the current <ref refid="classField" kindref="compound">Field</ref> Index to the parent <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> subclass, which will figure it out. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="71" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="242" bodyend="245"/>
+        <references refid="classEref_1aed748cb72c986c869e4c650dd28d8d02" compoundref="Eref_8h" startline="49" endline="52">Eref::fieldIndex</references>
+        <references refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca" compoundref="ChemCompt_8cpp" startline="366" endline="369">ChemCompt::getCoordinates</references>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1af58f59c553ae651de1ad86785aeaa5ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MeshEntry::getDiffusionArea</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getDiffusionArea</name>
+        <qualifiedname>MeshEntry::getDiffusionArea</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Diffusion scaling for area </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="82" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="253" bodyend="256"/>
+        <references refid="classEref_1aed748cb72c986c869e4c650dd28d8d02" compoundref="Eref_8h" startline="49" endline="52">Eref::fieldIndex</references>
+        <references refid="classChemCompt_1a2915e3d0730c4b18a305ebc57e49b2eb">ChemCompt::getDiffusionArea</references>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a7aebe154416515153f0be9bf48d07a52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MeshEntry::getDiffusionScaling</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getDiffusionScaling</name>
+        <qualifiedname>MeshEntry::getDiffusionScaling</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Diffusion scaling for geometry of interface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="86" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="259" bodyend="262"/>
+        <references refid="classEref_1aed748cb72c986c869e4c650dd28d8d02" compoundref="Eref_8h" startline="49" endline="52">Eref::fieldIndex</references>
+        <references refid="classChemCompt_1a081367d727b267b5f75e825c0deb9330">ChemCompt::getDiffusionScaling</references>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a6c1e4c67c9fd0bcf82d840a3202f6e08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MeshEntry::getDimensions</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getDimensions</name>
+        <qualifiedname>MeshEntry::getDimensions</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns number of dimension </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="49" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="232" bodyend="235"/>
+        <references refid="classEref_1aed748cb72c986c869e4c650dd28d8d02" compoundref="Eref_8h" startline="49" endline="52">Eref::fieldIndex</references>
+        <references refid="classChemCompt_1ae26d4e8d6fcf619f172d06737d4f098f">ChemCompt::getMeshDimensions</references>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a67d8e8e43f898013c21d02301ac7f695" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MeshEntry::getMeshType</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getMeshType</name>
+        <qualifiedname>MeshEntry::getMeshType</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The MeshType defines the shape of the mesh entry. 0: Not assigned 1: cuboid 2: cylinder<orderedlist>
+<listitem><para>cylindrical shell 4: cylindrical shell segment 5: sphere 6: spherical shell 7: spherical shell segment 8: Tetrahedral 9: <ref refid="classEndoMesh" kindref="compound">EndoMesh</ref> </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="64" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="237" bodyend="240"/>
+        <references refid="classEref_1aed748cb72c986c869e4c650dd28d8d02" compoundref="Eref_8h" startline="49" endline="52">Eref::fieldIndex</references>
+        <references refid="classChemCompt_1a50c687c6bb40a49ae6d629def63ed139">ChemCompt::getMeshType</references>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a9ca18100db6eca41ed982494f363725e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; MeshEntry::getNeighbors</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getNeighbors</name>
+        <qualifiedname>MeshEntry::getNeighbors</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indices of other Entries that this one connects to, for diffusion </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="76" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="247" bodyend="250"/>
+        <references refid="classEref_1aed748cb72c986c869e4c650dd28d8d02" compoundref="Eref_8h" startline="49" endline="52">Eref::fieldIndex</references>
+        <references refid="classChemCompt_1a426bea293c2987a1cb7cfa8d3fec2ee2">ChemCompt::getNeighbors</references>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1aba28e3a5b0da7a8ec6f9b6d144ae508a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MeshEntry::getVolume</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getVolume</name>
+        <qualifiedname>MeshEntry::getVolume</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="44" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="226" bodyend="230"/>
+        <references refid="classEref_1aed748cb72c986c869e4c650dd28d8d02" compoundref="Eref_8h" startline="49" endline="52">Eref::fieldIndex</references>
+        <references refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a">ChemCompt::getMeshEntryVolume</references>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a0bea16f3ff54c8de98bbba260c4cf303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeshEntry::MeshEntry</definition>
+        <argsstring>()</argsstring>
+        <name>MeshEntry</name>
+        <qualifiedname>MeshEntry::MeshEntry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="37" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="183" bodyend="185"/>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a5b0fd763eef44c6f0a628b155d01d266" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeshEntry::MeshEntry</definition>
+        <argsstring>(const ChemCompt *parent)</argsstring>
+        <name>MeshEntry</name>
+        <qualifiedname>MeshEntry::MeshEntry</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="38" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="187" bodyend="189"/>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <referencedby refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" compoundref="ChemCompt_8cpp" startline="224" endline="230">ChemCompt::ChemCompt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a5fcb57d5a62301fa251e76d1f2d92fbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshEntry::process</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr info)</argsstring>
+        <name>process</name>
+        <qualifiedname>MeshEntry::process</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the diffusion rate terms. Note that these stay the same through the entire clock tick, even if the GSL solver takes many intermediate steps. The assumption is that the concs change slowly enough that the diffusion terms are not hugely changed over the duration of one tick. Also assume that diffusion itself is slow. The latter assumption is OK for suitable grid sizes. The first assumption is OK with a sensible tick step. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="110" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="204" bodyend="208"/>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a7172f0d0eb57100e1919e8ea8cd2a28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshEntry::reinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr info)</argsstring>
+        <name>reinit</name>
+        <qualifiedname>MeshEntry::reinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns the <ref refid="classStoich" kindref="compound">Stoich</ref> <ref refid="classId" kindref="compound">Id</ref> to the parent. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="111" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="213" bodyend="219"/>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classNeutral_1adb4bf1f5f07dcc7daf38fec7c4d0278d" compoundref="Neutral_8cpp" startline="689" endline="692">Neutral::parent</references>
+        <referencedby refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshEntry_1a21da1c171c5a4e41044e080a63ba05f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshEntry::triggerRemesh</definition>
+        <argsstring>(const Eref &amp;e, double oldvol, unsigned int startEntry, const vector&lt; unsigned int &gt; &amp;localIndices, const vector&lt; double &gt; &amp;vols)</argsstring>
+        <name>triggerRemesh</name>
+        <qualifiedname>MeshEntry::triggerRemesh</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>oldvol</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>startEntry</declname>
+        </param>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>localIndices</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>vols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="115" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="267" bodyend="276"/>
+        <references refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" compoundref="ChemCompt_8cpp" startline="450" endline="453">ChemCompt::getNumEntries</references>
+        <references refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" compoundref="MeshEntry_8h" startline="128">parent_</references>
+        <references refid="MeshEntry_8cpp_1a57a04d0ced8185c0b723220e7f1abb8e" compoundref="MeshEntry_8cpp" startline="17" endline="34">remeshOut</references>
+        <references refid="MeshEntry_8cpp_1a78d2a725757831a52388709666c0931a" compoundref="MeshEntry_8cpp" startline="36" endline="45">remeshReacsOut</references>
+        <references refid="classSrcFinfo0_1aacaff89500b041a4903cfd118f4cda1f" compoundref="SrcFinfo_8cpp" startline="70" endline="90">SrcFinfo0::send</references>
+        <references refid="classSrcFinfo5_1a188b39f6e4b7881131debc293ba59041" compoundref="SrcFinfo_8h" startline="403" endline="428">SrcFinfo5&lt; T1, T2, T3, T4, T5 &gt;::send</references>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">PsdMesh::handlePsdList</referencedby>
+        <referencedby refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">SpineMesh::handleSpineList</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * MeshEntry::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>MeshEntry::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="125" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.cpp" bodystart="47" bodyend="176"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classMeshEntry_1ab63621e97772e8f8a1abbcbed9477127" compoundref="MeshEntry_8cpp" startline="242" endline="245">getCoordinates</references>
+        <references refid="classMeshEntry_1af58f59c553ae651de1ad86785aeaa5ab" compoundref="MeshEntry_8cpp" startline="253" endline="256">getDiffusionArea</references>
+        <references refid="classMeshEntry_1a7aebe154416515153f0be9bf48d07a52" compoundref="MeshEntry_8cpp" startline="259" endline="262">getDiffusionScaling</references>
+        <references refid="classMeshEntry_1a6c1e4c67c9fd0bcf82d840a3202f6e08" compoundref="MeshEntry_8cpp" startline="232" endline="235">getDimensions</references>
+        <references refid="classValueFinfoBase_1a21804442c83fb7753bdaf415de9305a8" compoundref="ValueFinfo_8cpp" startline="18" endline="20">ValueFinfoBase::getFinfo</references>
+        <references refid="classMeshEntry_1a67d8e8e43f898013c21d02301ac7f695" compoundref="MeshEntry_8cpp" startline="237" endline="240">getMeshType</references>
+        <references refid="classMeshEntry_1a9ca18100db6eca41ed982494f363725e" compoundref="MeshEntry_8cpp" startline="247" endline="250">getNeighbors</references>
+        <references refid="classMeshEntry_1aba28e3a5b0da7a8ec6f9b6d144ae508a" compoundref="MeshEntry_8cpp" startline="226" endline="230">getVolume</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classMeshEntry_1a5fcb57d5a62301fa251e76d1f2d92fbd" compoundref="MeshEntry_8cpp" startline="204" endline="208">process</references>
+        <references refid="classProcOpFunc_1a09abf4cb6cd3d1ed513fee1ed18054f4" compoundref="ProcOpFunc_8h" startline="76" endline="78">ProcOpFunc&lt; T &gt;::ProcOpFunc</references>
+        <references refid="classReadOnlyElementValueFinfo_1a3b23da3d750c77a21335cbd66535dbe1" compoundref="ElementValueFinfo_8h" startline="79" endline="90">ReadOnlyElementValueFinfo&lt; T, F &gt;::ReadOnlyElementValueFinfo</references>
+        <references refid="classMeshEntry_1a7172f0d0eb57100e1919e8ea8cd2a28f" compoundref="MeshEntry_8cpp" startline="213" endline="219">reinit</references>
+        <references refid="MeshEntry_8cpp_1a57a04d0ced8185c0b723220e7f1abb8e" compoundref="MeshEntry_8cpp" startline="17" endline="34">remeshOut</references>
+        <references refid="MeshEntry_8cpp_1a78d2a725757831a52388709666c0931a" compoundref="MeshEntry_8cpp" startline="36" endline="45">remeshReacsOut</references>
+        <references refid="classSharedFinfo_1a64b94efcbd56f0e785f92d027541ae29" compoundref="SharedFinfo_8cpp" startline="16" endline="30">SharedFinfo::SharedFinfo</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">ChemCompt::initCinfo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref> is a single &apos;compartment&apos; in the mathematical sense, that is, all properties are assumed homogenous within it. It is a <ref refid="classFieldElement" kindref="compound">FieldElement</ref>, so it gets all its values from the parent <ref refid="classChemCompt" kindref="compound">ChemCompt</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-entry_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MeshEntry</label>
+        <link refid="classMeshEntry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" line="34" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshEntry.h" bodystart="35" bodyend="129"/>
+    <listofallmembers>
+      <member refid="classMeshEntry_1a6c762b517e594f80f52a790e9effb071" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>extent</name></member>
+      <member refid="classMeshEntry_1ab63621e97772e8f8a1abbcbed9477127" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>getCoordinates</name></member>
+      <member refid="classMeshEntry_1af58f59c553ae651de1ad86785aeaa5ab" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>getDiffusionArea</name></member>
+      <member refid="classMeshEntry_1a7aebe154416515153f0be9bf48d07a52" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>getDiffusionScaling</name></member>
+      <member refid="classMeshEntry_1a6c1e4c67c9fd0bcf82d840a3202f6e08" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>getDimensions</name></member>
+      <member refid="classMeshEntry_1a67d8e8e43f898013c21d02301ac7f695" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>getMeshType</name></member>
+      <member refid="classMeshEntry_1a9ca18100db6eca41ed982494f363725e" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>getNeighbors</name></member>
+      <member refid="classMeshEntry_1aba28e3a5b0da7a8ec6f9b6d144ae508a" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>getVolume</name></member>
+      <member refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>initCinfo</name></member>
+      <member refid="classMeshEntry_1a0bea16f3ff54c8de98bbba260c4cf303" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>MeshEntry</name></member>
+      <member refid="classMeshEntry_1a5b0fd763eef44c6f0a628b155d01d266" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>MeshEntry</name></member>
+      <member refid="classMeshEntry_1ad54e77de2165f48376e3639fb65aa77b" prot="private" virt="non-virtual"><scope>MeshEntry</scope><name>parent_</name></member>
+      <member refid="classMeshEntry_1a5fcb57d5a62301fa251e76d1f2d92fbd" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>process</name></member>
+      <member refid="classMeshEntry_1a7172f0d0eb57100e1919e8ea8cd2a28f" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>reinit</name></member>
+      <member refid="classMeshEntry_1a21da1c171c5a4e41044e080a63ba05f8" prot="public" virt="non-virtual"><scope>MeshEntry</scope><name>triggerRemesh</name></member>
+      <member refid="classMeshEntry_1aa86631c81b4682adf0d54f047d0f2c12" prot="private" virt="non-virtual"><scope>MeshEntry</scope><name>volume_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,975 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="HSolveActive_8cpp" kind="file" language="C++">
+    <compoundname>HSolveActive.cpp</compoundname>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes local="no">queue</includes>
+    <includes refid="HSolveStruct_8h" local="yes">HSolveStruct.h</includes>
+    <includes refid="HinesMatrix_8h" local="yes">HinesMatrix.h</includes>
+    <includes refid="HSolvePassive_8h" local="yes">HSolvePassive.h</includes>
+    <includes refid="RateLookup_8h" local="yes">RateLookup.h</includes>
+    <includes refid="HSolveActive_8h" local="yes">HSolveActive.h</includes>
+    <includes refid="HSolve_8h" local="yes">HSolve.h</includes>
+    <includes refid="CompartmentBase_8h" local="yes">../biophysics/CompartmentBase.h</includes>
+    <includes refid="Compartment_8h" local="yes">../biophysics/Compartment.h</includes>
+    <includes refid="CaConcBase_8h" local="yes">../biophysics/CaConcBase.h</includes>
+    <includes refid="ChanBase_8h" local="yes">../biophysics/ChanBase.h</includes>
+    <includes refid="ZombieCaConc_8h" local="yes">ZombieCaConc.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="29">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="18">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="22">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="24">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="36">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="28">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="42">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="41">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="17">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="26">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="33">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="14">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="27">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="39">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="23">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="20">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="15">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="35">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="32">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="37">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="34">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="31">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="38">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="13">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="51">
+        <label>../basecode/global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>../biophysics/CaConcBase.h</label>
+        <link refid="CaConcBase_8h"/>
+      </node>
+      <node id="69">
+        <label>../biophysics/ChanBase.h</label>
+        <link refid="ChanBase_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>../biophysics/ChanCommon.h</label>
+        <link refid="ChanCommon_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>../biophysics/Compartment.h</label>
+        <link refid="Compartment_8h"/>
+      </node>
+      <node id="48">
+        <label>../biophysics/CompartmentBase.h</label>
+        <link refid="CompartmentBase_8h"/>
+      </node>
+      <node id="72">
+        <label>../biophysics/HHChannel.h</label>
+        <link refid="HHChannel_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>../biophysics/HHChannelBase.h</label>
+        <link refid="HHChannelBase_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>../biophysics/HHGate.h</label>
+        <link refid="HHGate_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>HHGateBase.h</label>
+        <link refid="HHGateBase_8h"/>
+      </node>
+      <node id="77">
+        <label>../biophysics/SpikeGen.h</label>
+        <link refid="SpikeGen_8h"/>
+      </node>
+      <node id="78">
+        <label>HSolve.h</label>
+        <link refid="HSolve_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp</label>
+        <link refid="HSolveActive_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>HSolveActive.h</label>
+        <link refid="HSolveActive_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>HSolvePassive.h</label>
+        <link refid="HSolvePassive_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>HSolveStruct.h</label>
+        <link refid="HSolveStruct_8h"/>
+      </node>
+      <node id="50">
+        <label>HSolveUtils.h</label>
+        <link refid="HSolveUtils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>HinesMatrix.h</label>
+        <link refid="HinesMatrix_8h"/>
+      </node>
+      <node id="73">
+        <label>RateLookup.h</label>
+        <link refid="RateLookup_8h"/>
+      </node>
+      <node id="80">
+        <label>ZombieCaConc.h</label>
+        <link refid="ZombieCaConc_8h"/>
+      </node>
+      <node id="21">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="43">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="63">
+        <label>current_function.hpp</label>
+        <link refid="current__function_8hpp"/>
+      </node>
+      <node id="54">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>simple_assert.hpp</label>
+        <link refid="simple__assert_8hpp"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>../utility/simple_test.hpp</label>
+        <link refid="simple__test_8hpp"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>testing_macros.hpp</label>
+        <link refid="testing__macros_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="65">
+        <label>assert.h</label>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="79">
+        <label>chrono</label>
+      </node>
+      <node id="62">
+        <label>cmath</label>
+      </node>
+      <node id="66">
+        <label>cstdlib</label>
+      </node>
+      <node id="30">
+        <label>cstring</label>
+      </node>
+      <node id="52">
+        <label>ctime</label>
+      </node>
+      <node id="59">
+        <label>exception</label>
+      </node>
+      <node id="55">
+        <label>fstream</label>
+      </node>
+      <node id="56">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="61">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="44">
+        <label>queue</label>
+      </node>
+      <node id="75">
+        <label>set</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="60">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="53">
+        <label>valarray</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="HSolveActive_8cpp_1afd65eb597df22cbef1c92e4aa81e44a9" prot="public" static="no" extern="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;s, const HinesMatrix &amp;m)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classHinesMatrix" kindref="compound">HinesMatrix</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" line="27" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="449" bodyend="470" declfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" declline="27" declcolumn="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/>copyright<sp/>(C)<sp/>2003-2007<sp/>Upinder<sp/>S.<sp/>Bhalla,<sp/>Niraj<sp/>Dudani<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HSolveStruct_8h" kindref="compound">HSolveStruct.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HinesMatrix_8h" kindref="compound">HinesMatrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HSolvePassive_8h" kindref="compound">HSolvePassive.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RateLookup_8h" kindref="compound">RateLookup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HSolveActive_8h" kindref="compound">HSolveActive.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HSolve_8h" kindref="compound">HSolve.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/CompartmentBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/Compartment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/CaConcBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/ChanBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ZombieCaConc_8h" kindref="compound">ZombieCaConc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemoose" kindref="compound">moose</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//~<sp/>#include<sp/>&quot;ZombieCompartment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//~<sp/>#include<sp/>&quot;ZombieCaConc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>ostream&amp;<sp/><ref refid="HSolveActive_8cpp_1afd65eb597df22cbef1c92e4aa81e44a9" kindref="member">operator &lt;&lt;</ref>(<sp/>ostream&amp;<sp/>s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classHinesMatrix" kindref="compound">HinesMatrix</ref>&amp;<sp/>m<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1ad133215b6370771d51340104a4ed4fcb" kindref="member">HSolveActive::INSTANT_X</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1af0dbdde00d5d0dfad8f9aa99a2c55347" kindref="member">HSolveActive::INSTANT_Y</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1aebd37b053bfa3b846f093a1af5e38a76" kindref="member">HSolveActive::INSTANT_Z</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classHSolveActive_1afc13271ad2ed260c5bb01e1e18a51fde" refkind="member"><highlight class="normal"><ref refid="classHSolveActive_1afc13271ad2ed260c5bb01e1e18a51fde" kindref="member">HSolveActive::HSolveActive</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" kindref="member">caAdvance_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>lookup<sp/>table<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>vDiv_<sp/>=<sp/>3000;<sp/><sp/><sp/><sp/>//<sp/>for<sp/>voltage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>caDiv_<sp/>=<sp/>3000;<sp/><sp/><sp/>//<sp/>for<sp/>calcium</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="comment">//<sp/>Solving<sp/>differential<sp/>equations</highlight></codeline>
+<codeline lineno="45" refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" kindref="member">HSolveActive::step</ref>(<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref><sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" kindref="member">nCompt_</ref><sp/>&lt;=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" kindref="member">current_</ref>.size()<sp/>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" kindref="member">current_</ref>.resize(<sp/><ref refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" kindref="member">channel_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" kindref="member">advanceChannels</ref>(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref>-&gt;dt<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" kindref="member">calculateChannelCurrents</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" kindref="member">updateMatrix</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" kindref="member">HSolvePassive::forwardEliminate</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" kindref="member">HSolvePassive::backwardSubstitute</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" kindref="member">advanceCalcium</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a38544ea9b37f87535fa69b91eb7e6174" kindref="member">advanceSynChans</ref>(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref><sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" kindref="member">sendValues</ref>(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref><sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a55b273e4f4ddfb1a6b18e02954d49287" kindref="member">sendSpikes</ref>(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref><sp/>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a8dd88071f862589b982c80a653e754ed" kindref="member">prevExtCurr_</ref><sp/>=<sp/><ref refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" kindref="member">externalCurrent_</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" kindref="member">externalCurrent_</ref>.assign(<sp/><ref refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" kindref="member">externalCurrent_</ref>.size(),<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" kindref="member">HSolveActive::calculateChannelCurrents</ref>()</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>ChannelStruct<sp/>&gt;::iterator<sp/>ichan;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>CurrentStruct<sp/>&gt;::iterator<sp/>icurrent<sp/>=<sp/><ref refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" kindref="member">current_</ref>.begin();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" kindref="member">state_</ref>.size()<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>istate<sp/>=<sp/>&amp;<ref refid="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" kindref="member">state_</ref>[<sp/>0<sp/>];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>ichan<sp/>=<sp/><ref refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" kindref="member">channel_</ref>.begin();<sp/>ichan<sp/>!=<sp/><ref refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" kindref="member">channel_</ref>.end();<sp/>++ichan<sp/>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ichan-&gt;process(<sp/>istate,<sp/>*icurrent<sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++icurrent;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" kindref="member">HSolveActive::updateMatrix</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Copy<sp/>contents<sp/>of<sp/>HJCopy_<sp/>into<sp/>HJ_.<sp/>Cannot<sp/>do<sp/>a<sp/>vector<sp/>assign()<sp/>because</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>iterators<sp/>to<sp/>HJ_<sp/>get<sp/>invalidated<sp/>in<sp/>MS<sp/>VC++</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" kindref="member">HJ_</ref>.size()<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(<sp/>&amp;<ref refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" kindref="member">HJ_</ref>[<sp/>0<sp/>],<sp/>&amp;<ref refid="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" kindref="member">HJCopy_</ref>[<sp/>0<sp/>],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>)<sp/>*<sp/><ref refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" kindref="member">HJ_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>GkSum,<sp/>GkEkSum;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>CurrentStruct<sp/>&gt;::iterator<sp/>icurrent<sp/>=<sp/><ref refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" kindref="member">current_</ref>.begin();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>currentVecIter<sp/>&gt;::iterator<sp/>iboundary<sp/>=<sp/><ref refid="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" kindref="member">currentBoundary_</ref>.begin();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>ihs<sp/>=<sp/><ref refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" kindref="member">HS_</ref>.begin();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>iv<sp/>=<sp/><ref refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" kindref="member">V_</ref>.begin();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>CompartmentStruct<sp/>&gt;::iterator<sp/>ic;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>ic<sp/>=<sp/><ref refid="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" kindref="member">compartment_</ref>.begin();<sp/>ic<sp/>!=<sp/><ref refid="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" kindref="member">compartment_</ref>.end();<sp/>++ic<sp/>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GkSum<sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GkEkSum<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>icurrent<sp/>&lt;<sp/>*iboundary;<sp/>++icurrent<sp/>)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GkSum<sp/><sp/><sp/>+=<sp/>icurrent-&gt;Gk;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GkEkSum<sp/>+=<sp/>icurrent-&gt;Gk<sp/>*<sp/>icurrent-&gt;Ek;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ihs<sp/>=<sp/>*(<sp/>2<sp/>+<sp/>ihs<sp/>)<sp/>+<sp/>GkSum;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(<sp/>3<sp/>+<sp/>ihs<sp/>)<sp/>=<sp/>*iv<sp/>*<sp/>ic-&gt;CmByDt<sp/>+<sp/>ic-&gt;EmByRm<sp/>+<sp/>GkEkSum;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++iboundary,<sp/>ihs<sp/>+=<sp/>4,<sp/>++iv;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>map&lt;<sp/>unsigned<sp/>int,<sp/>InjectStruct<sp/>&gt;::iterator<sp/>inject;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>inject<sp/>=<sp/><ref refid="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" kindref="member">inject_</ref>.begin();<sp/>inject<sp/>!=<sp/><ref refid="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" kindref="member">inject_</ref>.end();<sp/>++inject<sp/>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ic<sp/>=<sp/>inject-&gt;first;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structInjectStruct" kindref="compound">InjectStruct</ref>&amp;<sp/>value<sp/>=<sp/>inject-&gt;second;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" kindref="member">HS_</ref>[<sp/>4<sp/>*<sp/>ic<sp/>+<sp/>3<sp/>]<sp/>+=<sp/>value.<ref refid="structInjectStruct_1a4e12f83f6122af2e5b3198f8cc73f29b" kindref="member">injectVarying</ref><sp/>+<sp/>value.<ref refid="structInjectStruct_1a92ddf146a67c56acb80df0c1a186ca2d" kindref="member">injectBasal</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value.<ref refid="structInjectStruct_1a4e12f83f6122af2e5b3198f8cc73f29b" kindref="member">injectVarying</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Synapses<sp/>are<sp/>being<sp/>handled<sp/>as<sp/>external<sp/>channels.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>double<sp/>Gk,<sp/>Ek;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>vector&lt;<sp/>SynChanStruct<sp/>&gt;::iterator<sp/>isyn;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>for<sp/>(<sp/>isyn<sp/>=<sp/>synchan_.begin();<sp/>isyn<sp/>!=<sp/>synchan_.end();<sp/>++isyn<sp/>)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>get&lt;<sp/>double<sp/>&gt;(<sp/>isyn-&gt;elm_,<sp/>synGkFinfo,<sp/>Gk<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>get&lt;<sp/>double<sp/>&gt;(<sp/>isyn-&gt;elm_,<sp/>synEkFinfo,<sp/>Ek<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>unsigned<sp/>int<sp/>ic<sp/>=<sp/>isyn-&gt;compt_;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>HS_[<sp/>4<sp/>*<sp/>ic<sp/>]<sp/>+=<sp/>Gk;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>HS_[<sp/>4<sp/>*<sp/>ic<sp/>+<sp/>3<sp/>]<sp/>+=<sp/>Gk<sp/>*<sp/>Ek;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>ihs<sp/>=<sp/><ref refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" kindref="member">HS_</ref>.begin();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>iec;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>iec<sp/>=<sp/><ref refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" kindref="member">externalCurrent_</ref>.begin();<sp/>iec<sp/>!=<sp/><ref refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" kindref="member">externalCurrent_</ref>.end();<sp/>iec<sp/>+=<sp/>2<sp/>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ihs<sp/>+=<sp/>*iec;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(<sp/>3<sp/>+<sp/>ihs<sp/>)<sp/>+=<sp/>*(<sp/>iec<sp/>+<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ihs<sp/>+=<sp/>4;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" kindref="member">stage_</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>done.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" kindref="member">HSolveActive::advanceCalcium</ref>()</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double*<sp/>&gt;::iterator<sp/>icatarget<sp/>=<sp/><ref refid="classHSolveActive_1a3bd80d16fd6945b8544b69fc9c127807" kindref="member">caTarget_</ref>.begin();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>ivmid<sp/>=<sp/><ref refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" kindref="member">VMid_</ref>.begin();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>CurrentStruct<sp/>&gt;::iterator<sp/>icurrent<sp/>=<sp/><ref refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" kindref="member">current_</ref>.begin();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>currentVecIter<sp/>&gt;::iterator<sp/>iboundary<sp/>=<sp/><ref refid="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" kindref="member">currentBoundary_</ref>.begin();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>caAdvance_:<sp/>This<sp/>flag<sp/>determines<sp/>how<sp/>current<sp/>flowing<sp/>into<sp/>a<sp/>calcium<sp/>pool</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>computed.<sp/>A<sp/>value<sp/>of<sp/>0<sp/>means<sp/>that<sp/>the<sp/>membrane<sp/>potential<sp/>at<sp/>the</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>beginning<sp/>of<sp/>the<sp/>time-step<sp/>is<sp/>used<sp/>for<sp/>the<sp/>calculation.<sp/>This<sp/>is<sp/>how</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>GENESIS<sp/>does<sp/>its<sp/>computations.<sp/>A<sp/>value<sp/>of<sp/>1<sp/>means<sp/>the<sp/>membrane<sp/>potential</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>at<sp/>the<sp/>middle<sp/>of<sp/>the<sp/>time-step<sp/>is<sp/>used.<sp/>This<sp/>is<sp/>the<sp/>correct<sp/>way<sp/>of</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>integration,<sp/>and<sp/>is<sp/>the<sp/>default<sp/>way.</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" kindref="member">caAdvance_</ref><sp/>==<sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>iboundary<sp/>!=<sp/><ref refid="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" kindref="member">currentBoundary_</ref>.end();<sp/>++iboundary<sp/>)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>icurrent<sp/>&lt;<sp/>*iboundary;<sp/>++icurrent<sp/>)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>*icatarget<sp/>)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**icatarget<sp/>+=<sp/>icurrent-&gt;Gk<sp/>*<sp/>(<sp/>icurrent-&gt;Ek<sp/>-<sp/>*ivmid<sp/>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++icatarget;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++ivmid;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" kindref="member">caAdvance_</ref><sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>iv<sp/>=<sp/><ref refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" kindref="member">V_</ref>.begin();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v0;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>iboundary<sp/>!=<sp/><ref refid="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" kindref="member">currentBoundary_</ref>.end();<sp/>++iboundary<sp/>)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>icurrent<sp/>&lt;<sp/>*iboundary;<sp/>++icurrent<sp/>)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>*icatarget<sp/>)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v0<sp/>=<sp/>(<sp/>2<sp/>*<sp/>*ivmid<sp/>-<sp/>*iv<sp/>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**icatarget<sp/>+=<sp/>icurrent-&gt;Gk<sp/>*<sp/>(<sp/>icurrent-&gt;Ek<sp/>-<sp/>v0<sp/>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++icatarget;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++ivmid,<sp/>++iv;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>CaConcStruct<sp/>&gt;::iterator<sp/>icaconc;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>icaactivation<sp/>=<sp/><ref refid="classHSolveActive_1aa54bb10de0a08aabf67aeaad51d505b1" kindref="member">caActivation_</ref>.begin();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>ica<sp/>=<sp/><ref refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" kindref="member">ca_</ref>.begin();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>icaconc<sp/>=<sp/><ref refid="classHSolveActive_1ac31e744fbd7b77b40e9fa70afb927589" kindref="member">caConc_</ref>.begin();<sp/>icaconc<sp/>!=<sp/><ref refid="classHSolveActive_1ac31e744fbd7b77b40e9fa70afb927589" kindref="member">caConc_</ref>.end();<sp/>++icaconc<sp/>)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ica<sp/>=<sp/>icaconc-&gt;process(<sp/>*icaactivation<sp/>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++ica,<sp/>++icaactivation;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1aa54bb10de0a08aabf67aeaad51d505b1" kindref="member">caActivation_</ref>.assign(<sp/><ref refid="classHSolveActive_1aa54bb10de0a08aabf67aeaad51d505b1" kindref="member">caActivation_</ref>.size(),<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" kindref="member">HSolveActive::advanceChannels</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt<sp/>)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>iv;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>istate<sp/>=<sp/><ref refid="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" kindref="member">state_</ref>.begin();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>int<sp/>&gt;::iterator<sp/>ichannelcount<sp/>=<sp/><ref refid="classHSolveActive_1ad87a5bf2418ed380d2ece21aac2e2036" kindref="member">channelCount_</ref>.begin();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>ChannelStruct<sp/>&gt;::iterator<sp/>ichan<sp/>=<sp/><ref refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" kindref="member">channel_</ref>.begin();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>ChannelStruct<sp/>&gt;::iterator<sp/>chanBoundary;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;::iterator<sp/>icacount<sp/>=<sp/><ref refid="classHSolveActive_1a676855085b67e334ece6496c119d72f3" kindref="member">caCount_</ref>.begin();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>ica<sp/>=<sp/><ref refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" kindref="member">ca_</ref>.begin();</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>caBoundary;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>LookupColumn<sp/>&gt;::iterator<sp/>icolumn<sp/>=<sp/><ref refid="classHSolveActive_1add2c5d6f16dc04ababf387a786e6f4c6" kindref="member">column_</ref>.begin();</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>LookupRow<sp/>&gt;::iterator<sp/>icarowcompt;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>LookupRow*<sp/>&gt;::iterator<sp/>icarow<sp/>=<sp/><ref refid="classHSolveActive_1a9342caabc56e88bf9301529f33346aac" kindref="member">caRow_</ref>.begin();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>iextca<sp/>=<sp/><ref refid="classHSolveActive_1a8cd34b6274d9f15256a02c9e87222905" kindref="member">externalCalcium_</ref>.begin();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structLookupRow" kindref="compound">LookupRow</ref><sp/>vRow;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structLookupRow" kindref="compound">LookupRow</ref><sp/>dRow;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C1<sp/>=<sp/>0.0,<sp/>C2<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>iv<sp/>=<sp/><ref refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" kindref="member">V_</ref>.begin();<sp/>iv<sp/>!=<sp/><ref refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" kindref="member">V_</ref>.end();<sp/>++iv<sp/>)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" kindref="member">vTable_</ref>.<ref refid="classLookupTable_1af7d0cc8a9f7c8972b7c15f39419f13b0" kindref="member">empty</ref>())</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" kindref="member">vTable_</ref>.<ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">row</ref>(<sp/>*iv,<sp/>vRow<sp/>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>icarowcompt<sp/>=<sp/><ref refid="classHSolveActive_1a1e9e5d916a02a35e2c7e3695c60d1388" kindref="member">caRowCompt_</ref>.begin();</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>caBoundary<sp/>=<sp/>ica<sp/>+<sp/>*icacount;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>ica<sp/>&lt;<sp/>caBoundary;<sp/>++ica<sp/>)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" kindref="member">caTable_</ref>.<ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">row</ref>(<sp/>*ica,<sp/>*icarowcompt<sp/>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++icarowcompt;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="251"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Optimize<sp/>by<sp/>moving<sp/>&quot;if<sp/>(<sp/>instant<sp/>)&quot;<sp/>outside<sp/>the<sp/>loop,<sp/>because<sp/>it<sp/>is</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>rarely<sp/>used.<sp/>May<sp/>also<sp/>be<sp/>able<sp/>to<sp/>avoid<sp/>&quot;if<sp/>(<sp/>power<sp/>)&quot;.</highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Or<sp/>not:<sp/>excellent<sp/>branch<sp/>predictors<sp/>these<sp/>days.</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Will<sp/>be<sp/>nice<sp/>to<sp/>test<sp/>these<sp/>optimizations.</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chanBoundary<sp/>=<sp/>ichan<sp/>+<sp/>*ichannelcount;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>ichan<sp/>&lt;<sp/>chanBoundary;<sp/>++ichan<sp/>)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" kindref="member">caTable_</ref>.<ref refid="classLookupTable_1af7d0cc8a9f7c8972b7c15f39419f13b0" kindref="member">empty</ref>())</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" kindref="member">caTable_</ref>.<ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">row</ref>(<sp/>*iextca,<sp/>dRow<sp/>);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ichan-&gt;Xpower_<sp/>&gt;<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" kindref="member">vTable_</ref>.<ref refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" kindref="member">lookup</ref>(<sp/>*icolumn,<sp/>vRow,<sp/>C1,<sp/>C2<sp/>);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>*istate<sp/>=<sp/>*istate<sp/>*<sp/>C1<sp/>+<sp/>C2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>*istate<sp/>=<sp/>(<sp/>C1<sp/>+<sp/>(<sp/>2<sp/>-<sp/>C2<sp/>)<sp/>*<sp/>*istate<sp/>)<sp/>/<sp/>C2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ichan-&gt;instant_<sp/>&amp;<sp/><ref refid="classHSolveActive_1ad133215b6370771d51340104a4ed4fcb" kindref="member">INSTANT_X</ref><sp/>)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*istate<sp/>=<sp/>C1<sp/>/<sp/>C2;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temp<sp/>=<sp/>1.0<sp/>+<sp/>dt<sp/>/<sp/>2.0<sp/>*<sp/>C2;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*istate<sp/>=<sp/>(<sp/>*istate<sp/>*<sp/>(<sp/>2.0<sp/>-<sp/>temp<sp/>)<sp/>+<sp/>dt<sp/>*<sp/>C1<sp/>)<sp/>/<sp/>temp;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++icolumn,<sp/>++istate;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ichan-&gt;Ypower_<sp/>&gt;<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" kindref="member">vTable_</ref>.<ref refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" kindref="member">lookup</ref>(<sp/>*icolumn,<sp/>vRow,<sp/>C1,<sp/>C2<sp/>);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>*istate<sp/>=<sp/>*istate<sp/>*<sp/>C1<sp/>+<sp/>C2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>*istate<sp/>=<sp/>(<sp/>C1<sp/>+<sp/>(<sp/>2<sp/>-<sp/>C2<sp/>)<sp/>*<sp/>*istate<sp/>)<sp/>/<sp/>C2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ichan-&gt;instant_<sp/>&amp;<sp/><ref refid="classHSolveActive_1af0dbdde00d5d0dfad8f9aa99a2c55347" kindref="member">INSTANT_Y</ref><sp/>)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*istate<sp/>=<sp/>C1<sp/>/<sp/>C2;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temp<sp/>=<sp/>1.0<sp/>+<sp/>dt<sp/>/<sp/>2.0<sp/>*<sp/>C2;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*istate<sp/>=<sp/>(<sp/>*istate<sp/>*<sp/>(<sp/>2.0<sp/>-<sp/>temp<sp/>)<sp/>+<sp/>dt<sp/>*<sp/>C1<sp/>)<sp/>/<sp/>temp;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++icolumn,<sp/>++istate;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ichan-&gt;Zpower_<sp/>&gt;<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLookupRow" kindref="compound">LookupRow</ref>*<sp/>caRow<sp/>=<sp/>*icarow;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>caRow<sp/>)</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" kindref="member">caTable_</ref>.<ref refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" kindref="member">lookup</ref>(<sp/>*icolumn,<sp/>*caRow,<sp/>C1,<sp/>C2<sp/>);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*iextca<sp/>&gt;0)</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" kindref="member">caTable_</ref>.<ref refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" kindref="member">lookup</ref>(<sp/>*icolumn,<sp/>dRow,<sp/>C1,<sp/>C2<sp/>);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" kindref="member">vTable_</ref>.<ref refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" kindref="member">lookup</ref>(<sp/>*icolumn,<sp/>vRow,<sp/>C1,<sp/>C2<sp/>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>*istate<sp/>=<sp/>*istate<sp/>*<sp/>C1<sp/>+<sp/>C2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>*istate<sp/>=<sp/>(<sp/>C1<sp/>+<sp/>(<sp/>2<sp/>-<sp/>C2<sp/>)<sp/>*<sp/>*istate<sp/>)<sp/>/<sp/>C2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ichan-&gt;instant_<sp/>&amp;<sp/><ref refid="classHSolveActive_1aebd37b053bfa3b846f093a1af5e38a76" kindref="member">INSTANT_Z</ref><sp/>)</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*istate<sp/>=<sp/>C1<sp/>/<sp/>C2;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temp<sp/>=<sp/>1.0<sp/>+<sp/>dt<sp/>/<sp/>2.0<sp/>*<sp/>C2;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*istate<sp/>=<sp/>(<sp/>*istate<sp/>*<sp/>(<sp/>2.0<sp/>-<sp/>temp<sp/>)<sp/>+<sp/>dt<sp/>*<sp/>C1<sp/>)<sp/>/<sp/>temp;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++icolumn,<sp/>++istate,<sp/>++icarow;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++iextca;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++ichannelcount,<sp/>++icacount;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338" refid="classHSolveActive_1a38544ea9b37f87535fa69b91eb7e6174" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a38544ea9b37f87535fa69b91eb7e6174" kindref="member">HSolveActive::advanceSynChans</ref>(<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref><sp/>)</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343" refid="classHSolveActive_1a55b273e4f4ddfb1a6b18e02954d49287" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a55b273e4f4ddfb1a6b18e02954d49287" kindref="member">HSolveActive::sendSpikes</ref>(<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref><sp/>)</highlight></codeline>
+<codeline lineno="344"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>SpikeGenStruct<sp/>&gt;::iterator<sp/>ispike;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>ispike<sp/>=<sp/><ref refid="classHSolveActive_1a99b23c45c02ac6e0c06ed42c8228cbbc" kindref="member">spikegen_</ref>.begin();<sp/>ispike<sp/>!=<sp/><ref refid="classHSolveActive_1a99b23c45c02ac6e0c06ed42c8228cbbc" kindref="member">spikegen_</ref>.end();<sp/>++ispike<sp/>)</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ispike-&gt;send(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref><sp/>);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355" refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" kindref="member">HSolveActive::sendValues</ref>(<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref><sp/>)</highlight></codeline>
+<codeline lineno="356"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;::iterator<sp/>i;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1ab16256f86710d75b157bfbb9512877c8" kindref="member">outVm_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1ab16256f86710d75b157bfbb9512877c8" kindref="member">outVm_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Compartment::VmOut()-&gt;send(</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>ZombieCompartment::VmOut()-&gt;send(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" kindref="member">compartmentId_</ref>[<sp/>*i<sp/>].eref(),</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" kindref="member">V_</ref>[<sp/>*i<sp/>]</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1a8b94074e202bb585a200db65d16861af" kindref="member">outIk_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1a8b94074e202bb585a200db65d16861af" kindref="member">outIk_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comptIndex<sp/>=<sp/><ref refid="classHSolveActive_1a5a4338efce5c7f4a54a299ca8d491866" kindref="member">chan2compt_</ref>[<sp/>*i<sp/>];</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>comptIndex<sp/>&lt;<sp/><ref refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" kindref="member">V_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChanBase_1ad247c54be6894447b422a7539e952cf7" kindref="member">ChanBase::IkOut</ref>()-&gt;send(<ref refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" kindref="member">channelId_</ref>[*i].eref(),</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" kindref="member">current_</ref>[<sp/>*i<sp/>].Ek<sp/>-<sp/><ref refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" kindref="member">V_</ref>[<sp/>comptIndex<sp/>])<sp/>*<sp/><ref refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" kindref="member">current_</ref>[<sp/>*i<sp/>].Gk);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classHSolveActive_1aaae520d3fd31fe63ee5b459802975c68" kindref="member">outCa_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classHSolveActive_1aaae520d3fd31fe63ee5b459802975c68" kindref="member">outCa_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>CaConc::concOut()-&gt;send(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCaConcBase_1ae958f791e592e1e9b448d80772a388aa" kindref="member">CaConcBase::concOut</ref>()-&gt;send(</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" kindref="member">caConcId_</ref>[<sp/>*i<sp/>].eref(),</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" kindref="member">ca_</ref>[<sp/>*i<sp/>]</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp"/>
+  </compounddef>
+</doxygen>

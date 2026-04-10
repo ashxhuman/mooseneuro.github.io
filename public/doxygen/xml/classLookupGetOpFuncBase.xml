@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classLookupGetOpFuncBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>LookupGetOpFuncBase</compoundname>
+    <basecompoundref refid="classOpFunc" prot="public" virt="non-virtual">OpFunc</basecompoundref>
+    <derivedcompoundref refid="classGetEpFunc1" prot="public" virt="non-virtual">GetEpFunc1&lt; T, L, A &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classGetOpFunc1" prot="public" virt="non-virtual">GetOpFunc1&lt; T, L, A &gt;</derivedcompoundref>
+    <includes refid="OpFuncBase_8h" local="no">OpFuncBase.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class L</type>
+      </param>
+      <param>
+        <type>class A</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLookupGetOpFuncBase_1a6ccfbf71a0e9bb482033916038704fd2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool LookupGetOpFuncBase&lt; L, A &gt;::checkFinfo</definition>
+        <argsstring>(const Finfo *s) const</argsstring>
+        <name>checkFinfo</name>
+        <qualifiedname>LookupGetOpFuncBase::checkFinfo</qualifiedname>
+        <reimplements refid="classOpFunc_1a66db2520555b410722670232841c7f67">checkFinfo</reimplements>
+        <param>
+          <type>const <ref refid="classFinfo" kindref="compound">Finfo</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="368" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" bodystart="368" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classLookupGetOpFuncBase_1a96e18e1ec1c60d5f603bdacccf3d6dfb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="classOpFunc" kindref="compound">OpFunc</ref> *</type>
+        <definition>const OpFunc * LookupGetOpFuncBase&lt; L, A &gt;::makeHopFunc</definition>
+        <argsstring>(HopIndex hopIndex) const</argsstring>
+        <name>makeHopFunc</name>
+        <qualifiedname>LookupGetOpFuncBase::makeHopFunc</qualifiedname>
+        <reimplements refid="classOpFunc_1acebf5db12a82f08ca7aed646dfc4a99a">makeHopFunc</reimplements>
+        <param>
+          <type><ref refid="classHopIndex" kindref="compound">HopIndex</ref></type>
+          <declname>hopIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="379" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" bodystart="379" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classLookupGetOpFuncBase_1ae16555754d7e32d8e1ce221145d4b260" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classOpFunc" kindref="compound">OpFunc</ref> *</type>
+        <definition>const OpFunc * LookupGetOpFuncBase&lt; L, A &gt;::makeHopFunc</definition>
+        <argsstring>(HopIndex hopIndex, const L &amp;index) const</argsstring>
+        <name>makeHopFunc</name>
+        <qualifiedname>LookupGetOpFuncBase::makeHopFunc</qualifiedname>
+        <param>
+          <type><ref refid="classHopIndex" kindref="compound">HopIndex</ref></type>
+          <declname>hopIndex</declname>
+        </param>
+        <param>
+          <type>const L &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="385" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" bodystart="385" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="classLookupGetOpFuncBase_1a43e72d00227d37f31499961e4eb8a746" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void LookupGetOpFuncBase&lt; L, A &gt;::op</definition>
+        <argsstring>(const Eref &amp;e, L index, ObjId recipient, FuncId fid) const =0</argsstring>
+        <name>op</name>
+        <qualifiedname>LookupGetOpFuncBase::op</qualifiedname>
+        <reimplementedby refid="classGetEpFunc1_1a757062e41f5b00ec3defd8b31e3356d5">op</reimplementedby>
+        <reimplementedby refid="classGetOpFunc1_1aea82d5619dbdee702e0f4a19dcefb0af">op</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>L</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>recipient</declname>
+        </param>
+        <param>
+          <type><ref refid="header_8h_1a00318fd541f34c074d6e67a051d2b573" kindref="member">FuncId</ref></type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="374" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classLookupGetOpFuncBase_1a971689e20eccf9229d49f05ad860733c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void LookupGetOpFuncBase&lt; L, A &gt;::opBuffer</definition>
+        <argsstring>(const Eref &amp;e, double *buf) const</argsstring>
+        <name>opBuffer</name>
+        <qualifiedname>LookupGetOpFuncBase::opBuffer</qualifiedname>
+        <reimplements refid="classOpFunc_1a83f97633e96c50187e079629c9b644c8">opBuffer</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Executes the <ref refid="classOpFunc" kindref="compound">OpFunc</ref> by converting args. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="392" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" bodystart="392" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classLookupGetOpFuncBase_1a0cdea242064e177ce3ada3f2cc175a51" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>A</type>
+        <definition>virtual A LookupGetOpFuncBase&lt; L, A &gt;::returnOp</definition>
+        <argsstring>(const Eref &amp;e, const L &amp;index) const =0</argsstring>
+        <name>returnOp</name>
+        <qualifiedname>LookupGetOpFuncBase::returnOp</qualifiedname>
+        <reimplementedby refid="classGetEpFunc1_1ab4de4a6f4c4922e0707c22eb45360d16">returnOp</reimplementedby>
+        <reimplementedby refid="classGetOpFunc1_1ab2848c112dd6dc8a05b8c20e3cc12704">returnOp</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const L &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="377" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classLookupGetOpFuncBase_1a41c76e59181824c76c3975c637d55edc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>string</type>
+        <definition>string LookupGetOpFuncBase&lt; L, A &gt;::rttiType</definition>
+        <argsstring>() const</argsstring>
+        <name>rttiType</name>
+        <qualifiedname>LookupGetOpFuncBase::rttiType</qualifiedname>
+        <reimplements refid="classOpFunc_1a1d115e1d4423805743882417206880ba">rttiType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="397" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" bodystart="397" bodyend="400"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the base class for all LookupGetOpFuncs. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>GetEpFunc1&lt; T, L, A &gt;</label>
+        <link refid="classGetEpFunc1"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GetOpFunc1&lt; T, L, A &gt;</label>
+        <link refid="classGetOpFunc1"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>LookupGetOpFuncBase&lt; L, A &gt;</label>
+        <link refid="classLookupGetOpFuncBase"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OpFunc</label>
+        <link refid="classOpFunc"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LookupGetOpFuncBase&lt; L, A &gt;</label>
+        <link refid="classLookupGetOpFuncBase"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OpFunc</label>
+        <link refid="classOpFunc"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="365" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" bodystart="366" bodyend="401"/>
+    <listofallmembers>
+      <member refid="classLookupGetOpFuncBase_1a6ccfbf71a0e9bb482033916038704fd2" prot="public" virt="virtual"><scope>LookupGetOpFuncBase</scope><name>checkFinfo</name></member>
+      <member refid="classOpFunc_1a18f3647377647acf0e7c5720eb1784c5" prot="public" virt="non-virtual"><scope>LookupGetOpFuncBase</scope><name>lookop</name></member>
+      <member refid="classLookupGetOpFuncBase_1a96e18e1ec1c60d5f603bdacccf3d6dfb" prot="public" virt="virtual"><scope>LookupGetOpFuncBase</scope><name>makeHopFunc</name></member>
+      <member refid="classLookupGetOpFuncBase_1ae16555754d7e32d8e1ce221145d4b260" prot="public" virt="non-virtual"><scope>LookupGetOpFuncBase</scope><name>makeHopFunc</name></member>
+      <member refid="classLookupGetOpFuncBase_1a43e72d00227d37f31499961e4eb8a746" prot="public" virt="pure-virtual"><scope>LookupGetOpFuncBase</scope><name>op</name></member>
+      <member refid="classLookupGetOpFuncBase_1a971689e20eccf9229d49f05ad860733c" prot="public" virt="virtual"><scope>LookupGetOpFuncBase</scope><name>opBuffer</name></member>
+      <member refid="classOpFunc_1ab05a9c94927b438a01e1afa2fe42f984" prot="public" virt="non-virtual"><scope>LookupGetOpFuncBase</scope><name>OpFunc</name></member>
+      <member refid="classOpFunc_1ac3d9acc0e94845d182d5ace949b19d43" prot="public" virt="non-virtual"><scope>LookupGetOpFuncBase</scope><name>opIndex</name></member>
+      <member refid="classOpFunc_1a04874b1683fb5d077843de9f8e9cc8fb" prot="private" virt="non-virtual"><scope>LookupGetOpFuncBase</scope><name>opIndex_</name></member>
+      <member refid="classOpFunc_1abaae2daff5cf71f0c497d5099fe3bc1b" prot="private" virt="non-virtual"><scope>LookupGetOpFuncBase</scope><name>ops</name></member>
+      <member refid="classOpFunc_1a1344578ac005c647b528a7a7857dd7ee" prot="public" virt="virtual"><scope>LookupGetOpFuncBase</scope><name>opVecBuffer</name></member>
+      <member refid="classOpFunc_1a7cd6908ea3ddf977b9b8dbe1a2ab509a" prot="public" virt="non-virtual"><scope>LookupGetOpFuncBase</scope><name>rebuildOpIndex</name></member>
+      <member refid="classLookupGetOpFuncBase_1a0cdea242064e177ce3ada3f2cc175a51" prot="public" virt="pure-virtual"><scope>LookupGetOpFuncBase</scope><name>returnOp</name></member>
+      <member refid="classLookupGetOpFuncBase_1a41c76e59181824c76c3975c637d55edc" prot="public" virt="virtual"><scope>LookupGetOpFuncBase</scope><name>rttiType</name></member>
+      <member refid="classOpFunc_1aeec8dec980a2fa4ee025446dbdff8a8f" prot="public" virt="non-virtual"><scope>LookupGetOpFuncBase</scope><name>setIndex</name></member>
+      <member refid="classOpFunc_1a5374e9a588d5d1024483d949ed3e3ecf" prot="public" virt="virtual"><scope>LookupGetOpFuncBase</scope><name>~OpFunc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

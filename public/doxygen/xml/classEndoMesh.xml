@@ -1,0 +1,1436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classEndoMesh" kind="class" language="C++" prot="public">
+    <compoundname>EndoMesh</compoundname>
+    <basecompoundref refid="classMeshCompt" prot="public" virt="non-virtual">MeshCompt</basecompoundref>
+    <includes refid="EndoMesh_8h" local="no">EndoMesh.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEndoMesh_1a677fcae2e2c48d59904bd1e8cafb8c10" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EndoMesh::aPower_</definition>
+        <argsstring></argsstring>
+        <name>aPower_</name>
+        <qualifiedname>EndoMesh::aPower_</qualifiedname>
+        <briefdescription>
+<para>rEndo = rScale * pow( surroundVol, rPower_) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="143" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" compoundref="EndoMesh_8cpp" startline="149" endline="161">EndoMesh</referencedby>
+        <referencedby refid="classEndoMesh_1ac33a90b765385473d821bc27fb12c291" compoundref="EndoMesh_8cpp" startline="198" endline="201">getApower</referencedby>
+        <referencedby refid="classEndoMesh_1a148cbabeac4b1f0f6dafdc866ba35cfa" compoundref="EndoMesh_8cpp" startline="402" endline="409">getVoxelArea</referencedby>
+        <referencedby refid="classEndoMesh_1a1a74bf7df6f63a49d80382bd19227f8f" compoundref="EndoMesh_8cpp" startline="193" endline="196">setApower</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1ad0e35e135660b09bebe4081bcccf4cd2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EndoMesh::aScale_</definition>
+        <argsstring></argsstring>
+        <name>aScale_</name>
+        <qualifiedname>EndoMesh::aScale_</qualifiedname>
+        <briefdescription>
+<para>aEndo = aScale * pow( surroundVol, aPower_) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="144" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" compoundref="EndoMesh_8cpp" startline="149" endline="161">EndoMesh</referencedby>
+        <referencedby refid="classEndoMesh_1aba250481dd09be66facd2f588d3712c4" compoundref="EndoMesh_8cpp" startline="208" endline="211">getAscale</referencedby>
+        <referencedby refid="classEndoMesh_1a148cbabeac4b1f0f6dafdc866ba35cfa" compoundref="EndoMesh_8cpp" startline="402" endline="409">getVoxelArea</referencedby>
+        <referencedby refid="classEndoMesh_1a02ff066bcb6124dbae68c68737931403" compoundref="EndoMesh_8cpp" startline="203" endline="206">setAscale</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1afc54d02ec6b6d1cd350254f2155d3a64" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EndoMesh::doAxialDiffusion_</definition>
+        <argsstring></argsstring>
+        <name>doAxialDiffusion_</name>
+        <qualifiedname>EndoMesh::doAxialDiffusion_</qualifiedname>
+        <briefdescription>
+<para>vEndo = vScale * pow( surroundVol, vPower_) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="148" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="148" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" compoundref="EndoMesh_8cpp" startline="149" endline="161">EndoMesh</referencedby>
+        <referencedby refid="classEndoMesh_1a6a0ed575d7848694baaccf174112f25a" compoundref="EndoMesh_8cpp" startline="254" endline="257">getDoAxialDiffusion</referencedby>
+        <referencedby refid="classEndoMesh_1abb69e42b19bb4238e020d0dfd57e78ff" compoundref="EndoMesh_8cpp" startline="379" endline="386">getParentVoxel</referencedby>
+        <referencedby refid="classEndoMesh_1abe8d6f285b6e5c621561228f515a92aa" compoundref="EndoMesh_8cpp" startline="249" endline="252">setDoAxialDiffusion</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1aa2bd5b3fc8767ac592256eae1e014c75" prot="private" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id EndoMesh::insideMeshes_</definition>
+        <argsstring></argsstring>
+        <name>insideMeshes_</name>
+        <qualifiedname>EndoMesh::insideMeshes_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="134" column="4" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classMeshCompt" kindref="compound">MeshCompt</ref> *</type>
+        <definition>const MeshCompt* EndoMesh::parent_</definition>
+        <argsstring></argsstring>
+        <name>parent_</name>
+        <qualifiedname>EndoMesh::parent_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="132" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="132" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" compoundref="EndoMesh_8cpp" startline="149" endline="161">EndoMesh</referencedby>
+        <referencedby refid="classEndoMesh_1a05f55fd2932337e61ec855339d6a3c43" compoundref="EndoMesh_8cpp" startline="325" endline="329">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classEndoMesh_1a5260a07b9a9ad620d2c39347926a9ca5" compoundref="EndoMesh_8cpp" startline="294" endline="307">getCoordinates</referencedby>
+        <referencedby refid="classEndoMesh_1a59a0e39308a855d6b5ff44dd3927c4fc" compoundref="EndoMesh_8cpp" startline="311" endline="314">getDiffusionArea</referencedby>
+        <referencedby refid="classEndoMesh_1af643131583cec71d279f9511f572b3ab" compoundref="EndoMesh_8cpp" startline="318" endline="321">getDiffusionScaling</referencedby>
+        <referencedby refid="classEndoMesh_1a6ed802efc4aff8a39f7730eaad21e303" compoundref="EndoMesh_8cpp" startline="286" endline="290">getMeshEntryVolume</referencedby>
+        <referencedby refid="classEndoMesh_1abb69e42b19bb4238e020d0dfd57e78ff" compoundref="EndoMesh_8cpp" startline="379" endline="386">getParentVoxel</referencedby>
+        <referencedby refid="classEndoMesh_1a148cbabeac4b1f0f6dafdc866ba35cfa" compoundref="EndoMesh_8cpp" startline="402" endline="409">getVoxelArea</referencedby>
+        <referencedby refid="classEndoMesh_1a8d757a199192323b20771acc5d473525" compoundref="EndoMesh_8cpp" startline="411" endline="418">getVoxelLength</referencedby>
+        <referencedby refid="classEndoMesh_1a41b92a9dac5f278432ba079c12c2f75e" compoundref="EndoMesh_8cpp" startline="478" endline="482">indexToSpace</referencedby>
+        <referencedby refid="classEndoMesh_1aa6ea5045ec9bc13e6208ba82e69a2447" compoundref="EndoMesh_8cpp" startline="354" endline="357">innerGetNumEntries</referencedby>
+        <referencedby refid="classEndoMesh_1a40ab1c68a31df6883d5ac79fa0eba093" compoundref="EndoMesh_8cpp" startline="336" endline="342">innerHandleRequestMeshStats</referencedby>
+        <referencedby refid="classEndoMesh_1ab4012e36dbcbfc9a5de014b45a7ed2e2" compoundref="EndoMesh_8cpp" startline="471" endline="475">nearest</referencedby>
+        <referencedby refid="classEndoMesh_1ab54d8a97aec689de6e7b556304175b54" compoundref="EndoMesh_8cpp" startline="233" endline="242">setSurround</referencedby>
+        <referencedby refid="classEndoMesh_1acf8d5b5b6b054517b133137e780e0518" compoundref="EndoMesh_8cpp" startline="397" endline="400">vGetVoxelMidpoint</referencedby>
+        <referencedby refid="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd" compoundref="EndoMesh_8cpp" startline="388" endline="395">vGetVoxelVolume</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1a6751f52c45b1fb972251077e309cad0e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EndoMesh::rPower_</definition>
+        <argsstring></argsstring>
+        <name>rPower_</name>
+        <qualifiedname>EndoMesh::rPower_</qualifiedname>
+        <briefdescription>
+<para>EndoMeshes inside. Used to update. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The reason why the powers don&apos;t have to be 1/3, 1/2 and 1 is because some organelles are not a simple linear vol relationship with their surround. I want to keep flexibility. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="141" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="141" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" compoundref="EndoMesh_8cpp" startline="149" endline="161">EndoMesh</referencedby>
+        <referencedby refid="classEndoMesh_1a028ecdcd200dd907763ede18d146b7c6" compoundref="EndoMesh_8cpp" startline="177" endline="180">getRpower</referencedby>
+        <referencedby refid="classEndoMesh_1a5cfff33bd635f96ebc648c6aceaaf9e0" compoundref="EndoMesh_8cpp" startline="172" endline="175">setRpower</referencedby>
+        <referencedby refid="classEndoMesh_1a6249a265bd80de6039c91c866a9945da" compoundref="EndoMesh_8cpp" startline="182" endline="186">setRscale</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1a16f559644400c8d3c93f002f14142291" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EndoMesh::rScale_</definition>
+        <argsstring></argsstring>
+        <name>rScale_</name>
+        <qualifiedname>EndoMesh::rScale_</qualifiedname>
+        <briefdescription>
+<para>rEndo = rScale * pow( surroundVol, rPower_) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="142" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="142" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" compoundref="EndoMesh_8cpp" startline="149" endline="161">EndoMesh</referencedby>
+        <referencedby refid="classEndoMesh_1a01f13ff4b5af1c0d31ec881a0928c985" compoundref="EndoMesh_8cpp" startline="188" endline="191">getRscale</referencedby>
+        <referencedby refid="classEndoMesh_1a6249a265bd80de6039c91c866a9945da" compoundref="EndoMesh_8cpp" startline="182" endline="186">setRscale</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1aaa48d4c6762918e7f387367e89c0d42d" prot="private" static="no" mutable="no">
+        <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+        <definition>ObjId EndoMesh::surround_</definition>
+        <argsstring></argsstring>
+        <name>surround_</name>
+        <qualifiedname>EndoMesh::surround_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Surrounding mesh. Use this for calculating all volume and diffusion terms, don&apos;t maintain any local variables. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="131" column="7" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1af4e987c060c058e5674bc9d218a8ab4f" compoundref="EndoMesh_8cpp" startline="259" endline="262">getElecComptMap</referencedby>
+        <referencedby refid="classEndoMesh_1a771b55cf484db7e3a527be65ff187d50" compoundref="EndoMesh_8cpp" startline="244" endline="247">getSurround</referencedby>
+        <referencedby refid="classEndoMesh_1ab54d8a97aec689de6e7b556304175b54" compoundref="EndoMesh_8cpp" startline="233" endline="242">setSurround</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EndoMesh::vPower_</definition>
+        <argsstring></argsstring>
+        <name>vPower_</name>
+        <qualifiedname>EndoMesh::vPower_</qualifiedname>
+        <briefdescription>
+<para>aEndo = aScale * pow( surroundVol, aPower_) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="145" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" compoundref="EndoMesh_8cpp" startline="149" endline="161">EndoMesh</referencedby>
+        <referencedby refid="classEndoMesh_1a05f55fd2932337e61ec855339d6a3c43" compoundref="EndoMesh_8cpp" startline="325" endline="329">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classEndoMesh_1a6ed802efc4aff8a39f7730eaad21e303" compoundref="EndoMesh_8cpp" startline="286" endline="290">getMeshEntryVolume</referencedby>
+        <referencedby refid="classEndoMesh_1a8d757a199192323b20771acc5d473525" compoundref="EndoMesh_8cpp" startline="411" endline="418">getVoxelLength</referencedby>
+        <referencedby refid="classEndoMesh_1a80d632dba6130d0ed1ec370fc9fd6d84" compoundref="EndoMesh_8cpp" startline="218" endline="221">getVpower</referencedby>
+        <referencedby refid="classEndoMesh_1a38457fd411c84b2a288480f5b57d7319" compoundref="EndoMesh_8cpp" startline="213" endline="216">setVpower</referencedby>
+        <referencedby refid="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd" compoundref="EndoMesh_8cpp" startline="388" endline="395">vGetVoxelVolume</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EndoMesh::vScale_</definition>
+        <argsstring></argsstring>
+        <name>vScale_</name>
+        <qualifiedname>EndoMesh::vScale_</qualifiedname>
+        <briefdescription>
+<para>vEndo = vScale * pow( surroundVol, vPower_) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="146" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="146" bodyend="-1"/>
+        <referencedby refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" compoundref="EndoMesh_8cpp" startline="149" endline="161">EndoMesh</referencedby>
+        <referencedby refid="classEndoMesh_1a05f55fd2932337e61ec855339d6a3c43" compoundref="EndoMesh_8cpp" startline="325" endline="329">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classEndoMesh_1a6ed802efc4aff8a39f7730eaad21e303" compoundref="EndoMesh_8cpp" startline="286" endline="290">getMeshEntryVolume</referencedby>
+        <referencedby refid="classEndoMesh_1a8d757a199192323b20771acc5d473525" compoundref="EndoMesh_8cpp" startline="411" endline="418">getVoxelLength</referencedby>
+        <referencedby refid="classEndoMesh_1abab2709a7afba37a00b0052ee718ba78" compoundref="EndoMesh_8cpp" startline="228" endline="231">getVscale</referencedby>
+        <referencedby refid="classEndoMesh_1a6249a265bd80de6039c91c866a9945da" compoundref="EndoMesh_8cpp" startline="182" endline="186">setRscale</referencedby>
+        <referencedby refid="classEndoMesh_1a8911a23d95bc4b7e3befe33ffa84770c" compoundref="EndoMesh_8cpp" startline="223" endline="226">setVscale</referencedby>
+        <referencedby refid="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd" compoundref="EndoMesh_8cpp" startline="388" endline="395">vGetVoxelVolume</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EndoMesh::EndoMesh</definition>
+        <argsstring>()</argsstring>
+        <name>EndoMesh</name>
+        <qualifiedname>EndoMesh::EndoMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="26" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="149" bodyend="161"/>
+        <references refid="classEndoMesh_1a677fcae2e2c48d59904bd1e8cafb8c10" compoundref="EndoMesh_8h" startline="143">aPower_</references>
+        <references refid="classEndoMesh_1ad0e35e135660b09bebe4081bcccf4cd2" compoundref="EndoMesh_8h" startline="144">aScale_</references>
+        <references refid="EndoMesh_8cpp_1a8f09f9cb972699dc15aef832d56954bd" compoundref="EndoMesh_8cpp" startline="27">defaultParent</references>
+        <references refid="classEndoMesh_1afc54d02ec6b6d1cd350254f2155d3a64" compoundref="EndoMesh_8h" startline="148">doAxialDiffusion_</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classEndoMesh_1a6751f52c45b1fb972251077e309cad0e" compoundref="EndoMesh_8h" startline="141">rPower_</references>
+        <references refid="classEndoMesh_1a16f559644400c8d3c93f002f14142291" compoundref="EndoMesh_8h" startline="142">rScale_</references>
+        <references refid="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" compoundref="EndoMesh_8h" startline="145">vPower_</references>
+        <references refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" compoundref="EndoMesh_8h" startline="146">vScale_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a05f55fd2932337e61ec855339d6a3c43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double EndoMesh::extendedMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>extendedMeshEntryVolume</name>
+        <qualifiedname>EndoMesh::extendedMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1ab0942d216e28565e0008176079840bec">extendedMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Volume of mesh Entry including abutting diff-coupled voxels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return volume of mesh Entry, including for diffusively coupled voxels from other solvers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="67" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="325" bodyend="329"/>
+        <references refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9" compoundref="MeshCompt_8cpp" startline="36" endline="40">MeshCompt::extendedMeshEntryVolume</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" compoundref="EndoMesh_8h" startline="145">vPower_</references>
+        <references refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" compoundref="EndoMesh_8h" startline="146">vScale_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1ac33a90b765385473d821bc27fb12c291" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EndoMesh::getApower</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getApower</name>
+        <qualifiedname>EndoMesh::getApower</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="36" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="198" bodyend="201"/>
+        <references refid="classEndoMesh_1a677fcae2e2c48d59904bd1e8cafb8c10" compoundref="EndoMesh_8h" startline="143">aPower_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1aba250481dd09be66facd2f588d3712c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EndoMesh::getAscale</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getAscale</name>
+        <qualifiedname>EndoMesh::getAscale</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="38" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="208" bodyend="211"/>
+        <references refid="classEndoMesh_1ad0e35e135660b09bebe4081bcccf4cd2" compoundref="EndoMesh_8h" startline="144">aScale_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a5260a07b9a9ad620d2c39347926a9ca5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; EndoMesh::getCoordinates</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getCoordinates</name>
+        <qualifiedname>EndoMesh::getCoordinates</qualifiedname>
+        <reimplements refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca">getCoordinates</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return coords of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return coords of mesh Entry. For Endo mesh, coords are middle of parent followed by radius. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="61" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="294" bodyend="307"/>
+        <references refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca" compoundref="ChemCompt_8cpp" startline="366" endline="369">ChemCompt::getCoordinates</references>
+        <references refid="classEndoMesh_1a6ed802efc4aff8a39f7730eaad21e303" compoundref="EndoMesh_8cpp" startline="286" endline="290">getMeshEntryVolume</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="header_8h_1a299aabc5fc8285cbf99025330a3d0d0d" compoundref="header_8h" startline="28">PI</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a59a0e39308a855d6b5ff44dd3927c4fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; EndoMesh::getDiffusionArea</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getDiffusionArea</name>
+        <qualifiedname>EndoMesh::getDiffusionArea</qualifiedname>
+        <reimplements refid="classChemCompt_1a2915e3d0730c4b18a305ebc57e49b2eb">getDiffusionArea</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return diffusion X-section area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return diffusion X-section area for each neighbor This applies if we have endo mesh voxels diffusing with each other <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="63" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="311" bodyend="314"/>
+        <references refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" compoundref="ChemCompt_8cpp" startline="450" endline="453">ChemCompt::getNumEntries</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1af643131583cec71d279f9511f572b3ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; EndoMesh::getDiffusionScaling</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getDiffusionScaling</name>
+        <qualifiedname>EndoMesh::getDiffusionScaling</qualifiedname>
+        <reimplements refid="classChemCompt_1a081367d727b267b5f75e825c0deb9330">getDiffusionScaling</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return scale factor for diffusion. 1 here. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return scale factor for diffusion. 1 here. This applies if we have endo mesh voxels diffusing with each other <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="65" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="318" bodyend="321"/>
+        <references refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" compoundref="ChemCompt_8cpp" startline="450" endline="453">ChemCompt::getNumEntries</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a6a0ed575d7848694baaccf174112f25a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EndoMesh::getDoAxialDiffusion</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getDoAxialDiffusion</name>
+        <qualifiedname>EndoMesh::getDoAxialDiffusion</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="46" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="254" bodyend="257"/>
+        <references refid="classEndoMesh_1afc54d02ec6b6d1cd350254f2155d3a64" compoundref="EndoMesh_8h" startline="148">doAxialDiffusion_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1af4e987c060c058e5674bc9d218a8ab4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; EndoMesh::getElecComptMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getElecComptMap</name>
+        <qualifiedname>EndoMesh::getElecComptMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="47" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="259" bodyend="262"/>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classEndoMesh_1aaa48d4c6762918e7f387367e89c0d42d" compoundref="EndoMesh_8h" startline="131">surround_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a303f188c29588fab22317d15569a3136" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int EndoMesh::getMeshDimensions</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshDimensions</name>
+        <qualifiedname>EndoMesh::getMeshDimensions</qualifiedname>
+        <reimplements refid="classChemCompt_1ae26d4e8d6fcf619f172d06737d4f098f">getMeshDimensions</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return dimensions of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="56" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="275" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a6ed802efc4aff8a39f7730eaad21e303" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double EndoMesh::getMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshEntryVolume</name>
+        <qualifiedname>EndoMesh::getMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a">getMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return volume of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="59" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="286" bodyend="290"/>
+        <references refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a">ChemCompt::getMeshEntryVolume</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" compoundref="EndoMesh_8h" startline="145">vPower_</references>
+        <references refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" compoundref="EndoMesh_8h" startline="146">vScale_</references>
+        <referencedby refid="classEndoMesh_1a5260a07b9a9ad620d2c39347926a9ca5" compoundref="EndoMesh_8cpp" startline="294" endline="307">getCoordinates</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a220182a002690120f0d315c420325f6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int EndoMesh::getMeshType</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshType</name>
+        <qualifiedname>EndoMesh::getMeshType</qualifiedname>
+        <reimplements refid="classChemCompt_1a50c687c6bb40a49ae6d629def63ed139">getMeshType</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return MeshType of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="54" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="269" bodyend="272"/>
+        <references refid="MeshEntry_8h_1a24f376ccef7a39450a2fcdbf5ba97cedae531ab69b5108dac9de1e3c508d433fb" compoundref="MeshEntry_8h" startline="22">ENDO</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1abb69e42b19bb4238e020d0dfd57e78ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; EndoMesh::getParentVoxel</definition>
+        <argsstring>() const</argsstring>
+        <name>getParentVoxel</name>
+        <qualifiedname>EndoMesh::getParentVoxel</qualifiedname>
+        <reimplements refid="classMeshCompt_1a240b1e27d1bd66056e7c6c092e6b7b1e">getParentVoxel</reimplements>
+        <briefdescription>
+<para>Inherited virtual, do nothing for now. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This means the sibling voxel immediately adjacent to it, not the voxel surrounding it. Should we wish to do diffusion we would need to use the parent voxel of the surround voxel. Otherewise use EMTPY_VOXEL == -1U. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="79" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="379" bodyend="386"/>
+        <references refid="classEndoMesh_1afc54d02ec6b6d1cd350254f2155d3a64" compoundref="EndoMesh_8h" startline="148">doAxialDiffusion_</references>
+        <references refid="classMeshCompt_1a240b1e27d1bd66056e7c6c092e6b7b1e">MeshCompt::getParentVoxel</references>
+        <references refid="classChemCompt_1a470081742eabd0580f158c1b165549f7">ChemCompt::innerGetNumEntries</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a028ecdcd200dd907763ede18d146b7c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EndoMesh::getRpower</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getRpower</name>
+        <qualifiedname>EndoMesh::getRpower</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="32" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="177" bodyend="180"/>
+        <references refid="classEndoMesh_1a6751f52c45b1fb972251077e309cad0e" compoundref="EndoMesh_8h" startline="141">rPower_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a01f13ff4b5af1c0d31ec881a0928c985" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EndoMesh::getRscale</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getRscale</name>
+        <qualifiedname>EndoMesh::getRscale</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="34" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="188" bodyend="191"/>
+        <references refid="classEndoMesh_1a16f559644400c8d3c93f002f14142291" compoundref="EndoMesh_8h" startline="142">rScale_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a771b55cf484db7e3a527be65ff187d50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+        <definition>ObjId EndoMesh::getSurround</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getSurround</name>
+        <qualifiedname>EndoMesh::getSurround</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="44" column="7" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="244" bodyend="247"/>
+        <references refid="classEndoMesh_1aaa48d4c6762918e7f387367e89c0d42d" compoundref="EndoMesh_8h" startline="131">surround_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a148cbabeac4b1f0f6dafdc866ba35cfa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; EndoMesh::getVoxelArea</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelArea</name>
+        <qualifiedname>EndoMesh::getVoxelArea</qualifiedname>
+        <reimplements refid="classMeshCompt_1ad0b8b02617f99d8f15c7655e4e068cc3">getVoxelArea</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="82" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="402" bodyend="409"/>
+        <references refid="classEndoMesh_1a677fcae2e2c48d59904bd1e8cafb8c10" compoundref="EndoMesh_8h" startline="143">aPower_</references>
+        <references refid="classEndoMesh_1ad0e35e135660b09bebe4081bcccf4cd2" compoundref="EndoMesh_8h" startline="144">aScale_</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">ChemCompt::vGetVoxelVolume</references>
+        <referencedby refid="classEndoMesh_1a77e7321f762d13a06de933f335bf50da" compoundref="EndoMesh_8cpp" startline="438" endline="468">matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a8d757a199192323b20771acc5d473525" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; EndoMesh::getVoxelLength</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelLength</name>
+        <qualifiedname>EndoMesh::getVoxelLength</qualifiedname>
+        <reimplements refid="classMeshCompt_1aa7a21c23e8d57611c313f59dc2cb3827">getVoxelLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="83" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="411" bodyend="418"/>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">ChemCompt::vGetVoxelVolume</references>
+        <references refid="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" compoundref="EndoMesh_8h" startline="145">vPower_</references>
+        <references refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" compoundref="EndoMesh_8h" startline="146">vScale_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a80d632dba6130d0ed1ec370fc9fd6d84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EndoMesh::getVpower</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getVpower</name>
+        <qualifiedname>EndoMesh::getVpower</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="40" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="218" bodyend="221"/>
+        <references refid="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" compoundref="EndoMesh_8h" startline="145">vPower_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1abab2709a7afba37a00b0052ee718ba78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double EndoMesh::getVscale</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getVscale</name>
+        <qualifiedname>EndoMesh::getVscale</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="42" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="228" bodyend="231"/>
+        <references refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" compoundref="EndoMesh_8h" startline="146">vScale_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a41b92a9dac5f278432ba079c12c2f75e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EndoMesh::indexToSpace</definition>
+        <argsstring>(unsigned int index, double &amp;x, double &amp;y, double &amp;z) const</argsstring>
+        <name>indexToSpace</name>
+        <qualifiedname>EndoMesh::indexToSpace</qualifiedname>
+        <reimplements refid="classChemCompt_1a16a4f8317f8b9c8b9042d96cb3230084">indexToSpace</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts specified index to xyz coords of middle of voxel Values out of range return original xyz </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="118" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="478" bodyend="482"/>
+        <references refid="classChemCompt_1a16a4f8317f8b9c8b9042d96cb3230084">ChemCompt::indexToSpace</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a9773eb71a8888320242e547ef1548ffb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EndoMesh::innerBuildDefaultMesh</definition>
+        <argsstring>(const Eref &amp;e, double volume, unsigned int numEntries)</argsstring>
+        <name>innerBuildDefaultMesh</name>
+        <qualifiedname>EndoMesh::innerBuildDefaultMesh</qualifiedname>
+        <reimplements refid="classChemCompt_1ad47583c93af9b85b1f5979a8f2730e29">innerBuildDefaultMesh</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numEntries</declname>
+        </param>
+        <briefdescription>
+<para>Virtual func to make a mesh with specified Volume and numEntries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="95" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="368" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1aa7e4ee88ba7e44e11d37e9e70b7b17a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int EndoMesh::innerGetDimensions</definition>
+        <argsstring>() const</argsstring>
+        <name>innerGetDimensions</name>
+        <qualifiedname>EndoMesh::innerGetDimensions</qualifiedname>
+        <reimplements refid="classChemCompt_1ae6347eff16c758abcd89202283c168d7">innerGetDimensions</reimplements>
+        <briefdescription>
+<para>Virtual function to return # of spatial dimensions of mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="57" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1aa6ea5045ec9bc13e6208ba82e69a2447" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int EndoMesh::innerGetNumEntries</definition>
+        <argsstring>() const</argsstring>
+        <name>innerGetNumEntries</name>
+        <qualifiedname>EndoMesh::innerGetNumEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1a470081742eabd0580f158c1b165549f7">innerGetNumEntries</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Returns number of <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref> in array </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="74" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="354" bodyend="357"/>
+        <references refid="classChemCompt_1a470081742eabd0580f158c1b165549f7">ChemCompt::innerGetNumEntries</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1ac7fc58a87bc39221240cff8eb9d22470" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EndoMesh::innerHandleNodeInfo</definition>
+        <argsstring>(const Eref &amp;e, unsigned int numNodes, unsigned int numThreads)</argsstring>
+        <name>innerHandleNodeInfo</name>
+        <qualifiedname>EndoMesh::innerHandleNodeInfo</qualifiedname>
+        <reimplements refid="classChemCompt_1a2ef09b42b75a38963cde30ff66e68216">innerHandleNodeInfo</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numNodes</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numThreads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="104" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="344" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a40ab1c68a31df6883d5ac79fa0eba093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::innerHandleRequestMeshStats</definition>
+        <argsstring>(const Eref &amp;e, const SrcFinfo2&lt; unsigned int, vector&lt; double &gt; &gt; *meshStatsFinfo)</argsstring>
+        <name>innerHandleRequestMeshStats</name>
+        <qualifiedname>EndoMesh::innerHandleRequestMeshStats</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSrcFinfo2" kindref="compound">SrcFinfo2</ref>&lt; unsigned int, vector&lt; double &gt; &gt; *</type>
+          <declname>meshStatsFinfo</declname>
+        </param>
+        <briefdescription>
+<para>More inherited virtual funcs: request comes in for mesh stats. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="98" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="336" bodyend="342"/>
+        <references refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" compoundref="ChemCompt_8cpp" startline="450" endline="453">ChemCompt::getNumEntries</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classSrcFinfo2_1ad3d0323f32a80569e27205624455b0a2" compoundref="SrcFinfo_8h" startline="221" endline="242">SrcFinfo2&lt; T1, T2 &gt;::send</references>
+        <references refid="classEndoMesh_1ad2339b22f7490c7cc4615eeadc4934ab" compoundref="EndoMesh_8cpp" startline="420" endline="427">vGetEntireVolume</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1aae08b6ac882ae72de5e6a607d2f61578" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EndoMesh::innerSetNumEntries</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>innerSetNumEntries</name>
+        <qualifiedname>EndoMesh::innerSetNumEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1aa7641511cdf773c5bbaacef66b6ea5e5">innerSetNumEntries</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual func. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Dummy, because the <ref refid="classEndoMesh" kindref="compound">EndoMesh</ref> just does what its parent does. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="76" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="363" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a77e7321f762d13a06de933f335bf50da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EndoMesh::matchMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchMeshEntries</name>
+        <qualifiedname>EndoMesh::matchMeshEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1a40842a753e317d720a5495166c56dd58">matchMeshEntries</reimplements>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the meshIndices (NOT spatial indices) of all adjacent mesh entry pairs on ether side of the (self, other) junction. meshIndices are the indices that look up entries in the vector of pools. spatialIndices are (iz * ny + iy) * nx + ix, that is, a linear conversion of cartesian spatial indices. So, for two touching cubes, the return vector is the paired meshIndices on either side of the plane of contact. If one mesh has a finer mesh than the other, or if there are more than one contact points from self to other (for example, at a corner), then we just have multiple pairs using the same meshIndex of the repeated voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Consider concentric EndoMeshes in an outer cyl/sphere of radius r_0. Radii, from out to in, are r_0, r_1, r_2.... r_innermost. Consider that we are on <ref refid="classEndoMesh" kindref="compound">EndoMesh</ref> n. The diffusion length in each case is 1/2(r_n-1 - r_n+1). For the innermost we use r_n+1 = 0 The diffusion XA is the area of the <ref refid="classEndoMesh" kindref="compound">EndoMesh</ref>.</para>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="112" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="438" bodyend="468"/>
+        <references refid="classVoxelJunction_1a8d8503053acdf4178d98cbf5d94a402a" compoundref="VoxelJunction_8h" startline="44">VoxelJunction::diffScale</references>
+        <references refid="classVoxelJunction_1a726300f19ba547690ed7ab3150cfba9c" compoundref="VoxelJunction_8h" startline="40">VoxelJunction::first</references>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classEndoMesh_1a148cbabeac4b1f0f6dafdc866ba35cfa" compoundref="EndoMesh_8cpp" startline="402" endline="409">getVoxelArea</references>
+        <references refid="classMeshCompt_1aa7a21c23e8d57611c313f59dc2cb3827">MeshCompt::getVoxelLength</references>
+        <references refid="header_8h_1a299aabc5fc8285cbf99025330a3d0d0d" compoundref="header_8h" startline="28">PI</references>
+        <references refid="classVoxelJunction_1a6175a7d3b1fba6320dca8bf2ca3bf693" compoundref="VoxelJunction_8h" startline="41">VoxelJunction::second</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <references refid="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd" compoundref="EndoMesh_8cpp" startline="388" endline="395">vGetVoxelVolume</references>
+        <references refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">ChemCompt::vGetVoxelVolume</references>
+        <referencedby refid="classCylMesh_1a48c7586a88efb888be82cab3ddd77c6a" compoundref="CylMesh_8cpp" startline="857" endline="886">CylMesh::matchMeshEntries</referencedby>
+        <referencedby refid="classCubeMesh_1a70f68ef447c9887db376e002e4cecaa2" compoundref="CubeMesh_8cpp" startline="1155" endline="1184">CubeMesh::matchMeshEntries</referencedby>
+        <referencedby refid="classNeuroMesh_1a87f8811cba83e45b1a24c8da92aa0fc0" compoundref="NeuroMesh_8cpp" startline="1249" endline="1279">NeuroMesh::matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1ab4012e36dbcbfc9a5de014b45a7ed2e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double EndoMesh::nearest</definition>
+        <argsstring>(double x, double y, double z, unsigned int &amp;index) const</argsstring>
+        <name>nearest</name>
+        <qualifiedname>EndoMesh::nearest</qualifiedname>
+        <reimplements refid="classChemCompt_1a6669c8fe5495d97b22da6d6244a88d12">nearest</reimplements>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns distance and index of nearest mesh entry. Computes each mesh entry position as its geometric centre. If the current location is not inside a valid mesh entry, distance returned is negative. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="115" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="471" bodyend="475"/>
+        <references refid="classChemCompt_1a6669c8fe5495d97b22da6d6244a88d12">ChemCompt::nearest</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a1a74bf7df6f63a49d80382bd19227f8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::setApower</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setApower</name>
+        <qualifiedname>EndoMesh::setApower</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="35" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="193" bodyend="196"/>
+        <references refid="classEndoMesh_1a677fcae2e2c48d59904bd1e8cafb8c10" compoundref="EndoMesh_8h" startline="143">aPower_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a02ff066bcb6124dbae68c68737931403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::setAscale</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setAscale</name>
+        <qualifiedname>EndoMesh::setAscale</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="37" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="203" bodyend="206"/>
+        <references refid="classEndoMesh_1ad0e35e135660b09bebe4081bcccf4cd2" compoundref="EndoMesh_8h" startline="144">aScale_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1abe8d6f285b6e5c621561228f515a92aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::setDoAxialDiffusion</definition>
+        <argsstring>(const Eref &amp;e, bool v)</argsstring>
+        <name>setDoAxialDiffusion</name>
+        <qualifiedname>EndoMesh::setDoAxialDiffusion</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="45" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="249" bodyend="252"/>
+        <references refid="classEndoMesh_1afc54d02ec6b6d1cd350254f2155d3a64" compoundref="EndoMesh_8h" startline="148">doAxialDiffusion_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a5cfff33bd635f96ebc648c6aceaaf9e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::setRpower</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setRpower</name>
+        <qualifiedname>EndoMesh::setRpower</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="31" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="172" bodyend="175"/>
+        <references refid="classEndoMesh_1a6751f52c45b1fb972251077e309cad0e" compoundref="EndoMesh_8h" startline="141">rPower_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a6249a265bd80de6039c91c866a9945da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::setRscale</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setRscale</name>
+        <qualifiedname>EndoMesh::setRscale</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="33" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="182" bodyend="186"/>
+        <references refid="classEndoMesh_1a6751f52c45b1fb972251077e309cad0e" compoundref="EndoMesh_8h" startline="141">rPower_</references>
+        <references refid="classEndoMesh_1a16f559644400c8d3c93f002f14142291" compoundref="EndoMesh_8h" startline="142">rScale_</references>
+        <references refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" compoundref="EndoMesh_8h" startline="146">vScale_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1ab54d8a97aec689de6e7b556304175b54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::setSurround</definition>
+        <argsstring>(const Eref &amp;e, ObjId v)</argsstring>
+        <name>setSurround</name>
+        <qualifiedname>EndoMesh::setSurround</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="43" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="233" bodyend="242"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classObjId_1a1e5933713d6a73550b0923cf63f5bfd8" compoundref="ObjId_8cpp" startline="113" endline="118">ObjId::data</references>
+        <references refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" compoundref="ObjId_8cpp" startline="125" endline="128">ObjId::element</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" compoundref="Cinfo_8cpp" startline="301" endline="304">Cinfo::name</references>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classObjId_1a4d6f6e6b6f3c279334cf9f10a277df49" compoundref="ObjId_8cpp" startline="120" endline="123">ObjId::path</references>
+        <references refid="classEndoMesh_1aaa48d4c6762918e7f387367e89c0d42d" compoundref="EndoMesh_8h" startline="131">surround_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a38457fd411c84b2a288480f5b57d7319" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::setVpower</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setVpower</name>
+        <qualifiedname>EndoMesh::setVpower</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="39" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="213" bodyend="216"/>
+        <references refid="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" compoundref="EndoMesh_8h" startline="145">vPower_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a8911a23d95bc4b7e3befe33ffa84770c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndoMesh::setVscale</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setVscale</name>
+        <qualifiedname>EndoMesh::setVscale</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="41" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="223" bodyend="226"/>
+        <references refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" compoundref="EndoMesh_8h" startline="146">vScale_</references>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1ad2339b22f7490c7cc4615eeadc4934ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double EndoMesh::vGetEntireVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetEntireVolume</name>
+        <qualifiedname>EndoMesh::vGetEntireVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a546b5a40463c3e84cc5b33baae6fd709">vGetEntireVolume</reimplements>
+        <briefdescription>
+<para>Inherited virtual. Returns entire volume of compartment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="86" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="420" bodyend="427"/>
+        <references refid="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd" compoundref="EndoMesh_8cpp" startline="388" endline="395">vGetVoxelVolume</references>
+        <referencedby refid="classEndoMesh_1a40ab1c68a31df6883d5ac79fa0eba093" compoundref="EndoMesh_8cpp" startline="336" endline="342">innerHandleRequestMeshStats</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1acf8d5b5b6b054517b133137e780e0518" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; EndoMesh::vGetVoxelMidpoint</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetVoxelMidpoint</name>
+        <qualifiedname>EndoMesh::vGetVoxelMidpoint</qualifiedname>
+        <reimplements refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70">vGetVoxelMidpoint</reimplements>
+        <briefdescription>
+<para>Virtual func so that derived classes can return voxel midpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="81" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="397" bodyend="400"/>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70">ChemCompt::vGetVoxelMidpoint</references>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; EndoMesh::vGetVoxelVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetVoxelVolume</name>
+        <qualifiedname>EndoMesh::vGetVoxelVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">vGetVoxelVolume</reimplements>
+        <briefdescription>
+<para>Virtual func so that derived classes can pass voxel volume back. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="80" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="388" bodyend="395"/>
+        <references refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" compoundref="EndoMesh_8h" startline="132">parent_</references>
+        <references refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">ChemCompt::vGetVoxelVolume</references>
+        <references refid="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" compoundref="EndoMesh_8h" startline="145">vPower_</references>
+        <references refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" compoundref="EndoMesh_8h" startline="146">vScale_</references>
+        <referencedby refid="classEndoMesh_1a77e7321f762d13a06de933f335bf50da" compoundref="EndoMesh_8cpp" startline="438" endline="468">matchMeshEntries</referencedby>
+        <referencedby refid="classEndoMesh_1ad2339b22f7490c7cc4615eeadc4934ab" compoundref="EndoMesh_8cpp" startline="420" endline="427">vGetEntireVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1aeed9a2e4e17cd45567e1d26eb95b9670" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool EndoMesh::vSetVolumeNotRates</definition>
+        <argsstring>(double volume)</argsstring>
+        <name>vSetVolumeNotRates</name>
+        <qualifiedname>EndoMesh::vSetVolumeNotRates</qualifiedname>
+        <reimplements refid="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c">vSetVolumeNotRates</reimplements>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. Resizes len and dia of each voxel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="89" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="429" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="classEndoMesh_1a68c44915e13fab3ee4e213f296088c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EndoMesh::~EndoMesh</definition>
+        <argsstring>()</argsstring>
+        <name>~EndoMesh</name>
+        <qualifiedname>EndoMesh::~EndoMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="27" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * EndoMesh::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>EndoMesh::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="123" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp" bodystart="29" bodyend="138"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classElementValueFinfo_1a920b84a2ae5d17c07322009467413ca1" compoundref="ElementValueFinfo_8h" startline="26" endline="45">ElementValueFinfo&lt; T, F &gt;::ElementValueFinfo</references>
+        <references refid="classEndoMesh_1ac33a90b765385473d821bc27fb12c291" compoundref="EndoMesh_8cpp" startline="198" endline="201">getApower</references>
+        <references refid="classEndoMesh_1aba250481dd09be66facd2f588d3712c4" compoundref="EndoMesh_8cpp" startline="208" endline="211">getAscale</references>
+        <references refid="classEndoMesh_1a6a0ed575d7848694baaccf174112f25a" compoundref="EndoMesh_8cpp" startline="254" endline="257">getDoAxialDiffusion</references>
+        <references refid="classEndoMesh_1af4e987c060c058e5674bc9d218a8ab4f" compoundref="EndoMesh_8cpp" startline="259" endline="262">getElecComptMap</references>
+        <references refid="classEndoMesh_1a028ecdcd200dd907763ede18d146b7c6" compoundref="EndoMesh_8cpp" startline="177" endline="180">getRpower</references>
+        <references refid="classEndoMesh_1a01f13ff4b5af1c0d31ec881a0928c985" compoundref="EndoMesh_8cpp" startline="188" endline="191">getRscale</references>
+        <references refid="classEndoMesh_1a771b55cf484db7e3a527be65ff187d50" compoundref="EndoMesh_8cpp" startline="244" endline="247">getSurround</references>
+        <references refid="classEndoMesh_1a80d632dba6130d0ed1ec370fc9fd6d84" compoundref="EndoMesh_8cpp" startline="218" endline="221">getVpower</references>
+        <references refid="classEndoMesh_1abab2709a7afba37a00b0052ee718ba78" compoundref="EndoMesh_8cpp" startline="228" endline="231">getVscale</references>
+        <references refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">ChemCompt::initCinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classEndoMesh_1a1a74bf7df6f63a49d80382bd19227f8f" compoundref="EndoMesh_8cpp" startline="193" endline="196">setApower</references>
+        <references refid="classEndoMesh_1a02ff066bcb6124dbae68c68737931403" compoundref="EndoMesh_8cpp" startline="203" endline="206">setAscale</references>
+        <references refid="classEndoMesh_1abe8d6f285b6e5c621561228f515a92aa" compoundref="EndoMesh_8cpp" startline="249" endline="252">setDoAxialDiffusion</references>
+        <references refid="classEndoMesh_1a5cfff33bd635f96ebc648c6aceaaf9e0" compoundref="EndoMesh_8cpp" startline="172" endline="175">setRpower</references>
+        <references refid="classEndoMesh_1a6249a265bd80de6039c91c866a9945da" compoundref="EndoMesh_8cpp" startline="182" endline="186">setRscale</references>
+        <references refid="classEndoMesh_1ab54d8a97aec689de6e7b556304175b54" compoundref="EndoMesh_8cpp" startline="233" endline="242">setSurround</references>
+        <references refid="classEndoMesh_1a38457fd411c84b2a288480f5b57d7319" compoundref="EndoMesh_8cpp" startline="213" endline="216">setVpower</references>
+        <references refid="classEndoMesh_1a8911a23d95bc4b7e3befe33ffa84770c" compoundref="EndoMesh_8cpp" startline="223" endline="226">setVscale</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classEndoMesh" kindref="compound">EndoMesh</ref> is a cellular compartment entirely contained within another compartment. It supports diffusion only with its immediate surround, of which there can only be one, and with its immediate interior, which can be one or more EndoMeshes. Each voxel in the <ref refid="classEndoMesh" kindref="compound">EndoMesh</ref> is well mixed, and does not exchange with any other voxels. Typically used in modelling endosomes, ER, mitochondria, and other organelles. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+      </node>
+      <node id="1">
+        <label>EndoMesh</label>
+        <link refid="classEndoMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-entry_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>EndoMesh</label>
+        <link refid="classEndoMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-surround_</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-insideMeshes_</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-coreStencil_</edgelabel>
+          <edgelabel>-m_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-extendedMeshEntryVolume_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MeshEntry</label>
+        <link refid="classMeshEntry"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ObjId</label>
+        <link refid="classObjId"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+id</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#N_</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>T</label>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" line="23" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.h" bodystart="24" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classMeshCompt_1a781b9a02f4af37458eda4ffb1a6e615d" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>addRow</name></member>
+      <member refid="classEndoMesh_1a677fcae2e2c48d59904bd1e8cafb8c10" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>aPower_</name></member>
+      <member refid="classEndoMesh_1ad0e35e135660b09bebe4081bcccf4cd2" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>aScale_</name></member>
+      <member refid="classChemCompt_1a7127a2f6f2fc7bb9e1b5e23c0b3c704d" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>boundaries_</name></member>
+      <member refid="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>buildDefaultMesh</name></member>
+      <member refid="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>buildJunction</name></member>
+      <member refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>ChemCompt</name></member>
+      <member refid="classMeshCompt_1a2bc6647b552e0140c6f8e8a05599af95" prot="public" virt="virtual"><scope>EndoMesh</scope><name>clearExtendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>coreStencil_</name></member>
+      <member refid="classChemCompt_1a510fac43d511a189853bbb6d32afb774" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>distance</name></member>
+      <member refid="classEndoMesh_1afc54d02ec6b6d1cd350254f2155d3a64" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>doAxialDiffusion_</name></member>
+      <member refid="classEndoMesh_1ac287ef3d0c6c6df5caec40add871a41a" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>EndoMesh</name></member>
+      <member refid="classChemCompt_1a82073727afa7625b507772406d39476f" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>entry_</name></member>
+      <member refid="classEndoMesh_1a05f55fd2932337e61ec855339d6a3c43" prot="public" virt="virtual"><scope>EndoMesh</scope><name>extendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>extendedMeshEntryVolume_</name></member>
+      <member refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" prot="public" virt="virtual"><scope>EndoMesh</scope><name>extendStencil</name></member>
+      <member refid="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>flipRet</name></member>
+      <member refid="classEndoMesh_1ac33a90b765385473d821bc27fb12c291" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getApower</name></member>
+      <member refid="classEndoMesh_1aba250481dd09be66facd2f588d3712c4" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getAscale</name></member>
+      <member refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getChildConcs</name></member>
+      <member refid="classEndoMesh_1a5260a07b9a9ad620d2c39347926a9ca5" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getCoordinates</name></member>
+      <member refid="classEndoMesh_1a59a0e39308a855d6b5ff44dd3927c4fc" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getDiffusionArea</name></member>
+      <member refid="classEndoMesh_1af643131583cec71d279f9511f572b3ab" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getDiffusionScaling</name></member>
+      <member refid="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getDimensions</name></member>
+      <member refid="classEndoMesh_1a6a0ed575d7848694baaccf174112f25a" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getDoAxialDiffusion</name></member>
+      <member refid="classEndoMesh_1af4e987c060c058e5674bc9d218a8ab4f" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getElecComptMap</name></member>
+      <member refid="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getEntireVolume</name></member>
+      <member refid="classChemCompt_1aa15b66e3669574b15f303a35af341102" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getIsMembraneBound</name></member>
+      <member refid="classEndoMesh_1a303f188c29588fab22317d15569a3136" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getMeshDimensions</name></member>
+      <member refid="classEndoMesh_1a6ed802efc4aff8a39f7730eaad21e303" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getMeshEntryVolume</name></member>
+      <member refid="classEndoMesh_1a220182a002690120f0d315c420325f6a" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getMeshType</name></member>
+      <member refid="classChemCompt_1ab2c1ef2c7882e253a2b7c045db87c7fb" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getMethod</name></member>
+      <member refid="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getNeighbors</name></member>
+      <member refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getNumEntries</name></member>
+      <member refid="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getOneVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getOneVoxelVolume</name></member>
+      <member refid="classEndoMesh_1abb69e42b19bb4238e020d0dfd57e78ff" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getParentVoxel</name></member>
+      <member refid="classEndoMesh_1a028ecdcd200dd907763ede18d146b7c6" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getRpower</name></member>
+      <member refid="classEndoMesh_1a01f13ff4b5af1c0d31ec881a0928c985" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getRscale</name></member>
+      <member refid="classMeshCompt_1a9342f82bc2304c99fb58daad6016cd5c" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getStencil</name></member>
+      <member refid="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getStencilIndex</name></member>
+      <member refid="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getStencilRate</name></member>
+      <member refid="classMeshCompt_1aae2b570a057a43104858c5f6c02f423e" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getStencilRow</name></member>
+      <member refid="classEndoMesh_1a771b55cf484db7e3a527be65ff187d50" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getSurround</name></member>
+      <member refid="classEndoMesh_1a148cbabeac4b1f0f6dafdc866ba35cfa" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getVoxelArea</name></member>
+      <member refid="classEndoMesh_1a8d757a199192323b20771acc5d473525" prot="public" virt="virtual"><scope>EndoMesh</scope><name>getVoxelLength</name></member>
+      <member refid="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getVoxelVolume</name></member>
+      <member refid="classEndoMesh_1a80d632dba6130d0ed1ec370fc9fd6d84" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getVpower</name></member>
+      <member refid="classEndoMesh_1abab2709a7afba37a00b0052ee718ba78" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>getVscale</name></member>
+      <member refid="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>handleNodeInfo</name></member>
+      <member refid="classEndoMesh_1a41b92a9dac5f278432ba079c12c2f75e" prot="public" virt="virtual"><scope>EndoMesh</scope><name>indexToSpace</name></member>
+      <member refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>initCinfo</name></member>
+      <member refid="classEndoMesh_1a9773eb71a8888320242e547ef1548ffb" prot="public" virt="virtual"><scope>EndoMesh</scope><name>innerBuildDefaultMesh</name></member>
+      <member refid="classEndoMesh_1aa7e4ee88ba7e44e11d37e9e70b7b17a3" prot="public" virt="virtual"><scope>EndoMesh</scope><name>innerGetDimensions</name></member>
+      <member refid="classEndoMesh_1aa6ea5045ec9bc13e6208ba82e69a2447" prot="public" virt="virtual"><scope>EndoMesh</scope><name>innerGetNumEntries</name></member>
+      <member refid="classMeshCompt_1a7b8e15d0a73de4f467efcf733e095cb7" prot="public" virt="virtual"><scope>EndoMesh</scope><name>innerGetStencilRate</name></member>
+      <member refid="classEndoMesh_1ac7fc58a87bc39221240cff8eb9d22470" prot="public" virt="virtual"><scope>EndoMesh</scope><name>innerHandleNodeInfo</name></member>
+      <member refid="classEndoMesh_1a40ab1c68a31df6883d5ac79fa0eba093" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>innerHandleRequestMeshStats</name></member>
+      <member refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" prot="public" virt="virtual"><scope>EndoMesh</scope><name>innerResetStencil</name></member>
+      <member refid="classEndoMesh_1aae08b6ac882ae72de5e6a607d2f61578" prot="public" virt="virtual"><scope>EndoMesh</scope><name>innerSetNumEntries</name></member>
+      <member refid="classEndoMesh_1aa2bd5b3fc8767ac592256eae1e014c75" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>insideMeshes_</name></member>
+      <member refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>isMembraneBound_</name></member>
+      <member refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>lookupEntry</name></member>
+      <member refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>m_</name></member>
+      <member refid="classEndoMesh_1a77e7321f762d13a06de933f335bf50da" prot="public" virt="virtual"><scope>EndoMesh</scope><name>matchMeshEntries</name></member>
+      <member refid="classMeshCompt_1ad92606a51823a508e19ace8c08cc4af2" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>MeshCompt</name></member>
+      <member refid="classChemCompt_1ac9f3fa6dce7fafe302a205156668c390" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>method_</name></member>
+      <member refid="classEndoMesh_1ab4012e36dbcbfc9a5de014b45a7ed2e2" prot="public" virt="virtual"><scope>EndoMesh</scope><name>nearest</name></member>
+      <member refid="classEndoMesh_1af6bf15679165f233bf509e0baa53db59" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>parent_</name></member>
+      <member refid="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>resetStencil</name></member>
+      <member refid="classEndoMesh_1a6751f52c45b1fb972251077e309cad0e" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>rPower_</name></member>
+      <member refid="classEndoMesh_1a16f559644400c8d3c93f002f14142291" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>rScale_</name></member>
+      <member refid="classEndoMesh_1a1a74bf7df6f63a49d80382bd19227f8f" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setApower</name></member>
+      <member refid="classEndoMesh_1a02ff066bcb6124dbae68c68737931403" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setAscale</name></member>
+      <member refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setChildConcs</name></member>
+      <member refid="classEndoMesh_1abe8d6f285b6e5c621561228f515a92aa" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setDoAxialDiffusion</name></member>
+      <member refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setEntireVolume</name></member>
+      <member refid="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setIsMembraneBound</name></member>
+      <member refid="classChemCompt_1ac2343832803b9366231f1d2d816a0e21" prot="public" virt="virtual"><scope>EndoMesh</scope><name>setMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a346cbd4ea599c929638609bc7f16f83a" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setMethod</name></member>
+      <member refid="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setNumEntries</name></member>
+      <member refid="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setOneVoxelVolume</name></member>
+      <member refid="classEndoMesh_1a5cfff33bd635f96ebc648c6aceaaf9e0" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setRpower</name></member>
+      <member refid="classEndoMesh_1a6249a265bd80de6039c91c866a9945da" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setRscale</name></member>
+      <member refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setStencilSize</name></member>
+      <member refid="classEndoMesh_1ab54d8a97aec689de6e7b556304175b54" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setSurround</name></member>
+      <member refid="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setVolumeNotRates</name></member>
+      <member refid="classEndoMesh_1a38457fd411c84b2a288480f5b57d7319" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setVpower</name></member>
+      <member refid="classEndoMesh_1a8911a23d95bc4b7e3befe33ffa84770c" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>setVscale</name></member>
+      <member refid="classEndoMesh_1aaa48d4c6762918e7f387367e89c0d42d" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>surround_</name></member>
+      <member refid="classEndoMesh_1ad2339b22f7490c7cc4615eeadc4934ab" prot="public" virt="virtual"><scope>EndoMesh</scope><name>vGetEntireVolume</name></member>
+      <member refid="classEndoMesh_1acf8d5b5b6b054517b133137e780e0518" prot="public" virt="virtual"><scope>EndoMesh</scope><name>vGetVoxelMidpoint</name></member>
+      <member refid="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd" prot="public" virt="virtual"><scope>EndoMesh</scope><name>vGetVoxelVolume</name></member>
+      <member refid="classChemCompt_1a1df70b909fac1208b80586b9092341e9" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>voxelVolOut</name></member>
+      <member refid="classEndoMesh_1a2c2f89ab8fc00408f4dd7f688a1d029c" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>vPower_</name></member>
+      <member refid="classEndoMesh_1af1750d965aa034568cec9abb46fe2337" prot="private" virt="non-virtual"><scope>EndoMesh</scope><name>vScale_</name></member>
+      <member refid="classEndoMesh_1aeed9a2e4e17cd45567e1d26eb95b9670" prot="public" virt="virtual"><scope>EndoMesh</scope><name>vSetVolumeNotRates</name></member>
+      <member refid="classChemCompt_1ae7cb5e1f801974d1c3cd68373dff5cfc" prot="public" virt="virtual"><scope>EndoMesh</scope><name>~ChemCompt</name></member>
+      <member refid="classEndoMesh_1a68c44915e13fab3ee4e213f296088c97" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>~EndoMesh</name></member>
+      <member refid="classMeshCompt_1adb85de0aa1c67c78a484d9876299857a" prot="public" virt="non-virtual"><scope>EndoMesh</scope><name>~MeshCompt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,28 @@
+var MatrixOps_8cpp =
+[
+    [ "doPartialPivot", "MatrixOps_8cpp.html#af7bdc850e2022e6913165bb894a405e5", null ],
+    [ "matAlloc", "MatrixOps_8cpp.html#a4a2ab239d86c9c23f972493448f18623", null ],
+    [ "matColNorm", "MatrixOps_8cpp.html#a16e2a3a13a89fbc0038e628deddaee13", null ],
+    [ "matEyeAdd", "MatrixOps_8cpp.html#af47e162492a0adcb81ae84ea9f362966", null ],
+    [ "matEyeAdd", "MatrixOps_8cpp.html#adbdb2536d192cd6f2ef0db06ea069016", null ],
+    [ "matInv", "MatrixOps_8cpp.html#a3696f4257a00880e6719a61d1a741667", null ],
+    [ "matMatAdd", "MatrixOps_8cpp.html#a4eddfcc475dc96af2f637cac271c1797", null ],
+    [ "matMatAdd", "MatrixOps_8cpp.html#abaec148d5b1ce872515abb5506c74563", null ],
+    [ "matMatMul", "MatrixOps_8cpp.html#a51b1394e7d81bb0edd3a902ff1b9bcc7", null ],
+    [ "matMatMul", "MatrixOps_8cpp.html#aeee160fd23ef8ee39cde895eb27a2e0f", null ],
+    [ "matPermMul", "MatrixOps_8cpp.html#a81fa97c3f099c9abb4a9e13d07b6827f", null ],
+    [ "matPrint", "MatrixOps_8cpp.html#aede4babdb99b60d5a4941c7027f292e9", null ],
+    [ "matScalShift", "MatrixOps_8cpp.html#ae8aba2ee80a0fbc5af3c6f0c6565dd57", null ],
+    [ "matScalShift", "MatrixOps_8cpp.html#a6906f88606bae8fe6ccc07240da40178", null ],
+    [ "matTrace", "MatrixOps_8cpp.html#aa02aef93bb0a9dc8d42b5ab75c500e43", null ],
+    [ "matTrans", "MatrixOps_8cpp.html#a74266a4e0eeb0ba8f8d3e8915cc6eff9", null ],
+    [ "matVecMul", "MatrixOps_8cpp.html#acc00fb675d9a188d490754a58468a1ba", null ],
+    [ "triMatMul", "MatrixOps_8cpp.html#a49f8cbecdd00824bc16715f4b54f84cf", null ],
+    [ "vecAlloc", "MatrixOps_8cpp.html#a1fd04dbe02e3310bc532fdb659bb728c", null ],
+    [ "vecMatMul", "MatrixOps_8cpp.html#ad6ea55f1e7c00eb954f0aa7d742c82b8", null ],
+    [ "vecPrint", "MatrixOps_8cpp.html#ac334a56b3cdccfbe6d190f4fa990b572", null ],
+    [ "vecScalShift", "MatrixOps_8cpp.html#abcd5f875d903de5fe87a83a2f59c6bb6", null ],
+    [ "vecScalShift", "MatrixOps_8cpp.html#a375ed0487eb5d0520990eaba405856e6", null ],
+    [ "vecVecScalAdd", "MatrixOps_8cpp.html#a3c24bb072f153c3d43ede2e3b7257baf", null ],
+    [ "vecVecScalAdd", "MatrixOps_8cpp.html#a8a53f714d747a410ea21b79ef20c3ea2", null ]
+];

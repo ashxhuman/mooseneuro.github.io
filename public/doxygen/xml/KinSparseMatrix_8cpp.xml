@@ -1,0 +1,486 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="KinSparseMatrix_8cpp" kind="file" language="C++">
+    <compoundname>KinSparseMatrix.cpp</compoundname>
+    <includes local="no">functional</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cmath</includes>
+    <includes refid="SparseMatrix_8h" local="yes">../basecode/SparseMatrix.h</includes>
+    <includes refid="numutil_8h" local="yes">../utility/numutil.h</includes>
+    <includes refid="KinSparseMatrix_8h" local="yes">KinSparseMatrix.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>../basecode/SparseMatrix.h</label>
+        <link refid="SparseMatrix_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../basecode/global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp</label>
+        <link refid="KinSparseMatrix_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>KinSparseMatrix.h</label>
+        <link refid="KinSparseMatrix_8h"/>
+      </node>
+      <node id="14">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../randnum/RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../utility/numutil.h</label>
+        <link refid="numutil_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="6">
+        <label>cassert</label>
+      </node>
+      <node id="10">
+        <label>cfloat</label>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="26">
+        <label>cstring</label>
+      </node>
+      <node id="18">
+        <label>ctime</label>
+      </node>
+      <node id="23">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>functional</label>
+      </node>
+      <node id="25">
+        <label>iomanip</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>limits</label>
+      </node>
+      <node id="19">
+        <label>map</label>
+      </node>
+      <node id="13">
+        <label>random</label>
+      </node>
+      <node id="20">
+        <label>sstream</label>
+      </node>
+      <node id="24">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>valarray</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="KinSparseMatrix_8cpp_1a4a4ab47891131f77a2b521607e9cc80e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void makeVecUnique</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;v)</argsstring>
+        <name>makeVecUnique</name>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp" line="159" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp" bodystart="159" bodyend="163"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment,</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>also<sp/>known<sp/>as<sp/>GENESIS<sp/>3<sp/>base<sp/>code.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copyright<sp/>(C)<sp/>2003-2006<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/SparseMatrix.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utility/numutil.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="KinSparseMatrix_8h" kindref="compound">KinSparseMatrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classKinSparseMatrix_1a75d4b8170757a0b0135b5de29c55470c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKinSparseMatrix_1a75d4b8170757a0b0135b5de29c55470c" kindref="member">KinSparseMatrix::computeRowRate</ref>(</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>v</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="31"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classSparseMatrix_1a34a568e3db0bafd38cf0ccc37cd2086b" kindref="member">nColumns</ref>()<sp/>==<sp/>0<sp/>||<sp/>row<sp/>&lt;<sp/><ref refid="classSparseMatrix_1a2c51cee470d726cf04e262a4038625f5" kindref="member">nRows</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>v.size()<sp/>==<sp/><ref refid="classSparseMatrix_1a34a568e3db0bafd38cf0ccc37cd2086b" kindref="member">nColumns</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>entry<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" kindref="member">colIndex</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numEntries<sp/>=<sp/><ref refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" kindref="member">getRow</ref>(<sp/>row,<sp/>&amp;entry,<sp/>&amp;<ref refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" kindref="member">colIndex</ref><sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>end<sp/>=<sp/>entry<sp/>+<sp/>numEntries;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i<sp/>=<sp/>entry;<sp/>i<sp/>!=<sp/>end;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>+=<sp/>*i<sp/>*<sp/>v[<sp/>*<ref refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" kindref="member">colIndex</ref>++<sp/>];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!<sp/>std::isnan(ret));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//assert<sp/>(<sp/>!std::isnan(ret)<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classKinSparseMatrix_1a8c561b9e38dc8511270fa3c9cac562ed" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKinSparseMatrix_1a8c561b9e38dc8511270fa3c9cac562ed" kindref="member">KinSparseMatrix::getGillespieDependence</ref>(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>deps</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="59"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>deps.resize(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>deps;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>i<sp/>is<sp/>index<sp/>for<sp/>reac<sp/>#<sp/>here.<sp/>Note<sp/>that<sp/>matrix<sp/>is<sp/>transposed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>row<sp/>];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jend<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>row<sp/>+<sp/>1<sp/>];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>i<sp/>];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kend<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>i<sp/>+<sp/>1<sp/>];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>j<sp/>&lt;<sp/>jend<sp/>&amp;&amp;<sp/>k<sp/>&lt;<sp/>kend<sp/>)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[<sp/>j<sp/>]<sp/>==<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[<sp/>k<sp/>]<sp/>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pre<sp/>28<sp/>Nov<sp/>2015.<sp/>Why<sp/>below<sp/>zero?<sp/>Shouldn&apos;t<sp/>it<sp/>be<sp/>any?</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(<sp/>N_[<sp/>k<sp/>]<sp/>&lt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deps.push_back(<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>round(<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[k]<sp/>)<sp/>!=<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deps.push_back(<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++j;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++k;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[<sp/>j<sp/>]<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[<sp/>k<sp/>]<sp/>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++j;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[<sp/>j<sp/>]<sp/>&gt;<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[<sp/>k<sp/>]<sp/>)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++k;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classKinSparseMatrix_1a497304dc594faad57c85d78bf9173ff7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKinSparseMatrix_1a497304dc594faad57c85d78bf9173ff7" kindref="member">KinSparseMatrix::fireReac</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reacIndex,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>S,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>direction<sp/>)</highlight><highlight class="keyword"></highlight></codeline>
+<codeline lineno="106"><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="107"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" kindref="member">ncolumns_</ref><sp/>==<sp/>S.size()<sp/>&amp;&amp;<sp/>reacIndex<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rowBeginIndex<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>reacIndex<sp/>];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>vector&lt;<sp/>int<sp/>&gt;::const_iterator<sp/>rowEnd<sp/>=<sp/>N_.begin()<sp/>+<sp/>rowStart_[<sp/>reacIndex<sp/>+<sp/>1];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>int<sp/>&gt;::const_iterator<sp/>rowBegin<sp/>=</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.begin()<sp/>+<sp/>rowBeginIndex;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>int<sp/>&gt;::const_iterator<sp/>rowEnd<sp/>=</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.begin()<sp/>+<sp/><ref refid="classKinSparseMatrix_1a9eeb90205a801e6f352766d62cf5bb65" kindref="member">rowTruncated_</ref>[<sp/>reacIndex<sp/>];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;::const_iterator<sp/>molIndex<sp/>=</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>.begin()<sp/>+<sp/>rowBeginIndex;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>vector&lt;<sp/>int<sp/>&gt;::const_iterator<sp/>i<sp/>=<sp/>rowBegin;<sp/>i<sp/>!=<sp/>rowEnd;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x<sp/>=<sp/>S[<sp/>*molIndex++<sp/>];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>+=<sp/>*i<sp/>*<sp/>direction;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>*=<sp/>(x<sp/>&gt;<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>assert(<sp/>S[<sp/>*molIndex<sp/>]<sp/>+<sp/>*i<sp/>*<sp/>direction<sp/>&gt;=<sp/>0.0<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>S[<sp/>*molIndex++<sp/>]<sp/>+=<sp/>*i<sp/>*<sp/>direction;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classKinSparseMatrix_1aa08875dc6fc943aef61bea82d9ff1862" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKinSparseMatrix_1aa08875dc6fc943aef61bea82d9ff1862" kindref="member">KinSparseMatrix::truncateRow</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxColumnIndex<sp/>)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKinSparseMatrix_1a9eeb90205a801e6f352766d62cf5bb65" kindref="member">rowTruncated_</ref>.resize(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>.size()<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endCol<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>i<sp/>];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>i<sp/>];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j<sp/>&lt;<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>i<sp/>+<sp/>1<sp/>];<sp/>++j<sp/>)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[<sp/>j<sp/>]<sp/>&lt;<sp/>maxColumnIndex<sp/>)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>endCol<sp/>=<sp/>j<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classKinSparseMatrix_1a9eeb90205a801e6f352766d62cf5bb65" kindref="member">rowTruncated_</ref>[<sp/>i<sp/>]<sp/>=<sp/>endCol;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="KinSparseMatrix_8cpp_1a4a4ab47891131f77a2b521607e9cc80e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="KinSparseMatrix_8cpp_1a4a4ab47891131f77a2b521607e9cc80e" kindref="member">makeVecUnique</ref>(<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>v<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;::iterator<sp/>pos<sp/>=<sp/>unique(<sp/>v.begin(),<sp/>v.end()<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>v.resize(<sp/>pos<sp/>-<sp/>v.begin()<sp/>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DO_UNIT_TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>testKinSparseMatrix()</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="MatrixOps_8h_1a002b2f4894492820fe708b1b7e7c5e70" kindref="member">EPSILON</ref><sp/>=<sp/>1e-7;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>stoichiometry<sp/>matrix<sp/>for<sp/>the<sp/>unidirectional<sp/>reacns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>coming<sp/>out<sp/>of<sp/>the<sp/>following<sp/>system:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>+<sp/>b<sp/>&lt;===&gt;<sp/>c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>c<sp/>+<sp/>d<sp/>&lt;===&gt;<sp/>e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>+<sp/>f<sp/>&lt;===&gt;<sp/>g</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>+<sp/>e<sp/>&lt;===&gt;<sp/>2g</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>halfreac<sp/>0<sp/>fires,<sp/>it<sp/>affects<sp/>0,<sp/>1,<sp/>2,<sp/>4,<sp/>6.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>so<sp/>on.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>transposon[][<sp/>8<sp/>]<sp/>=</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>-1,<sp/><sp/>1,<sp/><sp/>0,<sp/><sp/>0,<sp/>-1,<sp/><sp/>1,<sp/>-1,<sp/><sp/>1<sp/>},</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>-1,<sp/><sp/>1,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0<sp/>},</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>1,<sp/>-1,<sp/>-1,<sp/><sp/>1,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0<sp/>},</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/>0,<sp/>-1,<sp/><sp/>1,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0<sp/>},</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>1,<sp/>-1,<sp/><sp/>0,<sp/><sp/>0,<sp/>-1,<sp/><sp/>1<sp/>},</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/>-1,<sp/><sp/>1,<sp/><sp/>0,<sp/><sp/>0<sp/>},</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>0,<sp/><sp/>1,<sp/>-1,<sp/><sp/>2,<sp/>-2<sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nTesting<sp/>KinSparseMatrix&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>flush;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NR<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NC<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NTR<sp/>=<sp/>7;<sp/></highlight><highlight class="comment">//<sp/>for<sp/>transposon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NTC<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKinSparseMatrix" kindref="compound">KinSparseMatrix</ref><sp/>sm;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>sm.<ref refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" kindref="member">setSize</ref>(<sp/>NR,<sp/>NC<sp/>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>NR;<sp/>i++<sp/>)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>NC;<sp/>j++<sp/>)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sm.<ref refid="classSparseMatrix_1a0dddc631322ef8cae33f24b770bafe60" kindref="member">set</ref>(<sp/>i,<sp/>j,<sp/>10<sp/>*<sp/>i<sp/>+<sp/>j<sp/>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cout<sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/>&quot;,<sp/>&quot;<sp/>&lt;&lt;<sp/>j<sp/>&lt;&lt;<sp/>&quot;,<sp/>&quot;<sp/>&lt;&lt;<sp/>sm.nColumns()<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>sm.<ref refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" kindref="member">get</ref>(<sp/>i,<sp/>j<sp/>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>ret<sp/>==<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>10<sp/>*<sp/>i<sp/>+<sp/>j<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cout<sp/>&lt;&lt;<sp/>sm;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>v(<sp/>5,<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dret<sp/>=<sp/>sm.<ref refid="classKinSparseMatrix_1a75d4b8170757a0b0135b5de29c55470c" kindref="member">computeRowRate</ref>(<sp/>0,<sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>fabs(<sp/>dret<sp/>-<sp/>10.0<sp/>)<sp/>&lt;<sp/><ref refid="MatrixOps_8h_1a002b2f4894492820fe708b1b7e7c5e70" kindref="member">EPSILON</ref><sp/>);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>dret<sp/>=<sp/>sm.<ref refid="classKinSparseMatrix_1a75d4b8170757a0b0135b5de29c55470c" kindref="member">computeRowRate</ref>(<sp/>1,<sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>fabs(<sp/>dret<sp/>-<sp/>60.0<sp/>)<sp/>&lt;<sp/><ref refid="MatrixOps_8h_1a002b2f4894492820fe708b1b7e7c5e70" kindref="member">EPSILON</ref><sp/>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>dret<sp/>=<sp/>sm.<ref refid="classKinSparseMatrix_1a75d4b8170757a0b0135b5de29c55470c" kindref="member">computeRowRate</ref>(<sp/>2,<sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>fabs(<sp/>dret<sp/>-<sp/>110.0<sp/>)<sp/>&lt;<sp/><ref refid="MatrixOps_8h_1a002b2f4894492820fe708b1b7e7c5e70" kindref="member">EPSILON</ref><sp/>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>dret<sp/>=<sp/>sm.<ref refid="classKinSparseMatrix_1a75d4b8170757a0b0135b5de29c55470c" kindref="member">computeRowRate</ref>(<sp/>3,<sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>fabs(<sp/>dret<sp/>-<sp/>160.0<sp/>)<sp/>&lt;<sp/><ref refid="MatrixOps_8h_1a002b2f4894492820fe708b1b7e7c5e70" kindref="member">EPSILON</ref><sp/>);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Checking<sp/>transposition<sp/>operation</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKinSparseMatrix" kindref="compound">KinSparseMatrix</ref><sp/>orig;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>orig.<ref refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" kindref="member">setSize</ref>(<sp/>NTR,<sp/>NTC<sp/>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>NTR;<sp/>i++<sp/>)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>NTC;<sp/>j++<sp/>)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>orig.<ref refid="classSparseMatrix_1a0dddc631322ef8cae33f24b770bafe60" kindref="member">set</ref>(<sp/>i,<sp/>j,<sp/>transposon[<sp/>i<sp/>][<sp/>j<sp/>]<sp/>);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>NTR;<sp/>i++<sp/>)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>NTC;<sp/>j++<sp/>)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>orig.<ref refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" kindref="member">get</ref>(<sp/>i,<sp/>j<sp/>)<sp/>==<sp/><sp/>transposon[<sp/>i<sp/>][<sp/>j<sp/>]<sp/>);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>orig.<ref refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" kindref="member">transpose</ref>();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>NTR;<sp/>i++<sp/>)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>NTC;<sp/>j++<sp/>)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>orig.<ref refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" kindref="member">get</ref>(<sp/>j,<sp/>i<sp/>)<sp/>==<sp/><sp/>transposon[<sp/>i<sp/>][<sp/>j<sp/>]<sp/>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Checking<sp/>generation<sp/>of<sp/>dependency<sp/>graphs.</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKinSparseMatrix" kindref="compound">KinSparseMatrix</ref><sp/>trans;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>deps;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>trans.<ref refid="classKinSparseMatrix_1a8c561b9e38dc8511270fa3c9cac562ed" kindref="member">getGillespieDependence</ref>(<sp/>0,<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/>makeVecUnique(<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps.size()<sp/>==<sp/>5,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[0]<sp/>==<sp/>0,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[1]<sp/>==<sp/>1,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[2]<sp/>==<sp/>2,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[3]<sp/>==<sp/>4,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="258"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[4]<sp/>==<sp/>6,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="259"><highlight class="comment"></highlight></codeline>
+<codeline lineno="260"><highlight class="comment"><sp/><sp/><sp/><sp/>trans.getGillespieDependence(<sp/>1,<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="261"><highlight class="comment"><sp/><sp/><sp/><sp/>makeVecUnique(<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="262"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps.size()<sp/>==<sp/>5,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="263"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[0]<sp/>==<sp/>0,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="264"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[1]<sp/>==<sp/>1,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="265"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[2]<sp/>==<sp/>2,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="266"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[3]<sp/>==<sp/>4,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="267"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[4]<sp/>==<sp/>6,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"></highlight></codeline>
+<codeline lineno="269"><highlight class="comment"><sp/><sp/><sp/><sp/>trans.getGillespieDependence(<sp/>2,<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="270"><highlight class="comment"><sp/><sp/><sp/><sp/>makeVecUnique(<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps.size()<sp/>==<sp/>4,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[0]<sp/>==<sp/>1,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[1]<sp/>==<sp/>2,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[2]<sp/>==<sp/>3,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[3]<sp/>==<sp/>6,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="276"><highlight class="comment"></highlight></codeline>
+<codeline lineno="277"><highlight class="comment"><sp/><sp/><sp/><sp/>trans.getGillespieDependence(<sp/>4,<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="278"><highlight class="comment"><sp/><sp/><sp/><sp/>makeVecUnique(<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="279"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps.size()<sp/>==<sp/>5,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="280"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[0]<sp/>==<sp/>0,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="281"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[1]<sp/>==<sp/>4,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="282"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[2]<sp/>==<sp/>5,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="283"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[3]<sp/>==<sp/>6,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="284"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[4]<sp/>==<sp/>7,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="285"><highlight class="comment"></highlight></codeline>
+<codeline lineno="286"><highlight class="comment"><sp/><sp/><sp/><sp/>trans.getGillespieDependence(<sp/>6,<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="287"><highlight class="comment"><sp/><sp/><sp/><sp/>makeVecUnique(<sp/>deps<sp/>);</highlight></codeline>
+<codeline lineno="288"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps.size()<sp/>==<sp/>6,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="289"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[0]<sp/>==<sp/>0,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="290"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[1]<sp/>==<sp/>3,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="291"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[2]<sp/>==<sp/>4,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="292"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[3]<sp/>==<sp/>5,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="293"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[4]<sp/>==<sp/>6,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="294"><highlight class="comment"><sp/><sp/><sp/><sp/>ASSERT(<sp/>deps[5]<sp/>==<sp/>7,<sp/>&quot;Gillespie<sp/>dependence&quot;<sp/>);</highlight></codeline>
+<codeline lineno="295"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp"/>
+  </compounddef>
+</doxygen>

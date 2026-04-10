@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMMEnzyme1" kind="class" language="C++" prot="public">
+    <compoundname>MMEnzyme1</compoundname>
+    <basecompoundref refid="classMMEnzymeBase" prot="public" virt="non-virtual">MMEnzymeBase</basecompoundref>
+    <includes refid="RateTerm_8h" local="no">RateTerm.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMMEnzyme1_1a5275ea4a94bccef2e6723dda4460f1cc" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MMEnzyme1::sub_</definition>
+        <argsstring></argsstring>
+        <name>sub_</name>
+        <qualifiedname>MMEnzyme1::sub_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="180" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="180" bodyend="-1"/>
+        <referencedby refid="classMMEnzyme1_1ac7cb66cd4d8a63a3eca26960bbbe5f1e" compoundref="RateTerm_8h" startline="172" endline="177">copyWithVolScaling</referencedby>
+        <referencedby refid="classMMEnzyme1_1aaaf035a5ece5aaf8f8149475258a644c" compoundref="RateTerm_8h" startline="164" endline="170">getReactants</referencedby>
+        <referencedby refid="classMMEnzyme1_1a00490204d5aa53778532b5b4deb4760f" compoundref="RateTerm_8h" startline="149" endline="154">MMEnzyme1</referencedby>
+        <referencedby refid="classMMEnzyme1_1a178c815b1173cb226fe8996b9de43267" compoundref="RateTerm_8h" startline="156" endline="162">operator()</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMMEnzyme1_1ac7cb66cd4d8a63a3eca26960bbbe5f1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classRateTerm" kindref="compound">RateTerm</ref> *</type>
+        <definition>RateTerm * MMEnzyme1::copyWithVolScaling</definition>
+        <argsstring>(double vol, double sub, double prd) const</argsstring>
+        <name>copyWithVolScaling</name>
+        <qualifiedname>MMEnzyme1::copyWithVolScaling</qualifiedname>
+        <reimplements refid="classRateTerm_1a1ed45d040641861c18c1e896c2512e90">copyWithVolScaling</reimplements>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>prd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duplicates rate term and then applies volume scaling. Arguments are volume of reference voxel, product of vol/refVol for all substrates: applied to R1 product of vol/refVol for all products: applied to R2</para>
+<para>Note that unless the reaction is cross-compartment, the vol/refVol will be one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="172" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="172" bodyend="177"/>
+        <references refid="classMMEnzymeBase_1aa6714198ae347b4c76738c196d053cbd" compoundref="RateTerm_8h" startline="142">MMEnzymeBase::enz_</references>
+        <references refid="classMMEnzymeBase_1a52a433e1b1ca5a567496de5f1dde94f1" compoundref="RateTerm_8h" startline="141">MMEnzymeBase::kcat_</references>
+        <references refid="classMMEnzymeBase_1a85f6ebf60ef1973f4f22893e1c002f02" compoundref="RateTerm_8h" startline="140">MMEnzymeBase::Km_</references>
+        <references refid="classMMEnzyme1_1a00490204d5aa53778532b5b4deb4760f" compoundref="RateTerm_8h" startline="149" endline="154">MMEnzyme1</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classMMEnzyme1_1a5275ea4a94bccef2e6723dda4460f1cc" compoundref="RateTerm_8h" startline="180">sub_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMMEnzyme1_1aaaf035a5ece5aaf8f8149475258a644c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MMEnzyme1::getReactants</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;molIndex) const</argsstring>
+        <name>getReactants</name>
+        <qualifiedname>MMEnzyme1::getReactants</qualifiedname>
+        <reimplements refid="classRateTerm_1af4d74f9d0b9e5c0d5dd42536e99c73d1">getReactants</reimplements>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>molIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finds the reactant indices in the vector S. It returns the number of substrates found, which are the first entries in molIndex. The products are the remaining ones. Note that it does NOT find products for unidirectional reactions, which is a bit of a problem. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="164" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="164" bodyend="170"/>
+        <references refid="classMMEnzymeBase_1aa6714198ae347b4c76738c196d053cbd" compoundref="RateTerm_8h" startline="142">MMEnzymeBase::enz_</references>
+        <references refid="classMMEnzyme1_1a5275ea4a94bccef2e6723dda4460f1cc" compoundref="RateTerm_8h" startline="180">sub_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMMEnzyme1_1a00490204d5aa53778532b5b4deb4760f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MMEnzyme1::MMEnzyme1</definition>
+        <argsstring>(double Km, double kcat, unsigned int enz, unsigned int sub)</argsstring>
+        <name>MMEnzyme1</name>
+        <qualifiedname>MMEnzyme1::MMEnzyme1</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Km</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kcat</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>enz</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="149" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="149" bodyend="154"/>
+        <references refid="classMMEnzymeBase_1a8aa3f92672b448ff1e6c8dff0d4521b7" compoundref="RateTerm_8h" startline="84" endline="88">MMEnzymeBase::MMEnzymeBase</references>
+        <references refid="classMMEnzyme1_1a5275ea4a94bccef2e6723dda4460f1cc" compoundref="RateTerm_8h" startline="180">sub_</references>
+        <referencedby refid="classMMEnzyme1_1ac7cb66cd4d8a63a3eca26960bbbe5f1e" compoundref="RateTerm_8h" startline="172" endline="177">copyWithVolScaling</referencedby>
+        <referencedby refid="classStoich_1a3a48bf980e4a78ea15a42987f75c44f0" compoundref="Stoich_8cpp" startline="1537" endline="1583">Stoich::installMMenz</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMMEnzyme1_1a178c815b1173cb226fe8996b9de43267" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double MMEnzyme1::operator()</definition>
+        <argsstring>(const double *S) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>MMEnzyme1::operator()</qualifiedname>
+        <reimplements refid="classRateTerm_1a47058d3e308f2499045035f4f76a9ec6">operator()</reimplements>
+        <param>
+          <type>const double *</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Computes the rate. The argument is the molecule array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="156" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="156" bodyend="162"/>
+        <references refid="classMMEnzymeBase_1aa6714198ae347b4c76738c196d053cbd" compoundref="RateTerm_8h" startline="142">MMEnzymeBase::enz_</references>
+        <references refid="classMMEnzymeBase_1a52a433e1b1ca5a567496de5f1dde94f1" compoundref="RateTerm_8h" startline="141">MMEnzymeBase::kcat_</references>
+        <references refid="classMMEnzymeBase_1a85f6ebf60ef1973f4f22893e1c002f02" compoundref="RateTerm_8h" startline="140">MMEnzymeBase::Km_</references>
+        <references refid="classMMEnzyme1_1a5275ea4a94bccef2e6723dda4460f1cc" compoundref="RateTerm_8h" startline="180">sub_</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MMEnzyme1</label>
+        <link refid="classMMEnzyme1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MMEnzymeBase</label>
+        <link refid="classMMEnzymeBase"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MMEnzyme1</label>
+        <link refid="classMMEnzyme1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MMEnzymeBase</label>
+        <link refid="classMMEnzymeBase"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="146" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="147" bodyend="181"/>
+    <listofallmembers>
+      <member refid="classMMEnzyme1_1ac7cb66cd4d8a63a3eca26960bbbe5f1e" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>copyWithVolScaling</name></member>
+      <member refid="classMMEnzymeBase_1aa6714198ae347b4c76738c196d053cbd" prot="protected" virt="non-virtual"><scope>MMEnzyme1</scope><name>enz_</name></member>
+      <member refid="classRateTerm_1a211734fd07c0ef1949907d832d9d03fd" prot="public" virt="non-virtual"><scope>MMEnzyme1</scope><name>EPSILON</name></member>
+      <member refid="classMMEnzymeBase_1a1e438e435dc1ae9ac9942527d143c3ab" prot="public" virt="non-virtual"><scope>MMEnzyme1</scope><name>getEnzIndex</name></member>
+      <member refid="classMMEnzymeBase_1afbf677f8d8d6f53a19f9a9a1b66c0c99" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>getR1</name></member>
+      <member refid="classMMEnzymeBase_1a724fb7e7956059c2b19a8184167fed66" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>getR2</name></member>
+      <member refid="classMMEnzyme1_1aaaf035a5ece5aaf8f8149475258a644c" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>getReactants</name></member>
+      <member refid="classMMEnzymeBase_1a52a433e1b1ca5a567496de5f1dde94f1" prot="protected" virt="non-virtual"><scope>MMEnzyme1</scope><name>kcat_</name></member>
+      <member refid="classMMEnzymeBase_1a85f6ebf60ef1973f4f22893e1c002f02" prot="protected" virt="non-virtual"><scope>MMEnzyme1</scope><name>Km_</name></member>
+      <member refid="classMMEnzyme1_1a00490204d5aa53778532b5b4deb4760f" prot="public" virt="non-virtual"><scope>MMEnzyme1</scope><name>MMEnzyme1</name></member>
+      <member refid="classMMEnzymeBase_1a8aa3f92672b448ff1e6c8dff0d4521b7" prot="public" virt="non-virtual"><scope>MMEnzyme1</scope><name>MMEnzymeBase</name></member>
+      <member refid="classMMEnzyme1_1a178c815b1173cb226fe8996b9de43267" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>operator()</name></member>
+      <member refid="classRateTerm_1a3fe9a3f2a9c5701276de7aaf89e4bd06" prot="public" virt="non-virtual"><scope>MMEnzyme1</scope><name>RateTerm</name></member>
+      <member refid="classMMEnzymeBase_1a9bfacd134240187cfae9544173bde5bf" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>rescaleVolume</name></member>
+      <member refid="classMMEnzymeBase_1ac66fdeb5f13e79ff6796a11e3ef556ec" prot="public" virt="non-virtual"><scope>MMEnzyme1</scope><name>setKcat</name></member>
+      <member refid="classMMEnzymeBase_1ad59088501f1d138a6214b135025773f1" prot="public" virt="non-virtual"><scope>MMEnzyme1</scope><name>setKm</name></member>
+      <member refid="classMMEnzymeBase_1abbb0f107f94834cd81792bc6ad63aa3b" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>setR1</name></member>
+      <member refid="classMMEnzymeBase_1a761428894fe11dc319ef3c35288a810f" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>setR2</name></member>
+      <member refid="classMMEnzymeBase_1a17f0f7659bae0ce980177c347532b93b" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>setRates</name></member>
+      <member refid="classMMEnzyme1_1a5275ea4a94bccef2e6723dda4460f1cc" prot="private" virt="non-virtual"><scope>MMEnzyme1</scope><name>sub_</name></member>
+      <member refid="classRateTerm_1a097b1971a7652a8771245f17f28356a1" prot="public" virt="virtual"><scope>MMEnzyme1</scope><name>~RateTerm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

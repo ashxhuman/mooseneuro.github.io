@@ -1,0 +1,580 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classHSolvePassive" kind="class" language="C++" prot="public">
+    <compoundname>HSolvePassive</compoundname>
+    <basecompoundref refid="classHinesMatrix" prot="public" virt="non-virtual">HinesMatrix</basecompoundref>
+    <derivedcompoundref refid="classHSolveActive" prot="public" virt="non-virtual">HSolveActive</derivedcompoundref>
+    <includes refid="HSolvePassive_8h" local="no">HSolvePassive.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structCompartmentStruct" kindref="compound">CompartmentStruct</ref> &gt;</type>
+        <definition>vector&lt; CompartmentStruct &gt; HSolvePassive::compartment_</definition>
+        <argsstring></argsstring>
+        <name>compartment_</name>
+        <qualifiedname>HSolvePassive::compartment_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="36" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" compoundref="HSolvePassive_8cpp" startline="35" endline="43">clear</referencedby>
+        <referencedby refid="classHSolve_1aa39f10de28785bebc1b0bc032179c562" compoundref="HSolveInterface_8cpp" startline="161" endline="182">HSolve::getIm</referencedby>
+        <referencedby refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" compoundref="HSolvePassive_8cpp" startline="100" endline="165">initialize</referencedby>
+        <referencedby refid="classHSolve_1a0ca60e90f01642a7da4a1195c71fae26" compoundref="HSolveInterface_8cpp" startline="88" endline="96">HSolve::setCm</referencedby>
+        <referencedby refid="classHSolve_1a6b4443d7bafb2987f643d48fa7a68585" compoundref="HSolveInterface_8cpp" startline="105" endline="113">HSolve::setEm</referencedby>
+        <referencedby refid="classHSolve_1a79f48716b59d9132f2be80a8503fb18f" compoundref="HSolveInterface_8cpp" startline="122" endline="130">HSolve::setRm</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">HSolveActive::updateMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" compoundref="HSolvePassive_8cpp" startline="211" endline="244">updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; HSolvePassive::compartmentId_</definition>
+        <argsstring></argsstring>
+        <name>compartmentId_</name>
+        <qualifiedname>HSolvePassive::compartmentId_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="37" column="29" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" compoundref="HSolvePassive_8cpp" startline="35" endline="43">clear</referencedby>
+        <referencedby refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" compoundref="HSolvePassive_8cpp" startline="100" endline="165">initialize</referencedby>
+        <referencedby refid="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" compoundref="HSolveActiveSetup_8cpp" startline="596" endline="672">HSolveActive::manageOutgoingMessages</referencedby>
+        <referencedby refid="classHSolve_1a23ee1b6f33568fffcc8e93cecd83adbf" compoundref="HSolveInterface_8cpp" startline="49" endline="60">HSolve::mapIds</referencedby>
+        <referencedby refid="classHSolveActive_1ae99b2bc59ad4b09fe0c364a8960a3c66" compoundref="HSolveActiveSetup_8cpp" startline="576" endline="594">HSolveActive::readExternalChannels</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">HSolveActive::readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" compoundref="HSolveActiveSetup_8cpp" startline="535" endline="574">HSolveActive::readSynapses</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">HSolveActive::sendValues</referencedby>
+        <referencedby refid="classHSolvePassive_1ab123ed2dcb0c7ec88d5a6da4990e93cf" compoundref="HSolvePassive_8cpp" startline="167" endline="205">storeTree</referencedby>
+        <referencedby refid="classHSolve_1a423981576f253b33c6e9091cb3ae0ea6" compoundref="HSolve_8cpp" startline="264" endline="284">HSolve::unzombify</referencedby>
+        <referencedby refid="classHSolvePassive_1a7c0785982abce69a7cb825251fd1ced6" compoundref="HSolvePassive_8cpp" startline="45" endline="98">walkTree</referencedby>
+        <referencedby refid="classHSolve_1aa86d341407e0eb9928b085c9df38b06c" compoundref="HSolve_8cpp" startline="235" endline="262">HSolve::zombify</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" prot="protected" static="no" mutable="no">
+        <type>map&lt; unsigned int, <ref refid="structInjectStruct" kindref="compound">InjectStruct</ref> &gt;</type>
+        <definition>map&lt; unsigned int, InjectStruct &gt; HSolvePassive::inject_</definition>
+        <argsstring></argsstring>
+        <name>inject_</name>
+        <qualifiedname>HSolvePassive::inject_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>inject map. contains the list of compartments that have current injections into them. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="45" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classHSolve_1a6467f443993a541acee40235ab86fe38" compoundref="HSolveInterface_8cpp" startline="213" endline="219">HSolve::addInject</referencedby>
+        <referencedby refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" compoundref="HSolvePassive_8cpp" startline="35" endline="43">clear</referencedby>
+        <referencedby refid="classHSolve_1a5f5212c79a8bdf511ae1a8fd537ddc8e" compoundref="HSolveInterface_8cpp" startline="190" endline="203">HSolve::getInject</referencedby>
+        <referencedby refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" compoundref="HSolvePassive_8cpp" startline="100" endline="165">initialize</referencedby>
+        <referencedby refid="classHSolve_1a43f1b8dbdcff2da3ee7e30d828acbdc4" compoundref="HSolveInterface_8cpp" startline="205" endline="211">HSolve::setInject</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">HSolveActive::updateMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" compoundref="HSolvePassive_8cpp" startline="211" endline="244">updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolvePassive_1a78c55193b02a12e4fe5d86546b7717fe" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structTreeNodeStruct" kindref="compound">TreeNodeStruct</ref> &gt;</type>
+        <definition>vector&lt; TreeNodeStruct &gt; HSolvePassive::tree_</definition>
+        <argsstring></argsstring>
+        <name>tree_</name>
+        <qualifiedname>HSolvePassive::tree_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tree info. The tree is used to acquire various values during setup. It contains the user-defined original values of all compartment parameters. Therefore, it is also used during reinit. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="41" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" compoundref="HSolvePassive_8cpp" startline="35" endline="43">clear</referencedby>
+        <referencedby refid="classHSolve_1a7b4524afbcad596954e02251c297ceb1" compoundref="HSolveInterface_8cpp" startline="81" endline="86">HSolve::getCm</referencedby>
+        <referencedby refid="classHSolve_1acf6c3ebecc7c54098cb17790e2012df6" compoundref="HSolveInterface_8cpp" startline="98" endline="103">HSolve::getEm</referencedby>
+        <referencedby refid="classHSolve_1aa39f10de28785bebc1b0bc032179c562" compoundref="HSolveInterface_8cpp" startline="161" endline="182">HSolve::getIm</referencedby>
+        <referencedby refid="classHSolve_1a71d7d4eea2b4d84ff3bb0a6463ebe714" compoundref="HSolveInterface_8cpp" startline="146" endline="151">HSolve::getInitVm</referencedby>
+        <referencedby refid="classHSolve_1abb94ded311536c81b3ee69d4f79416d5" compoundref="HSolveInterface_8cpp" startline="132" endline="137">HSolve::getRa</referencedby>
+        <referencedby refid="classHSolve_1a4929a2acfef8d8f68624ba094f982de6" compoundref="HSolveInterface_8cpp" startline="115" endline="120">HSolve::getRm</referencedby>
+        <referencedby refid="classHSolveActive_1a936531b1c40d560addf5db77fc411ad2" compoundref="HSolveActiveSetup_8cpp" startline="61" endline="65">HSolveActive::reinitCompartments</referencedby>
+        <referencedby refid="classHSolve_1a0ca60e90f01642a7da4a1195c71fae26" compoundref="HSolveInterface_8cpp" startline="88" endline="96">HSolve::setCm</referencedby>
+        <referencedby refid="classHSolve_1a6b4443d7bafb2987f643d48fa7a68585" compoundref="HSolveInterface_8cpp" startline="105" endline="113">HSolve::setEm</referencedby>
+        <referencedby refid="classHSolve_1ab614ec700800809d7711ae1eb4c33477" compoundref="HSolveInterface_8cpp" startline="153" endline="158">HSolve::setInitVm</referencedby>
+        <referencedby refid="classHSolve_1ae73d6abfb37991f75d735a127a999dd8" compoundref="HSolveInterface_8cpp" startline="139" endline="144">HSolve::setRa</referencedby>
+        <referencedby refid="classHSolve_1a79f48716b59d9132f2be80a8503fb18f" compoundref="HSolveInterface_8cpp" startline="122" endline="130">HSolve::setRm</referencedby>
+        <referencedby refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" compoundref="HSolvePassive_8cpp" startline="14" endline="22">setup</referencedby>
+        <referencedby refid="classHSolvePassive_1ab123ed2dcb0c7ec88d5a6da4990e93cf" compoundref="HSolvePassive_8cpp" startline="167" endline="205">storeTree</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HSolvePassive::V_</definition>
+        <argsstring></argsstring>
+        <name>V_</name>
+        <qualifiedname>HSolvePassive::V_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compartment Vm. V_ is addressed using a compartment index. V_ stores the Vm value of each compartment. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="38" column="25" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">HSolveActive::advanceCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">HSolveActive::advanceChannels</referencedby>
+        <referencedby refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">backwardSubstitute</referencedby>
+        <referencedby refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" compoundref="HSolvePassive_8cpp" startline="35" endline="43">clear</referencedby>
+        <referencedby refid="classHSolve_1ad089488d8042e8ec6e8837bc4bc86c74" compoundref="HSolveInterface_8cpp" startline="330" endline="339">HSolve::getIk</referencedby>
+        <referencedby refid="classHSolve_1aa39f10de28785bebc1b0bc032179c562" compoundref="HSolveInterface_8cpp" startline="161" endline="182">HSolve::getIm</referencedby>
+        <referencedby refid="classHSolvePassive_1a8f8714a09d229812c1b12643561c403c" compoundref="HSolvePassive_8cpp" startline="407" endline="410">getV</referencedby>
+        <referencedby refid="classHSolve_1a9bbd107d7bdd5726b6046ff5e8e26120" compoundref="HSolveInterface_8cpp" startline="66" endline="72">HSolve::getVm</referencedby>
+        <referencedby refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" compoundref="HSolvePassive_8cpp" startline="100" endline="165">initialize</referencedby>
+        <referencedby refid="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" compoundref="HSolveActiveSetup_8cpp" startline="535" endline="574">HSolveActive::readSynapses</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">HSolveActive::reinitChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a936531b1c40d560addf5db77fc411ad2" compoundref="HSolveActiveSetup_8cpp" startline="61" endline="65">HSolveActive::reinitCompartments</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">HSolveActive::sendValues</referencedby>
+        <referencedby refid="classHSolve_1a2c144ea535e1e9ddcfbe4522f89ec323" compoundref="HSolveInterface_8cpp" startline="74" endline="79">HSolve::setVm</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">HSolveActive::updateMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" compoundref="HSolvePassive_8cpp" startline="211" endline="244">updateMatrix</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::setup</definition>
+        <argsstring>(Id seed, double dt)</argsstring>
+        <name>setup</name>
+        <qualifiedname>HSolvePassive::setup</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="27" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="14" bodyend="22"/>
+        <references refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" compoundref="HSolvePassive_8cpp" startline="35" endline="43">clear</references>
+        <references refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" compoundref="HinesMatrix_8h" startline="71">HinesMatrix::dt_</references>
+        <references refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" compoundref="HSolvePassive_8cpp" startline="100" endline="165">initialize</references>
+        <references refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">HinesMatrix::setup</references>
+        <references refid="classHSolvePassive_1ab123ed2dcb0c7ec88d5a6da4990e93cf" compoundref="HSolvePassive_8cpp" startline="167" endline="205">storeTree</references>
+        <references refid="classHSolvePassive_1a78c55193b02a12e4fe5d86546b7717fe" compoundref="HSolvePassive_8h" startline="41">tree_</references>
+        <references refid="classHSolvePassive_1a7c0785982abce69a7cb825251fd1ced6" compoundref="HSolvePassive_8cpp" startline="45" endline="98">walkTree</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">HSolveActive::setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolvePassive_1aac561a096fa851b831ead5e59f013ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::solve</definition>
+        <argsstring>()</argsstring>
+        <name>solve</name>
+        <qualifiedname>HSolvePassive::solve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="28" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="24" bodyend="29"/>
+        <references refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">backwardSubstitute</references>
+        <references refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" compoundref="HSolvePassive_8cpp" startline="246" endline="323">forwardEliminate</references>
+        <references refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" compoundref="HSolvePassive_8cpp" startline="211" endline="244">updateMatrix</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::backwardSubstitute</definition>
+        <argsstring>()</argsstring>
+        <name>backwardSubstitute</name>
+        <qualifiedname>HSolvePassive::backwardSubstitute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="34" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="325" bodyend="401"/>
+        <references refid="classHinesMatrix_1aa3cf66c934d6246bf083fd6b47446078" compoundref="HinesMatrix_8h" startline="86">HinesMatrix::backOperand_</references>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HinesMatrix::HS_</references>
+        <references refid="structJunctionStruct_1af71e9d031cfe285fe2a870525dea2d65" compoundref="HinesMatrix_8h" startline="39">JunctionStruct::index</references>
+        <references refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" compoundref="HinesMatrix_8h" startline="73">HinesMatrix::junction_</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <references refid="classHinesMatrix_1a34fc144edf8086f30faec267d14ed109" compoundref="HinesMatrix_8h" startline="85">HinesMatrix::operand_</references>
+        <references refid="structJunctionStruct_1a33dbced62c4782ec61293b0ceff0d1f7" compoundref="HinesMatrix_8h" startline="40">JunctionStruct::rank</references>
+        <references refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" compoundref="HinesMatrix_8h" startline="87">HinesMatrix::stage_</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">V_</references>
+        <references refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" compoundref="HinesMatrix_8h" startline="83">HinesMatrix::VMid_</references>
+        <referencedby refid="classHSolvePassive_1aac561a096fa851b831ead5e59f013ae5" compoundref="HSolvePassive_8cpp" startline="24" endline="29">solve</referencedby>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">HSolveActive::step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::forwardEliminate</definition>
+        <argsstring>()</argsstring>
+        <name>forwardEliminate</name>
+        <qualifiedname>HSolvePassive::forwardEliminate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="33" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="246" bodyend="323"/>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HinesMatrix::HS_</references>
+        <references refid="structJunctionStruct_1af71e9d031cfe285fe2a870525dea2d65" compoundref="HinesMatrix_8h" startline="39">JunctionStruct::index</references>
+        <references refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" compoundref="HinesMatrix_8h" startline="73">HinesMatrix::junction_</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <references refid="classHinesMatrix_1a34fc144edf8086f30faec267d14ed109" compoundref="HinesMatrix_8h" startline="85">HinesMatrix::operand_</references>
+        <references refid="structJunctionStruct_1a33dbced62c4782ec61293b0ceff0d1f7" compoundref="HinesMatrix_8h" startline="40">JunctionStruct::rank</references>
+        <references refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" compoundref="HinesMatrix_8h" startline="87">HinesMatrix::stage_</references>
+        <referencedby refid="classHSolvePassive_1aac561a096fa851b831ead5e59f013ae5" compoundref="HSolvePassive_8cpp" startline="24" endline="29">solve</referencedby>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">HSolveActive::step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::updateMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>updateMatrix</name>
+        <qualifiedname>HSolvePassive::updateMatrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="32" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="211" bodyend="244"/>
+        <references refid="structCompartmentStruct_1aa01218b04a4307e651a42c03d3fa50dc" compoundref="HSolveStruct_8h" startline="17">CompartmentStruct::CmByDt</references>
+        <references refid="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" compoundref="HSolvePassive_8h" startline="36">compartment_</references>
+        <references refid="structCompartmentStruct_1a16de90f8dba5c64f963d00fb723b50b7" compoundref="HSolveStruct_8h" startline="18">CompartmentStruct::EmByRm</references>
+        <references refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" compoundref="HinesMatrix_8h" startline="79">HinesMatrix::HJ_</references>
+        <references refid="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" compoundref="HinesMatrix_8h" startline="82">HinesMatrix::HJCopy_</references>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HinesMatrix::HS_</references>
+        <references refid="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" compoundref="HSolvePassive_8h" startline="45">inject_</references>
+        <references refid="structInjectStruct_1a92ddf146a67c56acb80df0c1a186ca2d" compoundref="HSolveStruct_8h" startline="41">InjectStruct::injectBasal</references>
+        <references refid="structInjectStruct_1a4e12f83f6122af2e5b3198f8cc73f29b" compoundref="HSolveStruct_8h" startline="40">InjectStruct::injectVarying</references>
+        <references refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" compoundref="HinesMatrix_8h" startline="87">HinesMatrix::stage_</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">V_</references>
+        <referencedby refid="classHSolvePassive_1aac561a096fa851b831ead5e59f013ae5" compoundref="HSolvePassive_8cpp" startline="24" endline="29">solve</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>HSolvePassive::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="51" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="35" bodyend="43"/>
+        <references refid="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" compoundref="HSolvePassive_8h" startline="36">compartment_</references>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">compartmentId_</references>
+        <references refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" compoundref="HinesMatrix_8h" startline="71">HinesMatrix::dt_</references>
+        <references refid="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" compoundref="HSolvePassive_8h" startline="45">inject_</references>
+        <references refid="classHSolvePassive_1a78c55193b02a12e4fe5d86546b7717fe" compoundref="HSolvePassive_8h" startline="41">tree_</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">V_</references>
+        <referencedby refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" compoundref="HSolvePassive_8cpp" startline="14" endline="22">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolvePassive_1a8f8714a09d229812c1b12643561c403c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HSolvePassive::getV</definition>
+        <argsstring>(unsigned int row) const</argsstring>
+        <name>getV</name>
+        <qualifiedname>HSolvePassive::getV</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="57" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="407" bodyend="410"/>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">V_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>HSolvePassive::initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="53" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="100" bodyend="165"/>
+        <references refid="structCompartmentStruct_1aa01218b04a4307e651a42c03d3fa50dc" compoundref="HSolveStruct_8h" startline="17">CompartmentStruct::CmByDt</references>
+        <references refid="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" compoundref="HSolvePassive_8h" startline="36">compartment_</references>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">compartmentId_</references>
+        <references refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" compoundref="HinesMatrix_8h" startline="71">HinesMatrix::dt_</references>
+        <references refid="structCompartmentStruct_1a16de90f8dba5c64f963d00fb723b50b7" compoundref="HSolveStruct_8h" startline="18">CompartmentStruct::EmByRm</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" compoundref="HSolvePassive_8h" startline="45">inject_</references>
+        <references refid="structInjectStruct_1a92ddf146a67c56acb80df0c1a186ca2d" compoundref="HSolveStruct_8h" startline="41">InjectStruct::injectBasal</references>
+        <references refid="structInjectStruct_1a4e12f83f6122af2e5b3198f8cc73f29b" compoundref="HSolveStruct_8h" startline="40">InjectStruct::injectVarying</references>
+        <references refid="classHSolveUtils_1a11b8a6cfc46ded0c860d948bfb4ee06c" compoundref="HSolveUtils_8cpp" startline="134" endline="137">HSolveUtils::leakageChannels</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">V_</references>
+        <referencedby refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" compoundref="HSolvePassive_8cpp" startline="14" endline="22">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolvePassive_1ab123ed2dcb0c7ec88d5a6da4990e93cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::storeTree</definition>
+        <argsstring>()</argsstring>
+        <name>storeTree</name>
+        <qualifiedname>HSolvePassive::storeTree</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="54" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="167" bodyend="205"/>
+        <references refid="structTreeNodeStruct_1a3070894cc4f33aaf5096971dde1b43ff" compoundref="HinesMatrix_8h" startline="47">TreeNodeStruct::children</references>
+        <references refid="classHSolveUtils_1aaf1975e29cdaf6aa41a0e64de54b364a" compoundref="HSolveUtils_8cpp" startline="47" endline="53">HSolveUtils::children</references>
+        <references refid="structTreeNodeStruct_1a66cbaa56e6f1cf0466aa3354875aa652" compoundref="HinesMatrix_8h" startline="50">TreeNodeStruct::Cm</references>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">compartmentId_</references>
+        <references refid="structTreeNodeStruct_1a73fca9964c610f6d37ffff9b147018ea" compoundref="HinesMatrix_8h" startline="51">TreeNodeStruct::Em</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="structTreeNodeStruct_1a3add4411b77a2f0e1abda5e5c44c7b3f" compoundref="HinesMatrix_8h" startline="52">TreeNodeStruct::initVm</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <references refid="structTreeNodeStruct_1a882913e35a99986b63b9fa077b8448dc" compoundref="HinesMatrix_8h" startline="48">TreeNodeStruct::Ra</references>
+        <references refid="structTreeNodeStruct_1a1c08eb244ac8b5e71029a0811103b592" compoundref="HinesMatrix_8h" startline="49">TreeNodeStruct::Rm</references>
+        <references refid="classHSolvePassive_1a78c55193b02a12e4fe5d86546b7717fe" compoundref="HSolvePassive_8h" startline="41">tree_</references>
+        <referencedby refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" compoundref="HSolvePassive_8cpp" startline="14" endline="22">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolvePassive_1a7c0785982abce69a7cb825251fd1ced6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolvePassive::walkTree</definition>
+        <argsstring>(Id seed)</argsstring>
+        <name>walkTree</name>
+        <qualifiedname>HSolvePassive::walkTree</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="52" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.cpp" bodystart="45" bodyend="98"/>
+        <references refid="classHSolveUtils_1a09f4488c584da71799469d48e06ad429" compoundref="HSolveUtils_8cpp" startline="25" endline="34">HSolveUtils::adjacent</references>
+        <references refid="classHSolveUtils_1a68aa718603432d455824e8eac8ab9b86" compoundref="HSolveUtils_8cpp" startline="36" endline="45">HSolveUtils::adjacent</references>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">compartmentId_</references>
+        <referencedby refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" compoundref="HSolvePassive_8cpp" startline="14" endline="22">setup</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>HSolve</label>
+        <link refid="classHSolve"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HSolveActive</label>
+        <link refid="classHSolveActive"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HSolvePassive</label>
+        <link refid="classHSolvePassive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HinesMatrix</label>
+        <link refid="classHinesMatrix"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>CompartmentStruct</label>
+        <link refid="structCompartmentStruct"/>
+      </node>
+      <node id="1">
+        <label>HSolvePassive</label>
+        <link refid="classHSolvePassive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#compartment_</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>#compartmentId_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#V_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#tree_</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>#inject_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HinesMatrix</label>
+        <link refid="classHinesMatrix"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#HJCopy_</edgelabel>
+          <edgelabel>#HJ_</edgelabel>
+          <edgelabel>#HS_</edgelabel>
+          <edgelabel>#VMid_</edgelabel>
+          <edgelabel>-Ga_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-tree_</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="14">
+        <label>InjectStruct</label>
+        <link refid="structInjectStruct"/>
+      </node>
+      <node id="16">
+        <label>K</label>
+      </node>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="7">
+        <label>TreeNodeStruct</label>
+        <link refid="structTreeNodeStruct"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+children</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>std::map&lt; unsigned int, InjectStruct &gt;</label>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; unsigned int, InjectStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::vector&lt; CompartmentStruct &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; CompartmentStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>std::vector&lt; Id &gt;</label>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; Id &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; TreeNodeStruct &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; TreeNodeStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" line="20" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolvePassive.h" bodystart="21" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classHinesMatrix_1aa3cf66c934d6246bf083fd6b47446078" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>backOperand_</name></member>
+      <member refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>backwardSubstitute</name></member>
+      <member refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>clear</name></member>
+      <member refid="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>compartment_</name></member>
+      <member refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>compartmentId_</name></member>
+      <member refid="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>coupled_</name></member>
+      <member refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>dt_</name></member>
+      <member refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>forwardEliminate</name></member>
+      <member refid="classHinesMatrix_1a5ea32130ef624f4fb26956a35220435b" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>Ga_</name></member>
+      <member refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" prot="public" virt="non-virtual"><scope>HSolvePassive</scope><name>getA</name></member>
+      <member refid="classHinesMatrix_1ae4702b04adb8ce17a05ce8ba74dfe5e7" prot="public" virt="non-virtual"><scope>HSolvePassive</scope><name>getB</name></member>
+      <member refid="classHinesMatrix_1a10d80ca6a84506c3c83efd026967347b" prot="public" virt="non-virtual"><scope>HSolvePassive</scope><name>getSize</name></member>
+      <member refid="classHSolvePassive_1a8f8714a09d229812c1b12643561c403c" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>getV</name></member>
+      <member refid="classHinesMatrix_1aafc7e33d10d03061f4ca6fea51f516ad" prot="public" virt="non-virtual"><scope>HSolvePassive</scope><name>getVMid</name></member>
+      <member refid="classHinesMatrix_1a50485325e404b083769cf368784da28b" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>groupNumber_</name></member>
+      <member refid="classHinesMatrix_1a440ba2efd96580a979539e4dfa6b1b3a" prot="public" virt="non-virtual"><scope>HSolvePassive</scope><name>HinesMatrix</name></member>
+      <member refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>HJ_</name></member>
+      <member refid="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>HJCopy_</name></member>
+      <member refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>HS_</name></member>
+      <member refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>initialize</name></member>
+      <member refid="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>inject_</name></member>
+      <member refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>junction_</name></member>
+      <member refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>makeJunctions</name></member>
+      <member refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>makeMatrix</name></member>
+      <member refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>makeOperands</name></member>
+      <member refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>nCompt_</name></member>
+      <member refid="classHinesMatrix_1a34fc144edf8086f30faec267d14ed109" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>operand_</name></member>
+      <member refid="classHinesMatrix_1a9fd9da528596db99a34da1e592c9281d" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>operandBase_</name></member>
+      <member refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" prot="public" virt="non-virtual"><scope>HSolvePassive</scope><name>setup</name></member>
+      <member refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" prot="public" virt="non-virtual" ambiguityscope="HinesMatrix::"><scope>HSolvePassive</scope><name>setup</name></member>
+      <member refid="classHSolvePassive_1aac561a096fa851b831ead5e59f013ae5" prot="public" virt="non-virtual"><scope>HSolvePassive</scope><name>solve</name></member>
+      <member refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>stage_</name></member>
+      <member refid="classHSolvePassive_1ab123ed2dcb0c7ec88d5a6da4990e93cf" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>storeTree</name></member>
+      <member refid="classHSolvePassive_1a78c55193b02a12e4fe5d86546b7717fe" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>tree_</name></member>
+      <member refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>updateMatrix</name></member>
+      <member refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>V_</name></member>
+      <member refid="classHinesMatrix_1a2a6e6b0f7efe2e51a6862ed0b1838dfb" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>vdIterator</name></member>
+      <member refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" prot="protected" virt="non-virtual"><scope>HSolvePassive</scope><name>VMid_</name></member>
+      <member refid="classHSolvePassive_1a7c0785982abce69a7cb825251fd1ced6" prot="private" virt="non-virtual"><scope>HSolvePassive</scope><name>walkTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="randnum_8cpp" kind="file" language="C++">
+    <compoundname>randnum.cpp</compoundname>
+    <includes refid="randnum_8h" local="yes">randnum.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/randnum.cpp</label>
+        <link refid="randnum_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>randnum.h</label>
+        <link refid="randnum_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cassert</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
+      <node id="3">
+        <label>random</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacemoose">moose</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Description:<sp/><sp/>random<sp/>number<sp/>generator.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Created:<sp/><sp/>2020-04-03</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/><sp/>Dilawar<sp/>Singh<sp/>&lt;dilawar.s.rajput@gmail.com&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>License:<sp/><sp/>Same<sp/>as<sp/>MOOSE<sp/>license.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="randnum_8h" kindref="compound">randnum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemoose" kindref="compound">moose</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="namespacemoose_1a71ea8aea9150c059e14caf27827a3705" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a71ea8aea9150c059e14caf27827a3705" kindref="member">__rng_seed__</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="namespacemoose_1a7fd76511fc371bb436eaa148bfc8b8d8" refkind="member"><highlight class="normal"><ref refid="classmoose_1_1RNG" kindref="compound">RNG</ref><sp/><ref refid="namespacemoose_1a7fd76511fc371bb436eaa148bfc8b8d8" kindref="member">rng</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="namespacemoose_1a016d92a21244e86231ea80932c1c9175" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a016d92a21244e86231ea80932c1c9175" kindref="member">mtseed</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isRNGInitialized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1a71ea8aea9150c059e14caf27827a3705" kindref="member">moose::__rng_seed__</ref><sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1a7fd76511fc371bb436eaa148bfc8b8d8" kindref="member">moose::rng</ref>.<ref refid="classmoose_1_1RNG_1ad310f016166b1548e23fb8f3b54f83d7" kindref="member">setSeed</ref>(x);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>isRNGInitialized<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Generate<sp/>a<sp/>random<sp/>number<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="namespacemoose_1ae65f9d4e187c732b37450b5cb8dab7a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1ae65f9d4e187c732b37450b5cb8dab7a7" kindref="member">mtrand</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a7fd76511fc371bb436eaa148bfc8b8d8" kindref="member">moose::rng</ref>.<ref refid="classmoose_1_1RNG_1a9337240a35e8230966e80c9d174292b1" kindref="member">uniform</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="namespacemoose_1a3b5a06b338fff99abea362c7d26feb7a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1ae65f9d4e187c732b37450b5cb8dab7a7" kindref="member">mtrand</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(b<sp/>-<sp/>a)<sp/>*<sp/><ref refid="namespacemoose_1ae65f9d4e187c732b37450b5cb8dab7a7" kindref="member">mtrand</ref>()<sp/>+<sp/>a;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="namespacemoose_1ab4eece6df5cb87722952f36d8aea6d98" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1ab4eece6df5cb87722952f36d8aea6d98" kindref="member">getGlobalSeed</ref>()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a71ea8aea9150c059e14caf27827a3705" kindref="member">__rng_seed__</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="namespacemoose_1a06131034d58cf1a6adc61babd79b3cdb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a06131034d58cf1a6adc61babd79b3cdb" kindref="member">setGlobalSeed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1a71ea8aea9150c059e14caf27827a3705" kindref="member">__rng_seed__</ref><sp/>=<sp/>seed;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>moose.</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/randnum.cpp"/>
+  </compounddef>
+</doxygen>

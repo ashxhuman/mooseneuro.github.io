@@ -1,0 +1,812 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMarkovChannel" kind="class" language="C++" prot="public">
+    <compoundname>MarkovChannel</compoundname>
+    <basecompoundref refid="classChanCommon" prot="public" virt="non-virtual">ChanCommon</basecompoundref>
+    <includes refid="MarkovChannel_8h" local="no">MarkovChannel.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MarkovChannel::g_</definition>
+        <argsstring></argsstring>
+        <name>g_</name>
+        <qualifiedname>MarkovChannel::g_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="73" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" compoundref="MarkovChannel_8cpp" startline="130" endline="135">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" compoundref="MarkovChannel_8cpp" startline="137" endline="144">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" compoundref="MarkovChannel_8cpp" startline="231" endline="246">vProcess</referencedby>
+        <referencedby refid="classMarkovChannel_1aa6f0cc5bd632d6f13f64980fafc7a541" compoundref="MarkovChannel_8cpp" startline="248" endline="260">vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MarkovChannel::Gbars_</definition>
+        <argsstring></argsstring>
+        <name>Gbars_</name>
+        <qualifiedname>MarkovChannel::Gbars_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="81" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="classMarkovChannel_1a7c523e85d8c7f0a97927cd92aad6dc6a" compoundref="MarkovChannel_8cpp" startline="217" endline="220">getGbars</referencedby>
+        <referencedby refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" compoundref="MarkovChannel_8cpp" startline="137" endline="144">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1a00493d2172d475b0f298f3a327f63e83" compoundref="MarkovChannel_8cpp" startline="222" endline="225">setGbars</referencedby>
+        <referencedby refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" compoundref="MarkovChannel_8cpp" startline="231" endline="246">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MarkovChannel::initialState_</definition>
+        <argsstring></argsstring>
+        <name>initialState_</name>
+        <qualifiedname>MarkovChannel::initialState_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="80" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="classMarkovChannel_1a4c34329c895aa5dd7b1ecf4acf926fe7" compoundref="MarkovChannel_8cpp" startline="206" endline="209">getInitialState</referencedby>
+        <referencedby refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" compoundref="MarkovChannel_8cpp" startline="137" endline="144">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1ab8595a2f147d54ee89d17ec8eead9f71" compoundref="MarkovChannel_8cpp" startline="211" endline="215">setInitialState</referencedby>
+        <referencedby refid="classMarkovChannel_1aa6f0cc5bd632d6f13f64980fafc7a541" compoundref="MarkovChannel_8cpp" startline="248" endline="260">vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMarkovChannel_1a169fdf4747dec174f028680a75423764" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MarkovChannel::ligandConc_</definition>
+        <argsstring></argsstring>
+        <name>ligandConc_</name>
+        <qualifiedname>MarkovChannel::ligandConc_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="74" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="classMarkovChannel_1a84fcc4b85545d5db01be6df2c5180f0a" compoundref="MarkovChannel_8cpp" startline="161" endline="164">getLigandConc</referencedby>
+        <referencedby refid="classMarkovChannel_1aa8084f4c73f953208916556fbc7de306" compoundref="MarkovChannel_8cpp" startline="262" endline="265">handleLigandConc</referencedby>
+        <referencedby refid="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" compoundref="MarkovChannel_8cpp" startline="130" endline="135">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" compoundref="MarkovChannel_8cpp" startline="137" endline="144">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1a7d7285dda4f6313341720d51864b8c80" compoundref="MarkovChannel_8cpp" startline="166" endline="169">setLigandConc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMarkovChannel_1aee31758e07478e416270fec99464d378" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MarkovChannel::numOpenStates_</definition>
+        <argsstring></argsstring>
+        <name>numOpenStates_</name>
+        <qualifiedname>MarkovChannel::numOpenStates_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="76" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="classMarkovChannel_1a4d9c4b87f25f831e7068b2d7e7156e1e" compoundref="MarkovChannel_8cpp" startline="181" endline="184">getNumOpenStates</referencedby>
+        <referencedby refid="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" compoundref="MarkovChannel_8cpp" startline="130" endline="135">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" compoundref="MarkovChannel_8cpp" startline="137" endline="144">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1a562aeeff882505f5108263057e82152d" compoundref="MarkovChannel_8cpp" startline="186" endline="189">setNumOpenStates</referencedby>
+        <referencedby refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" compoundref="MarkovChannel_8cpp" startline="231" endline="246">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMarkovChannel_1ae11a2a8b72aeab6f97a7c2ce12fdd612" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MarkovChannel::numStates_</definition>
+        <argsstring></argsstring>
+        <name>numStates_</name>
+        <qualifiedname>MarkovChannel::numStates_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="75" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classMarkovChannel_1a2780ce0bba192493b4038019524f113d" compoundref="MarkovChannel_8cpp" startline="171" endline="174">getNumStates</referencedby>
+        <referencedby refid="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" compoundref="MarkovChannel_8cpp" startline="130" endline="135">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" compoundref="MarkovChannel_8cpp" startline="137" endline="144">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1a2f8bbe900071fb3911cc9aa03295c747" compoundref="MarkovChannel_8cpp" startline="176" endline="179">setNumStates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MarkovChannel::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <qualifiedname>MarkovChannel::state_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="79" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classMarkovChannel_1aec198ce8b6dd0db134d7a422aef315d9" compoundref="MarkovChannel_8cpp" startline="201" endline="204">getState</referencedby>
+        <referencedby refid="classMarkovChannel_1ab1c77ea8b75a28304abeacec8b6978a6" compoundref="MarkovChannel_8cpp" startline="267" endline="270">handleState</referencedby>
+        <referencedby refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" compoundref="MarkovChannel_8cpp" startline="137" endline="144">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1ab8595a2f147d54ee89d17ec8eead9f71" compoundref="MarkovChannel_8cpp" startline="211" endline="215">setInitialState</referencedby>
+        <referencedby refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" compoundref="MarkovChannel_8cpp" startline="231" endline="246">vProcess</referencedby>
+        <referencedby refid="classMarkovChannel_1aa6f0cc5bd632d6f13f64980fafc7a541" compoundref="MarkovChannel_8cpp" startline="248" endline="260">vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMarkovChannel_1aff512ce58a1d6fc88c8f171da0a30754" prot="private" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; MarkovChannel::stateLabels_</definition>
+        <argsstring></argsstring>
+        <name>stateLabels_</name>
+        <qualifiedname>MarkovChannel::stateLabels_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="78" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="classMarkovChannel_1a97ab9e9b273cf4d114be3a4790b8df43" compoundref="MarkovChannel_8cpp" startline="191" endline="194">getStateLabels</referencedby>
+        <referencedby refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" compoundref="MarkovChannel_8cpp" startline="137" endline="144">MarkovChannel</referencedby>
+        <referencedby refid="classMarkovChannel_1a4542da7800174e9d11caad0bb219be81" compoundref="MarkovChannel_8cpp" startline="196" endline="199">setStateLabels</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMarkovChannel_1a7c523e85d8c7f0a97927cd92aad6dc6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MarkovChannel::getGbars</definition>
+        <argsstring>() const</argsstring>
+        <name>getGbars</name>
+        <qualifiedname>MarkovChannel::getGbars</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="60" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="217" bodyend="220"/>
+        <references refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" compoundref="MarkovChannel_8h" startline="81">Gbars_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a4c34329c895aa5dd7b1ecf4acf926fe7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MarkovChannel::getInitialState</definition>
+        <argsstring>() const</argsstring>
+        <name>getInitialState</name>
+        <qualifiedname>MarkovChannel::getInitialState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="56" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="206" bodyend="209"/>
+        <references refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" compoundref="MarkovChannel_8h" startline="80">initialState_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a84fcc4b85545d5db01be6df2c5180f0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MarkovChannel::getLigandConc</definition>
+        <argsstring>() const</argsstring>
+        <name>getLigandConc</name>
+        <qualifiedname>MarkovChannel::getLigandConc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="33" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="161" bodyend="164"/>
+        <references refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" compoundref="MarkovChannel_8h" startline="74">ligandConc_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a0c3914db526ffd246b2836dee18dad68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; bool &gt; &gt; MarkovChannel::getLigandGated</definition>
+        <argsstring>() const</argsstring>
+        <name>getLigandGated</name>
+        <qualifiedname>MarkovChannel::getLigandGated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="47" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a4d9c4b87f25f831e7068b2d7e7156e1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MarkovChannel::getNumOpenStates</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumOpenStates</name>
+        <qualifiedname>MarkovChannel::getNumOpenStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="39" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="181" bodyend="184"/>
+        <references refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" compoundref="MarkovChannel_8h" startline="76">numOpenStates_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a2780ce0bba192493b4038019524f113d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MarkovChannel::getNumStates</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumStates</name>
+        <qualifiedname>MarkovChannel::getNumStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="36" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="171" bodyend="174"/>
+        <references refid="classMarkovChannel_1ae11a2a8b72aeab6f97a7c2ce12fdd612" compoundref="MarkovChannel_8h" startline="75">numStates_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1aec198ce8b6dd0db134d7a422aef315d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MarkovChannel::getState</definition>
+        <argsstring>() const</argsstring>
+        <name>getState</name>
+        <qualifiedname>MarkovChannel::getState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="51" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="201" bodyend="204"/>
+        <references refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" compoundref="MarkovChannel_8h" startline="79">state_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a97ab9e9b273cf4d114be3a4790b8df43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; MarkovChannel::getStateLabels</definition>
+        <argsstring>() const</argsstring>
+        <name>getStateLabels</name>
+        <qualifiedname>MarkovChannel::getStateLabels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="42" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="191" bodyend="194"/>
+        <references refid="classMarkovChannel_1aff512ce58a1d6fc88c8f171da0a30754" compoundref="MarkovChannel_8h" startline="78">stateLabels_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a05c755dd3aa8bd8d0c2726e91d162f40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MarkovChannel::getVm</definition>
+        <argsstring>() const</argsstring>
+        <name>getVm</name>
+        <qualifiedname>MarkovChannel::getVm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="30" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="151" bodyend="154"/>
+        <references refid="classChanCommon_1a7089110696aab34addcabe3307b28302" compoundref="ChanCommon_8h" startline="88">ChanCommon::Vm_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1aa8084f4c73f953208916556fbc7de306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::handleLigandConc</definition>
+        <argsstring>(double)</argsstring>
+        <name>handleLigandConc</name>
+        <qualifiedname>MarkovChannel::handleLigandConc</qualifiedname>
+        <param>
+          <type>double</type>
+          <defname>ligandConc</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="69" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="262" bodyend="265"/>
+        <references refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" compoundref="MarkovChannel_8h" startline="74">ligandConc_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1ab1c77ea8b75a28304abeacec8b6978a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::handleState</definition>
+        <argsstring>(vector&lt; double &gt;)</argsstring>
+        <name>handleState</name>
+        <qualifiedname>MarkovChannel::handleState</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <defname>state</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="70" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="267" bodyend="270"/>
+        <references refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" compoundref="MarkovChannel_8h" startline="79">state_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MarkovChannel::MarkovChannel</definition>
+        <argsstring>()</argsstring>
+        <name>MarkovChannel</name>
+        <qualifiedname>MarkovChannel::MarkovChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="20" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="130" bodyend="135"/>
+        <references refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" compoundref="MarkovChannel_8h" startline="73">g_</references>
+        <references refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" compoundref="MarkovChannel_8h" startline="74">ligandConc_</references>
+        <references refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" compoundref="MarkovChannel_8h" startline="76">numOpenStates_</references>
+        <references refid="classMarkovChannel_1ae11a2a8b72aeab6f97a7c2ce12fdd612" compoundref="MarkovChannel_8h" startline="75">numStates_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MarkovChannel::MarkovChannel</definition>
+        <argsstring>(unsigned int, unsigned int)</argsstring>
+        <name>MarkovChannel</name>
+        <qualifiedname>MarkovChannel::MarkovChannel</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>numStates</defname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <defname>numOpenStates</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="27" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="137" bodyend="144"/>
+        <references refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" compoundref="MarkovChannel_8h" startline="73">g_</references>
+        <references refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" compoundref="MarkovChannel_8h" startline="81">Gbars_</references>
+        <references refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" compoundref="MarkovChannel_8h" startline="80">initialState_</references>
+        <references refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" compoundref="MarkovChannel_8h" startline="74">ligandConc_</references>
+        <references refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" compoundref="MarkovChannel_8h" startline="76">numOpenStates_</references>
+        <references refid="classMarkovChannel_1ae11a2a8b72aeab6f97a7c2ce12fdd612" compoundref="MarkovChannel_8h" startline="75">numStates_</references>
+        <references refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" compoundref="MarkovChannel_8h" startline="79">state_</references>
+        <references refid="classMarkovChannel_1aff512ce58a1d6fc88c8f171da0a30754" compoundref="MarkovChannel_8h" startline="78">stateLabels_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a00493d2172d475b0f298f3a327f63e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setGbars</definition>
+        <argsstring>(vector&lt; double &gt;)</argsstring>
+        <name>setGbars</name>
+        <qualifiedname>MarkovChannel::setGbars</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <defname>Gbars</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="61" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="222" bodyend="225"/>
+        <references refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" compoundref="MarkovChannel_8h" startline="81">Gbars_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1ab8595a2f147d54ee89d17ec8eead9f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setInitialState</definition>
+        <argsstring>(vector&lt; double &gt;)</argsstring>
+        <name>setInitialState</name>
+        <qualifiedname>MarkovChannel::setInitialState</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <defname>initialState</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="57" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="211" bodyend="215"/>
+        <references refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" compoundref="MarkovChannel_8h" startline="80">initialState_</references>
+        <references refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" compoundref="MarkovChannel_8h" startline="79">state_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a7d7285dda4f6313341720d51864b8c80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setLigandConc</definition>
+        <argsstring>(double)</argsstring>
+        <name>setLigandConc</name>
+        <qualifiedname>MarkovChannel::setLigandConc</qualifiedname>
+        <param>
+          <type>double</type>
+          <defname>ligandConc</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="34" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="166" bodyend="169"/>
+        <references refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" compoundref="MarkovChannel_8h" startline="74">ligandConc_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1af349c5ad072d0e3ca316c1eed2d7a698" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setLigandGated</definition>
+        <argsstring>(vector&lt; vector&lt; bool &gt; &gt;)</argsstring>
+        <name>setLigandGated</name>
+        <qualifiedname>MarkovChannel::setLigandGated</qualifiedname>
+        <param>
+          <type>vector&lt; vector&lt; bool &gt; &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="48" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a562aeeff882505f5108263057e82152d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setNumOpenStates</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>setNumOpenStates</name>
+        <qualifiedname>MarkovChannel::setNumOpenStates</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>numOpenStates</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="40" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="186" bodyend="189"/>
+        <references refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" compoundref="MarkovChannel_8h" startline="76">numOpenStates_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a2f8bbe900071fb3911cc9aa03295c747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setNumStates</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>setNumStates</name>
+        <qualifiedname>MarkovChannel::setNumStates</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>numStates</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="37" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="176" bodyend="179"/>
+        <references refid="classMarkovChannel_1ae11a2a8b72aeab6f97a7c2ce12fdd612" compoundref="MarkovChannel_8h" startline="75">numStates_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1adfcf4d6b6e47d71c71a7ad4fb59235d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setState</definition>
+        <argsstring>(vector&lt; double &gt;)</argsstring>
+        <name>setState</name>
+        <qualifiedname>MarkovChannel::setState</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="52" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a4542da7800174e9d11caad0bb219be81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setStateLabels</definition>
+        <argsstring>(vector&lt; string &gt;)</argsstring>
+        <name>setStateLabels</name>
+        <qualifiedname>MarkovChannel::setStateLabels</qualifiedname>
+        <param>
+          <type>vector&lt; string &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="43" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="196" bodyend="199"/>
+        <references refid="classMarkovChannel_1aff512ce58a1d6fc88c8f171da0a30754" compoundref="MarkovChannel_8h" startline="78">stateLabels_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1af4ca0abb9c6dfc89ee076038831b48da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::setVm</definition>
+        <argsstring>(double)</argsstring>
+        <name>setVm</name>
+        <qualifiedname>MarkovChannel::setVm</qualifiedname>
+        <param>
+          <type>double</type>
+          <defname>Vm</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="31" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="156" bodyend="159"/>
+        <references refid="classChanCommon_1a7089110696aab34addcabe3307b28302" compoundref="ChanCommon_8h" startline="88">ChanCommon::Vm_</references>
+        <referencedby refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" compoundref="MarkovChannel_8cpp" startline="22" endline="126">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::vProcess</definition>
+        <argsstring>(const Eref &amp;, const ProcPtr)</argsstring>
+        <name>vProcess</name>
+        <qualifiedname>MarkovChannel::vProcess</qualifiedname>
+        <reimplements refid="classChanBase_1a2d33f628004a68330a80e45ba8e6eeb1">vProcess</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <defname>e</defname>
+        </param>
+        <param>
+          <type>const <ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="67" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="231" bodyend="246"/>
+        <references refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" compoundref="MarkovChannel_8h" startline="73">g_</references>
+        <references refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" compoundref="MarkovChannel_8h" startline="81">Gbars_</references>
+        <references refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" compoundref="MarkovChannel_8h" startline="76">numOpenStates_</references>
+        <references refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" compoundref="ChanCommon_8cpp" startline="102" endline="110">ChanCommon::sendProcessMsgs</references>
+        <references refid="classChanBase_1a5be7f8c73ae22fe65dfccb18fb67fb00" compoundref="ChanBase_8cpp" startline="216" endline="219">ChanBase::setGk</references>
+        <references refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" compoundref="MarkovChannel_8h" startline="79">state_</references>
+        <references refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" compoundref="ChanCommon_8cpp" startline="121" endline="124">ChanCommon::updateIk</references>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1aa6f0cc5bd632d6f13f64980fafc7a541" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MarkovChannel::vReinit</definition>
+        <argsstring>(const Eref &amp;, const ProcPtr)</argsstring>
+        <name>vReinit</name>
+        <qualifiedname>MarkovChannel::vReinit</qualifiedname>
+        <reimplements refid="classChanBase_1a83a714adc1fc74ee8df9cbab1d23800a">vReinit</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <defname>e</defname>
+        </param>
+        <param>
+          <type>const <ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="68" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="248" bodyend="260"/>
+        <references refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" compoundref="MarkovChannel_8h" startline="73">g_</references>
+        <references refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" compoundref="MarkovChannel_8h" startline="80">initialState_</references>
+        <references refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" compoundref="ChanCommon_8cpp" startline="113" endline="119">ChanCommon::sendReinitMsgs</references>
+        <references refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" compoundref="MarkovChannel_8h" startline="79">state_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMarkovChannel_1a85894e649cd14cc090273dff7dc047ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MarkovChannel::~MarkovChannel</definition>
+        <argsstring>()</argsstring>
+        <name>~MarkovChannel</name>
+        <qualifiedname>MarkovChannel::~MarkovChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="28" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="146" bodyend="149"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * MarkovChannel::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>MarkovChannel::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="25" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="22" bodyend="126"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classMarkovChannel_1a7c523e85d8c7f0a97927cd92aad6dc6a" compoundref="MarkovChannel_8cpp" startline="217" endline="220">getGbars</references>
+        <references refid="classMarkovChannel_1a4c34329c895aa5dd7b1ecf4acf926fe7" compoundref="MarkovChannel_8cpp" startline="206" endline="209">getInitialState</references>
+        <references refid="classMarkovChannel_1a84fcc4b85545d5db01be6df2c5180f0a" compoundref="MarkovChannel_8cpp" startline="161" endline="164">getLigandConc</references>
+        <references refid="classMarkovChannel_1a4d9c4b87f25f831e7068b2d7e7156e1e" compoundref="MarkovChannel_8cpp" startline="181" endline="184">getNumOpenStates</references>
+        <references refid="classMarkovChannel_1a2780ce0bba192493b4038019524f113d" compoundref="MarkovChannel_8cpp" startline="171" endline="174">getNumStates</references>
+        <references refid="classMarkovChannel_1aec198ce8b6dd0db134d7a422aef315d9" compoundref="MarkovChannel_8cpp" startline="201" endline="204">getState</references>
+        <references refid="classMarkovChannel_1a97ab9e9b273cf4d114be3a4790b8df43" compoundref="MarkovChannel_8cpp" startline="191" endline="194">getStateLabels</references>
+        <references refid="classMarkovChannel_1a05c755dd3aa8bd8d0c2726e91d162f40" compoundref="MarkovChannel_8cpp" startline="151" endline="154">getVm</references>
+        <references refid="classMarkovChannel_1aa8084f4c73f953208916556fbc7de306" compoundref="MarkovChannel_8cpp" startline="262" endline="265">handleLigandConc</references>
+        <references refid="classMarkovChannel_1ab1c77ea8b75a28304abeacec8b6978a6" compoundref="MarkovChannel_8cpp" startline="267" endline="270">handleState</references>
+        <references refid="classChanBase_1a636dddba7e9e9a4519362a2a94f190bc" compoundref="ChanBase_8cpp" startline="36" endline="166">ChanBase::initCinfo</references>
+        <references refid="classOpFunc1_1abc0aeb50c1657a6777c508d17c872809" compoundref="OpFunc_8h" startline="31" endline="33">OpFunc1&lt; T, A &gt;::OpFunc1</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classMarkovChannel_1a00493d2172d475b0f298f3a327f63e83" compoundref="MarkovChannel_8cpp" startline="222" endline="225">setGbars</references>
+        <references refid="classMarkovChannel_1ab8595a2f147d54ee89d17ec8eead9f71" compoundref="MarkovChannel_8cpp" startline="211" endline="215">setInitialState</references>
+        <references refid="classMarkovChannel_1a7d7285dda4f6313341720d51864b8c80" compoundref="MarkovChannel_8cpp" startline="166" endline="169">setLigandConc</references>
+        <references refid="classMarkovChannel_1a562aeeff882505f5108263057e82152d" compoundref="MarkovChannel_8cpp" startline="186" endline="189">setNumOpenStates</references>
+        <references refid="classMarkovChannel_1a2f8bbe900071fb3911cc9aa03295c747" compoundref="MarkovChannel_8cpp" startline="176" endline="179">setNumStates</references>
+        <references refid="classMarkovChannel_1a4542da7800174e9d11caad0bb219be81" compoundref="MarkovChannel_8cpp" startline="196" endline="199">setStateLabels</references>
+        <references refid="classMarkovChannel_1af4ca0abb9c6dfc89ee076038831b48da" compoundref="MarkovChannel_8cpp" startline="156" endline="159">setVm</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ChanBase</label>
+        <link refid="classChanBase"/>
+      </node>
+      <node id="2">
+        <label>ChanCommon</label>
+        <link refid="classChanCommon"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MarkovChannel</label>
+        <link refid="classMarkovChannel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ChanBase</label>
+        <link refid="classChanBase"/>
+      </node>
+      <node id="2">
+        <label>ChanCommon</label>
+        <link refid="classChanCommon"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MarkovChannel</label>
+        <link refid="classMarkovChannel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-Gbars_</edgelabel>
+          <edgelabel>-initialState_</edgelabel>
+          <edgelabel>-state_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>T</label>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" line="15" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.h" bodystart="16" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classChanBase_1a0b4ce2e2886ace64e7d68eb41ee53d54" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>ChanBase</name></member>
+      <member refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>ChanCommon</name></member>
+      <member refid="classChanBase_1a47abb439c48f25b313e2b6594070d1a7" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>channelOut</name></member>
+      <member refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>Ek_</name></member>
+      <member refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>g_</name></member>
+      <member refid="classChanCommon_1a3be12631216cac2216d832c1d1d95de2" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>Gbar_</name></member>
+      <member refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>Gbars_</name></member>
+      <member refid="classChanBase_1a7e74d61abc548efead13a96ed29a5b82" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getEk</name></member>
+      <member refid="classChanCommon_1a3cfd15c9edef381013aa781d23a4ef8a" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getGbar</name></member>
+      <member refid="classChanBase_1a17ce4e4fec56ad50bd8b97fa45339505" prot="public" virt="non-virtual" ambiguityscope="ChanBase::"><scope>MarkovChannel</scope><name>getGbar</name></member>
+      <member refid="classMarkovChannel_1a7c523e85d8c7f0a97927cd92aad6dc6a" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getGbars</name></member>
+      <member refid="classChanBase_1ad4887c265e2aaf5d02d6233f6c9b4c7b" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getGk</name></member>
+      <member refid="classChanBase_1a284b1719ed6cf2cbdc2e79c5a4ccea3b" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getIk</name></member>
+      <member refid="classMarkovChannel_1a4c34329c895aa5dd7b1ecf4acf926fe7" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getInitialState</name></member>
+      <member refid="classMarkovChannel_1a84fcc4b85545d5db01be6df2c5180f0a" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getLigandConc</name></member>
+      <member refid="classMarkovChannel_1a0c3914db526ffd246b2836dee18dad68" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getLigandGated</name></member>
+      <member refid="classChanCommon_1a350572336cf35de7032820ea90df8ad0" prot="protected" virt="non-virtual"><scope>MarkovChannel</scope><name>getModulation</name></member>
+      <member refid="classChanBase_1af7c5dd8cbc739a833b9c125c3d232f29" prot="public" virt="non-virtual" ambiguityscope="ChanBase::"><scope>MarkovChannel</scope><name>getModulation</name></member>
+      <member refid="classMarkovChannel_1a4d9c4b87f25f831e7068b2d7e7156e1e" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getNumOpenStates</name></member>
+      <member refid="classMarkovChannel_1a2780ce0bba192493b4038019524f113d" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getNumStates</name></member>
+      <member refid="classMarkovChannel_1aec198ce8b6dd0db134d7a422aef315d9" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getState</name></member>
+      <member refid="classMarkovChannel_1a97ab9e9b273cf4d114be3a4790b8df43" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getStateLabels</name></member>
+      <member refid="classMarkovChannel_1a05c755dd3aa8bd8d0c2726e91d162f40" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>getVm</name></member>
+      <member refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>Gk_</name></member>
+      <member refid="classMarkovChannel_1aa8084f4c73f953208916556fbc7de306" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>handleLigandConc</name></member>
+      <member refid="classMarkovChannel_1ab1c77ea8b75a28304abeacec8b6978a6" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>handleState</name></member>
+      <member refid="classChanBase_1afe0d330506bd5c57635d3f9e4c629473" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>handleVm</name></member>
+      <member refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>Ik_</name></member>
+      <member refid="classChanBase_1ad247c54be6894447b422a7539e952cf7" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>IkOut</name></member>
+      <member refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>initCinfo</name></member>
+      <member refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>initialState_</name></member>
+      <member refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>ligandConc_</name></member>
+      <member refid="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>MarkovChannel</name></member>
+      <member refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>MarkovChannel</name></member>
+      <member refid="classChanCommon_1a3bf0c36087f72dce6d6b6d0426bd5c39" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>modulation_</name></member>
+      <member refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>numOpenStates_</name></member>
+      <member refid="classMarkovChannel_1ae11a2a8b72aeab6f97a7c2ce12fdd612" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>numStates_</name></member>
+      <member refid="classChanBase_1a0ac42064c9b59a9e36285ded2af3cc64" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>permeability</name></member>
+      <member refid="classChanBase_1a47e2838dcc33e707dfb648c724150d27" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>process</name></member>
+      <member refid="classChanBase_1a0f1b1067d2a3507758537e0ef135dd02" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>reinit</name></member>
+      <member refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>sendProcessMsgs</name></member>
+      <member refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>sendReinitMsgs</name></member>
+      <member refid="classChanBase_1ab398afed3726484d5590eb9f8251651d" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setEk</name></member>
+      <member refid="classChanBase_1af1ee22625fc9a829ca1290b103d6fb23" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setGbar</name></member>
+      <member refid="classMarkovChannel_1a00493d2172d475b0f298f3a327f63e83" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setGbars</name></member>
+      <member refid="classChanBase_1a5be7f8c73ae22fe65dfccb18fb67fb00" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setGk</name></member>
+      <member refid="classChanBase_1a04ca8976f3b126349a6e9ca5d91044bc" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setIk</name></member>
+      <member refid="classMarkovChannel_1ab8595a2f147d54ee89d17ec8eead9f71" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setInitialState</name></member>
+      <member refid="classMarkovChannel_1a7d7285dda4f6313341720d51864b8c80" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setLigandConc</name></member>
+      <member refid="classMarkovChannel_1af349c5ad072d0e3ca316c1eed2d7a698" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setLigandGated</name></member>
+      <member refid="classChanBase_1a8fef557fb1049b3d6d6d47397e266275" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setModulation</name></member>
+      <member refid="classMarkovChannel_1a562aeeff882505f5108263057e82152d" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setNumOpenStates</name></member>
+      <member refid="classMarkovChannel_1a2f8bbe900071fb3911cc9aa03295c747" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setNumStates</name></member>
+      <member refid="classMarkovChannel_1adfcf4d6b6e47d71c71a7ad4fb59235d3" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setState</name></member>
+      <member refid="classMarkovChannel_1a4542da7800174e9d11caad0bb219be81" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setStateLabels</name></member>
+      <member refid="classMarkovChannel_1af4ca0abb9c6dfc89ee076038831b48da" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>setVm</name></member>
+      <member refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>state_</name></member>
+      <member refid="classMarkovChannel_1aff512ce58a1d6fc88c8f171da0a30754" prot="private" virt="non-virtual"><scope>MarkovChannel</scope><name>stateLabels_</name></member>
+      <member refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>updateIk</name></member>
+      <member refid="classChanCommon_1a581a129b51ff4f4586bb607051880c21" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vGetEk</name></member>
+      <member refid="classChanCommon_1a28b9838d6c41ae3d9205b4003026be28" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vGetGbar</name></member>
+      <member refid="classChanCommon_1ab600fe01a8c7a4f1c45f47769b025309" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vGetGk</name></member>
+      <member refid="classChanCommon_1a697488c62d9074aa00403fab07991cf1" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vGetIk</name></member>
+      <member refid="classChanCommon_1a993b966413b6113096b16f44a5c2ed90" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vGetModulation</name></member>
+      <member refid="classChanCommon_1a448ef98f6a3825344db6a9e45c6d32e6" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vHandleVm</name></member>
+      <member refid="classChanCommon_1a7089110696aab34addcabe3307b28302" prot="protected" virt="non-virtual"><scope>MarkovChannel</scope><name>Vm_</name></member>
+      <member refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vProcess</name></member>
+      <member refid="classMarkovChannel_1aa6f0cc5bd632d6f13f64980fafc7a541" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vReinit</name></member>
+      <member refid="classChanCommon_1ab0945ad38439d0bb036b1d41deaf5b8e" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vSetEk</name></member>
+      <member refid="classChanCommon_1ae56f5f4b2cd2a39025dd99ddc3d37043" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vSetGbar</name></member>
+      <member refid="classChanCommon_1a49f87214aeb41e8b7fc8e194857bb52f" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vSetGk</name></member>
+      <member refid="classChanCommon_1adbb054601c03513e1c55b4d4194c1b25" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vSetIk</name></member>
+      <member refid="classChanCommon_1abfa0f3cc0f9a39a8fa564c07f190a5cf" prot="public" virt="virtual"><scope>MarkovChannel</scope><name>vSetModulation</name></member>
+      <member refid="classChanBase_1ad4999175c719674abd1e13c35d4f2000" prot="public" virt="pure-virtual"><scope>MarkovChannel</scope><name>~ChanBase</name></member>
+      <member refid="classChanCommon_1ae966e08d0785e0dd49f251c877aaca33" prot="public" virt="pure-virtual"><scope>MarkovChannel</scope><name>~ChanCommon</name></member>
+      <member refid="classMarkovChannel_1a85894e649cd14cc090273dff7dc047ea" prot="public" virt="non-virtual"><scope>MarkovChannel</scope><name>~MarkovChannel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

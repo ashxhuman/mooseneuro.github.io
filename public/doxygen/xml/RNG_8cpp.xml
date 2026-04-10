@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="RNG_8cpp" kind="file" language="C++">
+    <compoundname>RNG.cpp</compoundname>
+    <includes refid="RNG_8h" local="yes">RNG.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/RNG.cpp</label>
+        <link refid="RNG_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cassert</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>random</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacemoose">moose</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Description:<sp/><sp/>Random<sp/>number<sp/>generator.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Created:<sp/><sp/>2019-05-26</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/><sp/>Dilawar<sp/>Singh<sp/>&lt;dilawars@ncbs.res.in&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Organization:<sp/><sp/>NCBS<sp/>Bangalore</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>License:<sp/><sp/>MIT<sp/>License</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RNG_8h" kindref="compound">RNG.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemoose" kindref="compound">moose</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classmoose_1_1RNG_1a61d5482ec6936815add03c6dd4675c62" refkind="member"><highlight class="normal"><ref refid="classmoose_1_1RNG_1a61d5482ec6936815add03c6dd4675c62" kindref="member">RNG::RNG</ref><sp/>()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>constructor<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>a<sp/>random<sp/>seed<sp/>if<sp/>possible.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1RNG_1a2140f3659708716dd16ec0f6d1da9fc0" kindref="member">setRandomSeed</ref>(<sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classmoose_1_1RNG_1a6c3adda1f79506675466e2d0938de9bc" refkind="member"><highlight class="normal"><ref refid="classmoose_1_1RNG_1a6c3adda1f79506675466e2d0938de9bc" kindref="member">RNG::~RNG</ref><sp/>()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>destructor<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{<sp/>;<sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classmoose_1_1RNG_1a2140f3659708716dd16ec0f6d1da9fc0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1a2140f3659708716dd16ec0f6d1da9fc0" kindref="member">RNG::setRandomSeed</ref>(<sp/>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1a0ab6a7a2c0619ddf693014b4cafffd35" kindref="member">MOOSE_RANDOM_DEVICE</ref><sp/>rd_;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1RNG_1ad310f016166b1548e23fb8f3b54f83d7" kindref="member">setSeed</ref>(<sp/>rd_()<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classmoose_1_1RNG_1ae0af704830f9e74f2b32bcb3e0772853" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1ae0af704830f9e74f2b32bcb3e0772853" kindref="member">RNG::getSeed</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1ad42ecf5e98dde96675ab3193cc38d249" kindref="member">seed_</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classmoose_1_1RNG_1ad310f016166b1548e23fb8f3b54f83d7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1ad310f016166b1548e23fb8f3b54f83d7" kindref="member">RNG::setSeed</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>seed<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1RNG_1ad42ecf5e98dde96675ab3193cc38d249" kindref="member">seed_</ref><sp/>=<sp/>seed;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>seed<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1a0ab6a7a2c0619ddf693014b4cafffd35" kindref="member">MOOSE_RANDOM_DEVICE</ref><sp/>rd_;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1RNG_1ad42ecf5e98dde96675ab3193cc38d249" kindref="member">seed_</ref><sp/>=<sp/>rd_();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1RNG_1a7bb2b0f7dfe128dff41b0e104c307987" kindref="member">rng_</ref>.seed(<sp/>seed);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classmoose_1_1RNG_1a9337240a35e8230966e80c9d174292b1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1a6fec47558673d4d721a6918bb43b3fd3" kindref="member">RNG::uniform</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>b<sp/>-<sp/>a<sp/>)<sp/>*<sp/><ref refid="classmoose_1_1RNG_1ac22218256d4f5c21de914a0720965b4b" kindref="member">dist_</ref>(<sp/><ref refid="classmoose_1_1RNG_1a7bb2b0f7dfe128dff41b0e104c307987" kindref="member">rng_</ref><sp/>)<sp/>+<sp/>a;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classmoose_1_1RNG_1a6fec47558673d4d721a6918bb43b3fd3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1a6fec47558673d4d721a6918bb43b3fd3" kindref="member">RNG::uniform</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1ac22218256d4f5c21de914a0720965b4b" kindref="member">dist_</ref>(<sp/><ref refid="classmoose_1_1RNG_1a7bb2b0f7dfe128dff41b0e104c307987" kindref="member">rng_</ref><sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/RNG.cpp"/>
+  </compounddef>
+</doxygen>

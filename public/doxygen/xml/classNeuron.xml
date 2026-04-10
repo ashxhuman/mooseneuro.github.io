@@ -1,0 +1,2043 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classNeuron" kind="class" language="C++" prot="public">
+    <compoundname>Neuron</compoundname>
+    <includes refid="Neuron_8h" local="no">Neuron.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classNeuron_1ad560c35baaea0fca0d5dd4a9f825405d" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; Id &gt; &gt; Neuron::allSpinesPerCompt_</definition>
+        <argsstring></argsstring>
+        <name>allSpinesPerCompt_</name>
+        <qualifiedname>Neuron::allSpinesPerCompt_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of each compt in each spine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Ids of all spines on each compt, looked up by segIndex of compt. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="135" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="135" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" compoundref="Neuron_8cpp" startline="1408" endline="1455">buildSegmentTree</referencedby>
+        <referencedby refid="classNeuron_1ae6f58acdca796e8b88d2fc928eea2a8c" compoundref="Neuron_8cpp" startline="1083" endline="1094">getParentCompartmentOfSpine</referencedby>
+        <referencedby refid="classNeuron_1a1c1ea8e1df6507ac1a3e43b344465624" compoundref="Neuron_8cpp" startline="1067" endline="1081">getSpinesOnCompartment</referencedby>
+        <referencedby refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a7b7069cf5d4113d0eb1802c876d91bf9" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classSwcBranch" kindref="compound">SwcBranch</ref> &gt;</type>
+        <definition>vector&lt; SwcBranch &gt; Neuron::branches_</definition>
+        <argsstring></argsstring>
+        <name>branches_</name>
+        <qualifiedname>Neuron::branches_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="156" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="156" bodyend="-1"/>
+        <referencedby refid="classNeuron_1ab438c873e24148952d736d105eb7a48f" compoundref="Neuron_8cpp" startline="936" endline="939">getNumBranches</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a1e7eaf7759c350e443acaac4b5938f38" prot="private" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; Neuron::channelDistribution_</definition>
+        <argsstring></argsstring>
+        <name>channelDistribution_</name>
+        <qualifiedname>Neuron::channelDistribution_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="124" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="classNeuron_1aa5ce66f3dd5c314b23be80cc15b93dbc" compoundref="Neuron_8cpp" startline="1204" endline="1207">getChannelDistribution</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a3bfd45614804470cba50d1862683eea8" compoundref="Neuron_8cpp" startline="1159" endline="1202">setChannelDistribution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a05db5929ab4c75eda722fe6b2503534a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::CM_</definition>
+        <argsstring></argsstring>
+        <name>CM_</name>
+        <qualifiedname>Neuron::CM_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="114" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a6c9e216be161740df694e2fa1a7705b1" compoundref="Neuron_8cpp" startline="865" endline="868">getCM</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a166183db4e9169a8d30384037ca57c16" compoundref="Neuron_8cpp" startline="858" endline="864">setCM</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1ae62b7e5af2eb01460a6ffd8e65e99291" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::compartmentLengthInLambdas_</definition>
+        <argsstring></argsstring>
+        <name>compartmentLengthInLambdas_</name>
+        <qualifiedname>Neuron::compartmentLengthInLambdas_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="123" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classNeuron_1ae17d18d94a89ad6d4cdd905c6fc8381d" compoundref="Neuron_8cpp" startline="919" endline="922">getCompartmentLengthInLambdas</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1ad724cd1e360729cc9b77a430b8465ebf" compoundref="Neuron_8cpp" startline="915" endline="918">setCompartmentLengthInLambdas</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a3d88085ac7b716e387ae700e52948110" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::Em_</definition>
+        <argsstring></argsstring>
+        <name>Em_</name>
+        <qualifiedname>Neuron::Em_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="115" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="classNeuron_1ab32b7adba76d718975253ec6db9fa293" compoundref="Neuron_8cpp" startline="875" endline="878">getEm</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1ad5ff9c4771ee277c5c7a2b7aa150e6d9" compoundref="Neuron_8cpp" startline="871" endline="874">setEm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a89035fa443f830334bf5673e3a9445c5" prot="private" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id Neuron::headDsolve_</definition>
+        <argsstring></argsstring>
+        <name>headDsolve_</name>
+        <qualifiedname>Neuron::headDsolve_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="144" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="classNeuron_1aa4070aa9ee1a8d7ab849d858206bdafa" compoundref="Neuron_8cpp" startline="2173" endline="2197">scaleHeadDiffusion</referencedby>
+        <referencedby refid="classNeuron_1a4e790760039a0c0ef49fdd207a9958d3" compoundref="Neuron_8cpp" startline="2161" endline="2170">scaleShaftDiffusion</referencedby>
+        <referencedby refid="classNeuron_1a2a8be1a9323c59518f0e52c3b93f1b06" compoundref="Neuron_8cpp" startline="1511" endline="1515">setSpineAndPsdDsolve</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a7533f3d27cc3baa84a92344cea9ebd7c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::maxG_</definition>
+        <argsstring></argsstring>
+        <name>maxG_</name>
+        <qualifiedname>Neuron::maxG_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="119" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" compoundref="Neuron_8cpp" startline="1379" endline="1405">updateSegmentLengths</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1ab8083822bb7d153e0633aa60bf241679" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::maxL_</definition>
+        <argsstring></argsstring>
+        <name>maxL_</name>
+        <qualifiedname>Neuron::maxL_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="120" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" compoundref="Neuron_8cpp" startline="1379" endline="1405">updateSegmentLengths</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a25abd63b55d7d355a6cdab408efbb2de" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::maxP_</definition>
+        <argsstring></argsstring>
+        <name>maxP_</name>
+        <qualifiedname>Neuron::maxP_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="118" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" compoundref="Neuron_8cpp" startline="1379" endline="1405">updateSegmentLengths</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a0927ab3983ca8fc73953b5f306453a19" prot="private" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; Neuron::passiveDistribution_</definition>
+        <argsstring></argsstring>
+        <name>passiveDistribution_</name>
+        <qualifiedname>Neuron::passiveDistribution_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="125" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="classNeuron_1ae8c0bd411b7149585a734538156b3c3d" compoundref="Neuron_8cpp" startline="1229" endline="1232">getPassiveDistribution</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a16b48cc319ac10558c2ccb1d2c9ca75a" compoundref="Neuron_8cpp" startline="1209" endline="1227">setPassiveDistribution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a3c9b94966847273a04b38a61c0e6b777" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::phi_</definition>
+        <argsstring></argsstring>
+        <name>phi_</name>
+        <qualifiedname>Neuron::phi_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="117" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a06da9b61a2b3f374053642520a0271bf" compoundref="Neuron_8cpp" startline="897" endline="900">getPhi</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a57c292ebfd9eb6cbb153871755b9cc4d" compoundref="Neuron_8cpp" startline="892" endline="896">setPhi</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a623c6228a7c05f724dbe5c94c576ea17" prot="private" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id Neuron::psdDsolve_</definition>
+        <argsstring></argsstring>
+        <name>psdDsolve_</name>
+        <qualifiedname>Neuron::psdDsolve_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of the <ref refid="classDsolve" kindref="compound">Dsolve</ref> for the head compt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="145" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="classNeuron_1aa4070aa9ee1a8d7ab849d858206bdafa" compoundref="Neuron_8cpp" startline="2173" endline="2197">scaleHeadDiffusion</referencedby>
+        <referencedby refid="classNeuron_1a2a8be1a9323c59518f0e52c3b93f1b06" compoundref="Neuron_8cpp" startline="1511" endline="1515">setSpineAndPsdDsolve</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a4fc286616a7cf5a753c8c93e2833dc40" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; Neuron::psdStoich_</definition>
+        <argsstring></argsstring>
+        <name>psdStoich_</name>
+        <qualifiedname>Neuron::psdStoich_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of stoich associated with each PSD. Typically all the same. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="140" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</referencedby>
+        <referencedby refid="classNeuron_1aa0a928e134c34e2687b76b5950a13332" compoundref="Neuron_8cpp" startline="2122" endline="2158">scaleBufAndRates</referencedby>
+        <referencedby refid="classNeuron_1a8a6f8c3a68488eacf6a202404da32c57" compoundref="Neuron_8cpp" startline="1459" endline="1509">setSpineAndPsdMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a8c0e5343ca389879b0a5cfa32e26a54f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::RA_</definition>
+        <argsstring></argsstring>
+        <name>RA_</name>
+        <qualifiedname>Neuron::RA_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="113" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a328dd5695053433105294695fe66c2ca" compoundref="Neuron_8cpp" startline="853" endline="856">getRA</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a8df9d0dea9e7d55e1c380dca1ab9b659" compoundref="Neuron_8cpp" startline="846" endline="852">setRA</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1abb7aec5cc9c2cf4386c4adaf764b3f12" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::RM_</definition>
+        <argsstring></argsstring>
+        <name>RM_</name>
+        <qualifiedname>Neuron::RM_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="112" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a7afe7ba5d981f707f8f37a2af2498807" compoundref="Neuron_8cpp" startline="841" endline="844">getRM</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2a249f2ec0981672a8745e1e03dc477f" compoundref="Neuron_8cpp" startline="834" endline="840">setRM</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a6d453261f3aa8a7773d56a47b32ab2e4" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; Neuron::segId_</definition>
+        <argsstring></argsstring>
+        <name>segId_</name>
+        <qualifiedname>Neuron::segId_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="154" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="154" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" compoundref="Neuron_8cpp" startline="1408" endline="1455">buildSegmentTree</referencedby>
+        <referencedby refid="classNeuron_1aec4a886bd31c3bdeaf1f5accfa507751" compoundref="Neuron_8cpp" startline="965" endline="971">getCompartments</referencedby>
+        <referencedby refid="classNeuron_1a042225535e845c90d79d12e8c41ffdd1" compoundref="Neuron_8cpp" startline="924" endline="927">getNumCompartments</referencedby>
+        <referencedby refid="classNeuron_1ae6f58acdca796e8b88d2fc928eea2a8c" compoundref="Neuron_8cpp" startline="1083" endline="1094">getParentCompartmentOfSpine</referencedby>
+        <referencedby refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</referencedby>
+        <referencedby refid="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" compoundref="Neuron_8cpp" startline="1379" endline="1405">updateSegmentLengths</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a8eedbd34a469ed70bd9bfca7bfdbeada" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="classId" kindref="compound">Id</ref>, unsigned int &gt;</type>
+        <definition>map&lt; Id, unsigned int &gt; Neuron::segIndex_</definition>
+        <argsstring></argsstring>
+        <name>segIndex_</name>
+        <qualifiedname>Neuron::segIndex_</qualifiedname>
+        <briefdescription>
+<para>Map to look up Seg index from <ref refid="classId" kindref="compound">Id</ref> of associated compt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="129" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" compoundref="Neuron_8cpp" startline="1408" endline="1455">buildSegmentTree</referencedby>
+        <referencedby refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</referencedby>
+        <referencedby refid="classNeuron_1a1c1ea8e1df6507ac1a3e43b344465624" compoundref="Neuron_8cpp" startline="1067" endline="1081">getSpinesOnCompartment</referencedby>
+        <referencedby refid="classNeuron_1a0487cb87eb56bf5b19e0d40c61a1eb67" compoundref="Neuron_8cpp" startline="1913" endline="1951">makeSpacingDistrib</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classSwcSegment" kindref="compound">SwcSegment</ref> &gt;</type>
+        <definition>vector&lt; SwcSegment &gt; Neuron::segs_</definition>
+        <argsstring></argsstring>
+        <name>segs_</name>
+        <qualifiedname>Neuron::segs_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of compartment in each Seg entry, below. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="155" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="155" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" compoundref="Neuron_8cpp" startline="1408" endline="1455">buildSegmentTree</referencedby>
+        <referencedby refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</referencedby>
+        <referencedby refid="classNeuron_1a596bdc3cb2be53165aa65c9ca4138698" compoundref="Neuron_8cpp" startline="957" endline="963">getElecDistFromSoma</referencedby>
+        <referencedby refid="classNeuron_1ac1e28f27e5ad1924e6cda8996d8da376" compoundref="Neuron_8cpp" startline="949" endline="955">getGeomDistFromSoma</referencedby>
+        <referencedby refid="classNeuron_1a8eaf81e49667cc546ce31e95fbada648" compoundref="Neuron_8cpp" startline="941" endline="947">getPathDistFromSoma</referencedby>
+        <referencedby refid="classNeuron_1a0487cb87eb56bf5b19e0d40c61a1eb67" compoundref="Neuron_8cpp" startline="1913" endline="1951">makeSpacingDistrib</referencedby>
+        <referencedby refid="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" compoundref="Neuron_8cpp" startline="1379" endline="1405">updateSegmentLengths</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a5f7ebfaac0ddb3ffe333214a18928e6b" prot="private" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id Neuron::soma_</definition>
+        <argsstring></argsstring>
+        <name>soma_</name>
+        <qualifiedname>Neuron::soma_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="121" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" compoundref="Neuron_8cpp" startline="1408" endline="1455">buildSegmentTree</referencedby>
+        <referencedby refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</referencedby>
+        <referencedby refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</referencedby>
+        <referencedby refid="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" compoundref="Neuron_8cpp" startline="1379" endline="1405">updateSegmentLengths</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a1382886862f9c75bfa0d6d93b0c517ac" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Neuron::sourceFile_</definition>
+        <argsstring></argsstring>
+        <name>sourceFile_</name>
+        <qualifiedname>Neuron::sourceFile_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="122" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a94cb20b76ec2418befb81dc35db8ce3f" compoundref="Neuron_8cpp" startline="909" endline="912">getSourceFile</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a81782a00c89930d2132c093595d0b9c6" compoundref="Neuron_8cpp" startline="903" endline="907">setSourceFile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a9b01222ab1e7103ebc85b90eacbeb9e5" prot="private" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; Neuron::spineDistribution_</definition>
+        <argsstring></argsstring>
+        <name>spineDistribution_</name>
+        <qualifiedname>Neuron::spineDistribution_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="126" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a939394b1db23714157c445b0753bc85f" compoundref="Neuron_8cpp" startline="1251" endline="1254">getSpineDistribution</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1ae6ffb87ff245f2f4eaaa0c1e5a1b6e39" compoundref="Neuron_8cpp" startline="1234" endline="1249">setSpineDistribution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1af1663bb8f858a3254398046b16309444" prot="private" static="no" mutable="no">
+        <type><ref refid="classSpine" kindref="compound">Spine</ref></type>
+        <definition>Spine Neuron::spineEntry_</definition>
+        <argsstring></argsstring>
+        <name>spineEntry_</name>
+        <qualifiedname>Neuron::spineEntry_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of the <ref refid="classDsolve" kindref="compound">Dsolve</ref> for the PSD compt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Holder for spine operations. Contains pointer to current <ref refid="classNeuron" kindref="compound">Neuron</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="152" column="11" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="152" bodyend="-1"/>
+        <referencedby refid="classNeuron_1ac02d0c034fad07ab348c67c9ce62dd0c" compoundref="Neuron_8cpp" startline="2095" endline="2098">lookupSpine</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1ac1c4430a65107d49fa58212836fe87d9" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; Neuron::spineParentSegIndex_</definition>
+        <argsstring></argsstring>
+        <name>spineParentSegIndex_</name>
+        <qualifiedname>Neuron::spineParentSegIndex_</qualifiedname>
+        <briefdescription>
+<para>Look up seg index of parent compartment, from index of spine. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="131" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1ab5a959153c3f76b9bc3111d1fd26682f" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; Id &gt; &gt; Neuron::spines_</definition>
+        <argsstring></argsstring>
+        <name>spines_</name>
+        <qualifiedname>Neuron::spines_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="132" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="132" bodyend="-1"/>
+        <referencedby refid="classNeuron_1ac38c66b442f38a538d43a399cf5c24c8" compoundref="Neuron_8cpp" startline="2106" endline="2109">getNumSpines</referencedby>
+        <referencedby refid="classNeuron_1a4d602d7adc58494c30817531699d6f89" compoundref="Neuron_8cpp" startline="1096" endline="1108">getSpineFromCompartment</referencedby>
+        <referencedby refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</referencedby>
+        <referencedby refid="classNeuron_1a8a6f8c3a68488eacf6a202404da32c57" compoundref="Neuron_8cpp" startline="1459" endline="1509">setSpineAndPsdMesh</referencedby>
+        <referencedby refid="classNeuron_1aedd17f546d07f7c6e21697e57ed59f0e" compoundref="Neuron_8cpp" startline="2114" endline="2120">spineIds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1ab48dcd3340fe0635f0366d5fab8d421e" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; Neuron::spineStoich_</definition>
+        <argsstring></argsstring>
+        <name>spineStoich_</name>
+        <qualifiedname>Neuron::spineStoich_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of stoich associated with each spine. Typically all the same. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="138" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</referencedby>
+        <referencedby refid="classNeuron_1aa0a928e134c34e2687b76b5950a13332" compoundref="Neuron_8cpp" startline="2122" endline="2158">scaleBufAndRates</referencedby>
+        <referencedby refid="classNeuron_1a8a6f8c3a68488eacf6a202404da32c57" compoundref="Neuron_8cpp" startline="1459" endline="1509">setSpineAndPsdMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1aef2f6e2f24dfc65831cbe15cb7759252" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; Neuron::spineToMeshOrdering_</definition>
+        <argsstring></argsstring>
+        <name>spineToMeshOrdering_</name>
+        <qualifiedname>Neuron::spineToMeshOrdering_</qualifiedname>
+        <briefdescription>
+<para>looks up spine/psd mesh index from FieldIndex of selected spine. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="142" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="142" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</referencedby>
+        <referencedby refid="classNeuron_1aa0a928e134c34e2687b76b5950a13332" compoundref="Neuron_8cpp" startline="2122" endline="2158">scaleBufAndRates</referencedby>
+        <referencedby refid="classNeuron_1aa4070aa9ee1a8d7ab849d858206bdafa" compoundref="Neuron_8cpp" startline="2173" endline="2197">scaleHeadDiffusion</referencedby>
+        <referencedby refid="classNeuron_1a4e790760039a0c0ef49fdd207a9958d3" compoundref="Neuron_8cpp" startline="2161" endline="2170">scaleShaftDiffusion</referencedby>
+        <referencedby refid="classNeuron_1a8a6f8c3a68488eacf6a202404da32c57" compoundref="Neuron_8cpp" startline="1459" endline="1509">setSpineAndPsdMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuron_1a3922ae64e2ce3a5145454cd0c89f9e80" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Neuron::theta_</definition>
+        <argsstring></argsstring>
+        <name>theta_</name>
+        <qualifiedname>Neuron::theta_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="116" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="classNeuron_1a7316d0b8cf0b2b0dce829d8a79d88dc5" compoundref="Neuron_8cpp" startline="886" endline="889">getTheta</referencedby>
+        <referencedby refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" compoundref="Neuron_8cpp" startline="565" endline="581">Neuron</referencedby>
+        <referencedby refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" compoundref="Neuron_8cpp" startline="585" endline="604">Neuron</referencedby>
+        <referencedby refid="classNeuron_1aa823bd64228536d0ae39627c31460abd" compoundref="Neuron_8cpp" startline="881" endline="885">setTheta</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classNeuron_1a16e992d3d50696b5d9e5bded202398b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::buildElist</definition>
+        <argsstring>(const Eref &amp;e, const vector&lt; string &gt; &amp;line, vector&lt; ObjId &gt; &amp;elist, vector&lt; double &gt; &amp;val)</argsstring>
+        <name>buildElist</name>
+        <qualifiedname>Neuron::buildElist</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt; &amp;</type>
+          <declname>elist</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="84" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1143" bodyend="1157"/>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</references>
+        <references refid="classShell_1a785e67537b5ece8a0ffd8eb822458873" compoundref="Shell_8cpp" startline="555" endline="558">Shell::getCwe</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classEref_1ab305a4ab972b50443b7d35cfd516861a" compoundref="Eref_8cpp" startline="63" endline="66">Eref::objId</references>
+        <references refid="classShell_1a611e99414a5564b9eb0fca16353aa195" compoundref="Shell_8cpp" startline="550" endline="553">Shell::setCwe</references>
+        <references refid="Wildcard_8h_1a27276dfc7bbd74b605ee985d4bc75615" compoundref="Wildcard_8cpp" startline="149" endline="156">wildcardFind</references>
+        <referencedby refid="classNeuron_1a3bfd45614804470cba50d1862683eea8" compoundref="Neuron_8cpp" startline="1159" endline="1202">setChannelDistribution</referencedby>
+        <referencedby refid="classNeuron_1a16b48cc319ac10558c2ccb1d2c9ca75a" compoundref="Neuron_8cpp" startline="1209" endline="1227">setPassiveDistribution</referencedby>
+        <referencedby refid="classNeuron_1ae6ffb87ff245f2f4eaaa0c1e5a1b6e39" compoundref="Neuron_8cpp" startline="1234" endline="1249">setSpineDistribution</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::buildSegmentTree</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>buildSegmentTree</name>
+        <qualifiedname>Neuron::buildSegmentTree</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Fills up vector of segments. First entry is soma. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="64" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1408" bodyend="1455"/>
+        <references refid="classSwcSegment_1a527ac0592dc33110466a7dd5e0549fb4" compoundref="SwcSegment_8h" startline="56" endline="58">SwcSegment::addChild</references>
+        <references refid="classNeuron_1ad560c35baaea0fca0d5dd4a9f825405d" compoundref="Neuron_8h" startline="135">allSpinesPerCompt_</references>
+        <references refid="classNeutral_1aa7d356ebdc188aa0ba82c5d3d28e118d" compoundref="Neutral_8cpp" startline="325" endline="366">Neutral::children</references>
+        <references refid="classSwcSegment_1a8a71ec52aa5a00196ebe2f740f749c04" compoundref="SwcSegment_8cpp" startline="77" endline="86">SwcSegment::figureOutType</references>
+        <references refid="Neuron_8cpp_1a925535d03b371e2c892dea16b63fe21a" compoundref="Neuron_8cpp" startline="1287" endline="1319">fillSegIndex</references>
+        <references refid="Neuron_8cpp_1a8b0b655c62ca1ff263c08db5f25b2ebc" compoundref="Neuron_8cpp" startline="1321" endline="1354">fillSegments</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classSwcSegment_1a6bd611aed4bd9fde19d0cd1f45bc6b66" compoundref="SwcSegment_8h" startline="44" endline="46">SwcSegment::parent</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classNeuron_1a6d453261f3aa8a7773d56a47b32ab2e4" compoundref="Neuron_8h" startline="154">segId_</references>
+        <references refid="classNeuron_1a8eedbd34a469ed70bd9bfca7bfdbeada" compoundref="Neuron_8h" startline="129">segIndex_</references>
+        <references refid="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" compoundref="Neuron_8h" startline="155">segs_</references>
+        <references refid="classNeuron_1a5f7ebfaac0ddb3ffe333214a18928e6b" compoundref="Neuron_8h" startline="121">soma_</references>
+        <references refid="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" compoundref="Neuron_8cpp" startline="1379" endline="1405">updateSegmentLengths</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::evalExprForElist</definition>
+        <argsstring>(const vector&lt; ObjId &gt; &amp;elist, const string &amp;expn, vector&lt; double &gt; &amp;val) const</argsstring>
+        <name>evalExprForElist</name>
+        <qualifiedname>Neuron::evalExprForElist</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt; &amp;</type>
+          <declname>elist</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>expn</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evaluates expn for every CompartmentBase entry in elist. Pushes value, length and dia for each elist entry into the &apos;val&apos; vector. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="89" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1527" bodyend="1592"/>
+        <references refid="classVec_1a226019f1225faafaec3dc235724a418d" compoundref="Vec_8h" startline="34" endline="36">Vec::a0</references>
+        <references refid="classVec_1a702d1ea183ea05e153f22e4631b57e3f" compoundref="Vec_8h" startline="37" endline="39">Vec::a1</references>
+        <references refid="classVec_1a445c0d24660fdd56d4dc4179518c4d80" compoundref="Vec_8h" startline="40" endline="42">Vec::a2</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46ac2d9357593ad58abe4df62f09703b91a" compoundref="Neuron_8cpp" startline="67">nuParser::DIA</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46a787023d0dab9023a6471d22f21139113" compoundref="Neuron_8cpp" startline="67">nuParser::EL</references>
+        <references refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" compoundref="ObjId_8cpp" startline="125" endline="128">ObjId::element</references>
+        <references refid="classnuParser_1ae11d3ea466758bbbfea900177b4469f7" compoundref="Neuron_8cpp" startline="76" endline="91">nuParser::eval</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46a88e61c52c75c31e8f2f7115aa00df6ff" compoundref="Neuron_8cpp" startline="67">nuParser::EXPR</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46a1d8c06dc25bafb2d1e0a17dd45b8c4d5" compoundref="Neuron_8cpp" startline="67">nuParser::G</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classSwcSegment_1ae5976395853615f3712e04401c2708fb" compoundref="SwcSegment_8h" startline="117" endline="119">SwcSegment::getElecDistFromSoma</references>
+        <references refid="classSwcSegment_1a780b9266b1a56bce72e13fa3802112c1" compoundref="SwcSegment_8h" startline="113" endline="115">SwcSegment::getGeomDistFromSoma</references>
+        <references refid="structmoose_1_1Parser_1_1ParserException_1ac9c3c6f3dc862c7f00bf0273e0af34af" compoundref="MooseParser_8h" startline="44" endline="47">moose::Parser::ParserException::GetMsg</references>
+        <references refid="classSwcSegment_1a59607425553fc0d73639fb9abbb9ca53" compoundref="SwcSegment_8h" startline="109" endline="111">SwcSegment::getPathDistFromSoma</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46ae092f4c64e72d216844adc14597d26de" compoundref="Neuron_8cpp" startline="67">nuParser::LEN</references>
+        <references refid="classVec_1a8ca1500a4af59994b8c7014a3916e817" compoundref="Vec_8cpp" startline="18" endline="20">Vec::length</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46a5a2c325e16d3058f55d3ebbce9caa100" compoundref="Neuron_8cpp" startline="67">nuParser::MAXG</references>
+        <references refid="classNeuron_1a7533f3d27cc3baa84a92344cea9ebd7c" compoundref="Neuron_8h" startline="119">maxG_</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46aa34d7a64f0d74d2039110dd79f396676" compoundref="Neuron_8cpp" startline="67">nuParser::MAXL</references>
+        <references refid="classNeuron_1ab8083822bb7d153e0633aa60bf241679" compoundref="Neuron_8h" startline="120">maxL_</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46ada8bc4ceb94a1894226474102ba95d58" compoundref="Neuron_8cpp" startline="67">nuParser::MAXP</references>
+        <references refid="classNeuron_1a25abd63b55d7d355a6cdab408efbb2de" compoundref="Neuron_8h" startline="118">maxP_</references>
+        <references refid="classnuParser_1ad4be6cdef5fbc01551a546439a0e28de" compoundref="Neuron_8cpp" startline="93">nuParser::numVal</references>
+        <references refid="classnuParser_1acefd8c2af549c61f58dd09ca8c265d53" compoundref="Neuron_8cpp" startline="30" endline="64">nuParser::nuParser</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46a6003e62206ff7d35581296d9e0c9c5fe" compoundref="Neuron_8cpp" startline="68">nuParser::OLDVAL</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46a2e94cb2203b157b89b47932a2aaceeac" compoundref="Neuron_8cpp" startline="67">nuParser::P</references>
+        <references refid="classNeuron_1a8eedbd34a469ed70bd9bfca7bfdbeada" compoundref="Neuron_8h" startline="129">segIndex_</references>
+        <references refid="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" compoundref="Neuron_8h" startline="155">segs_</references>
+        <references refid="classNeuron_1a5f7ebfaac0ddb3ffe333214a18928e6b" compoundref="Neuron_8h" startline="121">soma_</references>
+        <references refid="classSwcSegment_1a8fd6b3e36a70d597fe20f93fbed60082" compoundref="SwcSegment_8h" startline="91" endline="93">SwcSegment::vec</references>
+        <references refid="classVec_1ae9852b7e40650f19652ffb59cd664442" compoundref="Vec_8cpp" startline="14" endline="16">Vec::Vec</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46ab1bde87668a049a011e8fc585101a705" compoundref="Neuron_8cpp" startline="68">nuParser::X</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46ab61ea8fb57e1028e138777313b455d12" compoundref="Neuron_8cpp" startline="68">nuParser::Y</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46ac744f0ad9d9e6bb7e96bc3f81dce7fdb" compoundref="Neuron_8cpp" startline="68">nuParser::Z</references>
+        <referencedby refid="classNeuron_1a16e992d3d50696b5d9e5bded202398b8" compoundref="Neuron_8cpp" startline="1143" endline="1157">buildElist</referencedby>
+        <referencedby refid="classNeuron_1ab691922aeaca232edf5ac050abad7ded" compoundref="Neuron_8cpp" startline="979" endline="1002">getExprElist</referencedby>
+        <referencedby refid="classNeuron_1a224304593cd2509d1ea0acc182148630" compoundref="Neuron_8cpp" startline="1011" endline="1027">getExprVal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1aa5ce66f3dd5c314b23be80cc15b93dbc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; Neuron::getChannelDistribution</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getChannelDistribution</name>
+        <qualifiedname>Neuron::getChannelDistribution</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="58" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1204" bodyend="1207"/>
+        <references refid="classNeuron_1a1e7eaf7759c350e443acaac4b5938f38" compoundref="Neuron_8h" startline="124">channelDistribution_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a6c9e216be161740df694e2fa1a7705b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Neuron::getCM</definition>
+        <argsstring>() const</argsstring>
+        <name>getCM</name>
+        <qualifiedname>Neuron::getCM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="28" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="865" bodyend="868"/>
+        <references refid="classNeuron_1a05db5929ab4c75eda722fe6b2503534a" compoundref="Neuron_8h" startline="114">CM_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ae17d18d94a89ad6d4cdd905c6fc8381d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Neuron::getCompartmentLengthInLambdas</definition>
+        <argsstring>() const</argsstring>
+        <name>getCompartmentLengthInLambdas</name>
+        <qualifiedname>Neuron::getCompartmentLengthInLambdas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="38" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="919" bodyend="922"/>
+        <references refid="classNeuron_1ae62b7e5af2eb01460a6ffd8e65e99291" compoundref="Neuron_8h" startline="123">compartmentLengthInLambdas_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1aec4a886bd31c3bdeaf1f5accfa507751" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt;</type>
+        <definition>vector&lt; ObjId &gt; Neuron::getCompartments</definition>
+        <argsstring>() const</argsstring>
+        <name>getCompartments</name>
+        <qualifiedname>Neuron::getCompartments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="44" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="965" bodyend="971"/>
+        <references refid="classNeuron_1a6d453261f3aa8a7773d56a47b32ab2e4" compoundref="Neuron_8h" startline="154">segId_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a596bdc3cb2be53165aa65c9ca4138698" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; Neuron::getElecDistFromSoma</definition>
+        <argsstring>() const</argsstring>
+        <name>getElecDistFromSoma</name>
+        <qualifiedname>Neuron::getElecDistFromSoma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="43" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="957" bodyend="963"/>
+        <references refid="classSwcSegment_1ae5976395853615f3712e04401c2708fb" compoundref="SwcSegment_8h" startline="117" endline="119">SwcSegment::getElecDistFromSoma</references>
+        <references refid="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" compoundref="Neuron_8h" startline="155">segs_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ab32b7adba76d718975253ec6db9fa293" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Neuron::getEm</definition>
+        <argsstring>() const</argsstring>
+        <name>getEm</name>
+        <qualifiedname>Neuron::getEm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="30" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="875" bodyend="878"/>
+        <references refid="classNeuron_1a3d88085ac7b716e387ae700e52948110" compoundref="Neuron_8h" startline="115">Em_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ab691922aeaca232edf5ac050abad7ded" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt;</type>
+        <definition>vector&lt; ObjId &gt; Neuron::getExprElist</definition>
+        <argsstring>(const Eref &amp;e, string line) const</argsstring>
+        <name>getExprElist</name>
+        <qualifiedname>Neuron::getExprElist</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Digest the path and the math expression to obtain an elist of compartments that satisfy both criteria. The argument &apos;line&apos; has path followed by the math expression, separated by a space. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="45" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="979" bodyend="1002"/>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</references>
+        <references refid="classShell_1a785e67537b5ece8a0ffd8eb822458873" compoundref="Shell_8cpp" startline="555" endline="558">Shell::getCwe</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classnuParser_1ad4be6cdef5fbc01551a546439a0e28de" compoundref="Neuron_8cpp" startline="93">nuParser::numVal</references>
+        <references refid="classEref_1ab305a4ab972b50443b7d35cfd516861a" compoundref="Eref_8cpp" startline="63" endline="66">Eref::objId</references>
+        <references refid="classShell_1a611e99414a5564b9eb0fca16353aa195" compoundref="Shell_8cpp" startline="550" endline="553">Shell::setCwe</references>
+        <references refid="Wildcard_8h_1a27276dfc7bbd74b605ee985d4bc75615" compoundref="Wildcard_8cpp" startline="149" endline="156">wildcardFind</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a224304593cd2509d1ea0acc182148630" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; Neuron::getExprVal</definition>
+        <argsstring>(const Eref &amp;e, string line) const</argsstring>
+        <name>getExprVal</name>
+        <qualifiedname>Neuron::getExprVal</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Digest the path and the math expression to obtain all the values pertaining to the elements in the path. There are <ref refid="classnuParser_1ad4be6cdef5fbc01551a546439a0e28de" kindref="member">nuParser::numVal</ref> * elist.size() entries. The argument &apos;line&apos; has path followed by the math expression, separated by a space. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="46" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1011" bodyend="1027"/>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" compoundref="Neuron_8cpp" startline="1527" endline="1592">evalExprForElist</references>
+        <references refid="classShell_1a785e67537b5ece8a0ffd8eb822458873" compoundref="Shell_8cpp" startline="555" endline="558">Shell::getCwe</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classEref_1ab305a4ab972b50443b7d35cfd516861a" compoundref="Eref_8cpp" startline="63" endline="66">Eref::objId</references>
+        <references refid="classShell_1a611e99414a5564b9eb0fca16353aa195" compoundref="Shell_8cpp" startline="550" endline="553">Shell::setCwe</references>
+        <references refid="Wildcard_8h_1a27276dfc7bbd74b605ee985d4bc75615" compoundref="Wildcard_8cpp" startline="149" endline="156">wildcardFind</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ac1e28f27e5ad1924e6cda8996d8da376" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; Neuron::getGeomDistFromSoma</definition>
+        <argsstring>() const</argsstring>
+        <name>getGeomDistFromSoma</name>
+        <qualifiedname>Neuron::getGeomDistFromSoma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="42" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="949" bodyend="955"/>
+        <references refid="classSwcSegment_1a780b9266b1a56bce72e13fa3802112c1" compoundref="SwcSegment_8h" startline="113" endline="115">SwcSegment::getGeomDistFromSoma</references>
+        <references refid="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" compoundref="Neuron_8h" startline="155">segs_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ab438c873e24148952d736d105eb7a48f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Neuron::getNumBranches</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumBranches</name>
+        <qualifiedname>Neuron::getNumBranches</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="40" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="936" bodyend="939"/>
+        <references refid="classNeuron_1a7b7069cf5d4113d0eb1802c876d91bf9" compoundref="Neuron_8h" startline="156">branches_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a042225535e845c90d79d12e8c41ffdd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Neuron::getNumCompartments</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumCompartments</name>
+        <qualifiedname>Neuron::getNumCompartments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="39" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="924" bodyend="927"/>
+        <references refid="classNeuron_1a6d453261f3aa8a7773d56a47b32ab2e4" compoundref="Neuron_8h" startline="154">segId_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ac38c66b442f38a538d43a399cf5c24c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Neuron::getNumSpines</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumSpines</name>
+        <qualifiedname>Neuron::getNumSpines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="97" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="2106" bodyend="2109"/>
+        <references refid="classNeuron_1ab5a959153c3f76b9bc3111d1fd26682f" compoundref="Neuron_8h" startline="132">spines_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ae6f58acdca796e8b88d2fc928eea2a8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+        <definition>ObjId Neuron::getParentCompartmentOfSpine</definition>
+        <argsstring>(const Eref &amp;e, ObjId compt) const</argsstring>
+        <name>getParentCompartmentOfSpine</name>
+        <qualifiedname>Neuron::getParentCompartmentOfSpine</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>compt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="50" column="11" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1083" bodyend="1094"/>
+        <references refid="classNeuron_1ad560c35baaea0fca0d5dd4a9f825405d" compoundref="Neuron_8h" startline="135">allSpinesPerCompt_</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classObjId_1aad3d714ee57757ed3754a58edc9ad4a9" compoundref="ObjId_8h" startline="30" endline="34">ObjId::ObjId</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classNeuron_1a6d453261f3aa8a7773d56a47b32ab2e4" compoundref="Neuron_8h" startline="154">segId_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ae8c0bd411b7149585a734538156b3c3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; Neuron::getPassiveDistribution</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getPassiveDistribution</name>
+        <qualifiedname>Neuron::getPassiveDistribution</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="60" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1229" bodyend="1232"/>
+        <references refid="classNeuron_1a0927ab3983ca8fc73953b5f306453a19" compoundref="Neuron_8h" startline="125">passiveDistribution_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a8eaf81e49667cc546ce31e95fbada648" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; Neuron::getPathDistFromSoma</definition>
+        <argsstring>() const</argsstring>
+        <name>getPathDistFromSoma</name>
+        <qualifiedname>Neuron::getPathDistFromSoma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="41" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="941" bodyend="947"/>
+        <references refid="classSwcSegment_1a59607425553fc0d73639fb9abbb9ca53" compoundref="SwcSegment_8h" startline="109" endline="111">SwcSegment::getPathDistFromSoma</references>
+        <references refid="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" compoundref="Neuron_8h" startline="155">segs_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a06da9b61a2b3f374053642520a0271bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Neuron::getPhi</definition>
+        <argsstring>() const</argsstring>
+        <name>getPhi</name>
+        <qualifiedname>Neuron::getPhi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="34" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="897" bodyend="900"/>
+        <references refid="classNeuron_1a3c9b94966847273a04b38a61c0e6b777" compoundref="Neuron_8h" startline="117">phi_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a328dd5695053433105294695fe66c2ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Neuron::getRA</definition>
+        <argsstring>() const</argsstring>
+        <name>getRA</name>
+        <qualifiedname>Neuron::getRA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="26" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="853" bodyend="856"/>
+        <references refid="classNeuron_1a8c0e5343ca389879b0a5cfa32e26a54f" compoundref="Neuron_8h" startline="113">RA_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a7afe7ba5d981f707f8f37a2af2498807" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Neuron::getRM</definition>
+        <argsstring>() const</argsstring>
+        <name>getRM</name>
+        <qualifiedname>Neuron::getRM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="24" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="841" bodyend="844"/>
+        <references refid="classNeuron_1abb7aec5cc9c2cf4386c4adaf764b3f12" compoundref="Neuron_8h" startline="112">RM_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a94cb20b76ec2418befb81dc35db8ce3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Neuron::getSourceFile</definition>
+        <argsstring>() const</argsstring>
+        <name>getSourceFile</name>
+        <qualifiedname>Neuron::getSourceFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="36" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="909" bodyend="912"/>
+        <references refid="classNeuron_1a1382886862f9c75bfa0d6d93b0c517ac" compoundref="Neuron_8h" startline="122">sourceFile_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a939394b1db23714157c445b0753bc85f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; Neuron::getSpineDistribution</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getSpineDistribution</name>
+        <qualifiedname>Neuron::getSpineDistribution</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="62" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1251" bodyend="1254"/>
+        <references refid="classNeuron_1a9b01222ab1e7103ebc85b90eacbeb9e5" compoundref="Neuron_8h" startline="126">spineDistribution_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a4d602d7adc58494c30817531699d6f89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+        <definition>ObjId Neuron::getSpineFromCompartment</definition>
+        <argsstring>(const Eref &amp;e, ObjId compt) const</argsstring>
+        <name>getSpineFromCompartment</name>
+        <qualifiedname>Neuron::getSpineFromCompartment</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>compt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="56" column="7" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1096" bodyend="1108"/>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classObjId_1aad3d714ee57757ed3754a58edc9ad4a9" compoundref="ObjId_8h" startline="30" endline="34">ObjId::ObjId</references>
+        <references refid="classObjId_1ab6b120d314aab5abc3ea8bb7ead5ae41" compoundref="ObjId_8h" startline="45" endline="49">ObjId::ObjId</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classNeuron_1ab5a959153c3f76b9bc3111d1fd26682f" compoundref="Neuron_8h" startline="132">spines_</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a1c1ea8e1df6507ac1a3e43b344465624" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt;</type>
+        <definition>vector&lt; ObjId &gt; Neuron::getSpinesOnCompartment</definition>
+        <argsstring>(const Eref &amp;e, ObjId compt) const</argsstring>
+        <name>getSpinesOnCompartment</name>
+        <qualifiedname>Neuron::getSpinesOnCompartment</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>compt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="48" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1067" bodyend="1081"/>
+        <references refid="classNeuron_1ad560c35baaea0fca0d5dd4a9f825405d" compoundref="Neuron_8h" startline="135">allSpinesPerCompt_</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classNeuron_1a8eedbd34a469ed70bd9bfca7bfdbeada" compoundref="Neuron_8h" startline="129">segIndex_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a7316d0b8cf0b2b0dce829d8a79d88dc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Neuron::getTheta</definition>
+        <argsstring>() const</argsstring>
+        <name>getTheta</name>
+        <qualifiedname>Neuron::getTheta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="32" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="886" bodyend="889"/>
+        <references refid="classNeuron_1a3922ae64e2ce3a5145454cd0c89f9e80" compoundref="Neuron_8h" startline="116">theta_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1afdb243b6f9d5e7348c889fd2feab317e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::installMechanism</definition>
+        <argsstring>(const string &amp;name, const vector&lt; ObjId &gt; &amp;elist, const vector&lt; double &gt; &amp;val, const vector&lt; string &gt; &amp;line)</argsstring>
+        <name>installMechanism</name>
+        <qualifiedname>Neuron::installMechanism</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt; &amp;</type>
+          <declname>elist</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="81" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::installSpines</definition>
+        <argsstring>(const vector&lt; ObjId &gt; &amp;elist, const vector&lt; double &gt; &amp;val, const vector&lt; string &gt; &amp;line)</argsstring>
+        <name>installSpines</name>
+        <qualifiedname>Neuron::installSpines</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt; &amp;</type>
+          <declname>elist</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Now fill in allSpinesPerCompt_ vector. It was allocated in buildSegmentTree, right after segId_ was filled.</para>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="72" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="2039" bodyend="2090"/>
+        <references refid="Neuron_8cpp_1ada5cc7cc086896a965af4cc6bba46da1" compoundref="Neuron_8cpp" startline="1708" endline="1768">addSpine</references>
+        <references refid="classNeuron_1ad560c35baaea0fca0d5dd4a9f825405d" compoundref="Neuron_8h" startline="135">allSpinesPerCompt_</references>
+        <references refid="Neuron_8cpp_1a397ddaebb557c76db33c5fa0656027d0" compoundref="Neuron_8cpp" startline="1605" endline="1637">coordSystem</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classId_1a2b250429848a6c800e8405bbdebc8536" compoundref="Id_8cpp" startline="30" endline="35">Id::Id</references>
+        <references refid="Neuron_8cpp_1ad80ae67c2fc8cce4fe04b55577bba714" compoundref="Neuron_8cpp" startline="1953" endline="1995">makeAngleDistrib</references>
+        <references refid="Neuron_8cpp_1aad2c389a07c076383a11ee34e6768a08" compoundref="Neuron_8cpp" startline="1997" endline="2037">makeSizeDistrib</references>
+        <references refid="classNeuron_1a0487cb87eb56bf5b19e0d40c61a1eb67" compoundref="Neuron_8cpp" startline="1913" endline="1951">makeSpacingDistrib</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classNeuron_1a4fc286616a7cf5a753c8c93e2833dc40" compoundref="Neuron_8h" startline="140">psdStoich_</references>
+        <references refid="classNeuron_1a6d453261f3aa8a7773d56a47b32ab2e4" compoundref="Neuron_8h" startline="154">segId_</references>
+        <references refid="classNeuron_1a5f7ebfaac0ddb3ffe333214a18928e6b" compoundref="Neuron_8h" startline="121">soma_</references>
+        <references refid="classNeuron_1ab5a959153c3f76b9bc3111d1fd26682f" compoundref="Neuron_8h" startline="132">spines_</references>
+        <references refid="classNeuron_1ab48dcd3340fe0635f0366d5fab8d421e" compoundref="Neuron_8h" startline="138">spineStoich_</references>
+        <references refid="classNeuron_1aef2f6e2f24dfc65831cbe15cb7759252" compoundref="Neuron_8h" startline="142">spineToMeshOrdering_</references>
+        <referencedby refid="classNeuron_1ae6ffb87ff245f2f4eaaa0c1e5a1b6e39" compoundref="Neuron_8cpp" startline="1234" endline="1249">setSpineDistribution</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ac02d0c034fad07ab348c67c9ce62dd0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classSpine" kindref="compound">Spine</ref> *</type>
+        <definition>Spine * Neuron::lookupSpine</definition>
+        <argsstring>(unsigned int index)</argsstring>
+        <name>lookupSpine</name>
+        <qualifiedname>Neuron::lookupSpine</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="95" column="11" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="2095" bodyend="2098"/>
+        <references refid="classNeuron_1af1663bb8f858a3254398046b16309444" compoundref="Neuron_8h" startline="152">spineEntry_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a0487cb87eb56bf5b19e0d40c61a1eb67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::makeSpacingDistrib</definition>
+        <argsstring>(const vector&lt; ObjId &gt; &amp;elist, const vector&lt; double &gt; &amp;val, vector&lt; unsigned int &gt; &amp;seglistIndex, vector&lt; unsigned int &gt; &amp;elistIndex, vector&lt; double &gt; &amp;pos, const vector&lt; string &gt; &amp;line) const</argsstring>
+        <name>makeSpacingDistrib</name>
+        <qualifiedname>Neuron::makeSpacingDistrib</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt; &amp;</type>
+          <declname>elist</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>seglistIndex</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>elistIndex</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="74" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1913" bodyend="1951"/>
+        <references refid="Neuron_8cpp_1a20ac420583a5cb9c39bbcbf558c8c01a" compoundref="Neuron_8cpp" startline="1843" endline="1879">addPos</references>
+        <references refid="classnuParser_1ae11d3ea466758bbbfea900177b4469f7" compoundref="Neuron_8cpp" startline="76" endline="91">nuParser::eval</references>
+        <references refid="classnuParser_1a7deeee53db0429bb9dd629b58e4afc46a88e61c52c75c31e8f2f7115aa00df6ff" compoundref="Neuron_8cpp" startline="67">nuParser::EXPR</references>
+        <references refid="Neuron_8cpp_1ac57d93c32fb7fdea1a9c086f201feedb" compoundref="Neuron_8cpp" startline="1775" endline="1840">findArg</references>
+        <references refid="structmoose_1_1Parser_1_1ParserException_1ac9c3c6f3dc862c7f00bf0273e0af34af" compoundref="MooseParser_8h" startline="44" endline="47">moose::Parser::ParserException::GetMsg</references>
+        <references refid="classSwcSegment_1a30e7c0c33984c17a2583379e06351994" compoundref="SwcSegment_8h" startline="79" endline="81">SwcSegment::length</references>
+        <references refid="classnuParser_1ad4be6cdef5fbc01551a546439a0e28de" compoundref="Neuron_8cpp" startline="93">nuParser::numVal</references>
+        <references refid="classnuParser_1acefd8c2af549c61f58dd09ca8c265d53" compoundref="Neuron_8cpp" startline="30" endline="64">nuParser::nuParser</references>
+        <references refid="classNeuron_1a8eedbd34a469ed70bd9bfca7bfdbeada" compoundref="Neuron_8h" startline="129">segIndex_</references>
+        <references refid="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" compoundref="Neuron_8h" startline="155">segs_</references>
+        <referencedby refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Neuron::Neuron</definition>
+        <argsstring>()</argsstring>
+        <name>Neuron</name>
+        <qualifiedname>Neuron::Neuron</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="21" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="565" bodyend="581"/>
+        <references refid="classNeuron_1a05db5929ab4c75eda722fe6b2503534a" compoundref="Neuron_8h" startline="114">CM_</references>
+        <references refid="classNeuron_1ae62b7e5af2eb01460a6ffd8e65e99291" compoundref="Neuron_8h" startline="123">compartmentLengthInLambdas_</references>
+        <references refid="classNeuron_1a3d88085ac7b716e387ae700e52948110" compoundref="Neuron_8h" startline="115">Em_</references>
+        <references refid="classNeuron_1a7533f3d27cc3baa84a92344cea9ebd7c" compoundref="Neuron_8h" startline="119">maxG_</references>
+        <references refid="classNeuron_1ab8083822bb7d153e0633aa60bf241679" compoundref="Neuron_8h" startline="120">maxL_</references>
+        <references refid="classNeuron_1a25abd63b55d7d355a6cdab408efbb2de" compoundref="Neuron_8h" startline="118">maxP_</references>
+        <references refid="classNeuron_1a3c9b94966847273a04b38a61c0e6b777" compoundref="Neuron_8h" startline="117">phi_</references>
+        <references refid="classNeuron_1a8c0e5343ca389879b0a5cfa32e26a54f" compoundref="Neuron_8h" startline="113">RA_</references>
+        <references refid="classNeuron_1abb7aec5cc9c2cf4386c4adaf764b3f12" compoundref="Neuron_8h" startline="112">RM_</references>
+        <references refid="classNeuron_1a1382886862f9c75bfa0d6d93b0c517ac" compoundref="Neuron_8h" startline="122">sourceFile_</references>
+        <references refid="classSpine_1adde8b524e981e4755a5ef01fdab1c1df" compoundref="Spine_8cpp" startline="178" endline="182">Spine::Spine</references>
+        <references refid="classNeuron_1af1663bb8f858a3254398046b16309444" compoundref="Neuron_8h" startline="152">spineEntry_</references>
+        <references refid="classNeuron_1a3922ae64e2ce3a5145454cd0c89f9e80" compoundref="Neuron_8h" startline="116">theta_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Neuron::Neuron</definition>
+        <argsstring>(const Neuron &amp;other)</argsstring>
+        <name>Neuron</name>
+        <qualifiedname>Neuron::Neuron</qualifiedname>
+        <param>
+          <type>const <ref refid="classNeuron" kindref="compound">Neuron</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="22" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="585" bodyend="604"/>
+        <references refid="classNeuron_1a1e7eaf7759c350e443acaac4b5938f38" compoundref="Neuron_8h" startline="124">channelDistribution_</references>
+        <references refid="classNeuron_1a05db5929ab4c75eda722fe6b2503534a" compoundref="Neuron_8h" startline="114">CM_</references>
+        <references refid="classNeuron_1ae62b7e5af2eb01460a6ffd8e65e99291" compoundref="Neuron_8h" startline="123">compartmentLengthInLambdas_</references>
+        <references refid="classNeuron_1a3d88085ac7b716e387ae700e52948110" compoundref="Neuron_8h" startline="115">Em_</references>
+        <references refid="classNeuron_1a7533f3d27cc3baa84a92344cea9ebd7c" compoundref="Neuron_8h" startline="119">maxG_</references>
+        <references refid="classNeuron_1ab8083822bb7d153e0633aa60bf241679" compoundref="Neuron_8h" startline="120">maxL_</references>
+        <references refid="classNeuron_1a25abd63b55d7d355a6cdab408efbb2de" compoundref="Neuron_8h" startline="118">maxP_</references>
+        <references refid="classNeuron_1a0927ab3983ca8fc73953b5f306453a19" compoundref="Neuron_8h" startline="125">passiveDistribution_</references>
+        <references refid="classNeuron_1a3c9b94966847273a04b38a61c0e6b777" compoundref="Neuron_8h" startline="117">phi_</references>
+        <references refid="classNeuron_1a8c0e5343ca389879b0a5cfa32e26a54f" compoundref="Neuron_8h" startline="113">RA_</references>
+        <references refid="classNeuron_1abb7aec5cc9c2cf4386c4adaf764b3f12" compoundref="Neuron_8h" startline="112">RM_</references>
+        <references refid="classNeuron_1a1382886862f9c75bfa0d6d93b0c517ac" compoundref="Neuron_8h" startline="122">sourceFile_</references>
+        <references refid="classSpine_1adde8b524e981e4755a5ef01fdab1c1df" compoundref="Spine_8cpp" startline="178" endline="182">Spine::Spine</references>
+        <references refid="classNeuron_1a9b01222ab1e7103ebc85b90eacbeb9e5" compoundref="Neuron_8h" startline="126">spineDistribution_</references>
+        <references refid="classNeuron_1af1663bb8f858a3254398046b16309444" compoundref="Neuron_8h" startline="152">spineEntry_</references>
+        <references refid="classNeuron_1a3922ae64e2ce3a5145454cd0c89f9e80" compoundref="Neuron_8h" startline="116">theta_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a1ace1132886fa8b3c659309c2c8eee77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::parseMechSpec</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>parseMechSpec</name>
+        <qualifiedname>Neuron::parseMechSpec</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="80" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1aa0a928e134c34e2687b76b5950a13332" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::scaleBufAndRates</definition>
+        <argsstring>(unsigned int spineNum, double lenScale, double diaScale) const</argsstring>
+        <name>scaleBufAndRates</name>
+        <qualifiedname>Neuron::scaleBufAndRates</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>spineNum</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lenScale</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>diaScale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="100" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="2122" bodyend="2158"/>
+        <references refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" compoundref="doubleEq_8cpp" startline="16" endline="22">doubleEq</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classNeuron_1a4fc286616a7cf5a753c8c93e2833dc40" compoundref="Neuron_8h" startline="140">psdStoich_</references>
+        <references refid="classSetGet2_1a98e79d8e385a20c5a76a0d095085a6b8" compoundref="SetGet_8h" startline="396" endline="425">SetGet2&lt; A1, A2 &gt;::set</references>
+        <references refid="classNeuron_1ab48dcd3340fe0635f0366d5fab8d421e" compoundref="Neuron_8h" startline="138">spineStoich_</references>
+        <references refid="classNeuron_1aef2f6e2f24dfc65831cbe15cb7759252" compoundref="Neuron_8h" startline="142">spineToMeshOrdering_</references>
+        <referencedby refid="classSpine_1a11250b18e284ca3ee95892ae87467e4c" compoundref="Spine_8cpp" startline="319" endline="337">Spine::setHeadDiameter</referencedby>
+        <referencedby refid="classSpine_1a1f1df51229c5a1c55fb983e541b3132a" compoundref="Spine_8cpp" startline="284" endline="308">Spine::setHeadLength</referencedby>
+        <referencedby refid="classSpine_1a4b6f997a96f4bd0bc9cdf7f662ab5594" compoundref="Spine_8cpp" startline="362" endline="386">Spine::setHeadVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1aa4070aa9ee1a8d7ab849d858206bdafa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::scaleHeadDiffusion</definition>
+        <argsstring>(unsigned int spineNum, double len, double dia) const</argsstring>
+        <name>scaleHeadDiffusion</name>
+        <qualifiedname>Neuron::scaleHeadDiffusion</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>spineNum</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dia</declname>
+        </param>
+        <briefdescription>
+<para>Scale the diffusion parameters due to a change in the head dimensions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="104" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="2173" bodyend="2197"/>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classNeuron_1a89035fa443f830334bf5673e3a9445c5" compoundref="Neuron_8h" startline="144">headDsolve_</references>
+        <references refid="header_8h_1a299aabc5fc8285cbf99025330a3d0d0d" compoundref="header_8h" startline="28">PI</references>
+        <references refid="classNeuron_1a623c6228a7c05f724dbe5c94c576ea17" compoundref="Neuron_8h" startline="145">psdDsolve_</references>
+        <references refid="classSetGet2_1a98e79d8e385a20c5a76a0d095085a6b8" compoundref="SetGet_8h" startline="396" endline="425">SetGet2&lt; A1, A2 &gt;::set</references>
+        <references refid="classLookupField_1acb3d40d905d14434af374c90ecfc8de1" compoundref="SetGet_8h" startline="505" endline="511">LookupField&lt; L, A &gt;::set</references>
+        <references refid="classNeuron_1aef2f6e2f24dfc65831cbe15cb7759252" compoundref="Neuron_8h" startline="142">spineToMeshOrdering_</references>
+        <referencedby refid="classSpine_1a11250b18e284ca3ee95892ae87467e4c" compoundref="Spine_8cpp" startline="319" endline="337">Spine::setHeadDiameter</referencedby>
+        <referencedby refid="classSpine_1a1f1df51229c5a1c55fb983e541b3132a" compoundref="Spine_8cpp" startline="284" endline="308">Spine::setHeadLength</referencedby>
+        <referencedby refid="classSpine_1a4b6f997a96f4bd0bc9cdf7f662ab5594" compoundref="Spine_8cpp" startline="362" endline="386">Spine::setHeadVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a4e790760039a0c0ef49fdd207a9958d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::scaleShaftDiffusion</definition>
+        <argsstring>(unsigned int spineNum, double len, double dia) const</argsstring>
+        <name>scaleShaftDiffusion</name>
+        <qualifiedname>Neuron::scaleShaftDiffusion</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>spineNum</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dia</declname>
+        </param>
+        <briefdescription>
+<para>Scale the diffusion parameters due to a change in the shaft dimensions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="102" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="2161" bodyend="2170"/>
+        <references refid="classNeuron_1a89035fa443f830334bf5673e3a9445c5" compoundref="Neuron_8h" startline="144">headDsolve_</references>
+        <references refid="header_8h_1a299aabc5fc8285cbf99025330a3d0d0d" compoundref="header_8h" startline="28">PI</references>
+        <references refid="classSetGet2_1a98e79d8e385a20c5a76a0d095085a6b8" compoundref="SetGet_8h" startline="396" endline="425">SetGet2&lt; A1, A2 &gt;::set</references>
+        <references refid="classNeuron_1aef2f6e2f24dfc65831cbe15cb7759252" compoundref="Neuron_8h" startline="142">spineToMeshOrdering_</references>
+        <referencedby refid="classSpine_1a8e0f9e6221e70231cc742aa2007b216e" compoundref="Spine_8cpp" startline="256" endline="273">Spine::setShaftDiameter</referencedby>
+        <referencedby refid="classSpine_1af30012dee4b0c6d910862252650a87de" compoundref="Spine_8cpp" startline="215" endline="245">Spine::setShaftLength</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a3bfd45614804470cba50d1862683eea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setChannelDistribution</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; string &gt; v)</argsstring>
+        <name>setChannelDistribution</name>
+        <qualifiedname>Neuron::setChannelDistribution</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; string &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="57" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1159" bodyend="1202"/>
+        <references refid="classNeuron_1a16e992d3d50696b5d9e5bded202398b8" compoundref="Neuron_8cpp" startline="1143" endline="1157">buildElist</references>
+        <references refid="Neuron_8cpp_1a16dae3893b786e807b93061d2648915e" compoundref="Neuron_8cpp" startline="670" endline="701">buildFromProto</references>
+        <references refid="classNeuron_1a1e7eaf7759c350e443acaac4b5938f38" compoundref="Neuron_8h" startline="124">channelDistribution_</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classId_1a2b250429848a6c800e8405bbdebc8536" compoundref="Id_8cpp" startline="30" endline="35">Id::Id</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classId_1a6a4a7d5c9e8524644febc6b6e8dc1ab9" compoundref="Id_8h" startline="133" endline="137">Id::operator!=</references>
+        <references refid="Neuron_8cpp_1a00a07b4adb6aacc8a4004df6819ee4ac" compoundref="Neuron_8cpp" startline="610" endline="640">parseDistrib</references>
+        <references refid="Neuron_8cpp_1a4178bdad4465da4322a80bd6186dc010" compoundref="Neuron_8cpp" startline="804" endline="828">setMechParams</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a166183db4e9169a8d30384037ca57c16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setCM</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setCM</name>
+        <qualifiedname>Neuron::setCM</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="27" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="858" bodyend="864"/>
+        <references refid="classNeuron_1a05db5929ab4c75eda722fe6b2503534a" compoundref="Neuron_8h" startline="114">CM_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ad724cd1e360729cc9b77a430b8465ebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setCompartmentLengthInLambdas</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setCompartmentLengthInLambdas</name>
+        <qualifiedname>Neuron::setCompartmentLengthInLambdas</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="37" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="915" bodyend="918"/>
+        <references refid="classNeuron_1ae62b7e5af2eb01460a6ffd8e65e99291" compoundref="Neuron_8h" startline="123">compartmentLengthInLambdas_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ad5ff9c4771ee277c5c7a2b7aa150e6d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setEm</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setEm</name>
+        <qualifiedname>Neuron::setEm</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="29" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="871" bodyend="874"/>
+        <references refid="classNeuron_1a3d88085ac7b716e387ae700e52948110" compoundref="Neuron_8h" startline="115">Em_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ad54cf9f728d17be5962a1dcb1f8a765e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setNumSpines</definition>
+        <argsstring>(unsigned int num)</argsstring>
+        <name>setNumSpines</name>
+        <qualifiedname>Neuron::setNumSpines</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Ignore it. the number of spines is set when we build the tree.</para>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="96" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="2100" bodyend="2104"/>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a16b48cc319ac10558c2ccb1d2c9ca75a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setPassiveDistribution</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; string &gt; v)</argsstring>
+        <name>setPassiveDistribution</name>
+        <qualifiedname>Neuron::setPassiveDistribution</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; string &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="59" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1209" bodyend="1227"/>
+        <references refid="classNeuron_1a16e992d3d50696b5d9e5bded202398b8" compoundref="Neuron_8cpp" startline="1143" endline="1157">buildElist</references>
+        <references refid="Neuron_8cpp_1a00a07b4adb6aacc8a4004df6819ee4ac" compoundref="Neuron_8cpp" startline="610" endline="640">parseDistrib</references>
+        <references refid="classNeuron_1a0927ab3983ca8fc73953b5f306453a19" compoundref="Neuron_8h" startline="125">passiveDistribution_</references>
+        <references refid="Neuron_8cpp_1a0d66100bbef1972def6f69b1f2af6b81" compoundref="Neuron_8cpp" startline="781" endline="802">setCompartmentParams</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a57c292ebfd9eb6cbb153871755b9cc4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setPhi</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setPhi</name>
+        <qualifiedname>Neuron::setPhi</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="33" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="892" bodyend="896"/>
+        <references refid="classNeuron_1a3c9b94966847273a04b38a61c0e6b777" compoundref="Neuron_8h" startline="117">phi_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a8df9d0dea9e7d55e1c380dca1ab9b659" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setRA</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setRA</name>
+        <qualifiedname>Neuron::setRA</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="25" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="846" bodyend="852"/>
+        <references refid="classNeuron_1a8c0e5343ca389879b0a5cfa32e26a54f" compoundref="Neuron_8h" startline="113">RA_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a2a249f2ec0981672a8745e1e03dc477f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setRM</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setRM</name>
+        <qualifiedname>Neuron::setRM</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="23" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="834" bodyend="840"/>
+        <references refid="classNeuron_1abb7aec5cc9c2cf4386c4adaf764b3f12" compoundref="Neuron_8h" startline="112">RM_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a81782a00c89930d2132c093595d0b9c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setSourceFile</definition>
+        <argsstring>(string v)</argsstring>
+        <name>setSourceFile</name>
+        <qualifiedname>Neuron::setSourceFile</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="35" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="903" bodyend="907"/>
+        <references refid="classNeuron_1a1382886862f9c75bfa0d6d93b0c517ac" compoundref="Neuron_8h" startline="122">sourceFile_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a2a8be1a9323c59518f0e52c3b93f1b06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setSpineAndPsdDsolve</definition>
+        <argsstring>(ObjId spineDsolve, ObjId psdDsolve)</argsstring>
+        <name>setSpineAndPsdDsolve</name>
+        <qualifiedname>Neuron::setSpineAndPsdDsolve</qualifiedname>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>spineDsolve</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>psdDsolve</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="66" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1511" bodyend="1515"/>
+        <references refid="classNeuron_1a89035fa443f830334bf5673e3a9445c5" compoundref="Neuron_8h" startline="144">headDsolve_</references>
+        <references refid="classNeuron_1a623c6228a7c05f724dbe5c94c576ea17" compoundref="Neuron_8h" startline="145">psdDsolve_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1a8a6f8c3a68488eacf6a202404da32c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setSpineAndPsdMesh</definition>
+        <argsstring>(ObjId spineMesh, ObjId psdMesh)</argsstring>
+        <name>setSpineAndPsdMesh</name>
+        <qualifiedname>Neuron::setSpineAndPsdMesh</qualifiedname>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>spineMesh</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>psdMesh</declname>
+        </param>
+        <briefdescription>
+<para>Fills up vector of segments. First entry is soma. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="65" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1459" bodyend="1509"/>
+        <references refid="classNeutral_1a01baba1ffc567fe51320ab0ba30f7008" compoundref="Neutral_8cpp" startline="652" endline="686">Neutral::child</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" compoundref="ObjId_8cpp" startline="125" endline="128">ObjId::element</references>
+        <references refid="classObjId_1a76a3d4b89944235a24eff983030a5e91" compoundref="ObjId_8cpp" startline="66" endline="69">ObjId::eref</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classObjId_1aad3d714ee57757ed3754a58edc9ad4a9" compoundref="ObjId_8h" startline="30" endline="34">ObjId::ObjId</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classObjId_1a4d6f6e6b6f3c279334cf9f10a277df49" compoundref="ObjId_8cpp" startline="120" endline="123">ObjId::path</references>
+        <references refid="classNeuron_1a4fc286616a7cf5a753c8c93e2833dc40" compoundref="Neuron_8h" startline="140">psdStoich_</references>
+        <references refid="classNeuron_1ab5a959153c3f76b9bc3111d1fd26682f" compoundref="Neuron_8h" startline="132">spines_</references>
+        <references refid="classNeuron_1ab48dcd3340fe0635f0366d5fab8d421e" compoundref="Neuron_8h" startline="138">spineStoich_</references>
+        <references refid="classNeuron_1aef2f6e2f24dfc65831cbe15cb7759252" compoundref="Neuron_8h" startline="142">spineToMeshOrdering_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1ae6ffb87ff245f2f4eaaa0c1e5a1b6e39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setSpineDistribution</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; string &gt; v)</argsstring>
+        <name>setSpineDistribution</name>
+        <qualifiedname>Neuron::setSpineDistribution</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; string &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="61" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1234" bodyend="1249"/>
+        <references refid="classNeuron_1a16e992d3d50696b5d9e5bded202398b8" compoundref="Neuron_8cpp" startline="1143" endline="1157">buildElist</references>
+        <references refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" compoundref="Neuron_8cpp" startline="2039" endline="2090">installSpines</references>
+        <references refid="Neuron_8cpp_1a00a07b4adb6aacc8a4004df6819ee4ac" compoundref="Neuron_8cpp" startline="610" endline="640">parseDistrib</references>
+        <references refid="classNeuron_1a9b01222ab1e7103ebc85b90eacbeb9e5" compoundref="Neuron_8h" startline="126">spineDistribution_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1aa823bd64228536d0ae39627c31460abd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::setTheta</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setTheta</name>
+        <qualifiedname>Neuron::setTheta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="31" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="881" bodyend="885"/>
+        <references refid="classNeuron_1a3922ae64e2ce3a5145454cd0c89f9e80" compoundref="Neuron_8h" startline="116">theta_</references>
+        <referencedby refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" compoundref="Neuron_8cpp" startline="111" endline="560">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1aedd17f546d07f7c6e21697e57ed59f0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt; &amp;</type>
+        <definition>const vector&lt; Id &gt; &amp; Neuron::spineIds</definition>
+        <argsstring>(unsigned int index) const</argsstring>
+        <name>spineIds</name>
+        <qualifiedname>Neuron::spineIds</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="99" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="2114" bodyend="2120"/>
+        <references refid="classNeuron_1ab5a959153c3f76b9bc3111d1fd26682f" compoundref="Neuron_8h" startline="132">spines_</references>
+        <referencedby refid="classSpine_1aac9b250030997425f0b8f2ceb64449cc" compoundref="Spine_8cpp" startline="197" endline="204">Spine::getHead</referencedby>
+        <referencedby refid="classSpine_1a61f30b8244d27db31ec5a881b7d2aec4" compoundref="Spine_8cpp" startline="310" endline="317">Spine::getHeadDiameter</referencedby>
+        <referencedby refid="classSpine_1a102b2c5da5a7768e0e0804340122a571" compoundref="Spine_8cpp" startline="275" endline="282">Spine::getHeadLength</referencedby>
+        <referencedby refid="classSpine_1a417ee416bbd27de92a6333011808f7fd" compoundref="Spine_8cpp" startline="188" endline="195">Spine::getShaft</referencedby>
+        <referencedby refid="classSpine_1af2ba0fdfd10f11a29d1f1116c899195a" compoundref="Spine_8cpp" startline="247" endline="254">Spine::getShaftDiameter</referencedby>
+        <referencedby refid="classSpine_1a48332302a5f5896f73503323f0c03599" compoundref="Spine_8cpp" startline="206" endline="213">Spine::getShaftLength</referencedby>
+        <referencedby refid="classSpine_1a11250b18e284ca3ee95892ae87467e4c" compoundref="Spine_8cpp" startline="319" endline="337">Spine::setHeadDiameter</referencedby>
+        <referencedby refid="classSpine_1a1f1df51229c5a1c55fb983e541b3132a" compoundref="Spine_8cpp" startline="284" endline="308">Spine::setHeadLength</referencedby>
+        <referencedby refid="classSpine_1a4b6f997a96f4bd0bc9cdf7f662ab5594" compoundref="Spine_8cpp" startline="362" endline="386">Spine::setHeadVolume</referencedby>
+        <referencedby refid="classSpine_1a8e0f9e6221e70231cc742aa2007b216e" compoundref="Spine_8cpp" startline="256" endline="273">Spine::setShaftDiameter</referencedby>
+        <referencedby refid="classSpine_1af30012dee4b0c6d910862252650a87de" compoundref="Spine_8cpp" startline="215" endline="245">Spine::setShaftLength</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Neuron::updateSegmentLengths</definition>
+        <argsstring>()</argsstring>
+        <name>updateSegmentLengths</name>
+        <qualifiedname>Neuron::updateSegmentLengths</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="71" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="1379" bodyend="1405"/>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classSwcSegment_1ae5976395853615f3712e04401c2708fb" compoundref="SwcSegment_8h" startline="117" endline="119">SwcSegment::getElecDistFromSoma</references>
+        <references refid="classSwcSegment_1a780b9266b1a56bce72e13fa3802112c1" compoundref="SwcSegment_8h" startline="113" endline="115">SwcSegment::getGeomDistFromSoma</references>
+        <references refid="classSwcSegment_1a59607425553fc0d73639fb9abbb9ca53" compoundref="SwcSegment_8h" startline="109" endline="111">SwcSegment::getPathDistFromSoma</references>
+        <references refid="classNeuron_1a7533f3d27cc3baa84a92344cea9ebd7c" compoundref="Neuron_8h" startline="119">maxG_</references>
+        <references refid="classNeuron_1ab8083822bb7d153e0633aa60bf241679" compoundref="Neuron_8h" startline="120">maxL_</references>
+        <references refid="classNeuron_1a25abd63b55d7d355a6cdab408efbb2de" compoundref="Neuron_8h" startline="118">maxP_</references>
+        <references refid="classNeuron_1a6d453261f3aa8a7773d56a47b32ab2e4" compoundref="Neuron_8h" startline="154">segId_</references>
+        <references refid="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" compoundref="Neuron_8h" startline="155">segs_</references>
+        <references refid="classSwcSegment_1a1f6b702844e16427264f799184b38fe3" compoundref="SwcSegment_8h" startline="95" endline="98">SwcSegment::setGeometricalDistanceFromSoma</references>
+        <references refid="classNeuron_1a5f7ebfaac0ddb3ffe333214a18928e6b" compoundref="Neuron_8h" startline="121">soma_</references>
+        <references refid="Neuron_8cpp_1a26b88a355e49f0d12868e3f92e8fdcdd" compoundref="Neuron_8cpp" startline="1357" endline="1377">traverseCumulativeDistance</references>
+        <referencedby refid="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" compoundref="Neuron_8cpp" startline="1408" endline="1455">buildSegmentTree</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classNeuron_1a81197d09a302f2420430fe3f7874926f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * Neuron::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>Neuron::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the class info. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="110" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp" bodystart="111" bodyend="560"/>
+        <references refid="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" compoundref="Neuron_8cpp" startline="1408" endline="1455">buildSegmentTree</references>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classElementValueFinfo_1a920b84a2ae5d17c07322009467413ca1" compoundref="ElementValueFinfo_8h" startline="26" endline="45">ElementValueFinfo&lt; T, F &gt;::ElementValueFinfo</references>
+        <references refid="classEpFunc0_1a65a165d2b5236827e20b5f84536e3ecb" compoundref="EpFunc_8h" startline="54" endline="56">EpFunc0&lt; T &gt;::EpFunc0</references>
+        <references refid="classFieldElementFinfo_1aaab885fe6cafb69f4ff0c4fb76d26221" compoundref="FieldElementFinfo_8h" startline="107" endline="141">FieldElementFinfo&lt; T, F &gt;::FieldElementFinfo</references>
+        <references refid="classNeuron_1aa5ce66f3dd5c314b23be80cc15b93dbc" compoundref="Neuron_8cpp" startline="1204" endline="1207">getChannelDistribution</references>
+        <references refid="classNeuron_1a6c9e216be161740df694e2fa1a7705b1" compoundref="Neuron_8cpp" startline="865" endline="868">getCM</references>
+        <references refid="classNeuron_1ae17d18d94a89ad6d4cdd905c6fc8381d" compoundref="Neuron_8cpp" startline="919" endline="922">getCompartmentLengthInLambdas</references>
+        <references refid="classNeuron_1aec4a886bd31c3bdeaf1f5accfa507751" compoundref="Neuron_8cpp" startline="965" endline="971">getCompartments</references>
+        <references refid="classNeuron_1a596bdc3cb2be53165aa65c9ca4138698" compoundref="Neuron_8cpp" startline="957" endline="963">getElecDistFromSoma</references>
+        <references refid="classNeuron_1ab32b7adba76d718975253ec6db9fa293" compoundref="Neuron_8cpp" startline="875" endline="878">getEm</references>
+        <references refid="classNeuron_1ab691922aeaca232edf5ac050abad7ded" compoundref="Neuron_8cpp" startline="979" endline="1002">getExprElist</references>
+        <references refid="classNeuron_1a224304593cd2509d1ea0acc182148630" compoundref="Neuron_8cpp" startline="1011" endline="1027">getExprVal</references>
+        <references refid="classNeuron_1ac1e28f27e5ad1924e6cda8996d8da376" compoundref="Neuron_8cpp" startline="949" endline="955">getGeomDistFromSoma</references>
+        <references refid="classNeuron_1ab438c873e24148952d736d105eb7a48f" compoundref="Neuron_8cpp" startline="936" endline="939">getNumBranches</references>
+        <references refid="classNeuron_1a042225535e845c90d79d12e8c41ffdd1" compoundref="Neuron_8cpp" startline="924" endline="927">getNumCompartments</references>
+        <references refid="classNeuron_1ac38c66b442f38a538d43a399cf5c24c8" compoundref="Neuron_8cpp" startline="2106" endline="2109">getNumSpines</references>
+        <references refid="classNeuron_1ae6f58acdca796e8b88d2fc928eea2a8c" compoundref="Neuron_8cpp" startline="1083" endline="1094">getParentCompartmentOfSpine</references>
+        <references refid="classNeuron_1ae8c0bd411b7149585a734538156b3c3d" compoundref="Neuron_8cpp" startline="1229" endline="1232">getPassiveDistribution</references>
+        <references refid="classNeuron_1a8eaf81e49667cc546ce31e95fbada648" compoundref="Neuron_8cpp" startline="941" endline="947">getPathDistFromSoma</references>
+        <references refid="classNeuron_1a06da9b61a2b3f374053642520a0271bf" compoundref="Neuron_8cpp" startline="897" endline="900">getPhi</references>
+        <references refid="classNeuron_1a328dd5695053433105294695fe66c2ca" compoundref="Neuron_8cpp" startline="853" endline="856">getRA</references>
+        <references refid="classNeuron_1a7afe7ba5d981f707f8f37a2af2498807" compoundref="Neuron_8cpp" startline="841" endline="844">getRM</references>
+        <references refid="classNeuron_1a94cb20b76ec2418befb81dc35db8ce3f" compoundref="Neuron_8cpp" startline="909" endline="912">getSourceFile</references>
+        <references refid="classNeuron_1a939394b1db23714157c445b0753bc85f" compoundref="Neuron_8cpp" startline="1251" endline="1254">getSpineDistribution</references>
+        <references refid="classNeuron_1a4d602d7adc58494c30817531699d6f89" compoundref="Neuron_8cpp" startline="1096" endline="1108">getSpineFromCompartment</references>
+        <references refid="classNeuron_1a1c1ea8e1df6507ac1a3e43b344465624" compoundref="Neuron_8cpp" startline="1067" endline="1081">getSpinesOnCompartment</references>
+        <references refid="classNeuron_1a7316d0b8cf0b2b0dce829d8a79d88dc5" compoundref="Neuron_8cpp" startline="886" endline="889">getTheta</references>
+        <references refid="classSpine_1aae168e965b5f08a1c29f94ba4c6ccda8" compoundref="Spine_8cpp" startline="17" endline="165">Spine::initCinfo</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classNeuron_1ac02d0c034fad07ab348c67c9ce62dd0c" compoundref="Neuron_8cpp" startline="2095" endline="2098">lookupSpine</references>
+        <references refid="classOpFunc2_1ab65f04db60efc5074270db7e1cd73232" compoundref="OpFunc_8h" startline="46" endline="48">OpFunc2&lt; T, A1, A2 &gt;::OpFunc2</references>
+        <references refid="classReadOnlyLookupElementValueFinfo_1a432ba9d3f88817e242532b6b980216f5" compoundref="LookupElementValueFinfo_8h" startline="87" endline="99">ReadOnlyLookupElementValueFinfo&lt; T, L, F &gt;::ReadOnlyLookupElementValueFinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classNeuron_1a3bfd45614804470cba50d1862683eea8" compoundref="Neuron_8cpp" startline="1159" endline="1202">setChannelDistribution</references>
+        <references refid="classNeuron_1a166183db4e9169a8d30384037ca57c16" compoundref="Neuron_8cpp" startline="858" endline="864">setCM</references>
+        <references refid="classNeuron_1ad724cd1e360729cc9b77a430b8465ebf" compoundref="Neuron_8cpp" startline="915" endline="918">setCompartmentLengthInLambdas</references>
+        <references refid="classNeuron_1ad5ff9c4771ee277c5c7a2b7aa150e6d9" compoundref="Neuron_8cpp" startline="871" endline="874">setEm</references>
+        <references refid="classNeuron_1ad54cf9f728d17be5962a1dcb1f8a765e" compoundref="Neuron_8cpp" startline="2100" endline="2104">setNumSpines</references>
+        <references refid="classNeuron_1a16b48cc319ac10558c2ccb1d2c9ca75a" compoundref="Neuron_8cpp" startline="1209" endline="1227">setPassiveDistribution</references>
+        <references refid="classNeuron_1a57c292ebfd9eb6cbb153871755b9cc4d" compoundref="Neuron_8cpp" startline="892" endline="896">setPhi</references>
+        <references refid="classNeuron_1a8df9d0dea9e7d55e1c380dca1ab9b659" compoundref="Neuron_8cpp" startline="846" endline="852">setRA</references>
+        <references refid="classNeuron_1a2a249f2ec0981672a8745e1e03dc477f" compoundref="Neuron_8cpp" startline="834" endline="840">setRM</references>
+        <references refid="classNeuron_1a81782a00c89930d2132c093595d0b9c6" compoundref="Neuron_8cpp" startline="903" endline="907">setSourceFile</references>
+        <references refid="classNeuron_1a2a8be1a9323c59518f0e52c3b93f1b06" compoundref="Neuron_8cpp" startline="1511" endline="1515">setSpineAndPsdDsolve</references>
+        <references refid="classNeuron_1a8a6f8c3a68488eacf6a202404da32c57" compoundref="Neuron_8cpp" startline="1459" endline="1509">setSpineAndPsdMesh</references>
+        <references refid="classNeuron_1ae6ffb87ff245f2f4eaaa0c1e5a1b6e39" compoundref="Neuron_8cpp" startline="1234" endline="1249">setSpineDistribution</references>
+        <references refid="classNeuron_1aa823bd64228536d0ae39627c31460abd" compoundref="Neuron_8cpp" startline="881" endline="885">setTheta</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classNeuron" kindref="compound">Neuron</ref> class to hold the Compartment class elements. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="1">
+        <label>Neuron</label>
+        <link refid="classNeuron"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-headDsolve_</edgelabel>
+          <edgelabel>-psdDsolve_</edgelabel>
+          <edgelabel>-soma_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-spineParentSegIndex_</edgelabel>
+          <edgelabel>-spineToMeshOrdering_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-psdStoich_</edgelabel>
+          <edgelabel>-segId_</edgelabel>
+          <edgelabel>-spineStoich_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-spineEntry_</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Spine</label>
+        <link refid="classSpine"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; Id &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; Id &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" line="18" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.h" bodystart="19" bodyend="158"/>
+    <listofallmembers>
+      <member refid="classNeuron_1ad560c35baaea0fca0d5dd4a9f825405d" prot="private" virt="non-virtual"><scope>Neuron</scope><name>allSpinesPerCompt_</name></member>
+      <member refid="classNeuron_1a7b7069cf5d4113d0eb1802c876d91bf9" prot="private" virt="non-virtual"><scope>Neuron</scope><name>branches_</name></member>
+      <member refid="classNeuron_1a16e992d3d50696b5d9e5bded202398b8" prot="public" virt="non-virtual"><scope>Neuron</scope><name>buildElist</name></member>
+      <member refid="classNeuron_1a4ffd2786bf79d17ffe668c4112761728" prot="public" virt="non-virtual"><scope>Neuron</scope><name>buildSegmentTree</name></member>
+      <member refid="classNeuron_1a1e7eaf7759c350e443acaac4b5938f38" prot="private" virt="non-virtual"><scope>Neuron</scope><name>channelDistribution_</name></member>
+      <member refid="classNeuron_1a05db5929ab4c75eda722fe6b2503534a" prot="private" virt="non-virtual"><scope>Neuron</scope><name>CM_</name></member>
+      <member refid="classNeuron_1ae62b7e5af2eb01460a6ffd8e65e99291" prot="private" virt="non-virtual"><scope>Neuron</scope><name>compartmentLengthInLambdas_</name></member>
+      <member refid="classNeuron_1a3d88085ac7b716e387ae700e52948110" prot="private" virt="non-virtual"><scope>Neuron</scope><name>Em_</name></member>
+      <member refid="classNeuron_1a8824baf3c8d43aa38e3aaa9a3b32073e" prot="public" virt="non-virtual"><scope>Neuron</scope><name>evalExprForElist</name></member>
+      <member refid="classNeuron_1aa5ce66f3dd5c314b23be80cc15b93dbc" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getChannelDistribution</name></member>
+      <member refid="classNeuron_1a6c9e216be161740df694e2fa1a7705b1" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getCM</name></member>
+      <member refid="classNeuron_1ae17d18d94a89ad6d4cdd905c6fc8381d" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getCompartmentLengthInLambdas</name></member>
+      <member refid="classNeuron_1aec4a886bd31c3bdeaf1f5accfa507751" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getCompartments</name></member>
+      <member refid="classNeuron_1a596bdc3cb2be53165aa65c9ca4138698" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getElecDistFromSoma</name></member>
+      <member refid="classNeuron_1ab32b7adba76d718975253ec6db9fa293" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getEm</name></member>
+      <member refid="classNeuron_1ab691922aeaca232edf5ac050abad7ded" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getExprElist</name></member>
+      <member refid="classNeuron_1a224304593cd2509d1ea0acc182148630" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getExprVal</name></member>
+      <member refid="classNeuron_1ac1e28f27e5ad1924e6cda8996d8da376" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getGeomDistFromSoma</name></member>
+      <member refid="classNeuron_1ab438c873e24148952d736d105eb7a48f" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getNumBranches</name></member>
+      <member refid="classNeuron_1a042225535e845c90d79d12e8c41ffdd1" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getNumCompartments</name></member>
+      <member refid="classNeuron_1ac38c66b442f38a538d43a399cf5c24c8" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getNumSpines</name></member>
+      <member refid="classNeuron_1ae6f58acdca796e8b88d2fc928eea2a8c" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getParentCompartmentOfSpine</name></member>
+      <member refid="classNeuron_1ae8c0bd411b7149585a734538156b3c3d" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getPassiveDistribution</name></member>
+      <member refid="classNeuron_1a8eaf81e49667cc546ce31e95fbada648" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getPathDistFromSoma</name></member>
+      <member refid="classNeuron_1a06da9b61a2b3f374053642520a0271bf" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getPhi</name></member>
+      <member refid="classNeuron_1a328dd5695053433105294695fe66c2ca" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getRA</name></member>
+      <member refid="classNeuron_1a7afe7ba5d981f707f8f37a2af2498807" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getRM</name></member>
+      <member refid="classNeuron_1a94cb20b76ec2418befb81dc35db8ce3f" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getSourceFile</name></member>
+      <member refid="classNeuron_1a939394b1db23714157c445b0753bc85f" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getSpineDistribution</name></member>
+      <member refid="classNeuron_1a4d602d7adc58494c30817531699d6f89" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getSpineFromCompartment</name></member>
+      <member refid="classNeuron_1a1c1ea8e1df6507ac1a3e43b344465624" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getSpinesOnCompartment</name></member>
+      <member refid="classNeuron_1a7316d0b8cf0b2b0dce829d8a79d88dc5" prot="public" virt="non-virtual"><scope>Neuron</scope><name>getTheta</name></member>
+      <member refid="classNeuron_1a89035fa443f830334bf5673e3a9445c5" prot="private" virt="non-virtual"><scope>Neuron</scope><name>headDsolve_</name></member>
+      <member refid="classNeuron_1a81197d09a302f2420430fe3f7874926f" prot="public" virt="non-virtual"><scope>Neuron</scope><name>initCinfo</name></member>
+      <member refid="classNeuron_1afdb243b6f9d5e7348c889fd2feab317e" prot="public" virt="non-virtual"><scope>Neuron</scope><name>installMechanism</name></member>
+      <member refid="classNeuron_1a5c9ddeba1b1718038a4dbe14a185a4af" prot="public" virt="non-virtual"><scope>Neuron</scope><name>installSpines</name></member>
+      <member refid="classNeuron_1ac02d0c034fad07ab348c67c9ce62dd0c" prot="public" virt="non-virtual"><scope>Neuron</scope><name>lookupSpine</name></member>
+      <member refid="classNeuron_1a0487cb87eb56bf5b19e0d40c61a1eb67" prot="public" virt="non-virtual"><scope>Neuron</scope><name>makeSpacingDistrib</name></member>
+      <member refid="classNeuron_1a7533f3d27cc3baa84a92344cea9ebd7c" prot="private" virt="non-virtual"><scope>Neuron</scope><name>maxG_</name></member>
+      <member refid="classNeuron_1ab8083822bb7d153e0633aa60bf241679" prot="private" virt="non-virtual"><scope>Neuron</scope><name>maxL_</name></member>
+      <member refid="classNeuron_1a25abd63b55d7d355a6cdab408efbb2de" prot="private" virt="non-virtual"><scope>Neuron</scope><name>maxP_</name></member>
+      <member refid="classNeuron_1a823487d01615fadb8ac19a2768dd9d96" prot="public" virt="non-virtual"><scope>Neuron</scope><name>Neuron</name></member>
+      <member refid="classNeuron_1a2e0404a0c1e26bd1d578463f5472d643" prot="public" virt="non-virtual"><scope>Neuron</scope><name>Neuron</name></member>
+      <member refid="classNeuron_1a1ace1132886fa8b3c659309c2c8eee77" prot="public" virt="non-virtual"><scope>Neuron</scope><name>parseMechSpec</name></member>
+      <member refid="classNeuron_1a0927ab3983ca8fc73953b5f306453a19" prot="private" virt="non-virtual"><scope>Neuron</scope><name>passiveDistribution_</name></member>
+      <member refid="classNeuron_1a3c9b94966847273a04b38a61c0e6b777" prot="private" virt="non-virtual"><scope>Neuron</scope><name>phi_</name></member>
+      <member refid="classNeuron_1a623c6228a7c05f724dbe5c94c576ea17" prot="private" virt="non-virtual"><scope>Neuron</scope><name>psdDsolve_</name></member>
+      <member refid="classNeuron_1a4fc286616a7cf5a753c8c93e2833dc40" prot="private" virt="non-virtual"><scope>Neuron</scope><name>psdStoich_</name></member>
+      <member refid="classNeuron_1a8c0e5343ca389879b0a5cfa32e26a54f" prot="private" virt="non-virtual"><scope>Neuron</scope><name>RA_</name></member>
+      <member refid="classNeuron_1abb7aec5cc9c2cf4386c4adaf764b3f12" prot="private" virt="non-virtual"><scope>Neuron</scope><name>RM_</name></member>
+      <member refid="classNeuron_1aa0a928e134c34e2687b76b5950a13332" prot="public" virt="non-virtual"><scope>Neuron</scope><name>scaleBufAndRates</name></member>
+      <member refid="classNeuron_1aa4070aa9ee1a8d7ab849d858206bdafa" prot="public" virt="non-virtual"><scope>Neuron</scope><name>scaleHeadDiffusion</name></member>
+      <member refid="classNeuron_1a4e790760039a0c0ef49fdd207a9958d3" prot="public" virt="non-virtual"><scope>Neuron</scope><name>scaleShaftDiffusion</name></member>
+      <member refid="classNeuron_1a6d453261f3aa8a7773d56a47b32ab2e4" prot="private" virt="non-virtual"><scope>Neuron</scope><name>segId_</name></member>
+      <member refid="classNeuron_1a8eedbd34a469ed70bd9bfca7bfdbeada" prot="private" virt="non-virtual"><scope>Neuron</scope><name>segIndex_</name></member>
+      <member refid="classNeuron_1a8c4094450eb66231c077598a9ba7ff92" prot="private" virt="non-virtual"><scope>Neuron</scope><name>segs_</name></member>
+      <member refid="classNeuron_1a3bfd45614804470cba50d1862683eea8" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setChannelDistribution</name></member>
+      <member refid="classNeuron_1a166183db4e9169a8d30384037ca57c16" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setCM</name></member>
+      <member refid="classNeuron_1ad724cd1e360729cc9b77a430b8465ebf" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setCompartmentLengthInLambdas</name></member>
+      <member refid="classNeuron_1ad5ff9c4771ee277c5c7a2b7aa150e6d9" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setEm</name></member>
+      <member refid="classNeuron_1ad54cf9f728d17be5962a1dcb1f8a765e" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setNumSpines</name></member>
+      <member refid="classNeuron_1a16b48cc319ac10558c2ccb1d2c9ca75a" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setPassiveDistribution</name></member>
+      <member refid="classNeuron_1a57c292ebfd9eb6cbb153871755b9cc4d" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setPhi</name></member>
+      <member refid="classNeuron_1a8df9d0dea9e7d55e1c380dca1ab9b659" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setRA</name></member>
+      <member refid="classNeuron_1a2a249f2ec0981672a8745e1e03dc477f" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setRM</name></member>
+      <member refid="classNeuron_1a81782a00c89930d2132c093595d0b9c6" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setSourceFile</name></member>
+      <member refid="classNeuron_1a2a8be1a9323c59518f0e52c3b93f1b06" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setSpineAndPsdDsolve</name></member>
+      <member refid="classNeuron_1a8a6f8c3a68488eacf6a202404da32c57" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setSpineAndPsdMesh</name></member>
+      <member refid="classNeuron_1ae6ffb87ff245f2f4eaaa0c1e5a1b6e39" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setSpineDistribution</name></member>
+      <member refid="classNeuron_1aa823bd64228536d0ae39627c31460abd" prot="public" virt="non-virtual"><scope>Neuron</scope><name>setTheta</name></member>
+      <member refid="classNeuron_1a5f7ebfaac0ddb3ffe333214a18928e6b" prot="private" virt="non-virtual"><scope>Neuron</scope><name>soma_</name></member>
+      <member refid="classNeuron_1a1382886862f9c75bfa0d6d93b0c517ac" prot="private" virt="non-virtual"><scope>Neuron</scope><name>sourceFile_</name></member>
+      <member refid="classNeuron_1a9b01222ab1e7103ebc85b90eacbeb9e5" prot="private" virt="non-virtual"><scope>Neuron</scope><name>spineDistribution_</name></member>
+      <member refid="classNeuron_1af1663bb8f858a3254398046b16309444" prot="private" virt="non-virtual"><scope>Neuron</scope><name>spineEntry_</name></member>
+      <member refid="classNeuron_1aedd17f546d07f7c6e21697e57ed59f0e" prot="public" virt="non-virtual"><scope>Neuron</scope><name>spineIds</name></member>
+      <member refid="classNeuron_1ac1c4430a65107d49fa58212836fe87d9" prot="private" virt="non-virtual"><scope>Neuron</scope><name>spineParentSegIndex_</name></member>
+      <member refid="classNeuron_1ab5a959153c3f76b9bc3111d1fd26682f" prot="private" virt="non-virtual"><scope>Neuron</scope><name>spines_</name></member>
+      <member refid="classNeuron_1ab48dcd3340fe0635f0366d5fab8d421e" prot="private" virt="non-virtual"><scope>Neuron</scope><name>spineStoich_</name></member>
+      <member refid="classNeuron_1aef2f6e2f24dfc65831cbe15cb7759252" prot="private" virt="non-virtual"><scope>Neuron</scope><name>spineToMeshOrdering_</name></member>
+      <member refid="classNeuron_1a3922ae64e2ce3a5145454cd0c89f9e80" prot="private" virt="non-virtual"><scope>Neuron</scope><name>theta_</name></member>
+      <member refid="classNeuron_1aa3a8de3bab22e7cab917694ac2b0a99b" prot="public" virt="non-virtual"><scope>Neuron</scope><name>updateSegmentLengths</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

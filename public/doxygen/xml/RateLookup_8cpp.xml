@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="RateLookup_8cpp" kind="file" language="C++">
+    <compoundname>RateLookup.cpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="RateLookup_8h" local="yes">RateLookup.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/RateLookup.cpp</label>
+        <link refid="RateLookup_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RateLookup.h</label>
+        <link refid="RateLookup_8h"/>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/>copyright<sp/>(C)<sp/>2003-2007<sp/>Upinder<sp/>S.<sp/>Bhalla,<sp/>Niraj<sp/>Dudani<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RateLookup_8h" kindref="compound">RateLookup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classLookupTable_1a0b88926909bc6e58a550a6663d88871d" refkind="member"><highlight class="normal"><ref refid="classLookupTable_1aad2ce33f88d3b9d1594fa43639afd04b" kindref="member">LookupTable::LookupTable</ref>(</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nDivs,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nSpecies<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1a32939f7e9a85b5ed74fcae178e741e98" kindref="member">min_</ref><sp/>=<sp/>min;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1a9d9b3b069ea25ef172939682c985cfa3" kindref="member">max_</ref><sp/>=<sp/>max;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>points<sp/>is<sp/>1<sp/>more<sp/>than<sp/>number<sp/>of<sp/>divisions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>add<sp/>one<sp/>more<sp/>since<sp/>we<sp/>may<sp/>interpolate<sp/>at<sp/>the<sp/>last<sp/>point<sp/>in<sp/>the<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1a20ff9c259f695b3a470a8ffe8f853445" kindref="member">nPts_</ref><sp/>=<sp/>nDivs<sp/>+<sp/>1<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1af99bc50487d53da1178b16369f492715" kindref="member">dx_</ref><sp/>=<sp/>(<sp/>max<sp/>-<sp/>min<sp/>)<sp/>/<sp/>nDivs;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Every<sp/>row<sp/>has<sp/>2<sp/>entries<sp/>for<sp/>each<sp/>type<sp/>of<sp/>gate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1affbadfc00e15e425fdc5465a1b035d5a" kindref="member">nColumns_</ref><sp/>=<sp/>2<sp/>*<sp/>nSpecies;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>interpolate_.resize(<sp/>nSpecies<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1a4f6657447d1212af57da095a7cf2be78" kindref="member">table_</ref>.resize(<sp/><ref refid="classLookupTable_1a20ff9c259f695b3a470a8ffe8f853445" kindref="member">nPts_</ref><sp/>*<sp/><ref refid="classLookupTable_1affbadfc00e15e425fdc5465a1b035d5a" kindref="member">nColumns_</ref><sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classLookupTable_1a58e03a4896fe70b80df57638c701ebbe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLookupTable_1a58e03a4896fe70b80df57638c701ebbe" kindref="member">LookupTable::addColumns</ref>(</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>species,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>C1,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>C2<sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>const<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>C2,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>bool<sp/>interpolate<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::const_iterator<sp/>ic1<sp/>=<sp/>C1.begin();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::const_iterator<sp/>ic2<sp/>=<sp/>C2.begin();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>iTable<sp/>=<sp/><ref refid="classLookupTable_1a4f6657447d1212af57da095a7cf2be78" kindref="member">table_</ref>.begin()<sp/>+<sp/>2<sp/>*<sp/>species;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loop<sp/>until<sp/>last<sp/>but<sp/>one<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>igrid<sp/>=<sp/>0;<sp/>igrid<sp/>&lt;<sp/><ref refid="classLookupTable_1a20ff9c259f695b3a470a8ffe8f853445" kindref="member">nPts_</ref><sp/>-<sp/>1<sp/>;<sp/>++igrid<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(<sp/>iTable<sp/>)<sp/><sp/><sp/><sp/><sp/>=<sp/>*ic1;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(<sp/>iTable<sp/>+<sp/>1<sp/>)<sp/>=<sp/>*ic2;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iTable<sp/>+=<sp/><ref refid="classLookupTable_1affbadfc00e15e425fdc5465a1b035d5a" kindref="member">nColumns_</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++ic1,<sp/>++ic2;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>duplicate<sp/>the<sp/>last<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>*(<sp/>iTable<sp/>)<sp/><sp/><sp/><sp/><sp/>=<sp/>C1.back();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>*(<sp/>iTable<sp/>+<sp/>1<sp/>)<sp/>=<sp/>C2.back();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>interpolate_[<sp/>species<sp/>]<sp/>=<sp/>interpolate;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classLookupTable_1a5377d83ebc93f5fb5a42200949c7b67c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLookupTable_1a5377d83ebc93f5fb5a42200949c7b67c" kindref="member">LookupTable::column</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>species,<sp/><ref refid="structLookupColumn" kindref="compound">LookupColumn</ref>&amp;<sp/>column<sp/>)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1a5377d83ebc93f5fb5a42200949c7b67c" kindref="member">column</ref>.column<sp/>=<sp/>2<sp/>*<sp/>species;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>column.interpolate<sp/>=<sp/>interpolate_[<sp/>species<sp/>];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">LookupTable::row</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/><ref refid="structLookupRow" kindref="compound">LookupRow</ref>&amp;<sp/>row<sp/>)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classLookupTable_1a4f6657447d1212af57da095a7cf2be78" kindref="member">table_</ref>.empty())<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;LookupTable::row<sp/>:<sp/>Error:<sp/>table<sp/>is<sp/>empty&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>x<sp/>&lt;<sp/><ref refid="classLookupTable_1a32939f7e9a85b5ed74fcae178e741e98" kindref="member">min_</ref><sp/>)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="classLookupTable_1a32939f7e9a85b5ed74fcae178e741e98" kindref="member">min_</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>x<sp/>&gt;<sp/><ref refid="classLookupTable_1a9d9b3b069ea25ef172939682c985cfa3" kindref="member">max_</ref><sp/>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="classLookupTable_1a9d9b3b069ea25ef172939682c985cfa3" kindref="member">max_</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>div<sp/>=<sp/>(<sp/>x<sp/>-<sp/><ref refid="classLookupTable_1a32939f7e9a85b5ed74fcae178e741e98" kindref="member">min_</ref><sp/>)<sp/>/<sp/><ref refid="classLookupTable_1af99bc50487d53da1178b16369f492715" kindref="member">dx_</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>integer<sp/>=<sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int<sp/>)(<sp/>div<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">row</ref>.fraction<sp/>=<sp/>div<sp/>-<sp/>integer;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">row</ref>.row<sp/>=<sp/>&amp;(<sp/><ref refid="classLookupTable_1a4f6657447d1212af57da095a7cf2be78" kindref="member">table_</ref>.front()<sp/>)<sp/>+<sp/>integer<sp/>*<sp/><ref refid="classLookupTable_1affbadfc00e15e425fdc5465a1b035d5a" kindref="member">nColumns_</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" kindref="member">LookupTable::lookup</ref>(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLookupColumn" kindref="compound">LookupColumn</ref>&amp;<sp/>column,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLookupRow" kindref="compound">LookupRow</ref>&amp;<sp/>row,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>C1,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>C2<sp/>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/>b;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*ap,<sp/>*bp;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>ap<sp/>=<sp/><ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">row</ref>.row<sp/>+<sp/><ref refid="classLookupTable_1a5377d83ebc93f5fb5a42200949c7b67c" kindref="member">column</ref>.column;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>if<sp/>(<sp/>!<sp/>column.interpolate<sp/>)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>C1<sp/>=<sp/>*ap;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>C2<sp/>=<sp/>*(<sp/>ap<sp/>+<sp/>1<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>return;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>bp<sp/>=<sp/>ap<sp/>+<sp/><ref refid="classLookupTable_1affbadfc00e15e425fdc5465a1b035d5a" kindref="member">nColumns_</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>=<sp/>*ap;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/>*bp;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>C1<sp/>=<sp/>a<sp/>+<sp/>(<sp/>b<sp/>-<sp/>a<sp/>)<sp/>*<sp/><ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">row</ref>.fraction;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>=<sp/>*(<sp/>ap<sp/>+<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/>*(<sp/>bp<sp/>+<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>C2<sp/>=<sp/>a<sp/>+<sp/>(<sp/>b<sp/>-<sp/>a<sp/>)<sp/>*<sp/><ref refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" kindref="member">row</ref>.fraction;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/RateLookup.cpp"/>
+  </compounddef>
+</doxygen>

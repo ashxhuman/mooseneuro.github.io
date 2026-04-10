@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classSecondOrder" kind="class" language="C++" prot="public">
+    <compoundname>SecondOrder</compoundname>
+    <basecompoundref refid="classZeroOrder" prot="public" virt="non-virtual">ZeroOrder</basecompoundref>
+    <includes refid="RateTerm_8h" local="no">RateTerm.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSecondOrder_1a584baa1d02d5c83b2d241dccb8ae8710" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SecondOrder::y1_</definition>
+        <argsstring></argsstring>
+        <name>y1_</name>
+        <qualifiedname>SecondOrder::y1_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="459" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="459" bodyend="-1"/>
+        <referencedby refid="classSecondOrder_1a7eb3f96eb04e97e87b96e86b29da32b9" compoundref="RateTerm_8h" startline="451" endline="456">copyWithVolScaling</referencedby>
+        <referencedby refid="classSecondOrder_1a57cf28154228430cca859c5f8a497e52" compoundref="RateTerm_8h" startline="435" endline="441">getReactants</referencedby>
+        <referencedby refid="classSecondOrder_1a0a5d88bf861c8382a047d82fb28c4a98" compoundref="RateTerm_8h" startline="428" endline="433">operator()</referencedby>
+        <referencedby refid="classSecondOrder_1a41a12a78b1910c8dad1168728f37d11f" compoundref="RateTerm_8h" startline="443" endline="449">rescaleVolume</referencedby>
+        <referencedby refid="classSecondOrder_1aab31eb29b84bcd474aeec476d2a37357" compoundref="RateTerm_8h" startline="424" endline="426">SecondOrder</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSecondOrder_1af3b0b768d9fa2e66d8e810d62272fd79" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SecondOrder::y2_</definition>
+        <argsstring></argsstring>
+        <name>y2_</name>
+        <qualifiedname>SecondOrder::y2_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="460" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="460" bodyend="-1"/>
+        <referencedby refid="classSecondOrder_1a7eb3f96eb04e97e87b96e86b29da32b9" compoundref="RateTerm_8h" startline="451" endline="456">copyWithVolScaling</referencedby>
+        <referencedby refid="classSecondOrder_1a57cf28154228430cca859c5f8a497e52" compoundref="RateTerm_8h" startline="435" endline="441">getReactants</referencedby>
+        <referencedby refid="classSecondOrder_1a0a5d88bf861c8382a047d82fb28c4a98" compoundref="RateTerm_8h" startline="428" endline="433">operator()</referencedby>
+        <referencedby refid="classSecondOrder_1a41a12a78b1910c8dad1168728f37d11f" compoundref="RateTerm_8h" startline="443" endline="449">rescaleVolume</referencedby>
+        <referencedby refid="classSecondOrder_1aab31eb29b84bcd474aeec476d2a37357" compoundref="RateTerm_8h" startline="424" endline="426">SecondOrder</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSecondOrder_1a7eb3f96eb04e97e87b96e86b29da32b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classRateTerm" kindref="compound">RateTerm</ref> *</type>
+        <definition>RateTerm * SecondOrder::copyWithVolScaling</definition>
+        <argsstring>(double vol, double sub, double prd) const</argsstring>
+        <name>copyWithVolScaling</name>
+        <qualifiedname>SecondOrder::copyWithVolScaling</qualifiedname>
+        <reimplements refid="classRateTerm_1a1ed45d040641861c18c1e896c2512e90">copyWithVolScaling</reimplements>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>prd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duplicates rate term and then applies volume scaling. Arguments are volume of reference voxel, product of vol/refVol for all substrates: applied to R1 product of vol/refVol for all products: applied to R2</para>
+<para>Note that unless the reaction is cross-compartment, the vol/refVol will be one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="451" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="451" bodyend="456"/>
+        <references refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" compoundref="RateTerm_8h" startline="341">ZeroOrder::k_</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classSecondOrder_1aab31eb29b84bcd474aeec476d2a37357" compoundref="RateTerm_8h" startline="424" endline="426">SecondOrder</references>
+        <references refid="classSecondOrder_1a584baa1d02d5c83b2d241dccb8ae8710" compoundref="RateTerm_8h" startline="459">y1_</references>
+        <references refid="classSecondOrder_1af3b0b768d9fa2e66d8e810d62272fd79" compoundref="RateTerm_8h" startline="460">y2_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSecondOrder_1a57cf28154228430cca859c5f8a497e52" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SecondOrder::getReactants</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;molIndex) const</argsstring>
+        <name>getReactants</name>
+        <qualifiedname>SecondOrder::getReactants</qualifiedname>
+        <reimplements refid="classRateTerm_1af4d74f9d0b9e5c0d5dd42536e99c73d1">getReactants</reimplements>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>molIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finds the reactant indices in the vector S. It returns the number of substrates found, which are the first entries in molIndex. The products are the remaining ones. Note that it does NOT find products for unidirectional reactions, which is a bit of a problem. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="435" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="435" bodyend="441"/>
+        <references refid="classSecondOrder_1a584baa1d02d5c83b2d241dccb8ae8710" compoundref="RateTerm_8h" startline="459">y1_</references>
+        <references refid="classSecondOrder_1af3b0b768d9fa2e66d8e810d62272fd79" compoundref="RateTerm_8h" startline="460">y2_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSecondOrder_1a0a5d88bf861c8382a047d82fb28c4a98" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double SecondOrder::operator()</definition>
+        <argsstring>(const double *S) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>SecondOrder::operator()</qualifiedname>
+        <reimplements refid="classRateTerm_1a47058d3e308f2499045035f4f76a9ec6">operator()</reimplements>
+        <param>
+          <type>const double *</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Computes the rate. The argument is the molecule array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="428" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="428" bodyend="433"/>
+        <references refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" compoundref="RateTerm_8h" startline="341">ZeroOrder::k_</references>
+        <references refid="classSecondOrder_1a584baa1d02d5c83b2d241dccb8ae8710" compoundref="RateTerm_8h" startline="459">y1_</references>
+        <references refid="classSecondOrder_1af3b0b768d9fa2e66d8e810d62272fd79" compoundref="RateTerm_8h" startline="460">y2_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSecondOrder_1a41a12a78b1910c8dad1168728f37d11f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SecondOrder::rescaleVolume</definition>
+        <argsstring>(short comptIndex, const vector&lt; short &gt; &amp;compartmentLookup, double ratio)</argsstring>
+        <name>rescaleVolume</name>
+        <qualifiedname>SecondOrder::rescaleVolume</qualifiedname>
+        <reimplements refid="classRateTerm_1ab6098472ad4346f4a5325b4c408fadbd">rescaleVolume</reimplements>
+        <param>
+          <type>short</type>
+          <declname>comptIndex</declname>
+        </param>
+        <param>
+          <type>const vector&lt; short &gt; &amp;</type>
+          <declname>compartmentLookup</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used to rescale the <ref refid="classRateTerm" kindref="compound">RateTerm</ref> kinetics when the compartment volume changes. This is needed because the kinetics are in extensive units, that is, mol numbers, rather than in intensive units like concentration. So when the volume changes the rate terms change. Each Rate term checks if any of its reactant molecules are affected, and if so, rescales. Ratio is newVol / oldVol </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="443" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="443" bodyend="449"/>
+        <references refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" compoundref="RateTerm_8h" startline="341">ZeroOrder::k_</references>
+        <references refid="classSecondOrder_1a584baa1d02d5c83b2d241dccb8ae8710" compoundref="RateTerm_8h" startline="459">y1_</references>
+        <references refid="classSecondOrder_1af3b0b768d9fa2e66d8e810d62272fd79" compoundref="RateTerm_8h" startline="460">y2_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSecondOrder_1aab31eb29b84bcd474aeec476d2a37357" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SecondOrder::SecondOrder</definition>
+        <argsstring>(double k, unsigned int y1, unsigned int y2)</argsstring>
+        <name>SecondOrder</name>
+        <qualifiedname>SecondOrder::SecondOrder</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="424" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="424" bodyend="426"/>
+        <references refid="classSecondOrder_1a584baa1d02d5c83b2d241dccb8ae8710" compoundref="RateTerm_8h" startline="459">y1_</references>
+        <references refid="classSecondOrder_1af3b0b768d9fa2e66d8e810d62272fd79" compoundref="RateTerm_8h" startline="460">y2_</references>
+        <references refid="classZeroOrder_1ad578154a7360bc42bd883465270b8dbf" compoundref="RateTerm_8h" startline="279" endline="283">ZeroOrder::ZeroOrder</references>
+        <referencedby refid="classSecondOrder_1a7eb3f96eb04e97e87b96e86b29da32b9" compoundref="RateTerm_8h" startline="451" endline="456">copyWithVolScaling</referencedby>
+        <referencedby refid="classStoich_1a299133482ccfce38d615907472c68d78" compoundref="Stoich_8cpp" startline="1417" endline="1439">Stoich::makeHalfReaction</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="1">
+        <label>SecondOrder</label>
+        <link refid="classSecondOrder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ZeroOrder</label>
+        <link refid="classZeroOrder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="1">
+        <label>SecondOrder</label>
+        <link refid="classSecondOrder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ZeroOrder</label>
+        <link refid="classZeroOrder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="421" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="422" bodyend="461"/>
+    <listofallmembers>
+      <member refid="classSecondOrder_1a7eb3f96eb04e97e87b96e86b29da32b9" prot="public" virt="virtual"><scope>SecondOrder</scope><name>copyWithVolScaling</name></member>
+      <member refid="classRateTerm_1a211734fd07c0ef1949907d832d9d03fd" prot="public" virt="non-virtual"><scope>SecondOrder</scope><name>EPSILON</name></member>
+      <member refid="classZeroOrder_1a4f1253a6b404035ac256fc9c873b8074" prot="public" virt="virtual"><scope>SecondOrder</scope><name>getR1</name></member>
+      <member refid="classZeroOrder_1af276750427ae4d85a4fe10ca3285f371" prot="public" virt="virtual"><scope>SecondOrder</scope><name>getR2</name></member>
+      <member refid="classSecondOrder_1a57cf28154228430cca859c5f8a497e52" prot="public" virt="virtual"><scope>SecondOrder</scope><name>getReactants</name></member>
+      <member refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" prot="protected" virt="non-virtual"><scope>SecondOrder</scope><name>k_</name></member>
+      <member refid="classSecondOrder_1a0a5d88bf861c8382a047d82fb28c4a98" prot="public" virt="virtual"><scope>SecondOrder</scope><name>operator()</name></member>
+      <member refid="classRateTerm_1a3fe9a3f2a9c5701276de7aaf89e4bd06" prot="public" virt="non-virtual"><scope>SecondOrder</scope><name>RateTerm</name></member>
+      <member refid="classSecondOrder_1a41a12a78b1910c8dad1168728f37d11f" prot="public" virt="virtual"><scope>SecondOrder</scope><name>rescaleVolume</name></member>
+      <member refid="classSecondOrder_1aab31eb29b84bcd474aeec476d2a37357" prot="public" virt="non-virtual"><scope>SecondOrder</scope><name>SecondOrder</name></member>
+      <member refid="classZeroOrder_1a128619ce58b35a0f4507ec69a3eb30f4" prot="public" virt="non-virtual"><scope>SecondOrder</scope><name>setK</name></member>
+      <member refid="classZeroOrder_1a4c4982b8242f448f63a1377f2b867998" prot="public" virt="virtual"><scope>SecondOrder</scope><name>setR1</name></member>
+      <member refid="classZeroOrder_1a2c84e13c671f27cea28f56957b9eceab" prot="public" virt="virtual"><scope>SecondOrder</scope><name>setR2</name></member>
+      <member refid="classZeroOrder_1af20df8df444598cdd6f23584b278b5f1" prot="public" virt="virtual"><scope>SecondOrder</scope><name>setRates</name></member>
+      <member refid="classSecondOrder_1a584baa1d02d5c83b2d241dccb8ae8710" prot="private" virt="non-virtual"><scope>SecondOrder</scope><name>y1_</name></member>
+      <member refid="classSecondOrder_1af3b0b768d9fa2e66d8e810d62272fd79" prot="private" virt="non-virtual"><scope>SecondOrder</scope><name>y2_</name></member>
+      <member refid="classZeroOrder_1ad578154a7360bc42bd883465270b8dbf" prot="public" virt="non-virtual"><scope>SecondOrder</scope><name>ZeroOrder</name></member>
+      <member refid="classRateTerm_1a097b1971a7652a8771245f17f28356a1" prot="public" virt="virtual"><scope>SecondOrder</scope><name>~RateTerm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

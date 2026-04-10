@@ -1,0 +1,742 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="FastMatrixElim_8cpp" kind="file" language="C++">
+    <compoundname>FastMatrixElim.cpp</compoundname>
+    <includes local="no">math.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes refid="SparseMatrix_8h" local="yes">../basecode/SparseMatrix.h</includes>
+    <includes refid="doubleEq_8h" local="yes">../basecode/doubleEq.h</includes>
+    <includes refid="FastMatrixElim_8h" local="yes">FastMatrixElim.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>../basecode/SparseMatrix.h</label>
+        <link refid="SparseMatrix_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../basecode/doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp</label>
+        <link refid="FastMatrixElim_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>FastMatrixElim.h</label>
+        <link refid="FastMatrixElim_8h"/>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="5">
+        <label>cassert</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="8">
+        <label>iomanip</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>math.h</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="FastMatrixElim_8cpp_1a2c4a9ba749c13608e9f799f1b58a2027" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void buildColIndex</definition>
+        <argsstring>(unsigned int nrows, const vector&lt; unsigned int &gt; &amp;parentVoxel, vector&lt; vector&lt; unsigned int &gt; &gt; &amp;colIndex)</argsstring>
+        <name>buildColIndex</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>nrows</declname>
+        </param>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>parentVoxel</declname>
+        </param>
+        <param>
+          <type>vector&lt; vector&lt; unsigned int &gt; &gt; &amp;</type>
+          <declname>colIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" line="510" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="510" bodyend="532"/>
+        <references refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5">EMPTY_VOXEL</references>
+        <referencedby refid="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" compoundref="FastMatrixElim_8cpp" startline="557" endline="631">FastMatrixElim::buildForDiffusion</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned int</type>
+        <definition>static const unsigned int EMPTY_VOXEL</definition>
+        <argsstring>(-1)</argsstring>
+        <name>EMPTY_VOXEL</name>
+        <param>
+          <type>-</type>
+          <declname>1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" line="49" column="27" declfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" declline="49" declcolumn="27"/>
+        <referencedby refid="FastMatrixElim_8cpp_1a2c4a9ba749c13608e9f799f1b58a2027" compoundref="FastMatrixElim_8cpp" startline="510" endline="532">buildColIndex</referencedby>
+        <referencedby refid="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" compoundref="FastMatrixElim_8cpp" startline="557" endline="631">FastMatrixElim::buildForDiffusion</referencedby>
+        <referencedby refid="FastMatrixElim_8cpp_1ace3c679b315df06ac51a06605fdd2ab4" compoundref="FastMatrixElim_8cpp" startline="538" endline="554">findAreaProportion</referencedby>
+        <referencedby refid="classFastMatrixElim_1af840ef3842f9cf41b688245d69f29b3a" compoundref="FastMatrixElim_8cpp" startline="139" endline="189">FastMatrixElim::hinesReorder</referencedby>
+        <referencedby refid="classFastMatrixElim_1a863a579324087169a06f4dd48a54d410" compoundref="FastMatrixElim_8cpp" startline="405" endline="463">FastMatrixElim::setDiffusionAndTransport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="FastMatrixElim_8cpp_1ace3c679b315df06ac51a06605fdd2ab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void findAreaProportion</definition>
+        <argsstring>(vector&lt; double &gt; &amp;areaProportion, const vector&lt; unsigned int &gt; &amp;parentVoxel, const vector&lt; double &gt; &amp;area)</argsstring>
+        <name>findAreaProportion</name>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>areaProportion</declname>
+        </param>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>parentVoxel</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Motor transport into branches is divided between the child branches in proportion to their area. This function computes these proportions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" line="538" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="538" bodyend="554"/>
+        <references refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5">EMPTY_VOXEL</references>
+        <referencedby refid="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" compoundref="FastMatrixElim_8cpp" startline="557" endline="631">FastMatrixElim::buildForDiffusion</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="FastMatrixElim_8cpp_1a725cf7fc869d3738916ef41c6ba83ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sortByColumn</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;col, vector&lt; double &gt; &amp;entry)</argsstring>
+        <name>sortByColumn</name>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" line="223" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="223" bodyend="241" declfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" declline="41" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="FastMatrixElim_8cpp_1a3bcc5631b173ab2feaca0c8ed027ce9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testSorting</definition>
+        <argsstring>()</argsstring>
+        <name>testSorting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" line="43" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" bodystart="684" bodyend="700" declfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" declline="43" declcolumn="6"/>
+        <references refid="FastMatrixElim_8h_1a725cf7fc869d3738916ef41c6ba83ea4" compoundref="FastMatrixElim_8cpp" startline="223" endline="241">sortByColumn</references>
+        <referencedby refid="testDiffusion_8cpp_1a839cef97ff91dc606a720be9cdc18709" compoundref="testDiffusion_8cpp" startline="935" endline="946">testDiffusion</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2014<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/SparseMatrix.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/doubleEq.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FastMatrixElim_8h" kindref="compound">FastMatrixElim.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">const<sp/>unsigned<sp/>int<sp/>SM_MAX_ROWS<sp/>=<sp/>200000;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">const<sp/>unsigned<sp/>int<sp/>SM_MAX_COLUMNS<sp/>=<sp/>200000;</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">const<sp/>unsigned<sp/>int<sp/>SM_RESERVE<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" refkind="member"><highlight class="normal"><ref refid="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" kindref="member">FastMatrixElim::FastMatrixElim</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>&lt;<sp/>double<sp/>&gt;()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classFastMatrixElim_1a59ddacb124d127c969fe63873f3240f5" refkind="member"><highlight class="normal"><ref refid="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" kindref="member">FastMatrixElim::FastMatrixElim</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrows,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncolumns<sp/>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>&lt;<sp/>double<sp/>&gt;(<sp/>nrows,<sp/>ncolumns<sp/>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classFastMatrixElim_1a3fd10502b933b3496fc610f1dd224f58" refkind="member"><highlight class="normal"><ref refid="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" kindref="member">FastMatrixElim::FastMatrixElim</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classSparseMatrix" kindref="compound">SparseMatrix&lt; double &gt;</ref>&amp;<sp/>orig<sp/>)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>&lt;<sp/>double<sp/>&gt;(<sp/>orig<sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FastMatrixElim_8cpp_1a725cf7fc869d3738916ef41c6ba83ea4" kindref="member">sortByColumn</ref>(</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>col,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>entry<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FastMatrixElim_8cpp_1a3bcc5631b173ab2feaca0c8ed027ce9e" kindref="member">testSorting</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>static<sp/>unsigned<sp/>int<sp/>parents[]<sp/>=<sp/>{<sp/>1,6,3,6,5,8,7,8,9,10,-1};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>unsigned<sp/>int<sp/>numKids[]<sp/>=<sp/>{0,1,0,1,0,2,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref>(-1);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classFastMatrixElim_1a192e06a70c45285cdd6aa8625f165936" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a192e06a70c45285cdd6aa8625f165936" kindref="member">FastMatrixElim::checkSymmetricShape</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="52"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFastMatrixElim" kindref="compound">FastMatrixElim</ref><sp/>temp<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>temp.<ref refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" kindref="member">transpose</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>==<sp/>temp.<ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" kindref="member">ncolumns_</ref><sp/>==<sp/>temp.<ref refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" kindref="member">ncolumns_</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.size()<sp/>==<sp/>temp.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.size()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref><sp/>==<sp/>temp.<ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref><sp/>==<sp/>temp.<ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classFastMatrixElim_1a36553b13d33b91e760cd9caeebcdfc2b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a36553b13d33b91e760cd9caeebcdfc2b" kindref="member">FastMatrixElim::operator==</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim" kindref="compound">FastMatrixElim</ref>&amp;<sp/>other<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>==<sp/>other.<ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" kindref="member">ncolumns_</ref><sp/>==<sp/>other.<ref refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" kindref="member">ncolumns_</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.size()<sp/>==<sp/>other.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.size()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref><sp/>==<sp/>other.<ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref><sp/>==<sp/>other.<ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[i],<sp/>other.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[i]<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classFastMatrixElim_1ad4038cd61b750948c47256485869224d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1ad4038cd61b750948c47256485869224d" kindref="member">FastMatrixElim::isSymmetric</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="81"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFastMatrixElim" kindref="compound">FastMatrixElim</ref><sp/>temp<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>temp.<ref refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" kindref="member">transpose</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>temp<sp/>==<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classFastMatrixElim_1af840ef3842f9cf41b688245d69f29b3a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1af840ef3842f9cf41b688245d69f29b3a" kindref="member">FastMatrixElim::hinesReorder</ref>(</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>parentVoxel,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>lookupOldRowFromNew</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>we<sp/>fill<sp/>in<sp/>the<sp/>vector<sp/>that<sp/>specifies<sp/>the<sp/>old<sp/>row<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>assigned<sp/>to<sp/>each<sp/>row<sp/>of<sp/>the<sp/>reordered<sp/>matrix.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>parentVoxel.size()<sp/>==<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>lookupOldRowFromNew.clear();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>numKids(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>bool<sp/>&gt;<sp/>rowPending(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numDone<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>parentVoxel[i]<sp/>!=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref><sp/>)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numKids[<sp/>parentVoxel[i]<sp/>]++;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>numDone<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>rowPending[i]<sp/>&amp;&amp;<sp/>numKids[i]<sp/>==<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lookupOldRowFromNew.push_back(<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rowPending[i]<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numDone++;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pa<sp/>=<sp/>parentVoxel[i];</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>root<sp/>parent<sp/>is<sp/>EMPTY_VOXEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>pa<sp/>!=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref><sp/>&amp;&amp;<sp/>numKids[pa]<sp/>==<sp/>1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>rowPending[pa]<sp/>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rowPending[pa]<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numDone++;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lookupOldRowFromNew.push_back(<sp/>pa<sp/>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pa<sp/>=<sp/>parentVoxel[pa];</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pa<sp/>!=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>numKids[pa]<sp/>&gt;<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numKids[pa]--;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>setprecision(4);</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;oldRowFromNew=<sp/>{&quot;<sp/>;</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(<sp/>unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nrows_;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>lookupOldRowFromNew[i]<sp/>&lt;&lt;<sp/>&quot;,<sp/>&quot;;</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;}\n&quot;;</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>we<sp/>fill<sp/>in<sp/>the<sp/>reordered<sp/>matrix.<sp/>Note<sp/>we<sp/>need<sp/>to<sp/>reorder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>columns<sp/>too.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFastMatrixElim_1ad534bd7ba1876a591d78fd1bc907441d" kindref="member">shuffleRows</ref>(<sp/>lookupOldRowFromNew<sp/>);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>the<sp/>reordered<sp/>matrix.<sp/>Note<sp/>we<sp/>need<sp/>to<sp/>reorder<sp/>columns<sp/>too.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classFastMatrixElim_1ad534bd7ba1876a591d78fd1bc907441d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1ad534bd7ba1876a591d78fd1bc907441d" kindref="member">FastMatrixElim::shuffleRows</ref>(</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>lookupOldRowFromNew<sp/>)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>lookupNewRowFromOld(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lookupNewRowFromOld[<sp/>lookupOldRowFromNew[i]<sp/>]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFastMatrixElim" kindref="compound">FastMatrixElim</ref><sp/>temp<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1aabc77208663f5a59bb2bbb0559b614f7" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" kindref="member">setSize</ref>(<sp/>temp.<ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>,<sp/>temp.<ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>lookupOldRowFromNew.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>c;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>e;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num<sp/>=<sp/>temp.<ref refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" kindref="member">getRow</ref>(<sp/>lookupOldRowFromNew[i],<sp/>e,<sp/>c<sp/>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>newc(<sp/>num<sp/>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>newe(<sp/>num<sp/>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>num;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newc[j]<sp/>=<sp/>lookupNewRowFromOld[<sp/>c[j]<sp/>];</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newe[j]<sp/>=<sp/>e[j];</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we<sp/>need<sp/>to<sp/>sort<sp/>the<sp/>new<sp/>row<sp/>entries<sp/>in<sp/>increasing<sp/>col<sp/>order.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sortByColumn(<sp/>newc,<sp/>newe<sp/>);</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addRow(<sp/>i,<sp/>newe,<sp/>newc<sp/>);</highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="FastMatrixElim_8h_1a725cf7fc869d3738916ef41c6ba83ea4" kindref="member">sortByColumn</ref>(<sp/>newc,<sp/>e<sp/>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a0bf45bbe509508455280e65ac22b4cfc" kindref="member">addRow</ref>(<sp/>i,<sp/>e,<sp/>newc<sp/>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="FastMatrixElim_8h_1a725cf7fc869d3738916ef41c6ba83ea4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FastMatrixElim_8cpp_1a725cf7fc869d3738916ef41c6ba83ea4" kindref="member">sortByColumn</ref>(<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>col,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>entry<sp/>)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num<sp/>=<sp/>col.size();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>num<sp/>==<sp/>entry.size()<sp/>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stupid<sp/>bubble<sp/>sort,<sp/>as<sp/>we<sp/>only<sp/>have<sp/>up<sp/>to<sp/>5<sp/>entries<sp/>and<sp/>need<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sort<sp/>both<sp/>the<sp/>col<sp/>and<sp/>reorder<sp/>the<sp/>entries<sp/>by<sp/>the<sp/>same<sp/>sequence.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>num;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/>num;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>col[j]<sp/>&lt;<sp/>col[j-1]<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temp<sp/>=<sp/>col[j];</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col[j]<sp/>=<sp/>col[j-1];</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col[j-1]<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>entry[j];</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry[j]<sp/>=<sp/>entry[j-1];</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entry[j-1]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="classFastMatrixElim_1a2d4f8de7a870a589b3a048c054281783" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a2d4f8de7a870a589b3a048c054281783" kindref="member">FastMatrixElim::makeTestMatrix</ref>(</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>test,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numCompts<sp/>)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" kindref="member">setSize</ref>(<sp/>numCompts,<sp/>numCompts<sp/>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>row(<sp/>numCompts,<sp/>~0<sp/>);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numCompts;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>numCompts;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>i<sp/>*<sp/>numCompts<sp/>+<sp/>j;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>test[k]<sp/>&lt;<sp/>0.1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.push_back(<sp/>test[k]<sp/>);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>.push_back(<sp/>j<sp/>);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[i<sp/>+<sp/>1]<sp/>=<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.size();</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="263"><highlight class="comment">I<sp/>need<sp/>an<sp/>outer<sp/>function<sp/>to<sp/>fill<sp/>the<sp/>vector<sp/>of<sp/>ops<sp/>for<sp/>forward<sp/>elim.</highlight></codeline>
+<codeline lineno="264"><highlight class="comment">Then<sp/>I<sp/>need<sp/>another<sp/>outer<sp/>function<sp/>to<sp/>fill<sp/>another<sp/>set<sp/>of<sp/>ops<sp/>for</highlight></codeline>
+<codeline lineno="265"><highlight class="comment">back-substitution.</highlight></codeline>
+<codeline lineno="266"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="classFastMatrixElim_1a7b41c40500ad1b6d848d4ced1a135ca8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a7b41c40500ad1b6d848d4ced1a135ca8" kindref="member">FastMatrixElim::buildForwardElim</ref>(<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>diag,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>fops<sp/>)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>&gt;<sp/>rowsToElim(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>diag.clear();</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rs<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[i];</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>re<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[i+1];</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>rs;<sp/>j<sp/>&lt;<sp/>re;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[j];</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>k<sp/>==<sp/>i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diag.push_back(j);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>k<sp/>&gt;<sp/>i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rowsToElim[<sp/>i<sp/>].push_back(<sp/>k<sp/>);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>diag.size()<sp/>==<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[diag[i]];</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>diagend<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>i<sp/>+<sp/>1<sp/>];</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>diag[i]<sp/>&lt;<sp/>diagend<sp/>);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>elim<sp/>=<sp/>rowsToElim[i];</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>elim.size();<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>erow<sp/>=<sp/>elim[j];</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>erow<sp/>==<sp/>i<sp/>)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rs<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>erow<sp/>];</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>re<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[<sp/>erow+1<sp/>];</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>assert(<sp/>colIndex_[rs]<sp/>==<sp/>i<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ratio<sp/>=<sp/><ref refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" kindref="member">get</ref>(<sp/>erow,<sp/>i<sp/>)<sp/>/<sp/>d;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>ratio<sp/>=<sp/>N_[rs]/N_[diag[i]];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>diag[i]+1;<sp/>k<sp/>&lt;<sp/>diagend;<sp/>++k<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col<sp/>=<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[k];</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>findElimEntry,<sp/>subtract<sp/>it<sp/>out.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>q<sp/>=<sp/>rs;<sp/>q<sp/>&lt;<sp/>re;<sp/>++q<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[q]<sp/>==<sp/>col<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[q]<sp/>-=<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[k]<sp/>*<sp/>ratio;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fops.push_back(<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref>(<sp/>ratio,<sp/>i,<sp/>erow)<sp/>);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="319"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(<sp/>unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rowsToElim.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/>&quot;<sp/>:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;;</highlight></codeline>
+<codeline lineno="321"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(<sp/>unsigned<sp/>int<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>rowsToElim[i].size();<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>rowsToElim[i][j]<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/><sp/>&quot;;</highlight></codeline>
+<codeline lineno="323"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="325"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(<sp/>unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>fops.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;fops[&quot;<sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/>&quot;]=<sp/><sp/><sp/><sp/><sp/>&quot;<sp/>&lt;&lt;<sp/>fops[i].b_<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/><sp/><sp/>&quot;<sp/>&lt;&lt;<sp/>fops[i].c_<sp/>&lt;&lt;</highlight></codeline>
+<codeline lineno="328"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<sp/><sp/><sp/>&quot;<sp/>&lt;&lt;<sp/>fops[i].a_<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="329"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="classFastMatrixElim_1a37ff32f7eb24225db49bd0fd99078003" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a37ff32f7eb24225db49bd0fd99078003" kindref="member">FastMatrixElim::buildBackwardSub</ref>(<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>diag,</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>bops,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diagVal<sp/>)</highlight></codeline>
+<codeline lineno="344"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>vec<sp/>tells<sp/>the<sp/>routine<sp/>which<sp/>rows<sp/>below<sp/>have<sp/>to<sp/>be<sp/>back-subbed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>includes<sp/>the<sp/>rows<sp/>if<sp/>any<sp/>in<sp/>the<sp/>tridiagonal<sp/>band<sp/>and<sp/>also</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rows,<sp/>if<sp/>any,<sp/>on<sp/>branches.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>&gt;<sp/>rowsToSub(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>diag[i]<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>re<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[i+1];</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>d;<sp/>j<sp/>&lt;<sp/>re;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[j];</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>At<sp/>this<sp/>point<sp/>the<sp/>row<sp/>to<sp/>sub<sp/>is<sp/>at<sp/>(i,<sp/>k).<sp/>We<sp/>need<sp/>to<sp/>go<sp/>down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>the<sp/>(k,k)<sp/>diagonal<sp/>to<sp/>sub<sp/>it<sp/>out.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rowsToSub[<sp/>k<sp/>].push_back(<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="361"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(<sp/>unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rowsToSub.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="362"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/>&quot;<sp/>:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;;</highlight></codeline>
+<codeline lineno="363"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(<sp/>unsigned<sp/>int<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>rowsToSub[i].size();<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>rowsToSub[i][j]<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/><sp/><sp/>&quot;;</highlight></codeline>
+<codeline lineno="365"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="367"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="368"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>diagVal.resize(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>the<sp/>diagonal<sp/>terms.<sp/>Here<sp/>we<sp/>do<sp/>all<sp/>entries.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>!=<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diagVal.push_back(<sp/>1.0<sp/>/<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[diag[i]]<sp/>);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>the<sp/>back-sub<sp/>operations.<sp/>Note<sp/>we<sp/>don&apos;t<sp/>need<sp/>to<sp/>check<sp/>zero.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>-1;<sp/>i<sp/>!=<sp/>0<sp/>;<sp/>--i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>rowsToSub[i].size()<sp/>-<sp/>1;<sp/>j<sp/>!=<sp/>-1;<sp/>--j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>rowsToSub[i][j];</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" kindref="member">get</ref>(<sp/>k,<sp/>i<sp/>);<sp/></highlight><highlight class="comment">//k<sp/>is<sp/>the<sp/>row<sp/>to<sp/>go,<sp/>i<sp/>is<sp/>the<sp/>diag.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bops.push_back(<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref>(<sp/>val<sp/>*<sp/>diagVal[i],<sp/>i,<sp/>k<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="386"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(<sp/>unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>bops.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="387"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/>&quot;:<sp/><sp/><sp/><sp/><sp/>&quot;<sp/>&lt;&lt;<sp/>bops[i].a_<sp/>&lt;&lt;<sp/>&quot;<sp/><sp/><sp/><sp/>&quot;<sp/>&lt;&lt;</highlight></codeline>
+<codeline lineno="388"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bops[i].b_<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/><sp/>//<sp/>diagonal<sp/>index</highlight></codeline>
+<codeline lineno="389"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bops[i].c_<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/><sp/>//<sp/>off-diagonal<sp/>index</highlight></codeline>
+<codeline lineno="390"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.0<sp/>/<sp/>diagVal[bops[i].b_]<sp/>&lt;&lt;<sp/>//<sp/>diagonal<sp/>value.</highlight></codeline>
+<codeline lineno="391"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>endl;</highlight></codeline>
+<codeline lineno="392"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="393"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="classFastMatrixElim_1a863a579324087169a06f4dd48a54d410" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a863a579324087169a06f4dd48a54d410" kindref="member">FastMatrixElim::setDiffusionAndTransport</ref>(</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>parentVoxel,</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diffConst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>motorConst,</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt<sp/>)</highlight></codeline>
+<codeline lineno="409"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFastMatrixElim" kindref="compound">FastMatrixElim</ref><sp/>m;</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>=<sp/>m.<ref refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" kindref="member">ncolumns_</ref><sp/>=<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>.resize(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>+<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Insert<sp/>an<sp/>entry<sp/>for<sp/>diagonal<sp/>in<sp/>each.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[i]<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[i]<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>proximalTerms<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>distalTerms<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>term<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pendingDiagonal<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>diagonalIndex<sp/>=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref>;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[i];<sp/>j<sp/>&lt;<sp/><ref refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" kindref="member">rowStart_</ref>[i+1];<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Treat<sp/>transport<sp/>as<sp/>something<sp/>either<sp/>to<sp/>or<sp/>from<sp/>soma.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>motor<sp/>direction<sp/>is<sp/>based<sp/>on<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assume<sp/>no<sp/>transport<sp/>between<sp/>sibling<sp/>compartments.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>parentVoxel[<ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[j]]<sp/>==<sp/>i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>term<sp/>=<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[j]<sp/>*<sp/>dt<sp/>*<sp/>(<sp/>diffConst<sp/>+<sp/>motorConst<sp/>);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proximalTerms<sp/>+=<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[j];</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>term<sp/>=<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[j]<sp/>*<sp/>dt<sp/>*<sp/>diffConst;</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>distalTerms<sp/>+=<sp/><ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[j];</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[j]<sp/>&lt;<sp/>i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>.push_back(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[j]<sp/>);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.push_back(<sp/>term<sp/>);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[j]<sp/>==<sp/>i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pendingDiagonal<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pendingDiagonal<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diagonalIndex<sp/>=<sp/>m.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.size();</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>.push_back(<sp/>i<sp/>);<sp/></highlight><highlight class="comment">//<sp/>diagonal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.push_back(<sp/>0<sp/>);<sp/></highlight><highlight class="comment">//<sp/>placeholder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>.push_back(<sp/><ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>[j]<sp/>);</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.push_back(<sp/>term<sp/>);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pendingDiagonal<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diagonalIndex<sp/>=<sp/>m.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.size();</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" kindref="member">colIndex_</ref>.push_back(<sp/>i<sp/>);<sp/></highlight><highlight class="comment">//<sp/>diagonal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>.push_back(<sp/>0<sp/>);<sp/></highlight><highlight class="comment">//<sp/>placeholder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>diagonalIndex<sp/>!=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref><sp/>);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.<ref refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" kindref="member">N_</ref>[diagonalIndex]<sp/>=<sp/>1.0<sp/>-<sp/>dt<sp/>*<sp/>(</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffConst<sp/>*<sp/>(<sp/>proximalTerms<sp/>+<sp/>distalTerms<sp/>)<sp/>+</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>motorConst<sp/>*<sp/>distalTerms</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>=<sp/>m;</highlight></codeline>
+<codeline lineno="463"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="comment">//<sp/>All<sp/>the<sp/>rest<sp/>was<sp/>setup.<sp/>This<sp/>function<sp/>does<sp/>the<sp/>work,<sp/>in<sp/>a<sp/>tight</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"></highlight><highlight class="comment">//<sp/>inner<sp/>loop<sp/>called<sp/>many<sp/>times.<sp/>Doesn&apos;t<sp/>even<sp/>depend<sp/>on<sp/>matrix<sp/>contents,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight><highlight class="comment">//<sp/>but<sp/>the<sp/>data<sp/>layout<sp/>is<sp/>built<sp/>by<sp/>the<sp/>matrix<sp/>so<sp/>it<sp/>is<sp/>set<sp/>as<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight><highlight class="comment">//<sp/>static<sp/>function<sp/>of<sp/>it.</highlight></codeline>
+<codeline lineno="471"><highlight class="comment">//<sp/>Static<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="472" refid="classFastMatrixElim_1a964e1311e6a9585878b934a82687ab15" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a964e1311e6a9585878b934a82687ab15" kindref="member">FastMatrixElim::advance</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>y,</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>ops,<sp/></highlight><highlight class="comment">//<sp/>has<sp/>both<sp/>fops<sp/>and<sp/>bops.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diagVal<sp/>)</highlight></codeline>
+<codeline lineno="475"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;::const_iterator</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>ops.begin();<sp/>i<sp/>!=<sp/>ops.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y[i-&gt;c_]<sp/>-=<sp/>y[i-&gt;b_]<sp/>*<sp/>i-&gt;a_;</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>y.size()<sp/>==<sp/>diagVal.size()<sp/>);</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>iy<sp/>=<sp/>y.begin();</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>vector&lt;<sp/>double<sp/>&gt;::const_iterator</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>diagVal.begin();<sp/>i<sp/>!=<sp/>diagVal.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*iy++<sp/>*=<sp/>*i;</highlight></codeline>
+<codeline lineno="485"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491" refid="classFastMatrixElim_1a16d3f3761653a7195e48bc0cd655fe36" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a16d3f3761653a7195e48bc0cd655fe36" kindref="member">FastMatrixElim::opsReorder</ref>(</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>lookupOldRowsFromNew,</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>ops,</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diagVal<sp/>)</highlight></codeline>
+<codeline lineno="495"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>oldDiag<sp/>=<sp/>diagVal;</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ops.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ops[i].b_<sp/>=<sp/>lookupOldRowsFromNew[<sp/>ops[i].b_<sp/>];</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ops[i].c_<sp/>=<sp/>lookupOldRowsFromNew[<sp/>ops[i].c_<sp/>];</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>diagVal.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diagVal[<sp/>lookupOldRowsFromNew[i]<sp/>]<sp/>=<sp/>oldDiag[i];</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="506"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Build<sp/>up<sp/>colIndices<sp/>for<sp/>each<sp/>row.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="510" refid="FastMatrixElim_8cpp_1a2c4a9ba749c13608e9f799f1b58a2027" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FastMatrixElim_8cpp_1a2c4a9ba749c13608e9f799f1b58a2027" kindref="member">buildColIndex</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrows,</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>parentVoxel,</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>&gt;&amp;<sp/>colIndex</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="514"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>colIndex.clear();</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/>colIndex.resize(<sp/>nrows<sp/>);</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nrows;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>parentVoxel[i]<sp/>!=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colIndex[i].push_back(<sp/>parentVoxel[i]<sp/>);<sp/></highlight><highlight class="comment">//<sp/>parent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colIndex[<sp/>parentVoxel[i]<sp/>].push_back(<sp/>i<sp/>);<sp/></highlight><highlight class="comment">//<sp/>children</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colIndex[i].push_back(<sp/>i<sp/>);<sp/></highlight><highlight class="comment">//<sp/>diagonal:<sp/>self</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nrows;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>c<sp/>=<sp/>colIndex[i];</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<sp/>c.begin(),<sp/>c.end()<sp/>);</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Should<sp/>check<sp/>that<sp/>there<sp/>are<sp/>no<sp/>duplicates.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/>c.size();<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>c[j<sp/>-1<sp/>]<sp/>!=<sp/>c[j]<sp/>);</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="532"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"></highlight></codeline>
+<codeline lineno="538" refid="FastMatrixElim_8cpp_1ace3c679b315df06ac51a06605fdd2ab4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FastMatrixElim_8cpp_1ace3c679b315df06ac51a06605fdd2ab4" kindref="member">findAreaProportion</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>areaProportion,</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>parentVoxel,</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>area<sp/>)</highlight></codeline>
+<codeline lineno="541"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrows<sp/>=<sp/>parentVoxel.size();</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>sumAreaOfChildren(<sp/>nrows,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nrows;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>parentVoxel[i]<sp/>!=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref><sp/>)</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sumAreaOfChildren[<sp/>parentVoxel[i]<sp/>]<sp/>+=<sp/>area[i];</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nrows;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>parentVoxel[i]<sp/>!=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref><sp/>)</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>areaProportion[i]<sp/>=<sp/>area[i]/sumAreaOfChildren[<sp/>parentVoxel[i]<sp/>];</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>areaProportion[i]<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="554"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557" refid="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" kindref="member">FastMatrixElim::buildForDiffusion</ref>(</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>parentVoxel,</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>volume,</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>area,</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>length,</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diffConst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>motorConst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt<sp/>)</highlight></codeline>
+<codeline lineno="563"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Too<sp/>slow<sp/>to<sp/>matter.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>diffConst<sp/>&lt;<sp/>1e-18<sp/>&amp;&amp;<sp/>fabs(<sp/>motorConst<sp/>)<sp/>&lt;<sp/>1e-12<sp/>)</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>==<sp/>parentVoxel.size()<sp/>);</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>==<sp/>volume.size()<sp/>);</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>==<sp/>area.size()<sp/>);</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref><sp/>==<sp/>length.size()<sp/>);</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>&gt;<sp/><ref refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" kindref="member">colIndex</ref>;</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"></highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FastMatrixElim_8cpp_1a2c4a9ba749c13608e9f799f1b58a2027" kindref="member">buildColIndex</ref>(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>,<sp/>parentVoxel,<sp/><ref refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" kindref="member">colIndex</ref><sp/>);</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>bool<sp/>&gt;<sp/>isTwig(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>parentVoxel[i]<sp/>!=<sp/><ref refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5" kindref="member">EMPTY_VOXEL</ref><sp/>)</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isTwig[<sp/>parentVoxel[i]<sp/>]<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"></highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>areaProportion(<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>,<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FastMatrixElim_8cpp_1ace3c679b315df06ac51a06605fdd2ab4" kindref="member">findAreaProportion</ref>(<sp/>areaProportion,<sp/>parentVoxel,<sp/>area<sp/>);</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>the<sp/>matrix<sp/>entries<sp/>for<sp/>each<sp/>colIndex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" kindref="member">nrows_</ref>;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>c<sp/>=<sp/><ref refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" kindref="member">colIndex</ref>[i];</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>e(<sp/>c.size(),<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="587"><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>c.size();<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>c[j];<sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>colIndex,<sp/>in<sp/>order.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vol<sp/>=<sp/>volume[k];</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>area[k];</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>length[k];</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>k<sp/>==<sp/>i<sp/>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Diagonal<sp/>term</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>=<sp/>0.0<sp/>;</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>diffusion<sp/>from<sp/>all<sp/>connected<sp/>voxels.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>0;<sp/>p<sp/>&lt;<sp/>c.size();<sp/>++p<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>q<sp/>=<sp/>c[p];</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>q<sp/>!=<sp/>i<sp/>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Skip<sp/>self</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>-=<sp/>(area[q]<sp/>+<sp/>a)/(length[q]<sp/>+<sp/>len<sp/>)/vol;</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>*=<sp/>diffConst;</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>motor<sp/>transport</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>motorConst<sp/>&lt;<sp/>0<sp/>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Towards<sp/>soma</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>+=<sp/>motorConst<sp/>/<sp/>len;</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!isTwig[i]<sp/>&amp;&amp;<sp/>motorConst<sp/>&gt;<sp/>0<sp/>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Toward<sp/>twigs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>-=<sp/>motorConst<sp/>/<sp/>len;</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>*=<sp/>-dt;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>previous<sp/>lot<sp/>is<sp/>the<sp/>rate,<sp/>so<sp/>scale<sp/>by<sp/>dt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>+=<sp/>1.0;<sp/></highlight><highlight class="comment">//<sp/>term<sp/>for<sp/>self.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">//<sp/>Not<sp/>diagonal.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>diffusion<sp/>from<sp/>this<sp/>entry<sp/>to<sp/>i.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>=<sp/>diffConst<sp/>*</highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(area[i]<sp/>+<sp/>a)/(length[i]<sp/>+<sp/>len<sp/>)/vol;</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>motor<sp/>transport</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>k<sp/>==<sp/>parentVoxel[i]<sp/>&amp;&amp;<sp/>motorConst<sp/>&gt;<sp/>0<sp/>)<sp/>{<sp/></highlight><highlight class="comment">//toward<sp/>twig</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>+=<sp/>areaProportion[i]<sp/>*<sp/>motorConst<sp/>/<sp/>len;</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>==<sp/>parentVoxel[k]<sp/>&amp;&amp;<sp/>motorConst<sp/>&lt;<sp/>0<sp/>)<sp/>{<sp/></highlight><highlight class="comment">//toward<sp/>soma</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>-=<sp/>motorConst<sp/>/<sp/>length[k];</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e[j]<sp/>*=<sp/>-dt;<sp/></highlight><highlight class="comment">//<sp/>Scale<sp/>the<sp/>whole<sp/>thing<sp/>by<sp/>dt.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>put<sp/>it<sp/>all<sp/>in<sp/>the<sp/>sparase<sp/>matrix.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSparseMatrix_1a0bf45bbe509508455280e65ac22b4cfc" kindref="member">addRow</ref>(<sp/>i,<sp/>e,<sp/>c<sp/>);</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="631"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp"/>
+  </compounddef>
+</doxygen>

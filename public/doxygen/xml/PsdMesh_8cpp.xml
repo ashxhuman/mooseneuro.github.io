@@ -1,0 +1,1055 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="PsdMesh_8cpp" kind="file" language="C++">
+    <compoundname>PsdMesh.cpp</compoundname>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes refid="SparseMatrix_8h" local="yes">../basecode/SparseMatrix.h</includes>
+    <includes refid="ElementValueFinfo_8h" local="yes">../basecode/ElementValueFinfo.h</includes>
+    <includes refid="Vec_8h" local="yes">../utility/Vec.h</includes>
+    <includes refid="Boundary_8h" local="yes">Boundary.h</includes>
+    <includes refid="MeshEntry_8h" local="yes">MeshEntry.h</includes>
+    <includes refid="ChemCompt_8h" local="yes">ChemCompt.h</includes>
+    <includes refid="MeshCompt_8h" local="yes">MeshCompt.h</includes>
+    <includes refid="CubeMesh_8h" local="yes">CubeMesh.h</includes>
+    <includes refid="CylBase_8h" local="yes">CylBase.h</includes>
+    <includes refid="NeuroNode_8h" local="yes">NeuroNode.h</includes>
+    <includes refid="NeuroMesh_8h" local="yes">NeuroMesh.h</includes>
+    <includes refid="PsdMesh_8h" local="yes">PsdMesh.h</includes>
+    <includes refid="SpineEntry_8h" local="yes">SpineEntry.h</includes>
+    <includes refid="SpineMesh_8h" local="yes">SpineMesh.h</includes>
+    <includes refid="numutil_8h" local="yes">../utility/numutil.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="29">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="18">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="22">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="24">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="45">
+        <label>../basecode/ElementValueFinfo.h</label>
+        <link refid="ElementValueFinfo_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="28">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="42">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="41">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="17">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="26">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="33">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="14">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="27">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="39">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="23">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="20">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="15">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="35">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="32">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="37">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="34">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="44">
+        <label>../basecode/SparseMatrix.h</label>
+        <link refid="SparseMatrix_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="38">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="13">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="69">
+        <label>../basecode/global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>Boundary.h</label>
+        <link refid="Boundary_8h"/>
+      </node>
+      <node id="50">
+        <label>ChemCompt.h</label>
+        <link refid="ChemCompt_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>CubeMesh.h</label>
+        <link refid="CubeMesh_8h"/>
+      </node>
+      <node id="54">
+        <label>CylBase.h</label>
+        <link refid="CylBase_8h"/>
+      </node>
+      <node id="52">
+        <label>MeshCompt.h</label>
+        <link refid="MeshCompt_8h"/>
+      </node>
+      <node id="49">
+        <label>MeshEntry.h</label>
+        <link refid="MeshEntry_8h"/>
+      </node>
+      <node id="56">
+        <label>NeuroMesh.h</label>
+        <link refid="NeuroMesh_8h"/>
+      </node>
+      <node id="55">
+        <label>NeuroNode.h</label>
+        <link refid="NeuroNode_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp</label>
+        <link refid="PsdMesh_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>PsdMesh.h</label>
+        <link refid="PsdMesh_8h"/>
+      </node>
+      <node id="58">
+        <label>SpineEntry.h</label>
+        <link refid="SpineEntry_8h"/>
+      </node>
+      <node id="59">
+        <label>SpineMesh.h</label>
+        <link refid="SpineMesh_8h"/>
+      </node>
+      <node id="51">
+        <label>VoxelJunction.h</label>
+        <link refid="VoxelJunction_8h"/>
+      </node>
+      <node id="21">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="66">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>../randnum/RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="47">
+        <label>../utility/Vec.h</label>
+        <link refid="Vec_8h"/>
+      </node>
+      <node id="60">
+        <label>../utility/numutil.h</label>
+        <link refid="numutil_8h"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="46">
+        <label>cctype</label>
+      </node>
+      <node id="62">
+        <label>cfloat</label>
+      </node>
+      <node id="61">
+        <label>cmath</label>
+      </node>
+      <node id="30">
+        <label>cstring</label>
+      </node>
+      <node id="70">
+        <label>ctime</label>
+      </node>
+      <node id="73">
+        <label>fstream</label>
+      </node>
+      <node id="74">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="63">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="65">
+        <label>random</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="71">
+        <label>valarray</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="PsdMesh_8cpp_1a064f4881f0d437f7d69047dd6b5f86aa" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo* psdMeshCinfo</definition>
+        <argsstring></argsstring>
+        <name>psdMeshCinfo</name>
+        <initializer>= <ref refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" kindref="member">PsdMesh::initCinfo</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" line="129" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2013<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/SparseMatrix.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/ElementValueFinfo.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utility/Vec.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Boundary_8h" kindref="compound">Boundary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MeshEntry_8h" kindref="compound">MeshEntry.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ChemCompt_8h" kindref="compound">ChemCompt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MeshCompt_8h" kindref="compound">MeshCompt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CubeMesh_8h" kindref="compound">CubeMesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CylBase_8h" kindref="compound">CylBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="NeuroNode_8h" kindref="compound">NeuroNode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="NeuroMesh_8h" kindref="compound">NeuroMesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="PsdMesh_8h" kindref="compound">PsdMesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SpineEntry_8h" kindref="compound">SpineEntry.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SpineMesh_8h" kindref="compound">SpineMesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utility/numutil.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" kindref="member">PsdMesh::initCinfo</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Field<sp/>Definitions</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; PsdMesh, double &gt;</ref><sp/>thickness(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;thickness&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;An<sp/>assumed<sp/>thickness<sp/>for<sp/>PSD.<sp/>The<sp/>volume<sp/>is<sp/>computed<sp/>as<sp/>the&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;PSD<sp/>area<sp/>passed<sp/>in<sp/>to<sp/>each<sp/>PSD,<sp/>times<sp/>this<sp/>value.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;defaults<sp/>to<sp/>50<sp/>nanometres.<sp/>For<sp/>reference,<sp/>membranes<sp/>are<sp/>5<sp/>nm.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classPsdMesh_1a814dbcf72c705ebb3d1fef4f613eb625" kindref="member">PsdMesh::setThickness</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classPsdMesh_1a006a8fdf3e8b610aa9343375dd4bc427" kindref="member">PsdMesh::getThickness</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classReadOnlyValueFinfo" kindref="compound">ReadOnlyValueFinfo&lt; PsdMesh, vector&lt; unsigned int &gt;</ref><sp/>&gt;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>neuronVoxel</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;neuronVoxel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Vector<sp/>of<sp/>indices<sp/>of<sp/>voxels<sp/>on<sp/>parent<sp/>NeuroMesh,<sp/>from<sp/>which<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>respective<sp/>spines<sp/>emerge.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classPsdMesh_1ae62af349659dff47a9480375ddec573b" kindref="member">PsdMesh::getNeuronVoxel</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classReadOnlyValueFinfo" kindref="compound">ReadOnlyValueFinfo&lt; PsdMesh, vector&lt; Id &gt;</ref><sp/>&gt;<sp/>elecComptMap(</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;elecComptMap&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Vector<sp/>of<sp/>Ids<sp/>of<sp/>electrical<sp/>compartments<sp/>that<sp/>map<sp/>to<sp/>each<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;voxel.<sp/>This<sp/>is<sp/>necessary<sp/>because<sp/>the<sp/>order<sp/>of<sp/>the<sp/>IDs<sp/>may<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;differ<sp/>from<sp/>the<sp/>ordering<sp/>of<sp/>the<sp/>voxels.<sp/>Note<sp/>that<sp/>there<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;is<sp/>always<sp/>just<sp/>one<sp/>voxel<sp/>per<sp/>PSD.<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classPsdMesh_1a62fa50fcb60a1e3a88050cad9181c518" kindref="member">PsdMesh::getElecComptMap</ref></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classReadOnlyValueFinfo" kindref="compound">ReadOnlyValueFinfo&lt; PsdMesh, vector&lt; Id &gt;</ref><sp/>&gt;<sp/>elecComptList(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;elecComptList&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Vector<sp/>of<sp/>Ids<sp/>of<sp/>all<sp/>electrical<sp/>compartments<sp/>in<sp/>this<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;PsdMesh.<sp/>Ordering<sp/>is<sp/>as<sp/>per<sp/>the<sp/>tree<sp/>structure<sp/>built<sp/>in<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;the<sp/>NeuroMesh,<sp/>and<sp/>may<sp/>differ<sp/>from<sp/>Id<sp/>order.<sp/>Ordering<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;matches<sp/>that<sp/>used<sp/>for<sp/>startVoxelInCompt<sp/>and<sp/>endVoxelInCompt&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classPsdMesh_1a62fa50fcb60a1e3a88050cad9181c518" kindref="member">PsdMesh::getElecComptMap</ref></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classReadOnlyValueFinfo" kindref="compound">ReadOnlyValueFinfo&lt; PsdMesh, vector&lt; unsigned int &gt;</ref><sp/>&gt;<sp/>startVoxelInCompt(</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;startVoxelInCompt&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Index<sp/>of<sp/>first<sp/>voxel<sp/>that<sp/>maps<sp/>to<sp/>each<sp/>electrical<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;compartment.<sp/>This<sp/>is<sp/>a<sp/>trivial<sp/>function<sp/>in<sp/>the<sp/>PsdMesh,<sp/>as&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;we<sp/>have<sp/>a<sp/>single<sp/>voxel<sp/>per<sp/>spine.<sp/>So<sp/>just<sp/>a<sp/>vector<sp/>of<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;its<sp/>own<sp/>indices.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classPsdMesh_1ac933779a741d493ec160eddcd765603f" kindref="member">PsdMesh::getStartVoxelInCompt</ref></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classReadOnlyValueFinfo" kindref="compound">ReadOnlyValueFinfo&lt; PsdMesh, vector&lt; unsigned int &gt;</ref><sp/>&gt;<sp/>endVoxelInCompt(</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;endVoxelInCompt&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Index<sp/>of<sp/>end<sp/>voxel<sp/>that<sp/>maps<sp/>to<sp/>each<sp/>electrical<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;compartment.<sp/>Since<sp/>there<sp/>is<sp/>just<sp/>one<sp/>voxel<sp/>per<sp/>electrical<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;compartment<sp/>in<sp/>the<sp/>spine,<sp/>this<sp/>is<sp/>just<sp/>a<sp/>vector<sp/>of<sp/>index+1&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classPsdMesh_1a6b376a998706df1bfb5d779487a5136b" kindref="member">PsdMesh::getEndVoxelInCompt</ref></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MsgDest<sp/>Definitions</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/>psdList(<sp/></highlight><highlight class="stringliteral">&quot;psdList&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Specifies<sp/>the<sp/>geometry<sp/>of<sp/>the<sp/>spine,&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;and<sp/>the<sp/>associated<sp/>parent<sp/>voxel&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Arguments:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;disk<sp/>params<sp/>vector<sp/>with<sp/>8<sp/>entries<sp/>per<sp/>psd,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vector<sp/>of<sp/>Ids<sp/>of<sp/>electrical<sp/>compts<sp/>mapped<sp/>to<sp/>voxels,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;parent<sp/>voxel<sp/>index<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEpFunc3" kindref="compound">EpFunc3</ref>&lt;<sp/><ref refid="classPsdMesh" kindref="compound">PsdMesh</ref>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>Id<sp/>&gt;,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>&gt;(</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" kindref="member">PsdMesh::handlePsdList</ref><sp/>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Field<sp/>Elements</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>psdMeshFinfos[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;thickness,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ValueFinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;neuronVoxel,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ReadOnlyValueFinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;elecComptMap,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ReadOnlyValueFinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;elecComptList,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ReadOnlyValueFinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;startVoxelInCompt,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ReadOnlyValueFinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;endVoxelInCompt,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ReadOnlyValueFinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;psdList,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DestFinfo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDinfo" kindref="compound">Dinfo&lt; PsdMesh &gt;</ref><sp/>dinfo;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref><sp/><ref refid="PsdMesh_8cpp_1a064f4881f0d437f7d69047dd6b5f86aa" kindref="member">psdMeshCinfo</ref><sp/>(</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;PsdMesh&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" kindref="member">ChemCompt::initCinfo</ref>(),</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psdMeshFinfos,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>psdMeshFinfos<sp/>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>),</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;dinfo</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="PsdMesh_8cpp_1a064f4881f0d437f7d69047dd6b5f86aa" kindref="member">psdMeshCinfo</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="comment">//<sp/>Basic<sp/>class<sp/>Definitions</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="PsdMesh_8cpp_1a064f4881f0d437f7d69047dd6b5f86aa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="PsdMesh_8cpp_1a064f4881f0d437f7d69047dd6b5f86aa" kindref="member">psdMeshCinfo</ref><sp/>=<sp/><ref refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" kindref="member">PsdMesh::initCinfo</ref>();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="comment">//<sp/>Class<sp/>stuff.</highlight></codeline>
+<codeline lineno="134" refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" refkind="member"><highlight class="normal"><ref refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" kindref="member">PsdMesh::PsdMesh</ref>()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thickness_(<sp/>50.0e-9<sp/>),</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psd_(<sp/>1<sp/>),</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pa_(<sp/>1<sp/>),</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parentDist_(<sp/>1,<sp/>1e-6<sp/>),</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent_(<sp/>1,<sp/>0<sp/>),</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>surfaceGranularity_(<sp/>0.1<sp/>),</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vs_(1,<sp/>5.0e-21<sp/>),</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area_(1,<sp/>1.0e-13<sp/>),</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length_(1,<sp/>50.0e-9<sp/>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>defaultLength<sp/>=<sp/>1e-6;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[0].setDia(<sp/>defaultLength<sp/>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[0].setLength(<sp/><ref refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" kindref="member">thickness_</ref><sp/>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[0].setNumDivs(<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[0].setIsCylinder(<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="classPsdMesh_1a65d9c22d9b7c19511bea5088043bd4ff" refkind="member"><highlight class="normal"><ref refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" kindref="member">PsdMesh::PsdMesh</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh" kindref="compound">PsdMesh</ref>&amp;<sp/>other<sp/>)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psd_(<sp/>other.psd_<sp/>),</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>surfaceGranularity_(<sp/>other.surfaceGranularity_<sp/>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classPsdMesh_1aff1ce76a0fd45ce89dcc937a4ba7493d" refkind="member"><highlight class="normal"><ref refid="classPsdMesh_1aff1ce76a0fd45ce89dcc937a4ba7493d" kindref="member">PsdMesh::~PsdMesh</ref>()</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="comment">//<sp/>Field<sp/>assignment<sp/>stuff</highlight></codeline>
+<codeline lineno="167" refid="classPsdMesh_1a006a8fdf3e8b610aa9343375dd4bc427" refkind="member"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a006a8fdf3e8b610aa9343375dd4bc427" kindref="member">PsdMesh::getThickness</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="168"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" kindref="member">thickness_</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171" refid="classPsdMesh_1a814dbcf72c705ebb3d1fef4f613eb625" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a814dbcf72c705ebb3d1fef4f613eb625" kindref="member">PsdMesh::setThickness</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" kindref="member">thickness_</ref><sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="classPsdMesh_1ae62af349659dff47a9480375ddec573b" refkind="member"><highlight class="normal">vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/><ref refid="classPsdMesh_1ae62af349659dff47a9480375ddec573b" kindref="member">PsdMesh::getNeuronVoxel</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="183"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Warning:<sp/>PsdMesh::getNeuronVoxel.<sp/>Currently<sp/>not<sp/>working\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="classPsdMesh_1a62fa50fcb60a1e3a88050cad9181c518" refkind="member"><highlight class="normal">vector&lt;<sp/>Id<sp/>&gt;<sp/><ref refid="classPsdMesh_1a62fa50fcb60a1e3a88050cad9181c518" kindref="member">PsdMesh::getElecComptMap</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="189"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" kindref="member">elecCompt_</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classPsdMesh_1ac933779a741d493ec160eddcd765603f" refkind="member"><highlight class="normal">vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/><ref refid="classPsdMesh_1ac933779a741d493ec160eddcd765603f" kindref="member">PsdMesh::getStartVoxelInCompt</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="194"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>ret(<sp/><ref refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" kindref="member">elecCompt_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ret.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="classPsdMesh_1a6b376a998706df1bfb5d779487a5136b" refkind="member"><highlight class="normal">vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/><ref refid="classPsdMesh_1a6b376a998706df1bfb5d779487a5136b" kindref="member">PsdMesh::getEndVoxelInCompt</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="202"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>ret(<sp/><ref refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" kindref="member">elecCompt_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ret.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret[i]<sp/>=<sp/>i+1;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="classPsdMesh_1a150d1196c84c53125752ae2d59380e41" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a150d1196c84c53125752ae2d59380e41" kindref="member">PsdMesh::updateCoords</ref>()</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" kindref="member">buildStencil</ref>();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="classPsdMesh_1a4756471b33f6452f34b544f5cd1a98aa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a4756471b33f6452f34b544f5cd1a98aa" kindref="member">PsdMesh::innerGetDimensions</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="220"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Here<sp/>we<sp/>set<sp/>up<sp/>the<sp/>psds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" kindref="member">PsdMesh::handlePsdList</ref>(</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>diskCoords,<sp/></highlight><highlight class="comment">//ctr(xyz),<sp/>dir(xyz),<sp/>dia,<sp/>diffDist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>elecCompt<sp/>refers<sp/>to<sp/>the<sp/>spine<sp/>head<sp/>elec<sp/>compartment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>Id<sp/>&gt;<sp/>elecCompt,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>parentVoxel<sp/>is<sp/>just<sp/>a<sp/>vector<sp/>where<sp/>parentVoxel[i]<sp/>==<sp/>i</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Thus<sp/>the<sp/>parent<sp/>voxel<sp/>is<sp/>the<sp/>spine<sp/>head<sp/>with<sp/>the<sp/>same<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>parentVoxel<sp/>)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>oldVol<sp/>=<sp/><ref refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" kindref="member">getMeshEntryVolume</ref>(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>diskCoords.size()<sp/>==<sp/>8<sp/>*<sp/>parentVoxel.size()<sp/>);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.resize(<sp/>parentVoxel.size()<sp/>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>.resize(<sp/>parentVoxel.size()<sp/>);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" kindref="member">vs_</ref>.resize(<sp/>parentVoxel.size()<sp/>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" kindref="member">area_</ref>.resize(<sp/>parentVoxel.size()<sp/>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" kindref="member">length_</ref>.resize(<sp/>parentVoxel.size()<sp/>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" kindref="member">elecCompt_</ref><sp/>=<sp/>elecCompt;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.clear();</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>.clear();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" kindref="member">parentDist_</ref>.clear();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>.clear();</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::const_iterator<sp/>x<sp/>=<sp/>diskCoords.begin();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>parentVoxel.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>*x;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>q<sp/>=<sp/>*(x+1);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>*(x+2);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.push_back(<sp/><ref refid="classCylBase" kindref="compound">CylBase</ref>(<sp/>p,<sp/>q,<sp/>r,<sp/>1,<sp/>0,<sp/>1<sp/>));</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>+=<sp/>3;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>.push_back(<sp/><ref refid="classCylBase" kindref="compound">CylBase</ref>(<sp/>p<sp/>-<sp/>*x,<sp/>q<sp/>-<sp/>*(x+1),<sp/>r<sp/>-<sp/>*(x+2),<sp/>1,<sp/>0,<sp/>1<sp/>));</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>+=<sp/>3;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.back().setDia(<sp/>*x++<sp/>);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.back().setIsCylinder(<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>an<sp/>entirely<sp/>nominal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>length,<sp/>so<sp/>that<sp/>the<sp/>effective<sp/>vol<sp/>!=<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.back().setLength(<sp/><ref refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" kindref="member">thickness_</ref><sp/>);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" kindref="member">parentDist_</ref>.push_back(<sp/>*x++<sp/>);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" kindref="member">vs_</ref>[i]<sp/>=<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.back().volume(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.back()<sp/>);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" kindref="member">area_</ref>[i]<sp/>=<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.back().getDiffusionArea(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.back(),<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" kindref="member">length_</ref>[i]<sp/>=<sp/><ref refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" kindref="member">parentDist_</ref>.back();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref><sp/>=<sp/>parentVoxel;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a150d1196c84c53125752ae2d59380e41" kindref="member">updateCoords</ref>();</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>meshEntry(<sp/>e.<ref refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" kindref="member">id</ref>().<ref refid="classId_1a123c4b585336d50834324026daed286e" kindref="member">value</ref>()<sp/>+<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>localIndices(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>vols(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>localIndices[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vols[i]<sp/>=<sp/><ref refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" kindref="member">thickness_</ref><sp/>*<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getDiffusionArea(<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[i],<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>&gt;<sp/>outgoingEntries;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>&gt;<sp/>incomingEntries;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>meshSplit()-&gt;send(<sp/>e,<sp/>oldVol,<sp/>vols,<sp/>localIndices,<sp/>outgoingEntries,<sp/>incomingEntries<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" kindref="member">lookupEntry</ref>(<sp/>0<sp/>)-&gt;<ref refid="classMeshEntry_1a21da1c171c5a4e41044e080a63ba05f8" kindref="member">triggerRemesh</ref>(<sp/>meshEntry.<ref refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" kindref="member">eref</ref>(),</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oldVol,<sp/>0,<sp/>localIndices,<sp/>vols<sp/>);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="comment">//<sp/>FieldElement<sp/>assignment<sp/>stuff<sp/>for<sp/>MeshEntries</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="classPsdMesh_1a788318254f79a64cd922c6f8b3c760d7" refkind="member"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a788318254f79a64cd922c6f8b3c760d7" kindref="member">PsdMesh::getMeshType</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="295"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>fid<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="MeshEntry_8h_1a24f376ccef7a39450a2fcdbf5ba97cedab0c4e916d9554a30e5c170d2a06b084b" kindref="member">DISK</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="classPsdMesh_1ac41b063615beae779fbaa6008b5a4744" refkind="member"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1ac41b063615beae779fbaa6008b5a4744" kindref="member">PsdMesh::getMeshDimensions</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="302"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" refkind="member"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" kindref="member">PsdMesh::getMeshEntryVolume</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="308"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>==<sp/>0<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Default<sp/>for<sp/>meshes<sp/>before<sp/>init.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>fid<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" kindref="member">thickness_</ref><sp/>*<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[<sp/>fid<sp/>].getDiffusionArea(<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[fid],<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b" kindref="member">PsdMesh::setMeshEntryVolume</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>volume<sp/>)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>==<sp/>0<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Default<sp/>for<sp/>meshes<sp/>before<sp/>init.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>fid<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" kindref="member">vs_</ref>[fid]<sp/>=<sp/>volume;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" kindref="member">area_</ref>[fid]<sp/>=<sp/>volume<sp/>/<sp/><ref refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" kindref="member">thickness_</ref>;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dia<sp/>=<sp/>2.0<sp/>*<sp/>sqrt(<sp/><ref refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" kindref="member">area_</ref>[fid]<sp/>/<sp/><ref refid="header_8h_1a299aabc5fc8285cbf99025330a3d0d0d" kindref="member">PI</ref><sp/>);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[<sp/>fid<sp/>].setDia(<sp/>dia<sp/>);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="classPsdMesh_1a52f73354e225e22cb9596837e8edd926" refkind="member"><highlight class="normal">vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classPsdMesh_1a52f73354e225e22cb9596837e8edd926" kindref="member">PsdMesh::getCoordinates</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="330"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>ret;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[fid].getX()<sp/>);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[fid].getY()<sp/>);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[fid].getZ()<sp/>);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[fid].getX()<sp/>-<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[fid].getX()<sp/>);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[fid].getY()<sp/>-<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[fid].getY()<sp/>);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[fid].getZ()<sp/>-<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[fid].getZ()<sp/>);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[fid].getDia()<sp/>);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343" refid="classPsdMesh_1a10341e251b9ea19e7a11313a574bb284" refkind="member"><highlight class="normal">vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classPsdMesh_1a10341e251b9ea19e7a11313a574bb284" kindref="member">PsdMesh::getDiffusionArea</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="344"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>ret;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>fid<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[<sp/>fid<sp/>].<ref refid="classPsdMesh_1a10341e251b9ea19e7a11313a574bb284" kindref="member">getDiffusionArea</ref>(<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[fid],<sp/>0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="comment">//<sp/><sp/>Regular<sp/>points<sp/>return<sp/>vector(<sp/>2,<sp/>1.0<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355" refid="classPsdMesh_1ad871d1640a761b99c60cad9cd31224ff" refkind="member"><highlight class="normal">vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classPsdMesh_1ad871d1640a761b99c60cad9cd31224ff" kindref="member">PsdMesh::getDiffusionScaling</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="356"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;(<sp/>2,<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855" refkind="member"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855" kindref="member">PsdMesh::extendedMeshEntryVolume</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="363"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>fid<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" kindref="member">getMeshEntryVolume</ref>(<sp/>fid<sp/>);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9" kindref="member">MeshCompt::extendedMeshEntryVolume</ref>(<sp/>fid<sp/>-<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="comment">//<sp/>Dest<sp/>funcsl</highlight></codeline>
+<codeline lineno="376"></codeline>
+<codeline lineno="379" refid="classPsdMesh_1a2f946552d8bd878ddd39528168adedd0" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a2f946552d8bd878ddd39528168adedd0" kindref="member">PsdMesh::innerHandleRequestMeshStats</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classSrcFinfo2" kindref="compound">SrcFinfo2</ref>&lt;<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;*<sp/>meshStatsFinfo</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386" refid="classPsdMesh_1a59554733ee0583e8fd5049c9ebd0b7de" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a59554733ee0583e8fd5049c9ebd0b7de" kindref="member">PsdMesh::innerHandleNodeInfo</ref>(</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numNodes,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numThreads<sp/>)</highlight></codeline>
+<codeline lineno="389"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393" refid="classPsdMesh_1aba313e73a390eb29b0c37f7438ceb834" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1aba313e73a390eb29b0c37f7438ceb834" kindref="member">PsdMesh::parent</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="394"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>&lt;<sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>.size()<sp/>)</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>[i];</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>PsdMesh::parent:<sp/>Index<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>out<sp/>of<sp/>range:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>.size()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="400"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="classPsdMesh_1aea367c53084ccfe9e84251eef4c90338" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1aea367c53084ccfe9e84251eef4c90338" kindref="member">PsdMesh::innerGetNumEntries</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="406"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size();</highlight></codeline>
+<codeline lineno="408"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414" refid="classPsdMesh_1a728467744444952b234f253ebc1716e1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a728467744444952b234f253ebc1716e1" kindref="member">PsdMesh::innerSetNumEntries</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>)</highlight></codeline>
+<codeline lineno="415"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="416"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="classPsdMesh_1a1dfaa044fb71ab487d898b605156e62c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a1dfaa044fb71ab487d898b605156e62c" kindref="member">PsdMesh::innerBuildDefaultMesh</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>volume,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numEntries<sp/>)</highlight></codeline>
+<codeline lineno="424"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Warning:<sp/>PsdMesh::innerBuildDefaultMesh:<sp/>attempt<sp/>to<sp/>build<sp/>a<sp/>default<sp/>psd:<sp/>not<sp/>permitted\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="comment">//<sp/>Utility<sp/>function<sp/>to<sp/>set<sp/>up<sp/>Stencil<sp/>for<sp/>diffusion</highlight></codeline>
+<codeline lineno="431" refid="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" kindref="member">PsdMesh::buildStencil</ref>()</highlight></codeline>
+<codeline lineno="432"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" kindref="member">setStencilSize</ref>(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size(),<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" kindref="member">innerResetStencil</ref>();</highlight></codeline>
+<codeline lineno="435"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="comment">//<sp/>Utility<sp/>function<sp/>for<sp/>junctions</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="classPsdMesh_1a2bfc08990d7ba7c781bcc5907f4a0ce2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a2bfc08990d7ba7c781bcc5907f4a0ce2" kindref="member">PsdMesh::matchMeshEntries</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classChemCompt" kindref="compound">ChemCompt</ref>*<sp/>other,</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>VoxelJunction<sp/>&gt;&amp;<sp/>ret<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="443"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>*<sp/>sm<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>other<sp/>);</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>sm<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1ab57e212627f557058e507610551777c0" kindref="member">matchSpineMeshEntries</ref>(<sp/>other,<sp/>ret<sp/>);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCubeMesh" kindref="compound">CubeMesh</ref>*<sp/>cm<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classCubeMesh" kindref="compound">CubeMesh</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>other<sp/>);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>cm<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" kindref="member">matchCubeMeshEntries</ref>(<sp/>other,<sp/>ret<sp/>);</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>*<sp/>nm<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>other<sp/>);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>nm<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" kindref="member">matchNeuroMeshEntries</ref>(<sp/>other,<sp/>ret<sp/>);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Warning:<sp/>PsdMesh::matchMeshEntries:<sp/>unknown<sp/>class\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="460"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462" refid="classPsdMesh_1a6f838cfe557ff4ad340aa3d3d69c0255" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a6f838cfe557ff4ad340aa3d3d69c0255" kindref="member">PsdMesh::indexToSpace</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>z<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="464"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>index<sp/>&gt;=<sp/><ref refid="classPsdMesh_1aea367c53084ccfe9e84251eef4c90338" kindref="member">innerGetNumEntries</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[index].getX();</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/>y<sp/>=<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[index].getY();</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>=<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[index].getZ();</highlight></codeline>
+<codeline lineno="470"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472" refid="classPsdMesh_1a80ae3d0a7fc08e4ea046e4a220a9eb51" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a80ae3d0a7fc08e4ea046e4a220a9eb51" kindref="member">PsdMesh::nearest</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z,</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>index<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="474"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>best<sp/>=<sp/>1e12;</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVec" kindref="compound">Vec</ref><sp/>a(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getX(),<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getY(),<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getZ()<sp/>);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVec" kindref="compound">Vec</ref><sp/>b(<sp/>x,<sp/>y,<sp/>z<sp/>);</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>a.<ref refid="classVec_1a056e27a8b76e7081c3358553f85a54ec" kindref="member">distance</ref>(<sp/>b<sp/>);</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>best<sp/>&gt;<sp/>d<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>best<sp/>=<sp/>d;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>best<sp/>==<sp/>1e12<sp/>)</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>best;</highlight></codeline>
+<codeline lineno="489"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491" refid="classPsdMesh_1ab57e212627f557058e507610551777c0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1ab57e212627f557058e507610551777c0" kindref="member">PsdMesh::matchSpineMeshEntries</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classChemCompt" kindref="compound">ChemCompt</ref>*<sp/>other,</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>VoxelJunction<sp/>&gt;&amp;<sp/>ret<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="493"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>*<sp/>sm<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>other<sp/>);</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>sm<sp/>);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xda<sp/>=<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getDiffusionArea(<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[i],<sp/>0<sp/>)<sp/>/<sp/><ref refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" kindref="member">parentDist_</ref>[i];</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref>(<sp/>i,<sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>[i],<sp/>xda<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.back().firstVol<sp/>=<sp/><ref refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" kindref="member">getMeshEntryVolume</ref>(<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.back().secondVol<sp/>=<sp/>sm-&gt;<ref refid="classSpineMesh_1a0c9927abf0ac27595badcf92f69e4fcf" kindref="member">getMeshEntryVolume</ref>(<sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>[i]<sp/>);</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="502"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>only<sp/>makes<sp/>sense<sp/>if<sp/>the<sp/>PSD<sp/>is<sp/>directly<sp/>on<sp/>the<sp/>NeuroMesh,<sp/>that<sp/>is,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"></highlight><highlight class="comment">//<sp/>no<sp/>spine<sp/>shaft<sp/>or<sp/>head.<sp/>In<sp/>this<sp/>case<sp/>the<sp/>parent_<sp/>vector<sp/>must<sp/>refer<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>parent<sp/>compartment<sp/>on<sp/>the<sp/>NeuroMesh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507" refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" kindref="member">PsdMesh::matchNeuroMeshEntries</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classChemCompt" kindref="compound">ChemCompt</ref>*<sp/>other,</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>VoxelJunction<sp/>&gt;&amp;<sp/>ret<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="509"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>*<sp/>nm<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>other<sp/>);</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>nm<sp/>);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xda<sp/>=<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getDiffusionArea(<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[i],<sp/>0)<sp/>/<sp/><ref refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" kindref="member">parentDist_</ref>[i];</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.push_back(<sp/><ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref>(<sp/>i,<sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>[i],<sp/>xda<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="516"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518" refid="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" kindref="member">PsdMesh::matchCubeMeshEntries</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classChemCompt" kindref="compound">ChemCompt</ref>*<sp/>other,</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>VoxelJunction<sp/>&gt;&amp;<sp/>ret<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="520"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCylBase" kindref="compound">CylBase</ref>&amp;<sp/>cb<sp/>=<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i];</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cb.<ref refid="classCylBase_1afb7f14b8bb133072656c780053b36de8" kindref="member">matchCubeMeshEntries</ref>(<sp/>other,<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[i],</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i,<sp/><ref refid="classPsdMesh_1af8dac72631e91c6f28dc6d5f554e6d4f" kindref="member">surfaceGranularity_</ref>,<sp/>ret,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="526"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="comment">//<sp/>Inherited<sp/>Virtual<sp/>funcs<sp/>for<sp/>getting<sp/>voxel<sp/>info.</highlight></codeline>
+<codeline lineno="532"></codeline>
+<codeline lineno="540" refid="classPsdMesh_1a53bfe1b01a11ff3a87ee41bd47d5b8a1" refkind="member"><highlight class="normal">vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/><ref refid="classPsdMesh_1a53bfe1b01a11ff3a87ee41bd47d5b8a1" kindref="member">PsdMesh::getParentVoxel</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="541"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>ret(<sp/><ref refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" kindref="member">parent_</ref>.size(),<sp/>~0U<sp/>);</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>parent_;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547" refid="classPsdMesh_1a6eabf3ffc66cfd7d0d894a1a91686838" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/><ref refid="classPsdMesh_1a6eabf3ffc66cfd7d0d894a1a91686838" kindref="member">PsdMesh::vGetVoxelVolume</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="548"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" kindref="member">vs_</ref>;</highlight></codeline>
+<codeline lineno="550"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="553"><highlight class="comment">*<sp/>The<sp/>order<sp/>of<sp/>coords<sp/>sent<sp/>in<sp/>is</highlight></codeline>
+<codeline lineno="554"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>centre<sp/>xyz</highlight></codeline>
+<codeline lineno="555"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>direction<sp/>xyz</highlight></codeline>
+<codeline lineno="556"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>dia,</highlight></codeline>
+<codeline lineno="557"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>diffusion<sp/>distance<sp/>to<sp/>middle<sp/>of<sp/>spine<sp/>Head.</highlight></codeline>
+<codeline lineno="558"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="559" refid="classPsdMesh_1a11eb43f06da539dd15b260d9d0e4b254" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/><ref refid="classPsdMesh_1a11eb43f06da539dd15b260d9d0e4b254" kindref="member">PsdMesh::vGetVoxelMidpoint</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="560"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>midpoint;</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/>midpoint.resize(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>*<sp/>3<sp/>);</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>k<sp/>=<sp/>midpoint.begin();</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>coords<sp/>=</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getCoordinates(<sp/><ref refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" kindref="member">pa_</ref>[i],<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*k<sp/>=<sp/>(<sp/>coords[0]<sp/>+<sp/>coords[3]<sp/>)<sp/>/<sp/>2.0;</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(k<sp/>+<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>)<sp/>=<sp/>(<sp/>coords[1]<sp/>+<sp/>coords[4]<sp/>)<sp/>/<sp/>2.0;</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(k<sp/>+<sp/>2<sp/>*<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>)<sp/>=<sp/>(<sp/>coords[2]<sp/>+<sp/>coords[5]<sp/>)<sp/>/<sp/>2.0;</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k++;</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cout<sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>coords[0]<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>coords[3]&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>coords[1]&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>coords[4]&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>coords[2]&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>coords[5]<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>coords[6]<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>midpoint;</highlight></codeline>
+<codeline lineno="574"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"></highlight></codeline>
+<codeline lineno="576" refid="classPsdMesh_1a8c13866fd9271428f661c3753a1fa394" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/><ref refid="classPsdMesh_1a8c13866fd9271428f661c3753a1fa394" kindref="member">PsdMesh::getVoxelArea</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="577"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" kindref="member">area_</ref>;</highlight></codeline>
+<codeline lineno="579"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"></highlight></codeline>
+<codeline lineno="581" refid="classPsdMesh_1a02c81426d3700b09e2b77c6b0768b554" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/><ref refid="classPsdMesh_1a02c81426d3700b09e2b77c6b0768b554" kindref="member">PsdMesh::getVoxelLength</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="582"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" kindref="member">length_</ref>;</highlight></codeline>
+<codeline lineno="584"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight></codeline>
+<codeline lineno="586" refid="classPsdMesh_1a13eb23d457eb248964fbfaf36b40e6e6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a13eb23d457eb248964fbfaf36b40e6e6" kindref="member">PsdMesh::vGetEntireVolume</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="587"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>vector&lt;<sp/>double<sp/>&gt;::const_iterator<sp/>i<sp/>=</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" kindref="member">vs_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" kindref="member">vs_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>+=<sp/>*i;</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="593"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight></codeline>
+<codeline lineno="595" refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" kindref="member">PsdMesh::vSetVolumeNotRates</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>volume<sp/>)</highlight></codeline>
+<codeline lineno="596"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>volscale<sp/>=<sp/>volume<sp/>/<sp/><ref refid="classPsdMesh_1a13eb23d457eb248964fbfaf36b40e6e6" kindref="member">vGetEntireVolume</ref>();</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>linscale<sp/>=<sp/>pow(<sp/>volscale,<sp/>1.0/3.0<sp/>);</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" kindref="member">vs_</ref>.size()<sp/>==<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" kindref="member">area_</ref>.size()<sp/>==<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" kindref="member">length_</ref>.size()<sp/>==<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" kindref="member">thickness_</ref><sp/>*=<sp/>linscale;</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].setLength(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getLength()<sp/>*<sp/>linscale<sp/>);</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].setDia(<sp/><ref refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" kindref="member">psd_</ref>[i].getDia()<sp/>*<sp/>linscale<sp/>);</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" kindref="member">vs_</ref>[i]<sp/>*=<sp/>volscale;</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" kindref="member">area_</ref>[i]<sp/>*=<sp/>linscale<sp/>*<sp/>linscale;</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" kindref="member">length_</ref>[i]<sp/>*=<sp/>linscale;</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="611"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp"/>
+  </compounddef>
+</doxygen>

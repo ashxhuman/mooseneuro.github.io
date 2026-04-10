@@ -1,0 +1,626 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="LoadModels_8cpp" kind="file" language="C++">
+    <compoundname>LoadModels.cpp</compoundname>
+    <includes local="no">fstream</includes>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes refid="Shell_8h" local="yes">Shell.h</includes>
+    <includes refid="strutil_8h" local="yes">../utility/strutil.h</includes>
+    <includes refid="Vec_8h" local="yes">../utility/Vec.h</includes>
+    <includes refid="LoadModels_8h" local="yes">LoadModels.h</includes>
+    <includes refid="ReadCell_8h" local="yes">../biophysics/ReadCell.h</includes>
+    <includes refid="SwcSegment_8h" local="yes">../biophysics/SwcSegment.h</includes>
+    <includes refid="ReadSwc_8h" local="yes">../biophysics/ReadSwc.h</includes>
+    <includes refid="ReadKkit_8h" local="yes">../kinetics/ReadKkit.h</includes>
+    <includes refid="ReadCspace_8h" local="yes">../kinetics/ReadCspace.h</includes>
+    <includes refid="print__function_8hpp" local="yes">../utility/print_function.hpp</includes>
+    <incdepgraph>
+      <node id="47">
+        <label>../external/fmt/include/fmt/core.h</label>
+      </node>
+      <node id="17">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="30">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="19">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="23">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="25">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="37">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="29">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="43">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="42">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="18">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="27">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="34">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="15">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="28">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="40">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="24">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="21">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="16">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="36">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="33">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="38">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="35">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="32">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="39">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="14">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="3">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>../biophysics/ReadCell.h</label>
+        <link refid="ReadCell_8h"/>
+      </node>
+      <node id="52">
+        <label>../biophysics/ReadSwc.h</label>
+        <link refid="ReadSwc_8h"/>
+      </node>
+      <node id="51">
+        <label>../biophysics/SwcSegment.h</label>
+        <link refid="SwcSegment_8h"/>
+      </node>
+      <node id="54">
+        <label>../kinetics/ReadCspace.h</label>
+        <link refid="ReadCspace_8h"/>
+      </node>
+      <node id="53">
+        <label>../kinetics/ReadKkit.h</label>
+        <link refid="ReadKkit_8h"/>
+      </node>
+      <node id="22">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/LoadModels.cpp</label>
+        <link refid="LoadModels_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>LoadModels.h</label>
+        <link refid="LoadModels_8h"/>
+      </node>
+      <node id="44">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="45">
+        <label>Shell.h</label>
+        <link refid="Shell_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>../utility/Vec.h</label>
+        <link refid="Vec_8h"/>
+      </node>
+      <node id="55">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>../utility/strutil.h</label>
+        <link refid="strutil_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>algorithm</label>
+      </node>
+      <node id="13">
+        <label>cassert</label>
+      </node>
+      <node id="31">
+        <label>cstring</label>
+      </node>
+      <node id="57">
+        <label>ctime</label>
+      </node>
+      <node id="2">
+        <label>fstream</label>
+      </node>
+      <node id="56">
+        <label>iomanip</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="11">
+        <label>sstream</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>typeinfo</label>
+      </node>
+      <node id="9">
+        <label>unordered_map</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="LoadModels_8cpp_1a8950239211752c109ddaf002b554ba6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool findModelParent</definition>
+        <argsstring>(Id cwe, const string &amp;path, Id &amp;parentId, string &amp;modelName)</argsstring>
+        <name>findModelParent</name>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>cwe</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref> &amp;</type>
+          <declname>parentId</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>modelName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Identify parent <ref refid="classId" kindref="compound">Id</ref> from path that can optionally have the model name as the last part. Pass back the parent <ref refid="classId" kindref="compound">Id</ref>, and the model name. Returns true on success. Cases: First set: we want to fill in &quot;model&quot; as modelName &quot;&quot; where we want &lt;cwe&gt;/model &quot;/&quot; where we want /model. &quot;/foo&quot; where foo exists, so we want /foo/model &quot;foo&quot; where &lt;cwe&gt;/foo exists, and we want &lt;cwe&gt;/foo/model Second set: the last part of the path has the model name. &quot;bar&quot; where we want &lt;cwe&gt;/bar &quot;/bar&quot; where we want /bar &quot;/foo/bar&quot; where we want /foo/bar &quot;foo/bar&quot; where we want &lt;cwe&gt;/foo/bar </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/LoadModels.cpp" line="81" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/LoadModels.cpp" bodystart="81" bodyend="129"/>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" compoundref="Element_8cpp" startline="56" endline="59">Element::getName</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classId_1a2b250429848a6c800e8405bbdebc8536" compoundref="Id_8cpp" startline="30" endline="35">Id::Id</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classNeutral_1a8a2d75efefccf058e1dbb02c5a609dbc" compoundref="Neutral_8cpp" startline="694" endline="710">Neutral::parent</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <referencedby refid="classShell_1a506ff431369e3bce87f0e6c767fe475c" compoundref="LoadModels_8cpp" startline="132" endline="190">Shell::doLoadModel</referencedby>
+        <referencedby refid="testShell_8cpp_1aed66ed3b64aaab76ea3a0aed66fbf1e5" compoundref="testShell_8cpp" startline="1381" endline="1454">testFindModelParent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="LoadModels_8cpp_1acddeee8ad25f0746bfc25ce65105fc8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15d" kindref="member">ModelType</ref></type>
+        <definition>ModelType findModelType</definition>
+        <argsstring>(string filename, ifstream &amp;fin, string &amp;line)</argsstring>
+        <name>findModelType</name>
+        <param>
+          <type>string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>ifstream &amp;</type>
+          <declname>fin</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/LoadModels.cpp" line="24" column="11" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/LoadModels.cpp" bodystart="24" bodyend="62"/>
+        <references refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da69de795be0b0ba7bf743609b6501fe56" compoundref="LoadModels_8h" startline="17">CSPACE</references>
+        <references refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da036c980ac47988af0ef75b7341a4f461" compoundref="LoadModels_8h" startline="12">DOTP</references>
+        <references refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da812d04cd9cd24dea38edca193c2d575b" compoundref="LoadModels_8h" startline="11">KKIT</references>
+        <references refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da218de6ad7b2835622692883c4e1e36d7" compoundref="LoadModels_8h" startline="18">SWC</references>
+        <references refid="namespacemoose_1aea4faf9be206cc137d29ae514cf6b366" compoundref="strutil_8cpp" startline="53" endline="67">moose::trim</references>
+        <references refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da6ce26a62afab55d7606ad4e92428b30c" compoundref="LoadModels_8h" startline="10">UNKNOWN</references>
+        <referencedby refid="classShell_1a506ff431369e3bce87f0e6c767fe475c" compoundref="LoadModels_8cpp" startline="132" endline="190">Shell::doLoadModel</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2009<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Shell_8h" kindref="compound">Shell.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utility/strutil.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utility/Vec.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="LoadModels_8h" kindref="compound">LoadModels.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>ModelType<sp/>enum.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/ReadCell.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/SwcSegment.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../biophysics/ReadSwc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../kinetics/ReadKkit.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../kinetics/ReadCspace.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utility/print_function.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="LoadModels_8cpp_1acddeee8ad25f0746bfc25ce65105fc8e" refkind="member"><highlight class="normal"><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15d" kindref="member">ModelType</ref><sp/><ref refid="LoadModels_8cpp_1acddeee8ad25f0746bfc25ce65105fc8e" kindref="member">findModelType</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filename,<sp/>ifstream&amp;<sp/>fin,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>line<sp/>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>filename.substr(<sp/>filename.length()<sp/>-<sp/>2<sp/>)<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;.p&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da036c980ac47988af0ef75b7341a4f461" kindref="member">DOTP</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>filename.substr(<sp/>filename.length()<sp/>-<sp/>4<sp/>)<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;.swc&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da218de6ad7b2835622692883c4e1e36d7" kindref="member">SWC</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>getline(<sp/>fin,<sp/>line<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>line<sp/>=<sp/><ref refid="namespacemoose_1aea4faf9be206cc137d29ae514cf6b366" kindref="member">moose::trim</ref>(line);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>line<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;//genesis&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getline(<sp/>fin,<sp/>line<sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line<sp/>=<sp/><ref refid="namespacemoose_1aea4faf9be206cc137d29ae514cf6b366" kindref="member">moose::trim</ref>(line);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>line.substr(<sp/>0,<sp/>7<sp/>)<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;//<sp/>kkit&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da812d04cd9cd24dea38edca193c2d575b" kindref="member">KKIT</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>line.substr(<sp/>0,<sp/>9<sp/>)<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;//<sp/><sp/>DOQCS&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>getline(<sp/>fin,<sp/>line<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line<sp/>=<sp/><ref refid="namespacemoose_1aea4faf9be206cc137d29ae514cf6b366" kindref="member">moose::trim</ref>(line);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>line.substr(<sp/>0,<sp/>7<sp/>)<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;//<sp/>kkit&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da812d04cd9cd24dea38edca193c2d575b" kindref="member">KKIT</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>line.find_first_of(<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>copyLine=<sp/>line;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>!=<sp/>string::npos<sp/>)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copyLine<sp/>=<sp/>line.substr(pos+2);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>copyLine.length()<sp/>&gt;=<sp/>6<sp/>&amp;&amp;<sp/>copyLine[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>copyLine[5]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da69de795be0b0ba7bf743609b6501fe56" kindref="member">CSPACE</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da6ce26a62afab55d7606ad4e92428b30c" kindref="member">UNKNOWN</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="LoadModels_8cpp_1a8950239211752c109ddaf002b554ba6e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8cpp_1a8950239211752c109ddaf002b554ba6e" kindref="member">findModelParent</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>cwe,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>path,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref>&amp;<sp/>parentId,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>modelName<sp/>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>modelName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;model&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fullPath<sp/>=<sp/>path;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>path.length()<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parentId<sp/>=<sp/>cwe;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>path<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parentId<sp/>=<sp/><ref refid="classId" kindref="compound">Id</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>path[0]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>temp<sp/>=<sp/>cwe.<ref refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" kindref="member">path</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>temp[temp.length()<sp/>-<sp/>1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fullPath<sp/>=<sp/>temp<sp/>+<sp/>path;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fullPath<sp/>=<sp/>temp<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/>path;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>paId(<sp/>fullPath<sp/>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>paId<sp/>==<sp/><ref refid="classId" kindref="compound">Id</ref>()<sp/>)<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Path<sp/>includes<sp/>new<sp/>model<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>fullPath.find_last_of(<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>pos<sp/>!=<sp/>string::npos<sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>head<sp/>=<sp/>fullPath.substr(<sp/>0,<sp/>pos<sp/>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>ret(<sp/>head<sp/>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>head<sp/>=<sp/>&quot;&quot;<sp/>it<sp/>means<sp/>paId<sp/>should<sp/>be<sp/>root.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ret<sp/>==<sp/><ref refid="classId" kindref="compound">Id</ref>()<sp/>&amp;&amp;<sp/>head<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>head<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;/root&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parentId<sp/>=<sp/>ret;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modelName<sp/>=<sp/>fullPath.substr(<sp/>pos<sp/>+<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Path<sp/>is<sp/>an<sp/>existing<sp/>element.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parentId<sp/>=<sp/><ref refid="classNeutral_1adb4bf1f5f07dcc7daf38fec7c4d0278d" kindref="member">Neutral::parent</ref>(<sp/>paId<sp/>).<ref refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modelName<sp/>=<sp/>paId.<ref refid="classId_1a574e06330597163aef0ea4c99de7ff4a" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" kindref="member">getName</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classShell_1a506ff431369e3bce87f0e6c767fe475c" refkind="member"><highlight class="normal"><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classShell_1a506ff431369e3bce87f0e6c767fe475c" kindref="member">Shell::doLoadModel</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>fileName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>modelPath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>solverClass,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RM,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RA,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CM)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>ifstream<sp/>fin(<sp/>fileName.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!fin<sp/>)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__function_8hpp_1a9417ba1ee24fa11634b856c442343448" kindref="member">LOG</ref>(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba1f4d5610342648b6192c3872eaa459d0" kindref="member">moose::failed</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Shell::doLoadModel:<sp/>could<sp/>not<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>fileName<sp/>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>modelName;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>parentId;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!(<sp/><ref refid="LoadModels_8cpp_1a8950239211752c109ddaf002b554ba6e" kindref="member">findModelParent</ref><sp/>(<sp/><ref refid="classShell_1a3d18f239a908d23bc2b01ea527a7bb5a" kindref="member">cwe_</ref>,<sp/>modelPath,<sp/>parentId,<sp/>modelName<sp/>)<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref>();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>line;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<sp/><ref refid="LoadModels_8cpp_1acddeee8ad25f0746bfc25ce65105fc8e" kindref="member">findModelType</ref>(<sp/>fileName,<sp/>fin,<sp/>line<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da036c980ac47988af0ef75b7341a4f461" kindref="member">DOTP</ref>:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classReadCell" kindref="compound">ReadCell</ref><sp/>rc;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc.<ref refid="classReadCell_1a98debfc03ab1b2f386d671b6a1515a40" kindref="member">read</ref>(<sp/>fileName,<sp/>modelName,<sp/>parentId<sp/>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref>();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da218de6ad7b2835622692883c4e1e36d7" kindref="member">SWC</ref>:</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__function_8hpp_1a9417ba1ee24fa11634b856c442343448" kindref="member">LOG</ref>(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">moose::info</ref>,<sp/></highlight><highlight class="stringliteral">&quot;In<sp/>doLoadModel<sp/>for<sp/>SWC&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classReadSwc" kindref="compound">ReadSwc</ref><sp/>rs(<sp/>fileName<sp/>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>model<sp/>=<sp/>parentId;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!parentId.<ref refid="classId_1a574e06330597163aef0ea4c99de7ff4a" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a71378b635327a694971a29e946f6e886" kindref="member">isA</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Neuron&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model<sp/>=<sp/><ref refid="classShell_1a07391050d7d5c777fd0a366a78cea81e" kindref="member">doCreate</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Neuron&quot;</highlight><highlight class="normal">,<sp/>parentId,<sp/>modelName,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rs.<ref refid="classReadSwc_1a542eecd2af5b5e8b4587d6a4ca298607" kindref="member">build</ref>(<sp/>model,<sp/>0.5e-3,<sp/>RM,<sp/>RA,<sp/>CM<sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>model;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da812d04cd9cd24dea38edca193c2d575b" kindref="member">KKIT</ref>:</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>sc<sp/>=<sp/>solverClass;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classReadKkit" kindref="compound">ReadKkit</ref><sp/>rk;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>ret<sp/>=<sp/>rk.<ref refid="classReadKkit_1a84a1ef5c83d57d8d111ead9cf48e8e20" kindref="member">read</ref>(<sp/>fileName,<sp/>modelName,<sp/>parentId,<sp/>sc);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da69de795be0b0ba7bf743609b6501fe56" kindref="member">CSPACE</ref>:</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>sc<sp/>=<sp/>solverClass;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classReadCspace" kindref="compound">ReadCspace</ref><sp/>rc;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>ret<sp/>=<sp/>rc.<ref refid="classReadCspace_1ad2a6b321a58adc8e6ec332601ae6f71c" kindref="member">readModelString</ref>(<sp/>line,<sp/>modelName,<sp/>parentId,<sp/>sc);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc.<ref refid="classReadCspace_1a926cac465519504a57c647866fd5074d" kindref="member">makePlots</ref>(<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="LoadModels_8h_1a9f27db0468ce0ce2994eb68dc919b15da6ce26a62afab55d7606ad4e92428b30c" kindref="member">UNKNOWN</ref>:</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Shell::doLoadModel:<sp/>File<sp/>type<sp/>of<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileName<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>is<sp/>unknown\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/LoadModels.cpp"/>
+  </compounddef>
+</doxygen>

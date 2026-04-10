@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="Gsolve_8h" kind="file" language="C++">
+    <compoundname>Gsolve.h</compoundname>
+    <includes refid="RNG_8h" local="yes">../randnum/RNG.h</includes>
+    <includedby refid="Gsolve_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h</label>
+        <link refid="Gsolve_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../randnum/RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cassert</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>random</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp</label>
+        <link refid="Gsolve_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h</label>
+        <link refid="Gsolve_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classGsolve" prot="public">Gsolve</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2014<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_GSOLVE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GSOLVE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../randnum/RNG.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classStoich" kindref="compound">Stoich</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classGsolve" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGsolve" kindref="compound">Gsolve</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classKsolveBase" kindref="compound">KsolveBase</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGsolve_1abb5ec860d8008579d1dc48afe6c7f366" kindref="member">Gsolve</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGsolve_1a88586acbc403ab5022e6e477f9a6bc30" kindref="member">~Gsolve</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assignment<sp/>operator<sp/>required<sp/>for<sp/>c++11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGsolve" kindref="compound">Gsolve</ref>&amp;<sp/><ref refid="classGsolve_1a2e03b204ddf980a4cafe464d91f1f840" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGsolve" kindref="compound">Gsolve</ref>&amp;<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Field<sp/>assignment<sp/>stuff</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classGsolve_1a0b72994da9d396c320da5d0fa4632845" kindref="member">getStoich</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a33b9c134d16510980d5563d84d0078fc" kindref="member">setStoich</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>stoich<sp/>);<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classGsolve_1aa0a4a001239407a76939433929adbe5e" kindref="member">getCompartment</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1ac870aa97d290f08d6bfc53b605c99bb8" kindref="member">setCompartment</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>compt<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1ae4611942a86525ea466e7f07a68bbb26" kindref="member">getNumLocalVoxels</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a625180e1ae2e55e2c572e7a368176cd7" kindref="member">getNumAllVoxels</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a8ffa6d689ca72069116545b459414eb6" kindref="member">setNumAllVoxels</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a0dc52535f4560916c01c7716fa519529" kindref="member">setNumPools</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num<sp/>);<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1abc65b1993348b637fac781d24ac12da8" kindref="member">getNumPools</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a7ce31da61b1e7870554a1d17d8eade5a" kindref="member">setNumVarTotPools</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>var,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tot<sp/>);</highlight><highlight class="comment">//Inherited</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase" kindref="compound">VoxelPoolsBase</ref>*<sp/><ref refid="classGsolve_1ae23b70b9010bcfdc359dcbafb6fade3c" kindref="member">pools</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>);<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1aca890cc327b6809f57ffc9728734dec9" kindref="member">volume</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classGsolve_1a9c6fd61816d1aa0a15a901cf85c85a6a" kindref="member">getNvec</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1aa4839e4180f01a7d984d30aaca5a1096" kindref="member">setNvec</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel,<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>vec<sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Dest<sp/>Finfos</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a5914475e8690bb9d7f9784df94fbe8ec" kindref="member">process</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a65bd2d080e751fc5c26730742b526b0f" kindref="member">reinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a798ac1f508c87e9eb73d471e70eca611" kindref="member">initProc</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a4fbcc19fc518c9fc5f4aad6b64f9d155" kindref="member">initReinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a0c9b99f7f533fd7a76be35c50cd572a9" kindref="member">updateVoxelVol</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>vols<sp/>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Solver<sp/>setup<sp/>functions</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" kindref="member">rebuildGssaSystem</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a32d30dfc9149e4589b9ad99108aab01d" kindref="member">fillMmEnzDep</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a8353dba4e64c9dc91704a1864716c535" kindref="member">fillPoolFuncDep</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1ad15ab23459af91a514ab945914a639ea" kindref="member">fillIncrementFuncDep</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a589c6a43e4fa43e24602a909aeb59827" kindref="member">insertMathDepReacs</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mathDepIndex,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>firedReac);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a45d1b7547fd26e4c7fcbddfb76e09f77" kindref="member">makeReacDepsUnique</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Solver<sp/>interface<sp/>functions</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a8615a2d5e031ac88b6584ad9d52edae2" kindref="member">getPoolIndex</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a8432b00ca4e028b2e3e581b7b066fbe0" kindref="member">getVoxelIndex</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/><ref refid="classGsolve_1ac2adf9d6790ce2e0746aeb961f397845" kindref="member">getNumFire</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a8274a5da4e85e81f275081939d21ea60" kindref="member">setDsolve</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>dsolve<sp/>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>KsolveBase<sp/>inherited<sp/>functions</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a90b6c968aaa0c4fb5aa199e9606e8aab" kindref="member">setN</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a585e65a543d2a4e4ecb2a3a269369dd0" kindref="member">getN</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1ad433baf09ca930e8c4b3715af4809311" kindref="member">getR1</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reacIdx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1ae9dacc0488b805d5cbaf49b206e6fa6e" kindref="member">setConcInit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a8235e5b90e20752b0206a3ec414cc3ae" kindref="member">getConcInit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a76294512f5fb25c72f87402c999b6653" kindref="member">getVolumeOfPool</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a7bcab9d63125af79fb9b7a416ce7724c" kindref="member">setDiffConst</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1abb3681ca2aad48fb2231e259234a7336" kindref="member">getDiffConst</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1ae3263e36e69b24e76d8f5788c04539c0" kindref="member">getBlock</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>values<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a28b2eef67f156528448a96cbb76e21c2" kindref="member">setBlock</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>values<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a921766c55ce81931a99d04e891c13dee" kindref="member">updateRateTerms</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>for<sp/>multithreading.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a8d03efe04937ea9c76102fdc4599de6b" kindref="member">advance_chunk</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>begin,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>end,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1afbe3d81cfa938280aa7bdc927662ae6c" kindref="member">recalcTimeChunk</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>begin,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>end,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a72914b566a16a08bd2455af3217e1086" kindref="member">getRandInit</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a55dfd484e0793aae84fb5ca2ce9f3ef9" kindref="member">setRandInit</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>val<sp/>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1ab95cfeafa98533ecf2211d75ec8dbd33" kindref="member">getRngSeedOffset</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1af06ca784cebe4408dbab2df61abdebec" kindref="member">setRngSeedOffset</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val<sp/>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a618ffd41b104ce4b69c0b9d4177fdac2" kindref="member">getClockedUpdate</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a7fc61737ae8097d34e6b56b127135d90" kindref="member">setClockedUpdate</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>val<sp/>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1afa2e018a9dbd20913106fa8d0e959293" kindref="member">getNumThreads</ref>(<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1ab86912acac5b08952955737e4d94a759" kindref="member">setNumThreads</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classGsolve_1a957882fd0d9709d0bf6b8baf869330c5" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a1daa1a9b5b25dcc90597fec8a26b79e5" kindref="member">numThreads_</ref>;</highlight></codeline>
+<codeline lineno="149" refid="classGsolve_1a5aa0fa6d34348b56f7c55938687fd3d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a5aa0fa6d34348b56f7c55938687fd3d6" kindref="member">grainSize_</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref><sp/><ref refid="classGsolve_1a3208ef52cd56942dcd56fb160d3712df" kindref="member">sys_</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>GssaVoxelPools<sp/>&gt;<sp/><ref refid="classGsolve_1adab7e0d388f132bcb638ed3ab7702593" kindref="member">pools_</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="classGsolve_1a7f21f6826f94fa19fb5471141b86d41c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a7f21f6826f94fa19fb5471141b86d41c" kindref="member">startVoxel_</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStoich" kindref="compound">Stoich</ref>*<sp/><ref refid="classGsolve_1a589a86a6287fac434034fe1203a10c84" kindref="member">stoichPtr_</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classGsolve_1a17578f32c0bc1f281a60443c55a42e0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classGsolve_1a17578f32c0bc1f281a60443c55a42e0b" kindref="member">dsolve_</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="classGsolve_1a61ec73784931a6021aba9b70e0ad7dd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKsolveBase" kindref="compound">KsolveBase</ref>*<sp/><ref refid="classGsolve_1a61ec73784931a6021aba9b70e0ad7dd5" kindref="member">dsolvePtr_</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classGsolve_1a2934b3fdd36523b2872636564e09cf78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1a2934b3fdd36523b2872636564e09cf78" kindref="member">useClockedUpdate_</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>rng.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="classGsolve_1aadd1c443e136341da22a51eacf1b08d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1RNG" kindref="compound">moose::RNG</ref><sp/><ref refid="classGsolve_1aadd1c443e136341da22a51eacf1b08d5" kindref="member">rng_</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGsolve_1aa097dc6408a5bdb9e5b81cd8d2a3fe60" kindref="member">rngSeedOffset_</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>_GSOLVE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h"/>
+  </compounddef>
+</doxygen>

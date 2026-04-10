@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="VectorTable_8h" kind="file" language="C++">
+    <compoundname>VectorTable.h</compoundname>
+    <includedby refid="MarkovChannel_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp</includedby>
+    <includedby refid="MarkovRateTable_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovRateTable.cpp</includedby>
+    <includedby refid="MarkovSolver_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovSolver.cpp</includedby>
+    <includedby refid="MarkovSolverBase_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovSolverBase.cpp</includedby>
+    <includedby refid="VectorTable_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/VectorTable.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp</label>
+        <link refid="MarkovChannel_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovRateTable.cpp</label>
+        <link refid="MarkovRateTable_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovSolver.cpp</label>
+        <link refid="MarkovSolver_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovSolverBase.cpp</label>
+        <link refid="MarkovSolverBase_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/VectorTable.cpp</label>
+        <link refid="VectorTable_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/VectorTable.h</label>
+        <link refid="VectorTable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classVectorTable" prot="public">VectorTable</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_VectorTable_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_VectorTable_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2011<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//Class<sp/>:<sp/>VectorTable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//Author<sp/>:<sp/>Vishaka<sp/>Datta<sp/>S,<sp/>2011,<sp/>NCBS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//Extreme<sp/>barebones<sp/>implementation<sp/>of<sp/>a<sp/>vector<sp/>lookup<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//This<sp/>is<sp/>a<sp/>minimal<sp/>1D<sp/>equivalent<sp/>of<sp/>the<sp/>Interpol2D<sp/>class.<sp/>Provides<sp/>simple</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//functions<sp/>for<sp/>getting<sp/>and<sp/>setting<sp/>up<sp/>the<sp/>table,<sp/>along<sp/>with<sp/>a<sp/>lookup<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//This<sp/>class<sp/>is<sp/>to<sp/>be<sp/>used<sp/>while<sp/>supplying<sp/>lookup<sp/>tables<sp/>to<sp/>the<sp/>MarkovChannel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//class,<sp/>in<sp/>cases<sp/>where<sp/>the<sp/>transition<sp/>rate<sp/>varies<sp/>with<sp/>either<sp/>membrane<sp/>voltage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//or<sp/>ligand<sp/>concentration.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classVectorTable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classVectorTable" kindref="compound">VectorTable</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>public<sp/>:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classVectorTable_1a68e19ea50a2fc483bd1acc32de18e7b8" kindref="member">VectorTable</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a62c1547e10f1473b15c37df75747097b" kindref="member">lookupByValue</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a39e41e1d4cf30b057a6ea64fd91ae638" kindref="member">lookupByIndex</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//All<sp/>members<sp/>except<sp/>table_<sp/>are<sp/>read-only.<sp/>Avoids<sp/>the<sp/>hassle<sp/>of<sp/>recomputing<sp/>the<sp/>table<sp/>when<sp/>one<sp/>of<sp/>the<sp/>terms<sp/>are<sp/>changed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classVectorTable_1a011671d569d25ff316b413c96390ff96" kindref="member">getTable</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Setting<sp/>up<sp/>the<sp/>lookup<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a0992cecb83134f8e7cce09a92b8ef309" kindref="member">setTable</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1aa6818bd978dbb3e83b38206dc5c847af" kindref="member">getDiv</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a98c27f74564487fb48488344818b67a9" kindref="member">setDiv</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1ade4c5c58bfead930639317d66ad17451" kindref="member">getMin</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1ad2efe50900fc07db6e946200d0dcd6cc" kindref="member">setMin</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1ac7ebdcff1d351be06c172820377799e9" kindref="member">getMax</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a81ff4e4484c82d6e3c4c330beb70392a" kindref="member">setMax</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a4b339cc913dfa11c0928cd6c84292aed" kindref="member">getInvDx</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1af3bf4bdc81e884224ae5763e8043993a" kindref="member">tableIsEmpty</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classVectorTable_1a145104ca3f2c51b12331ef0169e323b1" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classVectorTable_1a363cb1f9d4538812b5dcd6a964581cb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>istream&amp;<sp/><ref refid="classVectorTable_1a363cb1f9d4538812b5dcd6a964581cb3" kindref="member">operator&gt;&gt;</ref>(<sp/>istream&amp;,<sp/><ref refid="classVectorTable" kindref="compound">VectorTable</ref>&amp;<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>private<sp/>:</highlight></codeline>
+<codeline lineno="50" refid="classVectorTable_1a095fa013f066ebddf851fa8709ca3c3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a095fa013f066ebddf851fa8709ca3c3b" kindref="member">xDivs_</ref>;</highlight></codeline>
+<codeline lineno="51" refid="classVectorTable_1a467b8017d93dc2ac2860103f5a6b5fb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a467b8017d93dc2ac2860103f5a6b5fb6" kindref="member">xMin_</ref>;</highlight></codeline>
+<codeline lineno="52" refid="classVectorTable_1a0ac564a98ff19d4029798b52c0aaafad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a0ac564a98ff19d4029798b52c0aaafad" kindref="member">xMax_</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classVectorTable_1a74fd3c57843b090276877501691d29cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classVectorTable_1a74fd3c57843b090276877501691d29cb" kindref="member">invDx_</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classVectorTable_1a38f67312d615397fcae5d8fa1b3ec050" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classVectorTable_1a38f67312d615397fcae5d8fa1b3ec050" kindref="member">table_</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/VectorTable.h"/>
+  </compounddef>
+</doxygen>

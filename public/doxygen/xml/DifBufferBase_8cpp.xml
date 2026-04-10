@@ -1,0 +1,805 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="DifBufferBase_8cpp" kind="file" language="C++">
+    <compoundname>DifBufferBase.cpp</compoundname>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes refid="DifBufferBase_8h" local="yes">DifBufferBase.h</includes>
+    <includes refid="ElementValueFinfo_8h" local="yes">../basecode/ElementValueFinfo.h</includes>
+    <includes refid="numutil_8h" local="yes">../utility/numutil.h</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="29">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="18">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="22">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="24">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="45">
+        <label>../basecode/ElementValueFinfo.h</label>
+        <link refid="ElementValueFinfo_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="28">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="42">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="41">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="17">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="26">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="33">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="14">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="27">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="39">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="23">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="20">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="15">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="35">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="32">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="37">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="34">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="31">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="38">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="13">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="56">
+        <label>../basecode/global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/DifBufferBase.cpp</label>
+        <link refid="DifBufferBase_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>DifBufferBase.h</label>
+        <link refid="DifBufferBase_8h"/>
+      </node>
+      <node id="21">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="53">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>../randnum/RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="47">
+        <label>../utility/numutil.h</label>
+        <link refid="numutil_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="46">
+        <label>cctype</label>
+      </node>
+      <node id="49">
+        <label>cfloat</label>
+      </node>
+      <node id="48">
+        <label>cmath</label>
+      </node>
+      <node id="30">
+        <label>cstring</label>
+      </node>
+      <node id="57">
+        <label>ctime</label>
+      </node>
+      <node id="60">
+        <label>fstream</label>
+      </node>
+      <node id="61">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="50">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="52">
+        <label>random</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="58">
+        <label>valarray</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="DifBufferBase_8cpp_1aed28a9519d8d0460cb6a3b27b6847d46" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo* difBufferCinfo</definition>
+        <argsstring></argsstring>
+        <name>difBufferCinfo</name>
+        <initializer>= <ref refid="classDifBufferBase_1a509264b11f6cbdf352801f1df88dca14" kindref="member">DifBufferBase::initCinfo</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/DifBufferBase.cpp" line="224" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/DifBufferBase.cpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DifBufferBase_8h" kindref="compound">DifBufferBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/ElementValueFinfo.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utility/numutil.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classDifBufferBase_1aec780eb073f5ca1886701cde5c9cba6b" refkind="member"><highlight class="normal"><ref refid="classSrcFinfo4" kindref="compound">SrcFinfo4&lt; double, double, double, double &gt;</ref>*<sp/><ref refid="classDifBufferBase_1aec780eb073f5ca1886701cde5c9cba6b" kindref="member">DifBufferBase::reactionOut</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classSrcFinfo4" kindref="compound">SrcFinfo4&lt; double, double, double, double &gt;</ref><sp/><ref refid="classDifBufferBase_1aec780eb073f5ca1886701cde5c9cba6b" kindref="member">reactionOut</ref>(</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;reactionOut&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Sends<sp/>out<sp/>reaction<sp/>rates<sp/>(forward<sp/>and<sp/>backward),<sp/>and<sp/>concentrations&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(free-buffer<sp/>and<sp/>bound-buffer<sp/>molecules).&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="classDifBufferBase_1aec780eb073f5ca1886701cde5c9cba6b" kindref="member">reactionOut</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classDifBufferBase_1acc9d079897e63cf8bc184290dbb1b3cf" refkind="member"><highlight class="normal"><ref refid="classSrcFinfo2" kindref="compound">SrcFinfo2&lt; double, double &gt;</ref>*<sp/><ref refid="classDifBufferBase_1acc9d079897e63cf8bc184290dbb1b3cf" kindref="member">DifBufferBase::innerDifSourceOut</ref>(){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classSrcFinfo2" kindref="compound">SrcFinfo2&lt; double, double &gt;</ref><sp/>sourceOut(</highlight><highlight class="stringliteral">&quot;innerDifSourceOut&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Sends<sp/>out<sp/>source<sp/>information.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;sourceOut;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classDifBufferBase_1a78dffa443c3cbcf6b1d1c908a7f523a0" refkind="member"><highlight class="normal"><ref refid="classSrcFinfo2" kindref="compound">SrcFinfo2&lt; double, double &gt;</ref>*<sp/><ref refid="classDifBufferBase_1a78dffa443c3cbcf6b1d1c908a7f523a0" kindref="member">DifBufferBase::outerDifSourceOut</ref>(){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classSrcFinfo2" kindref="compound">SrcFinfo2&lt; double, double &gt;</ref><sp/>sourceOut(</highlight><highlight class="stringliteral">&quot;outerDifSourceOut&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Sends<sp/>out<sp/>source<sp/>information.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;sourceOut;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classDifBufferBase_1a509264b11f6cbdf352801f1df88dca14" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref><sp/>*<sp/><ref refid="classDifBufferBase_1a509264b11f6cbdf352801f1df88dca14" kindref="member">DifBufferBase::initCinfo</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/><ref refid="classDifBufferBase_1af7bbf92ba90a35cf4160500d0c30ca12" kindref="member">process</ref>(<sp/></highlight><highlight class="stringliteral">&quot;process&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Handles<sp/>process<sp/>call&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classProcOpFunc" kindref="compound">ProcOpFunc&lt; DifBufferBase &gt;</ref>(<sp/><sp/>&amp;<ref refid="classDifBufferBase_1af7bbf92ba90a35cf4160500d0c30ca12" kindref="member">DifBufferBase::process</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/><ref refid="classDifBufferBase_1a36932309ed22ef43ec1bd1cdee0841a2" kindref="member">reinit</ref>(<sp/></highlight><highlight class="stringliteral">&quot;reinit&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Reinit<sp/>happens<sp/>only<sp/>in<sp/>stage<sp/>0&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classProcOpFunc" kindref="compound">ProcOpFunc&lt; DifBufferBase &gt;</ref>(<sp/>&amp;<ref refid="classDifBufferBase_1a36932309ed22ef43ec1bd1cdee0841a2" kindref="member">DifBufferBase::reinit</ref>));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>processShared[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1af7bbf92ba90a35cf4160500d0c30ca12" kindref="member">process</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a36932309ed22ef43ec1bd1cdee0841a2" kindref="member">reinit</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classSharedFinfo" kindref="compound">SharedFinfo</ref><sp/>proc(</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;proc&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Here<sp/>we<sp/>create<sp/>2<sp/>shared<sp/>finfos<sp/>to<sp/>attach<sp/>with<sp/>the<sp/>Ticks.<sp/>This<sp/>is<sp/>because<sp/>we<sp/>want<sp/>to<sp/>perform<sp/>DifBufferBase<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;computations<sp/>in<sp/>2<sp/>stages,<sp/>much<sp/>as<sp/>in<sp/>the<sp/>Compartment<sp/>object.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;In<sp/>the<sp/>first<sp/>stage<sp/>we<sp/>send<sp/>out<sp/>the<sp/>concentration<sp/>value<sp/>to<sp/>other<sp/>DifBufferBases<sp/>and<sp/>Buffer<sp/>elements.<sp/>We<sp/>also&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processShared,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>processShared<sp/>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/>concentration(</highlight><highlight class="stringliteral">&quot;concentration&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Receives<sp/>concentration<sp/>(from<sp/>DifShell).&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEpFunc1" kindref="compound">EpFunc1&lt;DifBufferBase, double&gt;</ref>(&amp;<ref refid="classDifBufferBase_1a8c60a4e4a4e6bb513fa2540e732e6ffa" kindref="member">DifBufferBase::buffer</ref>));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>bufferShared[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;concentration,<sp/><ref refid="classDifBufferBase_1aec780eb073f5ca1886701cde5c9cba6b" kindref="member">DifBufferBase::reactionOut</ref>()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classSharedFinfo" kindref="compound">SharedFinfo</ref><sp/><ref refid="classDifBufferBase_1a8c60a4e4a4e6bb513fa2540e732e6ffa" kindref="member">buffer</ref>(<sp/></highlight><highlight class="stringliteral">&quot;buffer&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>a<sp/>shared<sp/>message<sp/>with<sp/>DifShell.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;During<sp/>stage<sp/>0:\n<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>DifBufferBase<sp/>sends<sp/>ion<sp/>concentration\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>Buffer<sp/>updates<sp/>buffer<sp/>concentration<sp/>and<sp/>sends<sp/>it<sp/>back<sp/>immediately<sp/>using<sp/>a<sp/>call-back.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>DifShell<sp/>updates<sp/>the<sp/>time-derivative<sp/>(<sp/>dC<sp/>/<sp/>dt<sp/>)<sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;During<sp/>stage<sp/>1:<sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>DifShell<sp/>advances<sp/>concentration<sp/>C<sp/>\n\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>scheme<sp/>means<sp/>that<sp/>the<sp/>Buffer<sp/>does<sp/>not<sp/>need<sp/>to<sp/>be<sp/>scheduled,<sp/>and<sp/>it<sp/>does<sp/>its<sp/>computations<sp/>when<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;it<sp/>receives<sp/>a<sp/>cue<sp/>from<sp/>the<sp/>DifShell.<sp/>May<sp/>not<sp/>be<sp/>the<sp/>best<sp/>idea,<sp/>but<sp/>it<sp/>saves<sp/>us<sp/>from<sp/>doing<sp/>the<sp/>above<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;computations<sp/>in<sp/>3<sp/>stages<sp/>instead<sp/>of<sp/>2.&quot;</highlight><highlight class="normal"><sp/>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bufferShared,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>bufferShared<sp/>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/><ref refid="classDifBufferBase_1af43fde0f0d758ace7375d94c00cda676" kindref="member">fluxFromOut</ref>(<sp/></highlight><highlight class="stringliteral">&quot;fluxFromOut&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Destination<sp/>message&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEpFunc2" kindref="compound">EpFunc2&lt; DifBufferBase, double, double &gt;</ref><sp/>(<sp/>&amp;<ref refid="classDifBufferBase_1af43fde0f0d758ace7375d94c00cda676" kindref="member">DifBufferBase::fluxFromOut</ref><sp/>));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>innerDifShared[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1af43fde0f0d758ace7375d94c00cda676" kindref="member">fluxFromOut</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDifBufferBase_1acc9d079897e63cf8bc184290dbb1b3cf" kindref="member">DifBufferBase::innerDifSourceOut</ref>()</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classSharedFinfo" kindref="compound">SharedFinfo</ref><sp/>innerDif(<sp/></highlight><highlight class="stringliteral">&quot;innerDif&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>shared<sp/>message<sp/>(and<sp/>the<sp/>next)<sp/>is<sp/>between<sp/>DifBufferBases:<sp/>adjoining<sp/>shells<sp/>exchange<sp/>information<sp/>to<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;find<sp/>out<sp/>the<sp/>flux<sp/>between<sp/>them.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Using<sp/>this<sp/>message,<sp/>an<sp/>inner<sp/>shell<sp/>sends<sp/>to,<sp/>and<sp/>receives<sp/>from<sp/>its<sp/>outer<sp/>shell.&quot;</highlight><highlight class="normal"><sp/>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>innerDifShared,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>innerDifShared<sp/>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/><ref refid="classDifBufferBase_1a7a11127a8e6bf6660f9f1d5eff34a70c" kindref="member">fluxFromIn</ref>(<sp/></highlight><highlight class="stringliteral">&quot;fluxFromIn&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEpFunc2" kindref="compound">EpFunc2&lt; DifBufferBase, double, double&gt;</ref><sp/>(<sp/>&amp;<ref refid="classDifBufferBase_1a7a11127a8e6bf6660f9f1d5eff34a70c" kindref="member">DifBufferBase::fluxFromIn</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>outerDifShared[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a7a11127a8e6bf6660f9f1d5eff34a70c" kindref="member">fluxFromIn</ref>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDifBufferBase_1a78dffa443c3cbcf6b1d1c908a7f523a0" kindref="member">DifBufferBase::outerDifSourceOut</ref>(),</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><sp/><ref refid="classSharedFinfo" kindref="compound">SharedFinfo</ref><sp/>outerDif(<sp/></highlight><highlight class="stringliteral">&quot;outerDif&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Using<sp/>this<sp/>message,<sp/>an<sp/>outer<sp/>shell<sp/>sends<sp/>to,<sp/>and<sp/>receives<sp/>from<sp/>its<sp/>inner<sp/>shell.&quot;</highlight><highlight class="normal"><sp/>,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outerDifShared,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>outerDifShared<sp/>)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Field<sp/>defs</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>activation(</highlight><highlight class="stringliteral">&quot;activation&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Ion<sp/>concentration<sp/>from<sp/>incoming<sp/>conc<sp/>message.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1ad53ea03921bb79b8c1e4102b76fe7ea7" kindref="member">DifBufferBase::setActivation</ref>,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1ae36fdebd175d14c0b210013dbf61dab0" kindref="member">DifBufferBase::getActivation</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>kf(</highlight><highlight class="stringliteral">&quot;kf&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Forward<sp/>rate<sp/>constant<sp/>of<sp/>buffer<sp/>molecules<sp/>1/mM/s<sp/>(?)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1abeb5688ae4e53eb5e696f731d7d24cf5" kindref="member">DifBufferBase::setKf</ref>,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a5741a9bf3dafabe362c88583aa35a638" kindref="member">DifBufferBase::getKf</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>kb(</highlight><highlight class="stringliteral">&quot;kb&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Backward<sp/>rate<sp/>constant<sp/>of<sp/>buffer<sp/>molecules.<sp/>1/s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a1b0820f87b9b490adb83fae2f79a21b5" kindref="member">DifBufferBase::setKb</ref>,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1ae56dc08b2871a4cd77e6e27996dc7352" kindref="member">DifBufferBase::getKb</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>D(</highlight><highlight class="stringliteral">&quot;D&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Diffusion<sp/>constant<sp/>of<sp/>buffer<sp/>molecules.<sp/>m^2/s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a8fcd1e81516990ea496e382e82a01100" kindref="member">DifBufferBase::setD</ref>,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a79088fce8d55019528e2b5d3869b31a2" kindref="member">DifBufferBase::getD</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>bFree(</highlight><highlight class="stringliteral">&quot;bFree&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Free<sp/>buffer<sp/>concentration&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1af2b64292def911bcb1ae5a0c98a1534d" kindref="member">DifBufferBase::setBFree</ref>,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a9b5f1c8b7d3f2a2962d10a34fa1b5de0" kindref="member">DifBufferBase::getBFree</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>bBound(</highlight><highlight class="stringliteral">&quot;bBound&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Bound<sp/>buffer<sp/>concentration&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a4bd1b50147f9697a89b21402dfbb8f6b" kindref="member">DifBufferBase::setBBound</ref>,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a2484524f079fc3fa52433b6b83e6f8cc" kindref="member">DifBufferBase::getBBound</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>bTot(</highlight><highlight class="stringliteral">&quot;bTot&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Total<sp/>buffer<sp/>concentration.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a737f3e53d8574f93d5246159d1463d30" kindref="member">DifBufferBase::setBTot</ref>,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1ae0107ff32db8bd460497e5053357d2ca" kindref="member">DifBufferBase::getBTot</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>length(</highlight><highlight class="stringliteral">&quot;length&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Length<sp/>of<sp/>shell&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a1fe6ac4ff9c3e55fe9a0fc8b630d2307" kindref="member">DifBufferBase::setLength</ref>,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a15b2179ffe742ed173545254e8f46c19" kindref="member">DifBufferBase::getLength</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>diameter(</highlight><highlight class="stringliteral">&quot;diameter&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Diameter<sp/>of<sp/>shell&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1afbc5f95af922068bf04f5eebb3a2c186" kindref="member">DifBufferBase::setDiameter</ref>,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a85701f96dea227d9631ccf448226037b" kindref="member">DifBufferBase::getDiameter</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, unsigned int&gt;</ref><sp/>shapeMode(</highlight><highlight class="stringliteral">&quot;shapeMode&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;shape<sp/>of<sp/>the<sp/>shell:<sp/>SHELL=0,<sp/>SLICE=SLAB=1,<sp/>USERDEF=3&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a1a21e9264efb8cd7f0ff9b334c9fb5e5" kindref="member">DifBufferBase::setShapeMode</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a56ba66a04798bbb36ed328632d7d6651" kindref="member">DifBufferBase::getShapeMode</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>thickness(</highlight><highlight class="stringliteral">&quot;thickness&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Thickness<sp/>of<sp/>shell&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1abdec6da4928e4cebc8c46e2b8105ad5f" kindref="member">DifBufferBase::setThickness</ref>,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1ad6860e947d063948a766491ee1f4f217" kindref="member">DifBufferBase::getThickness</ref>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>innerArea(</highlight><highlight class="stringliteral">&quot;innerArea&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Inner<sp/>area<sp/>of<sp/>shell&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a6b2be35cc79709e7bbc4cc830911dfb6" kindref="member">DifBufferBase::setInnerArea</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1ac46d13c1b4d1961624a06b556d762b79" kindref="member">DifBufferBase::getInnerArea</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt;DifBufferBase, double&gt;</ref><sp/>outerArea(</highlight><highlight class="stringliteral">&quot;outerArea&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Outer<sp/>area<sp/>of<sp/>shell&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a9dbf818e0731ceba37031facd14d6c88" kindref="member">DifBufferBase::setOuterArea</ref>,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a3e8e2f0f639215cf59ab833fbb2ef786" kindref="member">DifBufferBase::getOuterArea</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classElementValueFinfo" kindref="compound">ElementValueFinfo&lt; DifBufferBase, double&gt;</ref><sp/>volume(<sp/></highlight><highlight class="stringliteral">&quot;volume&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a8b12af1f0f05f2e81bc4cbd01ece62f8" kindref="member">DifBufferBase::setVolume</ref>,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a0872593b4ec73051099300ee31da5178" kindref="member">DifBufferBase::getVolume</ref><sp/>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>DestFinfo</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref><sp/>*<sp/>difBufferFinfos[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Field<sp/>definitions</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;activation,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;D,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;bFree,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;bBound,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;bTot,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;kf,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;kb,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&amp;prevFree,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&amp;prevBound,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;length,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;diameter,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;shapeMode,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;thickness,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;innerArea,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;outerArea,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;volume,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SharedFinfo<sp/>definitions</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;proc,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="classDifBufferBase_1a8c60a4e4a4e6bb513fa2540e732e6ffa" kindref="member">buffer</ref>,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;innerDif,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;outerDif,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDifBufferBase_1aec780eb073f5ca1886701cde5c9cba6b" kindref="member">reactionOut</ref>(),</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDifBufferBase_1acc9d079897e63cf8bc184290dbb1b3cf" kindref="member">innerDifSourceOut</ref>(),</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDifBufferBase_1a78dffa443c3cbcf6b1d1c908a7f523a0" kindref="member">outerDifSourceOut</ref>(),</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DestFinfo<sp/>definitions</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;concentration,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>doc[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DifBufferBase&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Author&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Subhasis<sp/>Ray<sp/>(ported<sp/>from<sp/>GENESIS2)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Models<sp/>diffusible<sp/>buffer<sp/>where<sp/>total<sp/>concentration<sp/>is<sp/>constant.<sp/>It<sp/>is&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>coupled<sp/>with<sp/>a<sp/>DifShell.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classZeroSizeDinfo" kindref="compound">ZeroSizeDinfo&lt;int&gt;</ref><sp/>dinfo;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref><sp/><ref refid="DifBuffer_8cpp_1aed28a9519d8d0460cb6a3b27b6847d46" kindref="member">difBufferCinfo</ref>(</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DifBufferBase&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" kindref="member">Neutral::initCinfo</ref>(),</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>difBufferFinfos,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(difBufferFinfos)/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="classFinfo" kindref="compound">Finfo</ref>*),</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;dinfo,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doc,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(doc)/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="DifBuffer_8cpp_1aed28a9519d8d0460cb6a3b27b6847d46" kindref="member">difBufferCinfo</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="DifBufferBase_8cpp_1aed28a9519d8d0460cb6a3b27b6847d46" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref><sp/>*<sp/><ref refid="DifBufferBase_8cpp_1aed28a9519d8d0460cb6a3b27b6847d46" kindref="member">difBufferCinfo</ref><sp/>=<sp/><ref refid="classDifBufferBase_1a509264b11f6cbdf352801f1df88dca14" kindref="member">DifBufferBase::initCinfo</ref>();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="comment">//<sp/>Class<sp/>functions</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="classDifBufferBase_1a7cbc46041f5639a9a282d8d17f4cc6cf" refkind="member"><highlight class="normal"><ref refid="classDifBufferBase_1a7cbc46041f5639a9a282d8d17f4cc6cf" kindref="member">DifBufferBase::DifBufferBase</ref>()</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{<sp/>;<sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="classDifBufferBase_1ae36fdebd175d14c0b210013dbf61dab0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ae36fdebd175d14c0b210013dbf61dab0" kindref="member">DifBufferBase::getActivation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="236"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a36356fe214be115b1eeaa0796ff5ab2a" kindref="member">vGetActivation</ref>(e);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="classDifBufferBase_1ad53ea03921bb79b8c1e4102b76fe7ea7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ad53ea03921bb79b8c1e4102b76fe7ea7" kindref="member">DifBufferBase::setActivation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a47601cfcef94d0d13d48e621b0e8ce5c" kindref="member">vSetActivation</ref>(e,value);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="classDifBufferBase_1a9b5f1c8b7d3f2a2962d10a34fa1b5de0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a9b5f1c8b7d3f2a2962d10a34fa1b5de0" kindref="member">DifBufferBase::getBFree</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="247"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a1069659cbb4eb2ce6c7df9b47c20f665" kindref="member">vGetBFree</ref>(e);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="classDifBufferBase_1af2b64292def911bcb1ae5a0c98a1534d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1af2b64292def911bcb1ae5a0c98a1534d" kindref="member">DifBufferBase::setBFree</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a39428bb14c92bf505ae1ecfdb1bb6032" kindref="member">vSetBFree</ref>(e,value);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="classDifBufferBase_1a2484524f079fc3fa52433b6b83e6f8cc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a2484524f079fc3fa52433b6b83e6f8cc" kindref="member">DifBufferBase::getBBound</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="257"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ad56cb83d9d8f7138a60d72b28fd0db0a" kindref="member">vGetBBound</ref>(e);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260" refid="classDifBufferBase_1a4bd1b50147f9697a89b21402dfbb8f6b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a4bd1b50147f9697a89b21402dfbb8f6b" kindref="member">DifBufferBase::setBBound</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a1846a8c298f3fb613b56fb48ec5e1bdf" kindref="member">vSetBBound</ref>(e,value);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="classDifBufferBase_1ae0107ff32db8bd460497e5053357d2ca" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ae0107ff32db8bd460497e5053357d2ca" kindref="member">DifBufferBase::getBTot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="266"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1aef2860b412593d2a163b984c0a3f753a" kindref="member">vGetBTot</ref>(e);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="classDifBufferBase_1a737f3e53d8574f93d5246159d1463d30" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a737f3e53d8574f93d5246159d1463d30" kindref="member">DifBufferBase::setBTot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a548510bf009286740b801876fde1771d" kindref="member">vSetBTot</ref>(e,value);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="classDifBufferBase_1a5741a9bf3dafabe362c88583aa35a638" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a5741a9bf3dafabe362c88583aa35a638" kindref="member">DifBufferBase::getKf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="277"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ad13e5dca967080ad66d781410a521949" kindref="member">vGetKf</ref>(e);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="classDifBufferBase_1abeb5688ae4e53eb5e696f731d7d24cf5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1abeb5688ae4e53eb5e696f731d7d24cf5" kindref="member">DifBufferBase::setKf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a670b5224cfc5adc73cd77e760793a5a4" kindref="member">vSetKf</ref>(e,value);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="classDifBufferBase_1ae56dc08b2871a4cd77e6e27996dc7352" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ae56dc08b2871a4cd77e6e27996dc7352" kindref="member">DifBufferBase::getKb</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="287"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a753e64f103b51240735c4702199ae279" kindref="member">vGetKb</ref>(e);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291" refid="classDifBufferBase_1a1b0820f87b9b490adb83fae2f79a21b5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a1b0820f87b9b490adb83fae2f79a21b5" kindref="member">DifBufferBase::setKb</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a76896b7893d66e89fc4cee8722260cf5" kindref="member">vSetKb</ref>(e,value);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="classDifBufferBase_1a79088fce8d55019528e2b5d3869b31a2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a79088fce8d55019528e2b5d3869b31a2" kindref="member">DifBufferBase::getD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="297"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a0802f5a2467abaea50e82ff3d3951953" kindref="member">vGetD</ref>(e);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="classDifBufferBase_1a8fcd1e81516990ea496e382e82a01100" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a8fcd1e81516990ea496e382e82a01100" kindref="member">DifBufferBase::setD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1aef7bbd729fb7b7cbb58556685b306d03" kindref="member">vSetD</ref>(e,value);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="classDifBufferBase_1a1a21e9264efb8cd7f0ff9b334c9fb5e5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a1a21e9264efb8cd7f0ff9b334c9fb5e5" kindref="member">DifBufferBase::setShapeMode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shapeMode<sp/>)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a0b7120a917e3e05db5b03ceaa4317985" kindref="member">vSetShapeMode</ref>(e,shapeMode);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311" refid="classDifBufferBase_1a56ba66a04798bbb36ed328632d7d6651" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a56ba66a04798bbb36ed328632d7d6651" kindref="member">DifBufferBase::getShapeMode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="312"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1aa37dfe4d1a727b6feb0c55689bf09169" kindref="member">vGetShapeMode</ref>(e);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="classDifBufferBase_1a1fe6ac4ff9c3e55fe9a0fc8b630d2307" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a1fe6ac4ff9c3e55fe9a0fc8b630d2307" kindref="member">DifBufferBase::setLength</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>length<sp/>)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a6825ad5e2ef7d2cd9013d6cfabd01fb6" kindref="member">vSetLength</ref>(e,length);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="classDifBufferBase_1a15b2179ffe742ed173545254e8f46c19" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a15b2179ffe742ed173545254e8f46c19" kindref="member">DifBufferBase::getLength</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="322"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ade3c700277d9129ad18f3c0c8defa0c2" kindref="member">vGetLength</ref>(e);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326" refid="classDifBufferBase_1afbc5f95af922068bf04f5eebb3a2c186" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1afbc5f95af922068bf04f5eebb3a2c186" kindref="member">DifBufferBase::setDiameter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diameter<sp/>)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a0f5c1ba7118280c8a34e246bc88e8072" kindref="member">vSetDiameter</ref>(e,diameter);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331" refid="classDifBufferBase_1a85701f96dea227d9631ccf448226037b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a85701f96dea227d9631ccf448226037b" kindref="member">DifBufferBase::getDiameter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="332"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a479aaa40b15802eb493c6864626fb42d" kindref="member">vGetDiameter</ref>(e);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="classDifBufferBase_1abdec6da4928e4cebc8c46e2b8105ad5f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1abdec6da4928e4cebc8c46e2b8105ad5f" kindref="member">DifBufferBase::setThickness</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thickness<sp/>)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a37c1c0bee0efbb0b373bd37cf48ae7c9" kindref="member">vSetThickness</ref>(e,thickness);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341" refid="classDifBufferBase_1ad6860e947d063948a766491ee1f4f217" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ad6860e947d063948a766491ee1f4f217" kindref="member">DifBufferBase::getThickness</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="342"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1af323d5cce9abcf7f60c9c090ca9b6554" kindref="member">vGetThickness</ref>(e);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346" refid="classDifBufferBase_1a8b12af1f0f05f2e81bc4cbd01ece62f8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a8b12af1f0f05f2e81bc4cbd01ece62f8" kindref="member">DifBufferBase::setVolume</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>volume<sp/>)</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a7392501fbda81fcabc5218ecef21370d" kindref="member">vSetVolume</ref>(e,volume);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351" refid="classDifBufferBase_1a0872593b4ec73051099300ee31da5178" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a0872593b4ec73051099300ee31da5178" kindref="member">DifBufferBase::getVolume</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="352"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1aa5d489c602d8f57045ab9b90fff42349" kindref="member">vGetVolume</ref>(e);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356" refid="classDifBufferBase_1a9dbf818e0731ceba37031facd14d6c88" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a9dbf818e0731ceba37031facd14d6c88" kindref="member">DifBufferBase::setOuterArea</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>outerArea<sp/>)</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1ab48458c2dd6a92b5bdadbd147ebc4072" kindref="member">vSetOuterArea</ref>(e,outerArea);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361" refid="classDifBufferBase_1a3e8e2f0f639215cf59ab833fbb2ef786" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a3e8e2f0f639215cf59ab833fbb2ef786" kindref="member">DifBufferBase::getOuterArea</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="362"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a8b366694f7d0d52984a20a40985fd6a0" kindref="member">vGetOuterArea</ref>(e);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366" refid="classDifBufferBase_1a6b2be35cc79709e7bbc4cc830911dfb6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a6b2be35cc79709e7bbc4cc830911dfb6" kindref="member">DifBufferBase::setInnerArea</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>innerArea<sp/>)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a119ca5df05f1a6ddf09addc81a77a91f" kindref="member">vSetInnerArea</ref>(e,innerArea);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371" refid="classDifBufferBase_1ac46d13c1b4d1961624a06b556d762b79" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1ac46d13c1b4d1961624a06b556d762b79" kindref="member">DifBufferBase::getInnerArea</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="372"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1afa82003c5c09333bd16625dbf0fc8e5c" kindref="member">vGetInnerArea</ref>(e);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378" refid="classDifBufferBase_1a8c60a4e4a4e6bb513fa2540e732e6ffa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a8c60a4e4a4e6bb513fa2540e732e6ffa" kindref="member">DifBufferBase::buffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>C)</highlight></codeline>
+<codeline lineno="379"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a1d1b94f9b34f3a1ce487c3b1470d622c" kindref="member">vBuffer</ref>(e,C);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383" refid="classDifBufferBase_1a36932309ed22ef43ec1bd1cdee0841a2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a36932309ed22ef43ec1bd1cdee0841a2" kindref="member">DifBufferBase::reinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>)</highlight></codeline>
+<codeline lineno="384"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a0ac2847239adb29877b1fc45524698d5" kindref="member">vReinit</ref>(<sp/>e,<sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388" refid="classDifBufferBase_1af7bbf92ba90a35cf4160500d0c30ca12" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1af7bbf92ba90a35cf4160500d0c30ca12" kindref="member">DifBufferBase::process</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>)</highlight></codeline>
+<codeline lineno="389"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1ac84c54e3a643ea6d78b0df3ce75bba37" kindref="member">vProcess</ref>(<sp/>e,<sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="392" refid="classDifBufferBase_1af43fde0f0d758ace7375d94c00cda676" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1af43fde0f0d758ace7375d94c00cda676" kindref="member">DifBufferBase:: fluxFromOut</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>outerC,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>outerThickness<sp/>)</highlight></codeline>
+<codeline lineno="393"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a6a3842f4a39837bad982b08e82fad479" kindref="member">vFluxFromOut</ref>(e,outerC,outerThickness);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="396" refid="classDifBufferBase_1a7a11127a8e6bf6660f9f1d5eff34a70c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifBufferBase_1a7a11127a8e6bf6660f9f1d5eff34a70c" kindref="member">DifBufferBase:: fluxFromIn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>innerC,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>innerThickness<sp/>)</highlight></codeline>
+<codeline lineno="397"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><ref refid="classDifBufferBase_1a9f58a35e7b8c07371005e796dc43bd36" kindref="member">vFluxFromIn</ref>(e,innerC,innerThickness);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/DifBufferBase.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="DiagonalMsg_8h" kind="file" language="C++">
+    <compoundname>DiagonalMsg.h</compoundname>
+    <includedby refid="main_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/main.cpp</includedby>
+    <includedby refid="testBuiltins_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/testBuiltins.cpp</includedby>
+    <includedby refid="DiagonalMsg_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/DiagonalMsg.cpp</includedby>
+    <includedby refid="Msg_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/Msg.cpp</includedby>
+    <includedby refid="pymoose_2Finfo_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/Finfo.h</includedby>
+    <includedby refid="helper_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/helper.cpp</includedby>
+    <includedby refid="Shell_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/Shell.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/testBuiltins.cpp</label>
+        <link refid="testBuiltins_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/DiagonalMsg.cpp</label>
+        <link refid="DiagonalMsg_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/DiagonalMsg.h</label>
+        <link refid="DiagonalMsg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/Msg.cpp</label>
+        <link refid="Msg_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/Finfo.cpp</label>
+        <link refid="pymoose_2Finfo_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/Finfo.h</label>
+        <link refid="pymoose_2Finfo_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/MooseVec.cpp</label>
+        <link refid="MooseVec_8cpp"/>
+      </node>
+      <node id="9">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/helper.cpp</label>
+        <link refid="helper_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/pymoose.cpp</label>
+        <link refid="pymoose_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/Shell.cpp</label>
+        <link refid="Shell_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classDiagonalMsg" prot="public">DiagonalMsg</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2010<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_DIAGONAL_MSG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DIAGONAL_MSG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classDiagonalMsg" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDiagonalMsg" kindref="compound">DiagonalMsg</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classMsg" kindref="compound">Msg</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="classDiagonalMsg_1a523be2d5829983a597a5069d6c05d831" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMsg_1af3de05897dc7602c64678a31c58ebece" kindref="member">Msg::initMsgManagers</ref>();<sp/></highlight><highlight class="comment">//<sp/>for<sp/>initializing<sp/>Id.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiagonalMsg" kindref="compound">DiagonalMsg</ref>(<sp/><ref refid="classElement" kindref="compound">Element</ref>*<sp/><ref refid="classMsg_1a5be9f4dd643f5f662e8fb3c029273390" kindref="member">e1</ref>,<sp/><ref refid="classElement" kindref="compound">Element</ref>*<sp/><ref refid="classMsg_1a893ed6b44cd4c529f0f10af38ae6743a" kindref="member">e2</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>msgIndex<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiagonalMsg_1a7999197b0e935f95b73fc7cb240dcc82" kindref="member">~DiagonalMsg</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEref" kindref="compound">Eref</ref><sp/><ref refid="classDiagonalMsg_1a9dfd484aacb877036394674ca3d02b4b" kindref="member">firstTgt</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>src<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiagonalMsg_1a066a632b1a5309a2e6593f0dccc026d8" kindref="member">sources</ref>(<sp/>vector&lt;<sp/>vector&lt;<sp/>Eref<sp/>&gt;<sp/>&gt;&amp;<sp/>v<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiagonalMsg_1af786744c87b7190de4617a64c5c3d876" kindref="member">targets</ref>(<sp/>vector&lt;<sp/>vector&lt;<sp/>Eref<sp/>&gt;<sp/>&gt;&amp;<sp/>v<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classDiagonalMsg_1ab5c4264d19fc2632a5db2ca369b966f3" kindref="member">managerId</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/><ref refid="classDiagonalMsg_1af85c95d779671a6519177cad99cb9983" kindref="member">findOtherEnd</ref>(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>end<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMsg" kindref="compound">Msg</ref>*<sp/><ref refid="classDiagonalMsg_1adea517eba59288484947a761fd798077" kindref="member">copy</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>origSrc,<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>newSrc,<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>newTgt,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="header_8h_1a00318fd541f34c074d6e67a051d2b573" kindref="member">FuncId</ref><sp/>fid,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiagonalMsg_1a73e2f2bb2d810a820ed5559e808bcf07" kindref="member">setStride</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stride<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiagonalMsg_1aad0127a20e26fb1432ba0b9e25d7a0fb" kindref="member">getStride</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiagonalMsg_1a0e9233a8912c9a209be4755e1a850691" kindref="member">numMsg</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classDiagonalMsg_1a7d38bf1f31f1b7b255da05d9bd7ed8e3" kindref="member">lookupMsg</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classDiagonalMsg_1af3faaeb03ba11fdf7e0758c19b60583b" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70" refid="classDiagonalMsg_1a00586f53a2b7161f8d99fa96aa9a364f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiagonalMsg_1a00586f53a2b7161f8d99fa96aa9a364f" kindref="member">stride_</ref>;<sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>between<sp/>targets.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classDiagonalMsg_1a70e581f3d55d198a36b2147b007d2a48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classDiagonalMsg_1a70e581f3d55d198a36b2147b007d2a48" kindref="member">managerId_</ref>;</highlight></codeline>
+<codeline lineno="72" refid="classDiagonalMsg_1a27bfaee358558fe55cac75a477379448" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>vector&lt;<sp/>DiagonalMsg*<sp/>&gt;<sp/><ref refid="classDiagonalMsg_1a27bfaee358558fe55cac75a477379448" kindref="member">msg_</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_DIAGONAL_MSG_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/DiagonalMsg.h"/>
+  </compounddef>
+</doxygen>

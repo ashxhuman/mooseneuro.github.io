@@ -1,0 +1,2044 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classNeuroMesh" kind="class" language="C++" prot="public">
+    <compoundname>NeuroMesh</compoundname>
+    <basecompoundref refid="classMeshCompt" prot="public" virt="non-virtual">MeshCompt</basecompoundref>
+    <includes refid="NeuroMesh_8h" local="no">NeuroMesh.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classNeuroMesh_1ad51afff25d36e5a671a3f80bed655f32" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; NeuroMesh::area_</definition>
+        <argsstring></argsstring>
+        <name>area_</name>
+        <qualifiedname>NeuroMesh::area_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mesh junction area pre-calculations for each <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref>. This is the cross-section area of the middle of each voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="300" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="300" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1a486bbc7d2f13a98b535d9796596bbb56" compoundref="NeuroMesh_8cpp" startline="843" endline="846">getVoxelArea</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" compoundref="NeuroMesh_8cpp" startline="314" endline="325">operator=</referencedby>
+        <referencedby refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</referencedby>
+        <referencedby refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" compoundref="NeuroMesh_8cpp" startline="862" endline="880">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NeuroMesh::diffLength_</definition>
+        <argsstring></argsstring>
+        <name>diffLength_</name>
+        <qualifiedname>NeuroMesh::diffLength_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="306" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="306" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1acf91ff1be5981738e4a00fd5140e1f24" compoundref="NeuroMesh_8cpp" startline="403" endline="406">getDiffLength</referencedby>
+        <referencedby refid="classNeuroMesh_1a79cf7938a69c50fb6a126fe68d29ae8f" compoundref="NeuroMesh_8cpp" startline="1076" endline="1118">innerBuildDefaultMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a71aa45e785032672bd4a653c95c1d2fd" compoundref="NeuroMesh_8cpp" startline="1038" endline="1062">innerSetNumEntries</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a4ad6084d912a0a93335a48eecdb06766" compoundref="NeuroMesh_8cpp" startline="304" endline="312">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" compoundref="NeuroMesh_8cpp" startline="314" endline="325">operator=</referencedby>
+        <referencedby refid="classNeuroMesh_1a5a13798b0f4049fc74b1ffbd4622da5d" compoundref="NeuroMesh_8cpp" startline="397" endline="401">setDiffLength</referencedby>
+        <referencedby refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</referencedby>
+        <referencedby refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" compoundref="NeuroMesh_8cpp" startline="862" endline="880">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1aac300c6ffdf12161d81d92e0f2adb552" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string NeuroMesh::geometryPolicy_</definition>
+        <argsstring></argsstring>
+        <name>geometryPolicy_</name>
+        <qualifiedname>NeuroMesh::geometryPolicy_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="316" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="316" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1aed3cd2c9dbb7c03d31c37f671023c773" compoundref="NeuroMesh_8cpp" startline="434" endline="437">getGeometryPolicy</referencedby>
+        <referencedby refid="classNeuroMesh_1a99dc3d5127a37f2a59d4e9280b0228fd" compoundref="NeuroMesh_8cpp" startline="501" endline="526">insertSingleDummy</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a4ad6084d912a0a93335a48eecdb06766" compoundref="NeuroMesh_8cpp" startline="304" endline="312">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" compoundref="NeuroMesh_8cpp" startline="314" endline="325">operator=</referencedby>
+        <referencedby refid="classNeuroMesh_1a3fac52b440147d95dd31cea695ccdf6d" compoundref="NeuroMesh_8cpp" startline="408" endline="432">setGeometryPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a9d0a1945610137c409ec60b6fee29ec3" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; NeuroMesh::head_</definition>
+        <argsstring></argsstring>
+        <name>head_</name>
+        <qualifiedname>NeuroMesh::head_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of shaft compartment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="330" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="330" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1a97131613b0392f53c0c64eb69898b1c9" compoundref="NeuroMesh_8cpp" startline="571" endline="586">filterSpines</referencedby>
+        <referencedby refid="classNeuroMesh_1ae64a74914e5f4a3c16c6fe38654760d5" compoundref="NeuroMesh_8cpp" startline="800" endline="810">getSpineVoxelsOnCompartment</referencedby>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+        <referencedby refid="classNeuroMesh_1a0e774aa59d4aafb215c2723d2040830a" compoundref="NeuroMesh_8cpp" startline="589" endline="612">transmitSpineInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a654d7c0f6d5087810411d833a619179f" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; NeuroMesh::length_</definition>
+        <argsstring></argsstring>
+        <name>length_</name>
+        <qualifiedname>NeuroMesh::length_</qualifiedname>
+        <briefdescription>
+<para>Pre-calculation of length of each <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="303" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="303" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1a6d80c4904ca07d5d4b5343889e114e47" compoundref="NeuroMesh_8cpp" startline="848" endline="851">getVoxelLength</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" compoundref="NeuroMesh_8cpp" startline="314" endline="325">operator=</referencedby>
+        <referencedby refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</referencedby>
+        <referencedby refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" compoundref="NeuroMesh_8cpp" startline="862" endline="880">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; NeuroMesh::nodeIndex_</definition>
+        <argsstring></argsstring>
+        <name>nodeIndex_</name>
+        <qualifiedname>NeuroMesh::nodeIndex_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>nodeIndex_[fid_for_MeshEntry]. Looks up index of <ref refid="classNeuroNode" kindref="compound">NeuroNode</ref> from the fid of each <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref>. In other words, node# = nodeIndex_[ voxel# ]. This is needed because there are typically many voxels in each electrical compartment of the neuron. The nodes_ map closely to the electrical compartments. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="287" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="287" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" compoundref="NeuroMesh_8cpp" startline="1164" endline="1237">buildStencil</referencedby>
+        <referencedby refid="classNeuroMesh_1a448f674cb83dca4432577406e1849ba3" compoundref="NeuroMesh_8cpp" startline="969" endline="979">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classNeuroMesh_1ae11ad998776b0f40a46ed1fb72db40c6" compoundref="NeuroMesh_8cpp" startline="1124" endline="1162">getAdx</referencedby>
+        <referencedby refid="classNeuroMesh_1afc83707be240b6c0b49ccaae3c486551" compoundref="NeuroMesh_8cpp" startline="921" endline="931">getCoordinates</referencedby>
+        <referencedby refid="classNeuroMesh_1a957bff17a5b461240f3c05571de0ead4" compoundref="NeuroMesh_8cpp" startline="934" endline="949">getDiffusionArea</referencedby>
+        <referencedby refid="classNeuroMesh_1aaa4b78123b7768377726e66b91e6f5ed" compoundref="NeuroMesh_8cpp" startline="724" endline="734">getElecComptMap</referencedby>
+        <referencedby refid="classNeuroMesh_1aa3c76d3a0de019c16ec50e9b71ddcb63" compoundref="NeuroMesh_8cpp" startline="904" endline="917">getMeshEntryVolume</referencedby>
+        <referencedby refid="classNeuroMesh_1aa387bd21287919a203058c4fd694f7b4" compoundref="NeuroMesh_8cpp" startline="887" endline="895">getMeshType</referencedby>
+        <referencedby refid="classNeuroMesh_1aa5bde2f6dce2386c158ca8f0fc369dfc" compoundref="NeuroMesh_8cpp" startline="714" endline="717">getNumDiffCompts</referencedby>
+        <referencedby refid="classNeuroMesh_1a3919180ea49cf3368f21ab84b580ce43" compoundref="NeuroMesh_8cpp" startline="772" endline="781">getSpineVoxelOnDendVoxel</referencedby>
+        <referencedby refid="classNeuroMesh_1ababbd158eb32d21eb52f68b519b73e62" compoundref="NeuroMesh_8cpp" startline="1281" endline="1295">indexToSpace</referencedby>
+        <referencedby refid="classNeuroMesh_1a79cf7938a69c50fb6a126fe68d29ae8f" compoundref="NeuroMesh_8cpp" startline="1076" endline="1118">innerBuildDefaultMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a42ad7b7980c7ef66bd46a987d13914be" compoundref="NeuroMesh_8cpp" startline="1028" endline="1031">innerGetNumEntries</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" compoundref="NeuroMesh_8cpp" startline="314" endline="325">operator=</referencedby>
+        <referencedby refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</referencedby>
+        <referencedby refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" compoundref="NeuroMesh_8cpp" startline="862" endline="880">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classNeuroNode" kindref="compound">NeuroNode</ref> &gt;</type>
+        <definition>vector&lt; NeuroNode &gt; NeuroMesh::nodes_</definition>
+        <argsstring></argsstring>
+        <name>nodes_</name>
+        <qualifiedname>NeuroMesh::nodes_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array of geometry specifiers for each segment of the neuronal model. Includes information equivalent to the <ref refid="classCylMesh" kindref="compound">CylMesh</ref>, as well as information to tie the node back to the original &apos;compartment&apos; from the neuronal model. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="270" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="270" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1ae11ad998776b0f40a46ed1fb72db40c6" compoundref="NeuroMesh_8cpp" startline="1124" endline="1162">getAdx</referencedby>
+        <referencedby refid="classNeuroMesh_1afc83707be240b6c0b49ccaae3c486551" compoundref="NeuroMesh_8cpp" startline="921" endline="931">getCoordinates</referencedby>
+        <referencedby refid="classNeuroMesh_1ac04d57c04d23f86321ee4dcad29f4e52" compoundref="NeuroMesh_8cpp" startline="783" endline="798">getDendVoxelsOnCompartment</referencedby>
+        <referencedby refid="classNeuroMesh_1a957bff17a5b461240f3c05571de0ead4" compoundref="NeuroMesh_8cpp" startline="934" endline="949">getDiffusionArea</referencedby>
+        <referencedby refid="classNeuroMesh_1a3a2186bf9523dce62a212a0c02183fc5" compoundref="NeuroMesh_8cpp" startline="736" endline="746">getElecComptList</referencedby>
+        <referencedby refid="classNeuroMesh_1aaa4b78123b7768377726e66b91e6f5ed" compoundref="NeuroMesh_8cpp" startline="724" endline="734">getElecComptMap</referencedby>
+        <referencedby refid="classNeuroMesh_1a85e4efb7d98274c2a416df98e40b9052" compoundref="NeuroMesh_8cpp" startline="760" endline="770">getEndVoxelInCompt</referencedby>
+        <referencedby refid="classNeuroMesh_1aa3c76d3a0de019c16ec50e9b71ddcb63" compoundref="NeuroMesh_8cpp" startline="904" endline="917">getMeshEntryVolume</referencedby>
+        <referencedby refid="classNeuroMesh_1aa387bd21287919a203058c4fd694f7b4" compoundref="NeuroMesh_8cpp" startline="887" endline="895">getMeshType</referencedby>
+        <referencedby refid="classNeuroMesh_1a79f324fa1bda58e1ce8c245ec893f79e" compoundref="NeuroMesh_8cpp" startline="1240" endline="1243">getNodes</referencedby>
+        <referencedby refid="classNeuroMesh_1a994ef42f04eaa540c4f3e706e20ec363" compoundref="NeuroMesh_8cpp" startline="705" endline="712">getNumSegments</referencedby>
+        <referencedby refid="classNeuroMesh_1a69c3089c425aeb5b459080976ed3d883" compoundref="NeuroMesh_8cpp" startline="748" endline="758">getStartVoxelInCompt</referencedby>
+        <referencedby refid="classNeuroMesh_1ababbd158eb32d21eb52f68b519b73e62" compoundref="NeuroMesh_8cpp" startline="1281" endline="1295">indexToSpace</referencedby>
+        <referencedby refid="classNeuroMesh_1a79cf7938a69c50fb6a126fe68d29ae8f" compoundref="NeuroMesh_8cpp" startline="1076" endline="1118">innerBuildDefaultMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a71aa45e785032672bd4a653c95c1d2fd" compoundref="NeuroMesh_8cpp" startline="1038" endline="1062">innerSetNumEntries</referencedby>
+        <referencedby refid="classNeuroMesh_1adb349d751b4e32371a1818e2895e26f6" compoundref="NeuroMesh_8cpp" startline="528" endline="569">insertDummyNodes</referencedby>
+        <referencedby refid="classNeuroMesh_1a99dc3d5127a37f2a59d4e9280b0228fd" compoundref="NeuroMesh_8cpp" startline="501" endline="526">insertSingleDummy</referencedby>
+        <referencedby refid="classNeuroMesh_1aac516e44929a7cb01361bceae4b7e134" compoundref="NeuroMesh_8cpp" startline="1327" endline="1341">matchCubeMeshEntries</referencedby>
+        <referencedby refid="classNeuroMesh_1a23d9de4910b03e34288a30fed813fa3f" compoundref="NeuroMesh_8cpp" startline="1297" endline="1325">nearest</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" compoundref="NeuroMesh_8cpp" startline="314" endline="325">operator=</referencedby>
+        <referencedby refid="classNeuroMesh_1ab33773b81620a42cf29dad4d7df43b09" compoundref="NeuroMesh_8cpp" startline="466" endline="499">putSomaAtStart</referencedby>
+        <referencedby refid="classNeuroMesh_1a3fac52b440147d95dd31cea695ccdf6d" compoundref="NeuroMesh_8cpp" startline="408" endline="432">setGeometryPolicy</referencedby>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+        <referencedby refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</referencedby>
+        <referencedby refid="classNeuroMesh_1ab4ce5f28ef7ad94aba4dbf8f6c5f408f" compoundref="NeuroMesh_8cpp" startline="618" endline="645">updateShaftParents</referencedby>
+        <referencedby refid="classNeuroMesh_1a1f313b79fc22daf70bd1e09f156ce0e9" compoundref="NeuroMesh_8cpp" startline="817" endline="841">vGetVoxelMidpoint</referencedby>
+        <referencedby refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" compoundref="NeuroMesh_8cpp" startline="862" endline="880">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a69af7c0f8c960182866a80d438110da4" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; NeuroMesh::parent_</definition>
+        <argsstring></argsstring>
+        <name>parent_</name>
+        <qualifiedname>NeuroMesh::parent_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of head compartment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="331" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="331" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1a3919180ea49cf3368f21ab84b580ce43" compoundref="NeuroMesh_8cpp" startline="772" endline="781">getSpineVoxelOnDendVoxel</referencedby>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+        <referencedby refid="classNeuroMesh_1a0e774aa59d4aafb215c2723d2040830a" compoundref="NeuroMesh_8cpp" startline="589" endline="612">transmitSpineInfo</referencedby>
+        <referencedby refid="classNeuroMesh_1ab4ce5f28ef7ad94aba4dbf8f6c5f408f" compoundref="NeuroMesh_8cpp" startline="618" endline="645">updateShaftParents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a67063bd3b0ba07dc00e13016eece0e19" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; NeuroMesh::parentVoxel_</definition>
+        <argsstring></argsstring>
+        <name>parentVoxel_</name>
+        <qualifiedname>NeuroMesh::parentVoxel_</qualifiedname>
+        <briefdescription>
+<para>Index of parent voxel of spines. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Index of parent voxel of each voxel. The root voxel has a parent of -1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="336" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="336" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" compoundref="NeuroMesh_8cpp" startline="1164" endline="1237">buildStencil</referencedby>
+        <referencedby refid="classNeuroMesh_1ae132e52b7d722380583a0601c915043e" compoundref="NeuroMesh_8cpp" startline="719" endline="722">getParentVoxel</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" compoundref="NeuroMesh_8cpp" startline="862" endline="880">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1afe2dbfea83707a96e8d6286706c4ebf7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool NeuroMesh::separateSpines_</definition>
+        <argsstring></argsstring>
+        <name>separateSpines_</name>
+        <qualifiedname>NeuroMesh::separateSpines_</qualifiedname>
+        <briefdescription>
+<para>Max permitted length constant for diffusion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag. True if <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> should configure a separate <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>. The process is that both the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> and <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> should have been created, and a spineList message sent from the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> to the <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="314" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="314" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1af057e0378c10e9ae0e8595d4551915f3" compoundref="NeuroMesh_8cpp" startline="700" endline="703">getSeparateSpines</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a4ad6084d912a0a93335a48eecdb06766" compoundref="NeuroMesh_8cpp" startline="304" endline="312">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" compoundref="NeuroMesh_8cpp" startline="314" endline="325">operator=</referencedby>
+        <referencedby refid="classNeuroMesh_1a2fcb1e6932205d672d8e31dd4884da56" compoundref="NeuroMesh_8cpp" startline="691" endline="698">setSeparateSpines</referencedby>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a30be9fc9a428c6d1e40a1096b1f6e13c" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; NeuroMesh::shaft_</definition>
+        <argsstring></argsstring>
+        <name>shaft_</name>
+        <qualifiedname>NeuroMesh::shaft_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The shaft vector and the matching head vector track the dendritic spines. The parent is the voxel to which the spine is attached. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="329" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="329" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1a97131613b0392f53c0c64eb69898b1c9" compoundref="NeuroMesh_8cpp" startline="571" endline="586">filterSpines</referencedby>
+        <referencedby refid="classNeuroMesh_1ae64a74914e5f4a3c16c6fe38654760d5" compoundref="NeuroMesh_8cpp" startline="800" endline="810">getSpineVoxelsOnCompartment</referencedby>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+        <referencedby refid="classNeuroMesh_1a0e774aa59d4aafb215c2723d2040830a" compoundref="NeuroMesh_8cpp" startline="589" endline="612">transmitSpineInfo</referencedby>
+        <referencedby refid="classNeuroMesh_1ab4ce5f28ef7ad94aba4dbf8f6c5f408f" compoundref="NeuroMesh_8cpp" startline="618" endline="645">updateShaftParents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1ac40a562883edcd31d1a83d8ae499f63a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string NeuroMesh::subTreePath_</definition>
+        <argsstring></argsstring>
+        <name>subTreePath_</name>
+        <qualifiedname>NeuroMesh::subTreePath_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Path of sub-tree used for the chemical model. This is undefined if the user assigns the subtree as a vector of objects, which is the case when using rdesigneur. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="277" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="277" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1a04a950350248aed156fc90354d8c8717" compoundref="NeuroMesh_8cpp" startline="686" endline="689">getSubTreePath</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+        <referencedby refid="classNeuroMesh_1a5544eb3267ffffc2ba356d50ec2a4633" compoundref="NeuroMesh_8cpp" startline="678" endline="684">setSubTreePath</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a7f363e2ec0fb8a81a5018407f5366fd2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double NeuroMesh::surfaceGranularity_</definition>
+        <argsstring></argsstring>
+        <name>surfaceGranularity_</name>
+        <qualifiedname>NeuroMesh::surfaceGranularity_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Decides how finely to subdivide diffLength_ or radius or cubic mesh side when computing surfacearea of intersections with <ref refid="classCubeMesh" kindref="compound">CubeMesh</ref>. Defaults to 0.1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="323" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="323" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1aac516e44929a7cb01361bceae4b7e134" compoundref="NeuroMesh_8cpp" startline="1327" endline="1341">matchCubeMeshEntries</referencedby>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a4ad6084d912a0a93335a48eecdb06766" compoundref="NeuroMesh_8cpp" startline="304" endline="312">NeuroMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; NeuroMesh::vs_</definition>
+        <argsstring></argsstring>
+        <name>vs_</name>
+        <qualifiedname>NeuroMesh::vs_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volscale pre-calculations for each <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref>. vs = #molecules / vol where vol is expressed in m^3. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="294" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="294" bodyend="-1"/>
+        <referencedby refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" compoundref="NeuroMesh_8cpp" startline="285" endline="302">NeuroMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" compoundref="NeuroMesh_8cpp" startline="314" endline="325">operator=</referencedby>
+        <referencedby refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</referencedby>
+        <referencedby refid="classNeuroMesh_1a7142154a3c88836a9422cf4cafcf0a2d" compoundref="NeuroMesh_8cpp" startline="853" endline="860">vGetEntireVolume</referencedby>
+        <referencedby refid="classNeuroMesh_1a1f313b79fc22daf70bd1e09f156ce0e9" compoundref="NeuroMesh_8cpp" startline="817" endline="841">vGetVoxelMidpoint</referencedby>
+        <referencedby refid="classNeuroMesh_1af20105c5f6f30d6b3353989d989258ab" compoundref="NeuroMesh_8cpp" startline="812" endline="815">vGetVoxelVolume</referencedby>
+        <referencedby refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" compoundref="NeuroMesh_8cpp" startline="862" endline="880">vSetVolumeNotRates</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classNeuroMesh_1a790861403bbe6a59d96bd34284eea490" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::buildNodeTree</definition>
+        <argsstring>(const map&lt; Id, unsigned int &gt; &amp;comptMap)</argsstring>
+        <name>buildNodeTree</name>
+        <qualifiedname>NeuroMesh::buildNodeTree</qualifiedname>
+        <param>
+          <type>const map&lt; <ref refid="classId" kindref="compound">Id</ref>, unsigned int &gt; &amp;</type>
+          <declname>comptMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>buildNodeTree: This connects up parent and child nodes and if needed inserts dummy nodes to build up the model tree. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="239" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::buildStencil</definition>
+        <argsstring>()</argsstring>
+        <name>buildStencil</name>
+        <qualifiedname>NeuroMesh::buildStencil</qualifiedname>
+        <briefdescription>
+<para>Utility function to set up <ref refid="classStencil" kindref="compound">Stencil</ref> for diffusion in <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="186" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1164" bodyend="1237"/>
+        <references refid="classMeshCompt_1a781b9a02f4af37458eda4ffb1a6e615d" compoundref="MeshCompt_8cpp" startline="98" endline="104">MeshCompt::addRow</references>
+        <references refid="classEcol_1ae99d7fb63eac4244a2704d7ddfae8c81" compoundref="MeshCompt_8h" startline="105">Ecol::col_</references>
+        <references refid="classEcol_1a26de02c10d2aa922ad1c1246315a50e5" compoundref="MeshCompt_8h" startline="104">Ecol::e_</references>
+        <references refid="classEcol_1a90dd204aed1bf7007c92d3c0aace8fb0" compoundref="MeshCompt_8h" startline="91" endline="93">Ecol::Ecol</references>
+        <references refid="classNeuroMesh_1ae11ad998776b0f40a46ed1fb72db40c6" compoundref="NeuroMesh_8cpp" startline="1124" endline="1162">getAdx</references>
+        <references refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" compoundref="MeshCompt_8cpp" startline="49" endline="52">MeshCompt::innerResetStencil</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a67063bd3b0ba07dc00e13016eece0e19" compoundref="NeuroMesh_8h" startline="336">parentVoxel_</references>
+        <references refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" compoundref="MeshCompt_8cpp" startline="106" endline="110">MeshCompt::setStencilSize</references>
+        <references refid="classSparseMatrix_1a41427e7c9dc8a9d9a863fcca7987107d" compoundref="SparseMatrix_8h" startline="78" endline="81">SparseMatrix&lt; T &gt;::SparseMatrix</references>
+        <referencedby refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a448f674cb83dca4432577406e1849ba3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double NeuroMesh::extendedMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>extendedMeshEntryVolume</name>
+        <qualifiedname>NeuroMesh::extendedMeshEntryVolume</qualifiedname>
+        <reimplements refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9">extendedMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Vol of all mesh Entries including abutting diff-coupled voxels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return volume of mesh Entry, including for diffusively coupled voxels from other solvers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="130" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="969" bodyend="979"/>
+        <references refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9" compoundref="MeshCompt_8cpp" startline="36" endline="40">MeshCompt::extendedMeshEntryVolume</references>
+        <references refid="classNeuroMesh_1aa3c76d3a0de019c16ec50e9b71ddcb63" compoundref="NeuroMesh_8cpp" startline="904" endline="917">getMeshEntryVolume</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a97131613b0392f53c0c64eb69898b1c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool NeuroMesh::filterSpines</definition>
+        <argsstring>(Id compt)</argsstring>
+        <name>filterSpines</name>
+        <qualifiedname>NeuroMesh::filterSpines</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>compt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if it finds a compartment name that looks like it ought to be on a spine. It filters out the names &quot;neck&quot;, &quot;shaft&quot;, &quot;spine&quot; and &quot;head&quot;. The latter two are classified into the head_ vector. The first two are classified into the shaft_ vector. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="248" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="571" bodyend="586"/>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" compoundref="Element_8cpp" startline="56" endline="59">Element::getName</references>
+        <references refid="classNeuroMesh_1a9d0a1945610137c409ec60b6fee29ec3" compoundref="NeuroMesh_8h" startline="330">head_</references>
+        <references refid="classNeuroMesh_1a30be9fc9a428c6d1e40a1096b1f6e13c" compoundref="NeuroMesh_8h" startline="329">shaft_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ae11ad998776b0f40a46ed1fb72db40c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double NeuroMesh::getAdx</definition>
+        <argsstring>(unsigned int curr, unsigned int &amp;parentFid) const</argsstring>
+        <name>getAdx</name>
+        <qualifiedname>NeuroMesh::getAdx</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>curr</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>parentFid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for buildStencil, calculates diffusion term adx for rate between current compartment curr, and parent. By product: also passes back parent compartment index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="183" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1124" bodyend="1162"/>
+        <references refid="classCylBase_1abb8d94642f60b69fa70e425fe03b6aeb" compoundref="CylBase_8cpp" startline="207" endline="217">CylBase::getDiffusionArea</references>
+        <references refid="classCylBase_1a8ee5f8e88924d3be2cdcc01c23efb2b9" compoundref="CylBase_8cpp" startline="95" endline="98">CylBase::getLength</references>
+        <references refid="classCylBase_1a1fa6d6203b2286cc3d0b26b6ec8e5176" compoundref="CylBase_8cpp" startline="105" endline="108">CylBase::getNumDivs</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <referencedby refid="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" compoundref="NeuroMesh_8cpp" startline="1164" endline="1237">buildStencil</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1afc83707be240b6c0b49ccaae3c486551" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; NeuroMesh::getCoordinates</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getCoordinates</name>
+        <qualifiedname>NeuroMesh::getCoordinates</qualifiedname>
+        <reimplements refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca">getCoordinates</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return coords of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return coords of mesh Entry. For Cylindrical mesh, coords are x1y1z1 x2y2z2 dia0 dia1 diffLength </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="124" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="921" bodyend="931"/>
+        <references refid="classCylBase_1ac07adfff6aca8dd297fd9790359ff551" compoundref="CylBase_8cpp" startline="169" endline="195">CylBase::getCoordinates</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ac04d57c04d23f86321ee4dcad29f4e52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; NeuroMesh::getDendVoxelsOnCompartment</definition>
+        <argsstring>(ObjId compt) const</argsstring>
+        <name>getDendVoxelsOnCompartment</name>
+        <qualifiedname>NeuroMesh::getDendVoxelsOnCompartment</qualifiedname>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>compt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="104" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="783" bodyend="798"/>
+        <references refid="classNeuroNode_1ad8fc3f43e0851b0d42ea6bdf2cdd6552" compoundref="NeuroNode_8cpp" startline="79" endline="82">NeuroNode::elecCompt</references>
+        <references refid="classCylBase_1a1fa6d6203b2286cc3d0b26b6ec8e5176" compoundref="CylBase_8cpp" startline="105" endline="108">CylBase::getNumDivs</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1acf91ff1be5981738e4a00fd5140e1f24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double NeuroMesh::getDiffLength</definition>
+        <argsstring>() const</argsstring>
+        <name>getDiffLength</name>
+        <qualifiedname>NeuroMesh::getDiffLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="92" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="403" bodyend="406"/>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a957bff17a5b461240f3c05571de0ead4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; NeuroMesh::getDiffusionArea</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getDiffusionArea</name>
+        <qualifiedname>NeuroMesh::getDiffusionArea</qualifiedname>
+        <reimplements refid="classChemCompt_1a2915e3d0730c4b18a305ebc57e49b2eb">getDiffusionArea</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return diffusion X-section area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return diffusion X-section area for each neighbor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="126" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="934" bodyend="949"/>
+        <references refid="classCylBase_1abb8d94642f60b69fa70e425fe03b6aeb" compoundref="CylBase_8cpp" startline="207" endline="217">CylBase::getDiffusionArea</references>
+        <references refid="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516" compoundref="MeshCompt_8cpp" startline="69" endline="80">MeshCompt::getNeighbors</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a5894c34f0b842b10d86ad90bb6807f07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; NeuroMesh::getDiffusionScaling</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getDiffusionScaling</name>
+        <qualifiedname>NeuroMesh::getDiffusionScaling</qualifiedname>
+        <reimplements refid="classChemCompt_1a081367d727b267b5f75e825c0deb9330">getDiffusionScaling</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return scale factor for diffusion. 1 here. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return scale factor for diffusion. I think all dendite tips need to return just one entry of 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="128" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="954" bodyend="965"/>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a3a2186bf9523dce62a212a0c02183fc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; NeuroMesh::getElecComptList</definition>
+        <argsstring>() const</argsstring>
+        <name>getElecComptList</name>
+        <qualifiedname>NeuroMesh::getElecComptList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="99" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="736" bodyend="746"/>
+        <references refid="classNeuroNode_1ad8fc3f43e0851b0d42ea6bdf2cdd6552" compoundref="NeuroNode_8cpp" startline="79" endline="82">NeuroNode::elecCompt</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <referencedby refid="classNeuroMesh_1ad4b0daae8e17bb41b630d8d03296fe9d" compoundref="NeuroMesh_8cpp" startline="668" endline="675">getSubTree</referencedby>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1aaa4b78123b7768377726e66b91e6f5ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; NeuroMesh::getElecComptMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getElecComptMap</name>
+        <qualifiedname>NeuroMesh::getElecComptMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="100" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="724" bodyend="734"/>
+        <references refid="classNeuroNode_1ad8fc3f43e0851b0d42ea6bdf2cdd6552" compoundref="NeuroNode_8cpp" startline="79" endline="82">NeuroNode::elecCompt</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a85e4efb7d98274c2a416df98e40b9052" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; NeuroMesh::getEndVoxelInCompt</definition>
+        <argsstring>() const</argsstring>
+        <name>getEndVoxelInCompt</name>
+        <qualifiedname>NeuroMesh::getEndVoxelInCompt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="102" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="760" bodyend="770"/>
+        <references refid="classCylBase_1a1fa6d6203b2286cc3d0b26b6ec8e5176" compoundref="CylBase_8cpp" startline="105" endline="108">CylBase::getNumDivs</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1aed3cd2c9dbb7c03d31c37f671023c773" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string NeuroMesh::getGeometryPolicy</definition>
+        <argsstring>() const</argsstring>
+        <name>getGeometryPolicy</name>
+        <qualifiedname>NeuroMesh::getGeometryPolicy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="95" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="434" bodyend="437"/>
+        <references refid="classNeuroMesh_1aac300c6ffdf12161d81d92e0f2adb552" compoundref="NeuroMesh_8h" startline="316">geometryPolicy_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1af6521251c152e82f9fa383fab5620d33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int NeuroMesh::getMeshDimensions</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshDimensions</name>
+        <qualifiedname>NeuroMesh::getMeshDimensions</qualifiedname>
+        <reimplements refid="classChemCompt_1ae26d4e8d6fcf619f172d06737d4f098f">getMeshDimensions</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return dimensions of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="120" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="898" bodyend="901"/>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1aa3c76d3a0de019c16ec50e9b71ddcb63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double NeuroMesh::getMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshEntryVolume</name>
+        <qualifiedname>NeuroMesh::getMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a">getMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return volume of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="122" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="904" bodyend="917"/>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <references refid="classCylBase_1ade9360626e8ff666e1241d32550444bb" compoundref="CylBase_8cpp" startline="149" endline="165">CylBase::voxelVolume</references>
+        <referencedby refid="classNeuroMesh_1a448f674cb83dca4432577406e1849ba3" compoundref="NeuroMesh_8cpp" startline="969" endline="979">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classSpineMesh_1a0e2e7d002152dfc0562accc9932e8a00" compoundref="SpineMesh_8cpp" startline="540" endline="552">SpineMesh::matchNeuroMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1aa387bd21287919a203058c4fd694f7b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int NeuroMesh::getMeshType</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshType</name>
+        <qualifiedname>NeuroMesh::getMeshType</qualifiedname>
+        <reimplements refid="classChemCompt_1a50c687c6bb40a49ae6d629def63ed139">getMeshType</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return MeshType of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="118" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="887" bodyend="895"/>
+        <references refid="MeshEntry_8h_1a24f376ccef7a39450a2fcdbf5ba97cedaeb5cf98698189904b535aaae2afa49f3" compoundref="MeshEntry_8h" startline="20">CYL</references>
+        <references refid="classNeuroNode_1acb04ee41b11be6734d55c6e732ce1f5e" compoundref="NeuroNode_8cpp" startline="87" endline="90">NeuroNode::isSphere</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="MeshEntry_8h_1a24f376ccef7a39450a2fcdbf5ba97ceda32235b2a32b8dd7f28e6bf78894d75ee" compoundref="MeshEntry_8h" startline="21">SPHERE_SHELL_SEG</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a79f324fa1bda58e1ce8c245ec893f79e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const vector&lt; <ref refid="classNeuroNode" kindref="compound">NeuroNode</ref> &gt; &amp;</type>
+        <definition>const vector&lt; NeuroNode &gt; &amp; NeuroMesh::getNodes</definition>
+        <argsstring>() const</argsstring>
+        <name>getNodes</name>
+        <qualifiedname>NeuroMesh::getNodes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="258" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1240" bodyend="1243"/>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1aa5bde2f6dce2386c158ca8f0fc369dfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int NeuroMesh::getNumDiffCompts</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumDiffCompts</name>
+        <qualifiedname>NeuroMesh::getNumDiffCompts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="89" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="714" bodyend="717"/>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a994ef42f04eaa540c4f3e706e20ec363" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int NeuroMesh::getNumSegments</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumSegments</name>
+        <qualifiedname>NeuroMesh::getNumSegments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="88" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="705" bodyend="712"/>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ae132e52b7d722380583a0601c915043e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; NeuroMesh::getParentVoxel</definition>
+        <argsstring>() const</argsstring>
+        <name>getParentVoxel</name>
+        <qualifiedname>NeuroMesh::getParentVoxel</qualifiedname>
+        <reimplements refid="classMeshCompt_1a240b1e27d1bd66056e7c6c092e6b7b1e">getParentVoxel</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="107" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="719" bodyend="722"/>
+        <references refid="classNeuroMesh_1a67063bd3b0ba07dc00e13016eece0e19" compoundref="NeuroMesh_8h" startline="336">parentVoxel_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1af057e0378c10e9ae0e8595d4551915f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool NeuroMesh::getSeparateSpines</definition>
+        <argsstring>() const</argsstring>
+        <name>getSeparateSpines</name>
+        <qualifiedname>NeuroMesh::getSeparateSpines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="86" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="700" bodyend="703"/>
+        <references refid="classNeuroMesh_1afe2dbfea83707a96e8d6286706c4ebf7" compoundref="NeuroMesh_8h" startline="314">separateSpines_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a3919180ea49cf3368f21ab84b580ce43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt; int &gt; NeuroMesh::getSpineVoxelOnDendVoxel</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpineVoxelOnDendVoxel</name>
+        <qualifiedname>NeuroMesh::getSpineVoxelOnDendVoxel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="103" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="772" bodyend="781"/>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a69af7c0f8c960182866a80d438110da4" compoundref="NeuroMesh_8h" startline="331">parent_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ae64a74914e5f4a3c16c6fe38654760d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; NeuroMesh::getSpineVoxelsOnCompartment</definition>
+        <argsstring>(ObjId compt) const</argsstring>
+        <name>getSpineVoxelsOnCompartment</name>
+        <qualifiedname>NeuroMesh::getSpineVoxelsOnCompartment</qualifiedname>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>compt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="105" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="800" bodyend="810"/>
+        <references refid="classNeuroMesh_1a9d0a1945610137c409ec60b6fee29ec3" compoundref="NeuroMesh_8h" startline="330">head_</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classNeuroMesh_1a30be9fc9a428c6d1e40a1096b1f6e13c" compoundref="NeuroMesh_8h" startline="329">shaft_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a69c3089c425aeb5b459080976ed3d883" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; NeuroMesh::getStartVoxelInCompt</definition>
+        <argsstring>() const</argsstring>
+        <name>getStartVoxelInCompt</name>
+        <qualifiedname>NeuroMesh::getStartVoxelInCompt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="101" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="748" bodyend="758"/>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ad4b0daae8e17bb41b630d8d03296fe9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt;</type>
+        <definition>vector&lt; ObjId &gt; NeuroMesh::getSubTree</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getSubTree</name>
+        <qualifiedname>NeuroMesh::getSubTree</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="70" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="668" bodyend="675"/>
+        <references refid="classNeuroMesh_1a3a2186bf9523dce62a212a0c02183fc5" compoundref="NeuroMesh_8cpp" startline="736" endline="746">getElecComptList</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a04a950350248aed156fc90354d8c8717" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string NeuroMesh::getSubTreePath</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getSubTreePath</name>
+        <qualifiedname>NeuroMesh::getSubTreePath</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="62" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="686" bodyend="689"/>
+        <references refid="classNeuroMesh_1ac40a562883edcd31d1a83d8ae499f63a" compoundref="NeuroMesh_8h" startline="277">subTreePath_</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a486bbc7d2f13a98b535d9796596bbb56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; NeuroMesh::getVoxelArea</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelArea</name>
+        <qualifiedname>NeuroMesh::getVoxelArea</qualifiedname>
+        <reimplements refid="classMeshCompt_1ad0b8b02617f99d8f15c7655e4e068cc3">getVoxelArea</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="110" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="843" bodyend="846"/>
+        <references refid="classNeuroMesh_1ad51afff25d36e5a671a3f80bed655f32" compoundref="NeuroMesh_8h" startline="300">area_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a6d80c4904ca07d5d4b5343889e114e47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; NeuroMesh::getVoxelLength</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelLength</name>
+        <qualifiedname>NeuroMesh::getVoxelLength</qualifiedname>
+        <reimplements refid="classMeshCompt_1aa7a21c23e8d57611c313f59dc2cb3827">getVoxelLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="111" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="848" bodyend="851"/>
+        <references refid="classNeuroMesh_1a654d7c0f6d5087810411d833a619179f" compoundref="NeuroMesh_8h" startline="303">length_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ababbd158eb32d21eb52f68b519b73e62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::indexToSpace</definition>
+        <argsstring>(unsigned int index, double &amp;x, double &amp;y, double &amp;z) const</argsstring>
+        <name>indexToSpace</name>
+        <qualifiedname>NeuroMesh::indexToSpace</qualifiedname>
+        <reimplements refid="classChemCompt_1a16a4f8317f8b9c8b9042d96cb3230084">indexToSpace</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts specified index to xyz coords of middle of voxel Values out of range return original xyz </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="212" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1281" bodyend="1295"/>
+        <references refid="classVec_1a226019f1225faafaec3dc235724a418d" compoundref="Vec_8h" startline="34" endline="36">Vec::a0</references>
+        <references refid="classVec_1a702d1ea183ea05e153f22e4631b57e3f" compoundref="Vec_8h" startline="37" endline="39">Vec::a1</references>
+        <references refid="classVec_1a445c0d24660fdd56d4dc4179518c4d80" compoundref="Vec_8h" startline="40" endline="42">Vec::a2</references>
+        <references refid="classCylBase_1a1fa6d6203b2286cc3d0b26b6ec8e5176" compoundref="CylBase_8cpp" startline="105" endline="108">CylBase::getNumDivs</references>
+        <references refid="classCylBase_1af491e3aed441f4ff3ef112346d644ae7" compoundref="CylBase_8cpp" startline="55" endline="58">CylBase::getX</references>
+        <references refid="classCylBase_1a6f27ed9266877bd74a114d8dcd133ef1" compoundref="CylBase_8cpp" startline="65" endline="68">CylBase::getY</references>
+        <references refid="classCylBase_1af7d5df757eec9e32d3d1f8d6d738e2bc" compoundref="CylBase_8cpp" startline="75" endline="78">CylBase::getZ</references>
+        <references refid="classNeuroMesh_1a42ad7b7980c7ef66bd46a987d13914be" compoundref="NeuroMesh_8cpp" startline="1028" endline="1031">innerGetNumEntries</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classVec_1a5fbbff525331b581aecf179861cf8863" compoundref="Vec_8cpp" startline="53" endline="59">Vec::pointOnLine</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <references refid="classVec_1ae9852b7e40650f19652ffb59cd664442" compoundref="Vec_8cpp" startline="14" endline="16">Vec::Vec</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a79cf7938a69c50fb6a126fe68d29ae8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::innerBuildDefaultMesh</definition>
+        <argsstring>(const Eref &amp;e, double size, unsigned int numEntries)</argsstring>
+        <name>innerBuildDefaultMesh</name>
+        <qualifiedname>NeuroMesh::innerBuildDefaultMesh</qualifiedname>
+        <reimplements refid="classChemCompt_1ad47583c93af9b85b1f5979a8f2730e29">innerBuildDefaultMesh</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numEntries</declname>
+        </param>
+        <briefdescription>
+<para>Virtual func to make a mesh with specified size and numEntries. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a bit odd, effectively asks to build an imaginary neuron and then subdivide it. I&apos;ll make do with a ball-and-stick model: Soma with a single apical dendrite with reasonable diameter. I will interpret size as total length of neuron, not as volume. Soma will have a diameter of up to 20 microns, anything bigger than this is treated as soma of 20 microns + dendrite of (specified length - 10 microns) for radius of soma. This means we avoid having miniscule dendrites protruding from soma, the shortest one will be 10 microns. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="163" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1076" bodyend="1118"/>
+        <references refid="classCylBase_1a0443776cb9cc16acd4dcb438360b9934" compoundref="CylBase_8cpp" startline="23" endline="35">CylBase::CylBase</references>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classNeuroNode_1a1e04ed22dafb97c2376b46386a36f634" compoundref="NeuroNode_8cpp" startline="28" endline="39">NeuroNode::NeuroNode</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a35885f3e64055f435297f3bcf8bbd019" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int NeuroMesh::innerGetDimensions</definition>
+        <argsstring>() const</argsstring>
+        <name>innerGetDimensions</name>
+        <qualifiedname>NeuroMesh::innerGetDimensions</qualifiedname>
+        <reimplements refid="classChemCompt_1ae6347eff16c758abcd89202283c168d7">innerGetDimensions</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="97" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="439" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a42ad7b7980c7ef66bd46a987d13914be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int NeuroMesh::innerGetNumEntries</definition>
+        <argsstring>() const</argsstring>
+        <name>innerGetNumEntries</name>
+        <qualifiedname>NeuroMesh::innerGetNumEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1a470081742eabd0580f158c1b165549f7">innerGetNumEntries</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Returns number of <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref> in array </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="136" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1028" bodyend="1031"/>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <referencedby refid="classNeuroMesh_1ababbd158eb32d21eb52f68b519b73e62" compoundref="NeuroMesh_8cpp" startline="1281" endline="1295">indexToSpace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a3db7c5f062e4c28a21775be08fd2466a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::innerHandleNodeInfo</definition>
+        <argsstring>(const Eref &amp;e, unsigned int numNodes, unsigned int numThreads)</argsstring>
+        <name>innerHandleNodeInfo</name>
+        <qualifiedname>NeuroMesh::innerHandleNodeInfo</qualifiedname>
+        <reimplements refid="classChemCompt_1a2ef09b42b75a38963cde30ff66e68216">innerHandleNodeInfo</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numNodes</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numThreads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="172" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="999" bodyend="1022"/>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a470458a89a5499de592c32f6d2eb51e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::innerHandleRequestMeshStats</definition>
+        <argsstring>(const Eref &amp;e, const SrcFinfo2&lt; unsigned int, vector&lt; double &gt; &gt; *meshStatsFinfo)</argsstring>
+        <name>innerHandleRequestMeshStats</name>
+        <qualifiedname>NeuroMesh::innerHandleRequestMeshStats</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSrcFinfo2" kindref="compound">SrcFinfo2</ref>&lt; unsigned int, vector&lt; double &gt; &gt; *</type>
+          <declname>meshStatsFinfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="166" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a71aa45e785032672bd4a653c95c1d2fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::innerSetNumEntries</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>innerSetNumEntries</name>
+        <qualifiedname>NeuroMesh::innerSetNumEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1aa7641511cdf773c5bbaacef66b6ea5e5">innerSetNumEntries</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual func. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Assigns number of MeshEntries. This one doesn&apos;t set exact number, because each compartment has to fit integral numbers of voxels. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="138" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1038" bodyend="1062"/>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <references refid="classCylBase_1ad96655884be493cdaf02d69a10d6b196" compoundref="CylBase_8cpp" startline="85" endline="88">CylBase::getDia</references>
+        <references refid="classCylBase_1a8ee5f8e88924d3be2cdcc01c23efb2b9" compoundref="CylBase_8cpp" startline="95" endline="98">CylBase::getLength</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroNode_1acb04ee41b11be6734d55c6e732ce1f5e" compoundref="NeuroNode_8cpp" startline="87" endline="90">NeuroNode::isSphere</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1adb349d751b4e32371a1818e2895e26f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::insertDummyNodes</definition>
+        <argsstring>()</argsstring>
+        <name>insertDummyNodes</name>
+        <qualifiedname>NeuroMesh::insertDummyNodes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Puts in all the required dummy nodes for the tree. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="230" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="528" bodyend="569"/>
+        <references refid="classNeuroNode_1a1da7ecae82cfc5986fd439532c9239fa" compoundref="NeuroNode_8cpp" startline="101" endline="104">NeuroNode::addChild</references>
+        <references refid="classNeuroNode_1a8913f50b86058a881d676c763e0e87d9" compoundref="NeuroNode_8cpp" startline="96" endline="99">NeuroNode::children</references>
+        <references refid="classNeuroNode_1a3e4047fa5dbfa81196209eae9a59dd81" compoundref="NeuroNode_8cpp" startline="106" endline="109">NeuroNode::clearChildren</references>
+        <references refid="classNeuroNode_1ad8fc3f43e0851b0d42ea6bdf2cdd6552" compoundref="NeuroNode_8cpp" startline="79" endline="82">NeuroNode::elecCompt</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classCylBase_1af491e3aed441f4ff3ef112346d644ae7" compoundref="CylBase_8cpp" startline="55" endline="58">CylBase::getX</references>
+        <references refid="classCylBase_1a6f27ed9266877bd74a114d8dcd133ef1" compoundref="CylBase_8cpp" startline="65" endline="68">CylBase::getY</references>
+        <references refid="classCylBase_1af7d5df757eec9e32d3d1f8d6d738e2bc" compoundref="CylBase_8cpp" startline="75" endline="78">CylBase::getZ</references>
+        <references refid="classNeuroMesh_1a99dc3d5127a37f2a59d4e9280b0228fd" compoundref="NeuroMesh_8cpp" startline="501" endline="526">insertSingleDummy</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a99dc3d5127a37f2a59d4e9280b0228fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::insertSingleDummy</definition>
+        <argsstring>(unsigned int parent, unsigned int self, double x, double y, double z)</argsstring>
+        <name>insertSingleDummy</name>
+        <qualifiedname>NeuroMesh::insertSingleDummy</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Puts in a dummy node between parent and self. Used to set up the correct size of proximal compartments. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="224" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="501" bodyend="526"/>
+        <references refid="classNeuroNode_1a1da7ecae82cfc5986fd439532c9239fa" compoundref="NeuroNode_8cpp" startline="101" endline="104">NeuroNode::addChild</references>
+        <references refid="classNeuroNode_1a70b74d5099ec3b1d38c222eebe56bfed" compoundref="NeuroNode_8cpp" startline="121" endline="131">NeuroNode::calculateLength</references>
+        <references refid="classNeuroNode_1a3e4047fa5dbfa81196209eae9a59dd81" compoundref="NeuroNode_8cpp" startline="106" endline="109">NeuroNode::clearChildren</references>
+        <references refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" compoundref="doubleEq_8cpp" startline="16" endline="22">doubleEq</references>
+        <references refid="classNeuroMesh_1aac300c6ffdf12161d81d92e0f2adb552" compoundref="NeuroMesh_8h" startline="316">geometryPolicy_</references>
+        <references refid="classCylBase_1a8ee5f8e88924d3be2cdcc01c23efb2b9" compoundref="CylBase_8cpp" startline="95" endline="98">CylBase::getLength</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classCylBase_1a05bf1fb986988a6a89f48e428db6dd01" compoundref="CylBase_8cpp" startline="110" endline="113">CylBase::setIsCylinder</references>
+        <references refid="classCylBase_1a24ad5b1161c1f3f65f3843377f9db50e" compoundref="CylBase_8cpp" startline="100" endline="103">CylBase::setNumDivs</references>
+        <references refid="classNeuroNode_1aed87b940e98993da7fb1ffb080e99793" compoundref="NeuroNode_8cpp" startline="111" endline="114">NeuroNode::setParent</references>
+        <references refid="classCylBase_1aa9eba2525f9f0fcfa8ddc728402c5445" compoundref="CylBase_8cpp" startline="50" endline="53">CylBase::setX</references>
+        <references refid="classCylBase_1aa64b2e772df3c8180853ceb9998bf335" compoundref="CylBase_8cpp" startline="60" endline="63">CylBase::setY</references>
+        <references refid="classCylBase_1a7e32f372d601f29f92fcb86a74028188" compoundref="CylBase_8cpp" startline="70" endline="73">CylBase::setZ</references>
+        <referencedby refid="classNeuroMesh_1adb349d751b4e32371a1818e2895e26f6" compoundref="NeuroMesh_8cpp" startline="528" endline="569">insertDummyNodes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1aac516e44929a7cb01361bceae4b7e134" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::matchCubeMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchCubeMeshEntries</name>
+        <qualifiedname>NeuroMesh::matchCubeMeshEntries</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="195" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1327" bodyend="1341"/>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classCylBase_1afb7f14b8bb133072656c780053b36de8" compoundref="CylBase_8cpp" startline="317" endline="369">CylBase::matchCubeMeshEntries</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <references refid="classNeuroMesh_1a7f363e2ec0fb8a81a5018407f5366fd2" compoundref="NeuroMesh_8h" startline="323">surfaceGranularity_</references>
+        <referencedby refid="classNeuroMesh_1a87f8811cba83e45b1a24c8da92aa0fc0" compoundref="NeuroMesh_8cpp" startline="1249" endline="1279">matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a87f8811cba83e45b1a24c8da92aa0fc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::matchMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchMeshEntries</name>
+        <qualifiedname>NeuroMesh::matchMeshEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1a40842a753e317d720a5495166c56dd58">matchMeshEntries</reimplements>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the meshIndices (NOT spatial indices) of all adjacent mesh entry pairs on ether side of the (self, other) junction. meshIndices are the indices that look up entries in the vector of pools. spatialIndices are (iz * ny + iy) * nx + ix, that is, a linear conversion of cartesian spatial indices. So, for two touching cubes, the return vector is the paired meshIndices on either side of the plane of contact. If one mesh has a finer mesh than the other, or if there are more than one contact points from self to other (for example, at a corner), then we just have multiple pairs using the same meshIndex of the repeated voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="192" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1249" bodyend="1279"/>
+        <references refid="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" compoundref="ChemCompt_8cpp" startline="466" endline="478">ChemCompt::flipRet</references>
+        <references refid="classNeuroMesh_1aac516e44929a7cb01361bceae4b7e134" compoundref="NeuroMesh_8cpp" startline="1327" endline="1341">matchCubeMeshEntries</references>
+        <references refid="classEndoMesh_1a77e7321f762d13a06de933f335bf50da" compoundref="EndoMesh_8cpp" startline="438" endline="468">EndoMesh::matchMeshEntries</references>
+        <references refid="classNeuroMesh_1ab600368bac5d89b60a6f28a1adbfd6f9" compoundref="NeuroMesh_8cpp" startline="1343" endline="1346">matchNeuroMeshEntries</references>
+        <references refid="classSpineMesh_1a0e2e7d002152dfc0562accc9932e8a00" compoundref="SpineMesh_8cpp" startline="540" endline="552">SpineMesh::matchNeuroMeshEntries</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ab600368bac5d89b60a6f28a1adbfd6f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::matchNeuroMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchNeuroMeshEntries</name>
+        <qualifiedname>NeuroMesh::matchNeuroMeshEntries</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="198" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1343" bodyend="1346"/>
+        <referencedby refid="classNeuroMesh_1a87f8811cba83e45b1a24c8da92aa0fc0" compoundref="NeuroMesh_8cpp" startline="1249" endline="1279">matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a23d9de4910b03e34288a30fed813fa3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double NeuroMesh::nearest</definition>
+        <argsstring>(double x, double y, double z, unsigned int &amp;index) const</argsstring>
+        <name>nearest</name>
+        <qualifiedname>NeuroMesh::nearest</qualifiedname>
+        <reimplements refid="classChemCompt_1a6669c8fe5495d97b22da6d6244a88d12">nearest</reimplements>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This works a little different from other subclass versions of the function. It finds the index of the mesh entry whose centre is closest to the specified coords, and returns the distance to the centre. Doesn&apos;t worry about whether this distance is inside or outside cell. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="209" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="1297" bodyend="1325"/>
+        <references refid="classCylBase_1a1fa6d6203b2286cc3d0b26b6ec8e5176" compoundref="CylBase_8cpp" startline="105" endline="108">CylBase::getNumDivs</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classCylBase_1ae00ad52eb7ecc20efc16f22735c368da" compoundref="CylBase_8cpp" startline="375" endline="408">CylBase::nearest</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NeuroMesh::NeuroMesh</definition>
+        <argsstring>()</argsstring>
+        <name>NeuroMesh</name>
+        <qualifiedname>NeuroMesh::NeuroMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="34" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="285" bodyend="302"/>
+        <references refid="classNeuroMesh_1ad51afff25d36e5a671a3f80bed655f32" compoundref="NeuroMesh_8h" startline="300">area_</references>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <references refid="classNeuroMesh_1aac300c6ffdf12161d81d92e0f2adb552" compoundref="NeuroMesh_8h" startline="316">geometryPolicy_</references>
+        <references refid="classNeuroMesh_1a654d7c0f6d5087810411d833a619179f" compoundref="NeuroMesh_8h" startline="303">length_</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroMesh_1a67063bd3b0ba07dc00e13016eece0e19" compoundref="NeuroMesh_8h" startline="336">parentVoxel_</references>
+        <references refid="classNeuroMesh_1afe2dbfea83707a96e8d6286706c4ebf7" compoundref="NeuroMesh_8h" startline="314">separateSpines_</references>
+        <references refid="classCylBase_1ad71cf34c5cc9298508ac5a3a49495c1b" compoundref="CylBase_8cpp" startline="80" endline="83">CylBase::setDia</references>
+        <references refid="classCylBase_1a2f3e181306038e72e051d44644f2464c" compoundref="CylBase_8cpp" startline="90" endline="93">CylBase::setLength</references>
+        <references refid="classCylBase_1a24ad5b1161c1f3f65f3843377f9db50e" compoundref="CylBase_8cpp" startline="100" endline="103">CylBase::setNumDivs</references>
+        <references refid="classNeuroMesh_1ac40a562883edcd31d1a83d8ae499f63a" compoundref="NeuroMesh_8h" startline="277">subTreePath_</references>
+        <references refid="classNeuroMesh_1a7f363e2ec0fb8a81a5018407f5366fd2" compoundref="NeuroMesh_8h" startline="323">surfaceGranularity_</references>
+        <references refid="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" compoundref="NeuroMesh_8h" startline="294">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a4ad6084d912a0a93335a48eecdb06766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NeuroMesh::NeuroMesh</definition>
+        <argsstring>(const NeuroMesh &amp;other)</argsstring>
+        <name>NeuroMesh</name>
+        <qualifiedname>NeuroMesh::NeuroMesh</qualifiedname>
+        <param>
+          <type>const <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="35" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="304" bodyend="312"/>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <references refid="classNeuroMesh_1aac300c6ffdf12161d81d92e0f2adb552" compoundref="NeuroMesh_8h" startline="316">geometryPolicy_</references>
+        <references refid="classNeuroMesh_1afe2dbfea83707a96e8d6286706c4ebf7" compoundref="NeuroMesh_8h" startline="314">separateSpines_</references>
+        <references refid="classNeuroMesh_1a7f363e2ec0fb8a81a5018407f5366fd2" compoundref="NeuroMesh_8h" startline="323">surfaceGranularity_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a145c7674db1f04f477b388293b594040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> &amp;</type>
+        <definition>NeuroMesh &amp; NeuroMesh::operator=</definition>
+        <argsstring>(const NeuroMesh &amp;other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>NeuroMesh::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="37" column="11" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="314" bodyend="325"/>
+        <references refid="classNeuroMesh_1ad51afff25d36e5a671a3f80bed655f32" compoundref="NeuroMesh_8h" startline="300">area_</references>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <references refid="classNeuroMesh_1aac300c6ffdf12161d81d92e0f2adb552" compoundref="NeuroMesh_8h" startline="316">geometryPolicy_</references>
+        <references refid="classNeuroMesh_1a654d7c0f6d5087810411d833a619179f" compoundref="NeuroMesh_8h" startline="303">length_</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroMesh_1afe2dbfea83707a96e8d6286706c4ebf7" compoundref="NeuroMesh_8h" startline="314">separateSpines_</references>
+        <references refid="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" compoundref="NeuroMesh_8h" startline="294">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ab33773b81620a42cf29dad4d7df43b09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id NeuroMesh::putSomaAtStart</definition>
+        <argsstring>(Id origSoma, unsigned int maxDiaIndex)</argsstring>
+        <name>putSomaAtStart</name>
+        <qualifiedname>NeuroMesh::putSomaAtStart</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>origSoma</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>maxDiaIndex</declname>
+        </param>
+        <briefdescription>
+<para>This shuffles the nodes_ vector to put soma node at the start. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="233" column="4" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="466" bodyend="499"/>
+        <references refid="classNeuroNode_1ad8fc3f43e0851b0d42ea6bdf2cdd6552" compoundref="NeuroNode_8cpp" startline="79" endline="82">NeuroNode::elecCompt</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" compoundref="Element_8cpp" startline="56" endline="59">Element::getName</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="namespacemoose_1a7cbddc96a9404d810f1d2e1f7b2795c2" compoundref="strutil_8cpp" startline="139" endline="149">moose::strncasecmp</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a5a13798b0f4049fc74b1ffbd4622da5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::setDiffLength</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setDiffLength</name>
+        <qualifiedname>NeuroMesh::setDiffLength</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="91" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="397" bodyend="401"/>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <references refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a3fac52b440147d95dd31cea695ccdf6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::setGeometryPolicy</definition>
+        <argsstring>(string v)</argsstring>
+        <name>setGeometryPolicy</name>
+        <qualifiedname>NeuroMesh::setGeometryPolicy</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="94" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="408" bodyend="432"/>
+        <references refid="classNeuroMesh_1aac300c6ffdf12161d81d92e0f2adb552" compoundref="NeuroMesh_8h" startline="316">geometryPolicy_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classCylBase_1a05bf1fb986988a6a89f48e428db6dd01" compoundref="CylBase_8cpp" startline="110" endline="113">CylBase::setIsCylinder</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a2fcb1e6932205d672d8e31dd4884da56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::setSeparateSpines</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setSeparateSpines</name>
+        <qualifiedname>NeuroMesh::setSeparateSpines</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag. True if <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> should configure a separate <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>. The process is that both the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> and <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> should have been created, and a spineList message sent from the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> to the <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>. This may cascade down to <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="85" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="691" bodyend="698"/>
+        <references refid="classNeuroMesh_1afe2dbfea83707a96e8d6286706c4ebf7" compoundref="NeuroMesh_8h" startline="314">separateSpines_</references>
+        <references refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::setSubTree</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; ObjId &gt; compartments)</argsstring>
+        <name>setSubTree</name>
+        <qualifiedname>NeuroMesh::setSubTree</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt;</type>
+          <declname>compartments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The SubTree is a set of compartments to model. The first entry is the root of the tree, closest to the soma. The system does handle non-contiguous sets. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="69" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="648" bodyend="666"/>
+        <references refid="classNeuroNode_1aba7020383a8baff44448479b5eece512" compoundref="NeuroNode_8cpp" startline="491" endline="531">NeuroNode::buildSpinyTree</references>
+        <references refid="classNeuroNode_1a3f4fe78639e7175e0a9e157c937fe4f7" compoundref="NeuroNode_8cpp" startline="558" endline="588">NeuroNode::buildTree</references>
+        <references refid="classNeuroMesh_1a9d0a1945610137c409ec60b6fee29ec3" compoundref="NeuroMesh_8h" startline="330">head_</references>
+        <references refid="classNeuroMesh_1adb349d751b4e32371a1818e2895e26f6" compoundref="NeuroMesh_8cpp" startline="528" endline="569">insertDummyNodes</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroMesh_1a69af7c0f8c960182866a80d438110da4" compoundref="NeuroMesh_8h" startline="331">parent_</references>
+        <references refid="classNeuroMesh_1afe2dbfea83707a96e8d6286706c4ebf7" compoundref="NeuroMesh_8h" startline="314">separateSpines_</references>
+        <references refid="classNeuroMesh_1a30be9fc9a428c6d1e40a1096b1f6e13c" compoundref="NeuroMesh_8h" startline="329">shaft_</references>
+        <references refid="classNeuroMesh_1ac40a562883edcd31d1a83d8ae499f63a" compoundref="NeuroMesh_8h" startline="277">subTreePath_</references>
+        <references refid="classNeuroMesh_1a0e774aa59d4aafb215c2723d2040830a" compoundref="NeuroMesh_8cpp" startline="589" endline="612">transmitSpineInfo</references>
+        <references refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" compoundref="NeuroMesh_8cpp" startline="341" endline="395">updateCoords</references>
+        <references refid="classNeuroMesh_1ab4ce5f28ef7ad94aba4dbf8f6c5f408f" compoundref="NeuroMesh_8cpp" startline="618" endline="645">updateShaftParents</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+        <referencedby refid="classNeuroMesh_1a5544eb3267ffffc2ba356d50ec2a4633" compoundref="NeuroMesh_8cpp" startline="678" endline="684">setSubTreePath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a5544eb3267ffffc2ba356d50ec2a4633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::setSubTreePath</definition>
+        <argsstring>(const Eref &amp;e, string path)</argsstring>
+        <name>setSubTreePath</name>
+        <qualifiedname>NeuroMesh::setSubTreePath</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This overloaded function sets up a presumed contiguous set of compartments, complains if they are not contiguous due to the check in <ref refid="classNeuroNode_1aea2a6aafd3983bceba49a328b0fc9cfc" kindref="member">NeuroNode::traverse</ref>.</para>
+<para>The &apos;path&apos; argument specifies a wildcard list of compartments, which can be also a comma-separated explicit list. Does not have to be in any particular order. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="61" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="678" bodyend="684"/>
+        <references refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</references>
+        <references refid="classNeuroMesh_1ac40a562883edcd31d1a83d8ae499f63a" compoundref="NeuroMesh_8h" startline="277">subTreePath_</references>
+        <references refid="Wildcard_8h_1a27276dfc7bbd74b605ee985d4bc75615" compoundref="Wildcard_8cpp" startline="149" endline="156">wildcardFind</references>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a0e774aa59d4aafb215c2723d2040830a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::transmitSpineInfo</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>transmitSpineInfo</name>
+        <qualifiedname>NeuroMesh::transmitSpineInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transmits the information about spines to <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> and <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="76" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="589" bodyend="612"/>
+        <references refid="classEref_1a47b59ab86165cceb0bde80c76c3f7fa2" compoundref="Eref_8h" startline="30" endline="33">Eref::element</references>
+        <references refid="classSrcFinfo_1aa90db29c818e71d31322c35bfec2f731" compoundref="SrcFinfo_8cpp" startline="28" endline="34">SrcFinfo::getBindIndex</references>
+        <references refid="classElement_1aa6bf0ad3ac2f537968453d836de0b7c1" compoundref="Element_8cpp" startline="307" endline="310">Element::hasMsgs</references>
+        <references refid="classNeuroMesh_1a9d0a1945610137c409ec60b6fee29ec3" compoundref="NeuroMesh_8h" startline="330">head_</references>
+        <references refid="classNeuroMesh_1a69af7c0f8c960182866a80d438110da4" compoundref="NeuroMesh_8h" startline="331">parent_</references>
+        <references refid="classSpineEntry_1a5b7f056b01931bf094e7e814c335a767" compoundref="SpineEntry_8cpp" startline="206" endline="231">SpineEntry::psdCoords</references>
+        <references refid="NeuroMesh_8cpp_1a7f9f4b4f4b66db02cafc1f0b8a606f82" compoundref="NeuroMesh_8cpp" startline="46" endline="62">psdListOut</references>
+        <references refid="classSrcFinfo3_1a699286540d562ceaa454bea046b82f8d" compoundref="SrcFinfo_8h" startline="298" endline="321">SrcFinfo3&lt; T1, T2, T3 &gt;::send</references>
+        <references refid="classNeuroMesh_1a30be9fc9a428c6d1e40a1096b1f6e13c" compoundref="NeuroMesh_8h" startline="329">shaft_</references>
+        <references refid="classSpineEntry_1a25f3c820b8f234afd54445e56029f038" compoundref="SpineEntry_8cpp" startline="24" endline="68">SpineEntry::SpineEntry</references>
+        <references refid="NeuroMesh_8cpp_1a369fa065f341737d7bb7c53d7d3d1768" compoundref="NeuroMesh_8cpp" startline="30" endline="43">spineListOut</references>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::updateCoords</definition>
+        <argsstring>()</argsstring>
+        <name>updateCoords</name>
+        <qualifiedname>NeuroMesh::updateCoords</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recomputes all local coordinate and meshing data following a change in any of the coord parameters</para>
+<para>This assumes that lambda is the quantity to preserve, over numEntries. So when the compartment changes size, so does numEntries. Assumes that the soma node is at index 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="46" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="341" bodyend="395"/>
+        <references refid="classNeuroMesh_1ad51afff25d36e5a671a3f80bed655f32" compoundref="NeuroMesh_8h" startline="300">area_</references>
+        <references refid="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" compoundref="NeuroMesh_8cpp" startline="1164" endline="1237">buildStencil</references>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <references refid="classCylBase_1a8ee5f8e88924d3be2cdcc01c23efb2b9" compoundref="CylBase_8cpp" startline="95" endline="98">CylBase::getLength</references>
+        <references refid="classCylBase_1ad5f8d2302f2ebe350923740b7c732b9a" compoundref="CylBase_8cpp" startline="220" endline="230">CylBase::getMiddleArea</references>
+        <references refid="classCylBase_1a1fa6d6203b2286cc3d0b26b6ec8e5176" compoundref="CylBase_8cpp" startline="105" endline="108">CylBase::getNumDivs</references>
+        <references refid="classCylBase_1a4f51fecab6c4532c4f8b88bfb1e62f66" compoundref="CylBase_8cpp" startline="232" endline="235">CylBase::getVoxelLength</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1a654d7c0f6d5087810411d833a619179f" compoundref="NeuroMesh_8h" startline="303">length_</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classCylBase_1a24ad5b1161c1f3f65f3843377f9db50e" compoundref="CylBase_8cpp" startline="100" endline="103">CylBase::setNumDivs</references>
+        <references refid="classNeuroNode_1a53d5ec1406e8f5edfe0d07a458d02df6" compoundref="NeuroNode_8cpp" startline="116" endline="119">NeuroNode::setStartFid</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <references refid="classCylBase_1ade9360626e8ff666e1241d32550444bb" compoundref="CylBase_8cpp" startline="149" endline="165">CylBase::voxelVolume</references>
+        <references refid="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" compoundref="NeuroMesh_8h" startline="294">vs_</references>
+        <referencedby refid="classNeuroMesh_1a79cf7938a69c50fb6a126fe68d29ae8f" compoundref="NeuroMesh_8cpp" startline="1076" endline="1118">innerBuildDefaultMesh</referencedby>
+        <referencedby refid="classNeuroMesh_1a71aa45e785032672bd4a653c95c1d2fd" compoundref="NeuroMesh_8cpp" startline="1038" endline="1062">innerSetNumEntries</referencedby>
+        <referencedby refid="classNeuroMesh_1a5a13798b0f4049fc74b1ffbd4622da5d" compoundref="NeuroMesh_8cpp" startline="397" endline="401">setDiffLength</referencedby>
+        <referencedby refid="classNeuroMesh_1a2fcb1e6932205d672d8e31dd4884da56" compoundref="NeuroMesh_8cpp" startline="691" endline="698">setSeparateSpines</referencedby>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ab4ce5f28ef7ad94aba4dbf8f6c5f408f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NeuroMesh::updateShaftParents</definition>
+        <argsstring>()</argsstring>
+        <name>updateShaftParents</name>
+        <qualifiedname>NeuroMesh::updateShaftParents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>converts the parents_ vector from identifying the parent <ref refid="classNeuroNode" kindref="compound">NeuroNode</ref> to identifying the parent voxel, for each shaft entry. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="253" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="618" bodyend="645"/>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classCylBase_1af491e3aed441f4ff3ef112346d644ae7" compoundref="CylBase_8cpp" startline="55" endline="58">CylBase::getX</references>
+        <references refid="classCylBase_1a6f27ed9266877bd74a114d8dcd133ef1" compoundref="CylBase_8cpp" startline="65" endline="68">CylBase::getY</references>
+        <references refid="classCylBase_1af7d5df757eec9e32d3d1f8d6d738e2bc" compoundref="CylBase_8cpp" startline="75" endline="78">CylBase::getZ</references>
+        <references refid="classCylBase_1a480a3143415b6c7af6ce5528c9cedac1" compoundref="CylBase_8cpp" startline="411" endline="433">CylBase::nearest</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classNeuroMesh_1a69af7c0f8c960182866a80d438110da4" compoundref="NeuroMesh_8h" startline="331">parent_</references>
+        <references refid="classNeuroMesh_1a30be9fc9a428c6d1e40a1096b1f6e13c" compoundref="NeuroMesh_8h" startline="329">shaft_</references>
+        <references refid="classNeuroNode_1a43f60efefe682bd8070a3113284b67ad" compoundref="NeuroNode_8cpp" startline="74" endline="77">NeuroNode::startFid</references>
+        <referencedby refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a7142154a3c88836a9422cf4cafcf0a2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double NeuroMesh::vGetEntireVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetEntireVolume</name>
+        <qualifiedname>NeuroMesh::vGetEntireVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a546b5a40463c3e84cc5b33baae6fd709">vGetEntireVolume</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Returns volume of soma and whole dendritic tree of neuron, excluding spines. Any axonal compartments are also included. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="145" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="853" bodyend="860"/>
+        <references refid="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" compoundref="NeuroMesh_8h" startline="294">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1a1f313b79fc22daf70bd1e09f156ce0e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; NeuroMesh::vGetVoxelMidpoint</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetVoxelMidpoint</name>
+        <qualifiedname>NeuroMesh::vGetVoxelMidpoint</qualifiedname>
+        <reimplements refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70">vGetVoxelMidpoint</reimplements>
+        <briefdescription>
+<para>Virtual func so that derived classes can return voxel midpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="109" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="817" bodyend="841"/>
+        <references refid="classCylBase_1ac07adfff6aca8dd297fd9790359ff551" compoundref="CylBase_8cpp" startline="169" endline="195">CylBase::getCoordinates</references>
+        <references refid="classCylBase_1a1fa6d6203b2286cc3d0b26b6ec8e5176" compoundref="CylBase_8cpp" startline="105" endline="108">CylBase::getNumDivs</references>
+        <references refid="classNeuroNode_1a4943fb2e254169fa5aad788c67bd0a75" compoundref="NeuroNode_8cpp" startline="83" endline="86">NeuroNode::isDummyNode</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroNode_1a1e96ea764e9c00e07133aec18c638a17" compoundref="NeuroNode_8cpp" startline="69" endline="72">NeuroNode::parent</references>
+        <references refid="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" compoundref="NeuroMesh_8h" startline="294">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1af20105c5f6f30d6b3353989d989258ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; NeuroMesh::vGetVoxelVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetVoxelVolume</name>
+        <qualifiedname>NeuroMesh::vGetVoxelVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">vGetVoxelVolume</reimplements>
+        <briefdescription>
+<para>Virtual func so that derived classes can pass voxel volume back. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="108" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="812" bodyend="815"/>
+        <references refid="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" compoundref="NeuroMesh_8h" startline="294">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool NeuroMesh::vSetVolumeNotRates</definition>
+        <argsstring>(double volume)</argsstring>
+        <name>vSetVolumeNotRates</name>
+        <qualifiedname>NeuroMesh::vSetVolumeNotRates</qualifiedname>
+        <reimplements refid="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c">vSetVolumeNotRates</reimplements>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. In the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> this carries out a rescaling on all dimensions. The length and diameter of each compartment are scaled by the same factor = volscale^(1/3) The rescaling carries through to the spines and PSDs, which are also updated. They are not permitted to change their own volumes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="156" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="862" bodyend="880"/>
+        <references refid="classNeuroMesh_1ad51afff25d36e5a671a3f80bed655f32" compoundref="NeuroMesh_8h" startline="300">area_</references>
+        <references refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" compoundref="NeuroMesh_8h" startline="306">diffLength_</references>
+        <references refid="classCylBase_1ad96655884be493cdaf02d69a10d6b196" compoundref="CylBase_8cpp" startline="85" endline="88">CylBase::getDia</references>
+        <references refid="classCylBase_1a8ee5f8e88924d3be2cdcc01c23efb2b9" compoundref="CylBase_8cpp" startline="95" endline="98">CylBase::getLength</references>
+        <references refid="classNeuroMesh_1a654d7c0f6d5087810411d833a619179f" compoundref="NeuroMesh_8h" startline="303">length_</references>
+        <references refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" compoundref="NeuroMesh_8h" startline="287">nodeIndex_</references>
+        <references refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" compoundref="NeuroMesh_8h" startline="270">nodes_</references>
+        <references refid="classNeuroMesh_1a67063bd3b0ba07dc00e13016eece0e19" compoundref="NeuroMesh_8h" startline="336">parentVoxel_</references>
+        <references refid="classCylBase_1ad71cf34c5cc9298508ac5a3a49495c1b" compoundref="CylBase_8cpp" startline="80" endline="83">CylBase::setDia</references>
+        <references refid="classCylBase_1a2f3e181306038e72e051d44644f2464c" compoundref="CylBase_8cpp" startline="90" endline="93">CylBase::setLength</references>
+        <references refid="classCylBase_1acdbbd3c619e3463a83c6e9c508a66249" compoundref="CylBase_8cpp" startline="132" endline="139">CylBase::volume</references>
+        <references refid="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" compoundref="NeuroMesh_8h" startline="294">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classNeuroMesh_1ac4f76df46ebb575055b711175ef48a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NeuroMesh::~NeuroMesh</definition>
+        <argsstring>()</argsstring>
+        <name>~NeuroMesh</name>
+        <qualifiedname>NeuroMesh::~NeuroMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="36" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="327" bodyend="330"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * NeuroMesh::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>NeuroMesh::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="261" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp" bodystart="64" bodyend="274"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classElementValueFinfo_1a920b84a2ae5d17c07322009467413ca1" compoundref="ElementValueFinfo_8h" startline="26" endline="45">ElementValueFinfo&lt; T, F &gt;::ElementValueFinfo</references>
+        <references refid="classNeuroMesh_1ac04d57c04d23f86321ee4dcad29f4e52" compoundref="NeuroMesh_8cpp" startline="783" endline="798">getDendVoxelsOnCompartment</references>
+        <references refid="classNeuroMesh_1acf91ff1be5981738e4a00fd5140e1f24" compoundref="NeuroMesh_8cpp" startline="403" endline="406">getDiffLength</references>
+        <references refid="classNeuroMesh_1a3a2186bf9523dce62a212a0c02183fc5" compoundref="NeuroMesh_8cpp" startline="736" endline="746">getElecComptList</references>
+        <references refid="classNeuroMesh_1aaa4b78123b7768377726e66b91e6f5ed" compoundref="NeuroMesh_8cpp" startline="724" endline="734">getElecComptMap</references>
+        <references refid="classNeuroMesh_1a85e4efb7d98274c2a416df98e40b9052" compoundref="NeuroMesh_8cpp" startline="760" endline="770">getEndVoxelInCompt</references>
+        <references refid="classNeuroMesh_1aed3cd2c9dbb7c03d31c37f671023c773" compoundref="NeuroMesh_8cpp" startline="434" endline="437">getGeometryPolicy</references>
+        <references refid="classNeuroMesh_1aa5bde2f6dce2386c158ca8f0fc369dfc" compoundref="NeuroMesh_8cpp" startline="714" endline="717">getNumDiffCompts</references>
+        <references refid="classNeuroMesh_1a994ef42f04eaa540c4f3e706e20ec363" compoundref="NeuroMesh_8cpp" startline="705" endline="712">getNumSegments</references>
+        <references refid="classNeuroMesh_1ae132e52b7d722380583a0601c915043e" compoundref="NeuroMesh_8cpp" startline="719" endline="722">getParentVoxel</references>
+        <references refid="classNeuroMesh_1af057e0378c10e9ae0e8595d4551915f3" compoundref="NeuroMesh_8cpp" startline="700" endline="703">getSeparateSpines</references>
+        <references refid="classNeuroMesh_1a3919180ea49cf3368f21ab84b580ce43" compoundref="NeuroMesh_8cpp" startline="772" endline="781">getSpineVoxelOnDendVoxel</references>
+        <references refid="classNeuroMesh_1ae64a74914e5f4a3c16c6fe38654760d5" compoundref="NeuroMesh_8cpp" startline="800" endline="810">getSpineVoxelsOnCompartment</references>
+        <references refid="classNeuroMesh_1a69c3089c425aeb5b459080976ed3d883" compoundref="NeuroMesh_8cpp" startline="748" endline="758">getStartVoxelInCompt</references>
+        <references refid="classNeuroMesh_1ad4b0daae8e17bb41b630d8d03296fe9d" compoundref="NeuroMesh_8cpp" startline="668" endline="675">getSubTree</references>
+        <references refid="classNeuroMesh_1a04a950350248aed156fc90354d8c8717" compoundref="NeuroMesh_8cpp" startline="686" endline="689">getSubTreePath</references>
+        <references refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">ChemCompt::initCinfo</references>
+        <references refid="NeuroMesh_8cpp_1a7f9f4b4f4b66db02cafc1f0b8a606f82" compoundref="NeuroMesh_8cpp" startline="46" endline="62">psdListOut</references>
+        <references refid="classReadOnlyLookupValueFinfo_1a3aa6c363601e4483657919db3355ff1a" compoundref="LookupValueFinfo_8h" startline="104" endline="115">ReadOnlyLookupValueFinfo&lt; T, L, F &gt;::ReadOnlyLookupValueFinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classNeuroMesh_1a5a13798b0f4049fc74b1ffbd4622da5d" compoundref="NeuroMesh_8cpp" startline="397" endline="401">setDiffLength</references>
+        <references refid="classNeuroMesh_1a3fac52b440147d95dd31cea695ccdf6d" compoundref="NeuroMesh_8cpp" startline="408" endline="432">setGeometryPolicy</references>
+        <references refid="classNeuroMesh_1a2fcb1e6932205d672d8e31dd4884da56" compoundref="NeuroMesh_8cpp" startline="691" endline="698">setSeparateSpines</references>
+        <references refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" compoundref="NeuroMesh_8cpp" startline="648" endline="666">setSubTree</references>
+        <references refid="classNeuroMesh_1a5544eb3267ffffc2ba356d50ec2a4633" compoundref="NeuroMesh_8cpp" startline="678" endline="684">setSubTreePath</references>
+        <references refid="NeuroMesh_8cpp_1a369fa065f341737d7bb7c53d7d3d1768" compoundref="NeuroMesh_8cpp" startline="30" endline="43">spineListOut</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> represents sections of a neuron whose spatial attributes are obtained from a neuronal model. Like the <ref refid="classCylMesh" kindref="compound">CylMesh</ref>, this is pseudo-1 dimension: Only the axial dimension is considered for diffusion and subdivisions. Branching is also handled.</para>
+<para>Dendritic spines typically contain different reaction systems from the dendrite, but each spine has the same reactions. So they deserve their own mesh: <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>. The idea is the the <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> has just the spine head compartment, which duplicate the same reactions, but does not diffuse to other spine heads. Instead it has an effective diffusion constant to the parent dendrite compartment, obtained by treating the spine neck as a diffusion barrier with zero volume. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>NeuroMesh</label>
+        <link refid="classNeuroMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-entry_</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-coreStencil_</edgelabel>
+          <edgelabel>-m_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-extendedMeshEntryVolume_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MeshEntry</label>
+        <link refid="classMeshEntry"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>NeuroMesh</label>
+        <link refid="classNeuroMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-nodeIndex_</edgelabel>
+          <edgelabel>-parentVoxel_</edgelabel>
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-area_</edgelabel>
+          <edgelabel>-length_</edgelabel>
+          <edgelabel>-vs_</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-head_</edgelabel>
+          <edgelabel>-shaft_</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#N_</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>T</label>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>std::vector&lt; Id &gt;</label>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; Id &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" line="31" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.h" bodystart="32" bodyend="337"/>
+    <listofallmembers>
+      <member refid="classMeshCompt_1a781b9a02f4af37458eda4ffb1a6e615d" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>addRow</name></member>
+      <member refid="classNeuroMesh_1ad51afff25d36e5a671a3f80bed655f32" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>area_</name></member>
+      <member refid="classChemCompt_1a7127a2f6f2fc7bb9e1b5e23c0b3c704d" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>boundaries_</name></member>
+      <member refid="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>buildDefaultMesh</name></member>
+      <member refid="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>buildJunction</name></member>
+      <member refid="classNeuroMesh_1a790861403bbe6a59d96bd34284eea490" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>buildNodeTree</name></member>
+      <member refid="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>buildStencil</name></member>
+      <member refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>ChemCompt</name></member>
+      <member refid="classMeshCompt_1a2bc6647b552e0140c6f8e8a05599af95" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>clearExtendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>coreStencil_</name></member>
+      <member refid="classNeuroMesh_1a3ab2ca4bce7698f02f6363a210c29190" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>diffLength_</name></member>
+      <member refid="classChemCompt_1a510fac43d511a189853bbb6d32afb774" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>distance</name></member>
+      <member refid="classChemCompt_1a82073727afa7625b507772406d39476f" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>entry_</name></member>
+      <member refid="classNeuroMesh_1a448f674cb83dca4432577406e1849ba3" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>extendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>extendedMeshEntryVolume_</name></member>
+      <member refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>extendStencil</name></member>
+      <member refid="classNeuroMesh_1a97131613b0392f53c0c64eb69898b1c9" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>filterSpines</name></member>
+      <member refid="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>flipRet</name></member>
+      <member refid="classNeuroMesh_1aac300c6ffdf12161d81d92e0f2adb552" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>geometryPolicy_</name></member>
+      <member refid="classNeuroMesh_1ae11ad998776b0f40a46ed1fb72db40c6" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getAdx</name></member>
+      <member refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getChildConcs</name></member>
+      <member refid="classNeuroMesh_1afc83707be240b6c0b49ccaae3c486551" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getCoordinates</name></member>
+      <member refid="classNeuroMesh_1ac04d57c04d23f86321ee4dcad29f4e52" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getDendVoxelsOnCompartment</name></member>
+      <member refid="classNeuroMesh_1acf91ff1be5981738e4a00fd5140e1f24" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getDiffLength</name></member>
+      <member refid="classNeuroMesh_1a957bff17a5b461240f3c05571de0ead4" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getDiffusionArea</name></member>
+      <member refid="classNeuroMesh_1a5894c34f0b842b10d86ad90bb6807f07" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getDiffusionScaling</name></member>
+      <member refid="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getDimensions</name></member>
+      <member refid="classNeuroMesh_1a3a2186bf9523dce62a212a0c02183fc5" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getElecComptList</name></member>
+      <member refid="classNeuroMesh_1aaa4b78123b7768377726e66b91e6f5ed" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getElecComptMap</name></member>
+      <member refid="classNeuroMesh_1a85e4efb7d98274c2a416df98e40b9052" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getEndVoxelInCompt</name></member>
+      <member refid="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getEntireVolume</name></member>
+      <member refid="classNeuroMesh_1aed3cd2c9dbb7c03d31c37f671023c773" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getGeometryPolicy</name></member>
+      <member refid="classChemCompt_1aa15b66e3669574b15f303a35af341102" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getIsMembraneBound</name></member>
+      <member refid="classNeuroMesh_1af6521251c152e82f9fa383fab5620d33" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getMeshDimensions</name></member>
+      <member refid="classNeuroMesh_1aa3c76d3a0de019c16ec50e9b71ddcb63" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getMeshEntryVolume</name></member>
+      <member refid="classNeuroMesh_1aa387bd21287919a203058c4fd694f7b4" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getMeshType</name></member>
+      <member refid="classChemCompt_1ab2c1ef2c7882e253a2b7c045db87c7fb" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getMethod</name></member>
+      <member refid="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getNeighbors</name></member>
+      <member refid="classNeuroMesh_1a79f324fa1bda58e1ce8c245ec893f79e" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getNodes</name></member>
+      <member refid="classNeuroMesh_1aa5bde2f6dce2386c158ca8f0fc369dfc" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getNumDiffCompts</name></member>
+      <member refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getNumEntries</name></member>
+      <member refid="classNeuroMesh_1a994ef42f04eaa540c4f3e706e20ec363" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getNumSegments</name></member>
+      <member refid="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getOneVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getOneVoxelVolume</name></member>
+      <member refid="classNeuroMesh_1ae132e52b7d722380583a0601c915043e" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getParentVoxel</name></member>
+      <member refid="classNeuroMesh_1af057e0378c10e9ae0e8595d4551915f3" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getSeparateSpines</name></member>
+      <member refid="classNeuroMesh_1a3919180ea49cf3368f21ab84b580ce43" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getSpineVoxelOnDendVoxel</name></member>
+      <member refid="classNeuroMesh_1ae64a74914e5f4a3c16c6fe38654760d5" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getSpineVoxelsOnCompartment</name></member>
+      <member refid="classNeuroMesh_1a69c3089c425aeb5b459080976ed3d883" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getStartVoxelInCompt</name></member>
+      <member refid="classMeshCompt_1a9342f82bc2304c99fb58daad6016cd5c" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getStencil</name></member>
+      <member refid="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getStencilIndex</name></member>
+      <member refid="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getStencilRate</name></member>
+      <member refid="classMeshCompt_1aae2b570a057a43104858c5f6c02f423e" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getStencilRow</name></member>
+      <member refid="classNeuroMesh_1ad4b0daae8e17bb41b630d8d03296fe9d" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getSubTree</name></member>
+      <member refid="classNeuroMesh_1a04a950350248aed156fc90354d8c8717" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getSubTreePath</name></member>
+      <member refid="classNeuroMesh_1a486bbc7d2f13a98b535d9796596bbb56" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getVoxelArea</name></member>
+      <member refid="classNeuroMesh_1a6d80c4904ca07d5d4b5343889e114e47" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>getVoxelLength</name></member>
+      <member refid="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>getVoxelVolume</name></member>
+      <member refid="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>handleNodeInfo</name></member>
+      <member refid="classNeuroMesh_1a9d0a1945610137c409ec60b6fee29ec3" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>head_</name></member>
+      <member refid="classNeuroMesh_1ababbd158eb32d21eb52f68b519b73e62" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>indexToSpace</name></member>
+      <member refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>initCinfo</name></member>
+      <member refid="classNeuroMesh_1a79cf7938a69c50fb6a126fe68d29ae8f" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>innerBuildDefaultMesh</name></member>
+      <member refid="classNeuroMesh_1a35885f3e64055f435297f3bcf8bbd019" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>innerGetDimensions</name></member>
+      <member refid="classNeuroMesh_1a42ad7b7980c7ef66bd46a987d13914be" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>innerGetNumEntries</name></member>
+      <member refid="classMeshCompt_1a7b8e15d0a73de4f467efcf733e095cb7" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>innerGetStencilRate</name></member>
+      <member refid="classNeuroMesh_1a3db7c5f062e4c28a21775be08fd2466a" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>innerHandleNodeInfo</name></member>
+      <member refid="classNeuroMesh_1a470458a89a5499de592c32f6d2eb51e0" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>innerHandleRequestMeshStats</name></member>
+      <member refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>innerResetStencil</name></member>
+      <member refid="classNeuroMesh_1a71aa45e785032672bd4a653c95c1d2fd" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>innerSetNumEntries</name></member>
+      <member refid="classNeuroMesh_1adb349d751b4e32371a1818e2895e26f6" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>insertDummyNodes</name></member>
+      <member refid="classNeuroMesh_1a99dc3d5127a37f2a59d4e9280b0228fd" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>insertSingleDummy</name></member>
+      <member refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>isMembraneBound_</name></member>
+      <member refid="classNeuroMesh_1a654d7c0f6d5087810411d833a619179f" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>length_</name></member>
+      <member refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>lookupEntry</name></member>
+      <member refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>m_</name></member>
+      <member refid="classNeuroMesh_1aac516e44929a7cb01361bceae4b7e134" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>matchCubeMeshEntries</name></member>
+      <member refid="classNeuroMesh_1a87f8811cba83e45b1a24c8da92aa0fc0" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>matchMeshEntries</name></member>
+      <member refid="classNeuroMesh_1ab600368bac5d89b60a6f28a1adbfd6f9" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>matchNeuroMeshEntries</name></member>
+      <member refid="classMeshCompt_1ad92606a51823a508e19ace8c08cc4af2" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>MeshCompt</name></member>
+      <member refid="classChemCompt_1ac9f3fa6dce7fafe302a205156668c390" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>method_</name></member>
+      <member refid="classNeuroMesh_1a23d9de4910b03e34288a30fed813fa3f" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>nearest</name></member>
+      <member refid="classNeuroMesh_1aeb0e3559476b77059d9299b62124ced3" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>NeuroMesh</name></member>
+      <member refid="classNeuroMesh_1a4ad6084d912a0a93335a48eecdb06766" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>NeuroMesh</name></member>
+      <member refid="classNeuroMesh_1aad2a5d8e5a6cf3834a306d20ac7e11a8" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>nodeIndex_</name></member>
+      <member refid="classNeuroMesh_1a842b9b4e0bbdee2ab7bd8ec86ede34aa" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>nodes_</name></member>
+      <member refid="classNeuroMesh_1a145c7674db1f04f477b388293b594040" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>operator=</name></member>
+      <member refid="classNeuroMesh_1a69af7c0f8c960182866a80d438110da4" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>parent_</name></member>
+      <member refid="classNeuroMesh_1a67063bd3b0ba07dc00e13016eece0e19" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>parentVoxel_</name></member>
+      <member refid="classNeuroMesh_1ab33773b81620a42cf29dad4d7df43b09" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>putSomaAtStart</name></member>
+      <member refid="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>resetStencil</name></member>
+      <member refid="classNeuroMesh_1afe2dbfea83707a96e8d6286706c4ebf7" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>separateSpines_</name></member>
+      <member refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setChildConcs</name></member>
+      <member refid="classNeuroMesh_1a5a13798b0f4049fc74b1ffbd4622da5d" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setDiffLength</name></member>
+      <member refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setEntireVolume</name></member>
+      <member refid="classNeuroMesh_1a3fac52b440147d95dd31cea695ccdf6d" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setGeometryPolicy</name></member>
+      <member refid="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setIsMembraneBound</name></member>
+      <member refid="classChemCompt_1ac2343832803b9366231f1d2d816a0e21" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>setMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a346cbd4ea599c929638609bc7f16f83a" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setMethod</name></member>
+      <member refid="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setNumEntries</name></member>
+      <member refid="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setOneVoxelVolume</name></member>
+      <member refid="classNeuroMesh_1a2fcb1e6932205d672d8e31dd4884da56" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setSeparateSpines</name></member>
+      <member refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setStencilSize</name></member>
+      <member refid="classNeuroMesh_1a35e1c3ce3edeae2652b9d5ee2729f9df" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setSubTree</name></member>
+      <member refid="classNeuroMesh_1a5544eb3267ffffc2ba356d50ec2a4633" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setSubTreePath</name></member>
+      <member refid="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>setVolumeNotRates</name></member>
+      <member refid="classNeuroMesh_1a30be9fc9a428c6d1e40a1096b1f6e13c" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>shaft_</name></member>
+      <member refid="classNeuroMesh_1ac40a562883edcd31d1a83d8ae499f63a" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>subTreePath_</name></member>
+      <member refid="classNeuroMesh_1a7f363e2ec0fb8a81a5018407f5366fd2" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>surfaceGranularity_</name></member>
+      <member refid="classNeuroMesh_1a0e774aa59d4aafb215c2723d2040830a" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>transmitSpineInfo</name></member>
+      <member refid="classNeuroMesh_1a05ab531bca2ba6c4f6ca1a7c875f497e" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>updateCoords</name></member>
+      <member refid="classNeuroMesh_1ab4ce5f28ef7ad94aba4dbf8f6c5f408f" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>updateShaftParents</name></member>
+      <member refid="classNeuroMesh_1a7142154a3c88836a9422cf4cafcf0a2d" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>vGetEntireVolume</name></member>
+      <member refid="classNeuroMesh_1a1f313b79fc22daf70bd1e09f156ce0e9" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>vGetVoxelMidpoint</name></member>
+      <member refid="classNeuroMesh_1af20105c5f6f30d6b3353989d989258ab" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>vGetVoxelVolume</name></member>
+      <member refid="classChemCompt_1a1df70b909fac1208b80586b9092341e9" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>voxelVolOut</name></member>
+      <member refid="classNeuroMesh_1a9e7068dad8a7e504e3ca057c5e952085" prot="private" virt="non-virtual"><scope>NeuroMesh</scope><name>vs_</name></member>
+      <member refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>vSetVolumeNotRates</name></member>
+      <member refid="classChemCompt_1ae7cb5e1f801974d1c3cd68373dff5cfc" prot="public" virt="virtual"><scope>NeuroMesh</scope><name>~ChemCompt</name></member>
+      <member refid="classMeshCompt_1adb85de0aa1c67c78a484d9876299857a" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>~MeshCompt</name></member>
+      <member refid="classNeuroMesh_1ac4f76df46ebb575055b711175ef48a4b" prot="public" virt="non-virtual"><scope>NeuroMesh</scope><name>~NeuroMesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

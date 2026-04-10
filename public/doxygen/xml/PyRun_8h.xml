@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="PyRun_8h" kind="file" language="C++">
+    <compoundname>PyRun.h</compoundname>
+    <includes local="no">climits</includes>
+    <includes local="no">string</includes>
+    <includes local="no">Python.h</includes>
+    <includes local="no">nanobind/nanobind.h</includes>
+    <includes local="no">nanobind/eval.h</includes>
+    <includes local="no">nanobind/stl/string.h</includes>
+    <includedby refid="PyRun_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/PyRun.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/PyRun.h</label>
+        <link refid="PyRun_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Python.h</label>
+      </node>
+      <node id="2">
+        <label>climits</label>
+      </node>
+      <node id="6">
+        <label>nanobind/eval.h</label>
+      </node>
+      <node id="5">
+        <label>nanobind/nanobind.h</label>
+      </node>
+      <node id="7">
+        <label>nanobind/stl/string.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/PyRun.cpp</label>
+        <link refid="PyRun_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/PyRun.h</label>
+        <link refid="PyRun_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classPyRun" prot="public">PyRun</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Filename:<sp/>PyRun.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>subha</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/>Sat<sp/>Oct<sp/>11<sp/>14:40:45<sp/>2014<sp/>(+0530)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;climits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Python.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Python.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nanobind/nanobind.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nanobind/eval.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nanobind/stl/string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">nb<sp/>=<sp/>nanobind;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classPyRun" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPyRun" kindref="compound">PyRun</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="classPyRun_1a89da68cd082e34dc08fa35f32ffe114c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a89da68cd082e34dc08fa35f32ffe114c" kindref="member">RUNPROC</ref>;<sp/></highlight><highlight class="comment">//<sp/>only<sp/>process<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classPyRun_1a50f0e1e672b4ab32216b87a7e38a3db0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a50f0e1e672b4ab32216b87a7e38a3db0" kindref="member">RUNTRIG</ref>;<sp/></highlight><highlight class="comment">//<sp/>only<sp/>trigger<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classPyRun_1a11cba2e0f1d3a99a09246fab38d22818" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a11cba2e0f1d3a99a09246fab38d22818" kindref="member">RUNBOTH</ref>;<sp/></highlight><highlight class="comment">//<sp/>both</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPyRun_1aa704934afdac953c11a5cba91fd7418a" kindref="member">PyRun</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPyRun_1a43fba8632bd064a8edf5966f09a20859" kindref="member">~PyRun</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>because<sp/>of<sp/>template<sp/>limitations<sp/>in<sp/>ValueFinfo,<sp/>we<sp/>cannot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>const<sp/>std::string&amp;,<sp/>instead<sp/>use<sp/>std::string<sp/>everywhere.<sp/>As</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>these<sp/>are<sp/>infrequently<sp/>used,<sp/>the<sp/>performance<sp/>penalty<sp/>is<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>much.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a9f36a723aaa15b8de96d40397b621b82" kindref="member">setInitString</ref>(std::string<sp/>str);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classPyRun_1a279a43b8c3c7b815e06790865dab89ba" kindref="member">getInitString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1afbfe3effab0c8af21ee937493a170c8a" kindref="member">setRunString</ref>(std::string<sp/>str);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classPyRun_1a61f3f5d55e4d3905620b5cf65f90a680" kindref="member">getRunString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a07bfc9fbbe2c88eebbad985bb6a92428" kindref="member">setGlobals</ref>(nb::dict<sp/>globals);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::dict<sp/><ref refid="classPyRun_1a262aab9b92c90612e3987de01e137057" kindref="member">getGlobals</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1ac60ab1b2c25c3afac5e83b6e47b4bc19" kindref="member">setLocals</ref>(nb::dict<sp/>locals);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::dict<sp/><ref refid="classPyRun_1ab6d3e5d0b9a92631a60f23590973e210" kindref="member">getLocals</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a79be2c61a33914e991e1d3eaabb959ee" kindref="member">setMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flag);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1aac69856a5086b2685a8ff2095fce5261" kindref="member">getMode</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1aa7f72835c658fc078876f5eb12a5c5aa" kindref="member">setEvalOnReinit</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flag);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a0df6579023537205fe332a38654d011a" kindref="member">getEvalOnReinit</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1afdc5dba02061b2f0bcc0762485ec7fd7" kindref="member">setInputVar</ref>(std::string<sp/>name);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classPyRun_1a94676ac3212c4d28c1bdb50c13414d33" kindref="member">getInputVar</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a6b592566e9a6a3b978d45861262dfeb0" kindref="member">setOutputVar</ref>(std::string<sp/>name);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classPyRun_1a132736ab13d086a096c064430de98a4f" kindref="member">getOutputVar</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a62ebc1e8cd501b80345a97212f66cef1" kindref="member">getOutputValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>this<sp/>uses<sp/>string<sp/>instead<sp/>of<sp/>const<sp/>string&amp;<sp/>because</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a268012870b6bc28d2bdff9137af91536" kindref="member">run</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/>std::string<sp/>statement);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a672c13794c459daffbec8b7261910d99" kindref="member">trigger</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>input);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a45780079bb86f8e81c2d2128587fb51d" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1ab48df44dffb1e292d53f434ccc00bbfa" kindref="member">reinit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref><sp/>*<sp/><ref refid="classPyRun_1a0fb5b50dac46d7700ecf2a265e0525de" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="86" refid="classPyRun_1a1108c77aeea9d4934d605e5239db3307" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1a1108c77aeea9d4934d605e5239db3307" kindref="member">evalOnReinit_</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>flag<sp/>to<sp/>indicate<sp/>if<sp/>runString<sp/>should<sp/>be<sp/>evaluated<sp/>on<sp/>reinit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classPyRun_1ad4a9d6c7f4abf2a154767613471b9dd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPyRun_1ad4a9d6c7f4abf2a154767613471b9dd1" kindref="member">mode_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>flag<sp/>to<sp/>decide<sp/>when<sp/>to<sp/>run<sp/>the<sp/>Python<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classPyRun_1a070d4dff712041aeb419c863d023655f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classPyRun_1a070d4dff712041aeb419c863d023655f" kindref="member">initstr_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>statement<sp/>str<sp/>for<sp/>running<sp/>at<sp/>reinit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classPyRun_1a1fa014d7ecb94c7e9b53f6e854667c50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classPyRun_1a1fa014d7ecb94c7e9b53f6e854667c50" kindref="member">runstr_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>statement<sp/>str<sp/>for<sp/>running<sp/>in<sp/>each<sp/>process<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classPyRun_1a5584a20bcafad364d2e23945f5018973" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::dict<sp/><ref refid="classPyRun_1a5584a20bcafad364d2e23945f5018973" kindref="member">globals_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>global<sp/>env<sp/>dict</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classPyRun_1a3eb1c1f5f783630932efd79f8871dc7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::dict<sp/><ref refid="classPyRun_1a3eb1c1f5f783630932efd79f8871dc7e" kindref="member">locals_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>local<sp/>env<sp/>dict</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classPyRun_1a319c75eb9879ceccbd48a53c93c9ec85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::object<sp/><ref refid="classPyRun_1a319c75eb9879ceccbd48a53c93c9ec85" kindref="member">runcompiled_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compiled<sp/>form<sp/>of<sp/>procstr_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classPyRun_1add38aa6dff64eff626e9ea2f2c14f74c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::object<sp/><ref refid="classPyRun_1add38aa6dff64eff626e9ea2f2c14f74c" kindref="member">initcompiled_</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>coimpiled<sp/>form<sp/>of<sp/>initstr_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classPyRun_1a01afdd6389730fe6cf99e4f304640f49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classPyRun_1a01afdd6389730fe6cf99e4f304640f49" kindref="member">inputvar_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>identifier<sp/>for<sp/>input<sp/>variable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classPyRun_1a71f961761db2e7d43c1b2d1c1a3a5d44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classPyRun_1a71f961761db2e7d43c1b2d1c1a3a5d44" kindref="member">outputvar_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>identifier<sp/>for<sp/>output<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/PyRun.h"/>
+  </compounddef>
+</doxygen>

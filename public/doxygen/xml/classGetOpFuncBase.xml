@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classGetOpFuncBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>GetOpFuncBase</compoundname>
+    <basecompoundref refid="classOpFunc1Base" prot="public" virt="non-virtual">OpFunc1Base&lt; vector&lt; A &gt; * &gt;</basecompoundref>
+    <derivedcompoundref refid="classGetEpFunc" prot="public" virt="non-virtual">GetEpFunc&lt; T, A &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classGetOpFunc" prot="public" virt="non-virtual">GetOpFunc&lt; T, A &gt;</derivedcompoundref>
+    <includes refid="OpFuncBase_8h" local="no">OpFuncBase.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class A</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGetOpFuncBase_1aa7a5c096edecc7d74b0b52b28a94ecbc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classOpFunc" kindref="compound">OpFunc</ref> *</type>
+        <definition>const OpFunc * GetOpFuncBase&lt; A &gt;::makeHopFunc</definition>
+        <argsstring>(HopIndex hopIndex) const</argsstring>
+        <name>makeHopFunc</name>
+        <qualifiedname>GetOpFuncBase::makeHopFunc</qualifiedname>
+        <reimplements refid="classOpFunc_1acebf5db12a82f08ca7aed646dfc4a99a">makeHopFunc</reimplements>
+        <param>
+          <type><ref refid="classHopIndex" kindref="compound">HopIndex</ref></type>
+          <declname>hopIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deferred specification of function from <ref refid="classOpFunc1Base" kindref="compound">OpFunc1Base</ref>, so it is after the declaration of the HopFunc class to which it refers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="347" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/HopFunc.h" bodystart="513" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="classGetOpFuncBase_1a649f8d2d8160af1c03b5b31b9456347a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void GetOpFuncBase&lt; A &gt;::opBuffer</definition>
+        <argsstring>(const Eref &amp;e, double *buf) const</argsstring>
+        <name>opBuffer</name>
+        <qualifiedname>GetOpFuncBase::opBuffer</qualifiedname>
+        <reimplements refid="classOpFunc_1a83f97633e96c50187e079629c9b644c8">opBuffer</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Executes the <ref refid="classOpFunc" kindref="compound">OpFunc</ref> by converting args. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="352" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" bodystart="352" bodyend="358"/>
+        <references refid="classGetOpFuncBase_1a3bd89bda3c52e4392ee797a0d626bdce">GetOpFuncBase&lt; A &gt;::returnOp</references>
+      </memberdef>
+      <memberdef kind="function" id="classGetOpFuncBase_1a3bd89bda3c52e4392ee797a0d626bdce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>A</type>
+        <definition>virtual A GetOpFuncBase&lt; A &gt;::returnOp</definition>
+        <argsstring>(const Eref &amp;e) const =0</argsstring>
+        <name>returnOp</name>
+        <qualifiedname>GetOpFuncBase::returnOp</qualifiedname>
+        <reimplementedby refid="classGetEpFunc_1af06d2490abf1545b2d48f2b607881b80">returnOp</reimplementedby>
+        <reimplementedby refid="classGetOpFunc_1a78f4601dd35a2ef6b2bbcd721066bbe3">returnOp</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="344" column="15"/>
+        <referencedby refid="classGetOpFuncBase_1a649f8d2d8160af1c03b5b31b9456347a" compoundref="OpFuncBase_8h" startline="352" endline="358">GetOpFuncBase&lt; A &gt;::opBuffer</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the base class for all GetOpFuncs. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>GetEpFunc&lt; T, A &gt;</label>
+        <link refid="classGetEpFunc"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GetOpFunc&lt; T, A &gt;</label>
+        <link refid="classGetOpFunc"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GetOpFuncBase&lt; A &gt;</label>
+        <link refid="classGetOpFuncBase"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>OpFunc</label>
+        <link refid="classOpFunc"/>
+      </node>
+      <node id="4">
+        <label>OpFunc1Base&lt; A &gt;</label>
+        <link refid="classOpFunc1Base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OpFunc1Base&lt; vector&lt; A &gt; * &gt;</label>
+        <link refid="classOpFunc1Base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; vector&lt; A &gt; * &gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GetOpFuncBase&lt; A &gt;</label>
+        <link refid="classGetOpFuncBase"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>OpFunc</label>
+        <link refid="classOpFunc"/>
+      </node>
+      <node id="4">
+        <label>OpFunc1Base&lt; A &gt;</label>
+        <link refid="classOpFunc1Base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OpFunc1Base&lt; vector&lt; A &gt; * &gt;</label>
+        <link refid="classOpFunc1Base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; vector&lt; A &gt; * &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" line="341" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/OpFuncBase.h" bodystart="342" bodyend="360"/>
+    <listofallmembers>
+      <member refid="classOpFunc1Base_1a873e22ec6abb5ce0cddda5062cb87ba1" prot="public" virt="virtual"><scope>GetOpFuncBase</scope><name>checkFinfo</name></member>
+      <member refid="classOpFunc_1a18f3647377647acf0e7c5720eb1784c5" prot="public" virt="non-virtual"><scope>GetOpFuncBase</scope><name>lookop</name></member>
+      <member refid="classGetOpFuncBase_1aa7a5c096edecc7d74b0b52b28a94ecbc" prot="public" virt="virtual"><scope>GetOpFuncBase</scope><name>makeHopFunc</name></member>
+      <member refid="classOpFunc1Base_1a16ccb3c6d6ddb50d332bb6a247eaeea1" prot="public" virt="pure-virtual"><scope>GetOpFuncBase</scope><name>op</name></member>
+      <member refid="classGetOpFuncBase_1a649f8d2d8160af1c03b5b31b9456347a" prot="public" virt="virtual"><scope>GetOpFuncBase</scope><name>opBuffer</name></member>
+      <member refid="classOpFunc_1ab05a9c94927b438a01e1afa2fe42f984" prot="public" virt="non-virtual"><scope>GetOpFuncBase</scope><name>OpFunc</name></member>
+      <member refid="classOpFunc_1ac3d9acc0e94845d182d5ace949b19d43" prot="public" virt="non-virtual"><scope>GetOpFuncBase</scope><name>opIndex</name></member>
+      <member refid="classOpFunc_1a04874b1683fb5d077843de9f8e9cc8fb" prot="private" virt="non-virtual"><scope>GetOpFuncBase</scope><name>opIndex_</name></member>
+      <member refid="classOpFunc_1abaae2daff5cf71f0c497d5099fe3bc1b" prot="private" virt="non-virtual"><scope>GetOpFuncBase</scope><name>ops</name></member>
+      <member refid="classOpFunc1Base_1abaf6a3a4f5e088790bb523230a281c9e" prot="public" virt="virtual"><scope>GetOpFuncBase</scope><name>opVec</name></member>
+      <member refid="classOpFunc1Base_1a474c690b27ead8da49ef03f22674a844" prot="public" virt="virtual"><scope>GetOpFuncBase</scope><name>opVecBuffer</name></member>
+      <member refid="classOpFunc_1a7cd6908ea3ddf977b9b8dbe1a2ab509a" prot="public" virt="non-virtual"><scope>GetOpFuncBase</scope><name>rebuildOpIndex</name></member>
+      <member refid="classGetOpFuncBase_1a3bd89bda3c52e4392ee797a0d626bdce" prot="public" virt="pure-virtual"><scope>GetOpFuncBase</scope><name>returnOp</name></member>
+      <member refid="classOpFunc1Base_1ab715ef7a128efa4d294106020f5f7e4c" prot="public" virt="virtual"><scope>GetOpFuncBase</scope><name>rttiType</name></member>
+      <member refid="classOpFunc_1aeec8dec980a2fa4ee025446dbdff8a8f" prot="public" virt="non-virtual"><scope>GetOpFuncBase</scope><name>setIndex</name></member>
+      <member refid="classOpFunc_1a5374e9a588d5d1024483d949ed3e3ecf" prot="public" virt="virtual"><scope>GetOpFuncBase</scope><name>~OpFunc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

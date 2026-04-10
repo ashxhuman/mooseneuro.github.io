@@ -1,0 +1,525 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classFastMatrixElim" kind="class" language="C++" prot="public">
+    <compoundname>FastMatrixElim</compoundname>
+    <basecompoundref refid="classSparseMatrix" prot="public" virt="non-virtual">SparseMatrix&lt; double &gt;</basecompoundref>
+    <includes refid="FastMatrixElim_8h" local="no">FastMatrixElim.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFastMatrixElim_1a37ff32f7eb24225db49bd0fd99078003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastMatrixElim::buildBackwardSub</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;diag, vector&lt; Triplet&lt; double &gt; &gt; &amp;bops, vector&lt; double &gt; &amp;diagVal)</argsstring>
+        <name>buildBackwardSub</name>
+        <qualifiedname>FastMatrixElim::buildBackwardSub</qualifiedname>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>diag</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classTriplet" kindref="compound">Triplet</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>bops</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>diagVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reduces the backward substitution phase into a series of operations defined by the bops vector, and by the list of values on the diagonal.</para>
+<para>Operations to be done on the RHS for the back sub are generated and put into the bops (backward ops) vector. col &gt; row here, row is the entry being operated on, and col is given by rowsToSub. offDiagVal is the value on the off-diagonal at row,col. diagVal is the value on the diagonal at [row][row]. RHS[row] = ( RHS[row] - offDiagVal * RHS[col] ) / diagVal </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="43" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="342" bodyend="394"/>
+        <references refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" compoundref="SparseMatrix_8h" startline="253" endline="273">SparseMatrix&lt; T &gt;::get</references>
+        <references refid="classTriplet_1addee6f3b26beee256d8d9475f179fe95" compoundref="SparseMatrix_8h" startline="38" endline="42">Triplet&lt; T &gt;::Triplet</references>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+        <referencedby refid="testDiffusion_8cpp_1a74f068d6836fcdefd03bef45a9f2aad0" compoundref="testDiffusion_8cpp" startline="47" endline="258">testFastMatrixElim</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FastMatrixElim::buildForDiffusion</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;parentVoxel, const vector&lt; double &gt; &amp;volume, const vector&lt; double &gt; &amp;area, const vector&lt; double &gt; &amp;length, double diffConst, double motorConst, double dt)</argsstring>
+        <name>buildForDiffusion</name>
+        <qualifiedname>FastMatrixElim::buildForDiffusion</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>parentVoxel</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>area</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>diffConst</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>motorConst</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>This function makes the diffusion matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function makes the matrix for computing diffusion and transport equations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="97" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="557" bodyend="631"/>
+        <references refid="classSparseMatrix_1a873cc36079017efce916136e0bc50c20" compoundref="SparseMatrix_8h" startline="410" endline="425">SparseMatrix&lt; T &gt;::addRow</references>
+        <references refid="FastMatrixElim_8cpp_1a2c4a9ba749c13608e9f799f1b58a2027" compoundref="FastMatrixElim_8cpp" startline="510" endline="532">buildColIndex</references>
+        <references refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5">EMPTY_VOXEL</references>
+        <references refid="FastMatrixElim_8cpp_1ace3c679b315df06ac51a06605fdd2ab4" compoundref="FastMatrixElim_8cpp" startline="538" endline="554">findAreaProportion</references>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a7b41c40500ad1b6d848d4ced1a135ca8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastMatrixElim::buildForwardElim</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;diag, vector&lt; Triplet&lt; double &gt; &gt; &amp;fops)</argsstring>
+        <name>buildForwardElim</name>
+        <qualifiedname>FastMatrixElim::buildForwardElim</qualifiedname>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>diag</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classTriplet" kindref="compound">Triplet</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>fops</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursively scans the current matrix, to build tree of parent voxels using the contents of the sparase matrix to indicate connectivity. Emits warning noises and returns an empty vector if the entire tree cannot be traversed, or if the current matrix is not tree-like. Assumes row 0 is root row. User should always call with parentRow == 0; Doesn&apos;t work yet. bool buildTree( unsigned int parentRow,
+        vector&lt; unsigned int &gt;&amp; parentVoxel ) const; Reduces the forward elimination phase into a series of operations defined by the fops vector.</para>
+<para>Builds the vector of forward ops: ratio, i, j RHS[i] = RHS[i] - RHS[j] * ratio This vec tells the routine which rows below have to be eliminated. This includes the rows if any in the tridiagonal band and also rows, if any, on branches. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="36" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="275" bodyend="331"/>
+        <references refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" compoundref="SparseMatrix_8h" startline="253" endline="273">SparseMatrix&lt; T &gt;::get</references>
+        <references refid="classTriplet_1addee6f3b26beee256d8d9475f179fe95" compoundref="SparseMatrix_8h" startline="38" endline="42">Triplet&lt; T &gt;::Triplet</references>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+        <referencedby refid="testDiffusion_8cpp_1a74f068d6836fcdefd03bef45a9f2aad0" compoundref="testDiffusion_8cpp" startline="47" endline="258">testFastMatrixElim</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a192e06a70c45285cdd6aa8625f165936" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FastMatrixElim::checkSymmetricShape</definition>
+        <argsstring>() const</argsstring>
+        <name>checkSymmetricShape</name>
+        <qualifiedname>FastMatrixElim::checkSymmetricShape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks that the matrix shape (but not necessarily values) are symmetric, returns true if symmetric. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="80" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="51" bodyend="62"/>
+        <references refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" compoundref="SparseMatrix_8h" startline="456" endline="523">SparseMatrix&lt; T &gt;::transpose</references>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FastMatrixElim::FastMatrixElim</definition>
+        <argsstring>()</argsstring>
+        <name>FastMatrixElim</name>
+        <qualifiedname>FastMatrixElim::FastMatrixElim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="13" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="29" bodyend="31"/>
+        <references refid="classSparseMatrix_1a7cc1357950b026509513c9cc88796c00" compoundref="SparseMatrix_8h" startline="69" endline="76">SparseMatrix&lt; T &gt;::SparseMatrix</references>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a3fd10502b933b3496fc610f1dd224f58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FastMatrixElim::FastMatrixElim</definition>
+        <argsstring>(const SparseMatrix&lt; double &gt; &amp;orig)</argsstring>
+        <name>FastMatrixElim</name>
+        <qualifiedname>FastMatrixElim::FastMatrixElim</qualifiedname>
+        <param>
+          <type>const <ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>&lt; double &gt; &amp;</type>
+          <declname>orig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="15" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a59ddacb124d127c969fe63873f3240f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FastMatrixElim::FastMatrixElim</definition>
+        <argsstring>(unsigned int nrows, unsigned int ncolumns)</argsstring>
+        <name>FastMatrixElim</name>
+        <qualifiedname>FastMatrixElim::FastMatrixElim</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>nrows</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>ncolumns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="14" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="33" bodyend="35"/>
+        <references refid="classSparseMatrix_1a41427e7c9dc8a9d9a863fcca7987107d" compoundref="SparseMatrix_8h" startline="78" endline="81">SparseMatrix&lt; T &gt;::SparseMatrix</references>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1af840ef3842f9cf41b688245d69f29b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FastMatrixElim::hinesReorder</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;parentVoxel, vector&lt; unsigned int &gt; &amp;lookupOldRowsFromNew)</argsstring>
+        <name>hinesReorder</name>
+        <qualifiedname>FastMatrixElim::hinesReorder</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>parentVoxel</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>lookupOldRowsFromNew</declname>
+          <defname>lookupOldRowFromNew</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes the tree specification in the form of a list of parent entries for each tree node, and reorders the matrix into the twig-first sequence required for fast elimination. Returns true if it succeeded in doing this; many matrices will not reorder correctly.</para>
+<para>Scans the current matrix starting from index 0, to build tree of parent voxels using the contents of the sparase matrix to indicate connectivity. Emits warning noises and returns an empty vector if the entire tree cannot be traversed, or if the current matrix is not tree-like. This still doesn&apos;t work. Fails because it cannot detect branches in the tree, where sibling compartments would have cross talk. So we still rely on getParentVoxel function. bool FastMatrixElim::buildTree( unsigned int parentRow,
+                vector&lt; unsigned int &gt;&amp; parentVoxel ) const { assert( <ref refid="classSparseMatrix_1a2c51cee470d726cf04e262a4038625f5" kindref="member">nRows()</ref> == <ref refid="classSparseMatrix_1a34a568e3db0bafd38cf0ccc37cd2086b" kindref="member">nColumns()</ref> ); if ( parentRow == 0 ) { parentVoxel.assign( nRows, EMPTY_VOXEL ); if ( !checkSymmetricShape() ) return false; // shape of matrix should be symmetric. } const double* entry; const unsigned int* colIndex; unsigned int numEntries = getRow( parentRow, &amp;entry, &amp;colIndex ); for ( unsigned int j = 0; j &lt; numEntries; ++j ) { if ( colIndex[j] &lt;= parentRow ) continue; // ignore lower diagonal if ( parentVoxel[ colIndex[j] ] == EMPTY_VOXEL ) { parentVoxel[ colIndex[j] ] = parentRow; } else { if ( parentVoxel[ colIndex[j] ] == parentVoxel[ parentRow ] ) continue; // OK, these are sibling compartments return false; // Error: the matrix isn&apos;t a clean tree. } } for ( unsigned int j = 0; j &lt; numEntries; ++j ) { if ( colIndex[j] &lt;= parentRow ) continue; if !buildTree( colIndex[j], parentVoxel ) return false; // Propagate error from child row. } if ( parentRow &gt; 0 ) return true; Now done with all child branches, test if whole matrix is in tree. for ( unsigned int j = 1; j &lt; <ref refid="classSparseMatrix_1a2c51cee470d726cf04e262a4038625f5" kindref="member">nRows()</ref>; ++j ) if ( parentVoxel[j] == EMPTY_VOXEL ) return false; // One or more rows is disconnected from tree</para>
+<para>return true; // All is well, have yourself a nice parentVoxel tree. } Reorders rows and columns to put the matrix in the form suitable for rapid single-pass inversion. Returns 0 on failure, but at this point I don&apos;t have a proper test for this. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="55" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="139" bodyend="189"/>
+        <references refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5">EMPTY_VOXEL</references>
+        <references refid="classFastMatrixElim_1ad534bd7ba1876a591d78fd1bc907441d" compoundref="FastMatrixElim_8cpp" startline="193" endline="221">shuffleRows</references>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+        <referencedby refid="testDiffusion_8cpp_1a74f068d6836fcdefd03bef45a9f2aad0" compoundref="testDiffusion_8cpp" startline="47" endline="258">testFastMatrixElim</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1ad4038cd61b750948c47256485869224d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FastMatrixElim::isSymmetric</definition>
+        <argsstring>() const</argsstring>
+        <name>isSymmetric</name>
+        <qualifiedname>FastMatrixElim::isSymmetric</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="83" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="80" bodyend="85"/>
+        <references refid="classFastMatrixElim_1a36553b13d33b91e760cd9caeebcdfc2b" compoundref="FastMatrixElim_8cpp" startline="64" endline="78">operator==</references>
+        <references refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" compoundref="SparseMatrix_8h" startline="456" endline="523">SparseMatrix&lt; T &gt;::transpose</references>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a2d4f8de7a870a589b3a048c054281783" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastMatrixElim::makeTestMatrix</definition>
+        <argsstring>(const double *test, unsigned int numCompts)</argsstring>
+        <name>makeTestMatrix</name>
+        <qualifiedname>FastMatrixElim::makeTestMatrix</qualifiedname>
+        <param>
+          <type>const double *</type>
+          <declname>test</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numCompts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="17" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="244" bodyend="260"/>
+        <references refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" compoundref="SparseMatrix_8h" startline="126" endline="155">SparseMatrix&lt; T &gt;::setSize</references>
+        <referencedby refid="testDiffusion_8cpp_1a74f068d6836fcdefd03bef45a9f2aad0" compoundref="testDiffusion_8cpp" startline="47" endline="258">testFastMatrixElim</referencedby>
+        <referencedby refid="testDiffusion_8cpp_1adfc85abbafcab43f3b19b9dae09603c2" compoundref="testDiffusion_8cpp" startline="295" endline="352">testSetDiffusionAndTransport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a36553b13d33b91e760cd9caeebcdfc2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FastMatrixElim::operator==</definition>
+        <argsstring>(const FastMatrixElim &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>FastMatrixElim::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classFastMatrixElim" kindref="compound">FastMatrixElim</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="82" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="64" bodyend="78"/>
+        <references refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" compoundref="doubleEq_8cpp" startline="16" endline="22">doubleEq</references>
+        <referencedby refid="classFastMatrixElim_1ad4038cd61b750948c47256485869224d" compoundref="FastMatrixElim_8cpp" startline="80" endline="85">isSymmetric</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a863a579324087169a06f4dd48a54d410" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastMatrixElim::setDiffusionAndTransport</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;parentVoxel, double diffConst, double motorConst, double dt)</argsstring>
+        <name>setDiffusionAndTransport</name>
+        <qualifiedname>FastMatrixElim::setDiffusionAndTransport</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>parentVoxel</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>diffConst</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>motorConst</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function incorporates molecule-specific diffusion and motor transport terms into the matrix.</para>
+<para>Put in diff and transport terms and also fill in the diagonal The terms are: n-1: dt*(D+M)*adx(-) n: 1 -dt*[ D*adx(-) +D*adx(+) + M*adx(+) ] n+1: dt*D*adx(+) Note that there will be only one parent term but possibly many distal terms. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="89" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="405" bodyend="463"/>
+        <references refid="FastMatrixElim_8cpp_1a48925cd4c1d345063d8dae8fcb2743d5">EMPTY_VOXEL</references>
+        <referencedby refid="testDiffusion_8cpp_1adfc85abbafcab43f3b19b9dae09603c2" compoundref="testDiffusion_8cpp" startline="295" endline="352">testSetDiffusionAndTransport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1ad534bd7ba1876a591d78fd1bc907441d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastMatrixElim::shuffleRows</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;lookupOldRowFromNew)</argsstring>
+        <name>shuffleRows</name>
+        <qualifiedname>FastMatrixElim::shuffleRows</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>lookupOldRowFromNew</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reorders rows of the matrix according to the vector lookupOldRowFromNew. The vector tells the function which old row to put in the ith row of the new matrix. Since the matrix has matching column entries, those get shuffled too. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="73" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="193" bodyend="221"/>
+        <references refid="classSparseMatrix_1a873cc36079017efce916136e0bc50c20" compoundref="SparseMatrix_8h" startline="410" endline="425">SparseMatrix&lt; T &gt;::addRow</references>
+        <references refid="classSparseMatrix_1aabc77208663f5a59bb2bbb0559b614f7" compoundref="SparseMatrix_8h" startline="443" endline="449">SparseMatrix&lt; T &gt;::clear</references>
+        <references refid="classSparseMatrix_1a5d8d69c9a34cbf241483691d6eda63a8" compoundref="SparseMatrix_8h" startline="314" endline="334">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" compoundref="SparseMatrix_8h" startline="126" endline="155">SparseMatrix&lt; T &gt;::setSize</references>
+        <references refid="FastMatrixElim_8h_1a725cf7fc869d3738916ef41c6ba83ea4" compoundref="FastMatrixElim_8cpp" startline="223" endline="241">sortByColumn</references>
+        <referencedby refid="classFastMatrixElim_1af840ef3842f9cf41b688245d69f29b3a" compoundref="FastMatrixElim_8cpp" startline="139" endline="189">hinesReorder</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFastMatrixElim_1a964e1311e6a9585878b934a82687ab15" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastMatrixElim::advance</definition>
+        <argsstring>(vector&lt; double &gt; &amp;y, const vector&lt; Triplet&lt; double &gt; &gt; &amp;ops, const vector&lt; double &gt; &amp;diagVal)</argsstring>
+        <name>advance</name>
+        <qualifiedname>FastMatrixElim::advance</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const vector&lt; <ref refid="classTriplet" kindref="compound">Triplet</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>ops</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>diagVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Does the actual computation of the matrix inversion, which is equivalent to advancing one timestem in Backward Euler. Static function here to keep namespaces clean. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="109" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="472" bodyend="485"/>
+        <referencedby refid="testDiffusion_8cpp_1a74f068d6836fcdefd03bef45a9f2aad0" compoundref="testDiffusion_8cpp" startline="47" endline="258">testFastMatrixElim</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastMatrixElim_1a16d3f3761653a7195e48bc0cd655fe36" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastMatrixElim::opsReorder</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;lookupOldRowsFromNew, vector&lt; Triplet&lt; double &gt; &gt; &amp;ops, vector&lt; double &gt; &amp;diagVal)</argsstring>
+        <name>opsReorder</name>
+        <qualifiedname>FastMatrixElim::opsReorder</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>lookupOldRowsFromNew</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classTriplet" kindref="compound">Triplet</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>ops</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>diagVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>static function. Reorders the ops and diagVal vectors so as to restore the original indexing of the input vectors. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="62" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="491" bodyend="506"/>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FastMatrixElim</label>
+        <link refid="classFastMatrixElim"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+      </node>
+      <node id="2">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FastMatrixElim</label>
+        <link refid="classFastMatrixElim"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#N_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="10" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" bodystart="11" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classSparseMatrix_1a0bf45bbe509508455280e65ac22b4cfc" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>addRow</name></member>
+      <member refid="classSparseMatrix_1a873cc36079017efce916136e0bc50c20" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>addRow</name></member>
+      <member refid="classFastMatrixElim_1a964e1311e6a9585878b934a82687ab15" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>advance</name></member>
+      <member refid="classFastMatrixElim_1a37ff32f7eb24225db49bd0fd99078003" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>buildBackwardSub</name></member>
+      <member refid="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>buildForDiffusion</name></member>
+      <member refid="classFastMatrixElim_1a7b41c40500ad1b6d848d4ced1a135ca8" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>buildForwardElim</name></member>
+      <member refid="classFastMatrixElim_1a192e06a70c45285cdd6aa8625f165936" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>checkSymmetricShape</name></member>
+      <member refid="classSparseMatrix_1aabc77208663f5a59bb2bbb0559b614f7" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>clear</name></member>
+      <member refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>colIndex</name></member>
+      <member refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" prot="protected" virt="non-virtual"><scope>FastMatrixElim</scope><name>colIndex_</name></member>
+      <member refid="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>FastMatrixElim</name></member>
+      <member refid="classFastMatrixElim_1a59ddacb124d127c969fe63873f3240f5" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>FastMatrixElim</name></member>
+      <member refid="classFastMatrixElim_1a3fd10502b933b3496fc610f1dd224f58" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>FastMatrixElim</name></member>
+      <member refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>get</name></member>
+      <member refid="classSparseMatrix_1a5ed7e8d630004f91d4b46b3cbdfcbad3" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>getColumn</name></member>
+      <member refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>getRow</name></member>
+      <member refid="classSparseMatrix_1a5d8d69c9a34cbf241483691d6eda63a8" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>getRow</name></member>
+      <member refid="classFastMatrixElim_1af840ef3842f9cf41b688245d69f29b3a" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>hinesReorder</name></member>
+      <member refid="classFastMatrixElim_1ad4038cd61b750948c47256485869224d" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>isSymmetric</name></member>
+      <member refid="classFastMatrixElim_1a2d4f8de7a870a589b3a048c054281783" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>makeTestMatrix</name></member>
+      <member refid="classSparseMatrix_1aadecaf442db01a422f54cead458c3e2b" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>matrixEntry</name></member>
+      <member refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" prot="protected" virt="non-virtual"><scope>FastMatrixElim</scope><name>N_</name></member>
+      <member refid="classSparseMatrix_1a34a568e3db0bafd38cf0ccc37cd2086b" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>nColumns</name></member>
+      <member refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" prot="protected" virt="non-virtual"><scope>FastMatrixElim</scope><name>ncolumns_</name></member>
+      <member refid="classSparseMatrix_1a9da8c93d288d66c72f3584e378fa582e" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>nEntries</name></member>
+      <member refid="classSparseMatrix_1a2c51cee470d726cf04e262a4038625f5" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>nRows</name></member>
+      <member refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" prot="protected" virt="non-virtual"><scope>FastMatrixElim</scope><name>nrows_</name></member>
+      <member refid="classFastMatrixElim_1a36553b13d33b91e760cd9caeebcdfc2b" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>operator==</name></member>
+      <member refid="classFastMatrixElim_1a16d3f3761653a7195e48bc0cd655fe36" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>opsReorder</name></member>
+      <member refid="classSparseMatrix_1a570dec21ec6f18b20514a3cc9259cd9c" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>pairFill</name></member>
+      <member refid="classSparseMatrix_1a9ce5500b7dfde25db326d2977812981d" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>print</name></member>
+      <member refid="classSparseMatrix_1adeb305405622ab73abe69e40bb228812" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>printInternal</name></member>
+      <member refid="classSparseMatrix_1aa36961d264020e8701f658e97323f59c" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>printTriplet</name></member>
+      <member refid="classSparseMatrix_1aba47de30cd631afe8923a6bb03d7db7d" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>reorderColumns</name></member>
+      <member refid="classSparseMatrix_1a7c2646d67d8cde76ef422e4092e0fc20" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>rowStart</name></member>
+      <member refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" prot="protected" virt="non-virtual"><scope>FastMatrixElim</scope><name>rowStart_</name></member>
+      <member refid="classSparseMatrix_1a0dddc631322ef8cae33f24b770bafe60" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>set</name></member>
+      <member refid="classFastMatrixElim_1a863a579324087169a06f4dd48a54d410" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>setDiffusionAndTransport</name></member>
+      <member refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>setSize</name></member>
+      <member refid="classFastMatrixElim_1ad534bd7ba1876a591d78fd1bc907441d" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>shuffleRows</name></member>
+      <member refid="classSparseMatrix_1a7cc1357950b026509513c9cc88796c00" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>SparseMatrix</name></member>
+      <member refid="classSparseMatrix_1a41427e7c9dc8a9d9a863fcca7987107d" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>SparseMatrix</name></member>
+      <member refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>transpose</name></member>
+      <member refid="classSparseMatrix_1a6fb0fb48e97c13b49c2b7a0e1a8066dc" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>tripletFill</name></member>
+      <member refid="classSparseMatrix_1a00c3ac994b0cdcdb6c6981b4ab353177" prot="public" virt="non-virtual"><scope>FastMatrixElim</scope><name>unset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

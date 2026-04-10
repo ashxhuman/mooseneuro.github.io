@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classFuncReac" kind="class" language="C++" prot="public">
+    <compoundname>FuncReac</compoundname>
+    <basecompoundref refid="classFuncRate" prot="public" virt="non-virtual">FuncRate</basecompoundref>
+    <includes refid="FuncRateTerm_8h" local="no">FuncRateTerm.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFuncReac_1a10ffbe7e33d0bb1f35a1c1361d38d168" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int FuncReac::numSubstrates_</definition>
+        <argsstring></argsstring>
+        <name>numSubstrates_</name>
+        <qualifiedname>FuncReac::numSubstrates_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="162" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="classFuncReac_1ae823f3ba14f3c3d4a719b0749169f30e" compoundref="FuncRateTerm_8h" startline="127" endline="131">getReactants</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classFuncReac_1a549b929f1c2f3f7f5cf8b030dba03090" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; FuncReac::v_</definition>
+        <argsstring></argsstring>
+        <name>v_</name>
+        <qualifiedname>FuncReac::v_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="161" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="classFuncReac_1a260022d0af68d05324d2546ebcdb3d7c" compoundref="FuncRateTerm_8h" startline="148" endline="158">copyWithVolScaling</referencedby>
+        <referencedby refid="classFuncReac_1ad5a28a20a1d5fd5d78a8b7b3b1586750" compoundref="FuncRateTerm_8h" startline="108" endline="111">FuncReac</referencedby>
+        <referencedby refid="classFuncReac_1ae823f3ba14f3c3d4a719b0749169f30e" compoundref="FuncRateTerm_8h" startline="127" endline="131">getReactants</referencedby>
+        <referencedby refid="classFuncReac_1a245b28caa4148981a5d0fb98fd4fd8c9" compoundref="FuncRateTerm_8h" startline="113" endline="125">operator()</referencedby>
+        <referencedby refid="classFuncReac_1aa10d51a758dab5def5747e084751ab02" compoundref="FuncRateTerm_8h" startline="138" endline="145">rescaleVolume</referencedby>
+        <referencedby refid="classFuncReac_1a4bd2ba088c9e4fe3926fee020495fadf" compoundref="FuncRateTerm_8h" startline="133" endline="136">setReactants</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFuncReac_1a260022d0af68d05324d2546ebcdb3d7c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classRateTerm" kindref="compound">RateTerm</ref> *</type>
+        <definition>RateTerm * FuncReac::copyWithVolScaling</definition>
+        <argsstring>(double vol, double sub, double prd) const</argsstring>
+        <name>copyWithVolScaling</name>
+        <qualifiedname>FuncReac::copyWithVolScaling</qualifiedname>
+        <reimplements refid="classFuncRate_1a1a1d41e75591df8cbb3b5192a346400b">copyWithVolScaling</reimplements>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>prd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duplicates rate term and then applies volume scaling. Arguments are volume of reference voxel, product of vol/refVol for all substrates: applied to R1 product of vol/refVol for all products: applied to R2</para>
+<para>Note that unless the reaction is cross-compartment, the vol/refVol will be one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="148" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="148" bodyend="158"/>
+        <references refid="classFuncRate_1a80307314f0f396933cf933a380ce2078" compoundref="FuncRateTerm_8h" startline="86">FuncRate::func_</references>
+        <references refid="classFuncReac_1ad5a28a20a1d5fd5d78a8b7b3b1586750" compoundref="FuncRateTerm_8h" startline="108" endline="111">FuncReac</references>
+        <references refid="classFuncRate_1a405c931ff6519f60061bfc4c6af3d125" compoundref="FuncRateTerm_8h" startline="87">FuncRate::funcVolPower_</references>
+        <references refid="classFuncRate_1ac5b6e24152e31ce188f133df2b7dfe8f" compoundref="FuncRateTerm_8h" startline="85">FuncRate::k_</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classFuncReac_1a549b929f1c2f3f7f5cf8b030dba03090" compoundref="FuncRateTerm_8h" startline="161">v_</references>
+      </memberdef>
+      <memberdef kind="function" id="classFuncReac_1ad5a28a20a1d5fd5d78a8b7b3b1586750" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FuncReac::FuncReac</definition>
+        <argsstring>(double k, vector&lt; unsigned int &gt; v)</argsstring>
+        <name>FuncReac</name>
+        <qualifiedname>FuncReac::FuncReac</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="108" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="108" bodyend="111"/>
+        <references refid="classFuncRate_1af72315bca742d4225e0674e64b871ac4" compoundref="FuncRateTerm_8h" startline="24" endline="30">FuncRate::FuncRate</references>
+        <references refid="classFuncReac_1a549b929f1c2f3f7f5cf8b030dba03090" compoundref="FuncRateTerm_8h" startline="161">v_</references>
+        <referencedby refid="classFuncReac_1a260022d0af68d05324d2546ebcdb3d7c" compoundref="FuncRateTerm_8h" startline="148" endline="158">copyWithVolScaling</referencedby>
+        <referencedby refid="classStoich_1a6d85bca9ec449a768b8b5d22f51e8145" compoundref="Stoich_8cpp" startline="1139" endline="1175">Stoich::installAndUnschedFuncReac</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFuncReac_1ae823f3ba14f3c3d4a719b0749169f30e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int FuncReac::getReactants</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;molIndex) const</argsstring>
+        <name>getReactants</name>
+        <qualifiedname>FuncReac::getReactants</qualifiedname>
+        <reimplements refid="classFuncRate_1aedce749d1c83cf817a58800572de498d">getReactants</reimplements>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>molIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finds the reactant indices in the vector S. It returns the number of substrates found, which are the first entries in molIndex. The products are the remaining ones. Note that it does NOT find products for unidirectional reactions, which is a bit of a problem. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="127" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="127" bodyend="131"/>
+        <references refid="classFuncReac_1a10ffbe7e33d0bb1f35a1c1361d38d168" compoundref="FuncRateTerm_8h" startline="162">numSubstrates_</references>
+        <references refid="classFuncReac_1a549b929f1c2f3f7f5cf8b030dba03090" compoundref="FuncRateTerm_8h" startline="161">v_</references>
+      </memberdef>
+      <memberdef kind="function" id="classFuncReac_1a245b28caa4148981a5d0fb98fd4fd8c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double FuncReac::operator()</definition>
+        <argsstring>(const double *S) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>FuncReac::operator()</qualifiedname>
+        <reimplements refid="classFuncRate_1ab82985ce0b81640207fcb13e8c09815c">operator()</reimplements>
+        <param>
+          <type>const double *</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Computes the rate. The argument is the molecule array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="113" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="113" bodyend="125"/>
+        <references refid="classFuncRate_1a80307314f0f396933cf933a380ce2078" compoundref="FuncRateTerm_8h" startline="86">FuncRate::func_</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classFuncRate_1ac5b6e24152e31ce188f133df2b7dfe8f" compoundref="FuncRateTerm_8h" startline="85">FuncRate::k_</references>
+        <references refid="classFuncTerm_1a17c5b756b5b53c89b1dc911e24de016e" compoundref="FuncTerm_8cpp" startline="142" endline="161">FuncTerm::operator()</references>
+        <references refid="classFuncReac_1a549b929f1c2f3f7f5cf8b030dba03090" compoundref="FuncRateTerm_8h" startline="161">v_</references>
+      </memberdef>
+      <memberdef kind="function" id="classFuncReac_1aa10d51a758dab5def5747e084751ab02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuncReac::rescaleVolume</definition>
+        <argsstring>(short comptIndex, const vector&lt; short &gt; &amp;compartmentLookup, double ratio)</argsstring>
+        <name>rescaleVolume</name>
+        <qualifiedname>FuncReac::rescaleVolume</qualifiedname>
+        <param>
+          <type>short</type>
+          <declname>comptIndex</declname>
+        </param>
+        <param>
+          <type>const vector&lt; short &gt; &amp;</type>
+          <declname>compartmentLookup</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="138" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="138" bodyend="145"/>
+        <references refid="classFuncRate_1ac5b6e24152e31ce188f133df2b7dfe8f" compoundref="FuncRateTerm_8h" startline="85">FuncRate::k_</references>
+        <references refid="classFuncReac_1a549b929f1c2f3f7f5cf8b030dba03090" compoundref="FuncRateTerm_8h" startline="161">v_</references>
+      </memberdef>
+      <memberdef kind="function" id="classFuncReac_1a4bd2ba088c9e4fe3926fee020495fadf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FuncReac::setReactants</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;molIndex)</argsstring>
+        <name>setReactants</name>
+        <qualifiedname>FuncReac::setReactants</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>molIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="133" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="133" bodyend="136"/>
+        <references refid="classFuncReac_1a549b929f1c2f3f7f5cf8b030dba03090" compoundref="FuncRateTerm_8h" startline="161">v_</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This <ref refid="classFuncReac" kindref="compound">FuncReac</ref> manages a one-way <ref refid="classNOrder" kindref="compound">NOrder</ref> reaction whose rate is determined by a <ref refid="classFunction" kindref="compound">Function</ref>, but which also has regular substrates and products.</para>
+<para>dproduct/dt = func( x0, x1, x2..., t ) * [sub0] * [sub1] * ....</para>
+<para>The values x0, x1, x2 are expected to be concentrations so that they do not depend on volume. The substrates sub0, sub1, ... are # of molecules. The term k_ is scaled so that it is unity at vol = 1/NA m^3. k_ = (NA * vol)^(numSub-1) The copyWithVolScaling operation scales it up and down from there. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ExternReac</label>
+        <link refid="classExternReac"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FuncRate</label>
+        <link refid="classFuncRate"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>FuncReac</label>
+        <link refid="classFuncReac"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ExternReac</label>
+        <link refid="classExternReac"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FuncRate</label>
+        <link refid="classFuncRate"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>FuncReac</label>
+        <link refid="classFuncReac"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-v_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="7">
+        <label>T</label>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" line="105" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncRateTerm.h" bodystart="106" bodyend="163"/>
+    <listofallmembers>
+      <member refid="classFuncReac_1a260022d0af68d05324d2546ebcdb3d7c" prot="public" virt="virtual"><scope>FuncReac</scope><name>copyWithVolScaling</name></member>
+      <member refid="classRateTerm_1a211734fd07c0ef1949907d832d9d03fd" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>EPSILON</name></member>
+      <member refid="classFuncRate_1a80307314f0f396933cf933a380ce2078" prot="protected" virt="non-virtual"><scope>FuncReac</scope><name>func_</name></member>
+      <member refid="classFuncRate_1af72315bca742d4225e0674e64b871ac4" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>FuncRate</name></member>
+      <member refid="classFuncReac_1ad5a28a20a1d5fd5d78a8b7b3b1586750" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>FuncReac</name></member>
+      <member refid="classFuncRate_1a405c931ff6519f60061bfc4c6af3d125" prot="protected" virt="non-virtual"><scope>FuncReac</scope><name>funcVolPower_</name></member>
+      <member refid="classFuncRate_1a05d7b4d6b361d001b123b7c9a7207db1" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>getExpr</name></member>
+      <member refid="classFuncRate_1af3420f38903797f90d7ee2e07d1bf004" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>getFuncArgIndex</name></member>
+      <member refid="classFuncRate_1a5d30239aba1a0768ae923de8e2a15d6c" prot="public" virt="virtual"><scope>FuncReac</scope><name>getR1</name></member>
+      <member refid="classExternReac_1a4545b555adfbe40f2badf1eaae823d8b" prot="public" virt="virtual"><scope>FuncReac</scope><name>getR2</name></member>
+      <member refid="classFuncReac_1ae823f3ba14f3c3d4a719b0749169f30e" prot="public" virt="virtual"><scope>FuncReac</scope><name>getReactants</name></member>
+      <member refid="classFuncRate_1ac5b6e24152e31ce188f133df2b7dfe8f" prot="protected" virt="non-virtual"><scope>FuncReac</scope><name>k_</name></member>
+      <member refid="classFuncReac_1a10ffbe7e33d0bb1f35a1c1361d38d168" prot="private" virt="non-virtual"><scope>FuncReac</scope><name>numSubstrates_</name></member>
+      <member refid="classFuncReac_1a245b28caa4148981a5d0fb98fd4fd8c9" prot="public" virt="virtual"><scope>FuncReac</scope><name>operator()</name></member>
+      <member refid="classRateTerm_1a3fe9a3f2a9c5701276de7aaf89e4bd06" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>RateTerm</name></member>
+      <member refid="classFuncReac_1aa10d51a758dab5def5747e084751ab02" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>rescaleVolume</name></member>
+      <member refid="classExternReac_1aa4240abdc85f23ed33e3b5dcd92359bc" prot="public" virt="virtual" ambiguityscope="FuncRate::"><scope>FuncReac</scope><name>rescaleVolume</name></member>
+      <member refid="classFuncRate_1a49015caadbbf2286af602a2a556c19ec" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>setExpr</name></member>
+      <member refid="classFuncRate_1ac6f59b3f0bbcbf0cd6f037dd582a8393" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>setFuncArgIndex</name></member>
+      <member refid="classExternReac_1acde3d620c1c91b78d32fe02cbcc2272e" prot="public" virt="virtual"><scope>FuncReac</scope><name>setR1</name></member>
+      <member refid="classExternReac_1a669c9bc33a149e21b54a7e32acc7fd25" prot="public" virt="virtual"><scope>FuncReac</scope><name>setR2</name></member>
+      <member refid="classExternReac_1afd3413c0b1c04d67ecd596f4d5523d8a" prot="public" virt="virtual"><scope>FuncReac</scope><name>setRates</name></member>
+      <member refid="classFuncReac_1a4bd2ba088c9e4fe3926fee020495fadf" prot="public" virt="non-virtual"><scope>FuncReac</scope><name>setReactants</name></member>
+      <member refid="classFuncReac_1a549b929f1c2f3f7f5cf8b030dba03090" prot="private" virt="non-virtual"><scope>FuncReac</scope><name>v_</name></member>
+      <member refid="classRateTerm_1a097b1971a7652a8771245f17f28356a1" prot="public" virt="virtual"><scope>FuncReac</scope><name>~RateTerm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

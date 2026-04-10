@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="FastMatrixElim_8h" kind="file" language="C++">
+    <compoundname>FastMatrixElim.h</compoundname>
+    <includedby refid="Dsolve_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp</includedby>
+    <includedby refid="FastMatrixElim_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp</includedby>
+    <includedby refid="testDiffusion_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/testDiffusion.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp</label>
+        <link refid="Dsolve_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp</label>
+        <link refid="FastMatrixElim_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h</label>
+        <link refid="FastMatrixElim_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/testDiffusion.cpp</label>
+        <link refid="testDiffusion_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classFastMatrixElim" prot="public">FastMatrixElim</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="FastMatrixElim_8h_1a725cf7fc869d3738916ef41c6ba83ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sortByColumn</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;col, vector&lt; double &gt; &amp;entry)</argsstring>
+        <name>sortByColumn</name>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" line="114" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.cpp" bodystart="223" bodyend="241" declfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h" declline="114" declcolumn="6"/>
+        <referencedby refid="classFastMatrixElim_1ad534bd7ba1876a591d78fd1bc907441d" compoundref="FastMatrixElim_8cpp" startline="193" endline="221">FastMatrixElim::shuffleRows</referencedby>
+        <referencedby refid="testDiffusion_8cpp_1a3bcc5631b173ab2feaca0c8ed027ce9e" compoundref="testDiffusion_8cpp" startline="260" endline="293">testSorting</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2013<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classFastMatrixElim" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classFastMatrixElim" kindref="compound">FastMatrixElim</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>&lt;<sp/>double<sp/>&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" kindref="member">FastMatrixElim</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" kindref="member">FastMatrixElim</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrows,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncolumns<sp/>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFastMatrixElim_1a7651042e1325c2df7095a6e9afbf4981" kindref="member">FastMatrixElim</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classSparseMatrix" kindref="compound">SparseMatrix&lt; double &gt;</ref>&amp;<sp/>orig<sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a2d4f8de7a870a589b3a048c054281783" kindref="member">makeTestMatrix</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>test,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numCompts<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a7b41c40500ad1b6d848d4ced1a135ca8" kindref="member">buildForwardElim</ref>(<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>diag,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>fops<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a37ff32f7eb24225db49bd0fd99078003" kindref="member">buildBackwardSub</ref>(<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>diag,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>bops,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diagVal<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>we<sp/>do<sp/>stuff<sp/>to<sp/>set<sp/>up<sp/>the<sp/>Hines<sp/>ordering<sp/>of<sp/>the<sp/>matrix.</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1af840ef3842f9cf41b688245d69f29b3a" kindref="member">hinesReorder</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>parentVoxel,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>lookupOldRowsFromNew<sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a16d3f3761653a7195e48bc0cd655fe36" kindref="member">opsReorder</ref>(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>lookupOldRowsFromNew,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>ops,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diagVal<sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1ad534bd7ba1876a591d78fd1bc907441d" kindref="member">shuffleRows</ref>(</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>lookupOldRowFromNew<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a192e06a70c45285cdd6aa8625f165936" kindref="member">checkSymmetricShape</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a36553b13d33b91e760cd9caeebcdfc2b" kindref="member">operator==</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim" kindref="compound">FastMatrixElim</ref>&amp;<sp/>other<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1ad4038cd61b750948c47256485869224d" kindref="member">isSymmetric</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a863a579324087169a06f4dd48a54d410" kindref="member">setDiffusionAndTransport</ref>(</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>parentVoxel,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diffConst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>motorConst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt<sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" kindref="member">buildForDiffusion</ref>(</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>parentVoxel,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>volume,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>area,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>length,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>diffConst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>motorConst,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt<sp/>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFastMatrixElim_1a964e1311e6a9585878b934a82687ab15" kindref="member">advance</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>y,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>ops,<sp/></highlight><highlight class="comment">//has<sp/>both<sp/>fops<sp/>and<sp/>bops</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diagVal<sp/>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FastMatrixElim_8h_1a725cf7fc869d3738916ef41c6ba83ea4" kindref="member">sortByColumn</ref>(</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>col,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>entry<sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Todo:<sp/>Maintain<sp/>an<sp/>internal<sp/>vector<sp/>of<sp/>the<sp/>mapping<sp/>between<sp/>rows<sp/>so<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>output<sp/>vector<sp/>can<sp/>be<sp/>updated<sp/>in<sp/>the<sp/>right<sp/>order,<sp/>and<sp/>input<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>mapped<sp/>if<sp/>matrix<sp/>reassignment<sp/>happens.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>input<sp/>to<sp/>the<sp/>parent<sp/>class<sp/>should<sp/>just<sp/>be<sp/>a<sp/>matrix<sp/>with<sp/>diameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>connectivity<sp/>info,<sp/>and<sp/>then<sp/>the<sp/>system<sp/>spawns<sp/>out<sp/>the<sp/>ops</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>vector<sp/>depending<sp/>on<sp/>diffusion<sp/>constant.</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/FastMatrixElim.h"/>
+  </compounddef>
+</doxygen>

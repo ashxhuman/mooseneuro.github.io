@@ -1,0 +1,1673 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classHHGate" kind="class" language="C++" prot="public">
+    <compoundname>HHGate</compoundname>
+    <basecompoundref refid="classHHGateBase" prot="public" virt="non-virtual">HHGateBase</basecompoundref>
+    <includes refid="HHGate_8h" local="no">HHGate.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHHGate_1a5cfdd92f4c7542d1bc803339daffafd2" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; HHGate::A_</definition>
+        <argsstring></argsstring>
+        <name>A_</name>
+        <qualifiedname>HHGate::A_</qualifiedname>
+        <briefdescription>
+<para>The actual lookup table for calculations. Holds alpha(V). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="195" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a674932f7ba3a15a38e4fc59672d8ce68" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; HHGate::alpha_</definition>
+        <argsstring></argsstring>
+        <name>alpha_</name>
+        <qualifiedname>HHGate::alpha_</qualifiedname>
+        <briefdescription>
+<para>5 parameters for alpha </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="177" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HHGate::alphaExpr_</definition>
+        <argsstring></argsstring>
+        <name>alphaExpr_</name>
+        <qualifiedname>HHGate::alphaExpr_</qualifiedname>
+        <briefdescription>
+<para>Strings for expressions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="189" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="189" bodyend="-1"/>
+        <referencedby refid="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" compoundref="HHGate_8cpp" startline="450" endline="541">fillFromExpr</referencedby>
+        <referencedby refid="classHHGate_1a4c0225ebbfbe5feb7a0748fab2ace62b" compoundref="HHGate_8cpp" startline="543" endline="546">getAlphaExpr</referencedby>
+        <referencedby refid="classHHGate_1a687f0ff96b2dac0ac857b4bb2a975571" compoundref="HHGate_8cpp" startline="569" endline="572">getTauExpr</referencedby>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHGate_1acbea65597778334900bd339b2a1fa2cf" compoundref="HHGate_8cpp" startline="548" endline="554">setAlphaExpr</referencedby>
+        <referencedby refid="classHHGate_1a2f1a7aad4631ff0c6922b9ad8ea09e8f" compoundref="HHGate_8cpp" startline="574" endline="580">setTauExpr</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a5f2446ed4aa8181dfcfb1510f76031f2" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; HHGate::B_</definition>
+        <argsstring></argsstring>
+        <name>B_</name>
+        <qualifiedname>HHGate::B_</qualifiedname>
+        <briefdescription>
+<para>The lookup table for calculations. Holds alpha(V) + beta(V). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="198" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1abbae7b5e3968494fd30188f092b5b401" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; HHGate::beta_</definition>
+        <argsstring></argsstring>
+        <name>beta_</name>
+        <qualifiedname>HHGate::beta_</qualifiedname>
+        <briefdescription>
+<para>5 parameters for beta </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="180" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a2e126600dc670338f2a093af5b86bf16" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HHGate::betaExpr_</definition>
+        <argsstring></argsstring>
+        <name>betaExpr_</name>
+        <qualifiedname>HHGate::betaExpr_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="190" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="190" bodyend="-1"/>
+        <referencedby refid="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" compoundref="HHGate_8cpp" startline="450" endline="541">fillFromExpr</referencedby>
+        <referencedby refid="classHHGate_1a239be361b5e9c993933e5820ea6ad4b0" compoundref="HHGate_8cpp" startline="556" endline="559">getBetaExpr</referencedby>
+        <referencedby refid="classHHGate_1a9679608f80888d2e3cf04b3e4d8c97c9" compoundref="HHGate_8cpp" startline="582" endline="585">getInfExpr</referencedby>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHGate_1afb5ef943e349dad862aa5b62ac23b36c" compoundref="HHGate_8cpp" startline="561" endline="567">setBetaExpr</referencedby>
+        <referencedby refid="classHHGate_1a2f6ddfb3cce0bd2e80cc771f87e94682" compoundref="HHGate_8cpp" startline="587" endline="593">setInfExpr</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a0ce8bbaba190286be817b2833414248c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HHGate::form_</definition>
+        <argsstring></argsstring>
+        <name>form_</name>
+        <qualifiedname>HHGate::form_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag if the expressions are in tau-inf form or explicitly set 0 - not using expression, 1 - alpha/beta, 2 - tau/inf </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="193" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="193" bodyend="-1"/>
+        <referencedby refid="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" compoundref="HHGate_8cpp" startline="450" endline="541">fillFromExpr</referencedby>
+        <referencedby refid="classHHGate_1a4c0225ebbfbe5feb7a0748fab2ace62b" compoundref="HHGate_8cpp" startline="543" endline="546">getAlphaExpr</referencedby>
+        <referencedby refid="classHHGate_1a239be361b5e9c993933e5820ea6ad4b0" compoundref="HHGate_8cpp" startline="556" endline="559">getBetaExpr</referencedby>
+        <referencedby refid="classHHGate_1ab334dc41d8cd12395c61e96f3cf654db" compoundref="HHGate_8cpp" startline="595" endline="598">getForm</referencedby>
+        <referencedby refid="classHHGate_1a9679608f80888d2e3cf04b3e4d8c97c9" compoundref="HHGate_8cpp" startline="582" endline="585">getInfExpr</referencedby>
+        <referencedby refid="classHHGate_1a687f0ff96b2dac0ac857b4bb2a975571" compoundref="HHGate_8cpp" startline="569" endline="572">getTauExpr</referencedby>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHGate_1acbea65597778334900bd339b2a1fa2cf" compoundref="HHGate_8cpp" startline="548" endline="554">setAlphaExpr</referencedby>
+        <referencedby refid="classHHGate_1afb5ef943e349dad862aa5b62ac23b36c" compoundref="HHGate_8cpp" startline="561" endline="567">setBetaExpr</referencedby>
+        <referencedby refid="classHHGate_1a2f6ddfb3cce0bd2e80cc771f87e94682" compoundref="HHGate_8cpp" startline="587" endline="593">setInfExpr</referencedby>
+        <referencedby refid="classHHGate_1a2aad40f13091ca961b8c43d1c7a5785f" compoundref="HHGate_8cpp" startline="673" endline="687">setTableA</referencedby>
+        <referencedby refid="classHHGate_1a9e3678b068293ce3500783cd56504dbf" compoundref="HHGate_8cpp" startline="694" endline="707">setTableB</referencedby>
+        <referencedby refid="classHHGate_1a2f1a7aad4631ff0c6922b9ad8ea09e8f" compoundref="HHGate_8cpp" startline="574" endline="580">setTauExpr</referencedby>
+        <referencedby refid="classHHGate_1a65393346a0f47f47789d3caf50d551c2" compoundref="HHGate_8cpp" startline="720" endline="736">setupAlpha</referencedby>
+        <referencedby refid="classHHGate_1a6b4f513c2d8fcfa134f0dcefc053799f" compoundref="HHGate_8cpp" startline="912" endline="985">setupGate</referencedby>
+        <referencedby refid="classHHGate_1a98ab0d8168c669cb8d4810673139864f" compoundref="HHGate_8cpp" startline="780" endline="880">setupTables</referencedby>
+        <referencedby refid="classHHGate_1a0c91e5dbb806608cc359bd325c33cb7c" compoundref="HHGate_8cpp" startline="753" endline="763">setupTau</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1af4196b67fecdf354105acd33d4491f42" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HHGate::invDx_</definition>
+        <argsstring></argsstring>
+        <name>invDx_</name>
+        <qualifiedname>HHGate::invDx_</qualifiedname>
+        <briefdescription>
+<para>increment of the range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="207" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="207" bodyend="-1"/>
+        <referencedby refid="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" compoundref="HHGate_8cpp" startline="450" endline="541">fillFromExpr</referencedby>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHGate_1a66a3a862d4e11156f9ba0e83e17cc969" compoundref="HHGate_8cpp" startline="344" endline="367">lookupBoth</referencedby>
+        <referencedby refid="classHHGate_1aeb63915c35991b0f3a172c70b315fc7d" compoundref="HHGate_8cpp" startline="317" endline="332">lookupTable</referencedby>
+        <referencedby refid="classHHGate_1a6ecbeb88f8da694dfec21df5806a3a92" compoundref="HHGate_8cpp" startline="650" endline="666">setDivs</referencedby>
+        <referencedby refid="classHHGate_1aaf1876cbef3c9a463d956a902c224ff8" compoundref="HHGate_8cpp" startline="627" endline="643">setMax</referencedby>
+        <referencedby refid="classHHGate_1a5921949b1ffa08132280c39ce4e6070c" compoundref="HHGate_8cpp" startline="605" endline="620">setMin</referencedby>
+        <referencedby refid="classHHGate_1a2aad40f13091ca961b8c43d1c7a5785f" compoundref="HHGate_8cpp" startline="673" endline="687">setTableA</referencedby>
+        <referencedby refid="classHHGate_1a98ab0d8168c669cb8d4810673139864f" compoundref="HHGate_8cpp" startline="780" endline="880">setupTables</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a9a2d62097fbc11084310e62865b69019" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HHGate::isDirectTable_</definition>
+        <argsstring></argsstring>
+        <name>isDirectTable_</name>
+        <qualifiedname>HHGate::isDirectTable_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag to indicate if table entries have been assigned directly (as direct experimental data, or an externally defined V-dep function). When zero it means that the curve-fit forms from setupAlpha etc. have been used. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="234" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="234" bodyend="-1"/>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHGate_1a6ecbeb88f8da694dfec21df5806a3a92" compoundref="HHGate_8cpp" startline="650" endline="666">setDivs</referencedby>
+        <referencedby refid="classHHGate_1aaf1876cbef3c9a463d956a902c224ff8" compoundref="HHGate_8cpp" startline="627" endline="643">setMax</referencedby>
+        <referencedby refid="classHHGate_1a5921949b1ffa08132280c39ce4e6070c" compoundref="HHGate_8cpp" startline="605" endline="620">setMin</referencedby>
+        <referencedby refid="classHHGate_1a2aad40f13091ca961b8c43d1c7a5785f" compoundref="HHGate_8cpp" startline="673" endline="687">setTableA</referencedby>
+        <referencedby refid="classHHGate_1a9e3678b068293ce3500783cd56504dbf" compoundref="HHGate_8cpp" startline="694" endline="707">setTableB</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a6d596de13d093b699a8da7b2828ac009" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HHGate::lookupByInterpolation_</definition>
+        <argsstring></argsstring>
+        <name>lookupByInterpolation_</name>
+        <qualifiedname>HHGate::lookupByInterpolation_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag: Use linear interpolation for lookup if true, use direct table lookup if false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="226" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="226" bodyend="-1"/>
+        <referencedby refid="classHHGate_1ab12bad108636f0748e21163ec159b10f" compoundref="HHGate_8cpp" startline="709" endline="712">getUseInterpolation</referencedby>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHGate_1a66a3a862d4e11156f9ba0e83e17cc969" compoundref="HHGate_8cpp" startline="344" endline="367">lookupBoth</referencedby>
+        <referencedby refid="classHHGate_1aeb63915c35991b0f3a172c70b315fc7d" compoundref="HHGate_8cpp" startline="317" endline="332">lookupTable</referencedby>
+        <referencedby refid="classHHGate_1a070f312ef12897e23692214bd7b79d25" compoundref="HHGate_8cpp" startline="714" endline="718">setUseInterpolation</referencedby>
+        <referencedby refid="classHHGate_1a35505cf80e43bab4179cec476f3a8acb" compoundref="HHGate_8cpp" startline="997" endline="1016">tabFill</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a94decb64f731c5493da0456df0fafbb8" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; HHGate::mInfinity_</definition>
+        <argsstring></argsstring>
+        <name>mInfinity_</name>
+        <qualifiedname>HHGate::mInfinity_</qualifiedname>
+        <briefdescription>
+<para>5 parameters for mInfinity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="186" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a510b5df5ef63b6f28ae329fe0fbc4b6a" prot="private" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id HHGate::originalChanId_</definition>
+        <argsstring></argsstring>
+        <name>originalChanId_</name>
+        <qualifiedname>HHGate::originalChanId_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of original channel, the one which has actually allocated it, All other Elements have to treat the values as readonly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="213" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1adb4a47a0c2602779935a7c3050d664db" prot="private" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id HHGate::originalGateId_</definition>
+        <argsstring></argsstring>
+        <name>originalGateId_</name>
+        <qualifiedname>HHGate::originalGateId_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of original Gate, the one which was created with the original channel. All other Elements have to treat the values as readonly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="220" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a25ddd0d4abfa58d6cab123e20e65fb46" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; HHGate::tau_</definition>
+        <argsstring></argsstring>
+        <name>tau_</name>
+        <qualifiedname>HHGate::tau_</qualifiedname>
+        <briefdescription>
+<para>5 parameters for tau </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="183" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1ab5f943892cfdec943423b58846005648" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HHGate::xmax_</definition>
+        <argsstring></argsstring>
+        <name>xmax_</name>
+        <qualifiedname>HHGate::xmax_</qualifiedname>
+        <briefdescription>
+<para>Max of the voltage (or conc) range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="204" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="204" bodyend="-1"/>
+        <referencedby refid="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" compoundref="HHGate_8cpp" startline="450" endline="541">fillFromExpr</referencedby>
+        <referencedby refid="classHHGate_1aa421b01990c4ee64382a02b355231908" compoundref="HHGate_8cpp" startline="738" endline="747">getAlphaParms</referencedby>
+        <referencedby refid="classHHGate_1a98c3786a365b83d2f6160102a8fc6a4a" compoundref="HHGate_8cpp" startline="622" endline="625">getMax</referencedby>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHGate_1a66a3a862d4e11156f9ba0e83e17cc969" compoundref="HHGate_8cpp" startline="344" endline="367">lookupBoth</referencedby>
+        <referencedby refid="classHHGate_1aeb63915c35991b0f3a172c70b315fc7d" compoundref="HHGate_8cpp" startline="317" endline="332">lookupTable</referencedby>
+        <referencedby refid="classHHGate_1a6ecbeb88f8da694dfec21df5806a3a92" compoundref="HHGate_8cpp" startline="650" endline="666">setDivs</referencedby>
+        <referencedby refid="classHHGate_1aaf1876cbef3c9a463d956a902c224ff8" compoundref="HHGate_8cpp" startline="627" endline="643">setMax</referencedby>
+        <referencedby refid="classHHGate_1a5921949b1ffa08132280c39ce4e6070c" compoundref="HHGate_8cpp" startline="605" endline="620">setMin</referencedby>
+        <referencedby refid="classHHGate_1a2aad40f13091ca961b8c43d1c7a5785f" compoundref="HHGate_8cpp" startline="673" endline="687">setTableA</referencedby>
+        <referencedby refid="classHHGate_1a98ab0d8168c669cb8d4810673139864f" compoundref="HHGate_8cpp" startline="780" endline="880">setupTables</referencedby>
+        <referencedby refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGate_1a0610bc8205d9201a81826b325d853d46" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HHGate::xmin_</definition>
+        <argsstring></argsstring>
+        <name>xmin_</name>
+        <qualifiedname>HHGate::xmin_</qualifiedname>
+        <briefdescription>
+<para>Minimum of the voltage (or conc) range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="201" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="201" bodyend="-1"/>
+        <referencedby refid="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" compoundref="HHGate_8cpp" startline="450" endline="541">fillFromExpr</referencedby>
+        <referencedby refid="classHHGate_1aa421b01990c4ee64382a02b355231908" compoundref="HHGate_8cpp" startline="738" endline="747">getAlphaParms</referencedby>
+        <referencedby refid="classHHGate_1a2cf44f078f7b67331c79e38eb5872263" compoundref="HHGate_8cpp" startline="600" endline="603">getMin</referencedby>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHGate_1a66a3a862d4e11156f9ba0e83e17cc969" compoundref="HHGate_8cpp" startline="344" endline="367">lookupBoth</referencedby>
+        <referencedby refid="classHHGate_1aeb63915c35991b0f3a172c70b315fc7d" compoundref="HHGate_8cpp" startline="317" endline="332">lookupTable</referencedby>
+        <referencedby refid="classHHGate_1a6ecbeb88f8da694dfec21df5806a3a92" compoundref="HHGate_8cpp" startline="650" endline="666">setDivs</referencedby>
+        <referencedby refid="classHHGate_1aaf1876cbef3c9a463d956a902c224ff8" compoundref="HHGate_8cpp" startline="627" endline="643">setMax</referencedby>
+        <referencedby refid="classHHGate_1a5921949b1ffa08132280c39ce4e6070c" compoundref="HHGate_8cpp" startline="605" endline="620">setMin</referencedby>
+        <referencedby refid="classHHGate_1a2aad40f13091ca961b8c43d1c7a5785f" compoundref="HHGate_8cpp" startline="673" endline="687">setTableA</referencedby>
+        <referencedby refid="classHHGate_1a98ab0d8168c669cb8d4810673139864f" compoundref="HHGate_8cpp" startline="780" endline="880">setupTables</referencedby>
+        <referencedby refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classHHGate_1a97346c6474cb6dd576afbbda31f34d62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testHHGateLookup</definition>
+        <argsstring>()</argsstring>
+        <name>testHHGateLookup</name>
+        <qualifiedname>HHGate::testHHGateLookup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="36" column="17"/>
+      </memberdef>
+      <memberdef kind="friend" id="classHHGate_1a3f31dab8953f0c0e5f992ecb0e5168b6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testHHGateSetup</definition>
+        <argsstring>()</argsstring>
+        <name>testHHGateSetup</name>
+        <qualifiedname>HHGate::testHHGateSetup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="37" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHHGate_1ad2edfe17d56356a41965e0d9eb22a511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HHGate::computeTable</definition>
+        <argsstring>(string expr, double xmin, double xmax, unsigned int xdivs)</argsstring>
+        <name>computeTable</name>
+        <qualifiedname>HHGate::computeTable</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>expr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xmax</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>xdivs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="100" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::fillFromExpr</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>fillFromExpr</name>
+        <qualifiedname>HHGate::fillFromExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Fill the tables by evaluating expressions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="98" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="450" bodyend="541"/>
+        <references refid="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" compoundref="HHGate_8h" startline="189">alphaExpr_</references>
+        <references refid="classHHGate_1a2e126600dc670338f2a093af5b86bf16" compoundref="HHGate_8h" startline="190">betaExpr_</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classEref_1ab305a4ab972b50443b7d35cfd516861a" compoundref="Eref_8cpp" startline="63" endline="66">Eref::objId</references>
+        <references refid="classObjId_1a4d6f6e6b6f3c279334cf9f10a277df49" compoundref="ObjId_8cpp" startline="120" endline="123">ObjId::path</references>
+        <references refid="HHGate_8cpp_1a590f28b577395a4fd27dcf5ef78a5524" compoundref="HHGate_8cpp" startline="19">SINGULARITY</references>
+        <references refid="namespacemoose_1aea4faf9be206cc137d29ae514cf6b366" compoundref="strutil_8cpp" startline="53" endline="67">moose::trim</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a3d5917e11c2219de2eb5e42aa538a879" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HHGate::getAlpha</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getAlpha</name>
+        <qualifiedname>HHGate::getAlpha</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="76" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="369" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a4c0225ebbfbe5feb7a0748fab2ace62b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string HHGate::getAlphaExpr</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getAlphaExpr</name>
+        <qualifiedname>HHGate::getAlphaExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="86" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="543" bodyend="546"/>
+        <references refid="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" compoundref="HHGate_8h" startline="189">alphaExpr_</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1aa421b01990c4ee64382a02b355231908" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HHGate::getAlphaParms</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getAlphaParms</name>
+        <qualifiedname>HHGate::getAlphaParms</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="119" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="738" bodyend="747"/>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a49adf101e175357449ec8ae8abeeee7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HHGate::getBeta</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getBeta</name>
+        <qualifiedname>HHGate::getBeta</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="78" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="389" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a239be361b5e9c993933e5820ea6ad4b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string HHGate::getBetaExpr</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getBetaExpr</name>
+        <qualifiedname>HHGate::getBetaExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="89" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="556" bodyend="559"/>
+        <references refid="classHHGate_1a2e126600dc670338f2a093af5b86bf16" compoundref="HHGate_8h" startline="190">betaExpr_</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a8293e6d0c00a07590c6d0124ad1b8bed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int HHGate::getDivs</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getDivs</name>
+        <qualifiedname>HHGate::getDivs</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="107" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="645" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1ab334dc41d8cd12395c61e96f3cf654db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HHGate::getForm</definition>
+        <argsstring>() const</argsstring>
+        <name>getForm</name>
+        <qualifiedname>HHGate::getForm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="96" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="595" bodyend="598"/>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a9679608f80888d2e3cf04b3e4d8c97c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string HHGate::getInfExpr</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getInfExpr</name>
+        <qualifiedname>HHGate::getInfExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="95" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="582" bodyend="585"/>
+        <references refid="classHHGate_1a2e126600dc670338f2a093af5b86bf16" compoundref="HHGate_8h" startline="190">betaExpr_</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a98c3786a365b83d2f6160102a8fc6a4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HHGate::getMax</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getMax</name>
+        <qualifiedname>HHGate::getMax</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="105" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="622" bodyend="625"/>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a2cf44f078f7b67331c79e38eb5872263" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HHGate::getMin</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getMin</name>
+        <qualifiedname>HHGate::getMin</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="103" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="600" bodyend="603"/>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a8257f887c24982db6a5f30313de9ca5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HHGate::getMinfinity</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getMinfinity</name>
+        <qualifiedname>HHGate::getMinfinity</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="82" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="429" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a214919eede8c23670a964c39bb77ee87" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HHGate::getTableA</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getTableA</name>
+        <qualifiedname>HHGate::getTableA</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="110" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="668" bodyend="671"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a324793afcae2ac7164904fe41145ed8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HHGate::getTableB</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getTableB</name>
+        <qualifiedname>HHGate::getTableB</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="113" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="689" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a32bf528c8a23ef3501a5650548cbda45" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HHGate::getTau</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getTau</name>
+        <qualifiedname>HHGate::getTau</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="80" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="409" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a687f0ff96b2dac0ac857b4bb2a975571" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string HHGate::getTauExpr</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getTauExpr</name>
+        <qualifiedname>HHGate::getTauExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="92" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="569" bodyend="572"/>
+        <references refid="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" compoundref="HHGate_8h" startline="189">alphaExpr_</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1ab12bad108636f0748e21163ec159b10f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HHGate::getUseInterpolation</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getUseInterpolation</name>
+        <qualifiedname>HHGate::getUseInterpolation</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="116" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="709" bodyend="712"/>
+        <references refid="classHHGate_1a6d596de13d093b699a8da7b2828ac009" compoundref="HHGate_8h" startline="226">lookupByInterpolation_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1acda5f32905ab0d86750ee25776fd990c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HHGate::HHGate</definition>
+        <argsstring>()</argsstring>
+        <name>HHGate</name>
+        <qualifiedname>HHGate::HHGate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dummy constructor, to keep <ref refid="classDinfo" kindref="compound">Dinfo</ref> happy. Should never be used </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="43" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="283" bodyend="295"/>
+        <references refid="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" compoundref="HHGate_8h" startline="189">alphaExpr_</references>
+        <references refid="classHHGate_1a2e126600dc670338f2a093af5b86bf16" compoundref="HHGate_8h" startline="190">betaExpr_</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classHHGateBase_1a660b38c0b79b16104afe4524a2ff92ec" compoundref="HHGateBase_8cpp" startline="22" endline="27">HHGateBase::HHGateBase</references>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classHHGate_1a9a2d62097fbc11084310e62865b69019" compoundref="HHGate_8h" startline="234">isDirectTable_</references>
+        <references refid="classHHGate_1a6d596de13d093b699a8da7b2828ac009" compoundref="HHGate_8h" startline="226">lookupByInterpolation_</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HHGate::HHGate</definition>
+        <argsstring>(Id originalChanId, Id originalGateId)</argsstring>
+        <name>HHGate</name>
+        <qualifiedname>HHGate::HHGate</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>originalChanId</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>originalGateId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor is the one meant to be used. It takes the originalId of the parent <ref refid="classHHChannel" kindref="compound">HHChannel</ref> as a required argument, so that any subsequent &apos;write&apos; functions can be checked to see if they are legal. Also tracks its own <ref refid="classId" kindref="compound">Id</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="51" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="297" bodyend="311"/>
+        <references refid="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" compoundref="HHGate_8h" startline="189">alphaExpr_</references>
+        <references refid="classHHGate_1a2e126600dc670338f2a093af5b86bf16" compoundref="HHGate_8h" startline="190">betaExpr_</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</references>
+        <references refid="classHHGateBase_1a660b38c0b79b16104afe4524a2ff92ec" compoundref="HHGateBase_8cpp" startline="22" endline="27">HHGateBase::HHGateBase</references>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classHHGate_1a9a2d62097fbc11084310e62865b69019" compoundref="HHGate_8h" startline="234">isDirectTable_</references>
+        <references refid="classHHGate_1a6d596de13d093b699a8da7b2828ac009" compoundref="HHGate_8h" startline="226">lookupByInterpolation_</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate</referencedby>
+        <referencedby refid="classHHChannel_1a66ceac62368e1dc33fc408379e05e5dc" compoundref="HHChannel_8cpp" startline="121" endline="130">HHChannel::innerCreateGate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1ae2ed2ecc77430dc3bbadb786eae11c03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HHGate::lookupA</definition>
+        <argsstring>(double v) const</argsstring>
+        <name>lookupA</name>
+        <qualifiedname>HHGate::lookupA</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>lookupA: Look up the A vector from a double. Typically does so by direct scaling and offset to an integer lookup, using a fine enough table granularity that there is little error. Alternatively uses linear interpolation. The range of the double is predefined based on knowledge of voltage or conc ranges, and the granularity is specified by the xmin, xmax, and invDx fields. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="65" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="334" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a12efb713ed9eb5930dc0068835bcc4e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HHGate::lookupB</definition>
+        <argsstring>(double v) const</argsstring>
+        <name>lookupB</name>
+        <qualifiedname>HHGate::lookupB</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>lookupB: Look up the B vector from a double, similar to lookupA. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="70" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="339" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a66a3a862d4e11156f9ba0e83e17cc969" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::lookupBoth</definition>
+        <argsstring>(double v, double *A, double *B) const</argsstring>
+        <name>lookupBoth</name>
+        <qualifiedname>HHGate::lookupBoth</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>B</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Single call to get both A and B values by lookup </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="134" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="344" bodyend="367"/>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classHHGate_1a6d596de13d093b699a8da7b2828ac009" compoundref="HHGate_8h" startline="226">lookupByInterpolation_</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+        <referencedby refid="classHSolveUtils_1a2e2d6f729ab88311b21db26bf26465d2" compoundref="HSolveUtils_8cpp" startline="205" endline="252">HSolveUtils::rates</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">HHChannel::vProcess</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1aeb63915c35991b0f3a172c70b315fc7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HHGate::lookupTable</definition>
+        <argsstring>(const vector&lt; double &gt; &amp;tab, double v) const</argsstring>
+        <name>lookupTable</name>
+        <qualifiedname>HHGate::lookupTable</qualifiedname>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>tab</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns looked up value of specified table </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="142" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="317" bodyend="332"/>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classHHGate_1a6d596de13d093b699a8da7b2828ac009" compoundref="HHGate_8h" startline="226">lookupByInterpolation_</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1ac5be99e28d5bc76ab5333d11a7256458" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setAlpha</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; val)</argsstring>
+        <name>setAlpha</name>
+        <qualifiedname>HHGate::setAlpha</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="75" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="374" bodyend="387"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</references>
+        <references refid="classHHGate_1a21a6f17e5129d9202902d206b6f6d1cd" compoundref="HHGate_8cpp" startline="1022" endline="1024">updateTauMinf</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1acbea65597778334900bd339b2a1fa2cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setAlphaExpr</definition>
+        <argsstring>(const Eref &amp;e, string expr)</argsstring>
+        <name>setAlphaExpr</name>
+        <qualifiedname>HHGate::setAlphaExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>expr</declname>
+        </param>
+        <briefdescription>
+<para>Set/get expression for alpha. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="85" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="548" bodyend="554"/>
+        <references refid="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" compoundref="HHGate_8h" startline="189">alphaExpr_</references>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1afabc941732822811b7615279a0981532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setBeta</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; val)</argsstring>
+        <name>setBeta</name>
+        <qualifiedname>HHGate::setBeta</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="77" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="394" bodyend="407"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</references>
+        <references refid="classHHGate_1a21a6f17e5129d9202902d206b6f6d1cd" compoundref="HHGate_8cpp" startline="1022" endline="1024">updateTauMinf</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1afb5ef943e349dad862aa5b62ac23b36c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setBetaExpr</definition>
+        <argsstring>(const Eref &amp;e, string expr)</argsstring>
+        <name>setBetaExpr</name>
+        <qualifiedname>HHGate::setBetaExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>expr</declname>
+        </param>
+        <briefdescription>
+<para>Set/get expression for beta. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="88" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="561" bodyend="567"/>
+        <references refid="classHHGate_1a2e126600dc670338f2a093af5b86bf16" compoundref="HHGate_8h" startline="190">betaExpr_</references>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a6ecbeb88f8da694dfec21df5806a3a92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setDivs</definition>
+        <argsstring>(const Eref &amp;e, unsigned int val)</argsstring>
+        <name>setDivs</name>
+        <qualifiedname>HHGate::setDivs</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Stuff here to redo sizes.</para>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="106" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="650" bodyend="666"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classHHGate_1a9a2d62097fbc11084310e62865b69019" compoundref="HHGate_8h" startline="234">isDirectTable_</references>
+        <references refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a2f6ddfb3cce0bd2e80cc771f87e94682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setInfExpr</definition>
+        <argsstring>(const Eref &amp;e, string expr)</argsstring>
+        <name>setInfExpr</name>
+        <qualifiedname>HHGate::setInfExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>expr</declname>
+        </param>
+        <briefdescription>
+<para>Set/get expression for inf. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="94" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="587" bodyend="593"/>
+        <references refid="classHHGate_1a2e126600dc670338f2a093af5b86bf16" compoundref="HHGate_8h" startline="190">betaExpr_</references>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1aaf1876cbef3c9a463d956a902c224ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setMax</definition>
+        <argsstring>(const Eref &amp;e, double val)</argsstring>
+        <name>setMax</name>
+        <qualifiedname>HHGate::setMax</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="104" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="627" bodyend="643"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classHHGate_1a9a2d62097fbc11084310e62865b69019" compoundref="HHGate_8h" startline="234">isDirectTable_</references>
+        <references refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a5921949b1ffa08132280c39ce4e6070c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setMin</definition>
+        <argsstring>(const Eref &amp;e, double val)</argsstring>
+        <name>setMin</name>
+        <qualifiedname>HHGate::setMin</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="102" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="605" bodyend="620"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classHHGate_1a9a2d62097fbc11084310e62865b69019" compoundref="HHGate_8h" startline="234">isDirectTable_</references>
+        <references refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a4a4b8433ce126fd2e17602add06d7a85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setMinfinity</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; val)</argsstring>
+        <name>setMinfinity</name>
+        <qualifiedname>HHGate::setMinfinity</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="81" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="434" bodyend="447"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classHHGate_1afbe67756a2f75a87c5a9c23aedcc2723" compoundref="HHGate_8cpp" startline="1018" endline="1020">updateAlphaBeta</references>
+        <references refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a2aad40f13091ca961b8c43d1c7a5785f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setTableA</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; v)</argsstring>
+        <name>setTableA</name>
+        <qualifiedname>HHGate::setTableA</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="109" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="673" bodyend="687"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="classHHGate_1a9a2d62097fbc11084310e62865b69019" compoundref="HHGate_8h" startline="234">isDirectTable_</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a9e3678b068293ce3500783cd56504dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setTableB</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; v)</argsstring>
+        <name>setTableB</name>
+        <qualifiedname>HHGate::setTableB</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="112" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="694" bodyend="707"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classHHGate_1a9a2d62097fbc11084310e62865b69019" compoundref="HHGate_8h" startline="234">isDirectTable_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a7cefceaa2b6a0314178e5bdaac009e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setTau</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; val)</argsstring>
+        <name>setTau</name>
+        <qualifiedname>HHGate::setTau</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="79" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="414" bodyend="427"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classHHGate_1afbe67756a2f75a87c5a9c23aedcc2723" compoundref="HHGate_8cpp" startline="1018" endline="1020">updateAlphaBeta</references>
+        <references refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" compoundref="HHGate_8cpp" startline="1026" endline="1037">updateTables</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a2f1a7aad4631ff0c6922b9ad8ea09e8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setTauExpr</definition>
+        <argsstring>(const Eref &amp;e, string expr)</argsstring>
+        <name>setTauExpr</name>
+        <qualifiedname>HHGate::setTauExpr</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>expr</declname>
+        </param>
+        <briefdescription>
+<para>Set/get expression for tau. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="91" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="574" bodyend="580"/>
+        <references refid="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" compoundref="HHGate_8h" startline="189">alphaExpr_</references>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a65393346a0f47f47789d3caf50d551c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setupAlpha</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; parms)</argsstring>
+        <name>setupAlpha</name>
+        <qualifiedname>HHGate::setupAlpha</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>parms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="118" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="720" bodyend="736"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a6b4f513c2d8fcfa134f0dcefc053799f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setupGate</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; parms)</argsstring>
+        <name>setupGate</name>
+        <qualifiedname>HHGate::setupGate</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>parms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="127" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="912" bodyend="985"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="HHGate_8cpp_1a590f28b577395a4fd27dcf5ef78a5524" compoundref="HHGate_8cpp" startline="19">SINGULARITY</references>
+        <references refid="classHHGate_1a47e88df39d21d45b1abc6fd924a8168f" compoundref="HHGate_8cpp" startline="887" endline="910">tweakTables</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a98ab0d8168c669cb8d4810673139864f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setupTables</definition>
+        <argsstring>(const vector&lt; double &gt; &amp;parms, bool doTau)</argsstring>
+        <name>setupTables</name>
+        <qualifiedname>HHGate::setupTables</qualifiedname>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>parms</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>doTau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up the tables one at a time. Based on GENESIS/src/olf/new_interp.c, function setup_tab_values, fine tuned by Erik De Schutter. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="128" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="780" bodyend="880"/>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" compoundref="HHGate_8h" startline="207">invDx_</references>
+        <references refid="HHGate_8cpp_1a590f28b577395a4fd27dcf5ef78a5524" compoundref="HHGate_8cpp" startline="19">SINGULARITY</references>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a0c91e5dbb806608cc359bd325c33cb7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setupTau</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; parms)</argsstring>
+        <name>setupTau</name>
+        <qualifiedname>HHGate::setupTau</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>parms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="124" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="753" bodyend="763"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" compoundref="HHGate_8h" startline="193">form_</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a070f312ef12897e23692214bd7b79d25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::setUseInterpolation</definition>
+        <argsstring>(const Eref &amp;e, bool val)</argsstring>
+        <name>setUseInterpolation</name>
+        <qualifiedname>HHGate::setUseInterpolation</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="115" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="714" bodyend="718"/>
+        <references refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">HHGateBase::checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classHHGate_1a6d596de13d093b699a8da7b2828ac009" compoundref="HHGate_8h" startline="226">lookupByInterpolation_</references>
+        <referencedby refid="classHSolveUtils_1a2e2d6f729ab88311b21db26bf26465d2" compoundref="HSolveUtils_8cpp" startline="205" endline="252">HSolveUtils::rates</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a35505cf80e43bab4179cec476f3a8acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::tabFill</definition>
+        <argsstring>(vector&lt; double &gt; &amp;table, unsigned int newXdivs, double newXmin, double newXmax)</argsstring>
+        <name>tabFill</name>
+        <qualifiedname>HHGate::tabFill</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>newXdivs</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>newXmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>newXmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tabFill does interpolation and range resizing for a table representing a lookup function. newXdivs is one less than the size of the table; it is the number of subdivisions that the table represents. Does NOT alter the existing xmin and xmax, but it does resize the table.</para>
+<para>This utility function does interpolation and range resizing for a table representing a lookup function. newXdivs is one less than the size of the table; it is the number of subdivisions that the table represents. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="152" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="997" bodyend="1016"/>
+        <references refid="classHHGate_1a6d596de13d093b699a8da7b2828ac009" compoundref="HHGate_8h" startline="226">lookupByInterpolation_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a4b50d3893492cc63d8a268fb4fa6af6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::tweakAlpha</definition>
+        <argsstring>()</argsstring>
+        <name>tweakAlpha</name>
+        <qualifiedname>HHGate::tweakAlpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="125" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="765" bodyend="768"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a47e88df39d21d45b1abc6fd924a8168f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::tweakTables</definition>
+        <argsstring>(bool doTau)</argsstring>
+        <name>tweakTables</name>
+        <qualifiedname>HHGate::tweakTables</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>doTau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tweaks the A and B entries in the tables from the original alpha/beta or inf/tau values. See code in GENESIS/src/olf/new_interp.c, function tweak_tab_values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="129" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="887" bodyend="910"/>
+        <references refid="HHGate_8cpp_1a590f28b577395a4fd27dcf5ef78a5524" compoundref="HHGate_8cpp" startline="19">SINGULARITY</references>
+        <referencedby refid="classHHGate_1a6b4f513c2d8fcfa134f0dcefc053799f" compoundref="HHGate_8cpp" startline="912" endline="985">setupGate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1adc500ce2e54d03f52c5a353c2b804d14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::tweakTau</definition>
+        <argsstring>()</argsstring>
+        <name>tweakTau</name>
+        <qualifiedname>HHGate::tweakTau</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="126" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="770" bodyend="773"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1afbe67756a2f75a87c5a9c23aedcc2723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::updateAlphaBeta</definition>
+        <argsstring>()</argsstring>
+        <name>updateAlphaBeta</name>
+        <qualifiedname>HHGate::updateAlphaBeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the alpha and beta parameters because the tau or minfinity tables have changed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="165" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="1018" bodyend="1020"/>
+        <referencedby refid="classHHGate_1a4a4b8433ce126fd2e17602add06d7a85" compoundref="HHGate_8cpp" startline="434" endline="447">setMinfinity</referencedby>
+        <referencedby refid="classHHGate_1a7cefceaa2b6a0314178e5bdaac009e00" compoundref="HHGate_8cpp" startline="414" endline="427">setTau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::updateTables</definition>
+        <argsstring>()</argsstring>
+        <name>updateTables</name>
+        <qualifiedname>HHGate::updateTables</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Take the current alpha/beta parameters, and xdivs, xmin, xmax; and rebuild the tables. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="171" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="1026" bodyend="1037"/>
+        <references refid="classHHGate_1ab5f943892cfdec943423b58846005648" compoundref="HHGate_8h" startline="204">xmax_</references>
+        <references refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" compoundref="HHGate_8h" startline="201">xmin_</references>
+        <referencedby refid="classHHGate_1ac5be99e28d5bc76ab5333d11a7256458" compoundref="HHGate_8cpp" startline="374" endline="387">setAlpha</referencedby>
+        <referencedby refid="classHHGate_1afabc941732822811b7615279a0981532" compoundref="HHGate_8cpp" startline="394" endline="407">setBeta</referencedby>
+        <referencedby refid="classHHGate_1a6ecbeb88f8da694dfec21df5806a3a92" compoundref="HHGate_8cpp" startline="650" endline="666">setDivs</referencedby>
+        <referencedby refid="classHHGate_1aaf1876cbef3c9a463d956a902c224ff8" compoundref="HHGate_8cpp" startline="627" endline="643">setMax</referencedby>
+        <referencedby refid="classHHGate_1a5921949b1ffa08132280c39ce4e6070c" compoundref="HHGate_8cpp" startline="605" endline="620">setMin</referencedby>
+        <referencedby refid="classHHGate_1a4a4b8433ce126fd2e17602add06d7a85" compoundref="HHGate_8cpp" startline="434" endline="447">setMinfinity</referencedby>
+        <referencedby refid="classHHGate_1a7cefceaa2b6a0314178e5bdaac009e00" compoundref="HHGate_8cpp" startline="414" endline="427">setTau</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGate_1a21a6f17e5129d9202902d206b6f6d1cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHGate::updateTauMinf</definition>
+        <argsstring>()</argsstring>
+        <name>updateTauMinf</name>
+        <qualifiedname>HHGate::updateTauMinf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the Tau and Minfinity parameters because the alpha or beta tables have changed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="159" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="1022" bodyend="1024"/>
+        <referencedby refid="classHHGate_1ac5be99e28d5bc76ab5333d11a7256458" compoundref="HHGate_8cpp" startline="374" endline="387">setAlpha</referencedby>
+        <referencedby refid="classHHGate_1afabc941732822811b7615279a0981532" compoundref="HHGate_8cpp" startline="394" endline="407">setBeta</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classHHGate_1a3f79d6db37dc14409b861527effdf727" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * HHGate::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>HHGate::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="173" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.cpp" bodystart="21" bodyend="277"/>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <referencedby refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" compoundref="HHChannel_8cpp" startline="23" endline="67">HHChannel::initCinfo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class handles a single gate on an <ref refid="classHHChannel" kindref="compound">HHChannel</ref>. It is equivalent to the m and h terms on the Hodgkin-Huxley Na channel, or the n term on the K channel. It stores the voltage-dependence (sometimes concentration-dependence) of the gating variables for opening the channel. It does so in a tabular form which can be directly filled using experimental data points. It also provides a set of utility functions for defining the gate in functional forms, and accessing those original functional forms. The <ref refid="classHHGate" kindref="compound">HHGate</ref> is accessed as a <ref refid="classFieldElement" kindref="compound">FieldElement</ref>, which means that it is available as a pointer on the <ref refid="classHHChannel" kindref="compound">HHChannel</ref>. HHGates are typically shared. This means that when you make a copy or a vector of an <ref refid="classHHChannel" kindref="compound">HHChannel</ref>, there is only a single <ref refid="classHHGate" kindref="compound">HHGate</ref> created, and its pointer is used by all the copies. The lookup functions are thread-safe. <ref refid="classField" kindref="compound">Field</ref> assignment to the <ref refid="classHHGate" kindref="compound">HHGate</ref> should be possible only from the original <ref refid="classHHChannel" kindref="compound">HHChannel</ref>, but all the others do have read permission. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>HHGate</label>
+        <link refid="classHHGate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HHGateBase</label>
+        <link refid="classHHGateBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>HHGate</label>
+        <link refid="classHHGate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-A_</edgelabel>
+          <edgelabel>-B_</edgelabel>
+          <edgelabel>-alpha_</edgelabel>
+          <edgelabel>-beta_</edgelabel>
+          <edgelabel>-mInfinity_</edgelabel>
+          <edgelabel>-tau_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-originalChanId_</edgelabel>
+          <edgelabel>-originalGateId_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HHGateBase</label>
+        <link refid="classHHGateBase"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#originalChanId_</edgelabel>
+          <edgelabel>#originalGateId_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="6">
+        <label>T</label>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" line="35" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGate.h" bodystart="35" bodyend="235"/>
+    <listofallmembers>
+      <member refid="classHHGate_1a5cfdd92f4c7542d1bc803339daffafd2" prot="private" virt="non-virtual"><scope>HHGate</scope><name>A_</name></member>
+      <member refid="classHHGate_1a674932f7ba3a15a38e4fc59672d8ce68" prot="private" virt="non-virtual"><scope>HHGate</scope><name>alpha_</name></member>
+      <member refid="classHHGate_1a487dfe116bf8af645f73ac5948b0cb97" prot="private" virt="non-virtual"><scope>HHGate</scope><name>alphaExpr_</name></member>
+      <member refid="classHHGate_1a5f2446ed4aa8181dfcfb1510f76031f2" prot="private" virt="non-virtual"><scope>HHGate</scope><name>B_</name></member>
+      <member refid="classHHGate_1abbae7b5e3968494fd30188f092b5b401" prot="private" virt="non-virtual"><scope>HHGate</scope><name>beta_</name></member>
+      <member refid="classHHGate_1a2e126600dc670338f2a093af5b86bf16" prot="private" virt="non-virtual"><scope>HHGate</scope><name>betaExpr_</name></member>
+      <member refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" prot="public" virt="non-virtual"><scope>HHGate</scope><name>checkOriginal</name></member>
+      <member refid="classHHGate_1ad2edfe17d56356a41965e0d9eb22a511" prot="public" virt="non-virtual"><scope>HHGate</scope><name>computeTable</name></member>
+      <member refid="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" prot="public" virt="non-virtual"><scope>HHGate</scope><name>fillFromExpr</name></member>
+      <member refid="classHHGate_1a0ce8bbaba190286be817b2833414248c" prot="private" virt="non-virtual"><scope>HHGate</scope><name>form_</name></member>
+      <member refid="classHHGate_1a3d5917e11c2219de2eb5e42aa538a879" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getAlpha</name></member>
+      <member refid="classHHGate_1a4c0225ebbfbe5feb7a0748fab2ace62b" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getAlphaExpr</name></member>
+      <member refid="classHHGate_1aa421b01990c4ee64382a02b355231908" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getAlphaParms</name></member>
+      <member refid="classHHGate_1a49adf101e175357449ec8ae8abeeee7c" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getBeta</name></member>
+      <member refid="classHHGate_1a239be361b5e9c993933e5820ea6ad4b0" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getBetaExpr</name></member>
+      <member refid="classHHGate_1a8293e6d0c00a07590c6d0124ad1b8bed" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getDivs</name></member>
+      <member refid="classHHGate_1ab334dc41d8cd12395c61e96f3cf654db" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getForm</name></member>
+      <member refid="classHHGate_1a9679608f80888d2e3cf04b3e4d8c97c9" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getInfExpr</name></member>
+      <member refid="classHHGate_1a98c3786a365b83d2f6160102a8fc6a4a" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getMax</name></member>
+      <member refid="classHHGate_1a2cf44f078f7b67331c79e38eb5872263" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getMin</name></member>
+      <member refid="classHHGate_1a8257f887c24982db6a5f30313de9ca5b" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getMinfinity</name></member>
+      <member refid="classHHGate_1a214919eede8c23670a964c39bb77ee87" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getTableA</name></member>
+      <member refid="classHHGate_1a324793afcae2ac7164904fe41145ed8b" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getTableB</name></member>
+      <member refid="classHHGate_1a32bf528c8a23ef3501a5650548cbda45" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getTau</name></member>
+      <member refid="classHHGate_1a687f0ff96b2dac0ac857b4bb2a975571" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getTauExpr</name></member>
+      <member refid="classHHGate_1ab12bad108636f0748e21163ec159b10f" prot="public" virt="non-virtual"><scope>HHGate</scope><name>getUseInterpolation</name></member>
+      <member refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" prot="public" virt="non-virtual"><scope>HHGate</scope><name>HHGate</name></member>
+      <member refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" prot="public" virt="non-virtual"><scope>HHGate</scope><name>HHGate</name></member>
+      <member refid="classHHGateBase_1ac1911058c354b26abf41df915995954b" prot="public" virt="non-virtual"><scope>HHGate</scope><name>HHGateBase</name></member>
+      <member refid="classHHGateBase_1a660b38c0b79b16104afe4524a2ff92ec" prot="public" virt="non-virtual"><scope>HHGate</scope><name>HHGateBase</name></member>
+      <member refid="classHHGate_1a3f79d6db37dc14409b861527effdf727" prot="public" virt="non-virtual"><scope>HHGate</scope><name>initCinfo</name></member>
+      <member refid="classHHGate_1af4196b67fecdf354105acd33d4491f42" prot="private" virt="non-virtual"><scope>HHGate</scope><name>invDx_</name></member>
+      <member refid="classHHGate_1a9a2d62097fbc11084310e62865b69019" prot="private" virt="non-virtual"><scope>HHGate</scope><name>isDirectTable_</name></member>
+      <member refid="classHHGateBase_1a788b4f944d7e8da7965b65824a7eff10" prot="public" virt="non-virtual"><scope>HHGate</scope><name>isOriginalChannel</name></member>
+      <member refid="classHHGateBase_1a38767f0bfebaf94223c0ecc8ab7cbd25" prot="public" virt="non-virtual"><scope>HHGate</scope><name>isOriginalGate</name></member>
+      <member refid="classHHGate_1ae2ed2ecc77430dc3bbadb786eae11c03" prot="public" virt="non-virtual"><scope>HHGate</scope><name>lookupA</name></member>
+      <member refid="classHHGate_1a12efb713ed9eb5930dc0068835bcc4e3" prot="public" virt="non-virtual"><scope>HHGate</scope><name>lookupB</name></member>
+      <member refid="classHHGate_1a66a3a862d4e11156f9ba0e83e17cc969" prot="public" virt="non-virtual"><scope>HHGate</scope><name>lookupBoth</name></member>
+      <member refid="classHHGate_1a6d596de13d093b699a8da7b2828ac009" prot="private" virt="non-virtual"><scope>HHGate</scope><name>lookupByInterpolation_</name></member>
+      <member refid="classHHGate_1aeb63915c35991b0f3a172c70b315fc7d" prot="public" virt="non-virtual"><scope>HHGate</scope><name>lookupTable</name></member>
+      <member refid="classHHGate_1a94decb64f731c5493da0456df0fafbb8" prot="private" virt="non-virtual"><scope>HHGate</scope><name>mInfinity_</name></member>
+      <member refid="classHHGate_1a510b5df5ef63b6f28ae329fe0fbc4b6a" prot="private" virt="non-virtual"><scope>HHGate</scope><name>originalChanId_</name></member>
+      <member refid="classHHGateBase_1ab8f274ca8241b0778a64dacf21fa9ca8" prot="public" virt="non-virtual"><scope>HHGate</scope><name>originalChannelId</name></member>
+      <member refid="classHHGateBase_1af7ed1da0def32bc76c617dd932371174" prot="public" virt="non-virtual"><scope>HHGate</scope><name>originalGateId</name></member>
+      <member refid="classHHGate_1adb4a47a0c2602779935a7c3050d664db" prot="private" virt="non-virtual"><scope>HHGate</scope><name>originalGateId_</name></member>
+      <member refid="classHHGate_1ac5be99e28d5bc76ab5333d11a7256458" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setAlpha</name></member>
+      <member refid="classHHGate_1acbea65597778334900bd339b2a1fa2cf" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setAlphaExpr</name></member>
+      <member refid="classHHGate_1afabc941732822811b7615279a0981532" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setBeta</name></member>
+      <member refid="classHHGate_1afb5ef943e349dad862aa5b62ac23b36c" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setBetaExpr</name></member>
+      <member refid="classHHGate_1a6ecbeb88f8da694dfec21df5806a3a92" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setDivs</name></member>
+      <member refid="classHHGate_1a2f6ddfb3cce0bd2e80cc771f87e94682" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setInfExpr</name></member>
+      <member refid="classHHGate_1aaf1876cbef3c9a463d956a902c224ff8" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setMax</name></member>
+      <member refid="classHHGate_1a5921949b1ffa08132280c39ce4e6070c" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setMin</name></member>
+      <member refid="classHHGate_1a4a4b8433ce126fd2e17602add06d7a85" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setMinfinity</name></member>
+      <member refid="classHHGate_1a2aad40f13091ca961b8c43d1c7a5785f" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setTableA</name></member>
+      <member refid="classHHGate_1a9e3678b068293ce3500783cd56504dbf" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setTableB</name></member>
+      <member refid="classHHGate_1a7cefceaa2b6a0314178e5bdaac009e00" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setTau</name></member>
+      <member refid="classHHGate_1a2f1a7aad4631ff0c6922b9ad8ea09e8f" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setTauExpr</name></member>
+      <member refid="classHHGate_1a65393346a0f47f47789d3caf50d551c2" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setupAlpha</name></member>
+      <member refid="classHHGate_1a6b4f513c2d8fcfa134f0dcefc053799f" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setupGate</name></member>
+      <member refid="classHHGate_1a98ab0d8168c669cb8d4810673139864f" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setupTables</name></member>
+      <member refid="classHHGate_1a0c91e5dbb806608cc359bd325c33cb7c" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setupTau</name></member>
+      <member refid="classHHGate_1a070f312ef12897e23692214bd7b79d25" prot="public" virt="non-virtual"><scope>HHGate</scope><name>setUseInterpolation</name></member>
+      <member refid="classHHGate_1a35505cf80e43bab4179cec476f3a8acb" prot="public" virt="non-virtual"><scope>HHGate</scope><name>tabFill</name></member>
+      <member refid="classHHGate_1a25ddd0d4abfa58d6cab123e20e65fb46" prot="private" virt="non-virtual"><scope>HHGate</scope><name>tau_</name></member>
+      <member refid="classHHGate_1a97346c6474cb6dd576afbbda31f34d62" prot="private" virt="non-virtual"><scope>HHGate</scope><name>testHHGateLookup</name></member>
+      <member refid="classHHGate_1a3f31dab8953f0c0e5f992ecb0e5168b6" prot="private" virt="non-virtual"><scope>HHGate</scope><name>testHHGateSetup</name></member>
+      <member refid="classHHGate_1a4b50d3893492cc63d8a268fb4fa6af6e" prot="public" virt="non-virtual"><scope>HHGate</scope><name>tweakAlpha</name></member>
+      <member refid="classHHGate_1a47e88df39d21d45b1abc6fd924a8168f" prot="public" virt="non-virtual"><scope>HHGate</scope><name>tweakTables</name></member>
+      <member refid="classHHGate_1adc500ce2e54d03f52c5a353c2b804d14" prot="public" virt="non-virtual"><scope>HHGate</scope><name>tweakTau</name></member>
+      <member refid="classHHGate_1afbe67756a2f75a87c5a9c23aedcc2723" prot="public" virt="non-virtual"><scope>HHGate</scope><name>updateAlphaBeta</name></member>
+      <member refid="classHHGate_1a8a4f67b8bc87c73dba4ea732aaa8c3d8" prot="public" virt="non-virtual"><scope>HHGate</scope><name>updateTables</name></member>
+      <member refid="classHHGate_1a21a6f17e5129d9202902d206b6f6d1cd" prot="public" virt="non-virtual"><scope>HHGate</scope><name>updateTauMinf</name></member>
+      <member refid="classHHGate_1ab5f943892cfdec943423b58846005648" prot="private" virt="non-virtual"><scope>HHGate</scope><name>xmax_</name></member>
+      <member refid="classHHGate_1a0610bc8205d9201a81826b325d853d46" prot="private" virt="non-virtual"><scope>HHGate</scope><name>xmin_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

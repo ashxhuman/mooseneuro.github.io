@@ -1,0 +1,1017 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPulseGen" kind="class" language="C++" prot="public">
+    <compoundname>PulseGen</compoundname>
+    <includes refid="PulseGen_8h" local="no">PulseGen.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classPulseGen_1ad272eac1fd3b3be4d8e988a84a70ddd8" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int PulseGen::EXT_GATE</definition>
+        <argsstring></argsstring>
+        <name>EXT_GATE</name>
+        <qualifiedname>PulseGen::EXT_GATE</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>With trigMode = EXT_GATE, the pulse occurs firstDelay later from the leading edge of the input. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="67" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a4a87500f1c9ac90554c02b7212bb41a6" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int PulseGen::EXT_TRIG</definition>
+        <argsstring></argsstring>
+        <name>EXT_TRIG</name>
+        <qualifiedname>PulseGen::EXT_TRIG</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>With trigMode = EXT_TRIG the pulse generator may be triggered or may generate a single pulse and then stop. The logic depends on trigTime field. If trigTime is negative ( which it is by default and remains so unless there is a non zero input trigger to the <ref refid="classPulseGen" kindref="compound">PulseGen</ref> object ), the output remains at baselevel. For trigTime &gt;= 0, if there is no input trigger, the <ref refid="classPulseGen" kindref="compound">PulseGen</ref> object will produce pair of pulses, the first one starting at firstDelay and staying at firstLevel for firstWidth time. And then the second one starting at secondDelay time after the start of the first pulse, staying at secondLevel for secondWidth time. If secondDelay is less than firstWidth, there will be no second pulse. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="62" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a19372af81fffaa0e892a1190854261f6" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int PulseGen::FREE_RUN</definition>
+        <argsstring></argsstring>
+        <name>FREE_RUN</name>
+        <qualifiedname>PulseGen::FREE_RUN</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>With trigMode = FREE_RUN the pulse generator will create a train of pulses determined by the firstDealy, firstWidth, firstLevel, secondDelay, secondWidth and secondLevel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="46" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classPulseGen_1af90769c435d8304a4ee93ab06a0a717d" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PulseGen::baseLevel_</definition>
+        <argsstring></argsstring>
+        <name>baseLevel_</name>
+        <qualifiedname>PulseGen::baseLevel_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="127" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1a9a64d35d63e06a73f3890cd6a81fb62a" compoundref="PulseGen_8cpp" startline="249" endline="252">getBaseLevel</referencedby>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" compoundref="PulseGen_8cpp" startline="148" endline="164">PulseGen</referencedby>
+        <referencedby refid="classPulseGen_1a672002c48775021b791dfa0a869d4198" compoundref="PulseGen_8cpp" startline="426" endline="433">reinit</referencedby>
+        <referencedby refid="classPulseGen_1a997d23b3a1b10e5e4f81b8c973a7cbbf" compoundref="PulseGen_8cpp" startline="245" endline="248">setBaseLevel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; PulseGen::delay_</definition>
+        <argsstring></argsstring>
+        <name>delay_</name>
+        <qualifiedname>PulseGen::delay_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="122" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1ae31e2569f04eb2aaff29c4c2f2ce024a" compoundref="PulseGen_8cpp" startline="330" endline="338">getDelay</referencedby>
+        <referencedby refid="classPulseGen_1ad23625a8c4e86c61eb8e65386bf3c632" compoundref="PulseGen_8cpp" startline="195" endline="198">getFirstDelay</referencedby>
+        <referencedby refid="classPulseGen_1af96c29276931b9b3fcd71cfb51850244" compoundref="PulseGen_8cpp" startline="237" endline="243">getSecondDelay</referencedby>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" compoundref="PulseGen_8cpp" startline="148" endline="164">PulseGen</referencedby>
+        <referencedby refid="classPulseGen_1a22d170ee57f4ac973f229af76c118e73" compoundref="PulseGen_8cpp" startline="271" endline="285">setCount</referencedby>
+        <referencedby refid="classPulseGen_1ab507b0b1ef0bafdad88cceab39f05563" compoundref="PulseGen_8cpp" startline="340" endline="348">setDelay</referencedby>
+        <referencedby refid="classPulseGen_1a9e7ab86ab30a51a7343f4a9df91af0e7" compoundref="PulseGen_8cpp" startline="191" endline="194">setFirstDelay</referencedby>
+        <referencedby refid="classPulseGen_1a492c6314e8c33e52a557e7ee92360403" compoundref="PulseGen_8cpp" startline="231" endline="236">setSecondDelay</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a97ea1f320c3b7b13012bcbfa4c322822" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PulseGen::input_</definition>
+        <argsstring></argsstring>
+        <name>input_</name>
+        <qualifiedname>PulseGen::input_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="133" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1aab9bbbbc502d3ce41bc9965f77738829" compoundref="PulseGen_8cpp" startline="354" endline="357">input</referencedby>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a672002c48775021b791dfa0a869d4198" compoundref="PulseGen_8cpp" startline="426" endline="433">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; PulseGen::level_</definition>
+        <argsstring></argsstring>
+        <name>level_</name>
+        <qualifiedname>PulseGen::level_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="123" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1ac750cf0c13345289f5c8e35c630b7124" compoundref="PulseGen_8cpp" startline="287" endline="290">getCount</referencedby>
+        <referencedby refid="classPulseGen_1a1043565771ddca0f90a1f54a93bec7e3" compoundref="PulseGen_8cpp" startline="177" endline="180">getFirstLevel</referencedby>
+        <referencedby refid="classPulseGen_1af88adb7a6b0c5c2e1dae25bb11c2525f" compoundref="PulseGen_8cpp" startline="292" endline="300">getLevel</referencedby>
+        <referencedby refid="classPulseGen_1aaf6eb1d754b23d610acd06a0101273f8" compoundref="PulseGen_8cpp" startline="207" endline="214">getSecondLevel</referencedby>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" compoundref="PulseGen_8cpp" startline="148" endline="164">PulseGen</referencedby>
+        <referencedby refid="classPulseGen_1a22d170ee57f4ac973f229af76c118e73" compoundref="PulseGen_8cpp" startline="271" endline="285">setCount</referencedby>
+        <referencedby refid="classPulseGen_1a8bc5d6e00a74b1e7f59ff3007fa6396c" compoundref="PulseGen_8cpp" startline="172" endline="175">setFirstLevel</referencedby>
+        <referencedby refid="classPulseGen_1afd0fd4286e184195baf5fcaeb41fabc3" compoundref="PulseGen_8cpp" startline="302" endline="310">setLevel</referencedby>
+        <referencedby refid="classPulseGen_1acda2ba38e88486163d2e95d87377573a" compoundref="PulseGen_8cpp" startline="200" endline="205">setSecondLevel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a1b88cb57b4eb2180d57431e28296165d" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PulseGen::output_</definition>
+        <argsstring></argsstring>
+        <name>output_</name>
+        <qualifiedname>PulseGen::output_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="126" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1af964882a0f6e34e5289f7e821e4809fa" compoundref="PulseGen_8cpp" startline="261" endline="264">getOutput</referencedby>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" compoundref="PulseGen_8cpp" startline="148" endline="164">PulseGen</referencedby>
+        <referencedby refid="classPulseGen_1a672002c48775021b791dfa0a869d4198" compoundref="PulseGen_8cpp" startline="426" endline="433">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a4a17b05ac4f9993c11c9a8e554047946" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PulseGen::prevInput_</definition>
+        <argsstring></argsstring>
+        <name>prevInput_</name>
+        <qualifiedname>PulseGen::prevInput_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="132" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="132" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1ae5fc86ccd7ac17d5e7ac24c293162db5" compoundref="PulseGen_8cpp" startline="266" endline="269">getPreviousInput</referencedby>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" compoundref="PulseGen_8cpp" startline="148" endline="164">PulseGen</referencedby>
+        <referencedby refid="classPulseGen_1a672002c48775021b791dfa0a869d4198" compoundref="PulseGen_8cpp" startline="426" endline="433">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a8e921929b31d1f4968353ab51ad9f2bb" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PulseGen::secondPulse_</definition>
+        <argsstring></argsstring>
+        <name>secondPulse_</name>
+        <qualifiedname>PulseGen::secondPulse_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="130" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1aaf88444720974dedf9c2d2b0042b014d" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int PulseGen::trigMode_</definition>
+        <argsstring></argsstring>
+        <name>trigMode_</name>
+        <qualifiedname>PulseGen::trigMode_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="129" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1a24f1363368e022bac034469ed722eeaa" compoundref="PulseGen_8cpp" startline="257" endline="260">getTrigMode</referencedby>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" compoundref="PulseGen_8cpp" startline="148" endline="164">PulseGen</referencedby>
+        <referencedby refid="classPulseGen_1a17bce056c5599297e199c54695d77a07" compoundref="PulseGen_8cpp" startline="253" endline="256">setTrigMode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1a9c56b1290fef5876603d428a655c31ce" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PulseGen::trigTime_</definition>
+        <argsstring></argsstring>
+        <name>trigTime_</name>
+        <qualifiedname>PulseGen::trigTime_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="128" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" compoundref="PulseGen_8cpp" startline="148" endline="164">PulseGen</referencedby>
+        <referencedby refid="classPulseGen_1a672002c48775021b791dfa0a869d4198" compoundref="PulseGen_8cpp" startline="426" endline="433">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; PulseGen::width_</definition>
+        <argsstring></argsstring>
+        <name>width_</name>
+        <qualifiedname>PulseGen::width_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="124" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="classPulseGen_1aa5c15ef3007ba1ebceef312759dfe85b" compoundref="PulseGen_8cpp" startline="187" endline="190">getFirstWidth</referencedby>
+        <referencedby refid="classPulseGen_1a77e40891c8ebf1fdd1cd6553f817b689" compoundref="PulseGen_8cpp" startline="223" endline="230">getSecondWidth</referencedby>
+        <referencedby refid="classPulseGen_1aa682e1fecb9d6350c1c838fc64a00945" compoundref="PulseGen_8cpp" startline="312" endline="320">getWidth</referencedby>
+        <referencedby refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</referencedby>
+        <referencedby refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" compoundref="PulseGen_8cpp" startline="148" endline="164">PulseGen</referencedby>
+        <referencedby refid="classPulseGen_1a22d170ee57f4ac973f229af76c118e73" compoundref="PulseGen_8cpp" startline="271" endline="285">setCount</referencedby>
+        <referencedby refid="classPulseGen_1ac369666e8e57ece1b72a49d2bfb18981" compoundref="PulseGen_8cpp" startline="182" endline="185">setFirstWidth</referencedby>
+        <referencedby refid="classPulseGen_1a2bc25662bde631157c71b5d5a672b454" compoundref="PulseGen_8cpp" startline="216" endline="221">setSecondWidth</referencedby>
+        <referencedby refid="classPulseGen_1a5b2185d6c7b6b1549e62b21a13366376" compoundref="PulseGen_8cpp" startline="321" endline="329">setWidth</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPulseGen_1a9a64d35d63e06a73f3890cd6a81fb62a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getBaseLevel</definition>
+        <argsstring>() const</argsstring>
+        <name>getBaseLevel</name>
+        <qualifiedname>PulseGen::getBaseLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="93" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="249" bodyend="252"/>
+        <references refid="classPulseGen_1af90769c435d8304a4ee93ab06a0a717d" compoundref="PulseGen_8h" startline="127">baseLevel_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1ac750cf0c13345289f5c8e35c630b7124" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int PulseGen::getCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getCount</name>
+        <qualifiedname>PulseGen::getCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="100" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="287" bodyend="290"/>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1ae31e2569f04eb2aaff29c4c2f2ce024a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getDelay</definition>
+        <argsstring>(unsigned int index) const</argsstring>
+        <name>getDelay</name>
+        <qualifiedname>PulseGen::getDelay</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="105" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="330" bodyend="338"/>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1ad23625a8c4e86c61eb8e65386bf3c632" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getFirstDelay</definition>
+        <argsstring>() const</argsstring>
+        <name>getFirstDelay</name>
+        <qualifiedname>PulseGen::getFirstDelay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="81" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="195" bodyend="198"/>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a1043565771ddca0f90a1f54a93bec7e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getFirstLevel</definition>
+        <argsstring>() const</argsstring>
+        <name>getFirstLevel</name>
+        <qualifiedname>PulseGen::getFirstLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="85" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="177" bodyend="180"/>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1aa5c15ef3007ba1ebceef312759dfe85b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getFirstWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>getFirstWidth</name>
+        <qualifiedname>PulseGen::getFirstWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="83" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="187" bodyend="190"/>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1af88adb7a6b0c5c2e1dae25bb11c2525f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getLevel</definition>
+        <argsstring>(unsigned int index) const</argsstring>
+        <name>getLevel</name>
+        <qualifiedname>PulseGen::getLevel</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="106" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="292" bodyend="300"/>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1af964882a0f6e34e5289f7e821e4809fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getOutput</definition>
+        <argsstring>() const</argsstring>
+        <name>getOutput</name>
+        <qualifiedname>PulseGen::getOutput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="96" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="261" bodyend="264"/>
+        <references refid="classPulseGen_1a1b88cb57b4eb2180d57431e28296165d" compoundref="PulseGen_8h" startline="126">output_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1ae5fc86ccd7ac17d5e7ac24c293162db5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getPreviousInput</definition>
+        <argsstring>() const</argsstring>
+        <name>getPreviousInput</name>
+        <qualifiedname>PulseGen::getPreviousInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="98" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="266" bodyend="269"/>
+        <references refid="classPulseGen_1a4a17b05ac4f9993c11c9a8e554047946" compoundref="PulseGen_8h" startline="132">prevInput_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1af96c29276931b9b3fcd71cfb51850244" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getSecondDelay</definition>
+        <argsstring>() const</argsstring>
+        <name>getSecondDelay</name>
+        <qualifiedname>PulseGen::getSecondDelay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="87" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="237" bodyend="243"/>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1aaf6eb1d754b23d610acd06a0101273f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getSecondLevel</definition>
+        <argsstring>() const</argsstring>
+        <name>getSecondLevel</name>
+        <qualifiedname>PulseGen::getSecondLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="91" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="207" bodyend="214"/>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a77e40891c8ebf1fdd1cd6553f817b689" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getSecondWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>getSecondWidth</name>
+        <qualifiedname>PulseGen::getSecondWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="89" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="223" bodyend="230"/>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a24f1363368e022bac034469ed722eeaa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int PulseGen::getTrigMode</definition>
+        <argsstring>() const</argsstring>
+        <name>getTrigMode</name>
+        <qualifiedname>PulseGen::getTrigMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="95" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="257" bodyend="260"/>
+        <references refid="classPulseGen_1aaf88444720974dedf9c2d2b0042b014d" compoundref="PulseGen_8h" startline="129">trigMode_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a39e4581a780fdff0ef6bafde547ae5fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getTrigTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getTrigTime</name>
+        <qualifiedname>PulseGen::getTrigTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="97" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1aa682e1fecb9d6350c1c838fc64a00945" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PulseGen::getWidth</definition>
+        <argsstring>(unsigned int index) const</argsstring>
+        <name>getWidth</name>
+        <qualifiedname>PulseGen::getWidth</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="104" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="312" bodyend="320"/>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1aab9bbbbc502d3ce41bc9965f77738829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::input</definition>
+        <argsstring>(double input)</argsstring>
+        <name>input</name>
+        <qualifiedname>PulseGen::input</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="112" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="354" bodyend="357"/>
+        <references refid="classPulseGen_1a97ea1f320c3b7b13012bcbfa4c322822" compoundref="PulseGen_8h" startline="133">input_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::process</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>process</name>
+        <qualifiedname>PulseGen::process</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="114" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="359" bodyend="424"/>
+        <references refid="classPulseGen_1af90769c435d8304a4ee93ab06a0a717d" compoundref="PulseGen_8h" startline="127">baseLevel_</references>
+        <references refid="classProcInfo_1a6343499a8c6e17affc28b69181d2b2cb" compoundref="ProcInfo_8h" startline="19">ProcInfo::currTime</references>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <references refid="classPulseGen_1ad272eac1fd3b3be4d8e988a84a70ddd8" compoundref="PulseGen_8h" startline="67">EXT_GATE</references>
+        <references refid="classPulseGen_1a4a87500f1c9ac90554c02b7212bb41a6" compoundref="PulseGen_8h" startline="62">EXT_TRIG</references>
+        <references refid="classPulseGen_1a19372af81fffaa0e892a1190854261f6" compoundref="PulseGen_8h" startline="46">FREE_RUN</references>
+        <references refid="classPulseGen_1a97ea1f320c3b7b13012bcbfa4c322822" compoundref="PulseGen_8h" startline="133">input_</references>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <references refid="classPulseGen_1a1b88cb57b4eb2180d57431e28296165d" compoundref="PulseGen_8h" startline="126">output_</references>
+        <references refid="PulseGen_8cpp_1a502f6b6b4b9682ab7bc5bdfd828f9016" compoundref="PulseGen_8cpp" startline="35" endline="39">outputOut</references>
+        <references refid="classPulseGen_1a4a17b05ac4f9993c11c9a8e554047946" compoundref="PulseGen_8h" startline="132">prevInput_</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <references refid="classPulseGen_1aaf88444720974dedf9c2d2b0042b014d" compoundref="PulseGen_8h" startline="129">trigMode_</references>
+        <references refid="classPulseGen_1a9c56b1290fef5876603d428a655c31ce" compoundref="PulseGen_8h" startline="128">trigTime_</references>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PulseGen::PulseGen</definition>
+        <argsstring>()</argsstring>
+        <name>PulseGen</name>
+        <qualifiedname>PulseGen::PulseGen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="73" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="148" bodyend="164"/>
+        <references refid="classPulseGen_1af90769c435d8304a4ee93ab06a0a717d" compoundref="PulseGen_8h" startline="127">baseLevel_</references>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <references refid="classPulseGen_1a1b88cb57b4eb2180d57431e28296165d" compoundref="PulseGen_8h" startline="126">output_</references>
+        <references refid="classPulseGen_1a4a17b05ac4f9993c11c9a8e554047946" compoundref="PulseGen_8h" startline="132">prevInput_</references>
+        <references refid="classPulseGen_1aaf88444720974dedf9c2d2b0042b014d" compoundref="PulseGen_8h" startline="129">trigMode_</references>
+        <references refid="classPulseGen_1a9c56b1290fef5876603d428a655c31ce" compoundref="PulseGen_8h" startline="128">trigTime_</references>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a672002c48775021b791dfa0a869d4198" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::reinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>reinit</name>
+        <qualifiedname>PulseGen::reinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="116" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="426" bodyend="433"/>
+        <references refid="classPulseGen_1af90769c435d8304a4ee93ab06a0a717d" compoundref="PulseGen_8h" startline="127">baseLevel_</references>
+        <references refid="classPulseGen_1a97ea1f320c3b7b13012bcbfa4c322822" compoundref="PulseGen_8h" startline="133">input_</references>
+        <references refid="classPulseGen_1a1b88cb57b4eb2180d57431e28296165d" compoundref="PulseGen_8h" startline="126">output_</references>
+        <references refid="PulseGen_8cpp_1a502f6b6b4b9682ab7bc5bdfd828f9016" compoundref="PulseGen_8cpp" startline="35" endline="39">outputOut</references>
+        <references refid="classPulseGen_1a4a17b05ac4f9993c11c9a8e554047946" compoundref="PulseGen_8h" startline="132">prevInput_</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <references refid="classPulseGen_1a9c56b1290fef5876603d428a655c31ce" compoundref="PulseGen_8h" startline="128">trigTime_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a997d23b3a1b10e5e4f81b8c973a7cbbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setBaseLevel</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setBaseLevel</name>
+        <qualifiedname>PulseGen::setBaseLevel</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="92" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="245" bodyend="248"/>
+        <references refid="classPulseGen_1af90769c435d8304a4ee93ab06a0a717d" compoundref="PulseGen_8h" startline="127">baseLevel_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a22d170ee57f4ac973f229af76c118e73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setCount</definition>
+        <argsstring>(unsigned int count)</argsstring>
+        <name>setCount</name>
+        <qualifiedname>PulseGen::setCount</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="99" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="271" bodyend="285"/>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1ab507b0b1ef0bafdad88cceab39f05563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setDelay</definition>
+        <argsstring>(unsigned int pulseNo, double delay)</argsstring>
+        <name>setDelay</name>
+        <qualifiedname>PulseGen::setDelay</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pulseNo</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="103" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="340" bodyend="348"/>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a9e7ab86ab30a51a7343f4a9df91af0e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setFirstDelay</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setFirstDelay</name>
+        <qualifiedname>PulseGen::setFirstDelay</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="80" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="191" bodyend="194"/>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a8bc5d6e00a74b1e7f59ff3007fa6396c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setFirstLevel</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setFirstLevel</name>
+        <qualifiedname>PulseGen::setFirstLevel</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="84" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="172" bodyend="175"/>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1ac369666e8e57ece1b72a49d2bfb18981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setFirstWidth</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setFirstWidth</name>
+        <qualifiedname>PulseGen::setFirstWidth</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="82" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="182" bodyend="185"/>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1afd0fd4286e184195baf5fcaeb41fabc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setLevel</definition>
+        <argsstring>(unsigned int pulseNo, double level)</argsstring>
+        <name>setLevel</name>
+        <qualifiedname>PulseGen::setLevel</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pulseNo</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="101" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="302" bodyend="310"/>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a492c6314e8c33e52a557e7ee92360403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setSecondDelay</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setSecondDelay</name>
+        <qualifiedname>PulseGen::setSecondDelay</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="86" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="231" bodyend="236"/>
+        <references refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" compoundref="PulseGen_8h" startline="122">delay_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1acda2ba38e88486163d2e95d87377573a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setSecondLevel</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setSecondLevel</name>
+        <qualifiedname>PulseGen::setSecondLevel</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="90" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="200" bodyend="205"/>
+        <references refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" compoundref="PulseGen_8h" startline="123">level_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a2bc25662bde631157c71b5d5a672b454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setSecondWidth</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setSecondWidth</name>
+        <qualifiedname>PulseGen::setSecondWidth</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="88" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="216" bodyend="221"/>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a17bce056c5599297e199c54695d77a07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setTrigMode</definition>
+        <argsstring>(unsigned int value)</argsstring>
+        <name>setTrigMode</name>
+        <qualifiedname>PulseGen::setTrigMode</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="94" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="253" bodyend="256"/>
+        <references refid="classPulseGen_1aaf88444720974dedf9c2d2b0042b014d" compoundref="PulseGen_8h" startline="129">trigMode_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1a5b2185d6c7b6b1549e62b21a13366376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PulseGen::setWidth</definition>
+        <argsstring>(unsigned int pulseNo, double width)</argsstring>
+        <name>setWidth</name>
+        <qualifiedname>PulseGen::setWidth</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pulseNo</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="102" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="321" bodyend="329"/>
+        <references refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" compoundref="PulseGen_8h" startline="124">width_</references>
+        <referencedby refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" compoundref="PulseGen_8cpp" startline="41" endline="144">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPulseGen_1ae42576540ac38b0b808b56dae9cbcf87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PulseGen::~PulseGen</definition>
+        <argsstring>()</argsstring>
+        <name>~PulseGen</name>
+        <qualifiedname>PulseGen::~PulseGen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="74" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="166" bodyend="170"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * PulseGen::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>PulseGen::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="119" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.cpp" bodystart="41" bodyend="144"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classPulseGen_1a9a64d35d63e06a73f3890cd6a81fb62a" compoundref="PulseGen_8cpp" startline="249" endline="252">getBaseLevel</references>
+        <references refid="classPulseGen_1ac750cf0c13345289f5c8e35c630b7124" compoundref="PulseGen_8cpp" startline="287" endline="290">getCount</references>
+        <references refid="classPulseGen_1ae31e2569f04eb2aaff29c4c2f2ce024a" compoundref="PulseGen_8cpp" startline="330" endline="338">getDelay</references>
+        <references refid="classPulseGen_1ad23625a8c4e86c61eb8e65386bf3c632" compoundref="PulseGen_8cpp" startline="195" endline="198">getFirstDelay</references>
+        <references refid="classPulseGen_1a1043565771ddca0f90a1f54a93bec7e3" compoundref="PulseGen_8cpp" startline="177" endline="180">getFirstLevel</references>
+        <references refid="classPulseGen_1aa5c15ef3007ba1ebceef312759dfe85b" compoundref="PulseGen_8cpp" startline="187" endline="190">getFirstWidth</references>
+        <references refid="classPulseGen_1af88adb7a6b0c5c2e1dae25bb11c2525f" compoundref="PulseGen_8cpp" startline="292" endline="300">getLevel</references>
+        <references refid="classPulseGen_1af964882a0f6e34e5289f7e821e4809fa" compoundref="PulseGen_8cpp" startline="261" endline="264">getOutput</references>
+        <references refid="classPulseGen_1af96c29276931b9b3fcd71cfb51850244" compoundref="PulseGen_8cpp" startline="237" endline="243">getSecondDelay</references>
+        <references refid="classPulseGen_1aaf6eb1d754b23d610acd06a0101273f8" compoundref="PulseGen_8cpp" startline="207" endline="214">getSecondLevel</references>
+        <references refid="classPulseGen_1a77e40891c8ebf1fdd1cd6553f817b689" compoundref="PulseGen_8cpp" startline="223" endline="230">getSecondWidth</references>
+        <references refid="classPulseGen_1a24f1363368e022bac034469ed722eeaa" compoundref="PulseGen_8cpp" startline="257" endline="260">getTrigMode</references>
+        <references refid="classPulseGen_1aa682e1fecb9d6350c1c838fc64a00945" compoundref="PulseGen_8cpp" startline="312" endline="320">getWidth</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classPulseGen_1aab9bbbbc502d3ce41bc9965f77738829" compoundref="PulseGen_8cpp" startline="354" endline="357">input</references>
+        <references refid="classLookupValueFinfo_1ae091b10e988ce9da6099127e1374293b" compoundref="LookupValueFinfo_8h" startline="46" endline="62">LookupValueFinfo&lt; T, L, F &gt;::LookupValueFinfo</references>
+        <references refid="classOpFunc1_1abc0aeb50c1657a6777c508d17c872809" compoundref="OpFunc_8h" startline="31" endline="33">OpFunc1&lt; T, A &gt;::OpFunc1</references>
+        <references refid="classOpFunc2_1ab65f04db60efc5074270db7e1cd73232" compoundref="OpFunc_8h" startline="46" endline="48">OpFunc2&lt; T, A1, A2 &gt;::OpFunc2</references>
+        <references refid="PulseGen_8cpp_1a502f6b6b4b9682ab7bc5bdfd828f9016" compoundref="PulseGen_8cpp" startline="35" endline="39">outputOut</references>
+        <references refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" compoundref="PulseGen_8cpp" startline="359" endline="424">process</references>
+        <references refid="classProcOpFunc_1a09abf4cb6cd3d1ed513fee1ed18054f4" compoundref="ProcOpFunc_8h" startline="76" endline="78">ProcOpFunc&lt; T &gt;::ProcOpFunc</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classPulseGen_1a672002c48775021b791dfa0a869d4198" compoundref="PulseGen_8cpp" startline="426" endline="433">reinit</references>
+        <references refid="classPulseGen_1a997d23b3a1b10e5e4f81b8c973a7cbbf" compoundref="PulseGen_8cpp" startline="245" endline="248">setBaseLevel</references>
+        <references refid="classPulseGen_1a22d170ee57f4ac973f229af76c118e73" compoundref="PulseGen_8cpp" startline="271" endline="285">setCount</references>
+        <references refid="classPulseGen_1ab507b0b1ef0bafdad88cceab39f05563" compoundref="PulseGen_8cpp" startline="340" endline="348">setDelay</references>
+        <references refid="classPulseGen_1a9e7ab86ab30a51a7343f4a9df91af0e7" compoundref="PulseGen_8cpp" startline="191" endline="194">setFirstDelay</references>
+        <references refid="classPulseGen_1a8bc5d6e00a74b1e7f59ff3007fa6396c" compoundref="PulseGen_8cpp" startline="172" endline="175">setFirstLevel</references>
+        <references refid="classPulseGen_1ac369666e8e57ece1b72a49d2bfb18981" compoundref="PulseGen_8cpp" startline="182" endline="185">setFirstWidth</references>
+        <references refid="classPulseGen_1afd0fd4286e184195baf5fcaeb41fabc3" compoundref="PulseGen_8cpp" startline="302" endline="310">setLevel</references>
+        <references refid="classPulseGen_1a492c6314e8c33e52a557e7ee92360403" compoundref="PulseGen_8cpp" startline="231" endline="236">setSecondDelay</references>
+        <references refid="classPulseGen_1acda2ba38e88486163d2e95d87377573a" compoundref="PulseGen_8cpp" startline="200" endline="205">setSecondLevel</references>
+        <references refid="classPulseGen_1a2bc25662bde631157c71b5d5a672b454" compoundref="PulseGen_8cpp" startline="216" endline="221">setSecondWidth</references>
+        <references refid="classPulseGen_1a17bce056c5599297e199c54695d77a07" compoundref="PulseGen_8cpp" startline="253" endline="256">setTrigMode</references>
+        <references refid="classPulseGen_1a5b2185d6c7b6b1549e62b21a13366376" compoundref="PulseGen_8cpp" startline="321" endline="329">setWidth</references>
+        <references refid="classSharedFinfo_1a64b94efcbd56f0e785f92d027541ae29" compoundref="SharedFinfo_8cpp" startline="16" endline="30">SharedFinfo::SharedFinfo</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classPulseGen" kindref="compound">PulseGen</ref> acts as a pulse generator. It generates square pulses of specified duration and amplitude. Two consecutive pulses are separated by specified delay. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>PulseGen</label>
+        <link refid="classPulseGen"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#delay_</edgelabel>
+          <edgelabel>#level_</edgelabel>
+          <edgelabel>#width_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" line="40" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/device/PulseGen.h" bodystart="40" bodyend="134"/>
+    <listofallmembers>
+      <member refid="classPulseGen_1af90769c435d8304a4ee93ab06a0a717d" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>baseLevel_</name></member>
+      <member refid="classPulseGen_1a8d96f4caa6f63c0703dd3ff226852d2c" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>delay_</name></member>
+      <member refid="classPulseGen_1ad272eac1fd3b3be4d8e988a84a70ddd8" prot="private" virt="non-virtual"><scope>PulseGen</scope><name>EXT_GATE</name></member>
+      <member refid="classPulseGen_1a4a87500f1c9ac90554c02b7212bb41a6" prot="private" virt="non-virtual"><scope>PulseGen</scope><name>EXT_TRIG</name></member>
+      <member refid="classPulseGen_1a19372af81fffaa0e892a1190854261f6" prot="private" virt="non-virtual"><scope>PulseGen</scope><name>FREE_RUN</name></member>
+      <member refid="classPulseGen_1a9a64d35d63e06a73f3890cd6a81fb62a" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getBaseLevel</name></member>
+      <member refid="classPulseGen_1ac750cf0c13345289f5c8e35c630b7124" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getCount</name></member>
+      <member refid="classPulseGen_1ae31e2569f04eb2aaff29c4c2f2ce024a" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getDelay</name></member>
+      <member refid="classPulseGen_1ad23625a8c4e86c61eb8e65386bf3c632" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getFirstDelay</name></member>
+      <member refid="classPulseGen_1a1043565771ddca0f90a1f54a93bec7e3" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getFirstLevel</name></member>
+      <member refid="classPulseGen_1aa5c15ef3007ba1ebceef312759dfe85b" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getFirstWidth</name></member>
+      <member refid="classPulseGen_1af88adb7a6b0c5c2e1dae25bb11c2525f" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getLevel</name></member>
+      <member refid="classPulseGen_1af964882a0f6e34e5289f7e821e4809fa" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getOutput</name></member>
+      <member refid="classPulseGen_1ae5fc86ccd7ac17d5e7ac24c293162db5" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getPreviousInput</name></member>
+      <member refid="classPulseGen_1af96c29276931b9b3fcd71cfb51850244" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getSecondDelay</name></member>
+      <member refid="classPulseGen_1aaf6eb1d754b23d610acd06a0101273f8" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getSecondLevel</name></member>
+      <member refid="classPulseGen_1a77e40891c8ebf1fdd1cd6553f817b689" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getSecondWidth</name></member>
+      <member refid="classPulseGen_1a24f1363368e022bac034469ed722eeaa" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getTrigMode</name></member>
+      <member refid="classPulseGen_1a39e4581a780fdff0ef6bafde547ae5fc" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getTrigTime</name></member>
+      <member refid="classPulseGen_1aa682e1fecb9d6350c1c838fc64a00945" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>getWidth</name></member>
+      <member refid="classPulseGen_1a530cf5676b9787486826b5fa29e5b3b6" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>initCinfo</name></member>
+      <member refid="classPulseGen_1aab9bbbbc502d3ce41bc9965f77738829" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>input</name></member>
+      <member refid="classPulseGen_1a97ea1f320c3b7b13012bcbfa4c322822" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>input_</name></member>
+      <member refid="classPulseGen_1a7bc7c148d6392065c4f829c84418c5da" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>level_</name></member>
+      <member refid="classPulseGen_1a1b88cb57b4eb2180d57431e28296165d" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>output_</name></member>
+      <member refid="classPulseGen_1a4a17b05ac4f9993c11c9a8e554047946" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>prevInput_</name></member>
+      <member refid="classPulseGen_1afd1f5c9590b5df53007cb3f8e5bea2af" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>process</name></member>
+      <member refid="classPulseGen_1a47c9c137edb8436c1f64d54026c6883c" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>PulseGen</name></member>
+      <member refid="classPulseGen_1a672002c48775021b791dfa0a869d4198" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>reinit</name></member>
+      <member refid="classPulseGen_1a8e921929b31d1f4968353ab51ad9f2bb" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>secondPulse_</name></member>
+      <member refid="classPulseGen_1a997d23b3a1b10e5e4f81b8c973a7cbbf" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setBaseLevel</name></member>
+      <member refid="classPulseGen_1a22d170ee57f4ac973f229af76c118e73" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setCount</name></member>
+      <member refid="classPulseGen_1ab507b0b1ef0bafdad88cceab39f05563" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setDelay</name></member>
+      <member refid="classPulseGen_1a9e7ab86ab30a51a7343f4a9df91af0e7" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setFirstDelay</name></member>
+      <member refid="classPulseGen_1a8bc5d6e00a74b1e7f59ff3007fa6396c" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setFirstLevel</name></member>
+      <member refid="classPulseGen_1ac369666e8e57ece1b72a49d2bfb18981" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setFirstWidth</name></member>
+      <member refid="classPulseGen_1afd0fd4286e184195baf5fcaeb41fabc3" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setLevel</name></member>
+      <member refid="classPulseGen_1a492c6314e8c33e52a557e7ee92360403" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setSecondDelay</name></member>
+      <member refid="classPulseGen_1acda2ba38e88486163d2e95d87377573a" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setSecondLevel</name></member>
+      <member refid="classPulseGen_1a2bc25662bde631157c71b5d5a672b454" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setSecondWidth</name></member>
+      <member refid="classPulseGen_1a17bce056c5599297e199c54695d77a07" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setTrigMode</name></member>
+      <member refid="classPulseGen_1a5b2185d6c7b6b1549e62b21a13366376" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>setWidth</name></member>
+      <member refid="classPulseGen_1aaf88444720974dedf9c2d2b0042b014d" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>trigMode_</name></member>
+      <member refid="classPulseGen_1a9c56b1290fef5876603d428a655c31ce" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>trigTime_</name></member>
+      <member refid="classPulseGen_1ac45d5f26e540bc062cd135a86bcd81dc" prot="protected" virt="non-virtual"><scope>PulseGen</scope><name>width_</name></member>
+      <member refid="classPulseGen_1ae42576540ac38b0b808b56dae9cbcf87" prot="public" virt="non-virtual"><scope>PulseGen</scope><name>~PulseGen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

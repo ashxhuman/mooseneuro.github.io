@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classXferInfo" kind="class" language="C++" prot="public">
+    <compoundname>XferInfo</compoundname>
+    <includes refid="XferInfo_8h" local="no">XferInfo.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classXferInfo_1a6c5b6b9ac1453c054814028da6004d0e" prot="public" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id XferInfo::ksolve</definition>
+        <argsstring></argsstring>
+        <name>ksolve</name>
+        <qualifiedname>XferInfo::ksolve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of <ref refid="classKsolve" kindref="compound">Ksolve</ref> that particpates in this set of cross-compartment reactions with self. This is used to identify with <ref refid="classXferInfo" kindref="compound">XferInfo</ref> to use for a given incoming message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" line="60" column="4" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classXferInfo_1abcfcec38633ba8e34c43dc7070fa6212" compoundref="XferInfo_8h" startline="19" endline="21">XferInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classXferInfo_1aa4bf3d88d7638a0ec700414eec1f95c2" prot="public" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; XferInfo::lastValues</definition>
+        <argsstring></argsstring>
+        <name>lastValues</name>
+        <qualifiedname>XferInfo::lastValues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of the pool.n values participating in cross-compartment reactions. Retains the value from previous clock tick. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" line="32" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classGssaVoxelPools_1aace8f5b93c2890d5f5da51395856f06a" compoundref="GssaVoxelPools_8cpp" startline="342" endline="376">GssaVoxelPools::xferIn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classXferInfo_1ab0838eb57a9963a2622948e815ec74f4" prot="public" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; XferInfo::subzero</definition>
+        <argsstring></argsstring>
+        <name>subzero</name>
+        <qualifiedname>XferInfo::subzero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of cases where last transfer in led to a negative concentration. Track the negative value for correction in the next cycle should the remainder become positive. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" line="39" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classGssaVoxelPools_1aace8f5b93c2890d5f5da51395856f06a" compoundref="GssaVoxelPools_8cpp" startline="342" endline="376">GssaVoxelPools::xferIn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classXferInfo_1aa163407c599bf58b222f83fda053aa0a" prot="public" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; XferInfo::values</definition>
+        <argsstring></argsstring>
+        <name>values</name>
+        <qualifiedname>XferInfo::values</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of the pool.n values participating in cross-compartment reactions. Latest values that have just come in. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" line="27" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classGssaVoxelPools_1aace8f5b93c2890d5f5da51395856f06a" compoundref="GssaVoxelPools_8cpp" startline="342" endline="376">GssaVoxelPools::xferIn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classXferInfo_1a684481cfca3f73d2cb947145f6539bd1" prot="public" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; XferInfo::xferPoolIdx</definition>
+        <argsstring></argsstring>
+        <name>xferPoolIdx</name>
+        <qualifiedname>XferInfo::xferPoolIdx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of the internal indices of pools involved in cross- compartment reactions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" line="45" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classGssaVoxelPools_1aace8f5b93c2890d5f5da51395856f06a" compoundref="GssaVoxelPools_8cpp" startline="342" endline="376">GssaVoxelPools::xferIn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classXferInfo_1a7e943641774812fa5453e4be3f9b1ac0" prot="public" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; XferInfo::xferVoxel</definition>
+        <argsstring></argsstring>
+        <name>xferVoxel</name>
+        <qualifiedname>XferInfo::xferVoxel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of voxels that particpate in junctions with the communicating ksolve. This is a subset of the total number of voxels. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" line="52" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classXferInfo_1abcfcec38633ba8e34c43dc7070fa6212" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>XferInfo::XferInfo</definition>
+        <argsstring>(Id ks)</argsstring>
+        <name>XferInfo</name>
+        <qualifiedname>XferInfo::XferInfo</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>ks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" line="19" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" bodystart="19" bodyend="21"/>
+        <references refid="classXferInfo_1a6c5b6b9ac1453c054814028da6004d0e" compoundref="XferInfo_8h" startline="60">ksolve</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Utility class holding the information required for setting up the data transfers needed on each timestep for the cross-solver reactions. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>XferInfo</label>
+        <link refid="classXferInfo"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+lastValues</edgelabel>
+          <edgelabel>+subzero</edgelabel>
+          <edgelabel>+values</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+xferPoolIdx</edgelabel>
+          <edgelabel>+xferVoxel</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+ksolve</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" line="17" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/XferInfo.h" bodystart="17" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classXferInfo_1a6c5b6b9ac1453c054814028da6004d0e" prot="public" virt="non-virtual"><scope>XferInfo</scope><name>ksolve</name></member>
+      <member refid="classXferInfo_1aa4bf3d88d7638a0ec700414eec1f95c2" prot="public" virt="non-virtual"><scope>XferInfo</scope><name>lastValues</name></member>
+      <member refid="classXferInfo_1ab0838eb57a9963a2622948e815ec74f4" prot="public" virt="non-virtual"><scope>XferInfo</scope><name>subzero</name></member>
+      <member refid="classXferInfo_1aa163407c599bf58b222f83fda053aa0a" prot="public" virt="non-virtual"><scope>XferInfo</scope><name>values</name></member>
+      <member refid="classXferInfo_1abcfcec38633ba8e34c43dc7070fa6212" prot="public" virt="non-virtual"><scope>XferInfo</scope><name>XferInfo</name></member>
+      <member refid="classXferInfo_1a684481cfca3f73d2cb947145f6539bd1" prot="public" virt="non-virtual"><scope>XferInfo</scope><name>xferPoolIdx</name></member>
+      <member refid="classXferInfo_1a7e943641774812fa5453e4be3f9b1ac0" prot="public" virt="non-virtual"><scope>XferInfo</scope><name>xferVoxel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="MooseSocketInfo_8h" kind="file" language="C++">
+    <compoundname>MooseSocketInfo.h</compoundname>
+    <includedby refid="SocketStreamer_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/SocketStreamer.h</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/MooseSocketInfo.h</label>
+        <link refid="MooseSocketInfo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/SocketStreamer.cpp</label>
+        <link refid="SocketStreamer_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/SocketStreamer.h</label>
+        <link refid="SocketStreamer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/Shell.cpp</label>
+        <link refid="Shell_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classMooseSocketInfo" prot="public">MooseSocketInfo</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666" prot="public" static="no" strong="no">
+        <type></type>
+        <name>t_socket_type_</name>
+        <enumvalue id="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666a0912f90f1ae57c92bd0786aae5e305f6" prot="public">
+          <name>TCP_SOCKET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666a2bd88e55dca7ebc18cb401a9eb11bd24" prot="public">
+          <name>UNIX_DOMAIN_SOCKET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/MooseSocketInfo.h" line="10" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/MooseSocketInfo.h" bodystart="10" bodyend="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="MooseSocketInfo_8h_1a0062cd9af4649193b0abe7596fa07ec6" prot="public" static="no">
+        <type>enum <ref refid="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666" kindref="member">t_socket_type_</ref></type>
+        <definition>typedef enum t_socket_type_ SocketType</definition>
+        <argsstring></argsstring>
+        <name>SocketType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/MooseSocketInfo.h" line="10" column="39"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Description:<sp/><sp/>Utility<sp/>class<sp/>for<sp/>handling<sp/>socket.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/><sp/>Dilawar<sp/>Singh<sp/>(),<sp/>dilawars@ncbs.res.in</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Organization:<sp/><sp/>NCBS<sp/>Bangalore</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MOOSESOCKETINFO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOOSESOCKETINFO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="MooseSocketInfo_8h_1a0062cd9af4649193b0abe7596fa07ec6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666" kindref="member">t_socket_type_</ref><sp/>{<ref refid="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666a0912f90f1ae57c92bd0786aae5e305f6" kindref="member">TCP_SOCKET</ref>,<sp/><ref refid="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666a2bd88e55dca7ebc18cb401a9eb11bd24" kindref="member">UNIX_DOMAIN_SOCKET</ref>}<sp/><ref refid="MooseSocketInfo_8h_1a0062cd9af4649193b0abe7596fa07ec6" kindref="member">SocketType</ref>;<sp/></highlight><highlight class="comment">//<sp/>Type<sp/>of<sp/>socket.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classMooseSocketInfo" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMooseSocketInfo" kindref="compound">MooseSocketInfo</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classMooseSocketInfo_1adb77df509d55ee374b28f0473ae0ded3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1adb77df509d55ee374b28f0473ae0ded3" kindref="member">MooseSocketInfo</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>addr<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>(addr),<sp/><ref refid="classMooseSocketInfo_1aefc6ac7d445f40fe694c916d93aa440f" kindref="member">valid</ref>(false)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>addr.size()<sp/>&gt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1ad3087d820d1b31e38d74039c2fb828af" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classMooseSocketInfo_1a5a7ebfa7cea0be11e16ac3df2b824e10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1a5a7ebfa7cea0be11e16ac3df2b824e10" kindref="member">~MooseSocketInfo</ref>()<sp/>{<sp/>;<sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classMooseSocketInfo_1aff54226d37ddad5c91d8309e4b5bb2fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMooseSocketInfo_1aff54226d37ddad5c91d8309e4b5bb2fd" kindref="member">setAddress</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>addr<sp/>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref><sp/>=<sp/>addr;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1ad3087d820d1b31e38d74039c2fb828af" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classMooseSocketInfo_1ad3087d820d1b31e38d74039c2fb828af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMooseSocketInfo_1ad3087d820d1b31e38d74039c2fb828af" kindref="member">init</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="stringliteral">&quot;file://&quot;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>.substr(0,<sp/>7))</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1a74ef5dd383918aa2e59ac5d73c77c4b7" kindref="member">type</ref><sp/>=<sp/><ref refid="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666a2bd88e55dca7ebc18cb401a9eb11bd24" kindref="member">UNIX_DOMAIN_SOCKET</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1aa79b0fca8fdf7da92e1ee125245ff753" kindref="member">filepath</ref><sp/>=<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>.substr(7);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1aefc6ac7d445f40fe694c916d93aa440f" kindref="member">valid</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="stringliteral">&quot;http://&quot;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>.substr(0,<sp/>7))</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1a74ef5dd383918aa2e59ac5d73c77c4b7" kindref="member">type</ref><sp/>=<sp/><ref refid="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666a0912f90f1ae57c92bd0786aae5e305f6" kindref="member">TCP_SOCKET</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>colPos<sp/>=<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>.find_last_of(</highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>colPos<sp/>==<sp/>string::npos<sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1a7df100b15a3ee50a44fe79181647c284" kindref="member">port</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1acb76351e8c9d2f18f606f5d067ed4cf2" kindref="member">host</ref><sp/>=<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1acb76351e8c9d2f18f606f5d067ed4cf2" kindref="member">host</ref><sp/>=<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>.substr(0,<sp/>colPos);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1a7df100b15a3ee50a44fe79181647c284" kindref="member">port</ref><sp/>=<sp/>std::stoi(<ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>.substr(colPos+1));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1aefc6ac7d445f40fe694c916d93aa440f" kindref="member">valid</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>[0]<sp/>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1a74ef5dd383918aa2e59ac5d73c77c4b7" kindref="member">type</ref><sp/>=<sp/><ref refid="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666a2bd88e55dca7ebc18cb401a9eb11bd24" kindref="member">UNIX_DOMAIN_SOCKET</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1aa79b0fca8fdf7da92e1ee125245ff753" kindref="member">filepath</ref><sp/>=<sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMooseSocketInfo_1aefc6ac7d445f40fe694c916d93aa440f" kindref="member">valid</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>C++<sp/>is<sp/>so<sp/>stupid:<sp/>https://stackoverflow.com/q/476272/1805129</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classMooseSocketInfo_1a649aa9fe808efae83c7fb60cf925bbf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classMooseSocketInfo_1a649aa9fe808efae83c7fb60cf925bbf1" kindref="member">operator&lt;&lt;</ref>(ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMooseSocketInfo" kindref="compound">MooseSocketInfo</ref>&amp;<sp/>info)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ADDRESS=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>info.address<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>TYPE=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>info.type;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>info.type<sp/>==<sp/><ref refid="MooseSocketInfo_8h_1adc326a9a5054e846ef4c68a013650666a2bd88e55dca7ebc18cb401a9eb11bd24" kindref="member">UNIX_DOMAIN_SOCKET</ref>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.<sp/>FILEPATH<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>info.filepath;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.<sp/>HOST:PORT=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>info.host<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>info.port;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74" refid="classMooseSocketInfo_1a74ef5dd383918aa2e59ac5d73c77c4b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="MooseSocketInfo_8h_1a0062cd9af4649193b0abe7596fa07ec6" kindref="member">SocketType</ref><sp/><ref refid="classMooseSocketInfo_1a74ef5dd383918aa2e59ac5d73c77c4b7" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="75" refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classMooseSocketInfo_1ac6dc5cd6d4259c0738853bfc6fc24b72" kindref="member">address</ref>;</highlight></codeline>
+<codeline lineno="76" refid="classMooseSocketInfo_1aa79b0fca8fdf7da92e1ee125245ff753" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classMooseSocketInfo_1aa79b0fca8fdf7da92e1ee125245ff753" kindref="member">filepath</ref>;</highlight></codeline>
+<codeline lineno="77" refid="classMooseSocketInfo_1acb76351e8c9d2f18f606f5d067ed4cf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classMooseSocketInfo_1acb76351e8c9d2f18f606f5d067ed4cf2" kindref="member">host</ref>;</highlight></codeline>
+<codeline lineno="78" refid="classMooseSocketInfo_1aefc6ac7d445f40fe694c916d93aa440f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classMooseSocketInfo_1aefc6ac7d445f40fe694c916d93aa440f" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="79" refid="classMooseSocketInfo_1a7df100b15a3ee50a44fe79181647c284" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMooseSocketInfo_1a7df100b15a3ee50a44fe79181647c284" kindref="member">port</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>end<sp/>of<sp/>include<sp/>guard:<sp/>MOOSESOCKETINFO_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/MooseSocketInfo.h"/>
+  </compounddef>
+</doxygen>

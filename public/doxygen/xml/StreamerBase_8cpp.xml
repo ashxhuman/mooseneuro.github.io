@@ -1,0 +1,546 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="StreamerBase_8cpp" kind="file" language="C++">
+    <compoundname>StreamerBase.cpp</compoundname>
+    <includes refid="global_8h" local="yes">../basecode/global.h</includes>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes refid="StreamerBase_8h" local="yes">StreamerBase.h</includes>
+    <includes refid="Clock_8h" local="yes">../scheduling/Clock.h</includes>
+    <includes refid="cnpy_8hpp" local="yes">../utility/cnpy.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">memory</includes>
+    <incdepgraph>
+      <node id="23">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="36">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="25">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="29">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="31">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="42">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="35">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="48">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="47">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="24">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="33">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="39">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="21">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="34">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="45">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="30">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="27">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="22">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="41">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="38">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="43">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="40">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="37">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="44">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="20">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="2">
+        <label>../basecode/global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/StreamerBase.cpp</label>
+        <link refid="StreamerBase_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>StreamerBase.h</label>
+        <link refid="StreamerBase_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>TableBase.h</label>
+        <link refid="TableBase_8h"/>
+      </node>
+      <node id="28">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="52">
+        <label>../scheduling/Clock.h</label>
+        <link refid="Clock_8h"/>
+      </node>
+      <node id="49">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="53">
+        <label>../utility/cnpy.hpp</label>
+        <link refid="cnpy_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
+      </node>
+      <node id="56">
+        <label>array</label>
+      </node>
+      <node id="19">
+        <label>cassert</label>
+      </node>
+      <node id="54">
+        <label>complex</label>
+      </node>
+      <node id="14">
+        <label>cstring</label>
+      </node>
+      <node id="3">
+        <label>ctime</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="12">
+        <label>iomanip</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="16">
+        <label>math.h</label>
+      </node>
+      <node id="55">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
+      <node id="57">
+        <label>stdint.h</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="18">
+        <label>typeinfo</label>
+      </node>
+      <node id="17">
+        <label>unordered_map</label>
+      </node>
+      <node id="6">
+        <label>valarray</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Filename:<sp/><sp/>StreamerBase.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Description:<sp/><sp/>Stream<sp/>table<sp/>data.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Version:<sp/><sp/>0.0.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Created:<sp/><sp/>2016-04-26</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Revision:<sp/><sp/>none</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/><sp/>Dilawar<sp/>Singh<sp/>&lt;dilawars@ncbs.res.in&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Organization:<sp/><sp/>NCBS<sp/>Bangalore</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>License:<sp/><sp/>GNU<sp/>GPL2</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/global.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="StreamerBase_8h" kindref="compound">StreamerBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../scheduling/Clock.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../utility/cnpy.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacecnpy2_1aac32c7fd663a3f968fc5b91160562675" kindref="member">cnpy2::appendNumpy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>outfile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;double&gt;&amp;<sp/>vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;string&gt;&amp;<sp/>colnames);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacecnpy2_1a96817135fed81483ebd20e3e6696b514" kindref="member">cnpy2::writeNumpy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>outfile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;double&gt;&amp;<sp/>vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;string&gt;&amp;<sp/>colnames);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Class<sp/>function<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classStreamerBase_1a46b239327fef7a535633a14da9918021" refkind="member"><highlight class="normal"><ref refid="classStreamerBase_1a46b239327fef7a535633a14da9918021" kindref="member">StreamerBase::StreamerBase</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classStreamerBase_1a49fb7b65f2b7c9c55c1dacba8113a201" refkind="member"><highlight class="normal"><ref refid="classStreamerBase" kindref="compound">StreamerBase</ref>&amp;<sp/><ref refid="classStreamerBase_1a49fb7b65f2b7c9c55c1dacba8113a201" kindref="member">StreamerBase::operator=</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase" kindref="compound">StreamerBase</ref>&amp;<sp/>st<sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="classStreamerBase_1ad6c4c2d3f79f87d295ddf6f261b3237d" kindref="member">outfilePath_</ref><sp/>=<sp/>st.<ref refid="classStreamerBase_1ad6c4c2d3f79f87d295ddf6f261b3237d" kindref="member">outfilePath_</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classStreamerBase_1ad402a8fd3a329904009e0c109fac1b90" refkind="member"><highlight class="normal"><ref refid="classStreamerBase_1ad402a8fd3a329904009e0c109fac1b90" kindref="member">StreamerBase::~StreamerBase</ref>()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classStreamerBase_1a03a3808eecd2fbbb5cf3bd4c75fd4f66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase_1a03a3808eecd2fbbb5cf3bd4c75fd4f66" kindref="member">StreamerBase::getOutFilepath</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="50"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase_1ad6c4c2d3f79f87d295ddf6f261b3237d" kindref="member">outfilePath_</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classStreamerBase_1a01bfd87a9875f4e0b8b19898fe7ed55d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase_1a01bfd87a9875f4e0b8b19898fe7ed55d" kindref="member">StreamerBase::setOutFilepath</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filepath<sp/>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStreamerBase_1ad6c4c2d3f79f87d295ddf6f261b3237d" kindref="member">outfilePath_</ref><sp/>=<sp/>filepath;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classStreamerBase_1abf7df5b1b422e67f40f0c2b4c33d946a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase_1abf7df5b1b422e67f40f0c2b4c33d946a" kindref="member">StreamerBase::writeToOutFile</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filepath</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>outputFormat</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2" kindref="member">OpenMode</ref><sp/>openmode</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;double&gt;&amp;<sp/>data</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;string&gt;&amp;<sp/>columns</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="classTableBase_1ad55e1f453c65363b0a4ad30ca5e6c80f" kindref="member">data</ref>.size()<sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;npy&quot;</highlight><highlight class="normal"><sp/>==<sp/>outputFormat<sp/><sp/>||<sp/></highlight><highlight class="stringliteral">&quot;npz&quot;</highlight><highlight class="normal"><sp/>==<sp/>outputFormat)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2" kindref="member">OpenMode</ref><sp/>m<sp/>=<sp/>(openmode<sp/>==<sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2a61aa7ff70b76bff0fda378cf61d6afbc" kindref="member">WRITE</ref>)?<ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2a4c8d8b2a0919d3d768e23775de440c26" kindref="member">WRITE_BIN</ref>:<ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2abbc6008cebcae6ba950e67606920be8d" kindref="member">APPEND_BIN</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStreamerBase_1a67d4903235cdfb7624b6ff15b8edd8e4" kindref="member">writeToNPYFile</ref>(<sp/>filepath,<sp/>m,<sp/><ref refid="classTableBase_1ad55e1f453c65363b0a4ad30ca5e6c80f" kindref="member">data</ref>,<sp/>columns<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight><highlight class="stringliteral">&quot;csv&quot;</highlight><highlight class="normal"><sp/>==<sp/>outputFormat<sp/>||<sp/></highlight><highlight class="stringliteral">&quot;dat&quot;</highlight><highlight class="normal"><sp/>==<sp/>outputFormat<sp/>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2" kindref="member">OpenMode</ref><sp/>m<sp/>=<sp/>(openmode<sp/>==<sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2a61aa7ff70b76bff0fda378cf61d6afbc" kindref="member">WRITE</ref>)?<ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2af1ef1ed702d41d52f52b1a1b85bfaabe" kindref="member">WRITE_STR</ref>:<ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2a107bb1fad056465cc1c48e388f8b8f93" kindref="member">APPEND_STR</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStreamerBase_1a96e077e9a458acb84d9fbec6fc88fdda" kindref="member">writeToCSVFile</ref>(<sp/>filepath,<sp/>m,<sp/><ref refid="classTableBase_1ad55e1f453c65363b0a4ad30ca5e6c80f" kindref="member">data</ref>,<sp/>columns<sp/>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__function_8hpp_1a9417ba1ee24fa11634b856c442343448" kindref="member">LOG</ref>(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504baf0be4393c6e6ae148159ef7dc9fed7f8" kindref="member">moose::warning</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Unsupported<sp/>format<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>outputFormat</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.<sp/>Use<sp/>npy<sp/>or<sp/>csv.<sp/>Falling<sp/>back<sp/>to<sp/>default<sp/>csv&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2" kindref="member">OpenMode</ref><sp/>m<sp/>=<sp/>(openmode<sp/>==<sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2a61aa7ff70b76bff0fda378cf61d6afbc" kindref="member">WRITE</ref>)?<ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2af1ef1ed702d41d52f52b1a1b85bfaabe" kindref="member">WRITE_STR</ref>:<ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2a107bb1fad056465cc1c48e388f8b8f93" kindref="member">APPEND_STR</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStreamerBase_1a96e077e9a458acb84d9fbec6fc88fdda" kindref="member">writeToCSVFile</ref>(<sp/>filepath,<sp/>m,<sp/><ref refid="classTableBase_1ad55e1f453c65363b0a4ad30ca5e6c80f" kindref="member">data</ref>,<sp/>columns<sp/>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Write<sp/>to<sp/>a<sp/>csv<sp/>file.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classStreamerBase_1a96e077e9a458acb84d9fbec6fc88fdda" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase_1a96e077e9a458acb84d9fbec6fc88fdda" kindref="member">StreamerBase::writeToCSVFile</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filepath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2" kindref="member">OpenMode</ref><sp/>openmode</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;double&gt;&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;string&gt;&amp;<sp/>columns<sp/>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>(openmode<sp/>==<sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2af1ef1ed702d41d52f52b1a1b85bfaabe" kindref="member">WRITE_STR</ref>)?</highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">:</highlight><highlight class="stringliteral">&quot;a&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fp<sp/>=<sp/>fopen(<sp/>filepath.c_str(),<sp/>m.c_str());</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>NULL<sp/>==<sp/>fp<sp/>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__function_8hpp_1a9417ba1ee24fa11634b856c442343448" kindref="member">LOG</ref>(<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504baf0be4393c6e6ae148159ef7dc9fed7f8" kindref="member">moose::warning</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>filepath<sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>writing<sp/>in<sp/>&quot;w&quot;<sp/>mode,<sp/>write<sp/>the<sp/>header<sp/>first.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(openmode<sp/>==<sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2af1ef1ed702d41d52f52b1a1b85bfaabe" kindref="member">WRITE_STR</ref>)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>headerText<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>vector&lt;string&gt;::const_iterator<sp/>it<sp/>=<sp/>columns.begin();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it<sp/>!=<sp/>columns.end();<sp/>it++<sp/>)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>headerText<sp/>+=<sp/>(<sp/>*it<sp/>+<sp/><ref refid="classStreamerBase_1a321000ee92222690c8c0d6400c826479" kindref="member">delimiter_</ref><sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>headerText<sp/>+=<sp/><ref refid="classStreamerBase_1a6c65a22a139ba53ef3ead92585f02a80" kindref="member">eol</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fp,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>headerText.c_str());</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>text<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classTableBase_1ad55e1f453c65363b0a4ad30ca5e6c80f" kindref="member">data</ref>.size();<sp/>i+=columns.size()<sp/>)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>of<sp/>a<sp/>new<sp/>row.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ii<sp/>=<sp/>0;<sp/>ii<sp/>&lt;<sp/>columns.size();<sp/>ii++<sp/>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text<sp/>+=<sp/><ref refid="namespacemoose_1a34bb86d97bed6458eb2a215e1c55270a" kindref="member">moose::toString</ref>(<sp/><ref refid="classTableBase_1ad55e1f453c65363b0a4ad30ca5e6c80f" kindref="member">data</ref>[i+ii]<sp/>)<sp/>+<sp/><ref refid="classStreamerBase_1a321000ee92222690c8c0d6400c826479" kindref="member">delimiter_</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>At<sp/>the<sp/>end<sp/>of<sp/>each<sp/>row,<sp/>we<sp/>remove<sp/>the<sp/>delimiter_<sp/>and<sp/>append<sp/>newline_.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(text.end()-1)<sp/>=<sp/><ref refid="classStreamerBase_1a6c65a22a139ba53ef3ead92585f02a80" kindref="member">eol</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(fp,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>text.c_str()<sp/>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fp);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>write<sp/>data<sp/>to<sp/>a<sp/>numpy<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="classStreamerBase_1a67d4903235cdfb7624b6ff15b8edd8e4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase_1a67d4903235cdfb7624b6ff15b8edd8e4" kindref="member">StreamerBase::writeToNPYFile</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>filepath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2" kindref="member">OpenMode</ref><sp/>openmode</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;double&gt;&amp;<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;string&gt;&amp;<sp/>columns<sp/>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//for(auto<sp/>v:<sp/>data)<sp/>cout<sp/>&lt;&lt;<sp/>v<sp/>&lt;&lt;<sp/>&apos;<sp/>&apos;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cout<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(openmode<sp/>==<sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2abbc6008cebcae6ba950e67606920be8d" kindref="member">APPEND_BIN</ref>)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacecnpy2_1aac32c7fd663a3f968fc5b91160562675" kindref="member">cnpy2::appendNumpy</ref>(<sp/>filepath,<sp/><ref refid="classTableBase_1ad55e1f453c65363b0a4ad30ca5e6c80f" kindref="member">data</ref>,<sp/>columns);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(openmode<sp/>==<sp/><ref refid="StreamerBase_8h_1a3a70f8b621474c9885f80fe709e2dca2a4c8d8b2a0919d3d768e23775de440c26" kindref="member">WRITE_BIN</ref>)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacecnpy2_1a96817135fed81483ebd20e3e6696b514" kindref="member">cnpy2::writeNumpy</ref>(<sp/>filepath,<sp/><ref refid="classTableBase_1ad55e1f453c65363b0a4ad30ca5e6c80f" kindref="member">data</ref>,<sp/>columns);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classStreamerBase_1aef9d5ba480e859c986abdd8635c0e220" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase_1aef9d5ba480e859c986abdd8635c0e220" kindref="member">StreamerBase::vectorToCSV</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;double&gt;&amp;<sp/>ys,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>fmt<sp/>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>res{</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v<sp/>:<sp/>ys<sp/>)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>+=<sp/>std::to_string(v)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/StreamerBase.cpp"/>
+  </compounddef>
+</doxygen>

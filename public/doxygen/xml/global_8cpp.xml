@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="global_8cpp" kind="file" language="C++">
+    <compoundname>global.cpp</compoundname>
+    <includes refid="global_8h" local="yes">global.h</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">regex</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/global.cpp</label>
+        <link refid="global_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
+      </node>
+      <node id="14">
+        <label>cstring</label>
+      </node>
+      <node id="3">
+        <label>ctime</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="12">
+        <label>iomanip</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="15">
+        <label>numeric</label>
+      </node>
+      <node id="16">
+        <label>regex</label>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="17">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="18">
+        <label>sys/types.h</label>
+      </node>
+      <node id="6">
+        <label>valarray</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacemoose">moose</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="global_8cpp_1af797566045e6bd8b706df76932958b7b" prot="public" static="no" mutable="no">
+        <type>stringstream</type>
+        <definition>stringstream errorSS</definition>
+        <argsstring></argsstring>
+        <name>errorSS</name>
+        <briefdescription>
+<para>Global stringstream for message printing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/global.cpp" line="33" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/global.cpp" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classHSolveUtils_1abded29d89bd4fbc7fe23ca4b5fc3fc60" compoundref="HSolveUtils_8cpp" startline="75" endline="120">HSolveUtils::gates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="global_8cpp_1a84acbc86e512f2f1db11bcad5d447b8f" prot="public" static="no" mutable="no">
+        <type>clock_t</type>
+        <definition>clock_t simClock</definition>
+        <argsstring></argsstring>
+        <name>simClock</name>
+        <initializer>= clock()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/global.cpp" line="35" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/global.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="global_8cpp_1a7a31b4244cc005232b9bbf412a8b2ed3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int totalTests</definition>
+        <argsstring></argsstring>
+        <name>totalTests</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Keep tracks of how many tests have been executed in moose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/global.cpp" line="31" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/global.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>==============================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Filename:<sp/><sp/>global.cpp</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Description:<sp/><sp/>Some<sp/>global<sp/>declarations.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Version:<sp/><sp/>1.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Created:<sp/><sp/>Tuesday<sp/>29<sp/>April<sp/>2014<sp/>10:18:35<sp/><sp/>IST</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Revision:<sp/><sp/>0.1</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Compiler:<sp/><sp/>gcc/g++</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/><sp/>Dilawar<sp/>Singh</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Organization:<sp/><sp/>Bhalla&apos;s<sp/>lab,<sp/>NCBS<sp/>Bangalore</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>==============================================================================</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="global_8h" kindref="compound">global.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*-----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>variable<sp/>keep<sp/>track<sp/>of<sp/>how<sp/>many<sp/>tests<sp/>have<sp/>been<sp/>performed.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>Check<sp/>header.h<sp/>for<sp/>macros<sp/>tbegin<sp/>and<sp/>tend<sp/>which<sp/>uses<sp/>it.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*-----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="global_8cpp_1a7a31b4244cc005232b9bbf412a8b2ed3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="global_8cpp_1a7a31b4244cc005232b9bbf412a8b2ed3" kindref="member">totalTests</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="global_8cpp_1af797566045e6bd8b706df76932958b7b" refkind="member"><highlight class="normal">stringstream<sp/><ref refid="global_8cpp_1af797566045e6bd8b706df76932958b7b" kindref="member">errorSS</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="global_8cpp_1a84acbc86e512f2f1db11bcad5d447b8f" refkind="member"><highlight class="normal">clock_t<sp/><ref refid="global_8cpp_1a84acbc86e512f2f1db11bcad5d447b8f" kindref="member">simClock</ref><sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="namespacemoose" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemoose" kindref="compound">moose</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="namespacemoose_1aa450d404ebb085e60b6a4c4ca29aa9ab" refkind="member"><highlight class="normal">map&lt;string,<sp/>valarray&lt;double&gt;&gt;<sp/><ref refid="namespacemoose_1aa450d404ebb085e60b6a4c4ca29aa9ab" kindref="member">solverProfMap</ref><sp/>=<sp/>{{</highlight><highlight class="stringliteral">&quot;Ksolve&quot;</highlight><highlight class="normal">,<sp/>{0.0,<sp/>0}},</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;HSolve&quot;</highlight><highlight class="normal">,<sp/>{0.0,<sp/>0}}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Check<sp/>if<sp/>path<sp/>is<sp/>OK<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="namespacemoose_1a2dd1f7ba567c3307ab3ca681fb232240" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a2dd1f7ba567c3307ab3ca681fb232240" kindref="member">checkPath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>path)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(path.size()<sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="global_8h_1af7b08459a0040daf1a73469a1c56563a" kindref="member">EMPTY_PATH</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(path.find_first_of(</highlight><highlight class="stringliteral">&quot;<sp/>\\!&quot;</highlight><highlight class="normal">)<sp/>!=<sp/>std::string::npos)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="global_8h_1a5eaacbc8c5cee7b14c47152b4c56a390" kindref="member">BAD_CHARACTER_IN_PATH</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(path[path.size()<sp/>-<sp/>1]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;]&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="global_8h_1a970a553b89921cd57954b2171d347e5d" kindref="member">MISSING_BRACKET_AT_END</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Join<sp/>paths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="namespacemoose_1a1458d5645c7939d7cec4767e3b02e96a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a1458d5645c7939d7cec4767e3b02e96a" kindref="member">joinPath</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>pathA,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>pathB)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>pathA<sp/>=<sp/><ref refid="namespacemoose_1ac84c5de863ecdda46aa6444b9c742bee" kindref="member">moose::fixPath</ref>(pathA);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>newPath<sp/>=<sp/>pathA<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/>pathB;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1ac84c5de863ecdda46aa6444b9c742bee" kindref="member">moose::fixPath</ref>(newPath);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Fix<sp/>given<sp/>path<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="namespacemoose_1ac84c5de863ecdda46aa6444b9c742bee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1ac84c5de863ecdda46aa6444b9c742bee" kindref="member">fixPath</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pathOk<sp/>=<sp/><ref refid="namespacemoose_1a2dd1f7ba567c3307ab3ca681fb232240" kindref="member">moose::checkPath</ref>(path);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pathOk<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pathOk<sp/>==<sp/><ref refid="global_8h_1a970a553b89921cd57954b2171d347e5d" kindref="member">MISSING_BRACKET_AT_END</ref>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;[0]&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MOOSE<sp/>suffixes<sp/>[0]<sp/>to<sp/>all<sp/>elements<sp/>to<sp/>path.<sp/>Remove<sp/>[0]<sp/>with<sp/>null</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>character<sp/>whenever<sp/>possible.<sp/>For<sp/>n<sp/>&gt;<sp/>0,<sp/>[n]<sp/>should<sp/>not<sp/>be<sp/>touched.<sp/>Its</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>user<sp/>job<sp/>to<sp/>take<sp/>the<sp/>pain<sp/>and<sp/>write<sp/>the<sp/>correct<sp/>path.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="namespacemoose_1a7d05cd56ea470b5a054806c1ceffeaaf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a7d05cd56ea470b5a054806c1ceffeaaf" kindref="member">createMOOSEPath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>path)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s<sp/>=<sp/>path;<sp/></highlight><highlight class="comment">/*<sp/>Local<sp/>copy<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>[0]<sp/>from<sp/>paths.<sp/>They<sp/>will<sp/>be<sp/>annoying<sp/>for<sp/>normal<sp/>users.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string::size_type<sp/>n<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>zeroIndex(</highlight><highlight class="stringliteral">&quot;[0]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((n<sp/>=<sp/>s.find(zeroIndex,<sp/>n))<sp/>!=<sp/>std::string::npos)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s.erase(n,<sp/>zeroIndex.size());</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="namespacemoose_1ac2a227cad8b2e7799a94abefdc8d673c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1ac2a227cad8b2e7799a94abefdc8d673c" kindref="member">createParentDirs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>path)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>filename<sp/>from<sp/>the<sp/>given<sp/>path<sp/>so<sp/>we<sp/>only<sp/>have<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>directory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>path;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba1f4d5610342648b6192c3872eaa459d0" kindref="member">failed</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>p.find_last_of(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>!=<sp/>std::string::npos)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/>p.substr(0,<sp/>pos);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>no<sp/>parent<sp/>directory<sp/>to<sp/>create<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p.size()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>command(</highlight><highlight class="stringliteral">&quot;mkdir<sp/>-p<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>command<sp/>+=<sp/>p;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>system(command.c_str());</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">stat<sp/><ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stat(p.c_str(),<sp/>&amp;<ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref>)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__function_8hpp_1a9417ba1ee24fa11634b856c442343448" kindref="member">LOG</ref>(<ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504baf0be4393c6e6ae148159ef7dc9fed7f8" kindref="member">moose::warning</ref>,<sp/></highlight><highlight class="stringliteral">&quot;cannot<sp/>access<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>p);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">info</ref>.st_mode<sp/>&amp;<sp/>S_IFDIR)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__function_8hpp_1a9417ba1ee24fa11634b856c442343448" kindref="member">LOG</ref>(<ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504ba4362b57fbedb0ee16b87dd78e1b2cf79" kindref="member">moose::info</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Created<sp/>directory<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>p);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__function_8hpp_1a9417ba1ee24fa11634b856c442343448" kindref="member">LOG</ref>(<ref refid="namespacemoose_1aca1354ebd6f06a736c1052c2406b504baf0be4393c6e6ae148159ef7dc9fed7f8" kindref="member">moose::warning</ref>,<sp/>p<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>no<sp/>directory&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Flatten<sp/>a<sp/>dir-name<sp/>to<sp/>return<sp/>a<sp/>filename<sp/>which<sp/>can<sp/>be<sp/>created<sp/>in<sp/>pwd<sp/>.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="namespacemoose_1a18312fac697b48745994d14e5a831f4d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a18312fac697b48745994d14e5a831f4d" kindref="member">toFilename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>path)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>path;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::replace(p.begin(),<sp/>p.end(),<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>std::replace(p.begin(),<sp/>p.end(),<sp/></highlight><highlight class="charliteral">&apos;\\&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>return<sp/>extension<sp/>of<sp/>a<sp/>filename<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="namespacemoose_1aacb868d432fe828ede7f78ea27043830" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1aacb868d432fe828ede7f78ea27043830" kindref="member">getExtension</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>path,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>without_dot)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dotPos<sp/>=<sp/>path.find_last_of(</highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dotPos<sp/>==<sp/>std::string::npos)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(without_dot)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path.substr(dotPos<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path.substr(dotPos);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>returns<sp/>`basename<sp/>path`<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="namespacemoose_1a2032e739e835319ec56e77bbb45db5b3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a2032e739e835319ec56e77bbb45db5b3" kindref="member">pathToName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>path)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path.substr(path.find_last_of(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>/a[0]/b[1]/c[0]<sp/>-&gt;<sp/>/a/b/c<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="namespacemoose_1af9f88eadebb78036fd0b8087cde0471d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1af9f88eadebb78036fd0b8087cde0471d" kindref="member">moosePathToUserPath</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>write<sp/>the<sp/>moose<sp/>path.<sp/>Things<sp/>becomes<sp/>messy<sp/>when<sp/>indexing<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a7d05cd56ea470b5a054806c1ceffeaaf" kindref="member">createMOOSEPath</ref>(path);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--------------------------------------------------------------------------*/</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>----------------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="namespacemoose_1aad78fa063b75455dd3fff944e784d92b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1aad78fa063b75455dd3fff944e784d92b" kindref="member">moosePathToColumnName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>path,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>delim,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxParents)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s(path);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::regex<sp/>e0(</highlight><highlight class="stringliteral">&quot;\\[(0+)\\]&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>[0+]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::regex<sp/>e1(</highlight><highlight class="stringliteral">&quot;\\[(\\d+)\\]&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>Replace<sp/>[xyz]<sp/>by<sp/>xyz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>s<sp/>=<sp/>std::regex_replace(s,<sp/>e0,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>s<sp/>=<sp/>std::regex_replace(s,<sp/>e1,<sp/></highlight><highlight class="stringliteral">&quot;$1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s2;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>colname<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nBreak<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>as<sp/>many<sp/>parents<sp/>as<sp/>required<sp/>by<sp/>maxParents.<sp/>Using<sp/>reverse<sp/>magic.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rit<sp/>=<sp/>s.rbegin();<sp/>rit<sp/>!=<sp/>s.rend();<sp/>rit++)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*rit<sp/>==<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colname<sp/>=<sp/>s2<sp/>+<sp/>delim<sp/>+<sp/>colname;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nBreak<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nBreak<sp/>==<sp/>(1<sp/>+<sp/>maxParents))</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s2<sp/>=<sp/>*rit<sp/>+<sp/>s2;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>colname.pop_back();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>colname;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>Return<sp/>formatted<sp/>string</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/>*<sp/><sp/>Precision<sp/>is<sp/>upto<sp/>17<sp/>decimal<sp/>points.</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="namespacemoose_1a34bb86d97bed6458eb2a215e1c55270a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a34bb86d97bed6458eb2a215e1c55270a" kindref="member">toString</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[50];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>buffer,<sp/></highlight><highlight class="stringliteral">&quot;%.17g&quot;</highlight><highlight class="normal">,<sp/>x);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(buffer);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="namespacemoose_1aa3570185420f61c7bd674b725dce0178" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1aa3570185420f61c7bd674b725dce0178" kindref="member">addSolverProf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>steps)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1aa450d404ebb085e60b6a4c4ca29aa9ab" kindref="member">solverProfMap</ref>[name]<sp/>=</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1aa450d404ebb085e60b6a4c4ca29aa9ab" kindref="member">solverProfMap</ref>[name]<sp/>+<sp/>valarray&lt;double&gt;({time,<sp/>(double)steps});</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="namespacemoose_1a510c9dac27a03847e633a9aaed0fb491" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1a510c9dac27a03847e633a9aaed0fb491" kindref="member">printSolverProfMap</ref>()</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>v<sp/>:<sp/><ref refid="namespacemoose_1aa450d404ebb085e60b6a4c4ca29aa9ab" kindref="member">solverProfMap</ref>)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\t&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>v.first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>v.second[0]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>sec<sp/>(&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>v.second[1]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/global.cpp"/>
+  </compounddef>
+</doxygen>

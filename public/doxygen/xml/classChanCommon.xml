@@ -1,0 +1,792 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classChanCommon" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ChanCommon</compoundname>
+    <basecompoundref refid="classChanBase" prot="public" virt="non-virtual">ChanBase</basecompoundref>
+    <derivedcompoundref refid="classHHChannelBase" prot="public" virt="non-virtual">HHChannelBase</derivedcompoundref>
+    <derivedcompoundref refid="classLeakage" prot="public" virt="non-virtual">Leakage</derivedcompoundref>
+    <derivedcompoundref refid="classMarkovChannel" prot="public" virt="non-virtual">MarkovChannel</derivedcompoundref>
+    <derivedcompoundref refid="classMgBlock" prot="public" virt="non-virtual">MgBlock</derivedcompoundref>
+    <derivedcompoundref refid="classSynChan" prot="public" virt="non-virtual">SynChan</derivedcompoundref>
+    <includes refid="ChanCommon_8h" local="no">ChanCommon.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classChanCommon_1a7089110696aab34addcabe3307b28302" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ChanCommon::Vm_</definition>
+        <argsstring></argsstring>
+        <name>Vm_</name>
+        <qualifiedname>ChanCommon::Vm_</qualifiedname>
+        <briefdescription>
+<para>Vm_ is input variable from compartment, used for most rates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="88" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" compoundref="ChanCommon_8cpp" startline="17" endline="25">ChanCommon</referencedby>
+        <referencedby refid="classHHChannel2D_1aa98f8a1930a954aafe59c5a178264074" compoundref="HHChannel2D_8cpp" startline="231" endline="244">HHChannel2D::depValue</referencedby>
+        <referencedby refid="classHHChannelF2D_1a1691053011d6723d9648db1d63ebf438" compoundref="HHChannelF2D_8cpp" startline="281" endline="294">HHChannelF2D::depValue</referencedby>
+        <referencedby refid="classChanCommon_1adfc62716d0b50f6a78eda4e794869e7a" compoundref="ChanCommon_8cpp" startline="126" endline="129">getVm</referencedby>
+        <referencedby refid="classMarkovChannel_1a05c755dd3aa8bd8d0c2726e91d162f40" compoundref="MarkovChannel_8cpp" startline="151" endline="154">MarkovChannel::getVm</referencedby>
+        <referencedby refid="classMarkovChannel_1af4ca0abb9c6dfc89ee076038831b48da" compoundref="MarkovChannel_8cpp" startline="156" endline="159">MarkovChannel::setVm</referencedby>
+        <referencedby refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" compoundref="ChanCommon_8cpp" startline="121" endline="124">updateIk</referencedby>
+        <referencedby refid="classChanCommon_1a448ef98f6a3825344db6a9e45c6d32e6" compoundref="ChanCommon_8cpp" startline="92" endline="95">vHandleVm</referencedby>
+        <referencedby refid="classMgBlock_1a3dc6a1ad4f59b934996ab4114aac9314" compoundref="MgBlock_8cpp" startline="150" endline="161">MgBlock::vProcess</referencedby>
+        <referencedby refid="classNMDAChan_1aadca066254470dd63ca3ed4d8c1097c0" compoundref="NMDAChan_8cpp" startline="330" endline="447">NMDAChan::vProcess</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">HHChannel::vProcess</referencedby>
+        <referencedby refid="classHHChannelF_1a25e78903e8ef9db5190db05f3491764c" compoundref="HHChannelF_8cpp" startline="186" endline="230">HHChannelF::vProcess</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+        <referencedby refid="classHHChannelF_1abadb64d9ec5f357f2da1b8af6f341ea1" compoundref="HHChannelF_8cpp" startline="236" endline="290">HHChannelF::vReinit</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ChanCommon::Ek_</definition>
+        <argsstring></argsstring>
+        <name>Ek_</name>
+        <qualifiedname>ChanCommon::Ek_</qualifiedname>
+        <briefdescription>
+<para>Reversal potential of channel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="96" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" compoundref="ChanCommon_8cpp" startline="17" endline="25">ChanCommon</referencedby>
+        <referencedby refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" compoundref="ChanCommon_8cpp" startline="102" endline="110">sendProcessMsgs</referencedby>
+        <referencedby refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" compoundref="ChanCommon_8cpp" startline="113" endline="119">sendReinitMsgs</referencedby>
+        <referencedby refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" compoundref="ChanCommon_8cpp" startline="121" endline="124">updateIk</referencedby>
+        <referencedby refid="classChanCommon_1a581a129b51ff4f4586bb607051880c21" compoundref="ChanCommon_8cpp" startline="65" endline="68">vGetEk</referencedby>
+        <referencedby refid="classChanCommon_1ab0945ad38439d0bb036b1d41deaf5b8e" compoundref="ChanCommon_8cpp" startline="61" endline="64">vSetEk</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classChanCommon_1a3be12631216cac2216d832c1d1d95de2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ChanCommon::Gbar_</definition>
+        <argsstring></argsstring>
+        <name>Gbar_</name>
+        <qualifiedname>ChanCommon::Gbar_</qualifiedname>
+        <briefdescription>
+<para>Channel maximal conductance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="92" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" compoundref="ChanCommon_8cpp" startline="17" endline="25">ChanCommon</referencedby>
+        <referencedby refid="classChanCommon_1a3cfd15c9edef381013aa781d23a4ef8a" compoundref="ChanCommon_8cpp" startline="131" endline="134">getGbar</referencedby>
+        <referencedby refid="classChanCommon_1a28b9838d6c41ae3d9205b4003026be28" compoundref="ChanCommon_8cpp" startline="41" endline="44">vGetGbar</referencedby>
+        <referencedby refid="classChanCommon_1ae56f5f4b2cd2a39025dd99ddc3d37043" compoundref="ChanCommon_8cpp" startline="36" endline="39">vSetGbar</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ChanCommon::Gk_</definition>
+        <argsstring></argsstring>
+        <name>Gk_</name>
+        <qualifiedname>ChanCommon::Gk_</qualifiedname>
+        <briefdescription>
+<para>Channel actual conductance depending on opening of gates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="99" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" compoundref="ChanCommon_8cpp" startline="17" endline="25">ChanCommon</referencedby>
+        <referencedby refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" compoundref="ChanCommon_8cpp" startline="102" endline="110">sendProcessMsgs</referencedby>
+        <referencedby refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" compoundref="ChanCommon_8cpp" startline="113" endline="119">sendReinitMsgs</referencedby>
+        <referencedby refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" compoundref="ChanCommon_8cpp" startline="121" endline="124">updateIk</referencedby>
+        <referencedby refid="classChanCommon_1ab600fe01a8c7a4f1c45f47769b025309" compoundref="ChanCommon_8cpp" startline="74" endline="77">vGetGk</referencedby>
+        <referencedby refid="classChanCommon_1a49f87214aeb41e8b7fc8e194857bb52f" compoundref="ChanCommon_8cpp" startline="70" endline="73">vSetGk</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ChanCommon::Ik_</definition>
+        <argsstring></argsstring>
+        <name>Ik_</name>
+        <qualifiedname>ChanCommon::Ik_</qualifiedname>
+        <briefdescription>
+<para>Channel current. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="101" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" compoundref="ChanCommon_8cpp" startline="17" endline="25">ChanCommon</referencedby>
+        <referencedby refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" compoundref="ChanCommon_8cpp" startline="102" endline="110">sendProcessMsgs</referencedby>
+        <referencedby refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" compoundref="ChanCommon_8cpp" startline="113" endline="119">sendReinitMsgs</referencedby>
+        <referencedby refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" compoundref="ChanCommon_8cpp" startline="121" endline="124">updateIk</referencedby>
+        <referencedby refid="classChanCommon_1a697488c62d9074aa00403fab07991cf1" compoundref="ChanCommon_8cpp" startline="83" endline="86">vGetIk</referencedby>
+        <referencedby refid="classChanCommon_1adbb054601c03513e1c55b4d4194c1b25" compoundref="ChanCommon_8cpp" startline="79" endline="82">vSetIk</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classChanCommon_1a3bf0c36087f72dce6d6b6d0426bd5c39" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ChanCommon::modulation_</definition>
+        <argsstring></argsstring>
+        <name>modulation_</name>
+        <qualifiedname>ChanCommon::modulation_</qualifiedname>
+        <briefdescription>
+<para>Channel modulation. Scales conductance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="94" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" compoundref="ChanCommon_8cpp" startline="17" endline="25">ChanCommon</referencedby>
+        <referencedby refid="classChanCommon_1a350572336cf35de7032820ea90df8ad0" compoundref="ChanCommon_8cpp" startline="56" endline="59">getModulation</referencedby>
+        <referencedby refid="classChanCommon_1a993b966413b6113096b16f44a5c2ed90" compoundref="ChanCommon_8cpp" startline="51" endline="54">vGetModulation</referencedby>
+        <referencedby refid="classChanCommon_1abfa0f3cc0f9a39a8fa564c07f190a5cf" compoundref="ChanCommon_8cpp" startline="46" endline="49">vSetModulation</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChanCommon::ChanCommon</definition>
+        <argsstring>()</argsstring>
+        <name>ChanCommon</name>
+        <qualifiedname>ChanCommon::ChanCommon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="28" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="17" bodyend="25"/>
+        <references refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" compoundref="ChanCommon_8h" startline="96">Ek_</references>
+        <references refid="classChanCommon_1a3be12631216cac2216d832c1d1d95de2" compoundref="ChanCommon_8h" startline="92">Gbar_</references>
+        <references refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" compoundref="ChanCommon_8h" startline="99">Gk_</references>
+        <references refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" compoundref="ChanCommon_8h" startline="101">Ik_</references>
+        <references refid="classChanCommon_1a3bf0c36087f72dce6d6b6d0426bd5c39" compoundref="ChanCommon_8h" startline="94">modulation_</references>
+        <references refid="classChanCommon_1a7089110696aab34addcabe3307b28302" compoundref="ChanCommon_8h" startline="88">Vm_</references>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a3cfd15c9edef381013aa781d23a4ef8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ChanCommon::getGbar</definition>
+        <argsstring>() const</argsstring>
+        <name>getGbar</name>
+        <qualifiedname>ChanCommon::getGbar</qualifiedname>
+        <briefdescription>
+<para>Utility function to acces Gbar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="76" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="131" bodyend="134"/>
+        <references refid="classChanCommon_1a3be12631216cac2216d832c1d1d95de2" compoundref="ChanCommon_8h" startline="92">Gbar_</references>
+        <referencedby refid="classSynChan_1af8337c15f17d49afaaaced9692b9d3a4" compoundref="SynChan_8cpp" startline="171" endline="193">SynChan::normalizeGbar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1adfc62716d0b50f6a78eda4e794869e7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ChanCommon::getVm</definition>
+        <argsstring>() const</argsstring>
+        <name>getVm</name>
+        <qualifiedname>ChanCommon::getVm</qualifiedname>
+        <briefdescription>
+<para>Utility function to access Vm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="73" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="126" bodyend="129"/>
+        <references refid="classChanCommon_1a7089110696aab34addcabe3307b28302" compoundref="ChanCommon_8h" startline="88">Vm_</references>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChanCommon::sendProcessMsgs</definition>
+        <argsstring>(const Eref &amp;e, const ProcPtr info)</argsstring>
+        <name>sendProcessMsgs</name>
+        <qualifiedname>ChanCommon::sendProcessMsgs</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sends out the messages expected of a channel, after process. Used as a utility by various derived classes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="62" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="102" bodyend="110"/>
+        <references refid="classChanBase_1a47abb439c48f25b313e2b6594070d1a7" compoundref="ChanBase_8cpp" startline="21" endline="26">ChanBase::channelOut</references>
+        <references refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" compoundref="ChanCommon_8h" startline="96">Ek_</references>
+        <references refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" compoundref="ChanCommon_8h" startline="99">Gk_</references>
+        <references refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" compoundref="ChanCommon_8h" startline="101">Ik_</references>
+        <references refid="classChanBase_1ad247c54be6894447b422a7539e952cf7" compoundref="ChanBase_8cpp" startline="28" endline="34">ChanBase::IkOut</references>
+        <references refid="classChanBase_1a0ac42064c9b59a9e36285ded2af3cc64" compoundref="ChanBase_8cpp" startline="14" endline="19">ChanBase::permeability</references>
+        <references refid="classSrcFinfo2_1ad3d0323f32a80569e27205624455b0a2" compoundref="SrcFinfo_8h" startline="221" endline="242">SrcFinfo2&lt; T1, T2 &gt;::send</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <referencedby refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" compoundref="MarkovChannel_8cpp" startline="231" endline="246">MarkovChannel::vProcess</referencedby>
+        <referencedby refid="classLeakage_1a64c688e05541a2e423506e88695447ef" compoundref="Leakage_8cpp" startline="90" endline="95">Leakage::vProcess</referencedby>
+        <referencedby refid="classMgBlock_1a3dc6a1ad4f59b934996ab4114aac9314" compoundref="MgBlock_8cpp" startline="150" endline="161">MgBlock::vProcess</referencedby>
+        <referencedby refid="classNMDAChan_1aadca066254470dd63ca3ed4d8c1097c0" compoundref="NMDAChan_8cpp" startline="330" endline="447">NMDAChan::vProcess</referencedby>
+        <referencedby refid="classSynChan_1a56c4fffde4f60d1dac01fb35b01ea2e1" compoundref="SynChan_8cpp" startline="214" endline="224">SynChan::vProcess</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">HHChannel::vProcess</referencedby>
+        <referencedby refid="classHHChannel2D_1a64e960ca945790fe2bcf5dc4eee15da7" compoundref="HHChannel2D_8cpp" startline="300" endline="342">HHChannel2D::vProcess</referencedby>
+        <referencedby refid="classHHChannelF_1a25e78903e8ef9db5190db05f3491764c" compoundref="HHChannelF_8cpp" startline="186" endline="230">HHChannelF::vProcess</referencedby>
+        <referencedby refid="classHHChannelF2D_1a5a5c1e86bca6c7b641de84a2fe651e04" compoundref="HHChannelF2D_8cpp" startline="350" endline="392">HHChannelF2D::vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChanCommon::sendReinitMsgs</definition>
+        <argsstring>(const Eref &amp;e, const ProcPtr info)</argsstring>
+        <name>sendReinitMsgs</name>
+        <qualifiedname>ChanCommon::sendReinitMsgs</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="63" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="113" bodyend="119"/>
+        <references refid="classChanBase_1a47abb439c48f25b313e2b6594070d1a7" compoundref="ChanBase_8cpp" startline="21" endline="26">ChanBase::channelOut</references>
+        <references refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" compoundref="ChanCommon_8h" startline="96">Ek_</references>
+        <references refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" compoundref="ChanCommon_8h" startline="99">Gk_</references>
+        <references refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" compoundref="ChanCommon_8h" startline="101">Ik_</references>
+        <references refid="classChanBase_1ad247c54be6894447b422a7539e952cf7" compoundref="ChanBase_8cpp" startline="28" endline="34">ChanBase::IkOut</references>
+        <references refid="classChanBase_1a0ac42064c9b59a9e36285ded2af3cc64" compoundref="ChanBase_8cpp" startline="14" endline="19">ChanBase::permeability</references>
+        <references refid="classSrcFinfo2_1ad3d0323f32a80569e27205624455b0a2" compoundref="SrcFinfo_8h" startline="221" endline="242">SrcFinfo2&lt; T1, T2 &gt;::send</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <referencedby refid="classMarkovChannel_1aa6f0cc5bd632d6f13f64980fafc7a541" compoundref="MarkovChannel_8cpp" startline="248" endline="260">MarkovChannel::vReinit</referencedby>
+        <referencedby refid="classLeakage_1a558d13b93c902a33852b9a8d0b3c643f" compoundref="Leakage_8cpp" startline="97" endline="102">Leakage::vReinit</referencedby>
+        <referencedby refid="classMgBlock_1a554de727c4ba471b71094ebd6bd25152" compoundref="MgBlock_8cpp" startline="163" endline="173">MgBlock::vReinit</referencedby>
+        <referencedby refid="classNMDAChan_1a09ab79110384cbabe964d065b0caf9d4" compoundref="NMDAChan_8cpp" startline="449" endline="460">NMDAChan::vReinit</referencedby>
+        <referencedby refid="classSynChan_1af40098320568b64bfe54ad9ac5c6f80d" compoundref="SynChan_8cpp" startline="229" endline="251">SynChan::vReinit</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+        <referencedby refid="classHHChannel2D_1a61586448a1588f3a1404ebd607f16a31" compoundref="HHChannel2D_8cpp" startline="348" endline="400">HHChannel2D::vReinit</referencedby>
+        <referencedby refid="classHHChannelF_1abadb64d9ec5f357f2da1b8af6f341ea1" compoundref="HHChannelF_8cpp" startline="236" endline="290">HHChannelF::vReinit</referencedby>
+        <referencedby refid="classHHChannelF2D_1ac3f41718ccca01121f9bc7ba933566bc" compoundref="HHChannelF2D_8cpp" startline="398" endline="450">HHChannelF2D::vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChanCommon::updateIk</definition>
+        <argsstring>()</argsstring>
+        <name>updateIk</name>
+        <qualifiedname>ChanCommon::updateIk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility function for a common computation using local variables </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="70" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="121" bodyend="124"/>
+        <references refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" compoundref="ChanCommon_8h" startline="96">Ek_</references>
+        <references refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" compoundref="ChanCommon_8h" startline="99">Gk_</references>
+        <references refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" compoundref="ChanCommon_8h" startline="101">Ik_</references>
+        <references refid="classChanCommon_1a7089110696aab34addcabe3307b28302" compoundref="ChanCommon_8h" startline="88">Vm_</references>
+        <referencedby refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" compoundref="MarkovChannel_8cpp" startline="231" endline="246">MarkovChannel::vProcess</referencedby>
+        <referencedby refid="classLeakage_1a64c688e05541a2e423506e88695447ef" compoundref="Leakage_8cpp" startline="90" endline="95">Leakage::vProcess</referencedby>
+        <referencedby refid="classMgBlock_1a3dc6a1ad4f59b934996ab4114aac9314" compoundref="MgBlock_8cpp" startline="150" endline="161">MgBlock::vProcess</referencedby>
+        <referencedby refid="classNMDAChan_1aadca066254470dd63ca3ed4d8c1097c0" compoundref="NMDAChan_8cpp" startline="330" endline="447">NMDAChan::vProcess</referencedby>
+        <referencedby refid="classSynChan_1a56c4fffde4f60d1dac01fb35b01ea2e1" compoundref="SynChan_8cpp" startline="214" endline="224">SynChan::vProcess</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">HHChannel::vProcess</referencedby>
+        <referencedby refid="classHHChannel2D_1a64e960ca945790fe2bcf5dc4eee15da7" compoundref="HHChannel2D_8cpp" startline="300" endline="342">HHChannel2D::vProcess</referencedby>
+        <referencedby refid="classHHChannelF_1a25e78903e8ef9db5190db05f3491764c" compoundref="HHChannelF_8cpp" startline="186" endline="230">HHChannelF::vProcess</referencedby>
+        <referencedby refid="classHHChannelF2D_1a5a5c1e86bca6c7b641de84a2fe651e04" compoundref="HHChannelF2D_8cpp" startline="350" endline="392">HHChannelF2D::vProcess</referencedby>
+        <referencedby refid="classLeakage_1a558d13b93c902a33852b9a8d0b3c643f" compoundref="Leakage_8cpp" startline="97" endline="102">Leakage::vReinit</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+        <referencedby refid="classHHChannel2D_1a61586448a1588f3a1404ebd607f16a31" compoundref="HHChannel2D_8cpp" startline="348" endline="400">HHChannel2D::vReinit</referencedby>
+        <referencedby refid="classHHChannelF_1abadb64d9ec5f357f2da1b8af6f341ea1" compoundref="HHChannelF_8cpp" startline="236" endline="290">HHChannelF::vReinit</referencedby>
+        <referencedby refid="classHHChannelF2D_1ac3f41718ccca01121f9bc7ba933566bc" compoundref="HHChannelF2D_8cpp" startline="398" endline="450">HHChannelF2D::vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a581a129b51ff4f4586bb607051880c21" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double ChanCommon::vGetEk</definition>
+        <argsstring>(const Eref &amp;e) const override</argsstring>
+        <name>vGetEk</name>
+        <qualifiedname>ChanCommon::vGetEk</qualifiedname>
+        <reimplements refid="classChanBase_1a973db975cf5a3623c7bc4d37d5a0456f">vGetEk</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1a7ca2192ecc3704121ab372b50f3302a0">vGetEk</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="40" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="65" bodyend="68"/>
+        <references refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" compoundref="ChanCommon_8h" startline="96">Ek_</references>
+        <referencedby refid="classHHChannelBase_1a8a7d720cbe717c42de49cefeb599c89f" compoundref="HHChannelBase_8cpp" startline="395" endline="434">HHChannelBase::zombify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a28b9838d6c41ae3d9205b4003026be28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double ChanCommon::vGetGbar</definition>
+        <argsstring>(const Eref &amp;e) const override</argsstring>
+        <name>vGetGbar</name>
+        <qualifiedname>ChanCommon::vGetGbar</qualifiedname>
+        <reimplements refid="classChanBase_1a41e79cfe6b5b8bfc43c6448f815d5efb">vGetGbar</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1af874d470089652b6b7a1a7a9c9d0674d">vGetGbar</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="36" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="41" bodyend="44"/>
+        <references refid="classChanCommon_1a3be12631216cac2216d832c1d1d95de2" compoundref="ChanCommon_8h" startline="92">Gbar_</references>
+        <referencedby refid="classLeakage_1a64c688e05541a2e423506e88695447ef" compoundref="Leakage_8cpp" startline="90" endline="95">Leakage::vProcess</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">HHChannel::vProcess</referencedby>
+        <referencedby refid="classHHChannelF_1a25e78903e8ef9db5190db05f3491764c" compoundref="HHChannelF_8cpp" startline="186" endline="230">HHChannelF::vProcess</referencedby>
+        <referencedby refid="classLeakage_1a558d13b93c902a33852b9a8d0b3c643f" compoundref="Leakage_8cpp" startline="97" endline="102">Leakage::vReinit</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+        <referencedby refid="classHHChannelF_1abadb64d9ec5f357f2da1b8af6f341ea1" compoundref="HHChannelF_8cpp" startline="236" endline="290">HHChannelF::vReinit</referencedby>
+        <referencedby refid="classHHChannelBase_1a8a7d720cbe717c42de49cefeb599c89f" compoundref="HHChannelBase_8cpp" startline="395" endline="434">HHChannelBase::zombify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1ab600fe01a8c7a4f1c45f47769b025309" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double ChanCommon::vGetGk</definition>
+        <argsstring>(const Eref &amp;e) const override</argsstring>
+        <name>vGetGk</name>
+        <qualifiedname>ChanCommon::vGetGk</qualifiedname>
+        <reimplements refid="classChanBase_1a74b07ed5e84136abfacb8f22e99449cc">vGetGk</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1ab8aadea92fa2c5765ead89852df97c13">vGetGk</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="42" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="74" bodyend="77"/>
+        <references refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" compoundref="ChanCommon_8h" startline="99">Gk_</references>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a697488c62d9074aa00403fab07991cf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double ChanCommon::vGetIk</definition>
+        <argsstring>(const Eref &amp;e) const override</argsstring>
+        <name>vGetIk</name>
+        <qualifiedname>ChanCommon::vGetIk</qualifiedname>
+        <reimplements refid="classChanBase_1a20b3d252199563771ecffb0ea410fa25">vGetIk</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1a1aecc87dbc413ecace168e5d00a1ea86">vGetIk</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="46" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="83" bodyend="86"/>
+        <references refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" compoundref="ChanCommon_8h" startline="101">Ik_</references>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a993b966413b6113096b16f44a5c2ed90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double ChanCommon::vGetModulation</definition>
+        <argsstring>(const Eref &amp;e) const override</argsstring>
+        <name>vGetModulation</name>
+        <qualifiedname>ChanCommon::vGetModulation</qualifiedname>
+        <reimplements refid="classChanBase_1a7b07e2c252e0cc8141e24196c437ed30">vGetModulation</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="38" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="51" bodyend="54"/>
+        <references refid="classChanCommon_1a3bf0c36087f72dce6d6b6d0426bd5c39" compoundref="ChanCommon_8h" startline="94">modulation_</references>
+        <referencedby refid="classLeakage_1a64c688e05541a2e423506e88695447ef" compoundref="Leakage_8cpp" startline="90" endline="95">Leakage::vProcess</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">HHChannel::vProcess</referencedby>
+        <referencedby refid="classHHChannel2D_1a64e960ca945790fe2bcf5dc4eee15da7" compoundref="HHChannel2D_8cpp" startline="300" endline="342">HHChannel2D::vProcess</referencedby>
+        <referencedby refid="classHHChannelF_1a25e78903e8ef9db5190db05f3491764c" compoundref="HHChannelF_8cpp" startline="186" endline="230">HHChannelF::vProcess</referencedby>
+        <referencedby refid="classHHChannelF2D_1a5a5c1e86bca6c7b641de84a2fe651e04" compoundref="HHChannelF2D_8cpp" startline="350" endline="392">HHChannelF2D::vProcess</referencedby>
+        <referencedby refid="classLeakage_1a558d13b93c902a33852b9a8d0b3c643f" compoundref="Leakage_8cpp" startline="97" endline="102">Leakage::vReinit</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+        <referencedby refid="classHHChannel2D_1a61586448a1588f3a1404ebd607f16a31" compoundref="HHChannel2D_8cpp" startline="348" endline="400">HHChannel2D::vReinit</referencedby>
+        <referencedby refid="classHHChannelF_1abadb64d9ec5f357f2da1b8af6f341ea1" compoundref="HHChannelF_8cpp" startline="236" endline="290">HHChannelF::vReinit</referencedby>
+        <referencedby refid="classHHChannelF2D_1ac3f41718ccca01121f9bc7ba933566bc" compoundref="HHChannelF2D_8cpp" startline="398" endline="450">HHChannelF2D::vReinit</referencedby>
+        <referencedby refid="classLeakage_1a41a3f0070e85927a2ea1f32dcdb17e28" compoundref="Leakage_8cpp" startline="104" endline="108">Leakage::vSetGbar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a448ef98f6a3825344db6a9e45c6d32e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChanCommon::vHandleVm</definition>
+        <argsstring>(double Vm) override</argsstring>
+        <name>vHandleVm</name>
+        <qualifiedname>ChanCommon::vHandleVm</qualifiedname>
+        <reimplements refid="classChanBase_1a0aafdce68fa6ae2bda9c77f685882b44">vHandleVm</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1af18fc5b5ead77c5f77f128c1c8f21525">vHandleVm</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>Vm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign the local Vm_ to the incoming Vm from the compartment </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="55" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="92" bodyend="95"/>
+        <references refid="classChanCommon_1a7089110696aab34addcabe3307b28302" compoundref="ChanCommon_8h" startline="88">Vm_</references>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1ab0945ad38439d0bb036b1d41deaf5b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChanCommon::vSetEk</definition>
+        <argsstring>(const Eref &amp;e, double Ek) override</argsstring>
+        <name>vSetEk</name>
+        <qualifiedname>ChanCommon::vSetEk</qualifiedname>
+        <reimplements refid="classChanBase_1a99a670c52fdde7a28030a280ed3d3043">vSetEk</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1a15eefbf5156f245bddac97f16d18d640">vSetEk</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Ek</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="39" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="61" bodyend="64"/>
+        <references refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" compoundref="ChanCommon_8h" startline="96">Ek_</references>
+        <referencedby refid="classHHChannelBase_1a8a7d720cbe717c42de49cefeb599c89f" compoundref="HHChannelBase_8cpp" startline="395" endline="434">HHChannelBase::zombify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1ae56f5f4b2cd2a39025dd99ddc3d37043" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChanCommon::vSetGbar</definition>
+        <argsstring>(const Eref &amp;e, double Gbar) override</argsstring>
+        <name>vSetGbar</name>
+        <qualifiedname>ChanCommon::vSetGbar</qualifiedname>
+        <reimplements refid="classChanBase_1aa77c3af1106670ebdbf037e3a2814148">vSetGbar</reimplements>
+        <reimplementedby refid="classLeakage_1a41a3f0070e85927a2ea1f32dcdb17e28">vSetGbar</reimplementedby>
+        <reimplementedby refid="classSynChan_1a4f1f1d8d34b5639dc6b13f51b9becbed">vSetGbar</reimplementedby>
+        <reimplementedby refid="classZombieHHChannel_1a2d1dde6c787b193544943f0a30429c86">vSetGbar</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Gbar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="35" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="36" bodyend="39"/>
+        <references refid="classChanCommon_1a3be12631216cac2216d832c1d1d95de2" compoundref="ChanCommon_8h" startline="92">Gbar_</references>
+        <referencedby refid="classLeakage_1a41a3f0070e85927a2ea1f32dcdb17e28" compoundref="Leakage_8cpp" startline="104" endline="108">Leakage::vSetGbar</referencedby>
+        <referencedby refid="classSynChan_1a4f1f1d8d34b5639dc6b13f51b9becbed" compoundref="SynChan_8cpp" startline="117" endline="121">SynChan::vSetGbar</referencedby>
+        <referencedby refid="classHHChannelBase_1a8a7d720cbe717c42de49cefeb599c89f" compoundref="HHChannelBase_8cpp" startline="395" endline="434">HHChannelBase::zombify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1a49f87214aeb41e8b7fc8e194857bb52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChanCommon::vSetGk</definition>
+        <argsstring>(const Eref &amp;e, double Gk) override</argsstring>
+        <name>vSetGk</name>
+        <qualifiedname>ChanCommon::vSetGk</qualifiedname>
+        <reimplements refid="classChanBase_1aa87db32c854e3b9220300ea786028aff">vSetGk</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1ac8c4ed80a31b97ad19ad67f12eb7749b">vSetGk</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Gk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="41" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="70" bodyend="73"/>
+        <references refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" compoundref="ChanCommon_8h" startline="99">Gk_</references>
+        <referencedby refid="classLeakage_1a64c688e05541a2e423506e88695447ef" compoundref="Leakage_8cpp" startline="90" endline="95">Leakage::vProcess</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">HHChannel::vProcess</referencedby>
+        <referencedby refid="classHHChannelF_1a25e78903e8ef9db5190db05f3491764c" compoundref="HHChannelF_8cpp" startline="186" endline="230">HHChannelF::vProcess</referencedby>
+        <referencedby refid="classLeakage_1a558d13b93c902a33852b9a8d0b3c643f" compoundref="Leakage_8cpp" startline="97" endline="102">Leakage::vReinit</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">HHChannel::vReinit</referencedby>
+        <referencedby refid="classHHChannelF_1abadb64d9ec5f357f2da1b8af6f341ea1" compoundref="HHChannelF_8cpp" startline="236" endline="290">HHChannelF::vReinit</referencedby>
+        <referencedby refid="classLeakage_1a41a3f0070e85927a2ea1f32dcdb17e28" compoundref="Leakage_8cpp" startline="104" endline="108">Leakage::vSetGbar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1adbb054601c03513e1c55b4d4194c1b25" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChanCommon::vSetIk</definition>
+        <argsstring>(const Eref &amp;e, double Ic) override</argsstring>
+        <name>vSetIk</name>
+        <qualifiedname>ChanCommon::vSetIk</qualifiedname>
+        <reimplements refid="classChanBase_1ae681f938359a03b352b76a1b4f8dd1ad">vSetIk</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1a60558c4469468a6cc19ea9790e36dcce">vSetIk</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Ic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ik is read-only for MOOSE, but we provide the set func for derived classes to update it. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="45" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="79" bodyend="82"/>
+        <references refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" compoundref="ChanCommon_8h" startline="101">Ik_</references>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1abfa0f3cc0f9a39a8fa564c07f190a5cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChanCommon::vSetModulation</definition>
+        <argsstring>(const Eref &amp;e, double modulation) override</argsstring>
+        <name>vSetModulation</name>
+        <qualifiedname>ChanCommon::vSetModulation</qualifiedname>
+        <reimplements refid="classChanBase_1a0dce6363c4c7e4665403f83845f0ff4b">vSetModulation</reimplements>
+        <reimplementedby refid="classZombieHHChannel_1a56434cc89f81f34abf4fd7e5bb692baf">vSetModulation</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>modulation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="37" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="46" bodyend="49"/>
+        <references refid="classChanCommon_1a3bf0c36087f72dce6d6b6d0426bd5c39" compoundref="ChanCommon_8h" startline="94">modulation_</references>
+        <referencedby refid="classZombieHHChannel_1a56434cc89f81f34abf4fd7e5bb692baf" compoundref="ZombieHHChannel_8cpp" startline="156" endline="162">ZombieHHChannel::vSetModulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChanCommon_1ae966e08d0785e0dd49f251c877aaca33" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type></type>
+        <definition>ChanCommon::~ChanCommon</definition>
+        <argsstring>()=0</argsstring>
+        <name>~ChanCommon</name>
+        <qualifiedname>ChanCommon::~ChanCommon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="29" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classChanCommon_1aecef1ab1e3ec7f1fe0ca35936383b91b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>static const Cinfo * ChanCommon::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>ChanCommon::initCinfo</qualifiedname>
+        <briefdescription>
+<para>Specify the Class Info static variable for initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="79" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classChanCommon_1a350572336cf35de7032820ea90df8ad0" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ChanCommon::getModulation</definition>
+        <argsstring>() const</argsstring>
+        <name>getModulation</name>
+        <qualifiedname>ChanCommon::getModulation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="85" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.cpp" bodystart="56" bodyend="59"/>
+        <references refid="classChanCommon_1a3bf0c36087f72dce6d6b6d0426bd5c39" compoundref="ChanCommon_8h" startline="94">modulation_</references>
+        <referencedby refid="classSynChan_1a0eafaa44396129019838bc639dd05d2a" compoundref="SynChan_8cpp" startline="200" endline="212">SynChan::calcGk</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The ChanCommon.g handles the data fields for all ion channel classes in MOOSE, when they are using regular ee calculations rather than being zombified by the solver. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ChanBase</label>
+        <link refid="classChanBase"/>
+      </node>
+      <node id="1">
+        <label>ChanCommon</label>
+        <link refid="classChanCommon"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>HHChannel</label>
+        <link refid="classHHChannel"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>HHChannel2D</label>
+        <link refid="classHHChannel2D"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HHChannelBase</label>
+        <link refid="classHHChannelBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>HHChannelF</label>
+        <link refid="classHHChannelF"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>HHChannelF2D</label>
+        <link refid="classHHChannelF2D"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Leakage</label>
+        <link refid="classLeakage"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>MarkovChannel</label>
+        <link refid="classMarkovChannel"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>MgBlock</label>
+        <link refid="classMgBlock"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>NMDAChan</label>
+        <link refid="classNMDAChan"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SynChan</label>
+        <link refid="classSynChan"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ZombieHHChannel</label>
+        <link refid="classZombieHHChannel"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ChanBase</label>
+        <link refid="classChanBase"/>
+      </node>
+      <node id="1">
+        <label>ChanCommon</label>
+        <link refid="classChanCommon"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" line="25" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ChanCommon.h" bodystart="26" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classChanBase_1a0b4ce2e2886ace64e7d68eb41ee53d54" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>ChanBase</name></member>
+      <member refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>ChanCommon</name></member>
+      <member refid="classChanBase_1a47abb439c48f25b313e2b6594070d1a7" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>channelOut</name></member>
+      <member refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" prot="private" virt="non-virtual"><scope>ChanCommon</scope><name>Ek_</name></member>
+      <member refid="classChanCommon_1a3be12631216cac2216d832c1d1d95de2" prot="private" virt="non-virtual"><scope>ChanCommon</scope><name>Gbar_</name></member>
+      <member refid="classChanBase_1a7e74d61abc548efead13a96ed29a5b82" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>getEk</name></member>
+      <member refid="classChanCommon_1a3cfd15c9edef381013aa781d23a4ef8a" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>getGbar</name></member>
+      <member refid="classChanBase_1a17ce4e4fec56ad50bd8b97fa45339505" prot="public" virt="non-virtual" ambiguityscope="ChanBase::"><scope>ChanCommon</scope><name>getGbar</name></member>
+      <member refid="classChanBase_1ad4887c265e2aaf5d02d6233f6c9b4c7b" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>getGk</name></member>
+      <member refid="classChanBase_1a284b1719ed6cf2cbdc2e79c5a4ccea3b" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>getIk</name></member>
+      <member refid="classChanCommon_1a350572336cf35de7032820ea90df8ad0" prot="protected" virt="non-virtual"><scope>ChanCommon</scope><name>getModulation</name></member>
+      <member refid="classChanBase_1af7c5dd8cbc739a833b9c125c3d232f29" prot="public" virt="non-virtual" ambiguityscope="ChanBase::"><scope>ChanCommon</scope><name>getModulation</name></member>
+      <member refid="classChanCommon_1adfc62716d0b50f6a78eda4e794869e7a" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>getVm</name></member>
+      <member refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" prot="private" virt="non-virtual"><scope>ChanCommon</scope><name>Gk_</name></member>
+      <member refid="classChanBase_1afe0d330506bd5c57635d3f9e4c629473" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>handleVm</name></member>
+      <member refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" prot="private" virt="non-virtual"><scope>ChanCommon</scope><name>Ik_</name></member>
+      <member refid="classChanBase_1ad247c54be6894447b422a7539e952cf7" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>IkOut</name></member>
+      <member refid="classChanCommon_1aecef1ab1e3ec7f1fe0ca35936383b91b" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>initCinfo</name></member>
+      <member refid="classChanCommon_1a3bf0c36087f72dce6d6b6d0426bd5c39" prot="private" virt="non-virtual"><scope>ChanCommon</scope><name>modulation_</name></member>
+      <member refid="classChanBase_1a0ac42064c9b59a9e36285ded2af3cc64" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>permeability</name></member>
+      <member refid="classChanBase_1a47e2838dcc33e707dfb648c724150d27" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>process</name></member>
+      <member refid="classChanBase_1a0f1b1067d2a3507758537e0ef135dd02" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>reinit</name></member>
+      <member refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>sendProcessMsgs</name></member>
+      <member refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>sendReinitMsgs</name></member>
+      <member refid="classChanBase_1ab398afed3726484d5590eb9f8251651d" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>setEk</name></member>
+      <member refid="classChanBase_1af1ee22625fc9a829ca1290b103d6fb23" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>setGbar</name></member>
+      <member refid="classChanBase_1a5be7f8c73ae22fe65dfccb18fb67fb00" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>setGk</name></member>
+      <member refid="classChanBase_1a04ca8976f3b126349a6e9ca5d91044bc" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>setIk</name></member>
+      <member refid="classChanBase_1a8fef557fb1049b3d6d6d47397e266275" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>setModulation</name></member>
+      <member refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" prot="public" virt="non-virtual"><scope>ChanCommon</scope><name>updateIk</name></member>
+      <member refid="classChanCommon_1a581a129b51ff4f4586bb607051880c21" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vGetEk</name></member>
+      <member refid="classChanCommon_1a28b9838d6c41ae3d9205b4003026be28" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vGetGbar</name></member>
+      <member refid="classChanCommon_1ab600fe01a8c7a4f1c45f47769b025309" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vGetGk</name></member>
+      <member refid="classChanCommon_1a697488c62d9074aa00403fab07991cf1" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vGetIk</name></member>
+      <member refid="classChanCommon_1a993b966413b6113096b16f44a5c2ed90" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vGetModulation</name></member>
+      <member refid="classChanCommon_1a448ef98f6a3825344db6a9e45c6d32e6" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vHandleVm</name></member>
+      <member refid="classChanCommon_1a7089110696aab34addcabe3307b28302" prot="protected" virt="non-virtual"><scope>ChanCommon</scope><name>Vm_</name></member>
+      <member refid="classChanBase_1a2d33f628004a68330a80e45ba8e6eeb1" prot="public" virt="pure-virtual"><scope>ChanCommon</scope><name>vProcess</name></member>
+      <member refid="classChanBase_1a83a714adc1fc74ee8df9cbab1d23800a" prot="public" virt="pure-virtual"><scope>ChanCommon</scope><name>vReinit</name></member>
+      <member refid="classChanCommon_1ab0945ad38439d0bb036b1d41deaf5b8e" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vSetEk</name></member>
+      <member refid="classChanCommon_1ae56f5f4b2cd2a39025dd99ddc3d37043" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vSetGbar</name></member>
+      <member refid="classChanCommon_1a49f87214aeb41e8b7fc8e194857bb52f" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vSetGk</name></member>
+      <member refid="classChanCommon_1adbb054601c03513e1c55b4d4194c1b25" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vSetIk</name></member>
+      <member refid="classChanCommon_1abfa0f3cc0f9a39a8fa564c07f190a5cf" prot="public" virt="virtual"><scope>ChanCommon</scope><name>vSetModulation</name></member>
+      <member refid="classChanBase_1ad4999175c719674abd1e13c35d4f2000" prot="public" virt="pure-virtual"><scope>ChanCommon</scope><name>~ChanBase</name></member>
+      <member refid="classChanCommon_1ae966e08d0785e0dd49f251c877aaca33" prot="public" virt="pure-virtual"><scope>ChanCommon</scope><name>~ChanCommon</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

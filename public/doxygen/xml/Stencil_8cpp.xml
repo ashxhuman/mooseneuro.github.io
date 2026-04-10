@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="Stencil_8cpp" kind="file" language="C++">
+    <compoundname>Stencil.cpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">cassert</includes>
+    <includes refid="Stencil_8h" local="yes">Stencil.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp</label>
+        <link refid="Stencil_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Stencil.h</label>
+        <link refid="Stencil_8h"/>
+      </node>
+      <node id="3">
+        <label>cassert</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="Stencil_8cpp_1a95e5003768054ad7044604ae8967ad68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stencil1</definition>
+        <argsstring>(vector&lt; double &gt; &amp;f, int index, unsigned int n, double invSq, const vector&lt; vector&lt; double &gt; &gt; &amp;S, const vector&lt; double &gt; &amp;diffConst)</argsstring>
+        <name>stencil1</name>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>invSq</declname>
+        </param>
+        <param>
+          <type>const vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>diffConst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" line="18" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" bodystart="18" bodyend="41"/>
+        <referencedby refid="classLineStencil_1a1ce6016928d2123b00ae2af3e8130be7" compoundref="Stencil_8cpp" startline="124" endline="135">LineStencil::addFlux</referencedby>
+        <referencedby refid="classRectangleStencil_1ae90c81bc96998c8f383a8d9857381f5d" compoundref="Stencil_8cpp" startline="163" endline="174">RectangleStencil::addFlux</referencedby>
+        <referencedby refid="classCuboidStencil_1a51a90396fcff2bebf406dccccba44da5" compoundref="Stencil_8cpp" startline="211" endline="223">CuboidStencil::addFlux</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Stencil_8cpp_1ae9cf8582edd080a7f6e21dd67c4f464f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stencilN</definition>
+        <argsstring>(vector&lt; double &gt; &amp;f, int index, unsigned int n, int offset, double invSq, const vector&lt; vector&lt; double &gt; &gt; &amp;S, const vector&lt; double &gt; &amp;diffConst)</argsstring>
+        <name>stencilN</name>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>invSq</declname>
+        </param>
+        <param>
+          <type>const vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>diffConst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>f is the flux vector, returned to caller index is the meshIndex being computed n is the number of mesh entries in this stencil. It is nx for the x axis and nx*ny for the y axis. offset is the stencil displacement: 1 for the x axis, nx for the y axis, doesn&apos;t apply for the z axis as that will be done using stencil1. invSq is 1/dx for the x axis, 1/dy for the y axis, and so on. S is the matrix of [meshEntries][pools] diffConst is the vector of [pools] </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" line="55" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" bodystart="55" bodyend="78"/>
+        <referencedby refid="classRectangleStencil_1ae90c81bc96998c8f383a8d9857381f5d" compoundref="Stencil_8cpp" startline="163" endline="174">RectangleStencil::addFlux</referencedby>
+        <referencedby refid="classCuboidStencil_1a51a90396fcff2bebf406dccccba44da5" compoundref="Stencil_8cpp" startline="211" endline="223">CuboidStencil::addFlux</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2011<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Stencil_8h" kindref="compound">Stencil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">//<sp/>utility<sp/>funcs</highlight></codeline>
+<codeline lineno="18" refid="Stencil_8cpp_1a95e5003768054ad7044604ae8967ad68" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Stencil_8cpp_1a95e5003768054ad7044604ae8967ad68" kindref="member">stencil1</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>invSq,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;&amp;<sp/>S,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diffConst<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>t0<sp/>=<sp/>S[<sp/>index<sp/>];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>index<sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>n<sp/>)<sp/>&lt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>temp<sp/>=<sp/>S[<sp/>index<sp/>+<sp/>n<sp/>];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>f.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f[i]<sp/>+=<sp/>2<sp/>*<sp/>diffConst[i]<sp/>*<sp/>(<sp/>temp[i]<sp/>-<sp/>t0[i]<sp/>)<sp/>*<sp/>invSq;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>index<sp/>+<sp/>n<sp/>&gt;=<sp/>S.size()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>temp<sp/>=<sp/>S[<sp/>index<sp/>-<sp/>n<sp/>];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>f.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f[i]<sp/>+=<sp/>2<sp/>*<sp/>diffConst[i]<sp/>*<sp/>(<sp/>temp[i]<sp/>-<sp/>t0[i]<sp/>)<sp/>*<sp/>invSq;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>tminus<sp/>=<sp/>S[<sp/>index<sp/>-<sp/>n<sp/>];</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>tplus<sp/>=<sp/>S[<sp/>index<sp/>+<sp/>n<sp/>];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>f.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f[i]<sp/>+=<sp/>diffConst[i]<sp/>*<sp/>(<sp/>tminus[i]<sp/>+<sp/>tplus[i]<sp/>-<sp/>2<sp/>*<sp/>t0[i]<sp/>)<sp/>*<sp/>invSq;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="Stencil_8cpp_1ae9cf8582edd080a7f6e21dd67c4f464f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Stencil_8cpp_1ae9cf8582edd080a7f6e21dd67c4f464f" kindref="member">stencilN</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>invSq,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;&amp;<sp/>S,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diffConst<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>t0<sp/>=<sp/>S[<sp/>index<sp/>];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rem<sp/>=<sp/>index<sp/>%<sp/>n;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>rem<sp/>&lt;<sp/>offset<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>temp<sp/>=<sp/>S[<sp/>index<sp/>+<sp/>offset];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>f.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f[i]<sp/>+=<sp/>2<sp/>*<sp/>diffConst[i]<sp/>*<sp/>(<sp/>temp[i]<sp/>-<sp/>t0[i]<sp/>)<sp/>*<sp/>invSq;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>rem<sp/>&gt;=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>n<sp/>)<sp/>-<sp/>offset<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>temp<sp/>=<sp/>S[<sp/>index<sp/>-<sp/>offset<sp/>];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>f.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f[i]<sp/>+=<sp/>2<sp/>*<sp/>diffConst[i]<sp/>*<sp/>(<sp/>temp[i]<sp/>-<sp/>t0[i]<sp/>)<sp/>*<sp/>invSq;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>tminus<sp/>=<sp/>S[<sp/>index<sp/>-<sp/>offset<sp/>];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>tplus<sp/>=<sp/>S[<sp/>index<sp/>+<sp/>offset<sp/>];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>f.size();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f[i]<sp/>+=<sp/>diffConst[i]<sp/>*<sp/>(<sp/>tminus[i]<sp/>+<sp/>tplus[i]<sp/>-<sp/>2<sp/>*<sp/>t0[i]<sp/>)<sp/>*<sp/>invSq;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="comment">//<sp/>Stencil<sp/>constructor</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classStencil_1a2be38ed2fbf48ae6936287e24047d220" refkind="member"><highlight class="normal"><ref refid="classStencil_1a2be38ed2fbf48ae6936287e24047d220" kindref="member">Stencil::Stencil</ref>()</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classStencil_1a007f043b19ab256586ef6c61d6d67bd7" refkind="member"><highlight class="normal"><ref refid="classStencil_1a007f043b19ab256586ef6c61d6d67bd7" kindref="member">Stencil::~Stencil</ref>()</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="comment">//<sp/>dummy<sp/>stencil.</highlight></codeline>
+<codeline lineno="93" refid="classDummyStencil_1acd4539c4f333670adc8b34e4c4e86bdf" refkind="member"><highlight class="normal"><ref refid="classDummyStencil_1acd4539c4f333670adc8b34e4c4e86bdf" kindref="member">DummyStencil::DummyStencil</ref>()</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classDummyStencil_1a2a12ceaa5494f4d9ed4da484e33e9a53" refkind="member"><highlight class="normal"><ref refid="classDummyStencil_1a2a12ceaa5494f4d9ed4da484e33e9a53" kindref="member">DummyStencil::~DummyStencil</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classDummyStencil_1ad8d1b9b04cc6d73d33486d71dd70f68b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDummyStencil_1ad8d1b9b04cc6d73d33486d71dd70f68b" kindref="member">DummyStencil::addFlux</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>meshIndex,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>f,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;&amp;<sp/>S,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diffConst<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="102"><highlight class="keyword"></highlight><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="comment">//<sp/>1-D<sp/>stencil.</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classLineStencil_1a50d1c9dcb8bcc67a4aadb9b69709b2d1" refkind="member"><highlight class="normal"><ref refid="classLineStencil_1a50d1c9dcb8bcc67a4aadb9b69709b2d1" kindref="member">LineStencil::LineStencil</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx<sp/>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>h_(<sp/>dx<sp/>)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dx<sp/>&lt;=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLineStencil_1aeb11a3c4211fbd44fe89e35477ab07a1" kindref="member">h_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLineStencil_1a6e645eaf0a5e519bca7ee22dc9725a94" kindref="member">invHsq_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLineStencil_1a6e645eaf0a5e519bca7ee22dc9725a94" kindref="member">invHsq_</ref><sp/>=<sp/>1.0<sp/>/<sp/>(<sp/>dx<sp/>*<sp/>dx<sp/>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classLineStencil_1ad278d0ca0b7698c9550f88ecd3b68989" refkind="member"><highlight class="normal"><ref refid="classLineStencil_1ad278d0ca0b7698c9550f88ecd3b68989" kindref="member">LineStencil::~LineStencil</ref>()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classLineStencil_1a1ce6016928d2123b00ae2af3e8130be7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLineStencil_1a1ce6016928d2123b00ae2af3e8130be7" kindref="member">LineStencil::addFlux</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>meshIndex,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>f,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;&amp;<sp/>S,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diffConst<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="127"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>f.size()<sp/>&lt;=<sp/>S[0].size()<sp/>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>S.size()<sp/>&lt;<sp/>2<sp/>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>meshIndex<sp/>&lt;<sp/>S.size()<sp/>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>meshIndex;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Stencil_8cpp_1a95e5003768054ad7044604ae8967ad68" kindref="member">stencil1</ref>(<sp/>f,<sp/>index,<sp/>1,<sp/><ref refid="classLineStencil_1a6e645eaf0a5e519bca7ee22dc9725a94" kindref="member">invHsq_</ref>,<sp/>S,<sp/>diffConst<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Diffusion<sp/>in<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="comment">//<sp/>2-D<sp/>stencil.</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classRectangleStencil_1ae94bbcd76516c060387a1f49efdad96c" refkind="member"><highlight class="normal"><ref refid="classRectangleStencil_1ae94bbcd76516c060387a1f49efdad96c" kindref="member">RectangleStencil::RectangleStencil</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dy,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nx<sp/>)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>dx_(<sp/>dx<sp/>),<sp/>dy_(<sp/>dy<sp/>),<sp/>nx_(<sp/>nx<sp/>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dx<sp/>&lt;=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRectangleStencil_1a59040c98be9438364a503218de265869" kindref="member">dx_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRectangleStencil_1a611645246fbd8dd53fe374c8ff236c6c" kindref="member">invDxSq_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRectangleStencil_1a611645246fbd8dd53fe374c8ff236c6c" kindref="member">invDxSq_</ref><sp/>=<sp/>1.0<sp/>/<sp/>(<sp/>dx<sp/>*<sp/>dx<sp/>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dy<sp/>&lt;=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRectangleStencil_1a3dfb697eccb3dfbdf4122944f46b0d2c" kindref="member">dy_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRectangleStencil_1a1a205e8113af3c8c4d6eaa6631444173" kindref="member">invDySq_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRectangleStencil_1a1a205e8113af3c8c4d6eaa6631444173" kindref="member">invDySq_</ref><sp/>=<sp/>1.0<sp/>/<sp/>(<sp/>dy<sp/>*<sp/>dy<sp/>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classRectangleStencil_1a7b2ab9c38b91dee90b177d1d189b6ce1" refkind="member"><highlight class="normal"><ref refid="classRectangleStencil_1a7b2ab9c38b91dee90b177d1d189b6ce1" kindref="member">RectangleStencil::~RectangleStencil</ref>()</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Assumes<sp/>diffusion<sp/>in<sp/>xy<sp/>plane</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="classRectangleStencil_1ae90c81bc96998c8f383a8d9857381f5d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRectangleStencil_1ae90c81bc96998c8f383a8d9857381f5d" kindref="member">RectangleStencil::addFlux</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>meshIndex,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>f,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;&amp;<sp/>S,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diffConst<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="166"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>f.size()<sp/>&lt;=<sp/>S[0].size()<sp/>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>S.size()<sp/>&lt;<sp/>2<sp/>*<sp/><ref refid="classRectangleStencil_1a13d582d0a69e9d6dd5ece2dd5858836f" kindref="member">nx_</ref><sp/>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>meshIndex<sp/>&lt;<sp/>S.size()<sp/>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>meshIndex;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Stencil_8cpp_1ae9cf8582edd080a7f6e21dd67c4f464f" kindref="member">stencilN</ref>(<sp/>f,<sp/>index,<sp/><ref refid="classRectangleStencil_1a13d582d0a69e9d6dd5ece2dd5858836f" kindref="member">nx_</ref>,<sp/>1,<sp/><ref refid="classRectangleStencil_1a611645246fbd8dd53fe374c8ff236c6c" kindref="member">invDxSq_</ref>,<sp/>S,<sp/>diffConst<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Diffusion<sp/>in<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Stencil_8cpp_1a95e5003768054ad7044604ae8967ad68" kindref="member">stencil1</ref>(<sp/>f,<sp/>index,<sp/><ref refid="classRectangleStencil_1a13d582d0a69e9d6dd5ece2dd5858836f" kindref="member">nx_</ref>,<sp/><ref refid="classRectangleStencil_1a1a205e8113af3c8c4d6eaa6631444173" kindref="member">invDySq_</ref>,<sp/>S,<sp/>diffConst<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Diffusion<sp/>in<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="comment">//<sp/>3-D<sp/>stencil.</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="classCuboidStencil_1a214615d8689b573807e027f9f3d6325a" refkind="member"><highlight class="normal"><ref refid="classCuboidStencil_1a214615d8689b573807e027f9f3d6325a" kindref="member">CuboidStencil::CuboidStencil</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dz,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ny<sp/>)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>dx_(<sp/>dx<sp/>),<sp/>dy_(<sp/>dy<sp/>),<sp/>nx_(<sp/>nx<sp/>),<sp/>ny_(<sp/>ny<sp/>)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dx<sp/>&lt;=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1a701679a670d2b95362b73bd139fb1064" kindref="member">dx_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1a8bfcd9393efe9e21d00788104fc62e58" kindref="member">invDxSq_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1a8bfcd9393efe9e21d00788104fc62e58" kindref="member">invDxSq_</ref><sp/>=<sp/>1.0<sp/>/<sp/>(<sp/>dx<sp/>*<sp/>dx<sp/>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dy<sp/>&lt;=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1a2e91473d5d1283f5d4d80b711cd21616" kindref="member">dy_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1a823f3b3b49d53fc96139bbcf39acf643" kindref="member">invDySq_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1a823f3b3b49d53fc96139bbcf39acf643" kindref="member">invDySq_</ref><sp/>=<sp/>1.0<sp/>/<sp/>(<sp/>dy<sp/>*<sp/>dy<sp/>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dz<sp/>&lt;=<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1af52a8391d256cc623f1a5a5d72de551c" kindref="member">dz_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1adb0ad59b44f04639fcfb52a0ada2f899" kindref="member">invDzSq_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCuboidStencil_1adb0ad59b44f04639fcfb52a0ada2f899" kindref="member">invDzSq_</ref><sp/>=<sp/>1.0<sp/>/<sp/>(<sp/>dz<sp/>*<sp/>dz<sp/>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="classCuboidStencil_1a90d8156f30a7f0d0a2eee14d6a8bbdf3" refkind="member"><highlight class="normal"><ref refid="classCuboidStencil_1a90d8156f30a7f0d0a2eee14d6a8bbdf3" kindref="member">CuboidStencil::~CuboidStencil</ref>()</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Assumes<sp/>diffusion<sp/>in<sp/>xy<sp/>plane</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="classCuboidStencil_1a51a90396fcff2bebf406dccccba44da5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCuboidStencil_1a51a90396fcff2bebf406dccccba44da5" kindref="member">CuboidStencil::addFlux</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>meshIndex,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>f,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;&amp;<sp/>S,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diffConst<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="214"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>f.size()<sp/>&lt;=<sp/>S[0].size()<sp/>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>S.size()<sp/>&lt;<sp/>2<sp/>*<sp/><ref refid="classCuboidStencil_1ae92c29c43e3c8b349179eaf1a032b96a" kindref="member">nx_</ref><sp/>)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>meshIndex<sp/>&lt;<sp/>S.size()<sp/>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>meshIndex;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Stencil_8cpp_1ae9cf8582edd080a7f6e21dd67c4f464f" kindref="member">stencilN</ref>(<sp/>f,<sp/>index,<sp/><ref refid="classCuboidStencil_1ae92c29c43e3c8b349179eaf1a032b96a" kindref="member">nx_</ref>,<sp/>1,<sp/><ref refid="classCuboidStencil_1a8bfcd9393efe9e21d00788104fc62e58" kindref="member">invDxSq_</ref>,<sp/>S,<sp/>diffConst<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Diffusion<sp/>in<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Stencil_8cpp_1ae9cf8582edd080a7f6e21dd67c4f464f" kindref="member">stencilN</ref>(<sp/>f,<sp/>index,<sp/><ref refid="classCuboidStencil_1ae92c29c43e3c8b349179eaf1a032b96a" kindref="member">nx_</ref>*<ref refid="classCuboidStencil_1a81495460e27e7b958fe333d5fc9531af" kindref="member">ny_</ref>,<sp/><ref refid="classCuboidStencil_1ae92c29c43e3c8b349179eaf1a032b96a" kindref="member">nx_</ref>,<sp/><ref refid="classCuboidStencil_1a8bfcd9393efe9e21d00788104fc62e58" kindref="member">invDxSq_</ref>,<sp/>S,<sp/>diffConst<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Diff<sp/>in<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Stencil_8cpp_1a95e5003768054ad7044604ae8967ad68" kindref="member">stencil1</ref>(<sp/>f,<sp/>index,<sp/><ref refid="classCuboidStencil_1ae92c29c43e3c8b349179eaf1a032b96a" kindref="member">nx_</ref>*<ref refid="classCuboidStencil_1a81495460e27e7b958fe333d5fc9531af" kindref="member">ny_</ref>,<sp/><ref refid="classCuboidStencil_1adb0ad59b44f04639fcfb52a0ada2f899" kindref="member">invDzSq_</ref>,<sp/>S,<sp/>diffConst<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Diffusion<sp/>in<sp/>z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp"/>
+  </compounddef>
+</doxygen>

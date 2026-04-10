@@ -1,0 +1,1435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPsdMesh" kind="class" language="C++" prot="public">
+    <compoundname>PsdMesh</compoundname>
+    <basecompoundref refid="classMeshCompt" prot="public" virt="non-virtual">MeshCompt</basecompoundref>
+    <includes refid="PsdMesh_8h" local="no">PsdMesh.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PsdMesh::area_</definition>
+        <argsstring></argsstring>
+        <name>area_</name>
+        <qualifiedname>PsdMesh::area_</qualifiedname>
+        <briefdescription>
+<para>Vol. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="192" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="192" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1a8c13866fd9271428f661c3753a1fa394" compoundref="PsdMesh_8cpp" startline="576" endline="579">getVoxelArea</referencedby>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+        <referencedby refid="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b" compoundref="PsdMesh_8cpp" startline="316" endline="325">setMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" compoundref="PsdMesh_8cpp" startline="595" endline="611">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1aa874598616e5acbc51788c42514216e1" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; PsdMesh::elecCompt_</definition>
+        <argsstring></argsstring>
+        <name>elecCompt_</name>
+        <qualifiedname>PsdMesh::elecCompt_</qualifiedname>
+        <briefdescription>
+<para>Parent voxel index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="182" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="182" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1a62fa50fcb60a1e3a88050cad9181c518" compoundref="PsdMesh_8cpp" startline="188" endline="191">getElecComptMap</referencedby>
+        <referencedby refid="classPsdMesh_1a6b376a998706df1bfb5d779487a5136b" compoundref="PsdMesh_8cpp" startline="201" endline="207">getEndVoxelInCompt</referencedby>
+        <referencedby refid="classPsdMesh_1ac933779a741d493ec160eddcd765603f" compoundref="PsdMesh_8cpp" startline="193" endline="199">getStartVoxelInCompt</referencedby>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PsdMesh::length_</definition>
+        <argsstring></argsstring>
+        <name>length_</name>
+        <qualifiedname>PsdMesh::length_</qualifiedname>
+        <briefdescription>
+<para>area </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="193" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="193" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1a02c81426d3700b09e2b77c6b0768b554" compoundref="PsdMesh_8cpp" startline="581" endline="584">getVoxelLength</referencedby>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+        <referencedby refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" compoundref="PsdMesh_8cpp" startline="595" endline="611">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classCylBase" kindref="compound">CylBase</ref> &gt;</type>
+        <definition>vector&lt; CylBase &gt; PsdMesh::pa_</definition>
+        <argsstring></argsstring>
+        <name>pa_</name>
+        <qualifiedname>PsdMesh::pa_</qualifiedname>
+        <briefdescription>
+<para>Specified disk of psd. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="179" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="179" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1a52f73354e225e22cb9596837e8edd926" compoundref="PsdMesh_8cpp" startline="329" endline="340">getCoordinates</referencedby>
+        <referencedby refid="classPsdMesh_1a10341e251b9ea19e7a11313a574bb284" compoundref="PsdMesh_8cpp" startline="343" endline="350">getDiffusionArea</referencedby>
+        <referencedby refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" compoundref="PsdMesh_8cpp" startline="307" endline="313">getMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" compoundref="PsdMesh_8cpp" startline="518" endline="526">matchCubeMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" compoundref="PsdMesh_8cpp" startline="507" endline="516">matchNeuroMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1ab57e212627f557058e507610551777c0" compoundref="PsdMesh_8cpp" startline="491" endline="502">matchSpineMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+        <referencedby refid="classPsdMesh_1a11eb43f06da539dd15b260d9d0e4b254" compoundref="PsdMesh_8cpp" startline="559" endline="574">vGetVoxelMidpoint</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; PsdMesh::parent_</definition>
+        <argsstring></argsstring>
+        <name>parent_</name>
+        <qualifiedname>PsdMesh::parent_</qualifiedname>
+        <briefdescription>
+<para>Specifies diff distance to PSD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="181" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="181" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1ae62af349659dff47a9480375ddec573b" compoundref="PsdMesh_8cpp" startline="182" endline="186">getNeuronVoxel</referencedby>
+        <referencedby refid="classPsdMesh_1a53bfe1b01a11ff3a87ee41bd47d5b8a1" compoundref="PsdMesh_8cpp" startline="540" endline="545">getParentVoxel</referencedby>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" compoundref="PsdMesh_8cpp" startline="507" endline="516">matchNeuroMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1ab57e212627f557058e507610551777c0" compoundref="PsdMesh_8cpp" startline="491" endline="502">matchSpineMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1aba313e73a390eb29b0c37f7438ceb834" compoundref="PsdMesh_8cpp" startline="393" endline="400">parent</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PsdMesh::parentDist_</definition>
+        <argsstring></argsstring>
+        <name>parentDist_</name>
+        <qualifiedname>PsdMesh::parentDist_</qualifiedname>
+        <briefdescription>
+<para>Specifies direction of psd. Length ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="180" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="180" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" compoundref="PsdMesh_8cpp" startline="507" endline="516">matchNeuroMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1ab57e212627f557058e507610551777c0" compoundref="PsdMesh_8cpp" startline="491" endline="502">matchSpineMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classCylBase" kindref="compound">CylBase</ref> &gt;</type>
+        <definition>vector&lt; CylBase &gt; PsdMesh::psd_</definition>
+        <argsstring></argsstring>
+        <name>psd_</name>
+        <qualifiedname>PsdMesh::psd_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These do the actual work. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="178" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="178" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" compoundref="PsdMesh_8cpp" startline="431" endline="435">buildStencil</referencedby>
+        <referencedby refid="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855" compoundref="PsdMesh_8cpp" startline="362" endline="369">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a52f73354e225e22cb9596837e8edd926" compoundref="PsdMesh_8cpp" startline="329" endline="340">getCoordinates</referencedby>
+        <referencedby refid="classPsdMesh_1a10341e251b9ea19e7a11313a574bb284" compoundref="PsdMesh_8cpp" startline="343" endline="350">getDiffusionArea</referencedby>
+        <referencedby refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" compoundref="PsdMesh_8cpp" startline="307" endline="313">getMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a788318254f79a64cd922c6f8b3c760d7" compoundref="PsdMesh_8cpp" startline="294" endline="298">getMeshType</referencedby>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1a6f838cfe557ff4ad340aa3d3d69c0255" compoundref="PsdMesh_8cpp" startline="462" endline="470">indexToSpace</referencedby>
+        <referencedby refid="classPsdMesh_1aea367c53084ccfe9e84251eef4c90338" compoundref="PsdMesh_8cpp" startline="405" endline="408">innerGetNumEntries</referencedby>
+        <referencedby refid="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" compoundref="PsdMesh_8cpp" startline="518" endline="526">matchCubeMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" compoundref="PsdMesh_8cpp" startline="507" endline="516">matchNeuroMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1ab57e212627f557058e507610551777c0" compoundref="PsdMesh_8cpp" startline="491" endline="502">matchSpineMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1a80ae3d0a7fc08e4ea046e4a220a9eb51" compoundref="PsdMesh_8cpp" startline="472" endline="489">nearest</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+        <referencedby refid="classPsdMesh_1a65d9c22d9b7c19511bea5088043bd4ff" compoundref="PsdMesh_8cpp" startline="153" endline="157">PsdMesh</referencedby>
+        <referencedby refid="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b" compoundref="PsdMesh_8cpp" startline="316" endline="325">setMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a11eb43f06da539dd15b260d9d0e4b254" compoundref="PsdMesh_8cpp" startline="559" endline="574">vGetVoxelMidpoint</referencedby>
+        <referencedby refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" compoundref="PsdMesh_8cpp" startline="595" endline="611">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1af8dac72631e91c6f28dc6d5f554e6d4f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PsdMesh::surfaceGranularity_</definition>
+        <argsstring></argsstring>
+        <name>surfaceGranularity_</name>
+        <qualifiedname>PsdMesh::surfaceGranularity_</qualifiedname>
+        <briefdescription>
+<para>Ids of elec compts mapped to each voxel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Decides how finely to subdivide diffLength_ or radius or cubic mesh side when computing surfacearea of intersections with <ref refid="classCubeMesh" kindref="compound">CubeMesh</ref>. Defaults to 0.1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="189" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="189" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" compoundref="PsdMesh_8cpp" startline="518" endline="526">matchCubeMeshEntries</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+        <referencedby refid="classPsdMesh_1a65d9c22d9b7c19511bea5088043bd4ff" compoundref="PsdMesh_8cpp" startline="153" endline="157">PsdMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PsdMesh::thickness_</definition>
+        <argsstring></argsstring>
+        <name>thickness_</name>
+        <qualifiedname>PsdMesh::thickness_</qualifiedname>
+        <briefdescription>
+<para>Thickness of PSD. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="173" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="173" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" compoundref="PsdMesh_8cpp" startline="307" endline="313">getMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a006a8fdf3e8b610aa9343375dd4bc427" compoundref="PsdMesh_8cpp" startline="167" endline="170">getThickness</referencedby>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+        <referencedby refid="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b" compoundref="PsdMesh_8cpp" startline="316" endline="325">setMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a814dbcf72c705ebb3d1fef4f613eb625" compoundref="PsdMesh_8cpp" startline="171" endline="174">setThickness</referencedby>
+        <referencedby refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" compoundref="PsdMesh_8cpp" startline="595" endline="611">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PsdMesh::vs_</definition>
+        <argsstring></argsstring>
+        <name>vs_</name>
+        <qualifiedname>PsdMesh::vs_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="191" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="191" bodyend="-1"/>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" compoundref="PsdMesh_8cpp" startline="134" endline="151">PsdMesh</referencedby>
+        <referencedby refid="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b" compoundref="PsdMesh_8cpp" startline="316" endline="325">setMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a13eb23d457eb248964fbfaf36b40e6e6" compoundref="PsdMesh_8cpp" startline="586" endline="593">vGetEntireVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a6eabf3ffc66cfd7d0d894a1a91686838" compoundref="PsdMesh_8cpp" startline="547" endline="550">vGetVoxelVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" compoundref="PsdMesh_8cpp" startline="595" endline="611">vSetVolumeNotRates</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::buildStencil</definition>
+        <argsstring>()</argsstring>
+        <name>buildStencil</name>
+        <qualifiedname>PsdMesh::buildStencil</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="136" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="431" bodyend="435"/>
+        <references refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" compoundref="MeshCompt_8cpp" startline="49" endline="52">MeshCompt::innerResetStencil</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" compoundref="MeshCompt_8cpp" startline="106" endline="110">MeshCompt::setStencilSize</references>
+        <referencedby refid="classPsdMesh_1a150d1196c84c53125752ae2d59380e41" compoundref="PsdMesh_8cpp" startline="214" endline="217">updateCoords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double PsdMesh::extendedMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>extendedMeshEntryVolume</name>
+        <qualifiedname>PsdMesh::extendedMeshEntryVolume</qualifiedname>
+        <reimplements refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9">extendedMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Vol of all mesh Entries including abutting diff-coupled voxels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return volume of mesh Entry, including for diffusively coupled voxels from other solvers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="86" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="362" bodyend="369"/>
+        <references refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9" compoundref="MeshCompt_8cpp" startline="36" endline="40">MeshCompt::extendedMeshEntryVolume</references>
+        <references refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" compoundref="PsdMesh_8cpp" startline="307" endline="313">getMeshEntryVolume</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a52f73354e225e22cb9596837e8edd926" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PsdMesh::getCoordinates</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getCoordinates</name>
+        <qualifiedname>PsdMesh::getCoordinates</qualifiedname>
+        <reimplements refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca">getCoordinates</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return coords of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return coords of mesh Entry. For <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref>, coords are x1y1z1 x2y2z2 dia </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="80" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="329" bodyend="340"/>
+        <references refid="classCylBase_1ad96655884be493cdaf02d69a10d6b196" compoundref="CylBase_8cpp" startline="85" endline="88">CylBase::getDia</references>
+        <references refid="classCylBase_1af491e3aed441f4ff3ef112346d644ae7" compoundref="CylBase_8cpp" startline="55" endline="58">CylBase::getX</references>
+        <references refid="classCylBase_1a6f27ed9266877bd74a114d8dcd133ef1" compoundref="CylBase_8cpp" startline="65" endline="68">CylBase::getY</references>
+        <references refid="classCylBase_1af7d5df757eec9e32d3d1f8d6d738e2bc" compoundref="CylBase_8cpp" startline="75" endline="78">CylBase::getZ</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a10341e251b9ea19e7a11313a574bb284" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PsdMesh::getDiffusionArea</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getDiffusionArea</name>
+        <qualifiedname>PsdMesh::getDiffusionArea</qualifiedname>
+        <reimplements refid="classChemCompt_1a2915e3d0730c4b18a305ebc57e49b2eb">getDiffusionArea</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return diffusion X-section area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return diffusion X-section area for each neighbor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="82" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="343" bodyend="350"/>
+        <references refid="classCylBase_1abb8d94642f60b69fa70e425fe03b6aeb" compoundref="CylBase_8cpp" startline="207" endline="217">CylBase::getDiffusionArea</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1ad871d1640a761b99c60cad9cd31224ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PsdMesh::getDiffusionScaling</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getDiffusionScaling</name>
+        <qualifiedname>PsdMesh::getDiffusionScaling</qualifiedname>
+        <reimplements refid="classChemCompt_1a081367d727b267b5f75e825c0deb9330">getDiffusionScaling</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return scale factor for diffusion. 1 here. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return scale factor for diffusion. I think all dendite tips need to return just one entry of 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="84" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="355" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a62fa50fcb60a1e3a88050cad9181c518" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; PsdMesh::getElecComptMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getElecComptMap</name>
+        <qualifiedname>PsdMesh::getElecComptMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="60" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="188" bodyend="191"/>
+        <references refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" compoundref="PsdMesh_8h" startline="182">elecCompt_</references>
+        <referencedby refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" compoundref="PsdMesh_8cpp" startline="26" endline="123">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a6b376a998706df1bfb5d779487a5136b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; PsdMesh::getEndVoxelInCompt</definition>
+        <argsstring>() const</argsstring>
+        <name>getEndVoxelInCompt</name>
+        <qualifiedname>PsdMesh::getEndVoxelInCompt</qualifiedname>
+        <briefdescription>
+<para>Returns index of end voxel mapping to elec compt, just first+1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="65" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="201" bodyend="207"/>
+        <references refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" compoundref="PsdMesh_8h" startline="182">elecCompt_</references>
+        <referencedby refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" compoundref="PsdMesh_8cpp" startline="26" endline="123">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1ac41b063615beae779fbaa6008b5a4744" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int PsdMesh::getMeshDimensions</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshDimensions</name>
+        <qualifiedname>PsdMesh::getMeshDimensions</qualifiedname>
+        <reimplements refid="classChemCompt_1ae26d4e8d6fcf619f172d06737d4f098f">getMeshDimensions</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return dimensions of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="74" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double PsdMesh::getMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshEntryVolume</name>
+        <qualifiedname>PsdMesh::getMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a">getMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return volume of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="76" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="307" bodyend="313"/>
+        <references refid="classCylBase_1abb8d94642f60b69fa70e425fe03b6aeb" compoundref="CylBase_8cpp" startline="207" endline="217">CylBase::getDiffusionArea</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" compoundref="PsdMesh_8h" startline="173">thickness_</references>
+        <referencedby refid="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855" compoundref="PsdMesh_8cpp" startline="362" endline="369">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+        <referencedby refid="classPsdMesh_1ab57e212627f557058e507610551777c0" compoundref="PsdMesh_8cpp" startline="491" endline="502">matchSpineMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a788318254f79a64cd922c6f8b3c760d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int PsdMesh::getMeshType</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshType</name>
+        <qualifiedname>PsdMesh::getMeshType</qualifiedname>
+        <reimplements refid="classChemCompt_1a50c687c6bb40a49ae6d629def63ed139">getMeshType</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return MeshType of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="72" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="294" bodyend="298"/>
+        <references refid="MeshEntry_8h_1a24f376ccef7a39450a2fcdbf5ba97cedab0c4e916d9554a30e5c170d2a06b084b" compoundref="MeshEntry_8h" startline="22">DISK</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1ae62af349659dff47a9480375ddec573b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; PsdMesh::getNeuronVoxel</definition>
+        <argsstring>() const</argsstring>
+        <name>getNeuronVoxel</name>
+        <qualifiedname>PsdMesh::getNeuronVoxel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns index of voxel on <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> to which this spine is connected. This isn&apos;t such a great function, as it only works if the spine is sitting directly on the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>. Otherwise it returns the vector of voxels of parent spine heads, which isn&apos;t what the name indicates. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="59" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="182" bodyend="186"/>
+        <references refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" compoundref="PsdMesh_8h" startline="181">parent_</references>
+        <referencedby refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" compoundref="PsdMesh_8cpp" startline="26" endline="123">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a53bfe1b01a11ff3a87ee41bd47d5b8a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; PsdMesh::getParentVoxel</definition>
+        <argsstring>() const</argsstring>
+        <name>getParentVoxel</name>
+        <qualifiedname>PsdMesh::getParentVoxel</qualifiedname>
+        <reimplements refid="classMeshCompt_1a240b1e27d1bd66056e7c6c092e6b7b1e">getParentVoxel</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the diffusively connected parent voxel within the current (psd) mesh. Since each spine is treated as an independed voxel, there is no such voxel, so we return -1U for each psd. Note that there is a separate function that returns the parentVoxel referred to the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> that this spine/psd sits on. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="99" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="540" bodyend="545"/>
+        <references refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" compoundref="PsdMesh_8h" startline="181">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1ac933779a741d493ec160eddcd765603f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; PsdMesh::getStartVoxelInCompt</definition>
+        <argsstring>() const</argsstring>
+        <name>getStartVoxelInCompt</name>
+        <qualifiedname>PsdMesh::getStartVoxelInCompt</qualifiedname>
+        <briefdescription>
+<para>Returns index of first voxel mapping to elec compt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="63" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="193" bodyend="199"/>
+        <references refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" compoundref="PsdMesh_8h" startline="182">elecCompt_</references>
+        <referencedby refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" compoundref="PsdMesh_8cpp" startline="26" endline="123">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a006a8fdf3e8b610aa9343375dd4bc427" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PsdMesh::getThickness</definition>
+        <argsstring>() const</argsstring>
+        <name>getThickness</name>
+        <qualifiedname>PsdMesh::getThickness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An assumed thickness for PSD. The volume is computed as the PSD area passed in to each PSD, times this value. Defaults to 50 nanometres. For reference, membranes are 5 nm. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="56" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="167" bodyend="170"/>
+        <references refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" compoundref="PsdMesh_8h" startline="173">thickness_</references>
+        <referencedby refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" compoundref="PsdMesh_8cpp" startline="26" endline="123">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a8c13866fd9271428f661c3753a1fa394" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; PsdMesh::getVoxelArea</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelArea</name>
+        <qualifiedname>PsdMesh::getVoxelArea</qualifiedname>
+        <reimplements refid="classMeshCompt_1ad0b8b02617f99d8f15c7655e4e068cc3">getVoxelArea</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="102" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="576" bodyend="579"/>
+        <references refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" compoundref="PsdMesh_8h" startline="192">area_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a02c81426d3700b09e2b77c6b0768b554" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; PsdMesh::getVoxelLength</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelLength</name>
+        <qualifiedname>PsdMesh::getVoxelLength</qualifiedname>
+        <reimplements refid="classMeshCompt_1aa7a21c23e8d57611c313f59dc2cb3827">getVoxelLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="103" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="581" bodyend="584"/>
+        <references refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" compoundref="PsdMesh_8h" startline="193">length_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::handlePsdList</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; params, vector&lt; Id &gt; elecCompts, vector&lt; unsigned int &gt; parentVoxel)</argsstring>
+        <name>handlePsdList</name>
+        <qualifiedname>PsdMesh::handlePsdList</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+          <declname>elecCompts</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt;</type>
+          <declname>parentVoxel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="128" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="225" bodyend="286"/>
+        <references refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" compoundref="PsdMesh_8h" startline="192">area_</references>
+        <references refid="classCylBase_1a0443776cb9cc16acd4dcb438360b9934" compoundref="CylBase_8cpp" startline="23" endline="35">CylBase::CylBase</references>
+        <references refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" compoundref="PsdMesh_8h" startline="182">elecCompt_</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classCylBase_1abb8d94642f60b69fa70e425fe03b6aeb" compoundref="CylBase_8cpp" startline="207" endline="217">CylBase::getDiffusionArea</references>
+        <references refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" compoundref="PsdMesh_8cpp" startline="307" endline="313">getMeshEntryVolume</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" compoundref="PsdMesh_8h" startline="193">length_</references>
+        <references refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" compoundref="ChemCompt_8cpp" startline="439" endline="442">ChemCompt::lookupEntry</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" compoundref="PsdMesh_8h" startline="181">parent_</references>
+        <references refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" compoundref="PsdMesh_8h" startline="180">parentDist_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classCylBase_1ad71cf34c5cc9298508ac5a3a49495c1b" compoundref="CylBase_8cpp" startline="80" endline="83">CylBase::setDia</references>
+        <references refid="classCylBase_1a05bf1fb986988a6a89f48e428db6dd01" compoundref="CylBase_8cpp" startline="110" endline="113">CylBase::setIsCylinder</references>
+        <references refid="classCylBase_1a2f3e181306038e72e051d44644f2464c" compoundref="CylBase_8cpp" startline="90" endline="93">CylBase::setLength</references>
+        <references refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" compoundref="PsdMesh_8h" startline="173">thickness_</references>
+        <references refid="classMeshEntry_1a21da1c171c5a4e41044e080a63ba05f8" compoundref="MeshEntry_8cpp" startline="267" endline="276">MeshEntry::triggerRemesh</references>
+        <references refid="classPsdMesh_1a150d1196c84c53125752ae2d59380e41" compoundref="PsdMesh_8cpp" startline="214" endline="217">updateCoords</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <references refid="classCylBase_1acdbbd3c619e3463a83c6e9c508a66249" compoundref="CylBase_8cpp" startline="132" endline="139">CylBase::volume</references>
+        <references refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" compoundref="PsdMesh_8h" startline="191">vs_</references>
+        <referencedby refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" compoundref="PsdMesh_8cpp" startline="26" endline="123">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a6f838cfe557ff4ad340aa3d3d69c0255" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PsdMesh::indexToSpace</definition>
+        <argsstring>(unsigned int index, double &amp;x, double &amp;y, double &amp;z) const</argsstring>
+        <name>indexToSpace</name>
+        <qualifiedname>PsdMesh::indexToSpace</qualifiedname>
+        <reimplements refid="classChemCompt_1a16a4f8317f8b9c8b9042d96cb3230084">indexToSpace</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts specified index to xyz coords of middle of voxel Values out of range return original xyz </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="165" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="462" bodyend="470"/>
+        <references refid="classCylBase_1af491e3aed441f4ff3ef112346d644ae7" compoundref="CylBase_8cpp" startline="55" endline="58">CylBase::getX</references>
+        <references refid="classCylBase_1a6f27ed9266877bd74a114d8dcd133ef1" compoundref="CylBase_8cpp" startline="65" endline="68">CylBase::getY</references>
+        <references refid="classCylBase_1af7d5df757eec9e32d3d1f8d6d738e2bc" compoundref="CylBase_8cpp" startline="75" endline="78">CylBase::getZ</references>
+        <references refid="classPsdMesh_1aea367c53084ccfe9e84251eef4c90338" compoundref="PsdMesh_8cpp" startline="405" endline="408">innerGetNumEntries</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a1dfaa044fb71ab487d898b605156e62c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PsdMesh::innerBuildDefaultMesh</definition>
+        <argsstring>(const Eref &amp;e, double volume, unsigned int numEntries)</argsstring>
+        <name>innerBuildDefaultMesh</name>
+        <qualifiedname>PsdMesh::innerBuildDefaultMesh</qualifiedname>
+        <reimplements refid="classChemCompt_1ad47583c93af9b85b1f5979a8f2730e29">innerBuildDefaultMesh</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numEntries</declname>
+        </param>
+        <briefdescription>
+<para>Virtual func to make a mesh with specified Volume and numEntries. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Not permitted </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="115" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="422" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a4756471b33f6452f34b544f5cd1a98aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int PsdMesh::innerGetDimensions</definition>
+        <argsstring>() const</argsstring>
+        <name>innerGetDimensions</name>
+        <qualifiedname>PsdMesh::innerGetDimensions</qualifiedname>
+        <reimplements refid="classChemCompt_1ae6347eff16c758abcd89202283c168d7">innerGetDimensions</reimplements>
+        <briefdescription>
+<para>Returns # of dimensions, always 3 here. Inherited pure virt func. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="97" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1aea367c53084ccfe9e84251eef4c90338" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int PsdMesh::innerGetNumEntries</definition>
+        <argsstring>() const</argsstring>
+        <name>innerGetNumEntries</name>
+        <qualifiedname>PsdMesh::innerGetNumEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1a470081742eabd0580f158c1b165549f7">innerGetNumEntries</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Returns number of <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref> in array </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="92" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="405" bodyend="408"/>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <referencedby refid="classPsdMesh_1a6f838cfe557ff4ad340aa3d3d69c0255" compoundref="PsdMesh_8cpp" startline="462" endline="470">indexToSpace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a59554733ee0583e8fd5049c9ebd0b7de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PsdMesh::innerHandleNodeInfo</definition>
+        <argsstring>(const Eref &amp;e, unsigned int numNodes, unsigned int numThreads)</argsstring>
+        <name>innerHandleNodeInfo</name>
+        <qualifiedname>PsdMesh::innerHandleNodeInfo</qualifiedname>
+        <reimplements refid="classChemCompt_1a2ef09b42b75a38963cde30ff66e68216">innerHandleNodeInfo</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numNodes</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numThreads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="124" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="386" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a2f946552d8bd878ddd39528168adedd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::innerHandleRequestMeshStats</definition>
+        <argsstring>(const Eref &amp;e, const SrcFinfo2&lt; unsigned int, vector&lt; double &gt; &gt; *meshStatsFinfo)</argsstring>
+        <name>innerHandleRequestMeshStats</name>
+        <qualifiedname>PsdMesh::innerHandleRequestMeshStats</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classSrcFinfo2" kindref="compound">SrcFinfo2</ref>&lt; unsigned int, vector&lt; double &gt; &gt; *</type>
+          <declname>meshStatsFinfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>More inherited virtual funcs: request comes in for mesh stats Not clear what this does. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="118" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="379" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a728467744444952b234f253ebc1716e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PsdMesh::innerSetNumEntries</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>innerSetNumEntries</name>
+        <qualifiedname>PsdMesh::innerSetNumEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1aa7641511cdf773c5bbaacef66b6ea5e5">innerSetNumEntries</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual func. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Assigns number of MeshEntries. Doesn&apos;t do anything, we have to set psd # from geometry. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="94" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="414" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::matchCubeMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchCubeMeshEntries</name>
+        <qualifiedname>PsdMesh::matchCubeMeshEntries</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="148" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="518" bodyend="526"/>
+        <references refid="classCylBase_1afb7f14b8bb133072656c780053b36de8" compoundref="CylBase_8cpp" startline="317" endline="369">CylBase::matchCubeMeshEntries</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classPsdMesh_1af8dac72631e91c6f28dc6d5f554e6d4f" compoundref="PsdMesh_8h" startline="189">surfaceGranularity_</references>
+        <referencedby refid="classPsdMesh_1a2bfc08990d7ba7c781bcc5907f4a0ce2" compoundref="PsdMesh_8cpp" startline="441" endline="460">matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a2bfc08990d7ba7c781bcc5907f4a0ce2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PsdMesh::matchMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchMeshEntries</name>
+        <qualifiedname>PsdMesh::matchMeshEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1a40842a753e317d720a5495166c56dd58">matchMeshEntries</reimplements>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the meshIndices (NOT spatial indices) of all adjacent mesh entry pairs on ether side of the (self, other) junction. meshIndices are the indices that look up entries in the vector of pools. spatialIndices are (iz * ny + iy) * nx + ix, that is, a linear conversion of cartesian spatial indices. So, for two touching cubes, the return vector is the paired meshIndices on either side of the plane of contact. If one mesh has a finer mesh than the other, or if there are more than one contact points from self to other (for example, at a corner), then we just have multiple pairs using the same meshIndex of the repeated voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="142" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="441" bodyend="460"/>
+        <references refid="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" compoundref="PsdMesh_8cpp" startline="518" endline="526">matchCubeMeshEntries</references>
+        <references refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" compoundref="PsdMesh_8cpp" startline="507" endline="516">matchNeuroMeshEntries</references>
+        <references refid="classPsdMesh_1ab57e212627f557058e507610551777c0" compoundref="PsdMesh_8cpp" startline="491" endline="502">matchSpineMeshEntries</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a746372388087538762f4ab352aa6fb43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::matchNeuroMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchNeuroMeshEntries</name>
+        <qualifiedname>PsdMesh::matchNeuroMeshEntries</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="145" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="507" bodyend="516"/>
+        <references refid="classCylBase_1abb8d94642f60b69fa70e425fe03b6aeb" compoundref="CylBase_8cpp" startline="207" endline="217">CylBase::getDiffusionArea</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" compoundref="PsdMesh_8h" startline="181">parent_</references>
+        <references refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" compoundref="PsdMesh_8h" startline="180">parentDist_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classVoxelJunction_1aee2e9d56c68e5cbd462d805a3ceeabe9" compoundref="VoxelJunction_8h" startline="21" endline="25">VoxelJunction::VoxelJunction</references>
+        <referencedby refid="classPsdMesh_1a2bfc08990d7ba7c781bcc5907f4a0ce2" compoundref="PsdMesh_8cpp" startline="441" endline="460">matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1ab57e212627f557058e507610551777c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::matchSpineMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchSpineMeshEntries</name>
+        <qualifiedname>PsdMesh::matchSpineMeshEntries</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="151" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="491" bodyend="502"/>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classCylBase_1abb8d94642f60b69fa70e425fe03b6aeb" compoundref="CylBase_8cpp" startline="207" endline="217">CylBase::getDiffusionArea</references>
+        <references refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" compoundref="PsdMesh_8cpp" startline="307" endline="313">getMeshEntryVolume</references>
+        <references refid="classSpineMesh_1a0c9927abf0ac27595badcf92f69e4fcf" compoundref="SpineMesh_8cpp" startline="305" endline="311">SpineMesh::getMeshEntryVolume</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" compoundref="PsdMesh_8h" startline="181">parent_</references>
+        <references refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" compoundref="PsdMesh_8h" startline="180">parentDist_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <references refid="classVoxelJunction_1aee2e9d56c68e5cbd462d805a3ceeabe9" compoundref="VoxelJunction_8h" startline="21" endline="25">VoxelJunction::VoxelJunction</references>
+        <referencedby refid="classPsdMesh_1a2bfc08990d7ba7c781bcc5907f4a0ce2" compoundref="PsdMesh_8cpp" startline="441" endline="460">matchMeshEntries</referencedby>
+        <referencedby refid="classSpineMesh_1a64e7b686dbb5cbda0c92b0e4dfc43393" compoundref="SpineMesh_8cpp" startline="483" endline="503">SpineMesh::matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a80ae3d0a7fc08e4ea046e4a220a9eb51" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double PsdMesh::nearest</definition>
+        <argsstring>(double x, double y, double z, unsigned int &amp;index) const</argsstring>
+        <name>nearest</name>
+        <qualifiedname>PsdMesh::nearest</qualifiedname>
+        <reimplements refid="classChemCompt_1a6669c8fe5495d97b22da6d6244a88d12">nearest</reimplements>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This works a little different from other subclass versions of the function. It finds the index of the mesh entry whose centre is closest to the specified coords, and returns the distance to the centre. Doesn&apos;t worry about whether this distance is inside or outside cell. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="162" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="472" bodyend="489"/>
+        <references refid="classVec_1a056e27a8b76e7081c3358553f85a54ec" compoundref="Vec_8cpp" startline="81" endline="84">Vec::distance</references>
+        <references refid="classCylBase_1af491e3aed441f4ff3ef112346d644ae7" compoundref="CylBase_8cpp" startline="55" endline="58">CylBase::getX</references>
+        <references refid="classCylBase_1a6f27ed9266877bd74a114d8dcd133ef1" compoundref="CylBase_8cpp" startline="65" endline="68">CylBase::getY</references>
+        <references refid="classCylBase_1af7d5df757eec9e32d3d1f8d6d738e2bc" compoundref="CylBase_8cpp" startline="75" endline="78">CylBase::getZ</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classVec_1ae9852b7e40650f19652ffb59cd664442" compoundref="Vec_8cpp" startline="14" endline="16">Vec::Vec</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1aba313e73a390eb29b0c37f7438ceb834" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int PsdMesh::parent</definition>
+        <argsstring>(unsigned int index) const</argsstring>
+        <name>parent</name>
+        <qualifiedname>PsdMesh::parent</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return voxel# on parent compartment on spine or dendrite. For now PSD is always on spine, so it just returns the index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="46" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="393" bodyend="400"/>
+        <references refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" compoundref="PsdMesh_8h" startline="181">parent_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1aba4454027b783024fa041088f39df2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PsdMesh::PsdMesh</definition>
+        <argsstring>()</argsstring>
+        <name>PsdMesh</name>
+        <qualifiedname>PsdMesh::PsdMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="30" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="134" bodyend="151"/>
+        <references refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" compoundref="PsdMesh_8h" startline="192">area_</references>
+        <references refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" compoundref="PsdMesh_8h" startline="193">length_</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" compoundref="PsdMesh_8h" startline="181">parent_</references>
+        <references refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" compoundref="PsdMesh_8h" startline="180">parentDist_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classCylBase_1ad71cf34c5cc9298508ac5a3a49495c1b" compoundref="CylBase_8cpp" startline="80" endline="83">CylBase::setDia</references>
+        <references refid="classCylBase_1a05bf1fb986988a6a89f48e428db6dd01" compoundref="CylBase_8cpp" startline="110" endline="113">CylBase::setIsCylinder</references>
+        <references refid="classCylBase_1a2f3e181306038e72e051d44644f2464c" compoundref="CylBase_8cpp" startline="90" endline="93">CylBase::setLength</references>
+        <references refid="classCylBase_1a24ad5b1161c1f3f65f3843377f9db50e" compoundref="CylBase_8cpp" startline="100" endline="103">CylBase::setNumDivs</references>
+        <references refid="classPsdMesh_1af8dac72631e91c6f28dc6d5f554e6d4f" compoundref="PsdMesh_8h" startline="189">surfaceGranularity_</references>
+        <references refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" compoundref="PsdMesh_8h" startline="173">thickness_</references>
+        <references refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" compoundref="PsdMesh_8h" startline="191">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a65d9c22d9b7c19511bea5088043bd4ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PsdMesh::PsdMesh</definition>
+        <argsstring>(const PsdMesh &amp;other)</argsstring>
+        <name>PsdMesh</name>
+        <qualifiedname>PsdMesh::PsdMesh</qualifiedname>
+        <param>
+          <type>const <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="31" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="153" bodyend="157"/>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classPsdMesh_1af8dac72631e91c6f28dc6d5f554e6d4f" compoundref="PsdMesh_8h" startline="189">surfaceGranularity_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PsdMesh::setMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid, double volume)</argsstring>
+        <name>setMeshEntryVolume</name>
+        <qualifiedname>PsdMesh::setMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1ac2343832803b9366231f1d2d816a0e21">setMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to set volume of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to assign volume of mesh Entry. Thickness not touched. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="78" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="316" bodyend="325"/>
+        <references refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" compoundref="PsdMesh_8h" startline="192">area_</references>
+        <references refid="header_8h_1a299aabc5fc8285cbf99025330a3d0d0d" compoundref="header_8h" startline="28">PI</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classCylBase_1ad71cf34c5cc9298508ac5a3a49495c1b" compoundref="CylBase_8cpp" startline="80" endline="83">CylBase::setDia</references>
+        <references refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" compoundref="PsdMesh_8h" startline="173">thickness_</references>
+        <references refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" compoundref="PsdMesh_8h" startline="191">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a814dbcf72c705ebb3d1fef4f613eb625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::setThickness</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setThickness</name>
+        <qualifiedname>PsdMesh::setThickness</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="57" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="171" bodyend="174"/>
+        <references refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" compoundref="PsdMesh_8h" startline="173">thickness_</references>
+        <referencedby refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" compoundref="PsdMesh_8cpp" startline="26" endline="123">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a7b7274921832f7d7b30c1b9f13dab583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::transmitChange</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>transmitChange</name>
+        <qualifiedname>PsdMesh::transmitChange</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="134" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a150d1196c84c53125752ae2d59380e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PsdMesh::updateCoords</definition>
+        <argsstring>()</argsstring>
+        <name>updateCoords</name>
+        <qualifiedname>PsdMesh::updateCoords</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recomputes all local coordinate and meshing data following a change in any of the coord parameters</para>
+<para>This assumes that lambda is the quantity to preserve, over numEntries. So when the compartment changes volume, numEntries changes too. Assumes that the soma node is at index 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="42" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="214" bodyend="217"/>
+        <references refid="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" compoundref="PsdMesh_8cpp" startline="431" endline="435">buildStencil</references>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a13eb23d457eb248964fbfaf36b40e6e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double PsdMesh::vGetEntireVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetEntireVolume</name>
+        <qualifiedname>PsdMesh::vGetEntireVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a546b5a40463c3e84cc5b33baae6fd709">vGetEntireVolume</reimplements>
+        <briefdescription>
+<para>Inherited virtual func. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="106" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="586" bodyend="593"/>
+        <references refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" compoundref="PsdMesh_8h" startline="191">vs_</references>
+        <referencedby refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" compoundref="PsdMesh_8cpp" startline="595" endline="611">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a11eb43f06da539dd15b260d9d0e4b254" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; PsdMesh::vGetVoxelMidpoint</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetVoxelMidpoint</name>
+        <qualifiedname>PsdMesh::vGetVoxelMidpoint</qualifiedname>
+        <reimplements refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70">vGetVoxelMidpoint</reimplements>
+        <briefdescription>
+<para>Virtual func so that derived classes can return voxel midpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="101" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="559" bodyend="574"/>
+        <references refid="classCylBase_1ac07adfff6aca8dd297fd9790359ff551" compoundref="CylBase_8cpp" startline="169" endline="195">CylBase::getCoordinates</references>
+        <references refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" compoundref="PsdMesh_8h" startline="179">pa_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a6eabf3ffc66cfd7d0d894a1a91686838" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; PsdMesh::vGetVoxelVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetVoxelVolume</name>
+        <qualifiedname>PsdMesh::vGetVoxelVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">vGetVoxelVolume</reimplements>
+        <briefdescription>
+<para>Virtual func so that derived classes can pass voxel volume back. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="100" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="547" bodyend="550"/>
+        <references refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" compoundref="PsdMesh_8h" startline="191">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool PsdMesh::vSetVolumeNotRates</definition>
+        <argsstring>(double volume)</argsstring>
+        <name>vSetVolumeNotRates</name>
+        <qualifiedname>PsdMesh::vSetVolumeNotRates</qualifiedname>
+        <reimplements refid="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c">vSetVolumeNotRates</reimplements>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual func. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="109" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="595" bodyend="611"/>
+        <references refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" compoundref="PsdMesh_8h" startline="192">area_</references>
+        <references refid="classCylBase_1ad96655884be493cdaf02d69a10d6b196" compoundref="CylBase_8cpp" startline="85" endline="88">CylBase::getDia</references>
+        <references refid="classCylBase_1a8ee5f8e88924d3be2cdcc01c23efb2b9" compoundref="CylBase_8cpp" startline="95" endline="98">CylBase::getLength</references>
+        <references refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" compoundref="PsdMesh_8h" startline="193">length_</references>
+        <references refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" compoundref="PsdMesh_8h" startline="178">psd_</references>
+        <references refid="classCylBase_1ad71cf34c5cc9298508ac5a3a49495c1b" compoundref="CylBase_8cpp" startline="80" endline="83">CylBase::setDia</references>
+        <references refid="classCylBase_1a2f3e181306038e72e051d44644f2464c" compoundref="CylBase_8cpp" startline="90" endline="93">CylBase::setLength</references>
+        <references refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" compoundref="PsdMesh_8h" startline="173">thickness_</references>
+        <references refid="classPsdMesh_1a13eb23d457eb248964fbfaf36b40e6e6" compoundref="PsdMesh_8cpp" startline="586" endline="593">vGetEntireVolume</references>
+        <references refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" compoundref="PsdMesh_8h" startline="191">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPsdMesh_1aff1ce76a0fd45ce89dcc937a4ba7493d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PsdMesh::~PsdMesh</definition>
+        <argsstring>()</argsstring>
+        <name>~PsdMesh</name>
+        <qualifiedname>PsdMesh::~PsdMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="32" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * PsdMesh::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>PsdMesh::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="169" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp" bodystart="26" bodyend="123"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classEpFunc3_1a17dc91b7c23ff8ed38f968e673375c25" compoundref="EpFunc_8h" startline="104" endline="106">EpFunc3&lt; T, A1, A2, A3 &gt;::EpFunc3</references>
+        <references refid="classPsdMesh_1a62fa50fcb60a1e3a88050cad9181c518" compoundref="PsdMesh_8cpp" startline="188" endline="191">getElecComptMap</references>
+        <references refid="classPsdMesh_1a6b376a998706df1bfb5d779487a5136b" compoundref="PsdMesh_8cpp" startline="201" endline="207">getEndVoxelInCompt</references>
+        <references refid="classPsdMesh_1ae62af349659dff47a9480375ddec573b" compoundref="PsdMesh_8cpp" startline="182" endline="186">getNeuronVoxel</references>
+        <references refid="classPsdMesh_1ac933779a741d493ec160eddcd765603f" compoundref="PsdMesh_8cpp" startline="193" endline="199">getStartVoxelInCompt</references>
+        <references refid="classPsdMesh_1a006a8fdf3e8b610aa9343375dd4bc427" compoundref="PsdMesh_8cpp" startline="167" endline="170">getThickness</references>
+        <references refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">handlePsdList</references>
+        <references refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">ChemCompt::initCinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classPsdMesh_1a814dbcf72c705ebb3d1fef4f613eb625" compoundref="PsdMesh_8cpp" startline="171" endline="174">setThickness</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref> sets up the diffusion geometries for the PSD. It has to work in two contexts: first, as a PSD sitting on a spine head. Second, as a PSD sitting directly on the dendrite. In either case it is treated as a surface disc, not as a volume. On the dendrite this is a little strange conceptually (flat disc on round cylinder) but will do for now. Later can fine-tune the cap geometry.</para>
+<para>In either case, the <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref> is filled by a message that contains information about the matching voxel index (either on spineMesh or <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>), the coordinates, the radial vector, and the diameter. The <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref> does not have any internal diffusion, and it expects to pass only N to the parent dendrite or spine. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PsdMesh</label>
+        <link refid="classPsdMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-entry_</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-coreStencil_</edgelabel>
+          <edgelabel>-m_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-extendedMeshEntryVolume_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MeshEntry</label>
+        <link refid="classMeshEntry"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PsdMesh</label>
+        <link refid="classPsdMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-area_</edgelabel>
+          <edgelabel>-length_</edgelabel>
+          <edgelabel>-parentDist_</edgelabel>
+          <edgelabel>-vs_</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-elecCompt_</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#N_</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>T</label>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>std::vector&lt; Id &gt;</label>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; Id &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" line="27" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.h" bodystart="28" bodyend="194"/>
+    <listofallmembers>
+      <member refid="classMeshCompt_1a781b9a02f4af37458eda4ffb1a6e615d" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>addRow</name></member>
+      <member refid="classPsdMesh_1a16d44bc013b9145551b3558a44f147cd" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>area_</name></member>
+      <member refid="classChemCompt_1a7127a2f6f2fc7bb9e1b5e23c0b3c704d" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>boundaries_</name></member>
+      <member refid="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>buildDefaultMesh</name></member>
+      <member refid="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>buildJunction</name></member>
+      <member refid="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>buildStencil</name></member>
+      <member refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>ChemCompt</name></member>
+      <member refid="classMeshCompt_1a2bc6647b552e0140c6f8e8a05599af95" prot="public" virt="virtual"><scope>PsdMesh</scope><name>clearExtendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>coreStencil_</name></member>
+      <member refid="classChemCompt_1a510fac43d511a189853bbb6d32afb774" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>distance</name></member>
+      <member refid="classPsdMesh_1aa874598616e5acbc51788c42514216e1" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>elecCompt_</name></member>
+      <member refid="classChemCompt_1a82073727afa7625b507772406d39476f" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>entry_</name></member>
+      <member refid="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855" prot="public" virt="virtual"><scope>PsdMesh</scope><name>extendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>extendedMeshEntryVolume_</name></member>
+      <member refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" prot="public" virt="virtual"><scope>PsdMesh</scope><name>extendStencil</name></member>
+      <member refid="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>flipRet</name></member>
+      <member refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getChildConcs</name></member>
+      <member refid="classPsdMesh_1a52f73354e225e22cb9596837e8edd926" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getCoordinates</name></member>
+      <member refid="classPsdMesh_1a10341e251b9ea19e7a11313a574bb284" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getDiffusionArea</name></member>
+      <member refid="classPsdMesh_1ad871d1640a761b99c60cad9cd31224ff" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getDiffusionScaling</name></member>
+      <member refid="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getDimensions</name></member>
+      <member refid="classPsdMesh_1a62fa50fcb60a1e3a88050cad9181c518" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getElecComptMap</name></member>
+      <member refid="classPsdMesh_1a6b376a998706df1bfb5d779487a5136b" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getEndVoxelInCompt</name></member>
+      <member refid="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getEntireVolume</name></member>
+      <member refid="classChemCompt_1aa15b66e3669574b15f303a35af341102" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getIsMembraneBound</name></member>
+      <member refid="classPsdMesh_1ac41b063615beae779fbaa6008b5a4744" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getMeshDimensions</name></member>
+      <member refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getMeshEntryVolume</name></member>
+      <member refid="classPsdMesh_1a788318254f79a64cd922c6f8b3c760d7" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getMeshType</name></member>
+      <member refid="classChemCompt_1ab2c1ef2c7882e253a2b7c045db87c7fb" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getMethod</name></member>
+      <member refid="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getNeighbors</name></member>
+      <member refid="classPsdMesh_1ae62af349659dff47a9480375ddec573b" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getNeuronVoxel</name></member>
+      <member refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getNumEntries</name></member>
+      <member refid="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getOneVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getOneVoxelVolume</name></member>
+      <member refid="classPsdMesh_1a53bfe1b01a11ff3a87ee41bd47d5b8a1" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getParentVoxel</name></member>
+      <member refid="classPsdMesh_1ac933779a741d493ec160eddcd765603f" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getStartVoxelInCompt</name></member>
+      <member refid="classMeshCompt_1a9342f82bc2304c99fb58daad6016cd5c" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getStencil</name></member>
+      <member refid="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getStencilIndex</name></member>
+      <member refid="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getStencilRate</name></member>
+      <member refid="classMeshCompt_1aae2b570a057a43104858c5f6c02f423e" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getStencilRow</name></member>
+      <member refid="classPsdMesh_1a006a8fdf3e8b610aa9343375dd4bc427" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getThickness</name></member>
+      <member refid="classPsdMesh_1a8c13866fd9271428f661c3753a1fa394" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getVoxelArea</name></member>
+      <member refid="classPsdMesh_1a02c81426d3700b09e2b77c6b0768b554" prot="public" virt="virtual"><scope>PsdMesh</scope><name>getVoxelLength</name></member>
+      <member refid="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>getVoxelVolume</name></member>
+      <member refid="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>handleNodeInfo</name></member>
+      <member refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>handlePsdList</name></member>
+      <member refid="classPsdMesh_1a6f838cfe557ff4ad340aa3d3d69c0255" prot="public" virt="virtual"><scope>PsdMesh</scope><name>indexToSpace</name></member>
+      <member refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>initCinfo</name></member>
+      <member refid="classPsdMesh_1a1dfaa044fb71ab487d898b605156e62c" prot="public" virt="virtual"><scope>PsdMesh</scope><name>innerBuildDefaultMesh</name></member>
+      <member refid="classPsdMesh_1a4756471b33f6452f34b544f5cd1a98aa" prot="public" virt="virtual"><scope>PsdMesh</scope><name>innerGetDimensions</name></member>
+      <member refid="classPsdMesh_1aea367c53084ccfe9e84251eef4c90338" prot="public" virt="virtual"><scope>PsdMesh</scope><name>innerGetNumEntries</name></member>
+      <member refid="classMeshCompt_1a7b8e15d0a73de4f467efcf733e095cb7" prot="public" virt="virtual"><scope>PsdMesh</scope><name>innerGetStencilRate</name></member>
+      <member refid="classPsdMesh_1a59554733ee0583e8fd5049c9ebd0b7de" prot="public" virt="virtual"><scope>PsdMesh</scope><name>innerHandleNodeInfo</name></member>
+      <member refid="classPsdMesh_1a2f946552d8bd878ddd39528168adedd0" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>innerHandleRequestMeshStats</name></member>
+      <member refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" prot="public" virt="virtual"><scope>PsdMesh</scope><name>innerResetStencil</name></member>
+      <member refid="classPsdMesh_1a728467744444952b234f253ebc1716e1" prot="public" virt="virtual"><scope>PsdMesh</scope><name>innerSetNumEntries</name></member>
+      <member refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>isMembraneBound_</name></member>
+      <member refid="classPsdMesh_1af8d25a92234263754a0c1c68d32b5e5b" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>length_</name></member>
+      <member refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>lookupEntry</name></member>
+      <member refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>m_</name></member>
+      <member refid="classPsdMesh_1aa8e9d9838c04dcb37e9b870c7b6ae85a" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>matchCubeMeshEntries</name></member>
+      <member refid="classPsdMesh_1a2bfc08990d7ba7c781bcc5907f4a0ce2" prot="public" virt="virtual"><scope>PsdMesh</scope><name>matchMeshEntries</name></member>
+      <member refid="classPsdMesh_1a746372388087538762f4ab352aa6fb43" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>matchNeuroMeshEntries</name></member>
+      <member refid="classPsdMesh_1ab57e212627f557058e507610551777c0" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>matchSpineMeshEntries</name></member>
+      <member refid="classMeshCompt_1ad92606a51823a508e19ace8c08cc4af2" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>MeshCompt</name></member>
+      <member refid="classChemCompt_1ac9f3fa6dce7fafe302a205156668c390" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>method_</name></member>
+      <member refid="classPsdMesh_1a80ae3d0a7fc08e4ea046e4a220a9eb51" prot="public" virt="virtual"><scope>PsdMesh</scope><name>nearest</name></member>
+      <member refid="classPsdMesh_1ac8786ce2d1abce0db83ee1a2c4d23483" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>pa_</name></member>
+      <member refid="classPsdMesh_1aba313e73a390eb29b0c37f7438ceb834" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>parent</name></member>
+      <member refid="classPsdMesh_1a8b417220ea9c918542e1aaf2f93a4a49" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>parent_</name></member>
+      <member refid="classPsdMesh_1a1d1fd4ffcf5a9754ede27390a24a31cc" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>parentDist_</name></member>
+      <member refid="classPsdMesh_1aba128e9f9220959f34ff0c3a3dcb4f1b" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>psd_</name></member>
+      <member refid="classPsdMesh_1aba4454027b783024fa041088f39df2cb" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>PsdMesh</name></member>
+      <member refid="classPsdMesh_1a65d9c22d9b7c19511bea5088043bd4ff" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>PsdMesh</name></member>
+      <member refid="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>resetStencil</name></member>
+      <member refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setChildConcs</name></member>
+      <member refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setEntireVolume</name></member>
+      <member refid="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setIsMembraneBound</name></member>
+      <member refid="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b" prot="public" virt="virtual"><scope>PsdMesh</scope><name>setMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a346cbd4ea599c929638609bc7f16f83a" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setMethod</name></member>
+      <member refid="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setNumEntries</name></member>
+      <member refid="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setOneVoxelVolume</name></member>
+      <member refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setStencilSize</name></member>
+      <member refid="classPsdMesh_1a814dbcf72c705ebb3d1fef4f613eb625" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setThickness</name></member>
+      <member refid="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>setVolumeNotRates</name></member>
+      <member refid="classPsdMesh_1af8dac72631e91c6f28dc6d5f554e6d4f" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>surfaceGranularity_</name></member>
+      <member refid="classPsdMesh_1ac345c8fb318150c20519b6623f9648bc" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>thickness_</name></member>
+      <member refid="classPsdMesh_1a7b7274921832f7d7b30c1b9f13dab583" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>transmitChange</name></member>
+      <member refid="classPsdMesh_1a150d1196c84c53125752ae2d59380e41" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>updateCoords</name></member>
+      <member refid="classPsdMesh_1a13eb23d457eb248964fbfaf36b40e6e6" prot="public" virt="virtual"><scope>PsdMesh</scope><name>vGetEntireVolume</name></member>
+      <member refid="classPsdMesh_1a11eb43f06da539dd15b260d9d0e4b254" prot="public" virt="virtual"><scope>PsdMesh</scope><name>vGetVoxelMidpoint</name></member>
+      <member refid="classPsdMesh_1a6eabf3ffc66cfd7d0d894a1a91686838" prot="public" virt="virtual"><scope>PsdMesh</scope><name>vGetVoxelVolume</name></member>
+      <member refid="classChemCompt_1a1df70b909fac1208b80586b9092341e9" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>voxelVolOut</name></member>
+      <member refid="classPsdMesh_1adeab6232711adbc812a07a3eff4fe5c1" prot="private" virt="non-virtual"><scope>PsdMesh</scope><name>vs_</name></member>
+      <member refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214" prot="public" virt="virtual"><scope>PsdMesh</scope><name>vSetVolumeNotRates</name></member>
+      <member refid="classChemCompt_1ae7cb5e1f801974d1c3cd68373dff5cfc" prot="public" virt="virtual"><scope>PsdMesh</scope><name>~ChemCompt</name></member>
+      <member refid="classMeshCompt_1adb85de0aa1c67c78a484d9876299857a" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>~MeshCompt</name></member>
+      <member refid="classPsdMesh_1aff1ce76a0fd45ce89dcc937a4ba7493d" prot="public" virt="non-virtual"><scope>PsdMesh</scope><name>~PsdMesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

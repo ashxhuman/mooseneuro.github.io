@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classDinfo" kind="class" language="C++" prot="public">
+    <compoundname>Dinfo</compoundname>
+    <basecompoundref refid="classDinfoBase" prot="public" virt="non-virtual">DinfoBase</basecompoundref>
+    <derivedcompoundref refid="classZeroSizeDinfo" prot="public" virt="non-virtual">ZeroSizeDinfo&lt; D &gt;</derivedcompoundref>
+    <includes refid="Dinfo_8h" local="no">Dinfo.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class D</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDinfo_1af3daf3d56639a9f3cd3e8377de9bbdfb" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Dinfo&lt; D &gt;::sizeIncrement_</definition>
+        <argsstring></argsstring>
+        <name>sizeIncrement_</name>
+        <qualifiedname>Dinfo::sizeIncrement_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="174" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="classDinfo_1afa0b69bf807d3562c5665ca7959c37c8" compoundref="Dinfo_8h" startline="63" endline="65">Dinfo&lt; D &gt;::Dinfo</referencedby>
+        <referencedby refid="classDinfo_1a52111df23bae4f41affd0343e051c74c" compoundref="Dinfo_8h" startline="66" endline="69">Dinfo&lt; D &gt;::Dinfo</referencedby>
+        <referencedby refid="classDinfo_1a17349cdcddb723d0112fdbb5459828f0" compoundref="Dinfo_8h" startline="151" endline="153">Dinfo&lt; D &gt;::sizeIncrement</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDinfo_1a1ef53fde80a30e844e4a4b3663741d81" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>char *</type>
+        <definition>char * Dinfo&lt; D &gt;::allocData</definition>
+        <argsstring>(unsigned int numData) const</argsstring>
+        <name>allocData</name>
+        <qualifiedname>Dinfo::allocData</qualifiedname>
+        <reimplements refid="classDinfoBase_1a6f391ad711ead96caad23c576d35b2f5">allocData</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>numData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="71" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classDinfo_1a809d28bffb7f2d038f384b792846d1ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Dinfo&lt; D &gt;::assignData</definition>
+        <argsstring>(char *data, unsigned int copyEntries, const char *orig, unsigned int origEntries) const</argsstring>
+        <name>assignData</name>
+        <qualifiedname>Dinfo::assignData</qualifiedname>
+        <reimplements refid="classDinfoBase_1acfc4562c1844ba22199e29a813fa8a95">assignData</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>copy</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>copyEntries</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>orig</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>origEntries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns data contents from &apos;orig&apos; over to &apos;copy&apos;. Tiles the origEntries onto the copyEntries. So if there are fewer origEntries, the orig data contents are repeated till the copy is full. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="106" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="106" bodyend="135"/>
+        <references refid="classDinfoBase_1a9d7bb6dd717ed206b0a7fb055d02c556" compoundref="Dinfo_8h" startline="53" endline="55">DinfoBase::isOneZombie</references>
+      </memberdef>
+      <memberdef kind="function" id="classDinfo_1afea71c74782cb663dca4c691061ee774" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>char *</type>
+        <definition>char * Dinfo&lt; D &gt;::copyData</definition>
+        <argsstring>(const char *orig, unsigned int origEntries, unsigned int copyEntries, unsigned int startEntry) const</argsstring>
+        <name>copyData</name>
+        <qualifiedname>Dinfo::copyData</qualifiedname>
+        <reimplements refid="classDinfoBase_1ade373fc88cf54e30c2006cd2dca8d683">copyData</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>orig</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>origEntries</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>copyEntries</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>startEntry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a newly allocated copy of the original data, repeated copyEntries times. Orig data untouched. Analogous to copying a vector into a bigger one. Repeat the original data as many times as possible. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="78" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="78" bodyend="104"/>
+        <references refid="classDinfoBase_1a9d7bb6dd717ed206b0a7fb055d02c556" compoundref="Dinfo_8h" startline="53" endline="55">DinfoBase::isOneZombie</references>
+      </memberdef>
+      <memberdef kind="function" id="classDinfo_1ad3532c123b652c7182d4b9702a1e6cae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Dinfo&lt; D &gt;::destroyData</definition>
+        <argsstring>(char *d) const</argsstring>
+        <name>destroyData</name>
+        <qualifiedname>Dinfo::destroyData</qualifiedname>
+        <reimplements refid="classDinfoBase_1a6429ffd56e4532e0b4e23f75b6bce71d">destroyData</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="137" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classDinfo_1afa0b69bf807d3562c5665ca7959c37c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dinfo&lt; D &gt;::Dinfo</definition>
+        <argsstring>()</argsstring>
+        <name>Dinfo</name>
+        <qualifiedname>Dinfo::Dinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="63" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="63" bodyend="65"/>
+        <references refid="classDinfo_1af3daf3d56639a9f3cd3e8377de9bbdfb" compoundref="Dinfo_8h" startline="174">Dinfo&lt; D &gt;::sizeIncrement_</references>
+        <referencedby refid="classTestId_1a017469fce214c3c71f9f920b459e23a9" compoundref="testAsync_8cpp" startline="930" endline="939">TestId::initCinfo</referencedby>
+        <referencedby refid="classCell_1a0b9e9376e5b4462c74e7c785e00745d1" compoundref="Cell_8cpp" startline="23" endline="110">Cell::initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDinfo_1a52111df23bae4f41affd0343e051c74c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Dinfo&lt; D &gt;::Dinfo</definition>
+        <argsstring>(bool isOneZombie)</argsstring>
+        <name>Dinfo</name>
+        <qualifiedname>Dinfo::Dinfo</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>isOneZombie</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="66" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="66" bodyend="69"/>
+        <references refid="classDinfo_1af3daf3d56639a9f3cd3e8377de9bbdfb" compoundref="Dinfo_8h" startline="174">Dinfo&lt; D &gt;::sizeIncrement_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDinfo_1a94aead6bd308bb56b2121bd0dc690d12" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool Dinfo&lt; D &gt;::isA</definition>
+        <argsstring>(const DinfoBase *other) const</argsstring>
+        <name>isA</name>
+        <qualifiedname>Dinfo::isA</qualifiedname>
+        <reimplements refid="classDinfoBase_1a6fe6a730fc9bd5c425c2141d826df69f">isA</reimplements>
+        <param>
+          <type>const <ref refid="classDinfoBase" kindref="compound">DinfoBase</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="170" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classDinfo_1ad7368de13c50e53d07778b001bfd239d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dinfo&lt; D &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>Dinfo::size</qualifiedname>
+        <reimplements refid="classDinfoBase_1aed0e5e2cf2b1dcd920b71b2509878b6c">size</reimplements>
+        <reimplementedby refid="classZeroSizeDinfo_1afdee5496d0f6250bfe5bd6744a91a1ae">size</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="141" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classDinfo_1a17349cdcddb723d0112fdbb5459828f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dinfo&lt; D &gt;::sizeIncrement</definition>
+        <argsstring>() const</argsstring>
+        <name>sizeIncrement</name>
+        <qualifiedname>Dinfo::sizeIncrement</qualifiedname>
+        <reimplements refid="classDinfoBase_1ab53fff4b0b9ca9edb354817d5e8cb636">sizeIncrement</reimplements>
+        <reimplementedby refid="classZeroSizeDinfo_1a54f07d004fb56da10263f9f9961ea3b8">sizeIncrement</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This little hack is used for lookups of a data entry in an array. Normally sizeIncrement is identical to size. However, if it is a OneZombie then we always need to return the original pointer, so here sizeIncrement becomes zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="151" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="151" bodyend="153"/>
+        <references refid="classDinfo_1af3daf3d56639a9f3cd3e8377de9bbdfb" compoundref="Dinfo_8h" startline="174">Dinfo&lt; D &gt;::sizeIncrement_</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Dinfo&lt; D &gt;</label>
+        <link refid="classDinfo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DinfoBase</label>
+        <link refid="classDinfoBase"/>
+      </node>
+      <node id="3">
+        <label>ZeroSizeDinfo&lt; D &gt;</label>
+        <link refid="classZeroSizeDinfo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Dinfo&lt; D &gt;</label>
+        <link refid="classDinfo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DinfoBase</label>
+        <link refid="classDinfoBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" line="60" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/Dinfo.h" bodystart="61" bodyend="175"/>
+    <listofallmembers>
+      <member refid="classDinfo_1a1ef53fde80a30e844e4a4b3663741d81" prot="public" virt="virtual"><scope>Dinfo</scope><name>allocData</name></member>
+      <member refid="classDinfo_1a809d28bffb7f2d038f384b792846d1ba" prot="public" virt="virtual"><scope>Dinfo</scope><name>assignData</name></member>
+      <member refid="classDinfo_1afea71c74782cb663dca4c691061ee774" prot="public" virt="virtual"><scope>Dinfo</scope><name>copyData</name></member>
+      <member refid="classDinfo_1ad3532c123b652c7182d4b9702a1e6cae" prot="public" virt="virtual"><scope>Dinfo</scope><name>destroyData</name></member>
+      <member refid="classDinfo_1afa0b69bf807d3562c5665ca7959c37c8" prot="public" virt="non-virtual"><scope>Dinfo</scope><name>Dinfo</name></member>
+      <member refid="classDinfo_1a52111df23bae4f41affd0343e051c74c" prot="public" virt="non-virtual"><scope>Dinfo</scope><name>Dinfo</name></member>
+      <member refid="classDinfoBase_1ac80de4949ad98b078defeb5a3ba09556" prot="public" virt="non-virtual"><scope>Dinfo</scope><name>DinfoBase</name></member>
+      <member refid="classDinfoBase_1aaa6d2a48d37434f34a604cc35144a3a4" prot="public" virt="non-virtual"><scope>Dinfo</scope><name>DinfoBase</name></member>
+      <member refid="classDinfo_1a94aead6bd308bb56b2121bd0dc690d12" prot="public" virt="virtual"><scope>Dinfo</scope><name>isA</name></member>
+      <member refid="classDinfoBase_1a9d7bb6dd717ed206b0a7fb055d02c556" prot="public" virt="non-virtual"><scope>Dinfo</scope><name>isOneZombie</name></member>
+      <member refid="classDinfoBase_1a43891c47a5ee44f63ae5bc7c82ed63cd" prot="private" virt="non-virtual"><scope>Dinfo</scope><name>isOneZombie_</name></member>
+      <member refid="classDinfo_1ad7368de13c50e53d07778b001bfd239d" prot="public" virt="virtual"><scope>Dinfo</scope><name>size</name></member>
+      <member refid="classDinfo_1a17349cdcddb723d0112fdbb5459828f0" prot="public" virt="virtual"><scope>Dinfo</scope><name>sizeIncrement</name></member>
+      <member refid="classDinfo_1af3daf3d56639a9f3cd3e8377de9bbdfb" prot="private" virt="non-virtual"><scope>Dinfo</scope><name>sizeIncrement_</name></member>
+      <member refid="classDinfoBase_1aa58510ae885d3e16907b452a039ef3fa" prot="public" virt="virtual"><scope>Dinfo</scope><name>~DinfoBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

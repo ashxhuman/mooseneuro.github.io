@@ -1,0 +1,1058 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacepymoose_1_1docs" kind="namespace" language="C++">
+    <compoundname>pymoose::docs</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1af7c65636275416d68117b910fbfe92a3" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::connect</definition>
+        <argsstring></argsstring>
+        <name>connect</name>
+        <qualifiedname>pymoose::docs::connect</qualifiedname>
+        <initializer>= R&quot;(Connect two objects via messages&quot;
+
+Parameters
+----------
+src: <ref refid="classObjId" kindref="compound">ObjId</ref>
+    Source object
+srcfield: str
+    Source field on source object
+dest: <ref refid="classObjId" kindref="compound">ObjId</ref>
+    Target object
+destfield: str
+    Target field on destination object
+
+Returns
+-------
+<ref refid="classObjId" kindref="compound">ObjId</ref>
+   <ref refid="classMsg" kindref="compound">Msg</ref> object for the connection
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="224" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a615fb028965b41263dfd73e778dd320c" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::convertToObjId</definition>
+        <argsstring></argsstring>
+        <name>convertToObjId</name>
+        <qualifiedname>pymoose::docs::convertToObjId</qualifiedname>
+        <initializer>= R&quot;(Get a handle for existing element.
+
+Convert a path or an object to the appropriate builtin moose class instance
+
+Parameters
+----------
+arg : str/vec/moose object
+    path of the moose element to be converted or another element (possibly
+    available as a superclass instance).
+
+Returns
+-------
+melement
+    MOOSE element (object) corresponding to the `arg` converted to write
+    subclass.
+
+Raises
+------
+RunTimeError if `args` is a string path, but no such element exists.)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="145" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a73db2cca7814403285c33f501e6b359a" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::copy</definition>
+        <argsstring></argsstring>
+        <name>copy</name>
+        <qualifiedname>pymoose::docs::copy</qualifiedname>
+        <initializer>= R&quot;(Copy object to a new location.
+
+Parameters
+----------
+orig: <ref refid="classId" kindref="compound">Id</ref>, <ref refid="classObjId" kindref="compound">ObjId</ref> or <ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref> or str
+    Source object or path of source object
+parent: <ref refid="classId" kindref="compound">Id</ref>, <ref refid="classObjId" kindref="compound">ObjId</ref> or <ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref> or str
+    Existing object into which to copy
+name: str
+    Name of the new object. If empty, the name of the original
+    object is used.
+num: unsigned int
+    Number of copies (default: 1)
+toGlobal: bool
+    Whether to make it a global element (default: False)
+copyExtMsgs: bool
+    Whether to copy the external messages (default: False)
+
+Returns
+-------
+<ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref>
+    Handle of the new copy
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="340" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a776e4b1a84c42d4079975c6356d14ce1" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::doDelete</definition>
+        <argsstring></argsstring>
+        <name>doDelete</name>
+        <qualifiedname>pymoose::docs::doDelete</qualifiedname>
+        <initializer>=
+    R&quot;(Delete the underlying moose object(s). This does not delete any of the
+Python objects referring to this vec but does invalidate them. Any
+attempt to access them will raise a ValueError.
+
+Parameters
+----------
+arg : vec/str/melement
+    path of the object to be deleted.
+
+Raises
+-------
+ValueError if given path/object does not exists.
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="376" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1acb08d4ac1fd4b4398823bd3a17636025" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ElementField_id</definition>
+        <argsstring></argsstring>
+        <name>ElementField_id</name>
+        <qualifiedname>pymoose::docs::ElementField_id</qualifiedname>
+        <initializer>=
+    R&quot;(<ref refid="classId" kindref="compound">Id</ref> of the field element)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="112" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1aa20d76e4c0c1e18d4149d8bac8da1c5d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ElementField_num</definition>
+        <argsstring></argsstring>
+        <name>ElementField_num</name>
+        <qualifiedname>pymoose::docs::ElementField_num</qualifiedname>
+        <initializer>=
+    R&quot;(number of entries in the field element)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="110" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a14b7e6df38c4bda9cc19d00c0a62ef5b" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ElementField_oid</definition>
+        <argsstring></argsstring>
+        <name>ElementField_oid</name>
+        <qualifiedname>pymoose::docs::ElementField_oid</qualifiedname>
+        <initializer>=
+    R&quot;(<ref refid="classObjId" kindref="compound">ObjId</ref> of the field element)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="114" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a289e68f6b79ade8c98616d68800db738" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ElementField_owner</definition>
+        <argsstring></argsstring>
+        <name>ElementField_owner</name>
+        <qualifiedname>pymoose::docs::ElementField_owner</qualifiedname>
+        <initializer>=
+    R&quot;(<ref refid="classObjId" kindref="compound">ObjId</ref> of the owner of the field element)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="116" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a537d357e17babb3f7573ca57dc055159" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ElementField_vec</definition>
+        <argsstring></argsstring>
+        <name>ElementField_vec</name>
+        <qualifiedname>pymoose::docs::ElementField_vec</qualifiedname>
+        <initializer>=
+    R&quot;(Access to the field element as a vec object)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="118" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1ab9212c008f7681b161bc6ecb95609200" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::exists</definition>
+        <argsstring></argsstring>
+        <name>exists</name>
+        <qualifiedname>pymoose::docs::exists</qualifiedname>
+        <initializer>= &quot;Return True if an element with this path exists, False otherwise.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="166" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a300ebe3fa5da241da3a67e5ab3dc9402" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::getCwe</definition>
+        <argsstring></argsstring>
+        <name>getCwe</name>
+        <qualifiedname>pymoose::docs::getCwe</qualifiedname>
+        <initializer>= &quot;Get current working element&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="168" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a5c4292e67702e2dc04d3fe1de2cb228d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::getDoc</definition>
+        <argsstring></argsstring>
+        <name>getDoc</name>
+        <qualifiedname>pymoose::docs::getDoc</qualifiedname>
+        <initializer>= &quot;Get documentation as a formatted string&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="424" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a76ab3ad8073522a3b774a1916d650b59" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::getFieldGeneric</definition>
+        <argsstring></argsstring>
+        <name>getFieldGeneric</name>
+        <qualifiedname>pymoose::docs::getFieldGeneric</qualifiedname>
+        <initializer>= R&quot;(Get field `field` of element `obj`.
+
+Parameters
+----------
+obj: melement
+    object to retrieve field of.
+field: str
+    name of the field to be retrieved
+
+Returns
+-------
+field value if `field` names a valueFinfo; if `field` names a
+destFinfo, the corresponding callable; a <ref refid="structpymoose_1_1LookupField" kindref="compound">LookupField</ref> or <ref refid="structpymoose_1_1ElementField" kindref="compound">ElementField</ref>
+object for those finfo types.
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="284" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1ae171b61e098e594ae578a75c021d8e9c" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::getFieldNames</definition>
+        <argsstring></argsstring>
+        <name>getFieldNames</name>
+        <qualifiedname>pymoose::docs::getFieldNames</qualifiedname>
+        <initializer>=
+    R&quot;(Get field names in a MOOSE class.
+
+Parameters
+----------
+classname : str, <ref refid="classObjId" kindref="compound">ObjId</ref>, vec
+    Name of the MOOSE class or an element or a vec
+fieldtype : str, optional
+    Types of fields: &quot;value&quot;, &quot;src&quot;, &quot;dest&quot;, &quot;loookup&quot;, &quot;element&quot;, or
+    &quot;*&quot; (default: &quot;*&quot;). If &quot;*&quot;, all types of fields are included.
+
+Returns
+-------
+list
+    <ref refid="classField" kindref="compound">Field</ref> names
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="243" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a0e54cbf47da742fd165087014418173d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::getFieldTypeDict</definition>
+        <argsstring></argsstring>
+        <name>getFieldTypeDict</name>
+        <qualifiedname>pymoose::docs::getFieldTypeDict</qualifiedname>
+        <initializer>=
+    R&quot;(Get field names and their types for a MOOSE class.
+
+Parameters
+----------
+classname : str, <ref refid="classObjId" kindref="compound">ObjId</ref>, vec
+    Name of the MOOSE class or an element of a vec
+fieldtype : str, optional
+    Type of fields: &quot;value&quot;, &quot;src&quot;, &quot;dest&quot;, &quot;*&quot; (default: &quot;*&quot;)
+    If &quot;*&quot;, all types of fields are included.
+
+Returns
+-------
+dict
+    Mapping of field names to types
+
+Examples
+--------
+List all the source fields on class <ref refid="classNeutral" kindref="compound">Neutral</ref>
+
+&gt;&gt;&gt; moose.getFieldDict(&apos;<ref refid="classNeutral" kindref="compound">Neutral</ref>&apos;, &apos;srcFinfo&apos;)
+   {&apos;childMsg&apos;: &apos;int&apos;}
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="260" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1af5a589c55dbe500d293d1feb58361722" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::getNeighbors</definition>
+        <argsstring></argsstring>
+        <name>getNeighbors</name>
+        <qualifiedname>pymoose::docs::getNeighbors</qualifiedname>
+        <initializer>=
+    R&quot;(Get elements connected via messages.
+
+Parameters
+----------
+obj: melement, <ref refid="classObjId" kindref="compound">ObjId</ref> or <ref refid="classId" kindref="compound">Id</ref>
+    The source element
+field: str, optional
+    Find neighbors connected to this field: a source or dest field name or
+    &quot;*&quot; for all fields (default: &quot;*&quot;)
+msgType: str, optional
+    Message type to include. It can be &apos;Single&apos;, &apos;OneToOne&apos;,
+    &apos;OneToAll&apos;, &apos;Diagonal&apos;, or &apos;Sparse&apos;. It is not case-sensitive. If an
+    empty string is specified, messages of all types are
+    included (default: &quot;&quot;).
+direction: <ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641" kindref="member">MsgDirection</ref> or int
+    Direction of the connection. `<ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a7c147cda9e49590f6abe83d118b7353b" kindref="member">MsgDirection.Out</ref>` or 0 for outgoing,
+    `<ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641aefeb369cccbd560588a756610865664c" kindref="member">MsgDirection.In</ref>` or 1 for incoming, and `<ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a130c5b3473c57faa76e2a1c54e26f88e" kindref="member">MsgDirection.Both</ref>` or 2 for
+    both incoming and outgoing connections (default: <ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a130c5b3473c57faa76e2a1c54e26f88e" kindref="member">MsgDirection.Both</ref>)
+
+Returns
+-------
+list
+    Neighboring elements connected to `obj` via messages
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="198" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1aaf40dd6dbb5c678c1b72b88c7919bd83" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::Id_path</definition>
+        <argsstring></argsstring>
+        <name>Id_path</name>
+        <qualifiedname>pymoose::docs::Id_path</qualifiedname>
+        <initializer>= &quot;Path of the moose object&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="14" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a8b575d4b394d155f3d4ba2b555f26f43" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::isRunning</definition>
+        <argsstring></argsstring>
+        <name>isRunning</name>
+        <qualifiedname>pymoose::docs::isRunning</qualifiedname>
+        <initializer>= &quot;Returns flag to indicate whether simulation is still running&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="423" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a2c4e6422a5b08dc01128e4c27ac9b981" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::listElements</definition>
+        <argsstring></argsstring>
+        <name>listElements</name>
+        <qualifiedname>pymoose::docs::listElements</qualifiedname>
+        <initializer>= &quot;List elements under `path`, or the current working element if &quot;
+    &quot;`path` is not specified.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="172" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a9f1f0019e65440a88cc4cb0f10d9d745" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::listMsg</definition>
+        <argsstring></argsstring>
+        <name>listMsg</name>
+        <qualifiedname>pymoose::docs::listMsg</qualifiedname>
+        <initializer>= R&quot;(List of message connection objects (of class `<ref refid="classMsg" kindref="compound">Msg</ref>`).
+
+Parameters
+----------
+obj: <ref refid="classObjId" kindref="compound">ObjId</ref>
+    <ref refid="classElement" kindref="compound">Element</ref> to inspect
+direction: <ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641" kindref="member">MsgDirection</ref>, optional
+    Which messages to include (default: <ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a130c5b3473c57faa76e2a1c54e26f88e" kindref="member">Both</ref>). Also takes
+    integers, 0 for outgoing, 1 for incoming and 2 for both.
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="187" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a8b66c290facf96cf6b13b09f119fb375" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::MooseVec_connect</definition>
+        <argsstring></argsstring>
+        <name>MooseVec_connect</name>
+        <qualifiedname>pymoose::docs::MooseVec_connect</qualifiedname>
+        <initializer>= R&quot;(Connect to another object&quot;
+Parameters
+----------
+srcfield: str
+    Source field on source object
+dest: <ref refid="classObjId" kindref="compound">ObjId</ref> or vec
+    Target object
+destfield: str
+    Target field on destination object
+
+Returns
+-------
+<ref refid="classObjId" kindref="compound">ObjId</ref>
+   <ref refid="classMsg" kindref="compound">Msg</ref> object for the connection
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="93" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a50c1982ba6267005a62140f911c2940d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::MooseVec_init</definition>
+        <argsstring></argsstring>
+        <name>MooseVec_init</name>
+        <qualifiedname>pymoose::docs::MooseVec_init</qualifiedname>
+        <initializer>=
+    R&quot;(Create a vec object with `n` elements at `path`.
+
+Parameters
+----------
+path: str
+    Path of the created object
+n: unsigned int
+    Number of elements in the object (default: 1)
+dtype: str
+    Class of the vec to create
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="80" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1ae9663d9684b9aaf778d2ec1e12ce3397" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::move</definition>
+        <argsstring></argsstring>
+        <name>move</name>
+        <qualifiedname>pymoose::docs::move</qualifiedname>
+        <initializer>= R&quot;(Move object to a new location.
+
+This function moves the entire subtree rooted at `orig`.
+
+Parameters
+----------
+orig: <ref refid="classId" kindref="compound">Id</ref>, <ref refid="classObjId" kindref="compound">ObjId</ref>, <ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref> or str
+    Source object or path of source object
+parent: <ref refid="classId" kindref="compound">Id</ref>, <ref refid="classObjId" kindref="compound">ObjId</ref> or <ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref> or str
+    Existing object into which to move (new parent)
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="364" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a3363b39770f4c30a3ce1a3960b66b1e6" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_children</definition>
+        <argsstring></argsstring>
+        <name>ObjId_children</name>
+        <qualifiedname>pymoose::docs::ObjId_children</qualifiedname>
+        <initializer>= &quot;List of child elements of this object&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="24" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a5dd484c636ffe0bb47523ffae25c8900" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_className</definition>
+        <argsstring></argsstring>
+        <name>ObjId_className</name>
+        <qualifiedname>pymoose::docs::ObjId_className</qualifiedname>
+        <initializer>= &quot;Class of the element&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="22" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a915d9ae31440d45c075a904df08061c3" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_connect</definition>
+        <argsstring></argsstring>
+        <name>ObjId_connect</name>
+        <qualifiedname>pymoose::docs::ObjId_connect</qualifiedname>
+        <initializer>= R&quot;(Connect to another object&quot;
+
+Parameters
+----------
+srcfield: str
+    Source field on this object
+dest: <ref refid="classObjId" kindref="compound">ObjId</ref>
+    Target object
+destfield: str
+    Target field on destination object
+
+Returns
+-------
+<ref refid="classObjId" kindref="compound">ObjId</ref>
+   <ref refid="classMsg" kindref="compound">Msg</ref> object for the connection
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="44" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a05a6e0bd757460b76df2109f2a002a64" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_connectToVec</definition>
+        <argsstring></argsstring>
+        <name>ObjId_connectToVec</name>
+        <qualifiedname>pymoose::docs::ObjId_connectToVec</qualifiedname>
+        <initializer>= R&quot;(Connect to a `vec` object&quot;
+
+Parameters
+----------
+srcfield: str
+    Source field on this object
+dest: <ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref>
+    Target vec object
+destfield: str
+    Target field on destination object
+
+Returns
+-------
+<ref refid="classObjId" kindref="compound">ObjId</ref>
+   <ref refid="classMsg" kindref="compound">Msg</ref> object for the connection
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="63" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a25ab38af850b2e728c5f7a445e7890ba" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_dataIndex</definition>
+        <argsstring></argsstring>
+        <name>ObjId_dataIndex</name>
+        <qualifiedname>pymoose::docs::ObjId_dataIndex</qualifiedname>
+        <initializer>=
+    &quot;index of this element in the `vec` object that contains it.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="29" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a997ab3a9f0fdf4f2bd367a65ec3456a8" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_dt</definition>
+        <argsstring></argsstring>
+        <name>ObjId_dt</name>
+        <qualifiedname>pymoose::docs::ObjId_dt</qualifiedname>
+        <initializer>=
+    &quot;Timestep for this object. This is a readonly property. To &quot;
+    &quot;modify the timestep, use `moose.setClock(...)` to set `dt` of the &quot;
+    &quot;clock-tick assigned to this object.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="35" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1aa09a99e7ae0d5a536435fb849eb85d07" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_fieldIndex</definition>
+        <argsstring></argsstring>
+        <name>ObjId_fieldIndex</name>
+        <qualifiedname>pymoose::docs::ObjId_fieldIndex</qualifiedname>
+        <initializer>=
+    &quot;If this is a <ref refid="classFieldElement" kindref="compound">FieldElement</ref>, the index of this element within that&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="32" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a662bf0881e5f79a11c49a1786f3af7a7" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_id</definition>
+        <argsstring></argsstring>
+        <name>ObjId_id</name>
+        <qualifiedname>pymoose::docs::ObjId_id</qualifiedname>
+        <initializer>=
+    &quot;Id of this element. Every moose element is an entry in a `vec` object. &quot;
+    &quot;The <ref refid="classId" kindref="compound">Id</ref> identifies the `vec` object.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="25" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a119b717fffb29ab3eb1c83542a9f6297" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_init_id</definition>
+        <argsstring></argsstring>
+        <name>ObjId_init_id</name>
+        <qualifiedname>pymoose::docs::ObjId_init_id</qualifiedname>
+        <initializer>=
+    &quot;Create <ref refid="classObjId" kindref="compound">ObjId</ref> from <ref refid="classId" kindref="compound">Id</ref> with optional data and field indices&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="17" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a24c7662a8bc9334c4bbccee041e60dd9" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_init_other</definition>
+        <argsstring></argsstring>
+        <name>ObjId_init_other</name>
+        <qualifiedname>pymoose::docs::ObjId_init_other</qualifiedname>
+        <initializer>= &quot;Copy constructor&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="16" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a6385c0b00565618e98b98a3ce3e6983d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_init_path</definition>
+        <argsstring></argsstring>
+        <name>ObjId_init_path</name>
+        <qualifiedname>pymoose::docs::ObjId_init_path</qualifiedname>
+        <initializer>=
+    &quot;Create reference to existing <ref refid="classObjId" kindref="compound">ObjId</ref> at path&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="19" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a94d18e36fe05abe912e8dc15de3eccb3" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_init_root</definition>
+        <argsstring></argsstring>
+        <name>ObjId_init_root</name>
+        <qualifiedname>pymoose::docs::ObjId_init_root</qualifiedname>
+        <initializer>= &quot;Create <ref refid="classObjId" kindref="compound">ObjId</ref> pointing to root element&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="15" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1af22b0004bc21467e051d50445f8f5b81" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_name</definition>
+        <argsstring></argsstring>
+        <name>ObjId_name</name>
+        <qualifiedname>pymoose::docs::ObjId_name</qualifiedname>
+        <initializer>= &quot;Name of the moose element&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="21" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a18fc4abe67d1dd34aa71eadd333a92bc" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_parent</definition>
+        <argsstring></argsstring>
+        <name>ObjId_parent</name>
+        <qualifiedname>pymoose::docs::ObjId_parent</qualifiedname>
+        <initializer>= &quot;Parent element of this object&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="23" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1acc31ef3cf596dd60bb3d8419fc5f34c4" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_tick</definition>
+        <argsstring></argsstring>
+        <name>ObjId_tick</name>
+        <qualifiedname>pymoose::docs::ObjId_tick</qualifiedname>
+        <initializer>=
+    &quot;Clock-tick # assigned to this object. This is a readonly property. To &quot;
+    &quot;change the tick, use `moose.useClock(...)`.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="40" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a82c7e2958bddcfdf33f73f709e6ffebd" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::ObjId_vec</definition>
+        <argsstring></argsstring>
+        <name>ObjId_vec</name>
+        <qualifiedname>pymoose::docs::ObjId_vec</qualifiedname>
+        <initializer>= &quot;`vec` object this element belongs to.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="61" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a656682d3595988c264b5a72107868ef4" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::rand</definition>
+        <argsstring></argsstring>
+        <name>rand</name>
+        <qualifiedname>pymoose::docs::rand</qualifiedname>
+        <initializer>= R&quot;(Generate random number from MOOSE.
+
+Note that MOOSE has an independent random number generator using
+C++ std::mersenne_twister_engine. This is separate from numpy or python
+random number generator. Thus setting <ref refid="namespacepymoose_1_1docs_1aa7b216c6ba3bcc8eed1d86ee0d75d1f8" kindref="member">seed</ref> or generating a new random
+number with moose.rand in MOOSE does not affect other generators, nor
+does the state of any other random number generator affect the generator
+in MOOSE.
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="135" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a937f055db31f325814104f9cb51b83a2" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::reinit</definition>
+        <argsstring></argsstring>
+        <name>reinit</name>
+        <qualifiedname>pymoose::docs::reinit</qualifiedname>
+        <initializer>= R&quot;((Re)initialize simulation.
+
+Reinitializes simulation: time goes to zero, all scheduled
+objects are set to initial conditions. If simulation is
+already running, first stops it.
+
+After setting up a simulation, you must call moose.reinit() before calling
+moose.start(t) to execute the simulation. Otherwise, the simulator behaviour
+will be undefined. Once moose.reinit() has been called, you can call
+`moose.start(t)` as many time as you like. This will continue the
+simulation from the last state for `t` time.
+
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="391" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1aa7b216c6ba3bcc8eed1d86ee0d75d1f8" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::seed</definition>
+        <argsstring></argsstring>
+        <name>seed</name>
+        <qualifiedname>pymoose::docs::seed</qualifiedname>
+        <initializer>= R&quot;(Seed the random number generator in MOOSE
+
+Note that MOOSE has an independent random number generator using
+C++ std::mersenne_twister_engine. This is separate from numpy or python
+random number generator. Thus setting seed or generating a new random
+number with moose.rand in MOOSE does not affect other generators, nor
+does the state of any other random number generator affect the generator
+in MOOSE.
+
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="124" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1aae3d78193018dc340f68c4df8d08622e" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::setClock</definition>
+        <argsstring></argsstring>
+        <name>setClock</name>
+        <qualifiedname>pymoose::docs::setClock</qualifiedname>
+        <initializer>=
+    R&quot;(Set the ticking-interval of clock-tick.
+
+Parameters
+----------
+tick: unsigned int
+    Tick number to set
+dt: float
+    Tick interval of the clock-tick
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="300" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1aa0ec2325a799910bb74ffda61bec633d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::setCwe</definition>
+        <argsstring></argsstring>
+        <name>setCwe</name>
+        <qualifiedname>pymoose::docs::setCwe</qualifiedname>
+        <initializer>= &quot;Set current working element&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="170" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1ae3367f3d7e1574342d7e98f2878d51c4" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::showMsg</definition>
+        <argsstring></argsstring>
+        <name>showMsg</name>
+        <qualifiedname>pymoose::docs::showMsg</qualifiedname>
+        <initializer>=
+    R&quot;(Display message connections for an element.
+
+Parameters
+----------
+obj : <ref refid="classObjId" kindref="compound">ObjId</ref>
+    <ref refid="classElement" kindref="compound">Element</ref> to inspect
+direction : <ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641" kindref="member">MsgDirection</ref>, optional
+    Which messages to show (default: <ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a130c5b3473c57faa76e2a1c54e26f88e" kindref="member">Both</ref>). Also takes
+    integers, 0 for outgoing, 1 for incoming and 2 for both.
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="175" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a815a6a360432dbb967d86858c6c6abd6" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <qualifiedname>pymoose::docs::start</qualifiedname>
+        <initializer>= R&quot;(Start simulation.
+
+This function blocking, and returns only when the simulation is done.
+
+Parameters
+----------
+runtime: float
+    Run or continue the simulation for this duration
+notify: bool
+    Notify user whenever 10\% of simulation is over (default: false).
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="405" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1ac1f1a2a03be613876ff69fb061de4f33" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::stop</definition>
+        <argsstring></argsstring>
+        <name>stop</name>
+        <qualifiedname>pymoose::docs::stop</qualifiedname>
+        <initializer>= R&quot;(Stop simulation.
+
+Cleanly stops simulation, ready to take up again from where
+the stop occurred. Waits till current operations are done.
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="417" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepymoose_1_1docs_1a8f40fc56c566db2c992e2e4a2ee76a7e" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr const char *</type>
+        <definition>constexpr const char* pymoose::docs::useClock</definition>
+        <argsstring></argsstring>
+        <name>useClock</name>
+        <qualifiedname>pymoose::docs::useClock</qualifiedname>
+        <initializer>=
+    R&quot;(Assign a clock-tick to specified objects.
+
+The sequence of clockticks with the same dt is
+according to their number.  This is utilized for controlling the order of
+updates in various objects where it matters.
+
+Parameters
+----------
+tick: unsigned int
+    Tick number to assign
+path: str
+    Path of target objects. Use a wildcard to select all
+    elements on a subtree, or for selecting by condition.
+fn: str
+    <ref refid="classFunction" kindref="compound">Function</ref> (dest field) to be execeuted on tick
+
+Examples
+--------
+<ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641aefeb369cccbd560588a756610865664c" kindref="member">In</ref> multi-compartmental neuron model a compartment&apos;s membrane potential (Vm)
+is dependent on its neighbours&apos; membrane potential. Thus it must get the
+neighbour&apos;s present Vm before computing its own Vm in next time step.  This
+ordering is achieved by scheduling the `<ref refid="main_8cpp_1a6e304b494f9a324f952d9f2033b2b136" kindref="member">init</ref>` function, which communicates
+membrane potential, on tick 0 and `process` function on tick 1.
+
+&gt;&gt;&gt; moose.useClock(0, &apos;/model/compartment_1&apos;, &apos;<ref refid="main_8cpp_1a6e304b494f9a324f952d9f2033b2b136" kindref="member">init</ref>&apos;)
+&gt;&gt;&gt; moose.useClock(1, &apos;/model/compartment_1&apos;, &apos;process&apos;));
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="311" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/docs.h" line="12" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,2227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classDsolve" kind="class" language="C++" prot="public">
+    <compoundname>Dsolve</compoundname>
+    <basecompoundref refid="classKsolveBase" prot="public" virt="non-virtual">KsolveBase</basecompoundref>
+    <includes refid="Dsolve_8h" local="no">Dsolve.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDsolve_1ae2da76bc8a24a7bce1c5c5db7f177876" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classConcChanInfo" kindref="compound">ConcChanInfo</ref> &gt;</type>
+        <definition>vector&lt; ConcChanInfo &gt; Dsolve::channels_</definition>
+        <argsstring></argsstring>
+        <name>channels_</name>
+        <qualifiedname>Dsolve::channels_</qualifiedname>
+        <briefdescription>
+<para>Internal vector, one for each <ref refid="classConcChan" kindref="compound">ConcChan</ref> managed by <ref refid="classDsolve" kindref="compound">Dsolve</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="218" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="218" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a919e562e79464c0a4684a68663c87a3f" compoundref="Dsolve_8cpp" startline="389" endline="435">calcJnChan</referencedby>
+        <referencedby refid="classDsolve_1a2312b092685293edb3ebe89536e5f182" compoundref="Dsolve_8cpp" startline="478" endline="518">calcLocalChan</referencedby>
+        <referencedby refid="classDsolve_1a5dbacfba7a9d63b47734c96bcad4ffb8" compoundref="Dsolve_8cpp" startline="438" endline="476">calcOtherJnChan</referencedby>
+        <referencedby refid="classDsolve_1ab9aef134ac51b481440b70d096ff5540" compoundref="Dsolve_8cpp" startline="629" endline="691">fillConcChans</referencedby>
+        <referencedby refid="classDsolve_1aef60ededfe6387d1dfde0763acee10cf" compoundref="Dsolve_8cpp" startline="1001" endline="1042">mapChansBetweenDsolves</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1a7ac4b42ba7797f617fedb1133a6631ec" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Dsolve::dt_</definition>
+        <argsstring></argsstring>
+        <name>dt_</name>
+        <qualifiedname>Dsolve::dt_</qualifiedname>
+        <briefdescription>
+<para>Timestep used by diffusion calculations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="208" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="208" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">build</referencedby>
+        <referencedby refid="classDsolve_1a5bf1d40d9c87137482f43b97b04c5116" compoundref="Dsolve_8cpp" startline="185" endline="191">Dsolve</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classDiffJunction" kindref="compound">DiffJunction</ref> &gt;</type>
+        <definition>vector&lt; DiffJunction &gt; Dsolve::junctions_</definition>
+        <argsstring></argsstring>
+        <name>junctions_</name>
+        <qualifiedname>Dsolve::junctions_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists all the diffusion junctions managed by this <ref refid="classDsolve" kindref="compound">Dsolve</ref>. Each junction entry provides the info needed to do the numerical integration for flux between the Dsolves. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="231" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="231" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a4d9bfca2deca8f47a4fd63ee7a258127" compoundref="Dsolve_8cpp" startline="574" endline="579">calcJunction_chunk</referencedby>
+        <referencedby refid="classDsolve_1af1140482cadeb2af7b434cfdff6f5d04" compoundref="Dsolve_8cpp" startline="289" endline="297">getDiffScale</referencedby>
+        <referencedby refid="classDsolve_1a0cf8f28cf40c32df6199ccce3769a980" compoundref="Dsolve_8cpp" startline="251" endline="259">getDiffVol1</referencedby>
+        <referencedby refid="classDsolve_1a3967e89e6050cd3d81fb49d5b7091aa1" compoundref="Dsolve_8cpp" startline="270" endline="278">getDiffVol2</referencedby>
+        <referencedby refid="classDsolve_1a7ce4f12c80e58ef623ecba72c92326a8" compoundref="Dsolve_8cpp" startline="1065" endline="1086">innerBuildMeshJunctions</referencedby>
+        <referencedby refid="classDsolve_1a13958f5ced382caf929dabb108395174" compoundref="Dsolve_8cpp" startline="280" endline="287">setDiffScale</referencedby>
+        <referencedby refid="classDsolve_1ac89147fe7d43e652dd11e0abddf6e7a9" compoundref="Dsolve_8cpp" startline="242" endline="249">setDiffVol1</referencedby>
+        <referencedby refid="classDsolve_1ab4cca7d99c4d960e54a9bc0e032f6b1f" compoundref="Dsolve_8cpp" startline="261" endline="268">setDiffVol2</referencedby>
+        <referencedby refid="classDsolve_1af4824ee1c5a2864dc2a9b3b230582777" compoundref="Dsolve_8cpp" startline="566" endline="571">updateJunctions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1adf344b95d0189ef4e8495f02be680456" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::numLocalPools_</definition>
+        <argsstring></argsstring>
+        <name>numLocalPools_</name>
+        <qualifiedname>Dsolve::numLocalPools_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="211" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="211" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">build</referencedby>
+        <referencedby refid="classDsolve_1a5bf1d40d9c87137482f43b97b04c5116" compoundref="Dsolve_8cpp" startline="185" endline="191">Dsolve</referencedby>
+        <referencedby refid="classDsolve_1af5f39e6691be0c61e6cc37d77f89e409" compoundref="Dsolve_8cpp" startline="1266" endline="1290">getBlock</referencedby>
+        <referencedby refid="classDsolve_1a9cc049082fcf9056b9535b2558b0608e" compoundref="Dsolve_8cpp" startline="1302" endline="1323">setBlock</referencedby>
+        <referencedby refid="classDsolve_1aad074a5110e40e8591c54c2608b15cfd" compoundref="Dsolve_8cpp" startline="1102" endline="1107">setNumAllVoxels</referencedby>
+        <referencedby refid="classDsolve_1adfc34a56651419641e5052430f00d341" compoundref="Dsolve_8cpp" startline="1244" endline="1258">setNumPools</referencedby>
+        <referencedby refid="classDsolve_1aff7680b2f1b4c8b4edd5a350ae7f9767" compoundref="Dsolve_8cpp" startline="1228" endline="1242">setNumVarTotPools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1a67d7bae26c68848f5ec51aa713874ad9" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::numTotPools_</definition>
+        <argsstring></argsstring>
+        <name>numTotPools_</name>
+        <qualifiedname>Dsolve::numTotPools_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="210" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="210" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a5bf1d40d9c87137482f43b97b04c5116" compoundref="Dsolve_8cpp" startline="185" endline="191">Dsolve</referencedby>
+        <referencedby refid="classDsolve_1a512c38503c798deb5da0b3555e7ba90a" compoundref="Dsolve_8cpp" startline="1260" endline="1263">getNumPools</referencedby>
+        <referencedby refid="classDsolve_1adfc34a56651419641e5052430f00d341" compoundref="Dsolve_8cpp" startline="1244" endline="1258">setNumPools</referencedby>
+        <referencedby refid="classDsolve_1aff7680b2f1b4c8b4edd5a350ae7f9767" compoundref="Dsolve_8cpp" startline="1228" endline="1242">setNumVarTotPools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::numVoxels_</definition>
+        <argsstring></argsstring>
+        <name>numVoxels_</name>
+        <qualifiedname>Dsolve::numVoxels_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="213" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="213" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">build</referencedby>
+        <referencedby refid="classDsolve_1a2312b092685293edb3ebe89536e5f182" compoundref="Dsolve_8cpp" startline="478" endline="518">calcLocalChan</referencedby>
+        <referencedby refid="classDsolve_1a5bf1d40d9c87137482f43b97b04c5116" compoundref="Dsolve_8cpp" startline="185" endline="191">Dsolve</referencedby>
+        <referencedby refid="classDsolve_1af5f39e6691be0c61e6cc37d77f89e409" compoundref="Dsolve_8cpp" startline="1266" endline="1290">getBlock</referencedby>
+        <referencedby refid="classDsolve_1ad8476ede095fa5f294427a259eb7ee56" compoundref="Dsolve_8cpp" startline="1184" endline="1196">getConcInit</referencedby>
+        <referencedby refid="classDsolve_1a95acd8a14e1eab3879b288e3f5974ccb" compoundref="Dsolve_8cpp" startline="1147" endline="1159">getN</referencedby>
+        <referencedby refid="classDsolve_1a102c721d01a1faa72851556d718f2d6f" compoundref="Dsolve_8cpp" startline="1338" endline="1341">getNumLocalVoxels</referencedby>
+        <referencedby refid="classDsolve_1ab8b9c061ee29c72f0cd52369e0a5886c" compoundref="Dsolve_8cpp" startline="1097" endline="1100">getNumVoxels</referencedby>
+        <referencedby refid="classDsolve_1a9cc049082fcf9056b9535b2558b0608e" compoundref="Dsolve_8cpp" startline="1302" endline="1323">setBlock</referencedby>
+        <referencedby refid="classDsolve_1ab89b28e781f81c2fddf8d1f89db0f9d9" compoundref="Dsolve_8cpp" startline="702" endline="720">setCompartment</referencedby>
+        <referencedby refid="classDsolve_1a1b0d687413f97cee73f53ceb8f6e454f" compoundref="Dsolve_8cpp" startline="1169" endline="1182">setConcInit</referencedby>
+        <referencedby refid="classDsolve_1a742df3d807530224564b67da0015d461" compoundref="Dsolve_8cpp" startline="1131" endline="1145">setN</referencedby>
+        <referencedby refid="classDsolve_1aad074a5110e40e8591c54c2608b15cfd" compoundref="Dsolve_8cpp" startline="1102" endline="1107">setNumAllVoxels</referencedby>
+        <referencedby refid="classDsolve_1adfc34a56651419641e5052430f00d341" compoundref="Dsolve_8cpp" startline="1244" endline="1258">setNumPools</referencedby>
+        <referencedby refid="classDsolve_1aff7680b2f1b4c8b4edd5a350ae7f9767" compoundref="Dsolve_8cpp" startline="1228" endline="1242">setNumVarTotPools</referencedby>
+        <referencedby refid="classDsolve_1ad6f87094f210adb30fb530ee8666945f" compoundref="Dsolve_8cpp" startline="764" endline="791">setPath</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1a1b96610cdacb468e898b2a0f14c93808" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Dsolve::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <qualifiedname>Dsolve::path_</qualifiedname>
+        <briefdescription>
+<para>Path of pools managed by <ref refid="classDsolve" kindref="compound">Dsolve</ref>, may include other classes too. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="205" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="205" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a30797ff2613b3c193fdda4c01bc16aa2" compoundref="Dsolve_8cpp" startline="793" endline="796">getPath</referencedby>
+        <referencedby refid="classDsolve_1af7b5bd6814935564fada61fe01d9294e" compoundref="Dsolve_8cpp" startline="722" endline="762">makePoolMapFromElist</referencedby>
+        <referencedby refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" compoundref="Dsolve_8cpp" startline="586" endline="627">setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1af9dfcb0d30ebcd17215915261e94aa79" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; Dsolve::poolMap_</definition>
+        <argsstring></argsstring>
+        <name>poolMap_</name>
+        <qualifiedname>Dsolve::poolMap_</qualifiedname>
+        <briefdescription>
+<para>Looks up pool# from pool <ref refid="classId" kindref="compound">Id</ref>, using poolMapStart_ as offset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="224" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="224" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a85ca5f2ac9c1d7bde1b2447df7497b3b" compoundref="Dsolve_8cpp" startline="1109" endline="1124">convertIdToPoolIndex</referencedby>
+        <referencedby refid="classDsolve_1af7b5bd6814935564fada61fe01d9294e" compoundref="Dsolve_8cpp" startline="722" endline="762">makePoolMapFromElist</referencedby>
+        <referencedby refid="classDsolve_1ad6f87094f210adb30fb530ee8666945f" compoundref="Dsolve_8cpp" startline="764" endline="791">setPath</referencedby>
+        <referencedby refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" compoundref="Dsolve_8cpp" startline="586" endline="627">setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1a690b4054f96055d1896192c698fd8450" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::poolMapStart_</definition>
+        <argsstring></argsstring>
+        <name>poolMapStart_</name>
+        <qualifiedname>Dsolve::poolMapStart_</qualifiedname>
+        <briefdescription>
+<para>smallest <ref refid="classId" kindref="compound">Id</ref> value for poolMap_ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="221" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="221" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a85ca5f2ac9c1d7bde1b2447df7497b3b" compoundref="Dsolve_8cpp" startline="1109" endline="1124">convertIdToPoolIndex</referencedby>
+        <referencedby refid="classDsolve_1af7b5bd6814935564fada61fe01d9294e" compoundref="Dsolve_8cpp" startline="722" endline="762">makePoolMapFromElist</referencedby>
+        <referencedby refid="classDsolve_1ad6f87094f210adb30fb530ee8666945f" compoundref="Dsolve_8cpp" startline="764" endline="791">setPath</referencedby>
+        <referencedby refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" compoundref="Dsolve_8cpp" startline="586" endline="627">setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classDiffPoolVec" kindref="compound">DiffPoolVec</ref> &gt;</type>
+        <definition>vector&lt; DiffPoolVec &gt; Dsolve::pools_</definition>
+        <argsstring></argsstring>
+        <name>pools_</name>
+        <qualifiedname>Dsolve::pools_</qualifiedname>
+        <briefdescription>
+<para>Internal vector, one for each pool species managed by <ref refid="classDsolve" kindref="compound">Dsolve</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="216" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="216" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">build</referencedby>
+        <referencedby refid="classDsolve_1a919e562e79464c0a4684a68663c87a3f" compoundref="Dsolve_8cpp" startline="389" endline="435">calcJnChan</referencedby>
+        <referencedby refid="classDsolve_1a6455f91c5750bf5714abc514e9fe5a85" compoundref="Dsolve_8cpp" startline="320" endline="361">calcJnDiff</referencedby>
+        <referencedby refid="classDsolve_1adabc77246a46f87a6460b9d168a4064d" compoundref="Dsolve_8cpp" startline="363" endline="387">calcJnXfer</referencedby>
+        <referencedby refid="classDsolve_1a2312b092685293edb3ebe89536e5f182" compoundref="Dsolve_8cpp" startline="478" endline="518">calcLocalChan</referencedby>
+        <referencedby refid="classDsolve_1a5dbacfba7a9d63b47734c96bcad4ffb8" compoundref="Dsolve_8cpp" startline="438" endline="476">calcOtherJnChan</referencedby>
+        <referencedby refid="classDsolve_1af5f39e6691be0c61e6cc37d77f89e409" compoundref="Dsolve_8cpp" startline="1266" endline="1290">getBlock</referencedby>
+        <referencedby refid="classDsolve_1ad8476ede095fa5f294427a259eb7ee56" compoundref="Dsolve_8cpp" startline="1184" endline="1196">getConcInit</referencedby>
+        <referencedby refid="classDsolve_1ae5497876ead07545c0d9303d0a7b473f" compoundref="Dsolve_8cpp" startline="1212" endline="1218">getDiffConst</referencedby>
+        <referencedby refid="classDsolve_1a95acd8a14e1eab3879b288e3f5974ccb" compoundref="Dsolve_8cpp" startline="1147" endline="1159">getN</referencedby>
+        <referencedby refid="classDsolve_1a8e446f41e1141ac48ebf224059e4c746" compoundref="Dsolve_8cpp" startline="215" endline="223">getNvec</referencedby>
+        <referencedby refid="classDsolve_1a938e8ed6e960a978e3cc4984351c6be9" compoundref="Dsolve_8cpp" startline="926" endline="951">mapDiffPoolsBetweenDsolves</referencedby>
+        <referencedby refid="classDsolve_1a42a3c82ba303a580ff4c81d5894910a9" compoundref="Dsolve_8cpp" startline="963" endline="999">mapXfersBetweenDsolves</referencedby>
+        <referencedby refid="classDsolve_1ac7d63e78754bf54cf1c348deec4fafcc" compoundref="Dsolve_8cpp" startline="551" endline="555">process</referencedby>
+        <referencedby refid="classDsolve_1a087672d35965fba1767c745d3594b4e7" compoundref="Dsolve_8cpp" startline="557" endline="564">reinit</referencedby>
+        <referencedby refid="classDsolve_1a9cc049082fcf9056b9535b2558b0608e" compoundref="Dsolve_8cpp" startline="1302" endline="1323">setBlock</referencedby>
+        <referencedby refid="classDsolve_1a1b0d687413f97cee73f53ceb8f6e454f" compoundref="Dsolve_8cpp" startline="1169" endline="1182">setConcInit</referencedby>
+        <referencedby refid="classDsolve_1a642f7e41596d448cfac7a59261eb0ed5" compoundref="Dsolve_8cpp" startline="1204" endline="1210">setDiffConst</referencedby>
+        <referencedby refid="classDsolve_1a8f91118c84ea88710df69aadb8c30d8d" compoundref="Dsolve_8cpp" startline="1220" endline="1226">setMotorConst</referencedby>
+        <referencedby refid="classDsolve_1a742df3d807530224564b67da0015d461" compoundref="Dsolve_8cpp" startline="1131" endline="1145">setN</referencedby>
+        <referencedby refid="classDsolve_1aad074a5110e40e8591c54c2608b15cfd" compoundref="Dsolve_8cpp" startline="1102" endline="1107">setNumAllVoxels</referencedby>
+        <referencedby refid="classDsolve_1adfc34a56651419641e5052430f00d341" compoundref="Dsolve_8cpp" startline="1244" endline="1258">setNumPools</referencedby>
+        <referencedby refid="classDsolve_1aff7680b2f1b4c8b4edd5a350ae7f9767" compoundref="Dsolve_8cpp" startline="1228" endline="1242">setNumVarTotPools</referencedby>
+        <referencedby refid="classDsolve_1a8cbfe1746ed09519c918810f7d3f79e0" compoundref="Dsolve_8cpp" startline="200" endline="213">setNvec</referencedby>
+        <referencedby refid="classDsolve_1ad6f87094f210adb30fb530ee8666945f" compoundref="Dsolve_8cpp" startline="764" endline="791">setPath</referencedby>
+        <referencedby refid="classDsolve_1a2e2c3248f5b5fc10c8a739922676f1d9" compoundref="Dsolve_8cpp" startline="1293" endline="1300">setPrev</referencedby>
+        <referencedby refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" compoundref="Dsolve_8cpp" startline="586" endline="627">setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDsolve_1a40b8feb10ca5c857ab1655716de7e70e" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::poolStartIndex_</definition>
+        <argsstring></argsstring>
+        <name>poolStartIndex_</name>
+        <qualifiedname>Dsolve::poolStartIndex_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="212" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="212" bodyend="-1"/>
+        <referencedby refid="classDsolve_1a5bf1d40d9c87137482f43b97b04c5116" compoundref="Dsolve_8cpp" startline="185" endline="191">Dsolve</referencedby>
+        <referencedby refid="classDsolve_1af5f39e6691be0c61e6cc37d77f89e409" compoundref="Dsolve_8cpp" startline="1266" endline="1290">getBlock</referencedby>
+        <referencedby refid="classDsolve_1a9cc049082fcf9056b9535b2558b0608e" compoundref="Dsolve_8cpp" startline="1302" endline="1323">setBlock</referencedby>
+        <referencedby refid="classDsolve_1adfc34a56651419641e5052430f00d341" compoundref="Dsolve_8cpp" startline="1244" endline="1258">setNumPools</referencedby>
+        <referencedby refid="classDsolve_1aff7680b2f1b4c8b4edd5a350ae7f9767" compoundref="Dsolve_8cpp" startline="1228" endline="1242">setNumVarTotPools</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::build</definition>
+        <argsstring>(double dt, const MeshCompt *m)</argsstring>
+        <name>build</name>
+        <qualifiedname>Dsolve::build</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classMeshCompt" kindref="compound">MeshCompt</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This key function does the work of setting up the <ref refid="classDsolve" kindref="compound">Dsolve</ref>. Should be called after the compartment has been attached to the <ref refid="classDsolve" kindref="compound">Dsolve</ref>, and the stoich is assigned. Called during the setStoich function.</para>
+<para>build: This function is called either by setStoich or setPath. By this point the diffusion consts etc will be assigned to the poolVecs. This requires<itemizedlist>
+<listitem><para><ref refid="classStoich" kindref="compound">Stoich</ref> should be assigned, OR</para>
+</listitem><listitem><para>A &apos;path&apos; should be assigned which has been traversed to find pools.</para>
+</listitem><listitem><para>compartment should be assigned so we know how many voxels.</para>
+</listitem><listitem><para>If <ref refid="classStoich" kindref="compound">Stoich</ref>, its &apos;path&apos; should be set so we know numPools. It needs to know the numVoxels from the compartment. At the time of path setting the zombification is done, which takes the <ref refid="classId" kindref="compound">Id</ref> of the solver.</para>
+</listitem><listitem><para>After this build can be done. Just reinit doesn&apos;t make sense since the build does a lot of things which should not be repeated for each reinit. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="182" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="819" bodyend="858"/>
+        <references refid="classFastMatrixElim_1a37ff32f7eb24225db49bd0fd99078003" compoundref="FastMatrixElim_8cpp" startline="342" endline="394">FastMatrixElim::buildBackwardSub</references>
+        <references refid="classFastMatrixElim_1a418883ba4dba6047bedc161812c7c214" compoundref="FastMatrixElim_8cpp" startline="557" endline="631">FastMatrixElim::buildForDiffusion</references>
+        <references refid="classFastMatrixElim_1a7b41c40500ad1b6d848d4ced1a135ca8" compoundref="FastMatrixElim_8cpp" startline="275" endline="331">FastMatrixElim::buildForwardElim</references>
+        <references refid="classFastMatrixElim_1a192e06a70c45285cdd6aa8625f165936" compoundref="FastMatrixElim_8cpp" startline="51" endline="62">FastMatrixElim::checkSymmetricShape</references>
+        <references refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" compoundref="KsolveBase_8h" startline="148">KsolveBase::compartment_</references>
+        <references refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" compoundref="doubleEq_8cpp" startline="16" endline="22">doubleEq</references>
+        <references refid="classDsolve_1a7ac4b42ba7797f617fedb1133a6631ec" compoundref="Dsolve_8h" startline="208">dt_</references>
+        <references refid="classFastMatrixElim_1a59ddacb124d127c969fe63873f3240f5" compoundref="FastMatrixElim_8cpp" startline="33" endline="35">FastMatrixElim::FastMatrixElim</references>
+        <references refid="classDiffPoolVec_1ade6a3f8bee7d3f1e0aeb4ce8c1bbf43e" compoundref="DiffPoolVec_8cpp" startline="87" endline="90">DiffPoolVec::getDiffConst</references>
+        <references refid="classDiffPoolVec_1a08647899dab8b2bf922ad6b8a6952961" compoundref="DiffPoolVec_8cpp" startline="97" endline="100">DiffPoolVec::getMotorConst</references>
+        <references refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" compoundref="ChemCompt_8cpp" startline="450" endline="453">ChemCompt::getNumEntries</references>
+        <references refid="classMeshCompt_1a240b1e27d1bd66056e7c6c092e6b7b1e">MeshCompt::getParentVoxel</references>
+        <references refid="classMeshCompt_1ad0b8b02617f99d8f15c7655e4e068cc3">MeshCompt::getVoxelArea</references>
+        <references refid="classMeshCompt_1aa7a21c23e8d57611c313f59dc2cb3827">MeshCompt::getVoxelLength</references>
+        <references refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" compoundref="ChemCompt_8cpp" startline="356" endline="359">ChemCompt::getVoxelVolume</references>
+        <references refid="classFastMatrixElim_1af840ef3842f9cf41b688245d69f29b3a" compoundref="FastMatrixElim_8cpp" startline="139" endline="189">FastMatrixElim::hinesReorder</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classDsolve_1adf344b95d0189ef4e8495f02be680456" compoundref="Dsolve_8h" startline="211">numLocalPools_</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classFastMatrixElim_1a16d3f3761653a7195e48bc0cd655fe36" compoundref="FastMatrixElim_8cpp" startline="491" endline="506">FastMatrixElim::opsReorder</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classSparseMatrix_1a9ce5500b7dfde25db326d2977812981d" compoundref="SparseMatrix_8h" startline="650" endline="676">SparseMatrix&lt; T &gt;::print</references>
+        <references refid="classDiffPoolVec_1ab4abd440f075c7cce3dcbd60e3bd5d31" compoundref="DiffPoolVec_8cpp" startline="107" endline="111">DiffPoolVec::setNumVoxels</references>
+        <references refid="classDiffPoolVec_1acbb8a35230e014317fb0f4991e435d3d" compoundref="DiffPoolVec_8cpp" startline="128" endline="142">DiffPoolVec::setOps</references>
+        <referencedby refid="classDsolve_1a087672d35965fba1767c745d3594b4e7" compoundref="Dsolve_8cpp" startline="557" endline="564">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a3c22125f70c0b14355206c2510e73c67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::buildMeshJunctions</definition>
+        <argsstring>(const Eref &amp;e, ObjId other)</argsstring>
+        <name>buildMeshJunctions</name>
+        <qualifiedname>Dsolve::buildMeshJunctions</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Builds junctions between current <ref refid="classDsolve" kindref="compound">Dsolve</ref> and another. For this to work the respective meshes must be compatible. These junctions handle diffusion between different meshes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="92" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="891" bodyend="909"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" compoundref="KsolveBase_8h" startline="148">KsolveBase::compartment_</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" compoundref="ObjId_8cpp" startline="125" endline="128">ObjId::element</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classDsolve_1a7ce4f12c80e58ef623ecba72c92326a8" compoundref="Dsolve_8cpp" startline="1065" endline="1086">innerBuildMeshJunctions</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a365c6e0261706aac54ca79050e91db90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::buildNeuroMeshJunctions</definition>
+        <argsstring>(const Eref &amp;e, ObjId spineD, ObjId psdD)</argsstring>
+        <name>buildNeuroMeshJunctions</name>
+        <qualifiedname>Dsolve::buildNeuroMeshJunctions</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>spineD</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>psdD</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Builds junctions between Dsolves handling <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>, <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>, and <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref>. Must only be called from the one handling the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>. These junctions handle diffusion between different meshes. Note that a single <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> may contact many spines which are all in a single <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>. Likewise each spine has a single PSD, but there are many spines in the <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> and matching psds in the <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref>. Finally, note that there may be many molecules which diffuse across each diffusion junction.</para>
+<para>Should be called only from the <ref refid="classDsolve" kindref="compound">Dsolve</ref> handling the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="85" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="864" bodyend="889"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" compoundref="KsolveBase_8h" startline="148">KsolveBase::compartment_</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classDsolve_1a7ce4f12c80e58ef623ecba72c92326a8" compoundref="Dsolve_8cpp" startline="1065" endline="1086">innerBuildMeshJunctions</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classEref_1ab305a4ab972b50443b7d35cfd516861a" compoundref="Eref_8cpp" startline="63" endline="66">Eref::objId</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a919e562e79464c0a4684a68663c87a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::calcJnChan</definition>
+        <argsstring>(const DiffJunction &amp;jn, Dsolve *other, double dt)</argsstring>
+        <name>calcJnChan</name>
+        <qualifiedname>Dsolve::calcJnChan</qualifiedname>
+        <param>
+          <type>const <ref refid="classDiffJunction" kindref="compound">DiffJunction</ref> &amp;</type>
+          <declname>jn</declname>
+        </param>
+        <param>
+          <type><ref refid="classDsolve" kindref="compound">Dsolve</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="189" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="389" bodyend="435"/>
+        <references refid="classDsolve_1ae2da76bc8a24a7bce1c5c5db7f177876" compoundref="Dsolve_8h" startline="218">channels_</references>
+        <references refid="classConcChanInfo_1a3be92ed0631c693132210b3c800dc57b" compoundref="ConcChanInfo_8h" startline="30">ConcChanInfo::chanPool</references>
+        <references refid="classVoxelJunction_1a726300f19ba547690ed7ab3150cfba9c" compoundref="VoxelJunction_8h" startline="40">VoxelJunction::first</references>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classDiffPoolVec_1adff89de588238c0796720423f85312ac" compoundref="DiffPoolVec_8cpp" startline="44" endline="48">DiffPoolVec::getN</references>
+        <references refid="Dsolve_8cpp_1a6d4604496e6d004f9e5f51fd96c6acf9" compoundref="Dsolve_8cpp" startline="303" endline="318">integ</references>
+        <references refid="classConcChanInfo_1a71c242a6243719e7bc7f308dd64d0be7" compoundref="ConcChanInfo_8h" startline="34">ConcChanInfo::isLocal</references>
+        <references refid="classDiffJunction_1a0492d4d9274c7fecec6d5d8f3331394f" compoundref="DiffJunction_8h" startline="46">DiffJunction::myChannels</references>
+        <references refid="classConcChanInfo_1a0b2619a17554ea270e2dbf630e231a22" compoundref="ConcChanInfo_8h" startline="27">ConcChanInfo::myPool</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classConcChanInfo_1a828044a3ea3ebc53ca34494de44fec6d" compoundref="ConcChanInfo_8h" startline="29">ConcChanInfo::otherPool</references>
+        <references refid="classConcChanInfo_1a90e6088684b956ba0ebf30c9701426d2" compoundref="ConcChanInfo_8h" startline="36">ConcChanInfo::permeability</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classVoxelJunction_1a6175a7d3b1fba6320dca8bf2ca3bf693" compoundref="VoxelJunction_8h" startline="41">VoxelJunction::second</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <references refid="classDiffPoolVec_1a2c1afbd06c6d141bbe43060341730534" compoundref="DiffPoolVec_8cpp" startline="50" endline="54">DiffPoolVec::setN</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a63e688fd5d9528e7cf9707baaf4495d8" compoundref="Dsolve_8cpp" startline="530" endline="549">calcJunction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a6455f91c5750bf5714abc514e9fe5a85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::calcJnDiff</definition>
+        <argsstring>(const DiffJunction &amp;jn, Dsolve *other, double dt)</argsstring>
+        <name>calcJnDiff</name>
+        <qualifiedname>Dsolve::calcJnDiff</qualifiedname>
+        <param>
+          <type>const <ref refid="classDiffJunction" kindref="compound">DiffJunction</ref> &amp;</type>
+          <declname>jn</declname>
+        </param>
+        <param>
+          <type><ref refid="classDsolve" kindref="compound">Dsolve</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="184" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="320" bodyend="361"/>
+        <references refid="classVoxelJunction_1a8d8503053acdf4178d98cbf5d94a402a" compoundref="VoxelJunction_8h" startline="44">VoxelJunction::diffScale</references>
+        <references refid="classVoxelJunction_1a726300f19ba547690ed7ab3150cfba9c" compoundref="VoxelJunction_8h" startline="40">VoxelJunction::first</references>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classDiffPoolVec_1ade6a3f8bee7d3f1e0aeb4ce8c1bbf43e" compoundref="DiffPoolVec_8cpp" startline="87" endline="90">DiffPoolVec::getDiffConst</references>
+        <references refid="classDiffPoolVec_1adff89de588238c0796720423f85312ac" compoundref="DiffPoolVec_8cpp" startline="44" endline="48">DiffPoolVec::getN</references>
+        <references refid="Dsolve_8cpp_1a6d4604496e6d004f9e5f51fd96c6acf9" compoundref="Dsolve_8cpp" startline="303" endline="318">integ</references>
+        <references refid="classDiffJunction_1aed0071c8f772ae0e51919be24c848ba5" compoundref="DiffJunction_8h" startline="37">DiffJunction::myPools</references>
+        <references refid="classDiffJunction_1a8e2bcf103c9a777696b7650256966343" compoundref="DiffJunction_8h" startline="38">DiffJunction::otherPools</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classVoxelJunction_1a6175a7d3b1fba6320dca8bf2ca3bf693" compoundref="VoxelJunction_8h" startline="41">VoxelJunction::second</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <references refid="classDiffPoolVec_1a2c1afbd06c6d141bbe43060341730534" compoundref="DiffPoolVec_8cpp" startline="50" endline="54">DiffPoolVec::setN</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a63e688fd5d9528e7cf9707baaf4495d8" compoundref="Dsolve_8cpp" startline="530" endline="549">calcJunction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1adabc77246a46f87a6460b9d168a4064d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::calcJnXfer</definition>
+        <argsstring>(const DiffJunction &amp;jn, const vector&lt; unsigned int &gt; &amp;srcXfer, const vector&lt; unsigned int &gt; &amp;destXfer, Dsolve *srcDsolve, Dsolve *destDsolve)</argsstring>
+        <name>calcJnXfer</name>
+        <qualifiedname>Dsolve::calcJnXfer</qualifiedname>
+        <param>
+          <type>const <ref refid="classDiffJunction" kindref="compound">DiffJunction</ref> &amp;</type>
+          <declname>jn</declname>
+        </param>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>srcXfer</declname>
+        </param>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>destXfer</declname>
+        </param>
+        <param>
+          <type><ref refid="classDsolve" kindref="compound">Dsolve</ref> *</type>
+          <declname>srcDsolve</declname>
+        </param>
+        <param>
+          <type><ref refid="classDsolve" kindref="compound">Dsolve</ref> *</type>
+          <declname>destDsolve</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="185" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="363" bodyend="387"/>
+        <references refid="classVoxelJunction_1a726300f19ba547690ed7ab3150cfba9c" compoundref="VoxelJunction_8h" startline="40">VoxelJunction::first</references>
+        <references refid="classDiffPoolVec_1adff89de588238c0796720423f85312ac" compoundref="DiffPoolVec_8cpp" startline="44" endline="48">DiffPoolVec::getN</references>
+        <references refid="classDiffPoolVec_1a132f4d621d2b31f1269012c1011df566" compoundref="DiffPoolVec_8cpp" startline="56" endline="60">DiffPoolVec::getPrev</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classVoxelJunction_1a6175a7d3b1fba6320dca8bf2ca3bf693" compoundref="VoxelJunction_8h" startline="41">VoxelJunction::second</references>
+        <references refid="classDiffPoolVec_1a2c1afbd06c6d141bbe43060341730534" compoundref="DiffPoolVec_8cpp" startline="50" endline="54">DiffPoolVec::setN</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a63e688fd5d9528e7cf9707baaf4495d8" compoundref="Dsolve_8cpp" startline="530" endline="549">calcJunction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a63e688fd5d9528e7cf9707baaf4495d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::calcJunction</definition>
+        <argsstring>(const DiffJunction &amp;jn, double dt)</argsstring>
+        <name>calcJunction</name>
+        <qualifiedname>Dsolve::calcJunction</qualifiedname>
+        <param>
+          <type>const <ref refid="classDiffJunction" kindref="compound">DiffJunction</ref> &amp;</type>
+          <declname>jn</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes flux through a junction between diffusion solvers. Most used at junctions on spines and PSDs, but can also be used when a given diff solver is decomposed. At present the lookups on the other diffusion solver assume that the data is on the local node. Once this works well I can figure out how to do across nodes.</para>
+<para>Computes flux through a junction between diffusion solvers. Most used at junctions on spines and PSDs, but can also be used when a given diff solver is decomposed. At present the lookups on the other diffusion solver assume that the data is on the local node. Once this works well I can figure out how to do across nodes. Note that we split the diffusion and channel calculations before and after then calcJnXfer calculations. This improves accuracy by 5x. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="121" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="530" bodyend="549"/>
+        <references refid="classDsolve_1a919e562e79464c0a4684a68663c87a3f" compoundref="Dsolve_8cpp" startline="389" endline="435">calcJnChan</references>
+        <references refid="classDsolve_1a6455f91c5750bf5714abc514e9fe5a85" compoundref="Dsolve_8cpp" startline="320" endline="361">calcJnDiff</references>
+        <references refid="classDsolve_1adabc77246a46f87a6460b9d168a4064d" compoundref="Dsolve_8cpp" startline="363" endline="387">calcJnXfer</references>
+        <references refid="classDsolve_1a5dbacfba7a9d63b47734c96bcad4ffb8" compoundref="Dsolve_8cpp" startline="438" endline="476">calcOtherJnChan</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classDiffJunction_1a6b6ebaab53dfc3d94a0b5fa1516bb5e1" compoundref="DiffJunction_8h" startline="43">DiffJunction::myXferDest</references>
+        <references refid="classDiffJunction_1a7b8baf0603effa3538c4ff14ab4c7f05" compoundref="DiffJunction_8h" startline="40">DiffJunction::myXferSrc</references>
+        <references refid="classId_1a6a4a7d5c9e8524644febc6b6e8dc1ab9" compoundref="Id_8h" startline="133" endline="137">Id::operator!=</references>
+        <references refid="classDiffJunction_1a9345cdb5c69681f11f1887e823647dfe" compoundref="DiffJunction_8h" startline="36">DiffJunction::otherDsolve</references>
+        <references refid="classDiffJunction_1a8fed09c864a101e65b525bfb7824d223" compoundref="DiffJunction_8h" startline="41">DiffJunction::otherXferDest</references>
+        <references refid="classDiffJunction_1a82cac91edd3fa48fc76f182e88161b1d" compoundref="DiffJunction_8h" startline="44">DiffJunction::otherXferSrc</references>
+        <referencedby refid="classDsolve_1a4d9bfca2deca8f47a4fd63ee7a258127" compoundref="Dsolve_8cpp" startline="574" endline="579">calcJunction_chunk</referencedby>
+        <referencedby refid="classDsolve_1af4824ee1c5a2864dc2a9b3b230582777" compoundref="Dsolve_8cpp" startline="566" endline="571">updateJunctions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a4d9bfca2deca8f47a4fd63ee7a258127" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::calcJunction_chunk</definition>
+        <argsstring>(const size_t begin, const size_t end, double dt)</argsstring>
+        <name>calcJunction_chunk</name>
+        <qualifiedname>Dsolve::calcJunction_chunk</qualifiedname>
+        <param>
+          <type>const size_t</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="124" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="574" bodyend="579"/>
+        <references refid="classDsolve_1a63e688fd5d9528e7cf9707baaf4495d8" compoundref="Dsolve_8cpp" startline="530" endline="549">calcJunction</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a2312b092685293edb3ebe89536e5f182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::calcLocalChan</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>calcLocalChan</name>
+        <qualifiedname>Dsolve::calcLocalChan</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="192" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="478" bodyend="518"/>
+        <references refid="classDsolve_1ae2da76bc8a24a7bce1c5c5db7f177876" compoundref="Dsolve_8h" startline="218">channels_</references>
+        <references refid="classConcChanInfo_1a3be92ed0631c693132210b3c800dc57b" compoundref="ConcChanInfo_8h" startline="30">ConcChanInfo::chanPool</references>
+        <references refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" compoundref="KsolveBase_8h" startline="148">KsolveBase::compartment_</references>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classDiffPoolVec_1adff89de588238c0796720423f85312ac" compoundref="DiffPoolVec_8cpp" startline="44" endline="48">DiffPoolVec::getN</references>
+        <references refid="classDiffPoolVec_1abb3a20a57cf04ddd2ca96d8716d1b20a" compoundref="DiffPoolVec_8cpp" startline="113" endline="116">DiffPoolVec::getNumVoxels</references>
+        <references refid="Dsolve_8cpp_1a6d4604496e6d004f9e5f51fd96c6acf9" compoundref="Dsolve_8cpp" startline="303" endline="318">integ</references>
+        <references refid="classConcChanInfo_1a71c242a6243719e7bc7f308dd64d0be7" compoundref="ConcChanInfo_8h" startline="34">ConcChanInfo::isLocal</references>
+        <references refid="classConcChanInfo_1a0b2619a17554ea270e2dbf630e231a22" compoundref="ConcChanInfo_8h" startline="27">ConcChanInfo::myPool</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classConcChanInfo_1a828044a3ea3ebc53ca34494de44fec6d" compoundref="ConcChanInfo_8h" startline="29">ConcChanInfo::otherPool</references>
+        <references refid="classConcChanInfo_1a90e6088684b956ba0ebf30c9701426d2" compoundref="ConcChanInfo_8h" startline="36">ConcChanInfo::permeability</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1a2c1afbd06c6d141bbe43060341730534" compoundref="DiffPoolVec_8cpp" startline="50" endline="54">DiffPoolVec::setN</references>
+        <references refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">ChemCompt::vGetVoxelVolume</references>
+        <referencedby refid="classDsolve_1af4824ee1c5a2864dc2a9b3b230582777" compoundref="Dsolve_8cpp" startline="566" endline="571">updateJunctions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a5dbacfba7a9d63b47734c96bcad4ffb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::calcOtherJnChan</definition>
+        <argsstring>(const DiffJunction &amp;jn, Dsolve *other, double dt)</argsstring>
+        <name>calcOtherJnChan</name>
+        <qualifiedname>Dsolve::calcOtherJnChan</qualifiedname>
+        <param>
+          <type>const <ref refid="classDiffJunction" kindref="compound">DiffJunction</ref> &amp;</type>
+          <declname>jn</declname>
+        </param>
+        <param>
+          <type><ref refid="classDsolve" kindref="compound">Dsolve</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="190" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="438" bodyend="476"/>
+        <references refid="classDsolve_1ae2da76bc8a24a7bce1c5c5db7f177876" compoundref="Dsolve_8h" startline="218">channels_</references>
+        <references refid="classConcChanInfo_1a3be92ed0631c693132210b3c800dc57b" compoundref="ConcChanInfo_8h" startline="30">ConcChanInfo::chanPool</references>
+        <references refid="classVoxelJunction_1a726300f19ba547690ed7ab3150cfba9c" compoundref="VoxelJunction_8h" startline="40">VoxelJunction::first</references>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classDiffPoolVec_1adff89de588238c0796720423f85312ac" compoundref="DiffPoolVec_8cpp" startline="44" endline="48">DiffPoolVec::getN</references>
+        <references refid="Dsolve_8cpp_1a6d4604496e6d004f9e5f51fd96c6acf9" compoundref="Dsolve_8cpp" startline="303" endline="318">integ</references>
+        <references refid="classConcChanInfo_1a71c242a6243719e7bc7f308dd64d0be7" compoundref="ConcChanInfo_8h" startline="34">ConcChanInfo::isLocal</references>
+        <references refid="classConcChanInfo_1a0b2619a17554ea270e2dbf630e231a22" compoundref="ConcChanInfo_8h" startline="27">ConcChanInfo::myPool</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classDiffJunction_1a9c6148957e34a3361359400e87102496" compoundref="DiffJunction_8h" startline="47">DiffJunction::otherChannels</references>
+        <references refid="classConcChanInfo_1a828044a3ea3ebc53ca34494de44fec6d" compoundref="ConcChanInfo_8h" startline="29">ConcChanInfo::otherPool</references>
+        <references refid="classConcChanInfo_1a90e6088684b956ba0ebf30c9701426d2" compoundref="ConcChanInfo_8h" startline="36">ConcChanInfo::permeability</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classVoxelJunction_1a6175a7d3b1fba6320dca8bf2ca3bf693" compoundref="VoxelJunction_8h" startline="41">VoxelJunction::second</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <references refid="classDiffPoolVec_1a2c1afbd06c6d141bbe43060341730534" compoundref="DiffPoolVec_8cpp" startline="50" endline="54">DiffPoolVec::setN</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a63e688fd5d9528e7cf9707baaf4495d8" compoundref="Dsolve_8cpp" startline="530" endline="549">calcJunction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::convertIdToPoolIndex</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>convertIdToPoolIndex</name>
+        <qualifiedname>Dsolve::convertIdToPoolIndex</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="165" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1126" bodyend="1129"/>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <referencedby refid="classDsolve_1ad8476ede095fa5f294427a259eb7ee56" compoundref="Dsolve_8cpp" startline="1184" endline="1196">getConcInit</referencedby>
+        <referencedby refid="classDsolve_1ae5497876ead07545c0d9303d0a7b473f" compoundref="Dsolve_8cpp" startline="1212" endline="1218">getDiffConst</referencedby>
+        <referencedby refid="classDsolve_1a95acd8a14e1eab3879b288e3f5974ccb" compoundref="Dsolve_8cpp" startline="1147" endline="1159">getN</referencedby>
+        <referencedby refid="classDsolve_1af903a86a4231dc76e165ad0cc76c516f" compoundref="Dsolve_8cpp" startline="1333" endline="1336">getPoolIndex</referencedby>
+        <referencedby refid="classDsolve_1a1b0d687413f97cee73f53ceb8f6e454f" compoundref="Dsolve_8cpp" startline="1169" endline="1182">setConcInit</referencedby>
+        <referencedby refid="classDsolve_1a642f7e41596d448cfac7a59261eb0ed5" compoundref="Dsolve_8cpp" startline="1204" endline="1210">setDiffConst</referencedby>
+        <referencedby refid="classDsolve_1a8f91118c84ea88710df69aadb8c30d8d" compoundref="Dsolve_8cpp" startline="1220" endline="1226">setMotorConst</referencedby>
+        <referencedby refid="classDsolve_1a742df3d807530224564b67da0015d461" compoundref="Dsolve_8cpp" startline="1131" endline="1145">setN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a85ca5f2ac9c1d7bde1b2447df7497b3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::convertIdToPoolIndex</definition>
+        <argsstring>(Id id) const</argsstring>
+        <name>convertIdToPoolIndex</name>
+        <qualifiedname>Dsolve::convertIdToPoolIndex</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="164" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1109" bodyend="1124"/>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classDsolve_1af9dfcb0d30ebcd17215915261e94aa79" compoundref="Dsolve_8h" startline="224">poolMap_</references>
+        <references refid="classDsolve_1a690b4054f96055d1896192c698fd8450" compoundref="Dsolve_8h" startline="221">poolMapStart_</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <referencedby refid="classDsolve_1ab9aef134ac51b481440b70d096ff5540" compoundref="Dsolve_8cpp" startline="629" endline="691">fillConcChans</referencedby>
+        <referencedby refid="classDsolve_1aef60ededfe6387d1dfde0763acee10cf" compoundref="Dsolve_8cpp" startline="1001" endline="1042">mapChansBetweenDsolves</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a5bf1d40d9c87137482f43b97b04c5116" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dsolve::Dsolve</definition>
+        <argsstring>()</argsstring>
+        <name>Dsolve</name>
+        <qualifiedname>Dsolve::Dsolve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="32" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="185" bodyend="191"/>
+        <references refid="classDsolve_1a7ac4b42ba7797f617fedb1133a6631ec" compoundref="Dsolve_8h" startline="208">dt_</references>
+        <references refid="classDsolve_1adf344b95d0189ef4e8495f02be680456" compoundref="Dsolve_8h" startline="211">numLocalPools_</references>
+        <references refid="classDsolve_1a67d7bae26c68848f5ec51aa713874ad9" compoundref="Dsolve_8h" startline="210">numTotPools_</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a40b8feb10ca5c857ab1655716de7e70e" compoundref="Dsolve_8h" startline="212">poolStartIndex_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ab9aef134ac51b481440b70d096ff5540" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::fillConcChans</definition>
+        <argsstring>(const vector&lt; ObjId &gt; &amp;chans)</argsstring>
+        <name>fillConcChans</name>
+        <qualifiedname>Dsolve::fillConcChans</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt; &amp;</type>
+          <declname>chans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="193" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="629" bodyend="691"/>
+        <references refid="classObjId_1a79e041eb24b2bcfcdf62a488cf7b0572" compoundref="ObjId_8cpp" startline="18" endline="36">ObjId::bad</references>
+        <references refid="classDsolve_1ae2da76bc8a24a7bce1c5c5db7f177876" compoundref="Dsolve_8h" startline="218">channels_</references>
+        <references refid="classConcChanInfo_1a1cb75390c9f5d0e6643cbc5e2ad84d8a" compoundref="ConcChanInfo_8h" startline="19" endline="25">ConcChanInfo::ConcChanInfo</references>
+        <references refid="classDsolve_1a85ca5f2ac9c1d7bde1b2447df7497b3b" compoundref="Dsolve_8cpp" startline="1109" endline="1124">convertIdToPoolIndex</references>
+        <references refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" compoundref="ObjId_8cpp" startline="125" endline="128">ObjId::element</references>
+        <references refid="classCinfo_1a05a9d8143d9eb2db55eb3690e1b865f5" compoundref="Cinfo_8cpp" startline="243" endline="249">Cinfo::find</references>
+        <references refid="classCinfo_1a7642d2a9ffe54cc8008df39de171ab63" compoundref="Cinfo_8cpp" startline="259" endline="265">Cinfo::findFinfo</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classDestFinfo_1a6efef23ddcfbaef03eca8aa75fdd98cd" compoundref="DestFinfo_8cpp" startline="45" endline="48">DestFinfo::getFid</references>
+        <references refid="classElement_1abec0b4d9c993bd1eb92b24563d9d8534" compoundref="Element_8cpp" startline="949" endline="981">Element::getNeighbors</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classObjId_1ab6b120d314aab5abc3ea8bb7ead5ae41" compoundref="ObjId_8h" startline="45" endline="49">ObjId::ObjId</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <referencedby refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" compoundref="Dsolve_8cpp" startline="586" endline="627">setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ac478088f4fc2399306e92b6279231960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::filterCrossRateTerms</definition>
+        <argsstring>(const vector&lt; pair&lt; Id, Id &gt; &gt; &amp;xrt)</argsstring>
+        <name>filterCrossRateTerms</name>
+        <qualifiedname>Dsolve::filterCrossRateTerms</qualifiedname>
+        <param>
+          <type>const vector&lt; pair&lt; <ref refid="classId" kindref="compound">Id</ref>, <ref refid="classId" kindref="compound">Id</ref> &gt; &gt; &amp;</type>
+          <declname>xrt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="157" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1af5f39e6691be0c61e6cc37d77f89e409" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::getBlock</definition>
+        <argsstring>(vector&lt; double &gt; &amp;values) const</argsstring>
+        <name>getBlock</name>
+        <qualifiedname>Dsolve::getBlock</qualifiedname>
+        <reimplements refid="classKsolveBase_1a8ec5a60cca2fe836a5821f171907db34">getBlock</reimplements>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets block of data. The first 4 entries are passed in on the &apos;values&apos; vector: the start voxel, numVoxels, start pool#, numPools. These are followed by numVoxels * numPools of data values which are filled in by the function. We assert that the entire requested block is present in this <ref refid="classKsolveBase" kindref="compound">KsolveBase</ref>. The block is organized as an array of arrays of voxels; values[pool#][voxel#]</para>
+<para>Note that numVoxels and numPools are the number in the current block, not the upper limit of the block. So values.size() == 4 + numPools * numVoxels. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="147" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1266" bodyend="1290"/>
+        <references refid="classDiffPoolVec_1abddb702fd606060e32a949619940a482" compoundref="DiffPoolVec_8cpp" startline="62" endline="65">DiffPoolVec::getNvec</references>
+        <references refid="classDsolve_1adf344b95d0189ef4e8495f02be680456" compoundref="Dsolve_8h" startline="211">numLocalPools_</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDsolve_1a40b8feb10ca5c857ab1655716de7e70e" compoundref="Dsolve_8h" startline="212">poolStartIndex_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ad8476ede095fa5f294427a259eb7ee56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Dsolve::getConcInit</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getConcInit</name>
+        <qualifiedname>Dsolve::getConcInit</qualifiedname>
+        <reimplements refid="classKsolveBase_1add0a414442478504ccc459f7693a8e98">getConcInit</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>get initial conc of molecules in given pool and voxel. Bdry cond. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="129" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1184" bodyend="1196"/>
+        <references refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" compoundref="Dsolve_8cpp" startline="1126" endline="1129">convertIdToPoolIndex</references>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classDiffPoolVec_1af32ab38ca7c6aa642e32ebf78867cb80" compoundref="DiffPoolVec_8cpp" startline="32" endline="36">DiffPoolVec::getConcInit</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ae5497876ead07545c0d9303d0a7b473f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Dsolve::getDiffConst</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getDiffConst</name>
+        <qualifiedname>Dsolve::getDiffConst</qualifiedname>
+        <reimplements refid="classKsolveBase_1a368de20038938fa1e75ce659a36d7e75">getDiffConst</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Diffusion constant: Only one per pool, voxel number is ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="135" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1212" bodyend="1218"/>
+        <references refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" compoundref="Dsolve_8cpp" startline="1126" endline="1129">convertIdToPoolIndex</references>
+        <references refid="classDiffPoolVec_1ade6a3f8bee7d3f1e0aeb4ce8c1bbf43e" compoundref="DiffPoolVec_8cpp" startline="87" endline="90">DiffPoolVec::getDiffConst</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1af1140482cadeb2af7b434cfdff6f5d04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Dsolve::getDiffScale</definition>
+        <argsstring>(unsigned int voxel) const</argsstring>
+        <name>getDiffScale</name>
+        <qualifiedname>Dsolve::getDiffScale</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="61" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="289" bodyend="297"/>
+        <references refid="Dsolve_8cpp_1a52839a8ae864713b404bfd841d56b768" compoundref="Dsolve_8cpp" startline="225" endline="240">checkJn</references>
+        <references refid="classVoxelJunction_1a8d8503053acdf4178d98cbf5d94a402a" compoundref="VoxelJunction_8h" startline="44">VoxelJunction::diffScale</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a0cf8f28cf40c32df6199ccce3769a980" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Dsolve::getDiffVol1</definition>
+        <argsstring>(unsigned int voxel) const</argsstring>
+        <name>getDiffVol1</name>
+        <qualifiedname>Dsolve::getDiffVol1</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <briefdescription>
+<para>LookupFied for examining cross-solver diffusion terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="57" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="251" bodyend="259"/>
+        <references refid="Dsolve_8cpp_1a52839a8ae864713b404bfd841d56b768" compoundref="Dsolve_8cpp" startline="225" endline="240">checkJn</references>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a3967e89e6050cd3d81fb49d5b7091aa1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Dsolve::getDiffVol2</definition>
+        <argsstring>(unsigned int voxel) const</argsstring>
+        <name>getDiffVol2</name>
+        <qualifiedname>Dsolve::getDiffVol2</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="59" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="270" bodyend="278"/>
+        <references refid="Dsolve_8cpp_1a52839a8ae864713b404bfd841d56b768" compoundref="Dsolve_8cpp" startline="225" endline="240">checkJn</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a95acd8a14e1eab3879b288e3f5974ccb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Dsolve::getN</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getN</name>
+        <qualifiedname>Dsolve::getN</qualifiedname>
+        <reimplements refid="classKsolveBase_1ad40e63ce9bb94cfe89cb299b02dac4c5">getN</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Get # of molecules in given pool and voxel. Varies with time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="131" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1147" bodyend="1159"/>
+        <references refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" compoundref="Dsolve_8cpp" startline="1126" endline="1129">convertIdToPoolIndex</references>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classDiffPoolVec_1adff89de588238c0796720423f85312ac" compoundref="DiffPoolVec_8cpp" startline="44" endline="48">DiffPoolVec::getN</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a102c721d01a1faa72851556d718f2d6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::getNumLocalVoxels</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumLocalVoxels</name>
+        <qualifiedname>Dsolve::getNumLocalVoxels</qualifiedname>
+        <reimplements refid="classKsolveBase_1af40d2f9505790ca14f69a38695b386f1">getNumLocalVoxels</reimplements>
+        <briefdescription>
+<para>Number of voxels here. pools_.size() == getNumLocalVoxels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="143" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1338" bodyend="1341"/>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a512c38503c798deb5da0b3555e7ba90a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::getNumPools</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumPools</name>
+        <qualifiedname>Dsolve::getNumPools</qualifiedname>
+        <reimplements refid="classKsolveBase_1a1768b9e29d85cda21e9a4f275264879a">getNumPools</reimplements>
+        <briefdescription>
+<para>gets number of pools (species) handled by system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="140" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1260" bodyend="1263"/>
+        <references refid="classDsolve_1a67d7bae26c68848f5ec51aa713874ad9" compoundref="Dsolve_8h" startline="210">numTotPools_</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a39e1076cd6199de9cf614017ff4c8e9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::getNumVarPools</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumVarPools</name>
+        <qualifiedname>Dsolve::getNumVarPools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="38" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1092" bodyend="1095"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ab8b9c061ee29c72f0cd52369e0a5886c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::getNumVoxels</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumVoxels</name>
+        <qualifiedname>Dsolve::getNumVoxels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="49" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1097" bodyend="1100"/>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a8e446f41e1141ac48ebf224059e4c746" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; Dsolve::getNvec</definition>
+        <argsstring>(unsigned int pool) const</argsstring>
+        <name>getNvec</name>
+        <qualifiedname>Dsolve::getNvec</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pool</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="53" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="215" bodyend="223"/>
+        <references refid="classDiffPoolVec_1abddb702fd606060e32a949619940a482" compoundref="DiffPoolVec_8cpp" startline="62" endline="65">DiffPoolVec::getNvec</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a30797ff2613b3c193fdda4c01bc16aa2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Dsolve::getPath</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getPath</name>
+        <qualifiedname>Dsolve::getPath</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="47" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="793" bodyend="796"/>
+        <references refid="classDsolve_1a1b96610cdacb468e898b2a0f14c93808" compoundref="Dsolve_8h" startline="205">path_</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1af903a86a4231dc76e165ad0cc76c516f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Dsolve::getPoolIndex</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getPoolIndex</name>
+        <qualifiedname>Dsolve::getPoolIndex</qualifiedname>
+        <reimplements refid="classKsolveBase_1a3b71d6a2a0eb70283a7300ca74fd1b6b">getPoolIndex</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>er</declname>
+        </param>
+        <briefdescription>
+<para>Return pool index, using <ref refid="classStoich" kindref="compound">Stoich</ref> ptr to do lookup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="166" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1333" bodyend="1336"/>
+        <references refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" compoundref="Dsolve_8cpp" startline="1126" endline="1129">convertIdToPoolIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ac52a6025e8a78ebb779c5f60b728f16e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Dsolve::getR1</definition>
+        <argsstring>(unsigned int reacIdx, const Eref &amp;e) const</argsstring>
+        <name>getR1</name>
+        <qualifiedname>Dsolve::getR1</qualifiedname>
+        <reimplements refid="classKsolveBase_1a3d2a8c2754fb4982be6fa1cd9a4da231">getR1</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>reacIdx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get rate const in a given reac and voxel. Usually fixed but may vary if the reac is controlled by a function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="133" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1161" bodyend="1165"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a38b6cb6dcc7bcffa8393c9b8e3d3b39e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id Dsolve::getStoich</definition>
+        <argsstring>() const</argsstring>
+        <name>getStoich</name>
+        <qualifiedname>Dsolve::getStoich</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="41" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="693" bodyend="696"/>
+        <references refid="classKsolveBase_1a9e72d9f4802cc71fed341ce73629e651" compoundref="KsolveBase_8h" startline="145">KsolveBase::stoich_</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a894d2156e1e86dfe2afc114dc4ffcb1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Dsolve::getVolumeOfPool</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getVolumeOfPool</name>
+        <qualifiedname>Dsolve::getVolumeOfPool</qualifiedname>
+        <reimplements refid="classKsolveBase_1a81a853fdb7109561a6c060aaa37dda0d">getVolumeOfPool</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Return volume of pool e. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="134" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1198" bodyend="1202"/>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classDsolve_1a593823cd38ddea881051319f48583eeb" compoundref="Dsolve_8cpp" startline="1348" endline="1351">volume</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1af7b5bd6814935564fada61fe01d9294e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::makePoolMapFromElist</definition>
+        <argsstring>(const vector&lt; ObjId &gt; &amp;elist, vector&lt; Id &gt; &amp;temp)</argsstring>
+        <name>makePoolMapFromElist</name>
+        <qualifiedname>Dsolve::makePoolMapFromElist</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classObjId" kindref="compound">ObjId</ref> &gt; &amp;</type>
+          <declname>elist</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt; &amp;</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills in poolMap_ using elist of objects found when the &apos;setPath&apos; function is executed. temp is returned with the list of <ref refid="classPoolBase" kindref="compound">PoolBase</ref> objects that exist on the path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="173" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="722" bodyend="762"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" compoundref="ObjId_8cpp" startline="125" endline="128">ObjId::element</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classDsolve_1a1b96610cdacb468e898b2a0f14c93808" compoundref="Dsolve_8h" startline="205">path_</references>
+        <references refid="classDsolve_1af9dfcb0d30ebcd17215915261e94aa79" compoundref="Dsolve_8h" startline="224">poolMap_</references>
+        <references refid="classDsolve_1a690b4054f96055d1896192c698fd8450" compoundref="Dsolve_8h" startline="221">poolMapStart_</references>
+        <references refid="classKsolveBase_1a9e72d9f4802cc71fed341ce73629e651" compoundref="KsolveBase_8h" startline="145">KsolveBase::stoich_</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <referencedby refid="classDsolve_1ad6f87094f210adb30fb530ee8666945f" compoundref="Dsolve_8cpp" startline="764" endline="791">setPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ac0d40fc74b3515a2afcf0cd565020e69" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classVoxelPoolsBase" kindref="compound">VoxelPoolsBase</ref> *</type>
+        <definition>VoxelPoolsBase * Dsolve::pools</definition>
+        <argsstring>(unsigned int i)</argsstring>
+        <name>pools</name>
+        <qualifiedname>Dsolve::pools</qualifiedname>
+        <reimplements refid="classKsolveBase_1ae2081756c2fa7b8aef28bbc34f314e94">pools</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Return a pointer to the specified VoxelPool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="144" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1343" bodyend="1346"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1add76fff7deb807bba630b8667023684d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::print</definition>
+        <argsstring>() const</argsstring>
+        <name>print</name>
+        <qualifiedname>Dsolve::print</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility func for debugging: Prints N_ matrix </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="198" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ac7d63e78754bf54cf1c348deec4fafcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::process</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>process</name>
+        <qualifiedname>Dsolve::process</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="67" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="551" bodyend="555"/>
+        <references refid="classDiffPoolVec_1aad2230e0c43adf33314b3d0ab6063d91" compoundref="DiffPoolVec_8cpp" startline="144" endline="156">DiffPoolVec::advance</references>
+        <references refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" compoundref="ProcInfo_8h" startline="18">ProcInfo::dt</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a34b6429c27fa8522552359c9d0a1f34c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::rebuildPools</definition>
+        <argsstring>()</argsstring>
+        <name>rebuildPools</name>
+        <qualifiedname>Dsolve::rebuildPools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="183" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a087672d35965fba1767c745d3594b4e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::reinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>reinit</name>
+        <qualifiedname>Dsolve::reinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="68" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="557" bodyend="564"/>
+        <references refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">build</references>
+        <references refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" compoundref="KsolveBase_8h" startline="148">KsolveBase::compartment_</references>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" compoundref="ProcInfo_8h" startline="18">ProcInfo::dt</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1a9cab1cbc0bc5a68aa4d041b88ef37a45" compoundref="DiffPoolVec_8cpp" startline="158" endline="168">DiffPoolVec::reinit</references>
+        <references refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">ChemCompt::vGetVoxelVolume</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a9cc049082fcf9056b9535b2558b0608e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setBlock</definition>
+        <argsstring>(const vector&lt; double &gt; &amp;values)</argsstring>
+        <name>setBlock</name>
+        <qualifiedname>Dsolve::setBlock</qualifiedname>
+        <reimplements refid="classKsolveBase_1a9104a48730d53b4fde53b4cde7805bdc">setBlock</reimplements>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets block of data. The first 4 entries on the &apos;values&apos; vector are the start voxel, numVoxels, start pool#, numPools. These are followed by numVoxels * numPools of data values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="148" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1302" bodyend="1323"/>
+        <references refid="classDsolve_1adf344b95d0189ef4e8495f02be680456" compoundref="Dsolve_8h" startline="211">numLocalPools_</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDsolve_1a40b8feb10ca5c857ab1655716de7e70e" compoundref="Dsolve_8h" startline="212">poolStartIndex_</references>
+        <references refid="classDiffPoolVec_1a705e9b9fd1f78eb381ef0b320b891352" compoundref="DiffPoolVec_8cpp" startline="73" endline="80">DiffPoolVec::setNvec</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ab89b28e781f81c2fddf8d1f89db0f9d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setCompartment</definition>
+        <argsstring>(Id id)</argsstring>
+        <name>setCompartment</name>
+        <qualifiedname>Dsolve::setCompartment</qualifiedname>
+        <reimplements refid="classKsolveBase_1a6ed77ac8af133e020a81d2fcca38a124">setCompartment</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>compartment</declname>
+        </param>
+        <briefdescription>
+<para>Assigns compartment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="42" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="702" bodyend="720"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" compoundref="KsolveBase_8h" startline="148">KsolveBase::compartment_</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" compoundref="Cinfo_8cpp" startline="301" endline="304">Cinfo::name</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a1b0d687413f97cee73f53ceb8f6e454f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setConcInit</definition>
+        <argsstring>(const Eref &amp;e, double value)</argsstring>
+        <name>setConcInit</name>
+        <qualifiedname>Dsolve::setConcInit</qualifiedname>
+        <reimplements refid="classKsolveBase_1a1fbdc3623dd0a5aa64ed53b1b6b1ba99">setConcInit</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Set initial conc of molecules in given pool and voxel. Bdry cond. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="130" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1169" bodyend="1182"/>
+        <references refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" compoundref="Dsolve_8cpp" startline="1126" endline="1129">convertIdToPoolIndex</references>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1a27dc343a9b07b32492c671ecd151ab8b" compoundref="DiffPoolVec_8cpp" startline="38" endline="42">DiffPoolVec::setConcInit</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a642f7e41596d448cfac7a59261eb0ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setDiffConst</definition>
+        <argsstring>(const Eref &amp;e, double value)</argsstring>
+        <name>setDiffConst</name>
+        <qualifiedname>Dsolve::setDiffConst</qualifiedname>
+        <reimplements refid="classKsolveBase_1a5f66248bc41afc44ff5ac3ffbf7a5d9e">setDiffConst</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Diffusion constant: Only one per pool, voxel number is ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="136" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1204" bodyend="1210"/>
+        <references refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" compoundref="Dsolve_8cpp" startline="1126" endline="1129">convertIdToPoolIndex</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1a2d3f3ed1c924e10eadaf66f7b93956a5" compoundref="DiffPoolVec_8cpp" startline="92" endline="95">DiffPoolVec::setDiffConst</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a13958f5ced382caf929dabb108395174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::setDiffScale</definition>
+        <argsstring>(unsigned int voxel, double scale)</argsstring>
+        <name>setDiffScale</name>
+        <qualifiedname>Dsolve::setDiffScale</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="62" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="280" bodyend="287"/>
+        <references refid="Dsolve_8cpp_1a52839a8ae864713b404bfd841d56b768" compoundref="Dsolve_8cpp" startline="225" endline="240">checkJn</references>
+        <references refid="classVoxelJunction_1a8d8503053acdf4178d98cbf5d94a402a" compoundref="VoxelJunction_8h" startline="44">VoxelJunction::diffScale</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ac89147fe7d43e652dd11e0abddf6e7a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::setDiffVol1</definition>
+        <argsstring>(unsigned int voxel, double vol)</argsstring>
+        <name>setDiffVol1</name>
+        <qualifiedname>Dsolve::setDiffVol1</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="58" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="242" bodyend="249"/>
+        <references refid="Dsolve_8cpp_1a52839a8ae864713b404bfd841d56b768" compoundref="Dsolve_8cpp" startline="225" endline="240">checkJn</references>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ab4cca7d99c4d960e54a9bc0e032f6b1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::setDiffVol2</definition>
+        <argsstring>(unsigned int voxel, double vol)</argsstring>
+        <name>setDiffVol2</name>
+        <qualifiedname>Dsolve::setDiffVol2</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="60" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="261" bodyend="268"/>
+        <references refid="Dsolve_8cpp_1a52839a8ae864713b404bfd841d56b768" compoundref="Dsolve_8cpp" startline="225" endline="240">checkJn</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <references refid="classDiffJunction_1a16402667c7278433a1f6c1f22b6bfe2f" compoundref="DiffJunction_8h" startline="49">DiffJunction::vj</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ac1ce8d2121e8ed29265dc4b34f86840f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setDsolve</definition>
+        <argsstring>(Id id)</argsstring>
+        <name>setDsolve</name>
+        <qualifiedname>Dsolve::setDsolve</qualifiedname>
+        <reimplements refid="classKsolveBase_1a534e6625f3e995b07a0e867634ed819d">setDsolve</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Inherited, defining dummy function here. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="44" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="699" bodyend="700"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a8f91118c84ea88710df69aadb8c30d8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setMotorConst</definition>
+        <argsstring>(const Eref &amp;e, double value)</argsstring>
+        <name>setMotorConst</name>
+        <qualifiedname>Dsolve::setMotorConst</qualifiedname>
+        <reimplements refid="classKsolveBase_1a3caf6ea4c3d8bb7fe1e8e2b4eb1f659d">setMotorConst</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="137" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1220" bodyend="1226"/>
+        <references refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" compoundref="Dsolve_8cpp" startline="1126" endline="1129">convertIdToPoolIndex</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1a071acc5dfdd5f67cbb89fb9d0b57e905" compoundref="DiffPoolVec_8cpp" startline="102" endline="105">DiffPoolVec::setMotorConst</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a742df3d807530224564b67da0015d461" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setN</definition>
+        <argsstring>(const Eref &amp;e, double value)</argsstring>
+        <name>setN</name>
+        <qualifiedname>Dsolve::setN</qualifiedname>
+        <reimplements refid="classKsolveBase_1ab9f3d8b0ce33886df13377a90d11a114">setN</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Set # of molecules in given pool and voxel. Varies with time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="132" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1131" bodyend="1145"/>
+        <references refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" compoundref="Dsolve_8cpp" startline="1126" endline="1129">convertIdToPoolIndex</references>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1a2c1afbd06c6d141bbe43060341730534" compoundref="DiffPoolVec_8cpp" startline="50" endline="54">DiffPoolVec::setN</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1aad074a5110e40e8591c54c2608b15cfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setNumAllVoxels</definition>
+        <argsstring>(unsigned int numVoxels)</argsstring>
+        <name>setNumAllVoxels</name>
+        <qualifiedname>Dsolve::setNumAllVoxels</qualifiedname>
+        <reimplements refid="classKsolveBase_1af389b5ffd2f6610c1055d4e7ebfc52ed">setNumAllVoxels</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>numVoxels</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="51" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1102" bodyend="1107"/>
+        <references refid="classDsolve_1adf344b95d0189ef4e8495f02be680456" compoundref="Dsolve_8h" startline="211">numLocalPools_</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1ab4abd440f075c7cce3dcbd60e3bd5d31" compoundref="DiffPoolVec_8cpp" startline="107" endline="111">DiffPoolVec::setNumVoxels</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1adfc34a56651419641e5052430f00d341" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setNumPools</definition>
+        <argsstring>(unsigned int num)</argsstring>
+        <name>setNumPools</name>
+        <qualifiedname>Dsolve::setNumPools</qualifiedname>
+        <reimplements refid="classKsolveBase_1adf0f983baa0743630743693a72f8e0ff">setNumPools</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Specifies number of pools (species) handled by system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="139" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1244" bodyend="1258"/>
+        <references refid="classDsolve_1adf344b95d0189ef4e8495f02be680456" compoundref="Dsolve_8h" startline="211">numLocalPools_</references>
+        <references refid="classDsolve_1a67d7bae26c68848f5ec51aa713874ad9" compoundref="Dsolve_8h" startline="210">numTotPools_</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDsolve_1a40b8feb10ca5c857ab1655716de7e70e" compoundref="Dsolve_8h" startline="212">poolStartIndex_</references>
+        <references refid="classDiffPoolVec_1ab4abd440f075c7cce3dcbd60e3bd5d31" compoundref="DiffPoolVec_8cpp" startline="107" endline="111">DiffPoolVec::setNumVoxels</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+        <referencedby refid="classDsolve_1ad6f87094f210adb30fb530ee8666945f" compoundref="Dsolve_8cpp" startline="764" endline="791">setPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1aff7680b2f1b4c8b4edd5a350ae7f9767" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setNumVarTotPools</definition>
+        <argsstring>(unsigned int var, unsigned int tot)</argsstring>
+        <name>setNumVarTotPools</name>
+        <qualifiedname>Dsolve::setNumVarTotPools</qualifiedname>
+        <reimplements refid="classKsolveBase_1a8f47a8420787019bb6242c930a6bc8ef">setNumVarTotPools</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>tot</declname>
+        </param>
+        <briefdescription>
+<para>Specifies number of var pools and total pools including buffered . </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="141" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1228" bodyend="1242"/>
+        <references refid="classDsolve_1adf344b95d0189ef4e8495f02be680456" compoundref="Dsolve_8h" startline="211">numLocalPools_</references>
+        <references refid="classDsolve_1a67d7bae26c68848f5ec51aa713874ad9" compoundref="Dsolve_8h" startline="210">numTotPools_</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDsolve_1a40b8feb10ca5c857ab1655716de7e70e" compoundref="Dsolve_8h" startline="212">poolStartIndex_</references>
+        <references refid="classDiffPoolVec_1ab4abd440f075c7cce3dcbd60e3bd5d31" compoundref="DiffPoolVec_8cpp" startline="107" endline="111">DiffPoolVec::setNumVoxels</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a8cbfe1746ed09519c918810f7d3f79e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::setNvec</definition>
+        <argsstring>(unsigned int pool, vector&lt; double &gt; vec)</argsstring>
+        <name>setNvec</name>
+        <qualifiedname>Dsolve::setNvec</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pool</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="54" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="200" bodyend="213"/>
+        <references refid="classDiffPoolVec_1abb3a20a57cf04ddd2ca96d8716d1b20a" compoundref="DiffPoolVec_8cpp" startline="113" endline="116">DiffPoolVec::getNumVoxels</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1af4f9b1d5218eed991a8f434d4f0f4a79" compoundref="DiffPoolVec_8cpp" startline="67" endline="71">DiffPoolVec::setNvec</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1ad6f87094f210adb30fb530ee8666945f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::setPath</definition>
+        <argsstring>(const Eref &amp;e, string path)</argsstring>
+        <name>setPath</name>
+        <qualifiedname>Dsolve::setPath</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Dummy, inherited but not used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="46" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="764" bodyend="791"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classDsolve_1af7b5bd6814935564fada61fe01d9294e" compoundref="Dsolve_8cpp" startline="722" endline="762">makePoolMapFromElist</references>
+        <references refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" compoundref="Dsolve_8h" startline="213">numVoxels_</references>
+        <references refid="classDsolve_1af9dfcb0d30ebcd17215915261e94aa79" compoundref="Dsolve_8h" startline="224">poolMap_</references>
+        <references refid="classDsolve_1a690b4054f96055d1896192c698fd8450" compoundref="Dsolve_8h" startline="221">poolMapStart_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classElement_1a4ec25a0d30a73759b0063e4b2990073f">Element::resize</references>
+        <references refid="classDiffPoolVec_1a2d3f3ed1c924e10eadaf66f7b93956a5" compoundref="DiffPoolVec_8cpp" startline="92" endline="95">DiffPoolVec::setDiffConst</references>
+        <references refid="classDiffPoolVec_1a1d43d481372d381ede78ee837a1520a4" compoundref="DiffPoolVec_8cpp" startline="118" endline="121">DiffPoolVec::setId</references>
+        <references refid="classDiffPoolVec_1a071acc5dfdd5f67cbb89fb9d0b57e905" compoundref="DiffPoolVec_8cpp" startline="102" endline="105">DiffPoolVec::setMotorConst</references>
+        <references refid="classDsolve_1adfc34a56651419641e5052430f00d341" compoundref="Dsolve_8cpp" startline="1244" endline="1258">setNumPools</references>
+        <references refid="Wildcard_8h_1a5744878ac4981756a9543981a697234f" compoundref="Wildcard_8cpp" startline="118" endline="130">simpleWildcardFind</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a2e2c3248f5b5fc10c8a739922676f1d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setPrev</definition>
+        <argsstring>()</argsstring>
+        <name>setPrev</name>
+        <qualifiedname>Dsolve::setPrev</qualifiedname>
+        <reimplements refid="classKsolveBase_1aee0cc3f669082a7a732f22b8b4319947">setPrev</reimplements>
+        <briefdescription>
+<para>Used to tell Dsolver to assign &apos;prev&apos; values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="149" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1293" bodyend="1300"/>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1af0afeeb49ac4e831aa4628f17d25282b" compoundref="DiffPoolVec_8cpp" startline="82" endline="85">DiffPoolVec::setPrevVec</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::setStoich</definition>
+        <argsstring>(Id id)</argsstring>
+        <name>setStoich</name>
+        <qualifiedname>Dsolve::setStoich</qualifiedname>
+        <reimplements refid="classKsolveBase_1a9e9932e226ac800600ca20ccd6f3b1e8">setStoich</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>stoich</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Informs the ZPI about the stoich, used during subsequent computations. Called to wrap up the model building. The <ref refid="classStoich" kindref="compound">Stoich</ref> does this call after it has set up its own path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="40" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="586" bodyend="627"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classDsolve_1ab9aef134ac51b481440b70d096ff5540" compoundref="Dsolve_8cpp" startline="629" endline="691">fillConcChans</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classPoolBase_1a04079709f81887141d7e87f806965b48" compoundref="PoolBase_8cpp" startline="511" endline="514">PoolBase::getDiffConst</references>
+        <references refid="classPoolBase_1a0f2445d7adb7cf025ee80058df4ddd62" compoundref="PoolBase_8cpp" startline="523" endline="526">PoolBase::getMotorConst</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classDsolve_1a1b96610cdacb468e898b2a0f14c93808" compoundref="Dsolve_8h" startline="205">path_</references>
+        <references refid="classDsolve_1af9dfcb0d30ebcd17215915261e94aa79" compoundref="Dsolve_8h" startline="224">poolMap_</references>
+        <references refid="classDsolve_1a690b4054f96055d1896192c698fd8450" compoundref="Dsolve_8h" startline="221">poolMapStart_</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <references refid="classDiffPoolVec_1a2d3f3ed1c924e10eadaf66f7b93956a5" compoundref="DiffPoolVec_8cpp" startline="92" endline="95">DiffPoolVec::setDiffConst</references>
+        <references refid="classDiffPoolVec_1a1d43d481372d381ede78ee837a1520a4" compoundref="DiffPoolVec_8cpp" startline="118" endline="121">DiffPoolVec::setId</references>
+        <references refid="classDiffPoolVec_1a071acc5dfdd5f67cbb89fb9d0b57e905" compoundref="DiffPoolVec_8cpp" startline="102" endline="105">DiffPoolVec::setMotorConst</references>
+        <references refid="classKsolveBase_1a9e72d9f4802cc71fed341ce73629e651" compoundref="KsolveBase_8h" startline="145">KsolveBase::stoich_</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <references refid="Wildcard_8h_1a27276dfc7bbd74b605ee985d4bc75615" compoundref="Wildcard_8cpp" startline="149" endline="156">wildcardFind</references>
+        <referencedby refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" compoundref="Dsolve_8cpp" startline="34" endline="180">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a32e5a483a8a030986ed1bb846d2bbea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::setupCrossSolverReacs</definition>
+        <argsstring>(const map&lt; Id, vector&lt; Id &gt; &gt; &amp;xr, Id otherStoich)</argsstring>
+        <name>setupCrossSolverReacs</name>
+        <qualifiedname>Dsolve::setupCrossSolverReacs</qualifiedname>
+        <param>
+          <type>const map&lt; <ref refid="classId" kindref="compound">Id</ref>, vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt; &gt; &amp;</type>
+          <declname>xr</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>otherStoich</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="152" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a30150d1363b3820edec28ad03d46796a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::setupCrossSolverReacVols</definition>
+        <argsstring>(const vector&lt; vector&lt; Id &gt; &gt; &amp;subCompts, const vector&lt; vector&lt; Id &gt; &gt; &amp;prdCompts)</argsstring>
+        <name>setupCrossSolverReacVols</name>
+        <qualifiedname>Dsolve::setupCrossSolverReacVols</qualifiedname>
+        <param>
+          <type>const vector&lt; vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt; &gt; &amp;</type>
+          <declname>subCompts</declname>
+        </param>
+        <param>
+          <type>const vector&lt; vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt; &gt; &amp;</type>
+          <declname>prdCompts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="154" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1af4824ee1c5a2864dc2a9b3b230582777" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::updateJunctions</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>updateJunctions</name>
+        <qualifiedname>Dsolve::updateJunctions</qualifiedname>
+        <reimplements refid="classKsolveBase_1a34c11a2dce316e45706d12cdbfa054ff">updateJunctions</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Used for telling Dsolver to handle all ops across Junctions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="71" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="566" bodyend="571"/>
+        <references refid="classDsolve_1a63e688fd5d9528e7cf9707baaf4495d8" compoundref="Dsolve_8cpp" startline="530" endline="549">calcJunction</references>
+        <references refid="classDsolve_1a2312b092685293edb3ebe89536e5f182" compoundref="Dsolve_8cpp" startline="478" endline="518">calcLocalChan</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a5a87bbeb22f08b9531fc1c3d78018de7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dsolve::updateRateTerms</definition>
+        <argsstring>(unsigned int index)</argsstring>
+        <name>updateRateTerms</name>
+        <qualifiedname>Dsolve::updateRateTerms</qualifiedname>
+        <reimplements refid="classKsolveBase_1a46970a57772a80ba178c56ff1a8ffdf0">updateRateTerms</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Informs the solver that the rate terms or volumes have changed and that the parameters must be updated. The index specifies which rateTerm to change, and if it is ~0U it means update all of them. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="160" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1328" bodyend="1331"/>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a593823cd38ddea881051319f48583eeb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double Dsolve::volume</definition>
+        <argsstring>(unsigned int i) const</argsstring>
+        <name>volume</name>
+        <qualifiedname>Dsolve::volume</qualifiedname>
+        <reimplements refid="classKsolveBase_1a03d245fc3a6cb8621f49dc94655ecb97">volume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Return volume of voxel i. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="145" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1348" bodyend="1351"/>
+        <referencedby refid="classDsolve_1a894d2156e1e86dfe2afc114dc4ffcb1c" compoundref="Dsolve_8cpp" startline="1198" endline="1202">getVolumeOfPool</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1af52d808e20c35619995d6d46306a663b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dsolve::~Dsolve</definition>
+        <argsstring>()</argsstring>
+        <name>~Dsolve</name>
+        <qualifiedname>Dsolve::~Dsolve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="33" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="193" bodyend="194"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * Dsolve::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>Dsolve::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="201" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="34" bodyend="180"/>
+        <references refid="classDsolve_1a3c22125f70c0b14355206c2510e73c67" compoundref="Dsolve_8cpp" startline="891" endline="909">buildMeshJunctions</references>
+        <references refid="classDsolve_1a365c6e0261706aac54ca79050e91db90" compoundref="Dsolve_8cpp" startline="864" endline="889">buildNeuroMeshJunctions</references>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classElementValueFinfo_1a920b84a2ae5d17c07322009467413ca1" compoundref="ElementValueFinfo_8h" startline="26" endline="45">ElementValueFinfo&lt; T, F &gt;::ElementValueFinfo</references>
+        <references refid="classEpFunc1_1aa6a9cc9446afac48f3e2f51a116766c0" compoundref="EpFunc_8h" startline="70" endline="72">EpFunc1&lt; T, A &gt;::EpFunc1</references>
+        <references refid="classEpFunc2_1a449f38ac36c9f1fdc9cc7a244841bbee" compoundref="EpFunc_8h" startline="87" endline="89">EpFunc2&lt; T, A1, A2 &gt;::EpFunc2</references>
+        <references refid="classKsolveBase_1afa7e256330b276ccb042761413a387cb" compoundref="KsolveBase_8cpp" startline="44" endline="47">KsolveBase::getCompartment</references>
+        <references refid="classDsolve_1af1140482cadeb2af7b434cfdff6f5d04" compoundref="Dsolve_8cpp" startline="289" endline="297">getDiffScale</references>
+        <references refid="classDsolve_1a0cf8f28cf40c32df6199ccce3769a980" compoundref="Dsolve_8cpp" startline="251" endline="259">getDiffVol1</references>
+        <references refid="classDsolve_1a3967e89e6050cd3d81fb49d5b7091aa1" compoundref="Dsolve_8cpp" startline="270" endline="278">getDiffVol2</references>
+        <references refid="classDsolve_1a512c38503c798deb5da0b3555e7ba90a" compoundref="Dsolve_8cpp" startline="1260" endline="1263">getNumPools</references>
+        <references refid="classDsolve_1ab8b9c061ee29c72f0cd52369e0a5886c" compoundref="Dsolve_8cpp" startline="1097" endline="1100">getNumVoxels</references>
+        <references refid="classDsolve_1a8e446f41e1141ac48ebf224059e4c746" compoundref="Dsolve_8cpp" startline="215" endline="223">getNvec</references>
+        <references refid="classDsolve_1a30797ff2613b3c193fdda4c01bc16aa2" compoundref="Dsolve_8cpp" startline="793" endline="796">getPath</references>
+        <references refid="classDsolve_1a38b6cb6dcc7bcffa8393c9b8e3d3b39e" compoundref="Dsolve_8cpp" startline="693" endline="696">getStoich</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classLookupValueFinfo_1ae091b10e988ce9da6099127e1374293b" compoundref="LookupValueFinfo_8h" startline="46" endline="62">LookupValueFinfo&lt; T, L, F &gt;::LookupValueFinfo</references>
+        <references refid="classDsolve_1ac7d63e78754bf54cf1c348deec4fafcc" compoundref="Dsolve_8cpp" startline="551" endline="555">process</references>
+        <references refid="classProcOpFunc_1a09abf4cb6cd3d1ed513fee1ed18054f4" compoundref="ProcOpFunc_8h" startline="76" endline="78">ProcOpFunc&lt; T &gt;::ProcOpFunc</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classDsolve_1a087672d35965fba1767c745d3594b4e7" compoundref="Dsolve_8cpp" startline="557" endline="564">reinit</references>
+        <references refid="classDsolve_1ab89b28e781f81c2fddf8d1f89db0f9d9" compoundref="Dsolve_8cpp" startline="702" endline="720">setCompartment</references>
+        <references refid="classDsolve_1a13958f5ced382caf929dabb108395174" compoundref="Dsolve_8cpp" startline="280" endline="287">setDiffScale</references>
+        <references refid="classDsolve_1ac89147fe7d43e652dd11e0abddf6e7a9" compoundref="Dsolve_8cpp" startline="242" endline="249">setDiffVol1</references>
+        <references refid="classDsolve_1ab4cca7d99c4d960e54a9bc0e032f6b1f" compoundref="Dsolve_8cpp" startline="261" endline="268">setDiffVol2</references>
+        <references refid="classDsolve_1adfc34a56651419641e5052430f00d341" compoundref="Dsolve_8cpp" startline="1244" endline="1258">setNumPools</references>
+        <references refid="classDsolve_1a8cbfe1746ed09519c918810f7d3f79e0" compoundref="Dsolve_8cpp" startline="200" endline="213">setNvec</references>
+        <references refid="classDsolve_1ad6f87094f210adb30fb530ee8666945f" compoundref="Dsolve_8cpp" startline="764" endline="791">setPath</references>
+        <references refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" compoundref="Dsolve_8cpp" startline="586" endline="627">setStoich</references>
+        <references refid="classSharedFinfo_1a64b94efcbd56f0e785f92d027541ae29" compoundref="SharedFinfo_8cpp" startline="16" endline="30">SharedFinfo::SharedFinfo</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a7ce4f12c80e58ef623ecba72c92326a8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::innerBuildMeshJunctions</definition>
+        <argsstring>(ObjId self, ObjId other, bool isMembraneBound)</argsstring>
+        <name>innerBuildMeshJunctions</name>
+        <qualifiedname>Dsolve::innerBuildMeshJunctions</qualifiedname>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isMembraneBound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>buildMeshJunctions is the inner utility function for building the junction between any specified pair of Dsolves. Note that it builds the junction on the &apos;self&apos; <ref refid="classDsolve" kindref="compound">Dsolve</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="99" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1065" bodyend="1086"/>
+        <references refid="classObjId_1a1e5933713d6a73550b0923cf63f5bfd8" compoundref="ObjId_8cpp" startline="113" endline="118">ObjId::data</references>
+        <references refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" compoundref="ObjId_8h" startline="102">ObjId::id</references>
+        <references refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" compoundref="Dsolve_8h" startline="231">junctions_</references>
+        <references refid="classDsolve_1aef60ededfe6387d1dfde0763acee10cf" compoundref="Dsolve_8cpp" startline="1001" endline="1042">mapChansBetweenDsolves</references>
+        <references refid="classDsolve_1a938e8ed6e960a978e3cc4984351c6be9" compoundref="Dsolve_8cpp" startline="926" endline="951">mapDiffPoolsBetweenDsolves</references>
+        <references refid="Dsolve_8cpp_1a7fd3dc9b07a80d2005f84f984f68721c" compoundref="Dsolve_8cpp" startline="1044" endline="1062">mapVoxelsBetweenMeshes</references>
+        <references refid="classDsolve_1a42a3c82ba303a580ff4c81d5894910a9" compoundref="Dsolve_8cpp" startline="963" endline="999">mapXfersBetweenDsolves</references>
+        <references refid="classDiffJunction_1a6b6ebaab53dfc3d94a0b5fa1516bb5e1" compoundref="DiffJunction_8h" startline="43">DiffJunction::myXferDest</references>
+        <references refid="classDiffJunction_1a7b8baf0603effa3538c4ff14ab4c7f05" compoundref="DiffJunction_8h" startline="40">DiffJunction::myXferSrc</references>
+        <references refid="classDiffJunction_1a9345cdb5c69681f11f1887e823647dfe" compoundref="DiffJunction_8h" startline="36">DiffJunction::otherDsolve</references>
+        <references refid="classDiffJunction_1a8fed09c864a101e65b525bfb7824d223" compoundref="DiffJunction_8h" startline="41">DiffJunction::otherXferDest</references>
+        <references refid="classDiffJunction_1a82cac91edd3fa48fc76f182e88161b1d" compoundref="DiffJunction_8h" startline="44">DiffJunction::otherXferSrc</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <referencedby refid="classDsolve_1a3c22125f70c0b14355206c2510e73c67" compoundref="Dsolve_8cpp" startline="891" endline="909">buildMeshJunctions</referencedby>
+        <referencedby refid="classDsolve_1a365c6e0261706aac54ca79050e91db90" compoundref="Dsolve_8cpp" startline="864" endline="889">buildNeuroMeshJunctions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1aef60ededfe6387d1dfde0763acee10cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::mapChansBetweenDsolves</definition>
+        <argsstring>(DiffJunction &amp;jn, Id self, Id other)</argsstring>
+        <name>mapChansBetweenDsolves</name>
+        <qualifiedname>Dsolve::mapChansBetweenDsolves</qualifiedname>
+        <param>
+          <type><ref refid="classDiffJunction" kindref="compound">DiffJunction</ref> &amp;</type>
+          <declname>jn</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="110" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="1001" bodyend="1042"/>
+        <references refid="classDsolve_1ae2da76bc8a24a7bce1c5c5db7f177876" compoundref="Dsolve_8h" startline="218">channels_</references>
+        <references refid="classDsolve_1a85ca5f2ac9c1d7bde1b2447df7497b3b" compoundref="Dsolve_8cpp" startline="1109" endline="1124">convertIdToPoolIndex</references>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classConcChanInfo_1a71c242a6243719e7bc7f308dd64d0be7" compoundref="ConcChanInfo_8h" startline="34">ConcChanInfo::isLocal</references>
+        <references refid="classDiffJunction_1a0492d4d9274c7fecec6d5d8f3331394f" compoundref="DiffJunction_8h" startline="46">DiffJunction::myChannels</references>
+        <references refid="classDiffJunction_1a9c6148957e34a3361359400e87102496" compoundref="DiffJunction_8h" startline="47">DiffJunction::otherChannels</references>
+        <references refid="classConcChanInfo_1a828044a3ea3ebc53ca34494de44fec6d" compoundref="ConcChanInfo_8h" startline="29">ConcChanInfo::otherPool</references>
+        <referencedby refid="classDsolve_1a7ce4f12c80e58ef623ecba72c92326a8" compoundref="Dsolve_8cpp" startline="1065" endline="1086">innerBuildMeshJunctions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a938e8ed6e960a978e3cc4984351c6be9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::mapDiffPoolsBetweenDsolves</definition>
+        <argsstring>(DiffJunction &amp;jn, Id self, Id other)</argsstring>
+        <name>mapDiffPoolsBetweenDsolves</name>
+        <qualifiedname>Dsolve::mapDiffPoolsBetweenDsolves</qualifiedname>
+        <param>
+          <type><ref refid="classDiffJunction" kindref="compound">DiffJunction</ref> &amp;</type>
+          <declname>jn</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Sets up map of matching pools for diffusion. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="103" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="926" bodyend="951"/>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classDiffPoolVec_1a7e766c12f5bca7d54c9b07a9ca85f2bc" compoundref="DiffPoolVec_8cpp" startline="123" endline="126">DiffPoolVec::getId</references>
+        <references refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" compoundref="Element_8cpp" startline="56" endline="59">Element::getName</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classDiffJunction_1aed0071c8f772ae0e51919be24c848ba5" compoundref="DiffJunction_8h" startline="37">DiffJunction::myPools</references>
+        <references refid="classId_1a6a4a7d5c9e8524644febc6b6e8dc1ab9" compoundref="Id_8h" startline="133" endline="137">Id::operator!=</references>
+        <references refid="classDiffJunction_1a8e2bcf103c9a777696b7650256966343" compoundref="DiffJunction_8h" startline="38">DiffJunction::otherPools</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <referencedby refid="classDsolve_1a7ce4f12c80e58ef623ecba72c92326a8" compoundref="Dsolve_8cpp" startline="1065" endline="1086">innerBuildMeshJunctions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDsolve_1a42a3c82ba303a580ff4c81d5894910a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dsolve::mapXfersBetweenDsolves</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;srcPools, vector&lt; unsigned int &gt; &amp;destPools, Id src, Id dest)</argsstring>
+        <name>mapXfersBetweenDsolves</name>
+        <qualifiedname>Dsolve::mapXfersBetweenDsolves</qualifiedname>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>srcPools</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>destPools</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>static void mapXfersBetweenDsolves(...) Build a list of all the molecules that should transfer instantaneously to another compartment, for cross-compartment reactions. Here we look for src names of the form &lt;name&gt;<emphasis>xfer</emphasis>&lt;destComptName&gt; For example, if we had an enzyme in compartment &apos;src&apos;, whose product should go to pool &apos;bar&apos; in compartment &apos;dest&apos;, the name of the enzyme product in compartment src would be bar_xfer_dest </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="106" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.cpp" bodystart="963" bodyend="999"/>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classDiffPoolVec_1a7e766c12f5bca7d54c9b07a9ca85f2bc" compoundref="DiffPoolVec_8cpp" startline="123" endline="126">DiffPoolVec::getId</references>
+        <references refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" compoundref="Element_8cpp" startline="56" endline="59">Element::getName</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classId_1a6a4a7d5c9e8524644febc6b6e8dc1ab9" compoundref="Id_8h" startline="133" endline="137">Id::operator!=</references>
+        <references refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" compoundref="Dsolve_8h" startline="216">pools_</references>
+        <referencedby refid="classDsolve_1a7ce4f12c80e58ef623ecba72c92326a8" compoundref="Dsolve_8cpp" startline="1065" endline="1086">innerBuildMeshJunctions</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classDsolve" kindref="compound">Dsolve</ref> manages a large number of pools, each inhabiting a large number of voxels that are shared for all the pools. Each pool is represented by an array of concs, one for each voxel. Each such array is kept on a single node for efficient solution. The different pool arrays are assigned to different nodes for balance. All pool arrays We have the parent <ref refid="classDsolve" kindref="compound">Dsolve</ref> as a global. It constructs the diffusion matrix from the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> and generates the opvecs. We have the child <ref refid="classDiffPoolVec" kindref="compound">DiffPoolVec</ref> as a local. Each one contains a vector of pool &apos;n&apos; in each voxel, plus the opvec for that pool. There is an array of DiffPoolVecs, one for each species, and we let the system put each <ref refid="classDiffPoolVec" kindref="compound">DiffPoolVec</ref> on a suitable node for balancing. Some DiffPoolVecs are for molecules that don&apos;t diffuse. These simply have an empty opvec. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Dsolve</label>
+        <link refid="classDsolve"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>KsolveBase</label>
+        <link refid="classKsolveBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Dsolve</label>
+        <link refid="classDsolve"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-poolMap_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="2">
+        <label>KsolveBase</label>
+        <link refid="classKsolveBase"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#compartment_</edgelabel>
+          <edgelabel>#stoich_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>T</label>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" line="29" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/Dsolve.h" bodystart="30" bodyend="232"/>
+    <listofallmembers>
+      <member refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>build</name></member>
+      <member refid="classDsolve_1a3c22125f70c0b14355206c2510e73c67" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>buildMeshJunctions</name></member>
+      <member refid="classDsolve_1a365c6e0261706aac54ca79050e91db90" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>buildNeuroMeshJunctions</name></member>
+      <member refid="classDsolve_1a919e562e79464c0a4684a68663c87a3f" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>calcJnChan</name></member>
+      <member refid="classDsolve_1a6455f91c5750bf5714abc514e9fe5a85" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>calcJnDiff</name></member>
+      <member refid="classDsolve_1adabc77246a46f87a6460b9d168a4064d" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>calcJnXfer</name></member>
+      <member refid="classDsolve_1a63e688fd5d9528e7cf9707baaf4495d8" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>calcJunction</name></member>
+      <member refid="classDsolve_1a4d9bfca2deca8f47a4fd63ee7a258127" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>calcJunction_chunk</name></member>
+      <member refid="classDsolve_1a2312b092685293edb3ebe89536e5f182" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>calcLocalChan</name></member>
+      <member refid="classDsolve_1a5dbacfba7a9d63b47734c96bcad4ffb8" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>calcOtherJnChan</name></member>
+      <member refid="classDsolve_1ae2da76bc8a24a7bce1c5c5db7f177876" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>channels_</name></member>
+      <member refid="classKsolveBase_1ae2a85a0bb74694365355f9888ed46911" prot="protected" virt="non-virtual"><scope>Dsolve</scope><name>compartment_</name></member>
+      <member refid="classDsolve_1a85ca5f2ac9c1d7bde1b2447df7497b3b" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>convertIdToPoolIndex</name></member>
+      <member refid="classDsolve_1a8b291f8e61e5cf358e4953d81ea37f99" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>convertIdToPoolIndex</name></member>
+      <member refid="classDsolve_1a5bf1d40d9c87137482f43b97b04c5116" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>Dsolve</name></member>
+      <member refid="classDsolve_1a7ac4b42ba7797f617fedb1133a6631ec" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>dt_</name></member>
+      <member refid="classDsolve_1ab9aef134ac51b481440b70d096ff5540" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>fillConcChans</name></member>
+      <member refid="classDsolve_1ac478088f4fc2399306e92b6279231960" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>filterCrossRateTerms</name></member>
+      <member refid="classDsolve_1af5f39e6691be0c61e6cc37d77f89e409" prot="public" virt="virtual"><scope>Dsolve</scope><name>getBlock</name></member>
+      <member refid="classKsolveBase_1afa7e256330b276ccb042761413a387cb" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getCompartment</name></member>
+      <member refid="classDsolve_1ad8476ede095fa5f294427a259eb7ee56" prot="public" virt="virtual"><scope>Dsolve</scope><name>getConcInit</name></member>
+      <member refid="classDsolve_1ae5497876ead07545c0d9303d0a7b473f" prot="public" virt="virtual"><scope>Dsolve</scope><name>getDiffConst</name></member>
+      <member refid="classDsolve_1af1140482cadeb2af7b434cfdff6f5d04" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getDiffScale</name></member>
+      <member refid="classDsolve_1a0cf8f28cf40c32df6199ccce3769a980" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getDiffVol1</name></member>
+      <member refid="classDsolve_1a3967e89e6050cd3d81fb49d5b7091aa1" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getDiffVol2</name></member>
+      <member refid="classKsolveBase_1a6e3db0642c4753eedda7558aa87d83fe" prot="public" virt="virtual"><scope>Dsolve</scope><name>getMotorConst</name></member>
+      <member refid="classDsolve_1a95acd8a14e1eab3879b288e3f5974ccb" prot="public" virt="virtual"><scope>Dsolve</scope><name>getN</name></member>
+      <member refid="classDsolve_1a102c721d01a1faa72851556d718f2d6f" prot="public" virt="virtual"><scope>Dsolve</scope><name>getNumLocalVoxels</name></member>
+      <member refid="classDsolve_1a512c38503c798deb5da0b3555e7ba90a" prot="public" virt="virtual"><scope>Dsolve</scope><name>getNumPools</name></member>
+      <member refid="classDsolve_1a39e1076cd6199de9cf614017ff4c8e9b" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getNumVarPools</name></member>
+      <member refid="classDsolve_1ab8b9c061ee29c72f0cd52369e0a5886c" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getNumVoxels</name></member>
+      <member refid="classDsolve_1a8e446f41e1141ac48ebf224059e4c746" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getNvec</name></member>
+      <member refid="classDsolve_1a30797ff2613b3c193fdda4c01bc16aa2" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getPath</name></member>
+      <member refid="classDsolve_1af903a86a4231dc76e165ad0cc76c516f" prot="public" virt="virtual"><scope>Dsolve</scope><name>getPoolIndex</name></member>
+      <member refid="classDsolve_1ac52a6025e8a78ebb779c5f60b728f16e" prot="public" virt="virtual"><scope>Dsolve</scope><name>getR1</name></member>
+      <member refid="classDsolve_1a38b6cb6dcc7bcffa8393c9b8e3d3b39e" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>getStoich</name></member>
+      <member refid="classDsolve_1a894d2156e1e86dfe2afc114dc4ffcb1c" prot="public" virt="virtual"><scope>Dsolve</scope><name>getVolumeOfPool</name></member>
+      <member refid="classDsolve_1a1fabab69cd07bb1806eb0ce6c2dcb836" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>initCinfo</name></member>
+      <member refid="classDsolve_1a7ce4f12c80e58ef623ecba72c92326a8" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>innerBuildMeshJunctions</name></member>
+      <member refid="classKsolveBase_1a3b911b76cf8a87cd0edd98037400bdae" prot="protected" virt="non-virtual"><scope>Dsolve</scope><name>isBuilt_</name></member>
+      <member refid="classDsolve_1a8c4be58bba67235a0c3bc59d5841aab2" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>junctions_</name></member>
+      <member refid="classKsolveBase_1a072e837ebdff10d0c597f030a1890b0b" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>KsolveBase</name></member>
+      <member refid="classDsolve_1af7b5bd6814935564fada61fe01d9294e" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>makePoolMapFromElist</name></member>
+      <member refid="classDsolve_1aef60ededfe6387d1dfde0763acee10cf" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>mapChansBetweenDsolves</name></member>
+      <member refid="classDsolve_1a938e8ed6e960a978e3cc4984351c6be9" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>mapDiffPoolsBetweenDsolves</name></member>
+      <member refid="classDsolve_1a42a3c82ba303a580ff4c81d5894910a9" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>mapXfersBetweenDsolves</name></member>
+      <member refid="classKsolveBase_1aa2faf565d1f4c22045e0a203fca6603b" prot="public" virt="virtual"><scope>Dsolve</scope><name>notifyAddMsgDestPool</name></member>
+      <member refid="classKsolveBase_1a9c346e62e1928ec519ff994e7174ad07" prot="public" virt="virtual"><scope>Dsolve</scope><name>notifyAddMsgSrcPool</name></member>
+      <member refid="classKsolveBase_1aa8569740017fad3818a8cfaa412feb89" prot="public" virt="virtual"><scope>Dsolve</scope><name>notifyAddPool</name></member>
+      <member refid="classKsolveBase_1a32fd09c76e55ab3f1c57a8fc7a7df585" prot="public" virt="virtual"><scope>Dsolve</scope><name>notifyDestroyPool</name></member>
+      <member refid="classKsolveBase_1a3f7c84fc7d53e7b35ccf783121268a21" prot="public" virt="virtual"><scope>Dsolve</scope><name>notifyRemovePool</name></member>
+      <member refid="classDsolve_1adf344b95d0189ef4e8495f02be680456" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>numLocalPools_</name></member>
+      <member refid="classDsolve_1a67d7bae26c68848f5ec51aa713874ad9" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>numTotPools_</name></member>
+      <member refid="classDsolve_1a35bbab7c17ae3a2bd2f6cd345612379d" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>numVoxels_</name></member>
+      <member refid="classDsolve_1a1b96610cdacb468e898b2a0f14c93808" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>path_</name></member>
+      <member refid="classDsolve_1af9dfcb0d30ebcd17215915261e94aa79" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>poolMap_</name></member>
+      <member refid="classDsolve_1a690b4054f96055d1896192c698fd8450" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>poolMapStart_</name></member>
+      <member refid="classDsolve_1ac0d40fc74b3515a2afcf0cd565020e69" prot="public" virt="virtual"><scope>Dsolve</scope><name>pools</name></member>
+      <member refid="classDsolve_1a6b389c49103f58ed794a756e037ce2bd" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>pools_</name></member>
+      <member refid="classDsolve_1a40b8feb10ca5c857ab1655716de7e70e" prot="private" virt="non-virtual"><scope>Dsolve</scope><name>poolStartIndex_</name></member>
+      <member refid="classDsolve_1add76fff7deb807bba630b8667023684d" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>print</name></member>
+      <member refid="classDsolve_1ac7d63e78754bf54cf1c348deec4fafcc" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>process</name></member>
+      <member refid="classDsolve_1a34b6429c27fa8522552359c9d0a1f34c" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>rebuildPools</name></member>
+      <member refid="classDsolve_1a087672d35965fba1767c745d3594b4e7" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>reinit</name></member>
+      <member refid="classDsolve_1a9cc049082fcf9056b9535b2558b0608e" prot="public" virt="virtual"><scope>Dsolve</scope><name>setBlock</name></member>
+      <member refid="classDsolve_1ab89b28e781f81c2fddf8d1f89db0f9d9" prot="public" virt="virtual"><scope>Dsolve</scope><name>setCompartment</name></member>
+      <member refid="classDsolve_1a1b0d687413f97cee73f53ceb8f6e454f" prot="public" virt="virtual"><scope>Dsolve</scope><name>setConcInit</name></member>
+      <member refid="classDsolve_1a642f7e41596d448cfac7a59261eb0ed5" prot="public" virt="virtual"><scope>Dsolve</scope><name>setDiffConst</name></member>
+      <member refid="classDsolve_1a13958f5ced382caf929dabb108395174" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>setDiffScale</name></member>
+      <member refid="classDsolve_1ac89147fe7d43e652dd11e0abddf6e7a9" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>setDiffVol1</name></member>
+      <member refid="classDsolve_1ab4cca7d99c4d960e54a9bc0e032f6b1f" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>setDiffVol2</name></member>
+      <member refid="classDsolve_1ac1ce8d2121e8ed29265dc4b34f86840f" prot="public" virt="virtual"><scope>Dsolve</scope><name>setDsolve</name></member>
+      <member refid="classKsolveBase_1a0109b576e8726d6035b305b9df60ef76" prot="public" virt="virtual"><scope>Dsolve</scope><name>setIsBuffered</name></member>
+      <member refid="classDsolve_1a8f91118c84ea88710df69aadb8c30d8d" prot="public" virt="virtual"><scope>Dsolve</scope><name>setMotorConst</name></member>
+      <member refid="classDsolve_1a742df3d807530224564b67da0015d461" prot="public" virt="virtual"><scope>Dsolve</scope><name>setN</name></member>
+      <member refid="classDsolve_1aad074a5110e40e8591c54c2608b15cfd" prot="public" virt="virtual"><scope>Dsolve</scope><name>setNumAllVoxels</name></member>
+      <member refid="classDsolve_1adfc34a56651419641e5052430f00d341" prot="public" virt="virtual"><scope>Dsolve</scope><name>setNumPools</name></member>
+      <member refid="classDsolve_1aff7680b2f1b4c8b4edd5a350ae7f9767" prot="public" virt="virtual"><scope>Dsolve</scope><name>setNumVarTotPools</name></member>
+      <member refid="classDsolve_1a8cbfe1746ed09519c918810f7d3f79e0" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>setNvec</name></member>
+      <member refid="classDsolve_1ad6f87094f210adb30fb530ee8666945f" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>setPath</name></member>
+      <member refid="classDsolve_1a2e2c3248f5b5fc10c8a739922676f1d9" prot="public" virt="virtual"><scope>Dsolve</scope><name>setPrev</name></member>
+      <member refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" prot="public" virt="virtual"><scope>Dsolve</scope><name>setStoich</name></member>
+      <member refid="classDsolve_1a32e5a483a8a030986ed1bb846d2bbea7" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>setupCrossSolverReacs</name></member>
+      <member refid="classDsolve_1a30150d1363b3820edec28ad03d46796a" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>setupCrossSolverReacVols</name></member>
+      <member refid="classKsolveBase_1a9e72d9f4802cc71fed341ce73629e651" prot="protected" virt="non-virtual"><scope>Dsolve</scope><name>stoich_</name></member>
+      <member refid="classDsolve_1af4824ee1c5a2864dc2a9b3b230582777" prot="public" virt="virtual"><scope>Dsolve</scope><name>updateJunctions</name></member>
+      <member refid="classDsolve_1a5a87bbeb22f08b9531fc1c3d78018de7" prot="public" virt="virtual"><scope>Dsolve</scope><name>updateRateTerms</name></member>
+      <member refid="classDsolve_1a593823cd38ddea881051319f48583eeb" prot="public" virt="virtual"><scope>Dsolve</scope><name>volume</name></member>
+      <member refid="classDsolve_1af52d808e20c35619995d6d46306a663b" prot="public" virt="non-virtual"><scope>Dsolve</scope><name>~Dsolve</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

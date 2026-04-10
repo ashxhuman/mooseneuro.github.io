@@ -1,0 +1,546 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="RNG_8h" kind="file" language="C++">
+    <compoundname>RNG.h</compoundname>
+    <includes local="no">limits</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">random</includes>
+    <includes local="no">cassert</includes>
+    <includes refid="Definitions_8h" local="yes">Definitions.h</includes>
+    <includes refid="Distributions_8h" local="yes">Distributions.h</includes>
+    <includedby refid="ZombieCompartment_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/ZombieCompartment.h</includedby>
+    <includedby refid="Gsolve_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h</includedby>
+    <includedby refid="GssaVoxelPools_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/GssaVoxelPools.h</includedby>
+    <includedby refid="SteadyStateBoost_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.cpp</includedby>
+    <includedby refid="SteadyStateBoost_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.h</includedby>
+    <includedby refid="RNG_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/RNG.cpp</includedby>
+    <includedby refid="randnum_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/randnum.h</includedby>
+    <includedby refid="GraupnerBrunel2012CaPlasticitySynHandler_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/GraupnerBrunel2012CaPlasticitySynHandler.h</includedby>
+    <includedby refid="numutil_8h" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/numutil.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cassert</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>limits</label>
+      </node>
+      <node id="4">
+        <label>random</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="22">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="13">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/testAsync.cpp</label>
+        <link refid="testAsync_8cpp"/>
+      </node>
+      <node id="14">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Compartment.cpp</label>
+        <link refid="Compartment_8cpp"/>
+      </node>
+      <node id="38">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/DifBuffer.cpp</label>
+        <link refid="DifBuffer_8cpp"/>
+      </node>
+      <node id="39">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/DifBufferBase.cpp</label>
+        <link refid="DifBufferBase_8cpp"/>
+      </node>
+      <node id="40">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MMPump.cpp</label>
+        <link refid="MMPump_8cpp"/>
+      </node>
+      <node id="15">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/Neuron.cpp</label>
+        <link refid="Neuron_8cpp"/>
+      </node>
+      <node id="16">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/RandSpike.cpp</label>
+        <link refid="RandSpike_8cpp"/>
+      </node>
+      <node id="17">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/testBiophysics.cpp</label>
+        <link refid="testBiophysics_8cpp"/>
+      </node>
+      <node id="41">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Function.cpp</label>
+        <link refid="Function_8cpp"/>
+      </node>
+      <node id="42">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol.cpp</label>
+        <link refid="Interpol_8cpp"/>
+      </node>
+      <node id="18">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/MooseParser.cpp</label>
+        <link refid="MooseParser_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolve.cpp</label>
+        <link refid="HSolve_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/ZombieCompartment.cpp</label>
+        <link refid="ZombieCompartment_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/ZombieCompartment.h</label>
+        <link refid="ZombieCompartment_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/Enz.cpp</label>
+        <link refid="Enz_8cpp"/>
+      </node>
+      <node id="47">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/MMenz.cpp</label>
+        <link refid="MMenz_8cpp"/>
+      </node>
+      <node id="48">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/Reac.cpp</label>
+        <link refid="Reac_8cpp"/>
+      </node>
+      <node id="43">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/FuncTerm.cpp</label>
+        <link refid="FuncTerm_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.cpp</label>
+        <link refid="Gsolve_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Gsolve.h</label>
+        <link refid="Gsolve_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/GssaVoxelPools.cpp</label>
+        <link refid="GssaVoxelPools_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/GssaVoxelPools.h</label>
+        <link refid="GssaVoxelPools_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp</label>
+        <link refid="KinSparseMatrix_8cpp"/>
+      </node>
+      <node id="49">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Ksolve.cpp</label>
+        <link refid="Ksolve_8cpp"/>
+      </node>
+      <node id="50">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KsolveBase.cpp</label>
+        <link refid="KsolveBase_8cpp"/>
+      </node>
+      <node id="51">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.cpp</label>
+        <link refid="RateTerm_8cpp"/>
+      </node>
+      <node id="45">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h</label>
+        <link refid="RateTerm_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.cpp</label>
+        <link refid="SteadyStateBoost_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.h</label>
+        <link refid="SteadyStateBoost_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateGsl.cpp</label>
+        <link refid="SteadyStateGsl_8cpp"/>
+      </node>
+      <node id="52">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/Stoich.cpp</label>
+        <link refid="Stoich_8cpp"/>
+      </node>
+      <node id="53">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPools.cpp</label>
+        <link refid="VoxelPools_8cpp"/>
+      </node>
+      <node id="54">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp</label>
+        <link refid="VoxelPoolsBase_8cpp"/>
+      </node>
+      <node id="55">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/testKsolve.cpp</label>
+        <link refid="testKsolve_8cpp"/>
+      </node>
+      <node id="56">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/CylMesh.cpp</label>
+        <link refid="CylMesh_8cpp"/>
+      </node>
+      <node id="57">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/EndoMesh.cpp</label>
+        <link refid="EndoMesh_8cpp"/>
+      </node>
+      <node id="58">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/NeuroMesh.cpp</label>
+        <link refid="NeuroMesh_8cpp"/>
+      </node>
+      <node id="59">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/PsdMesh.cpp</label>
+        <link refid="PsdMesh_8cpp"/>
+      </node>
+      <node id="60">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp</label>
+        <link refid="SpineMesh_8cpp"/>
+      </node>
+      <node id="23">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/Msg.cpp</label>
+        <link refid="Msg_8cpp"/>
+      </node>
+      <node id="20">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/SparseMsg.cpp</label>
+        <link refid="SparseMsg_8cpp"/>
+      </node>
+      <node id="21">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/msg/SparseMsg.h</label>
+        <link refid="SparseMsg_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/Finfo.cpp</label>
+        <link refid="pymoose_2Finfo_8cpp"/>
+      </node>
+      <node id="24">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/Finfo.h</label>
+        <link refid="pymoose_2Finfo_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/MooseVec.cpp</label>
+        <link refid="MooseVec_8cpp"/>
+      </node>
+      <node id="27">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/helper.cpp</label>
+        <link refid="helper_8cpp"/>
+      </node>
+      <node id="28">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/pymoose.cpp</label>
+        <link refid="pymoose_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/RNG.cpp</label>
+        <link refid="RNG_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/randnum.cpp</label>
+        <link refid="randnum_8cpp"/>
+      </node>
+      <node id="12">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/randnum.h</label>
+        <link refid="randnum_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/testScheduling.cpp</label>
+        <link refid="testScheduling_8cpp"/>
+      </node>
+      <node id="30">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/Shell.cpp</label>
+        <link refid="Shell_8cpp"/>
+      </node>
+      <node id="31">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/testShell.cpp</label>
+        <link refid="testShell_8cpp"/>
+      </node>
+      <node id="33">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/GraupnerBrunel2012CaPlasticitySynHandler.cpp</label>
+        <link refid="GraupnerBrunel2012CaPlasticitySynHandler_8cpp"/>
+      </node>
+      <node id="36">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/GraupnerBrunel2012CaPlasticitySynHandler.h</label>
+        <link refid="GraupnerBrunel2012CaPlasticitySynHandler_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp</label>
+        <link refid="SeqSynHandler_8cpp"/>
+      </node>
+      <node id="35">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/numutil.cpp</label>
+        <link refid="numutil_8cpp"/>
+      </node>
+      <node id="37">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/numutil.h</label>
+        <link refid="numutil_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmoose_1_1RNG" prot="public">moose::RNG</innerclass>
+    <innernamespace refid="namespacemoose">moose</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>=====================================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Filename:<sp/><sp/>RNG.h</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Description:<sp/><sp/>Random<sp/>Number<sp/>Generator<sp/>class</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Created:<sp/><sp/>05/09/2016<sp/>12:00:05<sp/>PM</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Revision:<sp/><sp/>none</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Compiler:<sp/><sp/>gcc</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/><sp/>Dilawar<sp/>Singh<sp/>(),<sp/>dilawars@ncbs.res.in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Organization:<sp/><sp/>NCBS<sp/>Bangalore</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>=====================================================================================</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/>__RNG_INC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>__RNG_INC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Definitions_8h" kindref="compound">Definitions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Distributions_8h" kindref="compound">Distributions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemoose" kindref="compound">moose</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>=====================================================================================</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Class:<sp/><sp/>RNG</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/><sp/>Description:<sp/><sp/>Random<sp/>number<sp/>generator<sp/>class.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>=====================================================================================</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classmoose_1_1RNG" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmoose_1_1RNG" kindref="compound">RNG</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1RNG_1a61d5482ec6936815add03c6dd4675c62" kindref="member">RNG</ref><sp/>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmoose_1_1RNG_1a6c3adda1f79506675466e2d0938de9bc" kindref="member">~RNG</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1a2140f3659708716dd16ec0f6d1da9fc0" kindref="member">setRandomSeed</ref>(<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>====================<sp/><sp/>ACCESSORS<sp/><sp/><sp/><sp/><sp/>=======================================<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1ae0af704830f9e74f2b32bcb3e0772853" kindref="member">getSeed</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1ad310f016166b1548e23fb8f3b54f83d7" kindref="member">setSeed</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>seed<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1a6fec47558673d4d721a6918bb43b3fd3" kindref="member">uniform</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1a6fec47558673d4d721a6918bb43b3fd3" kindref="member">uniform</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>====================<sp/><sp/>DATA<sp/>MEMBERS<sp/><sp/>=======================================<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classmoose_1_1RNG_1a6c94bb897a5468bb205a0bd17d7e6d0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1a6c94bb897a5468bb205a0bd17d7e6d0b" kindref="member">res_</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classmoose_1_1RNG_1ad42ecf5e98dde96675ab3193cc38d249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmoose_1_1RNG_1ad42ecf5e98dde96675ab3193cc38d249" kindref="member">seed_</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classmoose_1_1RNG_1a7bb2b0f7dfe128dff41b0e104c307987" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1a5bb4d427e9e8d09afad6634d5858aa96" kindref="member">moose::MOOSE_RNG_DEFAULT_ENGINE</ref><sp/><ref refid="classmoose_1_1RNG_1a7bb2b0f7dfe128dff41b0e104c307987" kindref="member">rng_</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classmoose_1_1RNG_1ac22218256d4f5c21de914a0720965b4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemoose_1ad10f59fa0dee0da6caf8913339bf2220" kindref="member">moose::MOOSE_UNIFORM_DISTRIBUTION&lt;double&gt;</ref><sp/><ref refid="classmoose_1_1RNG_1ac22218256d4f5c21de914a0720965b4b" kindref="member">dist_</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};<sp/></highlight><highlight class="comment">/*<sp/>-----<sp/><sp/>end<sp/>of<sp/>template<sp/>class<sp/>RNG<sp/><sp/>-----<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>moose<sp/>ends<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----<sp/>#ifndef<sp/>__RNG_INC<sp/><sp/>-----<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/randnum/RNG.h"/>
+  </compounddef>
+</doxygen>

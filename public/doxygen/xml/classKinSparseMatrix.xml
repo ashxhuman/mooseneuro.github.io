@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classKinSparseMatrix" kind="class" language="C++" prot="public">
+    <compoundname>KinSparseMatrix</compoundname>
+    <basecompoundref refid="classSparseMatrix" prot="public" virt="non-virtual">SparseMatrix&lt; int &gt;</basecompoundref>
+    <includes refid="KinSparseMatrix_8h" local="no">KinSparseMatrix.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classKinSparseMatrix_1a9eeb90205a801e6f352766d62cf5bb65" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; KinSparseMatrix::rowTruncated_</definition>
+        <argsstring></argsstring>
+        <name>rowTruncated_</name>
+        <qualifiedname>KinSparseMatrix::rowTruncated_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>End colIndex for rows (molecules in the transposed matrix) so that only variable molecules are below the colIndex. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.h" line="67" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classKinSparseMatrix_1a497304dc594faad57c85d78bf9173ff7" compoundref="KinSparseMatrix_8cpp" startline="105" endline="126">fireReac</referencedby>
+        <referencedby refid="classKinSparseMatrix_1aa08875dc6fc943aef61bea82d9ff1862" compoundref="KinSparseMatrix_8cpp" startline="134" endline="156">truncateRow</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKinSparseMatrix_1a75d4b8170757a0b0135b5de29c55470c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double KinSparseMatrix::computeRowRate</definition>
+        <argsstring>(unsigned int row, const vector&lt; double &gt; &amp;v) const</argsstring>
+        <name>computeRowRate</name>
+        <qualifiedname>KinSparseMatrix::computeRowRate</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns all non-zero column indices, for the specified row. This gives reac #s in orig matrix, and molecule #s in the transposed matrix Not needed. The getRow function does all this, more efficiently. int getRowIndices(
+    unsigned int row, vector&lt; unsigned int &gt;&amp; indices ); Returns the dot product of the specified row with the vector v. v corresponds to the vector of reaction rates. v must have nColumns entries.</para>
+<para>Returns the dot product of the specified row with the vector v. v corresponds to the vector of reaction rates. v must have nColumns entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.h" line="31" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp" bodystart="28" bodyend="47"/>
+        <references refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" compoundref="SparseMatrix_8h" startline="288" endline="307">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classSparseMatrix_1a34a568e3db0bafd38cf0ccc37cd2086b" compoundref="SparseMatrix_8h" startline="92" endline="95">SparseMatrix&lt; T &gt;::nColumns</references>
+        <references refid="classSparseMatrix_1a2c51cee470d726cf04e262a4038625f5" compoundref="SparseMatrix_8h" startline="87" endline="90">SparseMatrix&lt; T &gt;::nRows</references>
+        <referencedby refid="classVoxelPools_1ab473f3886b4c10ba216a3e09c659c045" compoundref="VoxelPools_8cpp" startline="411" endline="433">VoxelPools::updateRates</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classKinSparseMatrix_1a497304dc594faad57c85d78bf9173ff7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KinSparseMatrix::fireReac</definition>
+        <argsstring>(unsigned int reacIndex, vector&lt; double &gt; &amp;S, double direction) const</argsstring>
+        <name>fireReac</name>
+        <qualifiedname>KinSparseMatrix::fireReac</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>reacIndex</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fires a stochastic reaction: It undergoes a single transition This operation updates the mol concs due to the reacn. Direction is +1 or -1, specifies direction of reaction</para>
+<para>This too operates on the transposed matrix, because we need to get all the molecules for a given reac: a column in the original N matrix. Direction [-1,+1] specifies whether the reaction is forward or backward. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.h" line="51" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp" bodystart="105" bodyend="126"/>
+        <references refid="classKinSparseMatrix_1a9eeb90205a801e6f352766d62cf5bb65" compoundref="KinSparseMatrix_8h" startline="67">rowTruncated_</references>
+        <referencedby refid="classGssaVoxelPools_1a74bee940e747819eafbdb179df6833e9" compoundref="GssaVoxelPools_8cpp" startline="162" endline="211">GssaVoxelPools::advance</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classKinSparseMatrix_1a8c561b9e38dc8511270fa3c9cac562ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KinSparseMatrix::getGillespieDependence</definition>
+        <argsstring>(unsigned int row, vector&lt; unsigned int &gt; &amp;cols) const</argsstring>
+        <name>getGillespieDependence</name>
+        <qualifiedname>KinSparseMatrix::getGillespieDependence</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>cols</declname>
+          <defname>deps</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Does a special self-product of the specified row. Output is the set of nonzero indices in the product abs( Rij ) * neg( Rjk ) for the specified index i, where neg( val ) is true only if val &lt; 0.</para>
+<para>Has to operate on transposed matrix row argument refers to reac# in this transformed situation. Fills up &apos;deps&apos; with reac::s that depend on the row argument. Does NOT ensure that list is unique. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.h" line="42" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp" bodystart="56" bodyend="98"/>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">Gsolve::rebuildGssaSystem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classKinSparseMatrix_1aa08875dc6fc943aef61bea82d9ff1862" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KinSparseMatrix::truncateRow</definition>
+        <argsstring>(unsigned int maxColumnIndex)</argsstring>
+        <name>truncateRow</name>
+        <qualifiedname>KinSparseMatrix::truncateRow</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>maxColumnIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function generates a new internal list of rowEnds, such that they are all less than the maxColumnIndex. It is used because in fireReac we don&apos;t want to update all the molecules, only those that are variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.h" line="60" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.cpp" bodystart="134" bodyend="156"/>
+        <references refid="classKinSparseMatrix_1a9eeb90205a801e6f352766d62cf5bb65" compoundref="KinSparseMatrix_8h" startline="67">rowTruncated_</references>
+        <referencedby refid="classGsolve_1a20e6c958da9b8a188b3ae503adfc0a36" compoundref="Gsolve_8cpp" startline="635" endline="659">Gsolve::rebuildGssaSystem</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>KinSparseMatrix</label>
+        <link refid="classKinSparseMatrix"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+      </node>
+      <node id="2">
+        <label>SparseMatrix&lt; int &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>KinSparseMatrix</label>
+        <link refid="classKinSparseMatrix"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-rowTruncated_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SparseMatrix&lt; int &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.h" line="13" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/KinSparseMatrix.h" bodystart="14" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classSparseMatrix_1a0bf45bbe509508455280e65ac22b4cfc" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>addRow</name></member>
+      <member refid="classSparseMatrix_1a873cc36079017efce916136e0bc50c20" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>addRow</name></member>
+      <member refid="classSparseMatrix_1aabc77208663f5a59bb2bbb0559b614f7" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>clear</name></member>
+      <member refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>colIndex</name></member>
+      <member refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" prot="protected" virt="non-virtual"><scope>KinSparseMatrix</scope><name>colIndex_</name></member>
+      <member refid="classKinSparseMatrix_1a75d4b8170757a0b0135b5de29c55470c" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>computeRowRate</name></member>
+      <member refid="classKinSparseMatrix_1a497304dc594faad57c85d78bf9173ff7" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>fireReac</name></member>
+      <member refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>get</name></member>
+      <member refid="classSparseMatrix_1a5ed7e8d630004f91d4b46b3cbdfcbad3" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>getColumn</name></member>
+      <member refid="classKinSparseMatrix_1a8c561b9e38dc8511270fa3c9cac562ed" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>getGillespieDependence</name></member>
+      <member refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>getRow</name></member>
+      <member refid="classSparseMatrix_1a5d8d69c9a34cbf241483691d6eda63a8" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>getRow</name></member>
+      <member refid="classSparseMatrix_1aadecaf442db01a422f54cead458c3e2b" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>matrixEntry</name></member>
+      <member refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" prot="protected" virt="non-virtual"><scope>KinSparseMatrix</scope><name>N_</name></member>
+      <member refid="classSparseMatrix_1a34a568e3db0bafd38cf0ccc37cd2086b" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>nColumns</name></member>
+      <member refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" prot="protected" virt="non-virtual"><scope>KinSparseMatrix</scope><name>ncolumns_</name></member>
+      <member refid="classSparseMatrix_1a9da8c93d288d66c72f3584e378fa582e" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>nEntries</name></member>
+      <member refid="classSparseMatrix_1a2c51cee470d726cf04e262a4038625f5" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>nRows</name></member>
+      <member refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" prot="protected" virt="non-virtual"><scope>KinSparseMatrix</scope><name>nrows_</name></member>
+      <member refid="classSparseMatrix_1a570dec21ec6f18b20514a3cc9259cd9c" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>pairFill</name></member>
+      <member refid="classSparseMatrix_1a9ce5500b7dfde25db326d2977812981d" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>print</name></member>
+      <member refid="classSparseMatrix_1adeb305405622ab73abe69e40bb228812" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>printInternal</name></member>
+      <member refid="classSparseMatrix_1aa36961d264020e8701f658e97323f59c" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>printTriplet</name></member>
+      <member refid="classSparseMatrix_1aba47de30cd631afe8923a6bb03d7db7d" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>reorderColumns</name></member>
+      <member refid="classSparseMatrix_1a7c2646d67d8cde76ef422e4092e0fc20" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>rowStart</name></member>
+      <member refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" prot="protected" virt="non-virtual"><scope>KinSparseMatrix</scope><name>rowStart_</name></member>
+      <member refid="classKinSparseMatrix_1a9eeb90205a801e6f352766d62cf5bb65" prot="private" virt="non-virtual"><scope>KinSparseMatrix</scope><name>rowTruncated_</name></member>
+      <member refid="classSparseMatrix_1a0dddc631322ef8cae33f24b770bafe60" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>set</name></member>
+      <member refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>setSize</name></member>
+      <member refid="classSparseMatrix_1a7cc1357950b026509513c9cc88796c00" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>SparseMatrix</name></member>
+      <member refid="classSparseMatrix_1a41427e7c9dc8a9d9a863fcca7987107d" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>SparseMatrix</name></member>
+      <member refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>transpose</name></member>
+      <member refid="classSparseMatrix_1a6fb0fb48e97c13b49c2b7a0e1a8066dc" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>tripletFill</name></member>
+      <member refid="classKinSparseMatrix_1aa08875dc6fc943aef61bea82d9ff1862" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>truncateRow</name></member>
+      <member refid="classSparseMatrix_1a00c3ac994b0cdcdb6c6981b4ab353177" prot="public" virt="non-virtual"><scope>KinSparseMatrix</scope><name>unset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

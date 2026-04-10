@@ -1,0 +1,1435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classSeqSynHandler" kind="class" language="C++" prot="public">
+    <compoundname>SeqSynHandler</compoundname>
+    <basecompoundref refid="classSynHandlerBase" prot="public" virt="non-virtual">SynHandlerBase</basecompoundref>
+    <includes refid="SeqSynHandler_8h" local="no">SeqSynHandler.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSeqSynHandler_1a4ed29f2d7b4b720f51ed8efcb0274551" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SeqSynHandler::baseScale_</definition>
+        <argsstring></argsstring>
+        <name>baseScale_</name>
+        <qualifiedname>SeqSynHandler::baseScale_</qualifiedname>
+        <briefdescription>
+<para>Scaling factor for baseline synaptic responses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="106" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a433e82e1d59332a0b23b081aa7e61a6e" compoundref="SeqSynHandler_8cpp" startline="427" endline="430">getBaseScale</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa73b3727d93de359d2ebdc6b1585d130" compoundref="SeqSynHandler_8cpp" startline="422" endline="425">setBaseScale</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1a0fa6057e70de94949ae5ec0776c249d0" prot="private" static="no" mutable="no">
+        <type>priority_queue&lt; <ref refid="classPreSynEvent" kindref="compound">PreSynEvent</ref>, vector&lt; <ref refid="classPreSynEvent" kindref="compound">PreSynEvent</ref> &gt;, <ref refid="structCompareSynEvent" kindref="compound">CompareSynEvent</ref> &gt;</type>
+        <definition>priority_queue&lt; PreSynEvent, vector&lt; PreSynEvent &gt;, CompareSynEvent &gt; SeqSynHandler::events_</definition>
+        <argsstring></argsstring>
+        <name>events_</name>
+        <qualifiedname>SeqSynHandler::events_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="157" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1ac04135ba134d737204ef77dc26ff78da" compoundref="SeqSynHandler_8cpp" startline="541" endline="555">addSpike</referencedby>
+        <referencedby refid="classSeqSynHandler_1a48dd66ad5d5bc0efa6a58df10e9d7b11" compoundref="SeqSynHandler_8cpp" startline="557" endline="562">getTopSpike</referencedby>
+        <referencedby refid="classSeqSynHandler_1a3b271ed691225b05cd5cf3adf37c1901" compoundref="SeqSynHandler_8cpp" startline="235" endline="247">operator=</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa750d50b5e6c74c568187fd53ff9f7a0" compoundref="SeqSynHandler_8cpp" startline="684" endline="689">vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1aba1a31c9684bb20de3bb1fe5efa26adf" prot="private" static="no" mutable="no">
+        <type><ref refid="classRollingMatrix" kindref="compound">RollingMatrix</ref></type>
+        <definition>RollingMatrix SeqSynHandler::history_</definition>
+        <argsstring></argsstring>
+        <name>history_</name>
+        <qualifiedname>SeqSynHandler::history_</qualifiedname>
+        <briefdescription>
+<para>Kernel for seq selectivity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="139" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a96a52c5a704e21a94aeeeab7c2ef8094" compoundref="SeqSynHandler_8cpp" startline="502" endline="514">getHistory</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" compoundref="SeqSynHandler_8cpp" startline="410" endline="415">setHistoryTime</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" compoundref="SeqSynHandler_8cpp" startline="398" endline="403">setSeqDt</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+        <referencedby refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" compoundref="SeqSynHandler_8cpp" startline="249" endline="261">vSetNumSynapses</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1a357a409c29a22160452ff0d8abb78cf2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SeqSynHandler::historyTime_</definition>
+        <argsstring></argsstring>
+        <name>historyTime_</name>
+        <qualifiedname>SeqSynHandler::historyTime_</qualifiedname>
+        <briefdescription>
+<para>Time to store history. KernelDt defines num of rows. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="103" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1ac046f14bcc2d6200d19f07d0f1ad036e" compoundref="SeqSynHandler_8cpp" startline="417" endline="420">getHistoryTime</referencedby>
+        <referencedby refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" compoundref="SeqSynHandler_8cpp" startline="410" endline="415">setHistoryTime</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1ab70443aa200d22adfbe751cd4ff7765b" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; double &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; double &gt; &gt; SeqSynHandler::kernel_</definition>
+        <argsstring></argsstring>
+        <name>kernel_</name>
+        <qualifiedname>SeqSynHandler::kernel_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="138" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a01825475fe51bab1543f5716e2b2ded4" compoundref="SeqSynHandler_8cpp" startline="491" endline="500">getKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1a1bd6056ce0a89c5dee40ddf685c807e5" compoundref="SeqSynHandler_8cpp" startline="472" endline="489">setKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1ace86c6456542275386bb5edbe8ed2f91" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string SeqSynHandler::kernelEquation_</definition>
+        <argsstring></argsstring>
+        <name>kernelEquation_</name>
+        <qualifiedname>SeqSynHandler::kernelEquation_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="99" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1afd5987c5c5bf0a36cdd235652e2e89cb" compoundref="SeqSynHandler_8cpp" startline="382" endline="385">getKernelEquation</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a1bd6056ce0a89c5dee40ddf685c807e5" compoundref="SeqSynHandler_8cpp" startline="472" endline="489">setKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1ad548af814d9438e7d0a718f5c9116e83" compoundref="SeqSynHandler_8cpp" startline="376" endline="380">setKernelEquation</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1ad569f929924684c144fb15033890c9ac" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SeqSynHandler::kernelWidth_</definition>
+        <argsstring></argsstring>
+        <name>kernelWidth_</name>
+        <qualifiedname>SeqSynHandler::kernelWidth_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="100" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1aa524e53fc8b1772ed57d01185815e6d9" compoundref="SeqSynHandler_8cpp" startline="393" endline="396">getKernelWidth</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a1bd6056ce0a89c5dee40ddf685c807e5" compoundref="SeqSynHandler_8cpp" startline="472" endline="489">setKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa1faaeb5f539f86e66090f7dd1a97a8e" compoundref="SeqSynHandler_8cpp" startline="387" endline="391">setKernelWidth</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1ad073c4f3da0f9669591dc2f9c91cde3e" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SeqSynHandler::latestSpikes_</definition>
+        <argsstring></argsstring>
+        <name>latestSpikes_</name>
+        <qualifiedname>SeqSynHandler::latestSpikes_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="135" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="135" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+        <referencedby refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" compoundref="SeqSynHandler_8cpp" startline="249" endline="261">vSetNumSynapses</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1af56219149b434bd4f892d6076d2d4f36" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SeqSynHandler::plasticityScale_</definition>
+        <argsstring></argsstring>
+        <name>plasticityScale_</name>
+        <qualifiedname>SeqSynHandler::plasticityScale_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Scaling factor for short-term plastic weight changes in each synapse arising from sequential input. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="114" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a0e24fcbe9c9b368648e38a9fc25619a7" compoundref="SeqSynHandler_8cpp" startline="447" endline="450">getPlasticityScale</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a0a455f9fcfd03a357d4bec427a1f4439" compoundref="SeqSynHandler_8cpp" startline="452" endline="455">setPlasticityScale</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1af10ac7b36ae19e5a031f6a9cef7bf65f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SeqSynHandler::seqActivation_</definition>
+        <argsstring></argsstring>
+        <name>seqActivation_</name>
+        <qualifiedname>SeqSynHandler::seqActivation_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="127" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1ac6d7b7b02f3edb39f78d2bbe42369e79" compoundref="SeqSynHandler_8cpp" startline="442" endline="445">getSeqActivation</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1a7278e12ac50f8796f255c85d002c3ef4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SeqSynHandler::seqDt_</definition>
+        <argsstring></argsstring>
+        <name>seqDt_</name>
+        <qualifiedname>SeqSynHandler::seqDt_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="104" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a3c218cee163a35caff1839c4546ea7a6" compoundref="SeqSynHandler_8cpp" startline="405" endline="408">getSeqDt</referencedby>
+        <referencedby refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" compoundref="SeqSynHandler_8cpp" startline="398" endline="403">setSeqDt</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1a5964a4e1474682b7e22ee88dd2768e4d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SeqSynHandler::sequencePower_</definition>
+        <argsstring></argsstring>
+        <name>sequencePower_</name>
+        <qualifiedname>SeqSynHandler::sequencePower_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exponent to use for the outcome of the sequential calculations. This is needed because linear summation of terms in the kernel means that a brief stong sequence match is no better than lots of successive low matches. In other words, 12345 is no better than 11111. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="123" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1aac34b5e52899a2c19076b34d13a39d30" compoundref="SeqSynHandler_8cpp" startline="457" endline="460">getSequencePower</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a850f512906c8cbc0d48cc3ce3ef362f1" compoundref="SeqSynHandler_8cpp" startline="462" endline="465">setSequencePower</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1a3bd4ba7a300d3944aa334dc1ab5b1d63" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SeqSynHandler::sequenceScale_</definition>
+        <argsstring></argsstring>
+        <name>sequenceScale_</name>
+        <qualifiedname>SeqSynHandler::sequenceScale_</qualifiedname>
+        <briefdescription>
+<para>Scaling factor for sequence recognition responses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="108" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a39909a15843665ccb0d618369c98936f" compoundref="SeqSynHandler_8cpp" startline="437" endline="440">getSequenceScale</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a1f0330c4465ec4df8dc9a61737ecb861" compoundref="SeqSynHandler_8cpp" startline="432" endline="435">setSequenceScale</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1ac2013de3e93f534629bbd0c4121499e3" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; SeqSynHandler::synapseOrder_</definition>
+        <argsstring></argsstring>
+        <name>synapseOrder_</name>
+        <qualifiedname>SeqSynHandler::synapseOrder_</qualifiedname>
+        <briefdescription>
+<para>Rows = time; cols = synInputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remaps synapse order to avoid correlations based on presynaptic object <ref refid="classId" kindref="compound">Id</ref> order, or on connection building order. This undesirable ordering occurs even when random synaptic projections are used. User can alter as preferred. This is simply a look up table so that the incoming synapse index is remapped: index_on_Handler = synapseOrder_[original_syn_index] This must only have numbers from zero to numSynapses, and should normally have all the numbers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="150" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="150" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a61fc81630fafe61943623fd9931d82e6" compoundref="SeqSynHandler_8cpp" startline="282" endline="303">fixSynapseOrder</referencedby>
+        <referencedby refid="classSeqSynHandler_1a47cdbb58af78df94c416d4bf878f441f" compoundref="SeqSynHandler_8cpp" startline="523" endline="526">getSynapseOrder</referencedby>
+        <referencedby refid="classSeqSynHandler_1a42ae64205ffe64beb1549591bc600d78" compoundref="SeqSynHandler_8cpp" startline="321" endline="348">refillSynapseOrder</referencedby>
+        <referencedby refid="classSeqSynHandler_1a3af17adf0fc6a7cc001fa4247396f390" compoundref="SeqSynHandler_8cpp" startline="516" endline="521">setSynapseOrder</referencedby>
+        <referencedby refid="classSeqSynHandler_1a959ef7c9618b80ecbd90002fbdba524b" compoundref="SeqSynHandler_8cpp" startline="528" endline="532">setSynapseOrderOption</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1a7f8d0ff360b3f24811aba340db67482e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SeqSynHandler::synapseOrderOption_</definition>
+        <argsstring></argsstring>
+        <name>synapseOrderOption_</name>
+        <qualifiedname>SeqSynHandler::synapseOrderOption_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Options: -2: User. -1: ordered. 0: random by system seed. <blockquote><para><zwj/>0: Random by seed specified by this number </para>
+</blockquote></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="154" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="154" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a4aa2cc1bf05d51dc0eece72ddbf81502" compoundref="SeqSynHandler_8cpp" startline="534" endline="537">getSynapseOrderOption</referencedby>
+        <referencedby refid="classSeqSynHandler_1a42ae64205ffe64beb1549591bc600d78" compoundref="SeqSynHandler_8cpp" startline="321" endline="348">refillSynapseOrder</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a3af17adf0fc6a7cc001fa4247396f390" compoundref="SeqSynHandler_8cpp" startline="516" endline="521">setSynapseOrder</referencedby>
+        <referencedby refid="classSeqSynHandler_1a959ef7c9618b80ecbd90002fbdba524b" compoundref="SeqSynHandler_8cpp" startline="528" endline="532">setSynapseOrderOption</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classSynapse" kindref="compound">Synapse</ref> &gt;</type>
+        <definition>vector&lt; Synapse &gt; SeqSynHandler::synapses_</definition>
+        <argsstring></argsstring>
+        <name>synapses_</name>
+        <qualifiedname>SeqSynHandler::synapses_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="156" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="156" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1ac04135ba134d737204ef77dc26ff78da" compoundref="SeqSynHandler_8cpp" startline="541" endline="555">addSpike</referencedby>
+        <referencedby refid="classSeqSynHandler_1a3ee9c482c794e1908bfa5435c7c08c78" compoundref="SeqSynHandler_8cpp" startline="564" endline="570">addSynapse</referencedby>
+        <referencedby refid="classSeqSynHandler_1aee1799d9e9266f81390d6dc422705a30" compoundref="SeqSynHandler_8cpp" startline="572" endline="576">dropSynapse</referencedby>
+        <referencedby refid="classSeqSynHandler_1a3b271ed691225b05cd5cf3adf37c1901" compoundref="SeqSynHandler_8cpp" startline="235" endline="247">operator=</referencedby>
+        <referencedby refid="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140" compoundref="SeqSynHandler_8cpp" startline="263" endline="266">vGetNumSynapses</referencedby>
+        <referencedby refid="classSeqSynHandler_1a5c7b5ab04da88637a18e579ff890401e" compoundref="SeqSynHandler_8cpp" startline="268" endline="276">vGetSynapse</referencedby>
+        <referencedby refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" compoundref="SeqSynHandler_8cpp" startline="249" endline="261">vSetNumSynapses</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSeqSynHandler_1a0cc0f8c6466bf3b20f26ddddbf367c17" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SeqSynHandler::weightScaleVec_</definition>
+        <argsstring></argsstring>
+        <name>weightScaleVec_</name>
+        <qualifiedname>SeqSynHandler::weightScaleVec_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="130" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="classSeqSynHandler_1a9c3f4f60e5aea706cd19e25134cc4c4f" compoundref="SeqSynHandler_8cpp" startline="467" endline="470">getWeightScaleVec</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+        <referencedby refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" compoundref="SeqSynHandler_8cpp" startline="249" endline="261">vSetNumSynapses</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSeqSynHandler_1ac04135ba134d737204ef77dc26ff78da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::addSpike</definition>
+        <argsstring>(unsigned int index, double time, double weight)</argsstring>
+        <name>addSpike</name>
+        <qualifiedname>SeqSynHandler::addSpike</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1a6e3fbc7ee72933b8b92799c3cb85b1de">addSpike</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Record arrival of a new spike event. The &apos;time&apos; is time for eventual arrival of the spike, and is typically well in the future. The index specifies which synapse the spike came to. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="46" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="541" bodyend="555"/>
+        <references refid="classSeqSynHandler_1a0fa6057e70de94949ae5ec0776c249d0" compoundref="SeqSynHandler_8h" startline="157">events_</references>
+        <references refid="classPreSynEvent_1a5845fe10b3447a775eb67d0c9db08277" compoundref="SynEvent_8h" startline="47" endline="50">PreSynEvent::PreSynEvent</references>
+        <references refid="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" compoundref="SeqSynHandler_8h" startline="156">synapses_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a3ee9c482c794e1908bfa5435c7c08c78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SeqSynHandler::addSynapse</definition>
+        <argsstring>()</argsstring>
+        <name>addSynapse</name>
+        <qualifiedname>SeqSynHandler::addSynapse</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1aa99a2a75cb16611630461efbf5194eb1">addSynapse</reimplements>
+        <briefdescription>
+<para>Adds a new synapse, returns its index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="44" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="564" bodyend="570"/>
+        <references refid="classSynapse_1ae79151fd47831c58721dd7c1a5b678b8" compoundref="Synapse_8cpp" startline="98" endline="101">Synapse::setHandler</references>
+        <references refid="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" compoundref="SeqSynHandler_8h" startline="156">synapses_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1aee1799d9e9266f81390d6dc422705a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::dropSynapse</definition>
+        <argsstring>(unsigned int droppedSynNumber)</argsstring>
+        <name>dropSynapse</name>
+        <qualifiedname>SeqSynHandler::dropSynapse</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1a99b63feb54b68f6a0a880e3af517a9ef">dropSynapse</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>droppedSynNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drops an existing synapse, triggered by deleteMsg of an input to the child synapse. This is a little messy because we can&apos;t change the indices of the other synapses. The Handler has to figure out how to handle the &apos;holes&apos; in its array of synapses. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="45" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="572" bodyend="576"/>
+        <references refid="classSynapse_1ab4f48719f1bfbe5fa4017aeb0bf02dde" compoundref="Synapse_8cpp" startline="78" endline="81">Synapse::setWeight</references>
+        <references refid="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" compoundref="SeqSynHandler_8h" startline="156">synapses_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a61fc81630fafe61943623fd9931d82e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::fixSynapseOrder</definition>
+        <argsstring>()</argsstring>
+        <name>fixSynapseOrder</name>
+        <qualifiedname>SeqSynHandler::fixSynapseOrder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="81" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="282" bodyend="303"/>
+        <references refid="classSeqSynHandler_1ac2013de3e93f534629bbd0c4121499e3" compoundref="SeqSynHandler_8h" startline="150">synapseOrder_</references>
+        <referencedby refid="classSeqSynHandler_1a42ae64205ffe64beb1549591bc600d78" compoundref="SeqSynHandler_8cpp" startline="321" endline="348">refillSynapseOrder</referencedby>
+        <referencedby refid="classSeqSynHandler_1a3af17adf0fc6a7cc001fa4247396f390" compoundref="SeqSynHandler_8cpp" startline="516" endline="521">setSynapseOrder</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a433e82e1d59332a0b23b081aa7e61a6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SeqSynHandler::getBaseScale</definition>
+        <argsstring>() const</argsstring>
+        <name>getBaseScale</name>
+        <qualifiedname>SeqSynHandler::getBaseScale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="60" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="427" bodyend="430"/>
+        <references refid="classSeqSynHandler_1a4ed29f2d7b4b720f51ed8efcb0274551" compoundref="SeqSynHandler_8h" startline="106">baseScale_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a96a52c5a704e21a94aeeeab7c2ef8094" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SeqSynHandler::getHistory</definition>
+        <argsstring>() const</argsstring>
+        <name>getHistory</name>
+        <qualifiedname>SeqSynHandler::getHistory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="75" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="502" bodyend="514"/>
+        <references refid="classRollingMatrix_1adca60aacc12db01ea9bc7cc931741117" compoundref="RollingMatrix_8cpp" startline="48" endline="52">RollingMatrix::get</references>
+        <references refid="classSeqSynHandler_1aba1a31c9684bb20de3bb1fe5efa26adf" compoundref="SeqSynHandler_8h" startline="139">history_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <references refid="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140" compoundref="SeqSynHandler_8cpp" startline="263" endline="266">vGetNumSynapses</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1ac046f14bcc2d6200d19f07d0f1ad036e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SeqSynHandler::getHistoryTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getHistoryTime</name>
+        <qualifiedname>SeqSynHandler::getHistoryTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="58" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="417" bodyend="420"/>
+        <references refid="classSeqSynHandler_1a357a409c29a22160452ff0d8abb78cf2" compoundref="SeqSynHandler_8h" startline="103">historyTime_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a01825475fe51bab1543f5716e2b2ded4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SeqSynHandler::getKernel</definition>
+        <argsstring>() const</argsstring>
+        <name>getKernel</name>
+        <qualifiedname>SeqSynHandler::getKernel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="73" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="491" bodyend="500"/>
+        <references refid="classSeqSynHandler_1ab70443aa200d22adfbe751cd4ff7765b" compoundref="SeqSynHandler_8h" startline="138">kernel_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1afd5987c5c5bf0a36cdd235652e2e89cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string SeqSynHandler::getKernelEquation</definition>
+        <argsstring>() const</argsstring>
+        <name>getKernelEquation</name>
+        <qualifiedname>SeqSynHandler::getKernelEquation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="52" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="382" bodyend="385"/>
+        <references refid="classSeqSynHandler_1ace86c6456542275386bb5edbe8ed2f91" compoundref="SeqSynHandler_8h" startline="99">kernelEquation_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1aa524e53fc8b1772ed57d01185815e6d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SeqSynHandler::getKernelWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>getKernelWidth</name>
+        <qualifiedname>SeqSynHandler::getKernelWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="54" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="393" bodyend="396"/>
+        <references refid="classSeqSynHandler_1ad569f929924684c144fb15033890c9ac" compoundref="SeqSynHandler_8h" startline="100">kernelWidth_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a0e24fcbe9c9b368648e38a9fc25619a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SeqSynHandler::getPlasticityScale</definition>
+        <argsstring>() const</argsstring>
+        <name>getPlasticityScale</name>
+        <qualifiedname>SeqSynHandler::getPlasticityScale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="69" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="447" bodyend="450"/>
+        <references refid="classSeqSynHandler_1af56219149b434bd4f892d6076d2d4f36" compoundref="SeqSynHandler_8h" startline="114">plasticityScale_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1ac6d7b7b02f3edb39f78d2bbe42369e79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SeqSynHandler::getSeqActivation</definition>
+        <argsstring>() const</argsstring>
+        <name>getSeqActivation</name>
+        <qualifiedname>SeqSynHandler::getSeqActivation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="67" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="442" bodyend="445"/>
+        <references refid="classSeqSynHandler_1af10ac7b36ae19e5a031f6a9cef7bf65f" compoundref="SeqSynHandler_8h" startline="127">seqActivation_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a3c218cee163a35caff1839c4546ea7a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SeqSynHandler::getSeqDt</definition>
+        <argsstring>() const</argsstring>
+        <name>getSeqDt</name>
+        <qualifiedname>SeqSynHandler::getSeqDt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="56" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="405" bodyend="408"/>
+        <references refid="classSeqSynHandler_1a7278e12ac50f8796f255c85d002c3ef4" compoundref="SeqSynHandler_8h" startline="104">seqDt_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1aac34b5e52899a2c19076b34d13a39d30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SeqSynHandler::getSequencePower</definition>
+        <argsstring>() const</argsstring>
+        <name>getSequencePower</name>
+        <qualifiedname>SeqSynHandler::getSequencePower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="71" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="457" bodyend="460"/>
+        <references refid="classSeqSynHandler_1a5964a4e1474682b7e22ee88dd2768e4d" compoundref="SeqSynHandler_8h" startline="123">sequencePower_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a39909a15843665ccb0d618369c98936f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double SeqSynHandler::getSequenceScale</definition>
+        <argsstring>() const</argsstring>
+        <name>getSequenceScale</name>
+        <qualifiedname>SeqSynHandler::getSequenceScale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="62" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="437" bodyend="440"/>
+        <references refid="classSeqSynHandler_1a3bd4ba7a300d3944aa334dc1ab5b1d63" compoundref="SeqSynHandler_8h" startline="108">sequenceScale_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a47cdbb58af78df94c416d4bf878f441f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; SeqSynHandler::getSynapseOrder</definition>
+        <argsstring>() const</argsstring>
+        <name>getSynapseOrder</name>
+        <qualifiedname>SeqSynHandler::getSynapseOrder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="64" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="523" bodyend="526"/>
+        <references refid="classSeqSynHandler_1ac2013de3e93f534629bbd0c4121499e3" compoundref="SeqSynHandler_8h" startline="150">synapseOrder_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a4aa2cc1bf05d51dc0eece72ddbf81502" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SeqSynHandler::getSynapseOrderOption</definition>
+        <argsstring>() const</argsstring>
+        <name>getSynapseOrderOption</name>
+        <qualifiedname>SeqSynHandler::getSynapseOrderOption</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="66" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="534" bodyend="537"/>
+        <references refid="classSeqSynHandler_1a7f8d0ff360b3f24811aba340db67482e" compoundref="SeqSynHandler_8h" startline="154">synapseOrderOption_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a48dd66ad5d5bc0efa6a58df10e9d7b11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double SeqSynHandler::getTopSpike</definition>
+        <argsstring>(unsigned int index) const</argsstring>
+        <name>getTopSpike</name>
+        <qualifiedname>SeqSynHandler::getTopSpike</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1a62cecef12de27500b9bacf693d57fd30">getTopSpike</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="47" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="557" bodyend="562"/>
+        <references refid="classSeqSynHandler_1a0fa6057e70de94949ae5ec0776c249d0" compoundref="SeqSynHandler_8h" startline="157">events_</references>
+        <references refid="classSynEvent_1abae2a2658a556767d337246b53f66567" compoundref="SynEvent_8h" startline="24">SynEvent::time</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a9c3f4f60e5aea706cd19e25134cc4c4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SeqSynHandler::getWeightScaleVec</definition>
+        <argsstring>() const</argsstring>
+        <name>getWeightScaleVec</name>
+        <qualifiedname>SeqSynHandler::getWeightScaleVec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="72" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="467" bodyend="470"/>
+        <references refid="classSeqSynHandler_1a0cc0f8c6466bf3b20f26ddddbf367c17" compoundref="SeqSynHandler_8h" startline="130">weightScaleVec_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SeqSynHandler::numHistory</definition>
+        <argsstring>() const</argsstring>
+        <name>numHistory</name>
+        <qualifiedname>SeqSynHandler::numHistory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="79" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="691" bodyend="694"/>
+        <references refid="classSeqSynHandler_1a357a409c29a22160452ff0d8abb78cf2" compoundref="SeqSynHandler_8h" startline="103">historyTime_</references>
+        <references refid="classSeqSynHandler_1a7278e12ac50f8796f255c85d002c3ef4" compoundref="SeqSynHandler_8h" startline="104">seqDt_</references>
+        <referencedby refid="classSeqSynHandler_1a96a52c5a704e21a94aeeeab7c2ef8094" compoundref="SeqSynHandler_8cpp" startline="502" endline="514">getHistory</referencedby>
+        <referencedby refid="classSeqSynHandler_1a01825475fe51bab1543f5716e2b2ded4" compoundref="SeqSynHandler_8cpp" startline="491" endline="500">getKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" compoundref="SeqSynHandler_8cpp" startline="215" endline="229">SeqSynHandler</referencedby>
+        <referencedby refid="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" compoundref="SeqSynHandler_8cpp" startline="410" endline="415">setHistoryTime</referencedby>
+        <referencedby refid="classSeqSynHandler_1a1bd6056ce0a89c5dee40ddf685c807e5" compoundref="SeqSynHandler_8cpp" startline="472" endline="489">setKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" compoundref="SeqSynHandler_8cpp" startline="398" endline="403">setSeqDt</referencedby>
+        <referencedby refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+        <referencedby refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" compoundref="SeqSynHandler_8cpp" startline="249" endline="261">vSetNumSynapses</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a3b271ed691225b05cd5cf3adf37c1901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classSeqSynHandler" kindref="compound">SeqSynHandler</ref> &amp;</type>
+        <definition>SeqSynHandler &amp; SeqSynHandler::operator=</definition>
+        <argsstring>(const SeqSynHandler &amp;other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SeqSynHandler::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classSeqSynHandler" kindref="compound">SeqSynHandler</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="31" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="235" bodyend="247"/>
+        <references refid="classSeqSynHandler_1a0fa6057e70de94949ae5ec0776c249d0" compoundref="SeqSynHandler_8h" startline="157">events_</references>
+        <references refid="classSynapse_1ae79151fd47831c58721dd7c1a5b678b8" compoundref="Synapse_8cpp" startline="98" endline="101">Synapse::setHandler</references>
+        <references refid="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" compoundref="SeqSynHandler_8h" startline="156">synapses_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a42ae64205ffe64beb1549591bc600d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::refillSynapseOrder</definition>
+        <argsstring>(unsigned int newSize)</argsstring>
+        <name>refillSynapseOrder</name>
+        <qualifiedname>SeqSynHandler::refillSynapseOrder</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>newSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="80" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="321" bodyend="348"/>
+        <references refid="classSeqSynHandler_1a61fc81630fafe61943623fd9931d82e6" compoundref="SeqSynHandler_8cpp" startline="282" endline="303">fixSynapseOrder</references>
+        <references refid="namespacemoose_1ae65f9d4e187c732b37450b5cb8dab7a7" compoundref="randnum_8cpp" startline="32" endline="35">moose::mtrand</references>
+        <references refid="namespacemoose_1a016d92a21244e86231ea80932c1c9175" compoundref="randnum_8cpp" startline="23" endline="29">moose::mtseed</references>
+        <references refid="SeqSynHandler_8cpp_1a8833c0aa9d4fb38399082e3ca150fd4c" compoundref="SeqSynHandler_8cpp" startline="307" endline="319">sort_indexes</references>
+        <references refid="classSeqSynHandler_1ac2013de3e93f534629bbd0c4121499e3" compoundref="SeqSynHandler_8h" startline="150">synapseOrder_</references>
+        <references refid="classSeqSynHandler_1a7f8d0ff360b3f24811aba340db67482e" compoundref="SeqSynHandler_8h" startline="154">synapseOrderOption_</references>
+        <referencedby refid="classSeqSynHandler_1a959ef7c9618b80ecbd90002fbdba524b" compoundref="SeqSynHandler_8cpp" startline="528" endline="532">setSynapseOrderOption</referencedby>
+        <referencedby refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" compoundref="SeqSynHandler_8cpp" startline="249" endline="261">vSetNumSynapses</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SeqSynHandler::SeqSynHandler</definition>
+        <argsstring>()</argsstring>
+        <name>SeqSynHandler</name>
+        <qualifiedname>SeqSynHandler::SeqSynHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="29" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="215" bodyend="229"/>
+        <references refid="classSeqSynHandler_1a4ed29f2d7b4b720f51ed8efcb0274551" compoundref="SeqSynHandler_8h" startline="106">baseScale_</references>
+        <references refid="classSeqSynHandler_1aba1a31c9684bb20de3bb1fe5efa26adf" compoundref="SeqSynHandler_8h" startline="139">history_</references>
+        <references refid="classSeqSynHandler_1a357a409c29a22160452ff0d8abb78cf2" compoundref="SeqSynHandler_8h" startline="103">historyTime_</references>
+        <references refid="classSeqSynHandler_1ace86c6456542275386bb5edbe8ed2f91" compoundref="SeqSynHandler_8h" startline="99">kernelEquation_</references>
+        <references refid="classSeqSynHandler_1ad569f929924684c144fb15033890c9ac" compoundref="SeqSynHandler_8h" startline="100">kernelWidth_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <references refid="classSeqSynHandler_1af56219149b434bd4f892d6076d2d4f36" compoundref="SeqSynHandler_8h" startline="114">plasticityScale_</references>
+        <references refid="classRollingMatrix_1ad4c77261cc911ee4f6f46c47a1f842c4" compoundref="RollingMatrix_8cpp" startline="36" endline="46">RollingMatrix::resize</references>
+        <references refid="classSeqSynHandler_1af10ac7b36ae19e5a031f6a9cef7bf65f" compoundref="SeqSynHandler_8h" startline="127">seqActivation_</references>
+        <references refid="classSeqSynHandler_1a7278e12ac50f8796f255c85d002c3ef4" compoundref="SeqSynHandler_8h" startline="104">seqDt_</references>
+        <references refid="classSeqSynHandler_1a5964a4e1474682b7e22ee88dd2768e4d" compoundref="SeqSynHandler_8h" startline="123">sequencePower_</references>
+        <references refid="classSeqSynHandler_1a3bd4ba7a300d3944aa334dc1ab5b1d63" compoundref="SeqSynHandler_8h" startline="108">sequenceScale_</references>
+        <references refid="classSeqSynHandler_1a7f8d0ff360b3f24811aba340db67482e" compoundref="SeqSynHandler_8h" startline="154">synapseOrderOption_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1aa73b3727d93de359d2ebdc6b1585d130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setBaseScale</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setBaseScale</name>
+        <qualifiedname>SeqSynHandler::setBaseScale</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="59" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="422" bodyend="425"/>
+        <references refid="classSeqSynHandler_1a4ed29f2d7b4b720f51ed8efcb0274551" compoundref="SeqSynHandler_8h" startline="106">baseScale_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setHistoryTime</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setHistoryTime</name>
+        <qualifiedname>SeqSynHandler::setHistoryTime</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="57" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="410" bodyend="415"/>
+        <references refid="classSeqSynHandler_1aba1a31c9684bb20de3bb1fe5efa26adf" compoundref="SeqSynHandler_8h" startline="139">history_</references>
+        <references refid="classSeqSynHandler_1a357a409c29a22160452ff0d8abb78cf2" compoundref="SeqSynHandler_8h" startline="103">historyTime_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <references refid="classRollingMatrix_1ad4c77261cc911ee4f6f46c47a1f842c4" compoundref="RollingMatrix_8cpp" startline="36" endline="46">RollingMatrix::resize</references>
+        <references refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</references>
+        <references refid="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140" compoundref="SeqSynHandler_8cpp" startline="263" endline="266">vGetNumSynapses</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a1bd6056ce0a89c5dee40ddf685c807e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setKernel</definition>
+        <argsstring>(vector&lt; double &gt;)</argsstring>
+        <name>setKernel</name>
+        <qualifiedname>SeqSynHandler::setKernel</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <defname>kern</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="74" column="7" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="472" bodyend="489"/>
+        <references refid="classSeqSynHandler_1ab70443aa200d22adfbe751cd4ff7765b" compoundref="SeqSynHandler_8h" startline="138">kernel_</references>
+        <references refid="classSeqSynHandler_1ace86c6456542275386bb5edbe8ed2f91" compoundref="SeqSynHandler_8h" startline="99">kernelEquation_</references>
+        <references refid="classSeqSynHandler_1ad569f929924684c144fb15033890c9ac" compoundref="SeqSynHandler_8h" startline="100">kernelWidth_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1ad548af814d9438e7d0a718f5c9116e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setKernelEquation</definition>
+        <argsstring>(string eq)</argsstring>
+        <name>setKernelEquation</name>
+        <qualifiedname>SeqSynHandler::setKernelEquation</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>eq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="51" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="376" bodyend="380"/>
+        <references refid="classSeqSynHandler_1ace86c6456542275386bb5edbe8ed2f91" compoundref="SeqSynHandler_8h" startline="99">kernelEquation_</references>
+        <references refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1aa1faaeb5f539f86e66090f7dd1a97a8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setKernelWidth</definition>
+        <argsstring>(unsigned int v)</argsstring>
+        <name>setKernelWidth</name>
+        <qualifiedname>SeqSynHandler::setKernelWidth</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="53" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="387" bodyend="391"/>
+        <references refid="classSeqSynHandler_1ad569f929924684c144fb15033890c9ac" compoundref="SeqSynHandler_8h" startline="100">kernelWidth_</references>
+        <references refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a0a455f9fcfd03a357d4bec427a1f4439" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setPlasticityScale</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setPlasticityScale</name>
+        <qualifiedname>SeqSynHandler::setPlasticityScale</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="68" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="452" bodyend="455"/>
+        <references refid="classSeqSynHandler_1af56219149b434bd4f892d6076d2d4f36" compoundref="SeqSynHandler_8h" startline="114">plasticityScale_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setSeqDt</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setSeqDt</name>
+        <qualifiedname>SeqSynHandler::setSeqDt</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="55" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="398" bodyend="403"/>
+        <references refid="classSeqSynHandler_1aba1a31c9684bb20de3bb1fe5efa26adf" compoundref="SeqSynHandler_8h" startline="139">history_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <references refid="classRollingMatrix_1ad4c77261cc911ee4f6f46c47a1f842c4" compoundref="RollingMatrix_8cpp" startline="36" endline="46">RollingMatrix::resize</references>
+        <references refid="classSeqSynHandler_1a7278e12ac50f8796f255c85d002c3ef4" compoundref="SeqSynHandler_8h" startline="104">seqDt_</references>
+        <references refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</references>
+        <references refid="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140" compoundref="SeqSynHandler_8cpp" startline="263" endline="266">vGetNumSynapses</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a850f512906c8cbc0d48cc3ce3ef362f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setSequencePower</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setSequencePower</name>
+        <qualifiedname>SeqSynHandler::setSequencePower</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="70" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="462" bodyend="465"/>
+        <references refid="classSeqSynHandler_1a5964a4e1474682b7e22ee88dd2768e4d" compoundref="SeqSynHandler_8h" startline="123">sequencePower_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a1f0330c4465ec4df8dc9a61737ecb861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setSequenceScale</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setSequenceScale</name>
+        <qualifiedname>SeqSynHandler::setSequenceScale</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="61" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="432" bodyend="435"/>
+        <references refid="classSeqSynHandler_1a3bd4ba7a300d3944aa334dc1ab5b1d63" compoundref="SeqSynHandler_8h" startline="108">sequenceScale_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a3af17adf0fc6a7cc001fa4247396f390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setSynapseOrder</definition>
+        <argsstring>(vector&lt; unsigned int &gt; v)</argsstring>
+        <name>setSynapseOrder</name>
+        <qualifiedname>SeqSynHandler::setSynapseOrder</qualifiedname>
+        <param>
+          <type>vector&lt; unsigned int &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="63" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="516" bodyend="521"/>
+        <references refid="classSeqSynHandler_1a61fc81630fafe61943623fd9931d82e6" compoundref="SeqSynHandler_8cpp" startline="282" endline="303">fixSynapseOrder</references>
+        <references refid="classSeqSynHandler_1ac2013de3e93f534629bbd0c4121499e3" compoundref="SeqSynHandler_8h" startline="150">synapseOrder_</references>
+        <references refid="classSeqSynHandler_1a7f8d0ff360b3f24811aba340db67482e" compoundref="SeqSynHandler_8h" startline="154">synapseOrderOption_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a959ef7c9618b80ecbd90002fbdba524b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::setSynapseOrderOption</definition>
+        <argsstring>(int v)</argsstring>
+        <name>setSynapseOrderOption</name>
+        <qualifiedname>SeqSynHandler::setSynapseOrderOption</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="65" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="528" bodyend="532"/>
+        <references refid="classSeqSynHandler_1a42ae64205ffe64beb1549591bc600d78" compoundref="SeqSynHandler_8cpp" startline="321" endline="348">refillSynapseOrder</references>
+        <references refid="classSeqSynHandler_1ac2013de3e93f534629bbd0c4121499e3" compoundref="SeqSynHandler_8h" startline="150">synapseOrder_</references>
+        <references refid="classSeqSynHandler_1a7f8d0ff360b3f24811aba340db67482e" compoundref="SeqSynHandler_8h" startline="154">synapseOrderOption_</references>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SeqSynHandler::vGetNumSynapses</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetNumSynapses</name>
+        <qualifiedname>SeqSynHandler::vGetNumSynapses</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1ace8a160fca1d76382594c59f98d9ea53">vGetNumSynapses</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="37" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="263" bodyend="266"/>
+        <references refid="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" compoundref="SeqSynHandler_8h" startline="156">synapses_</references>
+        <referencedby refid="classSeqSynHandler_1a96a52c5a704e21a94aeeeab7c2ef8094" compoundref="SeqSynHandler_8cpp" startline="502" endline="514">getHistory</referencedby>
+        <referencedby refid="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" compoundref="SeqSynHandler_8cpp" startline="410" endline="415">setHistoryTime</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" compoundref="SeqSynHandler_8cpp" startline="398" endline="403">setSeqDt</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a5c7b5ab04da88637a18e579ff890401e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classSynapse" kindref="compound">Synapse</ref> *</type>
+        <definition>Synapse * SeqSynHandler::vGetSynapse</definition>
+        <argsstring>(unsigned int i)</argsstring>
+        <name>vGetSynapse</name>
+        <qualifiedname>SeqSynHandler::vGetSynapse</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1ae77bee46fe405773ca52a35ce19d30f1">vGetSynapse</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="38" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="268" bodyend="276"/>
+        <references refid="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" compoundref="SeqSynHandler_8h" startline="156">synapses_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::vProcess</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>vProcess</name>
+        <qualifiedname>SeqSynHandler::vProcess</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1ad9e42665e8a3c09a631df3c5d900cffd">vProcess</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Reinstated 12 Oct 2022.</para>
+<para>This version works across history but does not move the kernel across the range of different synapses Removed 12 Oct 2022. seqActivation_ = 0.0; if ( sequenceScale_ &gt; 0.0 ) // Sum all responses, send to chan { for ( int i = 0; i &lt; nh; ++i ) seqActivation_ += pow( history_.dotProduct( kernel_[i], i, 0 ), sequencePower_ ); seqActivation_ *= sequenceScale_; }</para>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="39" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="580" bodyend="682"/>
+        <references refid="classSynHandlerBase_1ad6fc78993526a88a821d2b01c7d1e6bf" compoundref="SynHandlerBase_8cpp" startline="16" endline="24">SynHandlerBase::activationOut</references>
+        <references refid="classSeqSynHandler_1a4ed29f2d7b4b720f51ed8efcb0274551" compoundref="SeqSynHandler_8h" startline="106">baseScale_</references>
+        <references refid="classRollingMatrix_1a112d18c72fb9b7668ae457edffaa9437" compoundref="RollingMatrix_8cpp" startline="102" endline="112">RollingMatrix::correl</references>
+        <references refid="classProcInfo_1a6343499a8c6e17affc28b69181d2b2cb" compoundref="ProcInfo_8h" startline="19">ProcInfo::currTime</references>
+        <references refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" compoundref="ProcInfo_8h" startline="18">ProcInfo::dt</references>
+        <references refid="classSeqSynHandler_1a0fa6057e70de94949ae5ec0776c249d0" compoundref="SeqSynHandler_8h" startline="157">events_</references>
+        <references refid="classSeqSynHandler_1aba1a31c9684bb20de3bb1fe5efa26adf" compoundref="SeqSynHandler_8h" startline="139">history_</references>
+        <references refid="classSeqSynHandler_1ab70443aa200d22adfbe751cd4ff7765b" compoundref="SeqSynHandler_8h" startline="138">kernel_</references>
+        <references refid="classSeqSynHandler_1ad073c4f3da0f9669591dc2f9c91cde3e" compoundref="SeqSynHandler_8h" startline="135">latestSpikes_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <references refid="classSeqSynHandler_1af56219149b434bd4f892d6076d2d4f36" compoundref="SeqSynHandler_8h" startline="114">plasticityScale_</references>
+        <references refid="classRollingMatrix_1ab7d00fe107e4e8677faf94f7cac0f1ab" compoundref="RollingMatrix_8cpp" startline="120" endline="127">RollingMatrix::rollToNextRow</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <references refid="classSeqSynHandler_1af10ac7b36ae19e5a031f6a9cef7bf65f" compoundref="SeqSynHandler_8h" startline="127">seqActivation_</references>
+        <references refid="classSeqSynHandler_1a7278e12ac50f8796f255c85d002c3ef4" compoundref="SeqSynHandler_8h" startline="104">seqDt_</references>
+        <references refid="classSeqSynHandler_1a5964a4e1474682b7e22ee88dd2768e4d" compoundref="SeqSynHandler_8h" startline="123">sequencePower_</references>
+        <references refid="classSeqSynHandler_1a3bd4ba7a300d3944aa334dc1ab5b1d63" compoundref="SeqSynHandler_8h" startline="108">sequenceScale_</references>
+        <references refid="classRollingMatrix_1a051a67124f5690c1741b68cd4a89292d" compoundref="RollingMatrix_8cpp" startline="61" endline="68">RollingMatrix::sumIntoRow</references>
+        <references refid="classSeqSynHandler_1ac2013de3e93f534629bbd0c4121499e3" compoundref="SeqSynHandler_8h" startline="150">synapseOrder_</references>
+        <references refid="classPreSynEvent_1a9abad51cc4be88147676ed2d4b2ed519" compoundref="SynEvent_8h" startline="52">PreSynEvent::synIndex</references>
+        <references refid="classSynEvent_1abae2a2658a556767d337246b53f66567" compoundref="SynEvent_8h" startline="24">SynEvent::time</references>
+        <references refid="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140" compoundref="SeqSynHandler_8cpp" startline="263" endline="266">vGetNumSynapses</references>
+        <references refid="classSynEvent_1a69351ccf5e8134059f1c51e0b1aea39d" compoundref="SynEvent_8h" startline="25">SynEvent::weight</references>
+        <references refid="classSeqSynHandler_1a0cc0f8c6466bf3b20f26ddddbf367c17" compoundref="SeqSynHandler_8h" startline="130">weightScaleVec_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1aa750d50b5e6c74c568187fd53ff9f7a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::vReinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>vReinit</name>
+        <qualifiedname>SeqSynHandler::vReinit</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1ac6699b80edc994f20a89a7181a0a800e">vReinit</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="40" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="684" bodyend="689"/>
+        <references refid="classSeqSynHandler_1a0fa6057e70de94949ae5ec0776c249d0" compoundref="SeqSynHandler_8h" startline="157">events_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::vSetNumSynapses</definition>
+        <argsstring>(unsigned int num)</argsstring>
+        <name>vSetNumSynapses</name>
+        <qualifiedname>SeqSynHandler::vSetNumSynapses</qualifiedname>
+        <reimplements refid="classSynHandlerBase_1ae2c64fc1e7de3476887a44a9284b4267">vSetNumSynapses</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="36" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="249" bodyend="261"/>
+        <references refid="classSeqSynHandler_1aba1a31c9684bb20de3bb1fe5efa26adf" compoundref="SeqSynHandler_8h" startline="139">history_</references>
+        <references refid="classSeqSynHandler_1ad073c4f3da0f9669591dc2f9c91cde3e" compoundref="SeqSynHandler_8h" startline="135">latestSpikes_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <references refid="classSeqSynHandler_1a42ae64205ffe64beb1549591bc600d78" compoundref="SeqSynHandler_8cpp" startline="321" endline="348">refillSynapseOrder</references>
+        <references refid="classRollingMatrix_1ad4c77261cc911ee4f6f46c47a1f842c4" compoundref="RollingMatrix_8cpp" startline="36" endline="46">RollingMatrix::resize</references>
+        <references refid="classSynapse_1ae79151fd47831c58721dd7c1a5b678b8" compoundref="Synapse_8cpp" startline="98" endline="101">Synapse::setHandler</references>
+        <references refid="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" compoundref="SeqSynHandler_8h" startline="156">synapses_</references>
+        <references refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" compoundref="SeqSynHandler_8cpp" startline="350" endline="373">updateKernel</references>
+        <references refid="classSeqSynHandler_1a0cc0f8c6466bf3b20f26ddddbf367c17" compoundref="SeqSynHandler_8h" startline="130">weightScaleVec_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSeqSynHandler_1ae333cdc4b3c1e6f0849c3d58cbd0eb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SeqSynHandler::~SeqSynHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~SeqSynHandler</name>
+        <qualifiedname>SeqSynHandler::~SeqSynHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="30" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="231" bodyend="232"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * SeqSynHandler::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>SeqSynHandler::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="83" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="23" bodyend="209"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classFieldElementFinfo_1aaab885fe6cafb69f4ff0c4fb76d26221" compoundref="FieldElementFinfo_8h" startline="107" endline="141">FieldElementFinfo&lt; T, F &gt;::FieldElementFinfo</references>
+        <references refid="classSeqSynHandler_1a433e82e1d59332a0b23b081aa7e61a6e" compoundref="SeqSynHandler_8cpp" startline="427" endline="430">getBaseScale</references>
+        <references refid="classSeqSynHandler_1a96a52c5a704e21a94aeeeab7c2ef8094" compoundref="SeqSynHandler_8cpp" startline="502" endline="514">getHistory</references>
+        <references refid="classSeqSynHandler_1ac046f14bcc2d6200d19f07d0f1ad036e" compoundref="SeqSynHandler_8cpp" startline="417" endline="420">getHistoryTime</references>
+        <references refid="classSeqSynHandler_1a01825475fe51bab1543f5716e2b2ded4" compoundref="SeqSynHandler_8cpp" startline="491" endline="500">getKernel</references>
+        <references refid="classSeqSynHandler_1afd5987c5c5bf0a36cdd235652e2e89cb" compoundref="SeqSynHandler_8cpp" startline="382" endline="385">getKernelEquation</references>
+        <references refid="classSeqSynHandler_1aa524e53fc8b1772ed57d01185815e6d9" compoundref="SeqSynHandler_8cpp" startline="393" endline="396">getKernelWidth</references>
+        <references refid="classSynHandlerBase_1a0022b30c918b1ed5bc6883a313ed9979" compoundref="SynHandlerBase_8cpp" startline="109" endline="112">SynHandlerBase::getNumSynapses</references>
+        <references refid="classSeqSynHandler_1a0e24fcbe9c9b368648e38a9fc25619a7" compoundref="SeqSynHandler_8cpp" startline="447" endline="450">getPlasticityScale</references>
+        <references refid="classSeqSynHandler_1ac6d7b7b02f3edb39f78d2bbe42369e79" compoundref="SeqSynHandler_8cpp" startline="442" endline="445">getSeqActivation</references>
+        <references refid="classSeqSynHandler_1a3c218cee163a35caff1839c4546ea7a6" compoundref="SeqSynHandler_8cpp" startline="405" endline="408">getSeqDt</references>
+        <references refid="classSeqSynHandler_1aac34b5e52899a2c19076b34d13a39d30" compoundref="SeqSynHandler_8cpp" startline="457" endline="460">getSequencePower</references>
+        <references refid="classSeqSynHandler_1a39909a15843665ccb0d618369c98936f" compoundref="SeqSynHandler_8cpp" startline="437" endline="440">getSequenceScale</references>
+        <references refid="classSynHandlerBase_1a000a56561ed2c0f605716a583ac11169" compoundref="SynHandlerBase_8cpp" startline="114" endline="117">SynHandlerBase::getSynapse</references>
+        <references refid="classSeqSynHandler_1a47cdbb58af78df94c416d4bf878f441f" compoundref="SeqSynHandler_8cpp" startline="523" endline="526">getSynapseOrder</references>
+        <references refid="classSeqSynHandler_1a4aa2cc1bf05d51dc0eece72ddbf81502" compoundref="SeqSynHandler_8cpp" startline="534" endline="537">getSynapseOrderOption</references>
+        <references refid="classSeqSynHandler_1a9c3f4f60e5aea706cd19e25134cc4c4f" compoundref="SeqSynHandler_8cpp" startline="467" endline="470">getWeightScaleVec</references>
+        <references refid="classSynapse_1a74b7194faccecb533c3ec1fbb4dbaddf" compoundref="Synapse_8cpp" startline="15" endline="68">Synapse::initCinfo</references>
+        <references refid="classSynHandlerBase_1adf7d7714a23a6da7aa46877a16f90424" compoundref="SynHandlerBase_8cpp" startline="31" endline="88">SynHandlerBase::initCinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classSeqSynHandler_1aa73b3727d93de359d2ebdc6b1585d130" compoundref="SeqSynHandler_8cpp" startline="422" endline="425">setBaseScale</references>
+        <references refid="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" compoundref="SeqSynHandler_8cpp" startline="410" endline="415">setHistoryTime</references>
+        <references refid="classSeqSynHandler_1a1bd6056ce0a89c5dee40ddf685c807e5" compoundref="SeqSynHandler_8cpp" startline="472" endline="489">setKernel</references>
+        <references refid="classSeqSynHandler_1ad548af814d9438e7d0a718f5c9116e83" compoundref="SeqSynHandler_8cpp" startline="376" endline="380">setKernelEquation</references>
+        <references refid="classSeqSynHandler_1aa1faaeb5f539f86e66090f7dd1a97a8e" compoundref="SeqSynHandler_8cpp" startline="387" endline="391">setKernelWidth</references>
+        <references refid="classSynHandlerBase_1a70e102fcf937cf2dd78a39dbed19163d" compoundref="SynHandlerBase_8cpp" startline="104" endline="107">SynHandlerBase::setNumSynapses</references>
+        <references refid="classSeqSynHandler_1a0a455f9fcfd03a357d4bec427a1f4439" compoundref="SeqSynHandler_8cpp" startline="452" endline="455">setPlasticityScale</references>
+        <references refid="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" compoundref="SeqSynHandler_8cpp" startline="398" endline="403">setSeqDt</references>
+        <references refid="classSeqSynHandler_1a850f512906c8cbc0d48cc3ce3ef362f1" compoundref="SeqSynHandler_8cpp" startline="462" endline="465">setSequencePower</references>
+        <references refid="classSeqSynHandler_1a1f0330c4465ec4df8dc9a61737ecb861" compoundref="SeqSynHandler_8cpp" startline="432" endline="435">setSequenceScale</references>
+        <references refid="classSeqSynHandler_1a3af17adf0fc6a7cc001fa4247396f390" compoundref="SeqSynHandler_8cpp" startline="516" endline="521">setSynapseOrder</references>
+        <references refid="classSeqSynHandler_1a959ef7c9618b80ecbd90002fbdba524b" compoundref="SeqSynHandler_8cpp" startline="528" endline="532">setSynapseOrderOption</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SeqSynHandler::updateKernel</definition>
+        <argsstring>()</argsstring>
+        <name>updateKernel</name>
+        <qualifiedname>SeqSynHandler::updateKernel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="85" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.cpp" bodystart="350" bodyend="373"/>
+        <references refid="classmoose_1_1MooseParser_1a8c846212a3d039e827b5600ba2904a3c" compoundref="MooseParser_8cpp" startline="134" endline="143">moose::MooseParser::DefineVar</references>
+        <references refid="classmoose_1_1MooseParser_1a86af0b5331150fcd830bb02c93f356fe" compoundref="MooseParser_8cpp" startline="317" endline="334">moose::MooseParser::Eval</references>
+        <references refid="classSeqSynHandler_1a357a409c29a22160452ff0d8abb78cf2" compoundref="SeqSynHandler_8h" startline="103">historyTime_</references>
+        <references refid="classSeqSynHandler_1ab70443aa200d22adfbe751cd4ff7765b" compoundref="SeqSynHandler_8h" startline="138">kernel_</references>
+        <references refid="classSeqSynHandler_1ace86c6456542275386bb5edbe8ed2f91" compoundref="SeqSynHandler_8h" startline="99">kernelEquation_</references>
+        <references refid="classSeqSynHandler_1ad569f929924684c144fb15033890c9ac" compoundref="SeqSynHandler_8h" startline="100">kernelWidth_</references>
+        <references refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" compoundref="SeqSynHandler_8cpp" startline="691" endline="694">numHistory</references>
+        <references refid="classSeqSynHandler_1a7278e12ac50f8796f255c85d002c3ef4" compoundref="SeqSynHandler_8h" startline="104">seqDt_</references>
+        <references refid="classmoose_1_1MooseParser_1a04e7bbb1c453e6a7e5d64a1b573ada63" compoundref="MooseParser_8cpp" startline="202" endline="207">moose::MooseParser::SetExpr</references>
+        <referencedby refid="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" compoundref="SeqSynHandler_8cpp" startline="410" endline="415">setHistoryTime</referencedby>
+        <referencedby refid="classSeqSynHandler_1ad548af814d9438e7d0a718f5c9116e83" compoundref="SeqSynHandler_8cpp" startline="376" endline="380">setKernelEquation</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa1faaeb5f539f86e66090f7dd1a97a8e" compoundref="SeqSynHandler_8cpp" startline="387" endline="391">setKernelWidth</referencedby>
+        <referencedby refid="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" compoundref="SeqSynHandler_8cpp" startline="398" endline="403">setSeqDt</referencedby>
+        <referencedby refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" compoundref="SeqSynHandler_8cpp" startline="249" endline="261">vSetNumSynapses</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This handles synapses organized sequentially. The parent class <ref refid="classSimpleSynHandler" kindref="compound">SimpleSynHandler</ref> deals with the mechanics of data arrival. Here the algorithm is 0. Assume all synaptic input comes on a linear dendrite.<orderedlist>
+<listitem><para>Maintain a history of depth D for synaptic activity. May be simplest to do as event list (sparse matrix) rather than full matrix.</para>
+</listitem><listitem><para>Maintain a kernel of how to weight time and space</para>
+</listitem><listitem><para>Here we have various options 3.1 At each spike event, decide how to weight it based on history. 3.2 At each timestep, compute an effective Gk and send to activation. This will be moderately nasty to compute </para>
+</listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SeqSynHandler</label>
+        <link refid="classSeqSynHandler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SynHandlerBase</label>
+        <link refid="classSynHandlerBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>PreSynEvent</label>
+        <link refid="classPreSynEvent"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RollingMatrix</label>
+        <link refid="classRollingMatrix"/>
+      </node>
+      <node id="1">
+        <label>SeqSynHandler</label>
+        <link refid="classSeqSynHandler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-latestSpikes_</edgelabel>
+          <edgelabel>-weightScaleVec_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-history_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-synapseOrder_</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-synapses_</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-events_</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SynEvent</label>
+        <link refid="classSynEvent"/>
+      </node>
+      <node id="2">
+        <label>SynHandlerBase</label>
+        <link refid="classSynHandlerBase"/>
+      </node>
+      <node id="9">
+        <label>Synapse</label>
+        <link refid="classSynapse"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-handler_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="10">
+        <label>std::priority_queue&lt; PreSynEvent, vector&lt; PreSynEvent &gt;, CompareSynEvent &gt;</label>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; PreSynEvent, vector&lt; PreSynEvent &gt;, CompareSynEvent &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>std::priority_queue&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::vector&lt; Synapse &gt;</label>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; Synapse &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" line="26" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SeqSynHandler.h" bodystart="27" bodyend="160"/>
+    <listofallmembers>
+      <member refid="classSynHandlerBase_1ad6fc78993526a88a821d2b01c7d1e6bf" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>activationOut</name></member>
+      <member refid="classSeqSynHandler_1ac04135ba134d737204ef77dc26ff78da" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>addSpike</name></member>
+      <member refid="classSeqSynHandler_1a3ee9c482c794e1908bfa5435c7c08c78" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>addSynapse</name></member>
+      <member refid="classSeqSynHandler_1a4ed29f2d7b4b720f51ed8efcb0274551" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>baseScale_</name></member>
+      <member refid="classSeqSynHandler_1aee1799d9e9266f81390d6dc422705a30" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>dropSynapse</name></member>
+      <member refid="classSeqSynHandler_1a0fa6057e70de94949ae5ec0776c249d0" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>events_</name></member>
+      <member refid="classSeqSynHandler_1a61fc81630fafe61943623fd9931d82e6" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>fixSynapseOrder</name></member>
+      <member refid="classSeqSynHandler_1a433e82e1d59332a0b23b081aa7e61a6e" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getBaseScale</name></member>
+      <member refid="classSeqSynHandler_1a96a52c5a704e21a94aeeeab7c2ef8094" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getHistory</name></member>
+      <member refid="classSeqSynHandler_1ac046f14bcc2d6200d19f07d0f1ad036e" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getHistoryTime</name></member>
+      <member refid="classSeqSynHandler_1a01825475fe51bab1543f5716e2b2ded4" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getKernel</name></member>
+      <member refid="classSeqSynHandler_1afd5987c5c5bf0a36cdd235652e2e89cb" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getKernelEquation</name></member>
+      <member refid="classSeqSynHandler_1aa524e53fc8b1772ed57d01185815e6d9" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getKernelWidth</name></member>
+      <member refid="classSynHandlerBase_1a0022b30c918b1ed5bc6883a313ed9979" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getNumSynapses</name></member>
+      <member refid="classSeqSynHandler_1a0e24fcbe9c9b368648e38a9fc25619a7" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getPlasticityScale</name></member>
+      <member refid="classSeqSynHandler_1ac6d7b7b02f3edb39f78d2bbe42369e79" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getSeqActivation</name></member>
+      <member refid="classSeqSynHandler_1a3c218cee163a35caff1839c4546ea7a6" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getSeqDt</name></member>
+      <member refid="classSeqSynHandler_1aac34b5e52899a2c19076b34d13a39d30" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getSequencePower</name></member>
+      <member refid="classSeqSynHandler_1a39909a15843665ccb0d618369c98936f" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getSequenceScale</name></member>
+      <member refid="classSynHandlerBase_1a000a56561ed2c0f605716a583ac11169" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getSynapse</name></member>
+      <member refid="classSeqSynHandler_1a47cdbb58af78df94c416d4bf878f441f" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getSynapseOrder</name></member>
+      <member refid="classSeqSynHandler_1a4aa2cc1bf05d51dc0eece72ddbf81502" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getSynapseOrderOption</name></member>
+      <member refid="classSeqSynHandler_1a48dd66ad5d5bc0efa6a58df10e9d7b11" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>getTopSpike</name></member>
+      <member refid="classSeqSynHandler_1a9c3f4f60e5aea706cd19e25134cc4c4f" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>getWeightScaleVec</name></member>
+      <member refid="classSeqSynHandler_1aba1a31c9684bb20de3bb1fe5efa26adf" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>history_</name></member>
+      <member refid="classSeqSynHandler_1a357a409c29a22160452ff0d8abb78cf2" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>historyTime_</name></member>
+      <member refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>initCinfo</name></member>
+      <member refid="classSeqSynHandler_1ab70443aa200d22adfbe751cd4ff7765b" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>kernel_</name></member>
+      <member refid="classSeqSynHandler_1ace86c6456542275386bb5edbe8ed2f91" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>kernelEquation_</name></member>
+      <member refid="classSeqSynHandler_1ad569f929924684c144fb15033890c9ac" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>kernelWidth_</name></member>
+      <member refid="classSeqSynHandler_1ad073c4f3da0f9669591dc2f9c91cde3e" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>latestSpikes_</name></member>
+      <member refid="classSeqSynHandler_1a8dec4415ad4c25ca8c2c6aa22633578e" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>numHistory</name></member>
+      <member refid="classSeqSynHandler_1a3b271ed691225b05cd5cf3adf37c1901" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>operator=</name></member>
+      <member refid="classSeqSynHandler_1af56219149b434bd4f892d6076d2d4f36" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>plasticityScale_</name></member>
+      <member refid="classSynHandlerBase_1acda10f074d0aaeea5ca3b87cf23e62c3" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>process</name></member>
+      <member refid="classSynHandlerBase_1a0dab0883f0962f0afde8efdba67def0d" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>rangeWarning</name></member>
+      <member refid="classSeqSynHandler_1a42ae64205ffe64beb1549591bc600d78" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>refillSynapseOrder</name></member>
+      <member refid="classSynHandlerBase_1a4e64cd0a20a30c236f213712d8044bf1" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>reinit</name></member>
+      <member refid="classSeqSynHandler_1af10ac7b36ae19e5a031f6a9cef7bf65f" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>seqActivation_</name></member>
+      <member refid="classSeqSynHandler_1a7278e12ac50f8796f255c85d002c3ef4" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>seqDt_</name></member>
+      <member refid="classSeqSynHandler_1ab2283035143f8166df8be38eddd61b41" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>SeqSynHandler</name></member>
+      <member refid="classSeqSynHandler_1a5964a4e1474682b7e22ee88dd2768e4d" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>sequencePower_</name></member>
+      <member refid="classSeqSynHandler_1a3bd4ba7a300d3944aa334dc1ab5b1d63" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>sequenceScale_</name></member>
+      <member refid="classSeqSynHandler_1aa73b3727d93de359d2ebdc6b1585d130" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setBaseScale</name></member>
+      <member refid="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setHistoryTime</name></member>
+      <member refid="classSeqSynHandler_1a1bd6056ce0a89c5dee40ddf685c807e5" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setKernel</name></member>
+      <member refid="classSeqSynHandler_1ad548af814d9438e7d0a718f5c9116e83" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setKernelEquation</name></member>
+      <member refid="classSeqSynHandler_1aa1faaeb5f539f86e66090f7dd1a97a8e" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setKernelWidth</name></member>
+      <member refid="classSynHandlerBase_1a70e102fcf937cf2dd78a39dbed19163d" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setNumSynapses</name></member>
+      <member refid="classSeqSynHandler_1a0a455f9fcfd03a357d4bec427a1f4439" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setPlasticityScale</name></member>
+      <member refid="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setSeqDt</name></member>
+      <member refid="classSeqSynHandler_1a850f512906c8cbc0d48cc3ce3ef362f1" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setSequencePower</name></member>
+      <member refid="classSeqSynHandler_1a1f0330c4465ec4df8dc9a61737ecb861" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setSequenceScale</name></member>
+      <member refid="classSeqSynHandler_1a3af17adf0fc6a7cc001fa4247396f390" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setSynapseOrder</name></member>
+      <member refid="classSeqSynHandler_1a959ef7c9618b80ecbd90002fbdba524b" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>setSynapseOrderOption</name></member>
+      <member refid="classSeqSynHandler_1ac2013de3e93f534629bbd0c4121499e3" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>synapseOrder_</name></member>
+      <member refid="classSeqSynHandler_1a7f8d0ff360b3f24811aba340db67482e" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>synapseOrderOption_</name></member>
+      <member refid="classSeqSynHandler_1ac78be543b0cac5c9aa0ef9e72d57b2d9" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>synapses_</name></member>
+      <member refid="classSynHandlerBase_1a96d2e6db531ff8484656e1fbcd1262e9" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>SynHandlerBase</name></member>
+      <member refid="classSeqSynHandler_1ab6191d9be162cedaff8e69f06d494ff2" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>updateKernel</name></member>
+      <member refid="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>vGetNumSynapses</name></member>
+      <member refid="classSeqSynHandler_1a5c7b5ab04da88637a18e579ff890401e" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>vGetSynapse</name></member>
+      <member refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>vProcess</name></member>
+      <member refid="classSeqSynHandler_1aa750d50b5e6c74c568187fd53ff9f7a0" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>vReinit</name></member>
+      <member refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>vSetNumSynapses</name></member>
+      <member refid="classSeqSynHandler_1a0cc0f8c6466bf3b20f26ddddbf367c17" prot="private" virt="non-virtual"><scope>SeqSynHandler</scope><name>weightScaleVec_</name></member>
+      <member refid="classSeqSynHandler_1ae333cdc4b3c1e6f0849c3d58cbd0eb7b" prot="public" virt="non-virtual"><scope>SeqSynHandler</scope><name>~SeqSynHandler</name></member>
+      <member refid="classSynHandlerBase_1a76d6723bd4f877eb81a16c6f6027746f" prot="public" virt="virtual"><scope>SeqSynHandler</scope><name>~SynHandlerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

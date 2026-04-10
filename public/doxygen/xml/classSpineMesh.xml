@@ -1,0 +1,1193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classSpineMesh" kind="class" language="C++" prot="public">
+    <compoundname>SpineMesh</compoundname>
+    <basecompoundref refid="classMeshCompt" prot="public" virt="non-virtual">MeshCompt</basecompoundref>
+    <includes refid="SpineMesh_8h" local="no">SpineMesh.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSpineMesh_1ab2fdfa4c44c20049c257e7dc034666fb" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SpineMesh::area_</definition>
+        <argsstring></argsstring>
+        <name>area_</name>
+        <qualifiedname>SpineMesh::area_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mesh junction area pre-calculations for each <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref>. This is the cross-section area of the middle of each voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="203" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" bodystart="203" bodyend="-1"/>
+        <referencedby refid="classSpineMesh_1a4cb3176ef0fca61aab5f23ed5b23a268" compoundref="SpineMesh_8cpp" startline="400" endline="403">getVoxelArea</referencedby>
+        <referencedby refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">handleSpineList</referencedby>
+        <referencedby refid="classSpineMesh_1a7e6a754a4b04ca2b9fd6b8a7eb7bed44" compoundref="SpineMesh_8cpp" startline="152" endline="159">SpineMesh</referencedby>
+        <referencedby refid="classSpineMesh_1aea134dd6fb52a768e819e8d2574cab69" compoundref="SpineMesh_8cpp" startline="419" endline="433">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSpineMesh_1a832d3c801624163faa6c88dbb5a8a98a" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SpineMesh::length_</definition>
+        <argsstring></argsstring>
+        <name>length_</name>
+        <qualifiedname>SpineMesh::length_</qualifiedname>
+        <briefdescription>
+<para>Pre-calculation of length of each <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="206" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" bodystart="206" bodyend="-1"/>
+        <referencedby refid="classSpineMesh_1af7edbc754b36da2b57aabc62e08b2d51" compoundref="SpineMesh_8cpp" startline="405" endline="408">getVoxelLength</referencedby>
+        <referencedby refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">handleSpineList</referencedby>
+        <referencedby refid="classSpineMesh_1a7e6a754a4b04ca2b9fd6b8a7eb7bed44" compoundref="SpineMesh_8cpp" startline="152" endline="159">SpineMesh</referencedby>
+        <referencedby refid="classSpineMesh_1aea134dd6fb52a768e819e8d2574cab69" compoundref="SpineMesh_8cpp" startline="419" endline="433">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classSpineEntry" kindref="compound">SpineEntry</ref> &gt;</type>
+        <definition>vector&lt; SpineEntry &gt; SpineMesh::spines_</definition>
+        <argsstring></argsstring>
+        <name>spines_</name>
+        <qualifiedname>SpineMesh::spines_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These do the actual work. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="183" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="classSpineMesh_1ad8ad99b477713fd04e0d1f7859f9a7f2" compoundref="SpineMesh_8cpp" startline="472" endline="477">buildStencil</referencedby>
+        <referencedby refid="classSpineMesh_1aeda46d15ed35b9f588309c0e2614c913" compoundref="SpineMesh_8cpp" startline="345" endline="352">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classSpineMesh_1aff83d4c8a3df79fff5f4703c77cabe81" compoundref="SpineMesh_8cpp" startline="323" endline="326">getCoordinates</referencedby>
+        <referencedby refid="classSpineMesh_1a51c5676c78734eb5d0aba5a3e3b4a3f5" compoundref="SpineMesh_8cpp" startline="202" endline="208">getElecComptMap</referencedby>
+        <referencedby refid="classSpineMesh_1acfb560f3acfd54162aef68e50d3528aa" compoundref="SpineMesh_8cpp" startline="218" endline="224">getEndVoxelInCompt</referencedby>
+        <referencedby refid="classSpineMesh_1a0c9927abf0ac27595badcf92f69e4fcf" compoundref="SpineMesh_8cpp" startline="305" endline="311">getMeshEntryVolume</referencedby>
+        <referencedby refid="classSpineMesh_1a52cbfadcdb58aaa7aaacf927904cc170" compoundref="SpineMesh_8cpp" startline="292" endline="296">getMeshType</referencedby>
+        <referencedby refid="classSpineMesh_1a51c827e5fa2e9d823964340842bc34e2" compoundref="SpineMesh_8cpp" startline="194" endline="200">getNeuronVoxel</referencedby>
+        <referencedby refid="classSpineMesh_1a191bf4fafccb3b83fad5ca0984ffede4" compoundref="SpineMesh_8cpp" startline="183" endline="189">getParentVoxel</referencedby>
+        <referencedby refid="classSpineMesh_1afe2827492f63f4707d1c5021e7ef9122" compoundref="SpineMesh_8cpp" startline="210" endline="216">getStartVoxelInCompt</referencedby>
+        <referencedby refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">handleSpineList</referencedby>
+        <referencedby refid="classSpineMesh_1afd206c7bc30079befd60218c66b19918" compoundref="SpineMesh_8cpp" startline="505" endline="511">indexToSpace</referencedby>
+        <referencedby refid="classSpineMesh_1a8835bbe2ffd844d92999e08f4f4eff82" compoundref="SpineMesh_8cpp" startline="440" endline="443">innerGetNumEntries</referencedby>
+        <referencedby refid="classSpineMesh_1a7b08bf7693ab9d3040dea6c3cb4c4981" compoundref="SpineMesh_8cpp" startline="554" endline="561">matchCubeMeshEntries</referencedby>
+        <referencedby refid="classSpineMesh_1a0e2e7d002152dfc0562accc9932e8a00" compoundref="SpineMesh_8cpp" startline="540" endline="552">matchNeuroMeshEntries</referencedby>
+        <referencedby refid="classSpineMesh_1a130ffd77713609521a12ce4f389cbe9c" compoundref="SpineMesh_8cpp" startline="513" endline="533">nearest</referencedby>
+        <referencedby refid="classSpineMesh_1ae4b57e5a3263c1e018d97f294775ac73" compoundref="SpineMesh_8cpp" startline="313" endline="319">setMeshEntryVolume</referencedby>
+        <referencedby refid="classSpineMesh_1a7e6a754a4b04ca2b9fd6b8a7eb7bed44" compoundref="SpineMesh_8cpp" startline="152" endline="159">SpineMesh</referencedby>
+        <referencedby refid="classSpineMesh_1a7020503f6afec614f4ea4b6401de3d4e" compoundref="SpineMesh_8cpp" startline="161" endline="165">SpineMesh</referencedby>
+        <referencedby refid="classSpineMesh_1ac7b7331b81c236f6685249ed321cbfd7" compoundref="SpineMesh_8cpp" startline="464" endline="467">spines</referencedby>
+        <referencedby refid="classSpineMesh_1a9dd17dfd99f2a77dd4630d233a8cd1ff" compoundref="SpineMesh_8cpp" startline="387" endline="398">vGetVoxelMidpoint</referencedby>
+        <referencedby refid="classSpineMesh_1aea134dd6fb52a768e819e8d2574cab69" compoundref="SpineMesh_8cpp" startline="419" endline="433">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSpineMesh_1a856c8b803cf0ed0526cade36c157bb08" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SpineMesh::surfaceGranularity_</definition>
+        <argsstring></argsstring>
+        <name>surfaceGranularity_</name>
+        <qualifiedname>SpineMesh::surfaceGranularity_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Decides how finely to subdivide diffLength_ or radius or cubic mesh side when computing surfacearea of intersections with <ref refid="classCubeMesh" kindref="compound">CubeMesh</ref>. Defaults to 0.1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="190" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" bodystart="190" bodyend="-1"/>
+        <referencedby refid="classSpineMesh_1a7b08bf7693ab9d3040dea6c3cb4c4981" compoundref="SpineMesh_8cpp" startline="554" endline="561">matchCubeMeshEntries</referencedby>
+        <referencedby refid="classSpineMesh_1a7e6a754a4b04ca2b9fd6b8a7eb7bed44" compoundref="SpineMesh_8cpp" startline="152" endline="159">SpineMesh</referencedby>
+        <referencedby refid="classSpineMesh_1a7020503f6afec614f4ea4b6401de3d4e" compoundref="SpineMesh_8cpp" startline="161" endline="165">SpineMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSpineMesh_1a885a68daf9c9e5084d2d0f47e3f7d47d" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SpineMesh::vs_</definition>
+        <argsstring></argsstring>
+        <name>vs_</name>
+        <qualifiedname>SpineMesh::vs_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volscale pre-calculations for each <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref>. vs = #molecules / vol where vol is expressed in m^3. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="197" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" bodystart="197" bodyend="-1"/>
+        <referencedby refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">handleSpineList</referencedby>
+        <referencedby refid="classSpineMesh_1a7e6a754a4b04ca2b9fd6b8a7eb7bed44" compoundref="SpineMesh_8cpp" startline="152" endline="159">SpineMesh</referencedby>
+        <referencedby refid="classSpineMesh_1abb8be59e0dc2ad7b73dbe901056ac8c2" compoundref="SpineMesh_8cpp" startline="410" endline="417">vGetEntireVolume</referencedby>
+        <referencedby refid="classSpineMesh_1a4fc215b2bc1b91ae16140ac5da777f6d" compoundref="SpineMesh_8cpp" startline="382" endline="385">vGetVoxelVolume</referencedby>
+        <referencedby refid="classSpineMesh_1aea134dd6fb52a768e819e8d2574cab69" compoundref="SpineMesh_8cpp" startline="419" endline="433">vSetVolumeNotRates</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSpineMesh_1ad8ad99b477713fd04e0d1f7859f9a7f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpineMesh::buildStencil</definition>
+        <argsstring>()</argsstring>
+        <name>buildStencil</name>
+        <qualifiedname>SpineMesh::buildStencil</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="137" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="472" bodyend="477"/>
+        <references refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" compoundref="MeshCompt_8cpp" startline="49" endline="52">MeshCompt::innerResetStencil</references>
+        <references refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" compoundref="MeshCompt_8cpp" startline="106" endline="110">MeshCompt::setStencilSize</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <referencedby refid="classSpineMesh_1a818ef676dfb6213dc8c232d9734822f3" compoundref="SpineMesh_8cpp" startline="233" endline="236">updateCoords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1aeda46d15ed35b9f588309c0e2614c913" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double SpineMesh::extendedMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>extendedMeshEntryVolume</name>
+        <qualifiedname>SpineMesh::extendedMeshEntryVolume</qualifiedname>
+        <reimplements refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9">extendedMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Vol of all mesh Entries including abutting diff-coupled voxels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return volume of mesh Entry, including for diffusively coupled voxels from other solvers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="91" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="345" bodyend="352"/>
+        <references refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9" compoundref="MeshCompt_8cpp" startline="36" endline="40">MeshCompt::extendedMeshEntryVolume</references>
+        <references refid="classSpineMesh_1a0c9927abf0ac27595badcf92f69e4fcf" compoundref="SpineMesh_8cpp" startline="305" endline="311">getMeshEntryVolume</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1aff83d4c8a3df79fff5f4703c77cabe81" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SpineMesh::getCoordinates</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getCoordinates</name>
+        <qualifiedname>SpineMesh::getCoordinates</qualifiedname>
+        <reimplements refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca">getCoordinates</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return coords of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return coords of mesh Entry. For <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref>, coords are x1y1z1 x2y2z2 x3y3z3 r0 r1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="85" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="323" bodyend="326"/>
+        <references refid="classSpineEntry_1ab962d187d8d3ff486c7382b073ca3e91" compoundref="SpineEntry_8cpp" startline="188" endline="204">SpineEntry::spineCoords</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a5656f07ab133ab608c52e9116f1ccc43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SpineMesh::getDiffusionArea</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getDiffusionArea</name>
+        <qualifiedname>SpineMesh::getDiffusionArea</qualifiedname>
+        <reimplements refid="classChemCompt_1a2915e3d0730c4b18a305ebc57e49b2eb">getDiffusionArea</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return diffusion X-section area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return diffusion X-section area for each neighbor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="87" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="329" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1aabb0b9d29ef873b10bd809a4d932f9e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; SpineMesh::getDiffusionScaling</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getDiffusionScaling</name>
+        <qualifiedname>SpineMesh::getDiffusionScaling</qualifiedname>
+        <reimplements refid="classChemCompt_1a081367d727b267b5f75e825c0deb9330">getDiffusionScaling</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return scale factor for diffusion. 1 here. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return scale factor for diffusion. I think all dendite tips need to return just one entry of 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="89" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="338" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a51c5676c78734eb5d0aba5a3e3b4a3f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; SpineMesh::getElecComptMap</definition>
+        <argsstring>() const</argsstring>
+        <name>getElecComptMap</name>
+        <qualifiedname>SpineMesh::getElecComptMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns vector of Ids of electrical compts that map to respective voxels in <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="65" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="202" bodyend="208"/>
+        <references refid="classSpineEntry_1aec75bb0adfcc17661709fa2422cab793" compoundref="SpineEntry_8cpp" startline="114" endline="117">SpineEntry::headId</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <referencedby refid="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" compoundref="SpineMesh_8cpp" startline="46" endline="141">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1acfb560f3acfd54162aef68e50d3528aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; SpineMesh::getEndVoxelInCompt</definition>
+        <argsstring>() const</argsstring>
+        <name>getEndVoxelInCompt</name>
+        <qualifiedname>SpineMesh::getEndVoxelInCompt</qualifiedname>
+        <briefdescription>
+<para>Returns index of end voxel mapping to elec compt, just first+1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="70" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="218" bodyend="224"/>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <referencedby refid="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" compoundref="SpineMesh_8cpp" startline="46" endline="141">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a103fd05ba6806fbfab2396025ea16749" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SpineMesh::getMeshDimensions</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshDimensions</name>
+        <qualifiedname>SpineMesh::getMeshDimensions</qualifiedname>
+        <reimplements refid="classChemCompt_1ae26d4e8d6fcf619f172d06737d4f098f">getMeshDimensions</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return dimensions of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="79" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="299" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a0c9927abf0ac27595badcf92f69e4fcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double SpineMesh::getMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshEntryVolume</name>
+        <qualifiedname>SpineMesh::getMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a">getMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return volume of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="81" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="305" bodyend="311"/>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <references refid="classSpineEntry_1a7f111c8b7924373bde52993f783d0ec8" compoundref="SpineEntry_8cpp" startline="140" endline="143">SpineEntry::volume</references>
+        <referencedby refid="classSpineMesh_1aeda46d15ed35b9f588309c0e2614c913" compoundref="SpineMesh_8cpp" startline="345" endline="352">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">handleSpineList</referencedby>
+        <referencedby refid="classPsdMesh_1ab57e212627f557058e507610551777c0" compoundref="PsdMesh_8cpp" startline="491" endline="502">PsdMesh::matchSpineMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a52cbfadcdb58aaa7aaacf927904cc170" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SpineMesh::getMeshType</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getMeshType</name>
+        <qualifiedname>SpineMesh::getMeshType</qualifiedname>
+        <reimplements refid="classChemCompt_1a50c687c6bb40a49ae6d629def63ed139">getMeshType</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return MeshType of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="77" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="292" bodyend="296"/>
+        <references refid="MeshEntry_8h_1a24f376ccef7a39450a2fcdbf5ba97cedaeb5cf98698189904b535aaae2afa49f3" compoundref="MeshEntry_8h" startline="20">CYL</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a51c827e5fa2e9d823964340842bc34e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; SpineMesh::getNeuronVoxel</definition>
+        <argsstring>() const</argsstring>
+        <name>getNeuronVoxel</name>
+        <qualifiedname>SpineMesh::getNeuronVoxel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns index of voxel on <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> to which this spine is connected. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="59" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="194" bodyend="200"/>
+        <references refid="classSpineEntry_1a7d9474f1e0bd72ae5c38e7ac8bd29b78" compoundref="SpineEntry_8cpp" startline="104" endline="107">SpineEntry::parent</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <referencedby refid="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" compoundref="SpineMesh_8cpp" startline="46" endline="141">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a191bf4fafccb3b83fad5ca0984ffede4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; SpineMesh::getParentVoxel</definition>
+        <argsstring>() const</argsstring>
+        <name>getParentVoxel</name>
+        <qualifiedname>SpineMesh::getParentVoxel</qualifiedname>
+        <reimplements refid="classMeshCompt_1a240b1e27d1bd66056e7c6c092e6b7b1e">getParentVoxel</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the diffusively connected parent voxel within the current (spine) mesh. Since each spine is treated as an independed voxel, there is no such voxel, so we return -1U for each spine. Note that there is a separate function that returns the parentVoxel referred to the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> that this spine sits on. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="54" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="183" bodyend="189"/>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <referencedby refid="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" compoundref="SpineMesh_8cpp" startline="46" endline="141">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1afe2827492f63f4707d1c5021e7ef9122" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; SpineMesh::getStartVoxelInCompt</definition>
+        <argsstring>() const</argsstring>
+        <name>getStartVoxelInCompt</name>
+        <qualifiedname>SpineMesh::getStartVoxelInCompt</qualifiedname>
+        <briefdescription>
+<para>Returns index of first voxel mapping to elec compt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="68" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="210" bodyend="216"/>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <referencedby refid="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" compoundref="SpineMesh_8cpp" startline="46" endline="141">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a4cb3176ef0fca61aab5f23ed5b23a268" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; SpineMesh::getVoxelArea</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelArea</name>
+        <qualifiedname>SpineMesh::getVoxelArea</qualifiedname>
+        <reimplements refid="classMeshCompt_1ad0b8b02617f99d8f15c7655e4e068cc3">getVoxelArea</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="171" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="400" bodyend="403"/>
+        <references refid="classSpineMesh_1ab2fdfa4c44c20049c257e7dc034666fb" compoundref="SpineMesh_8h" startline="203">area_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1af7edbc754b36da2b57aabc62e08b2d51" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; SpineMesh::getVoxelLength</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelLength</name>
+        <qualifiedname>SpineMesh::getVoxelLength</qualifiedname>
+        <reimplements refid="classMeshCompt_1aa7a21c23e8d57611c313f59dc2cb3827">getVoxelLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="172" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="405" bodyend="408"/>
+        <references refid="classSpineMesh_1a832d3c801624163faa6c88dbb5a8a98a" compoundref="SpineMesh_8h" startline="206">length_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpineMesh::handleSpineList</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; Id &gt; shaft, vector&lt; Id &gt; head, vector&lt; unsigned int &gt; parentVoxel)</argsstring>
+        <name>handleSpineList</name>
+        <qualifiedname>SpineMesh::handleSpineList</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+          <declname>shaft</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt;</type>
+          <declname>parentVoxel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="130" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="244" bodyend="285"/>
+        <references refid="classSpineMesh_1ab2fdfa4c44c20049c257e7dc034666fb" compoundref="SpineMesh_8h" startline="203">area_</references>
+        <references refid="classSpineEntry_1a2ed636d711a41f78e7289d146dfd2fd3" compoundref="SpineEntry_8cpp" startline="179" endline="186">SpineEntry::diffusionLength</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classSpineMesh_1a0c9927abf0ac27595badcf92f69e4fcf" compoundref="SpineMesh_8cpp" startline="305" endline="311">getMeshEntryVolume</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classSpineMesh_1a832d3c801624163faa6c88dbb5a8a98a" compoundref="SpineMesh_8h" startline="206">length_</references>
+        <references refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" compoundref="ChemCompt_8cpp" startline="439" endline="442">ChemCompt::lookupEntry</references>
+        <references refid="classSpineEntry_1a22b2d8e3fd0ba94cbaa0363f790941be" compoundref="SpineEntry_8cpp" startline="174" endline="177">SpineEntry::rootArea</references>
+        <references refid="classSpineEntry_1a25f3c820b8f234afd54445e56029f038" compoundref="SpineEntry_8cpp" startline="24" endline="68">SpineEntry::SpineEntry</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <references refid="classMeshEntry_1a21da1c171c5a4e41044e080a63ba05f8" compoundref="MeshEntry_8cpp" startline="267" endline="276">MeshEntry::triggerRemesh</references>
+        <references refid="classSpineMesh_1a818ef676dfb6213dc8c232d9734822f3" compoundref="SpineMesh_8cpp" startline="233" endline="236">updateCoords</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <references refid="classSpineEntry_1a7f111c8b7924373bde52993f783d0ec8" compoundref="SpineEntry_8cpp" startline="140" endline="143">SpineEntry::volume</references>
+        <references refid="classSpineMesh_1a885a68daf9c9e5084d2d0f47e3f7d47d" compoundref="SpineMesh_8h" startline="197">vs_</references>
+        <referencedby refid="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" compoundref="SpineMesh_8cpp" startline="46" endline="141">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1afd206c7bc30079befd60218c66b19918" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpineMesh::indexToSpace</definition>
+        <argsstring>(unsigned int index, double &amp;x, double &amp;y, double &amp;z) const</argsstring>
+        <name>indexToSpace</name>
+        <qualifiedname>SpineMesh::indexToSpace</qualifiedname>
+        <reimplements refid="classChemCompt_1a16a4f8317f8b9c8b9042d96cb3230084">indexToSpace</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts specified index to xyz coords of middle of voxel Values out of range return original xyz </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="166" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="505" bodyend="511"/>
+        <references refid="classSpineMesh_1a8835bbe2ffd844d92999e08f4f4eff82" compoundref="SpineMesh_8cpp" startline="440" endline="443">innerGetNumEntries</references>
+        <references refid="classSpineEntry_1a144b1069acbde7e83e8bb67b5f022a70" compoundref="SpineEntry_8cpp" startline="124" endline="129">SpineEntry::mid</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a5340d2376bd57a2ddd2ecd0bcba417ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpineMesh::innerBuildDefaultMesh</definition>
+        <argsstring>(const Eref &amp;e, double volume, unsigned int numEntries)</argsstring>
+        <name>innerBuildDefaultMesh</name>
+        <qualifiedname>SpineMesh::innerBuildDefaultMesh</qualifiedname>
+        <reimplements refid="classChemCompt_1ad47583c93af9b85b1f5979a8f2730e29">innerBuildDefaultMesh</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numEntries</declname>
+        </param>
+        <briefdescription>
+<para>Virtual func to make a mesh with specified Volume and numEntries. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Not allowed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="115" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="457" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a7fc175e1eeb6c776a1096256f4f0c5ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SpineMesh::innerGetDimensions</definition>
+        <argsstring>() const</argsstring>
+        <name>innerGetDimensions</name>
+        <qualifiedname>SpineMesh::innerGetDimensions</qualifiedname>
+        <reimplements refid="classChemCompt_1ae6347eff16c758abcd89202283c168d7">innerGetDimensions</reimplements>
+        <briefdescription>
+<para>Returns # of dimensions, always 3 here. Inherited pure virt func. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="102" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="238" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a8835bbe2ffd844d92999e08f4f4eff82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SpineMesh::innerGetNumEntries</definition>
+        <argsstring>() const</argsstring>
+        <name>innerGetNumEntries</name>
+        <qualifiedname>SpineMesh::innerGetNumEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1a470081742eabd0580f158c1b165549f7">innerGetNumEntries</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Returns number of <ref refid="classMeshEntry" kindref="compound">MeshEntry</ref> in array </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="97" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="440" bodyend="443"/>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <referencedby refid="classSpineMesh_1afd206c7bc30079befd60218c66b19918" compoundref="SpineMesh_8cpp" startline="505" endline="511">indexToSpace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1ac2a6c77f7c6f778b9e4df49089d77a73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpineMesh::innerHandleNodeInfo</definition>
+        <argsstring>(const Eref &amp;e, unsigned int numNodes, unsigned int numThreads)</argsstring>
+        <name>innerHandleNodeInfo</name>
+        <qualifiedname>SpineMesh::innerHandleNodeInfo</qualifiedname>
+        <reimplements refid="classChemCompt_1a2ef09b42b75a38963cde30ff66e68216">innerHandleNodeInfo</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numNodes</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numThreads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="126" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="371" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1ae1abf8c73f2645711f8dfc314b4bec4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpineMesh::innerSetNumEntries</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>innerSetNumEntries</name>
+        <qualifiedname>SpineMesh::innerSetNumEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1aa7641511cdf773c5bbaacef66b6ea5e5">innerSetNumEntries</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual func. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual func. Assigns number of MeshEntries. Doesn&apos;t do anything, we have to set spine # from geometry. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="99" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="449" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a7b08bf7693ab9d3040dea6c3cb4c4981" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpineMesh::matchCubeMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchCubeMeshEntries</name>
+        <qualifiedname>SpineMesh::matchCubeMeshEntries</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="149" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="554" bodyend="561"/>
+        <references refid="classSpineEntry_1abf8c0252287ffe7d4fce31ad4ce7e278" compoundref="SpineEntry_8cpp" startline="145" endline="151">SpineEntry::matchCubeMeshEntriesToHead</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <references refid="classSpineMesh_1a856c8b803cf0ed0526cade36c157bb08" compoundref="SpineMesh_8h" startline="190">surfaceGranularity_</references>
+        <referencedby refid="classSpineMesh_1a64e7b686dbb5cbda0c92b0e4dfc43393" compoundref="SpineMesh_8cpp" startline="483" endline="503">matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a64e7b686dbb5cbda0c92b0e4dfc43393" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpineMesh::matchMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchMeshEntries</name>
+        <qualifiedname>SpineMesh::matchMeshEntries</qualifiedname>
+        <reimplements refid="classChemCompt_1a40842a753e317d720a5495166c56dd58">matchMeshEntries</reimplements>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the meshIndices (NOT spatial indices) of all adjacent mesh entry pairs on ether side of the (self, other) junction. meshIndices are the indices that look up entries in the vector of pools. spatialIndices are (iz * ny + iy) * nx + ix, that is, a linear conversion of cartesian spatial indices. So, for two touching cubes, the return vector is the paired meshIndices on either side of the plane of contact. If one mesh has a finer mesh than the other, or if there are more than one contact points from self to other (for example, at a corner), then we just have multiple pairs using the same meshIndex of the repeated voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="143" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="483" bodyend="503"/>
+        <references refid="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" compoundref="ChemCompt_8cpp" startline="466" endline="478">ChemCompt::flipRet</references>
+        <references refid="classSpineMesh_1a7b08bf7693ab9d3040dea6c3cb4c4981" compoundref="SpineMesh_8cpp" startline="554" endline="561">matchCubeMeshEntries</references>
+        <references refid="classSpineMesh_1a0e2e7d002152dfc0562accc9932e8a00" compoundref="SpineMesh_8cpp" startline="540" endline="552">matchNeuroMeshEntries</references>
+        <references refid="classPsdMesh_1ab57e212627f557058e507610551777c0" compoundref="PsdMesh_8cpp" startline="491" endline="502">PsdMesh::matchSpineMeshEntries</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a0e2e7d002152dfc0562accc9932e8a00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpineMesh::matchNeuroMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchNeuroMeshEntries</name>
+        <qualifiedname>SpineMesh::matchNeuroMeshEntries</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="146" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="540" bodyend="552"/>
+        <references refid="classSpineEntry_1a2ed636d711a41f78e7289d146dfd2fd3" compoundref="SpineEntry_8cpp" startline="179" endline="186">SpineEntry::diffusionLength</references>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classNeuroMesh_1aa3c76d3a0de019c16ec50e9b71ddcb63" compoundref="NeuroMesh_8cpp" startline="904" endline="917">NeuroMesh::getMeshEntryVolume</references>
+        <references refid="classSpineEntry_1a7d9474f1e0bd72ae5c38e7ac8bd29b78" compoundref="SpineEntry_8cpp" startline="104" endline="107">SpineEntry::parent</references>
+        <references refid="classSpineEntry_1a22b2d8e3fd0ba94cbaa0363f790941be" compoundref="SpineEntry_8cpp" startline="174" endline="177">SpineEntry::rootArea</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <references refid="classSpineEntry_1a7f111c8b7924373bde52993f783d0ec8" compoundref="SpineEntry_8cpp" startline="140" endline="143">SpineEntry::volume</references>
+        <references refid="classVoxelJunction_1aee2e9d56c68e5cbd462d805a3ceeabe9" compoundref="VoxelJunction_8h" startline="21" endline="25">VoxelJunction::VoxelJunction</references>
+        <referencedby refid="classNeuroMesh_1a87f8811cba83e45b1a24c8da92aa0fc0" compoundref="NeuroMesh_8cpp" startline="1249" endline="1279">NeuroMesh::matchMeshEntries</referencedby>
+        <referencedby refid="classSpineMesh_1a64e7b686dbb5cbda0c92b0e4dfc43393" compoundref="SpineMesh_8cpp" startline="483" endline="503">matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1aa8d27bb8a7a6a3d586f085c981979dda" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpineMesh::matchSpineMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>matchSpineMeshEntries</name>
+        <qualifiedname>SpineMesh::matchSpineMeshEntries</qualifiedname>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="152" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="535" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a130ffd77713609521a12ce4f389cbe9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double SpineMesh::nearest</definition>
+        <argsstring>(double x, double y, double z, unsigned int &amp;index) const</argsstring>
+        <name>nearest</name>
+        <qualifiedname>SpineMesh::nearest</qualifiedname>
+        <reimplements refid="classChemCompt_1a6669c8fe5495d97b22da6d6244a88d12">nearest</reimplements>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This works a little different from other subclass versions of the function. It finds the index of the mesh entry whose centre is closest to the specified coords, and returns the distance to the centre. Doesn&apos;t worry about whether this distance is inside or outside cell. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="163" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="513" bodyend="533"/>
+        <references refid="classVec_1a056e27a8b76e7081c3358553f85a54ec" compoundref="Vec_8cpp" startline="81" endline="84">Vec::distance</references>
+        <references refid="classSpineEntry_1a144b1069acbde7e83e8bb67b5f022a70" compoundref="SpineEntry_8cpp" startline="124" endline="129">SpineEntry::mid</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <references refid="classVec_1ae9852b7e40650f19652ffb59cd664442" compoundref="Vec_8cpp" startline="14" endline="16">Vec::Vec</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1ae4b57e5a3263c1e018d97f294775ac73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SpineMesh::setMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid, double volume)</argsstring>
+        <name>setMeshEntryVolume</name>
+        <qualifiedname>SpineMesh::setMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1ac2343832803b9366231f1d2d816a0e21">setMeshEntryVolume</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to assign volume of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="83" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="313" bodyend="319"/>
+        <references refid="classSpineEntry_1a0429ac84199b947d7e903d6f551bbca7" compoundref="SpineEntry_8cpp" startline="234" endline="246">SpineEntry::setVolume</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a7e6a754a4b04ca2b9fd6b8a7eb7bed44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpineMesh::SpineMesh</definition>
+        <argsstring>()</argsstring>
+        <name>SpineMesh</name>
+        <qualifiedname>SpineMesh::SpineMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="29" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="152" bodyend="159"/>
+        <references refid="classSpineMesh_1ab2fdfa4c44c20049c257e7dc034666fb" compoundref="SpineMesh_8h" startline="203">area_</references>
+        <references refid="classSpineMesh_1a832d3c801624163faa6c88dbb5a8a98a" compoundref="SpineMesh_8h" startline="206">length_</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <references refid="classSpineMesh_1a856c8b803cf0ed0526cade36c157bb08" compoundref="SpineMesh_8h" startline="190">surfaceGranularity_</references>
+        <references refid="classSpineMesh_1a885a68daf9c9e5084d2d0f47e3f7d47d" compoundref="SpineMesh_8h" startline="197">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a7020503f6afec614f4ea4b6401de3d4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpineMesh::SpineMesh</definition>
+        <argsstring>(const SpineMesh &amp;other)</argsstring>
+        <name>SpineMesh</name>
+        <qualifiedname>SpineMesh::SpineMesh</qualifiedname>
+        <param>
+          <type>const <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="30" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="161" bodyend="165"/>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <references refid="classSpineMesh_1a856c8b803cf0ed0526cade36c157bb08" compoundref="SpineMesh_8h" startline="190">surfaceGranularity_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1ac7b7331b81c236f6685249ed321cbfd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const vector&lt; <ref refid="classSpineEntry" kindref="compound">SpineEntry</ref> &gt; &amp;</type>
+        <definition>const vector&lt; SpineEntry &gt; &amp; SpineMesh::spines</definition>
+        <argsstring>() const</argsstring>
+        <name>spines</name>
+        <qualifiedname>SpineMesh::spines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="175" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="464" bodyend="467"/>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1af17f4fb68b49bc0dd6aa52f17bc3c4c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpineMesh::transmitChange</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>transmitChange</name>
+        <qualifiedname>SpineMesh::transmitChange</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="135" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a818ef676dfb6213dc8c232d9734822f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpineMesh::updateCoords</definition>
+        <argsstring>()</argsstring>
+        <name>updateCoords</name>
+        <qualifiedname>SpineMesh::updateCoords</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recomputes all local coordinate and meshing data following a change in any of the coord parameters</para>
+<para>This assumes that lambda is the quantity to preserve, over numEntries. So when the compartment changes volume, numEntries changes too. Assumes that the soma node is at index 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="41" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="233" bodyend="236"/>
+        <references refid="classSpineMesh_1ad8ad99b477713fd04e0d1f7859f9a7f2" compoundref="SpineMesh_8cpp" startline="472" endline="477">buildStencil</references>
+        <referencedby refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">handleSpineList</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1abb8be59e0dc2ad7b73dbe901056ac8c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double SpineMesh::vGetEntireVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetEntireVolume</name>
+        <qualifiedname>SpineMesh::vGetEntireVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a546b5a40463c3e84cc5b33baae6fd709">vGetEntireVolume</reimplements>
+        <briefdescription>
+<para>Inherited virtual func. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="105" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="410" bodyend="417"/>
+        <references refid="classSpineMesh_1a885a68daf9c9e5084d2d0f47e3f7d47d" compoundref="SpineMesh_8h" startline="197">vs_</references>
+        <referencedby refid="classSpineMesh_1aea134dd6fb52a768e819e8d2574cab69" compoundref="SpineMesh_8cpp" startline="419" endline="433">vSetVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a9dd17dfd99f2a77dd4630d233a8cd1ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; SpineMesh::vGetVoxelMidpoint</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetVoxelMidpoint</name>
+        <qualifiedname>SpineMesh::vGetVoxelMidpoint</qualifiedname>
+        <reimplements refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70">vGetVoxelMidpoint</reimplements>
+        <briefdescription>
+<para>Virtual func so that derived classes can return voxel midpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="170" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="387" bodyend="398"/>
+        <references refid="classSpineEntry_1a144b1069acbde7e83e8bb67b5f022a70" compoundref="SpineEntry_8cpp" startline="124" endline="129">SpineEntry::mid</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1a4fc215b2bc1b91ae16140ac5da777f6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>const vector&lt; double &gt; &amp; SpineMesh::vGetVoxelVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>vGetVoxelVolume</name>
+        <qualifiedname>SpineMesh::vGetVoxelVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">vGetVoxelVolume</reimplements>
+        <briefdescription>
+<para>Virtual func so that derived classes can pass voxel volume back. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="169" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="382" bodyend="385"/>
+        <references refid="classSpineMesh_1a885a68daf9c9e5084d2d0f47e3f7d47d" compoundref="SpineMesh_8h" startline="197">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1aea134dd6fb52a768e819e8d2574cab69" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool SpineMesh::vSetVolumeNotRates</definition>
+        <argsstring>(double volume)</argsstring>
+        <name>vSetVolumeNotRates</name>
+        <qualifiedname>SpineMesh::vSetVolumeNotRates</qualifiedname>
+        <reimplements refid="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c">vSetVolumeNotRates</reimplements>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual func. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="108" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="419" bodyend="433"/>
+        <references refid="classSpineMesh_1ab2fdfa4c44c20049c257e7dc034666fb" compoundref="SpineMesh_8h" startline="203">area_</references>
+        <references refid="classSpineMesh_1a832d3c801624163faa6c88dbb5a8a98a" compoundref="SpineMesh_8h" startline="206">length_</references>
+        <references refid="classSpineEntry_1a0429ac84199b947d7e903d6f551bbca7" compoundref="SpineEntry_8cpp" startline="234" endline="246">SpineEntry::setVolume</references>
+        <references refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" compoundref="SpineMesh_8h" startline="183">spines_</references>
+        <references refid="classSpineMesh_1abb8be59e0dc2ad7b73dbe901056ac8c2" compoundref="SpineMesh_8cpp" startline="410" endline="417">vGetEntireVolume</references>
+        <references refid="classSpineMesh_1a885a68daf9c9e5084d2d0f47e3f7d47d" compoundref="SpineMesh_8h" startline="197">vs_</references>
+      </memberdef>
+      <memberdef kind="function" id="classSpineMesh_1ade44548bc0935505b9fa316d8365cb59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpineMesh::~SpineMesh</definition>
+        <argsstring>()</argsstring>
+        <name>~SpineMesh</name>
+        <qualifiedname>SpineMesh::~SpineMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="31" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * SpineMesh::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>SpineMesh::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="177" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.cpp" bodystart="46" bodyend="141"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classEpFunc3_1a17dc91b7c23ff8ed38f968e673375c25" compoundref="EpFunc_8h" startline="104" endline="106">EpFunc3&lt; T, A1, A2, A3 &gt;::EpFunc3</references>
+        <references refid="classSpineMesh_1a51c5676c78734eb5d0aba5a3e3b4a3f5" compoundref="SpineMesh_8cpp" startline="202" endline="208">getElecComptMap</references>
+        <references refid="classSpineMesh_1acfb560f3acfd54162aef68e50d3528aa" compoundref="SpineMesh_8cpp" startline="218" endline="224">getEndVoxelInCompt</references>
+        <references refid="classSpineMesh_1a51c827e5fa2e9d823964340842bc34e2" compoundref="SpineMesh_8cpp" startline="194" endline="200">getNeuronVoxel</references>
+        <references refid="classSpineMesh_1a191bf4fafccb3b83fad5ca0984ffede4" compoundref="SpineMesh_8cpp" startline="183" endline="189">getParentVoxel</references>
+        <references refid="classSpineMesh_1afe2827492f63f4707d1c5021e7ef9122" compoundref="SpineMesh_8cpp" startline="210" endline="216">getStartVoxelInCompt</references>
+        <references refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">handleSpineList</references>
+        <references refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">ChemCompt::initCinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> sets up the diffusion geometries for dendritic spines. It is filled by a message from a <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> that contains information about the matching voxel on the <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>, and the compartment Ids for the spine shaft and head. The <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> can further generate a PSD mesh with the info for the PSD geometries. This assumes that the each spine is a single voxel: single diffusive compartment, well-stirred. The shaft is treated as zero volume diffusion barrier to the dendrite. The PSD is a separate compt with its own diffusion coupling to the spine head. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SpineMesh</label>
+        <link refid="classSpineMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-entry_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-coreStencil_</edgelabel>
+          <edgelabel>-m_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-extendedMeshEntryVolume_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MeshEntry</label>
+        <link refid="classMeshEntry"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#N_</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SpineMesh</label>
+        <link refid="classSpineMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-area_</edgelabel>
+          <edgelabel>-length_</edgelabel>
+          <edgelabel>-vs_</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>T</label>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" line="26" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/SpineMesh.h" bodystart="27" bodyend="207"/>
+    <listofallmembers>
+      <member refid="classMeshCompt_1a781b9a02f4af37458eda4ffb1a6e615d" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>addRow</name></member>
+      <member refid="classSpineMesh_1ab2fdfa4c44c20049c257e7dc034666fb" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>area_</name></member>
+      <member refid="classChemCompt_1a7127a2f6f2fc7bb9e1b5e23c0b3c704d" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>boundaries_</name></member>
+      <member refid="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>buildDefaultMesh</name></member>
+      <member refid="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>buildJunction</name></member>
+      <member refid="classSpineMesh_1ad8ad99b477713fd04e0d1f7859f9a7f2" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>buildStencil</name></member>
+      <member refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>ChemCompt</name></member>
+      <member refid="classMeshCompt_1a2bc6647b552e0140c6f8e8a05599af95" prot="public" virt="virtual"><scope>SpineMesh</scope><name>clearExtendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>coreStencil_</name></member>
+      <member refid="classChemCompt_1a510fac43d511a189853bbb6d32afb774" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>distance</name></member>
+      <member refid="classChemCompt_1a82073727afa7625b507772406d39476f" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>entry_</name></member>
+      <member refid="classSpineMesh_1aeda46d15ed35b9f588309c0e2614c913" prot="public" virt="virtual"><scope>SpineMesh</scope><name>extendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>extendedMeshEntryVolume_</name></member>
+      <member refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" prot="public" virt="virtual"><scope>SpineMesh</scope><name>extendStencil</name></member>
+      <member refid="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>flipRet</name></member>
+      <member refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getChildConcs</name></member>
+      <member refid="classSpineMesh_1aff83d4c8a3df79fff5f4703c77cabe81" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getCoordinates</name></member>
+      <member refid="classSpineMesh_1a5656f07ab133ab608c52e9116f1ccc43" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getDiffusionArea</name></member>
+      <member refid="classSpineMesh_1aabb0b9d29ef873b10bd809a4d932f9e9" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getDiffusionScaling</name></member>
+      <member refid="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getDimensions</name></member>
+      <member refid="classSpineMesh_1a51c5676c78734eb5d0aba5a3e3b4a3f5" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getElecComptMap</name></member>
+      <member refid="classSpineMesh_1acfb560f3acfd54162aef68e50d3528aa" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getEndVoxelInCompt</name></member>
+      <member refid="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getEntireVolume</name></member>
+      <member refid="classChemCompt_1aa15b66e3669574b15f303a35af341102" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getIsMembraneBound</name></member>
+      <member refid="classSpineMesh_1a103fd05ba6806fbfab2396025ea16749" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getMeshDimensions</name></member>
+      <member refid="classSpineMesh_1a0c9927abf0ac27595badcf92f69e4fcf" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getMeshEntryVolume</name></member>
+      <member refid="classSpineMesh_1a52cbfadcdb58aaa7aaacf927904cc170" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getMeshType</name></member>
+      <member refid="classChemCompt_1ab2c1ef2c7882e253a2b7c045db87c7fb" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getMethod</name></member>
+      <member refid="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getNeighbors</name></member>
+      <member refid="classSpineMesh_1a51c827e5fa2e9d823964340842bc34e2" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getNeuronVoxel</name></member>
+      <member refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getNumEntries</name></member>
+      <member refid="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getOneVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getOneVoxelVolume</name></member>
+      <member refid="classSpineMesh_1a191bf4fafccb3b83fad5ca0984ffede4" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getParentVoxel</name></member>
+      <member refid="classSpineMesh_1afe2827492f63f4707d1c5021e7ef9122" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getStartVoxelInCompt</name></member>
+      <member refid="classMeshCompt_1a9342f82bc2304c99fb58daad6016cd5c" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getStencil</name></member>
+      <member refid="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getStencilIndex</name></member>
+      <member refid="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getStencilRate</name></member>
+      <member refid="classMeshCompt_1aae2b570a057a43104858c5f6c02f423e" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getStencilRow</name></member>
+      <member refid="classSpineMesh_1a4cb3176ef0fca61aab5f23ed5b23a268" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getVoxelArea</name></member>
+      <member refid="classSpineMesh_1af7edbc754b36da2b57aabc62e08b2d51" prot="public" virt="virtual"><scope>SpineMesh</scope><name>getVoxelLength</name></member>
+      <member refid="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>getVoxelVolume</name></member>
+      <member refid="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>handleNodeInfo</name></member>
+      <member refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>handleSpineList</name></member>
+      <member refid="classSpineMesh_1afd206c7bc30079befd60218c66b19918" prot="public" virt="virtual"><scope>SpineMesh</scope><name>indexToSpace</name></member>
+      <member refid="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>initCinfo</name></member>
+      <member refid="classSpineMesh_1a5340d2376bd57a2ddd2ecd0bcba417ae" prot="public" virt="virtual"><scope>SpineMesh</scope><name>innerBuildDefaultMesh</name></member>
+      <member refid="classSpineMesh_1a7fc175e1eeb6c776a1096256f4f0c5ef" prot="public" virt="virtual"><scope>SpineMesh</scope><name>innerGetDimensions</name></member>
+      <member refid="classSpineMesh_1a8835bbe2ffd844d92999e08f4f4eff82" prot="public" virt="virtual"><scope>SpineMesh</scope><name>innerGetNumEntries</name></member>
+      <member refid="classMeshCompt_1a7b8e15d0a73de4f467efcf733e095cb7" prot="public" virt="virtual"><scope>SpineMesh</scope><name>innerGetStencilRate</name></member>
+      <member refid="classSpineMesh_1ac2a6c77f7c6f778b9e4df49089d77a73" prot="public" virt="virtual"><scope>SpineMesh</scope><name>innerHandleNodeInfo</name></member>
+      <member refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" prot="public" virt="virtual"><scope>SpineMesh</scope><name>innerResetStencil</name></member>
+      <member refid="classSpineMesh_1ae1abf8c73f2645711f8dfc314b4bec4a" prot="public" virt="virtual"><scope>SpineMesh</scope><name>innerSetNumEntries</name></member>
+      <member refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>isMembraneBound_</name></member>
+      <member refid="classSpineMesh_1a832d3c801624163faa6c88dbb5a8a98a" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>length_</name></member>
+      <member refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>lookupEntry</name></member>
+      <member refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>m_</name></member>
+      <member refid="classSpineMesh_1a7b08bf7693ab9d3040dea6c3cb4c4981" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>matchCubeMeshEntries</name></member>
+      <member refid="classSpineMesh_1a64e7b686dbb5cbda0c92b0e4dfc43393" prot="public" virt="virtual"><scope>SpineMesh</scope><name>matchMeshEntries</name></member>
+      <member refid="classSpineMesh_1a0e2e7d002152dfc0562accc9932e8a00" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>matchNeuroMeshEntries</name></member>
+      <member refid="classSpineMesh_1aa8d27bb8a7a6a3d586f085c981979dda" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>matchSpineMeshEntries</name></member>
+      <member refid="classMeshCompt_1ad92606a51823a508e19ace8c08cc4af2" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>MeshCompt</name></member>
+      <member refid="classChemCompt_1ac9f3fa6dce7fafe302a205156668c390" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>method_</name></member>
+      <member refid="classSpineMesh_1a130ffd77713609521a12ce4f389cbe9c" prot="public" virt="virtual"><scope>SpineMesh</scope><name>nearest</name></member>
+      <member refid="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>resetStencil</name></member>
+      <member refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>setChildConcs</name></member>
+      <member refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>setEntireVolume</name></member>
+      <member refid="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>setIsMembraneBound</name></member>
+      <member refid="classSpineMesh_1ae4b57e5a3263c1e018d97f294775ac73" prot="public" virt="virtual"><scope>SpineMesh</scope><name>setMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a346cbd4ea599c929638609bc7f16f83a" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>setMethod</name></member>
+      <member refid="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>setNumEntries</name></member>
+      <member refid="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>setOneVoxelVolume</name></member>
+      <member refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>setStencilSize</name></member>
+      <member refid="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>setVolumeNotRates</name></member>
+      <member refid="classSpineMesh_1a7e6a754a4b04ca2b9fd6b8a7eb7bed44" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>SpineMesh</name></member>
+      <member refid="classSpineMesh_1a7020503f6afec614f4ea4b6401de3d4e" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>SpineMesh</name></member>
+      <member refid="classSpineMesh_1ac7b7331b81c236f6685249ed321cbfd7" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>spines</name></member>
+      <member refid="classSpineMesh_1a2d21b05ba11586c073732c2322f76efc" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>spines_</name></member>
+      <member refid="classSpineMesh_1a856c8b803cf0ed0526cade36c157bb08" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>surfaceGranularity_</name></member>
+      <member refid="classSpineMesh_1af17f4fb68b49bc0dd6aa52f17bc3c4c3" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>transmitChange</name></member>
+      <member refid="classSpineMesh_1a818ef676dfb6213dc8c232d9734822f3" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>updateCoords</name></member>
+      <member refid="classSpineMesh_1abb8be59e0dc2ad7b73dbe901056ac8c2" prot="public" virt="virtual"><scope>SpineMesh</scope><name>vGetEntireVolume</name></member>
+      <member refid="classSpineMesh_1a9dd17dfd99f2a77dd4630d233a8cd1ff" prot="public" virt="virtual"><scope>SpineMesh</scope><name>vGetVoxelMidpoint</name></member>
+      <member refid="classSpineMesh_1a4fc215b2bc1b91ae16140ac5da777f6d" prot="public" virt="virtual"><scope>SpineMesh</scope><name>vGetVoxelVolume</name></member>
+      <member refid="classChemCompt_1a1df70b909fac1208b80586b9092341e9" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>voxelVolOut</name></member>
+      <member refid="classSpineMesh_1a885a68daf9c9e5084d2d0f47e3f7d47d" prot="private" virt="non-virtual"><scope>SpineMesh</scope><name>vs_</name></member>
+      <member refid="classSpineMesh_1aea134dd6fb52a768e819e8d2574cab69" prot="public" virt="virtual"><scope>SpineMesh</scope><name>vSetVolumeNotRates</name></member>
+      <member refid="classChemCompt_1ae7cb5e1f801974d1c3cd68373dff5cfc" prot="public" virt="virtual"><scope>SpineMesh</scope><name>~ChemCompt</name></member>
+      <member refid="classMeshCompt_1adb85de0aa1c67c78a484d9876299857a" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>~MeshCompt</name></member>
+      <member refid="classSpineMesh_1ade44548bc0935505b9fa316d8365cb59" prot="public" virt="non-virtual"><scope>SpineMesh</scope><name>~SpineMesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,615 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="simple__logger_8hpp" kind="file" language="C++">
+    <compoundname>simple_logger.hpp</compoundname>
+    <includes local="no">sstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">ctime</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes local="no">fstream</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp</label>
+        <link refid="simple__logger_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>ctime</label>
+      </node>
+      <node id="12">
+        <label>fstream</label>
+      </node>
+      <node id="10">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>numeric</label>
+      </node>
+      <node id="2">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classSimpleLogger" prot="public">SimpleLogger</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="simple__logger_8hpp_1a7b6890c52e33b2c8b78bb841d2de0041" prot="public" static="no">
+        <name>T_BLACK</name>
+        <initializer>&quot;\033[30m&quot;      /* Black */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="52" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1ab24e86707c2ad9eea9e55bf075183c89" prot="public" static="no">
+        <name>T_BLUE</name>
+        <initializer>&quot;\033[34m&quot;      /* Blue */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="56" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1aa39700ed4307c2e697a446fdba0cbf77" prot="public" static="no">
+        <name>T_BOLDBLACK</name>
+        <initializer>&quot;\033[1m\033[30m&quot;      /* Bold Black */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="60" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a7aa313b99282e134d775d99a76c7e1cb" prot="public" static="no">
+        <name>T_BOLDBLUE</name>
+        <initializer>&quot;\033[1m\033[34m&quot;      /* Bold Blue */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="64" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1acf69046dda7ba6fa9bd1fa90148d25af" prot="public" static="no">
+        <name>T_BOLDCYAN</name>
+        <initializer>&quot;\033[1m\033[36m&quot;      /* Bold Cyan */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="66" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a44518dc6eafed8246b82a6e2f26b995f" prot="public" static="no">
+        <name>T_BOLDGREEN</name>
+        <initializer>&quot;\033[1m\033[32m&quot;      /* Bold Green */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="62" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a132b5bf09dfbd6e2a53495772c54d715" prot="public" static="no">
+        <name>T_BOLDMAGENTA</name>
+        <initializer>&quot;\033[1m\033[35m&quot;      /* Bold Magenta */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="65" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1ad9c05bf5136a4a1c72a5f2a056b7874b" prot="public" static="no">
+        <name>T_BOLDRED</name>
+        <initializer>&quot;\033[1m\033[31m&quot;      /* Bold Red */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="61" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a3932067d762196ed0c393a2efb584f9e" prot="public" static="no">
+        <name>T_BOLDWHITE</name>
+        <initializer>&quot;\033[1m\033[37m&quot;      /* Bold White */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="67" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1af3dc12c42638e02ca970432ebcca6006" prot="public" static="no">
+        <name>T_BOLDYELLOW</name>
+        <initializer>&quot;\033[1m\033[33m&quot;      /* Bold Yellow */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="63" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1ae52133bdae8ad5582695ef128aa68ca2" prot="public" static="no">
+        <name>T_CYAN</name>
+        <initializer>&quot;\033[36m&quot;      /* Cyan */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="58" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a64543ab2ca6fd0b4867b9d147d4c244c" prot="public" static="no">
+        <name>T_GREEN</name>
+        <initializer>&quot;\033[32m&quot;      /* Green */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="54" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a8dcda1365112acb4f0b90ccbb83ad7e7" prot="public" static="no">
+        <name>T_MAGENTA</name>
+        <initializer>&quot;\033[35m&quot;      /* Magenta */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="57" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a026ed44cc87edf31832ae4277dec638b" prot="public" static="no">
+        <name>T_RED</name>
+        <initializer>&quot;\033[31m&quot;      /* Red */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="53" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a2200db6bd258037917b0a5a4bbbedcce" prot="public" static="no">
+        <name>T_RESET</name>
+        <initializer>&quot;\033[0m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="51" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1a02cf4e82eb0f579f36903a06a05d8535" prot="public" static="no">
+        <name>T_WHITE</name>
+        <initializer>&quot;\033[37m&quot;      /* White */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="59" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="simple__logger_8hpp_1af15bdef8bf61eba494d1cc4b5d08baba" prot="public" static="no">
+        <name>T_YELLOW</name>
+        <initializer>&quot;\033[33m&quot;      /* Yellow */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="55" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="simple__logger_8hpp_1a4a8ce3c2601818fb0d6fbc2f5b255d82" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="classSimpleLogger" kindref="compound">SimpleLogger</ref></type>
+        <definition>SimpleLogger logger</definition>
+        <argsstring></argsstring>
+        <name>logger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" line="385" column="21" declfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp" declline="385" declcolumn="21"/>
+        <referencedby refid="classShell_1a907372fb6d91df75ff6a682da3d60487" compoundref="Shell_8cpp" startline="50" endline="140">Shell::initCinfo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>==============================================================================</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Filename:<sp/><sp/>simple_logger.hpp</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Description:<sp/><sp/>A<sp/>simple<sp/>XML<sp/>based<sp/>logger.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Version:<sp/><sp/>1.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Created:<sp/><sp/>Saturday<sp/>24<sp/>May<sp/>2014<sp/>06:25:10<sp/><sp/>IST</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Revision:<sp/><sp/>none</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Compiler:<sp/><sp/>gcc</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/><sp/>Dilawar<sp/>Singh<sp/>(),<sp/>dilawars@ncbs.res.in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Organization:<sp/><sp/>NCBS<sp/>Bangalore</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2014,<sp/>Dilawar<sp/>Singh,<sp/>NCBS<sp/>Bangalore</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/>along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>==============================================================================</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/>MOOSE_LOGGER_INC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>MOOSE_LOGGER_INC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="simple__logger_8hpp_1a2200db6bd258037917b0a5a4bbbedcce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[0m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="simple__logger_8hpp_1a7b6890c52e33b2c8b78bb841d2de0041" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BLACK<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[30m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Black<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="simple__logger_8hpp_1a026ed44cc87edf31832ae4277dec638b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_RED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[31m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Red<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="simple__logger_8hpp_1a64543ab2ca6fd0b4867b9d147d4c244c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_GREEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[32m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Green<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="simple__logger_8hpp_1af15bdef8bf61eba494d1cc4b5d08baba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_YELLOW<sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[33m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Yellow<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="simple__logger_8hpp_1ab24e86707c2ad9eea9e55bf075183c89" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BLUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[34m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Blue<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="simple__logger_8hpp_1a8dcda1365112acb4f0b90ccbb83ad7e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_MAGENTA<sp/><sp/><sp/><sp/><sp/>&quot;\033[35m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Magenta<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="simple__logger_8hpp_1ae52133bdae8ad5582695ef128aa68ca2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_CYAN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[36m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cyan<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="simple__logger_8hpp_1a02cf4e82eb0f579f36903a06a05d8535" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_WHITE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[37m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>White<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="simple__logger_8hpp_1aa39700ed4307c2e697a446fdba0cbf77" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BOLDBLACK<sp/><sp/><sp/>&quot;\033[1m\033[30m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bold<sp/>Black<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="simple__logger_8hpp_1ad9c05bf5136a4a1c72a5f2a056b7874b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BOLDRED<sp/><sp/><sp/><sp/><sp/>&quot;\033[1m\033[31m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bold<sp/>Red<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="simple__logger_8hpp_1a44518dc6eafed8246b82a6e2f26b995f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BOLDGREEN<sp/><sp/><sp/>&quot;\033[1m\033[32m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bold<sp/>Green<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="simple__logger_8hpp_1af3dc12c42638e02ca970432ebcca6006" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BOLDYELLOW<sp/><sp/>&quot;\033[1m\033[33m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bold<sp/>Yellow<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="simple__logger_8hpp_1a7aa313b99282e134d775d99a76c7e1cb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BOLDBLUE<sp/><sp/><sp/><sp/>&quot;\033[1m\033[34m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bold<sp/>Blue<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="simple__logger_8hpp_1a132b5bf09dfbd6e2a53495772c54d715" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BOLDMAGENTA<sp/>&quot;\033[1m\033[35m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bold<sp/>Magenta<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="simple__logger_8hpp_1acf69046dda7ba6fa9bd1fa90148d25af" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BOLDCYAN<sp/><sp/><sp/><sp/>&quot;\033[1m\033[36m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bold<sp/>Cyan<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="simple__logger_8hpp_1a3932067d762196ed0c393a2efb584f9e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>T_BOLDWHITE<sp/><sp/><sp/>&quot;\033[1m\033[37m&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bold<sp/>White<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classSimpleLogger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSimpleLogger" kindref="compound">SimpleLogger</ref><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classSimpleLogger_1a47572c49785a4476dc014f523695b877" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a47572c49785a4476dc014f523695b877" kindref="member">SimpleLogger</ref>()</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a9afb5f5cd6324cbd2d4394ba7150af26" kindref="member">startTime</ref><sp/>=<sp/><ref refid="classSimpleLogger_1a140cdcacadabb4d33e5a70d9796f93cb" kindref="member">timeStamp</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a3883514b527c8e283abd999e3419e5ae" kindref="member">homeDir</ref><sp/>=<sp/>getenv(</highlight><highlight class="stringliteral">&quot;HOME&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;log<sp/>simulator=\&quot;moose\&quot;&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&lt;start_time&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classSimpleLogger_1a9afb5f5cd6324cbd2d4394ba7150af26" kindref="member">startTime</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;/start_time&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&lt;messages&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>OS_WINDOWS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a44dce90a36f1640d22556d8ebd09414d" kindref="member">outputFile</ref><sp/>=<sp/><ref refid="classSimpleLogger_1a3883514b527c8e283abd999e3419e5ae" kindref="member">homeDir</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;\\.moose\\log&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a44dce90a36f1640d22556d8ebd09414d" kindref="member">outputFile</ref><sp/>=<sp/><ref refid="classSimpleLogger_1a3883514b527c8e283abd999e3419e5ae" kindref="member">homeDir</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/.moose/log&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classSimpleLogger_1aa0fe6b3ea6f8759818e462fd0fd181a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1aa0fe6b3ea6f8759818e462fd0fd181a5" kindref="member">~SimpleLogger</ref>()</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classSimpleLogger_1a140cdcacadabb4d33e5a70d9796f93cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classSimpleLogger_1a140cdcacadabb4d33e5a70d9796f93cb" kindref="member">timeStamp</ref>()</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_t<sp/><sp/><sp/><sp/><sp/>now<sp/>=<sp/>time(0);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/><sp/>tstruct;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[80];</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tstruct<sp/>=<sp/>*localtime(&amp;now);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strftime(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;%Y-%m-%d.%X&quot;</highlight><highlight class="normal">,<sp/>&amp;tstruct);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buf;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classSimpleLogger_1a293001fab71fd45084ee9c8e3e81fe3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a293001fab71fd45084ee9c8e3e81fe3e" kindref="member">updateGlobalCount</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>type)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" kindref="member">elementsMap</ref>.find(type)<sp/>==<sp/><ref refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" kindref="member">elementsMap</ref>.end())</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" kindref="member">elementsMap</ref>[type]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" kindref="member">elementsMap</ref>[type]<sp/>=<sp/><ref refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" kindref="member">elementsMap</ref>[type]<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B&gt;</highlight></codeline>
+<codeline lineno="130" refid="classSimpleLogger_1ae1ee1da54e3053cb967f5a0b720eb05c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1ae1ee1da54e3053cb967f5a0b720eb05c" kindref="member">mapToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>map&lt;A,<sp/>B&gt;&amp;<sp/>m,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>title<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="131"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>width<sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>title;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>width<sp/>-<sp/>title.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;~&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>map&lt;A,<sp/>B&gt;::const_iterator<sp/>it;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>it<sp/>=<sp/>m.begin();<sp/>it<sp/>!=<sp/>m.end();<sp/>it++)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>setw(width/2)<sp/>&lt;&lt;<sp/>it-&gt;first<sp/>&lt;&lt;<sp/>setw(width/2)<sp/>&lt;&lt;<sp/>it-&gt;second<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>width;<sp/>++i)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;=&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classSimpleLogger_1a4cdcc18fd9f5c31343ea123e55e0217b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a4cdcc18fd9f5c31343ea123e55e0217b" kindref="member">dumpStats</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>which<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unsigned<sp/>width<sp/>=<sp/>50;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(which<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>mapToString&lt;string,<sp/>unsigned<sp/>long&gt;(<ref refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" kindref="member">elementsMap</ref>,<sp/></highlight><highlight class="stringliteral">&quot;data_structure&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>which<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a2cf1bc16c0bb0d1c4a33626edd596791" kindref="member">timekeeperMap</ref>[</highlight><highlight class="stringliteral">&quot;Simulation&quot;</highlight><highlight class="normal">]<sp/>=<sp/>accumulate(</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a5760cee1659d44c0f6871a83ec08775b" kindref="member">simulationTime</ref>.begin()</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/><ref refid="classSimpleLogger_1a5760cee1659d44c0f6871a83ec08775b" kindref="member">simulationTime</ref>.end()</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>0.0</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a2cf1bc16c0bb0d1c4a33626edd596791" kindref="member">timekeeperMap</ref>[</highlight><highlight class="stringliteral">&quot;Initialization&quot;</highlight><highlight class="normal">]<sp/>=<sp/>accumulate(</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1ae234826d510d07ce0cd1c035e5e57bcc" kindref="member">initializationTime</ref>.begin()</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/><ref refid="classSimpleLogger_1ae234826d510d07ce0cd1c035e5e57bcc" kindref="member">initializationTime</ref>.end()</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>0.0</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a2cf1bc16c0bb0d1c4a33626edd596791" kindref="member">timekeeperMap</ref>[</highlight><highlight class="stringliteral">&quot;Creation&quot;</highlight><highlight class="normal">]<sp/>=<sp/>accumulate(</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a41c7c30e19b338b42c1c96497dd97561" kindref="member">creationTime</ref>.begin()</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/><ref refid="classSimpleLogger_1a41c7c30e19b338b42c1c96497dd97561" kindref="member">creationTime</ref>.end()</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>0.0</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>mapToString&lt;string,<sp/>float&gt;(<sp/><ref refid="classSimpleLogger_1a2cf1bc16c0bb0d1c4a33626edd596791" kindref="member">timekeeperMap</ref>,<sp/></highlight><highlight class="stringliteral">&quot;simulation_stats&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B&gt;</highlight></codeline>
+<codeline lineno="202" refid="classSimpleLogger_1aa027ed5705ed1aa3f703ebe61f9137a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1aa027ed5705ed1aa3f703ebe61f9137a1" kindref="member">mapToXML</ref>(ostringstream&amp;<sp/>ss,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>map&lt;A,<sp/>B&gt;&amp;<sp/>m,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tagName</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>indent)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="204"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>prefix<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>indent;<sp/>++i)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prefix<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>prefix<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>tagName<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>map&lt;A,<sp/>B&gt;::const_iterator<sp/>it;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(it<sp/>=<sp/>m.begin();<sp/>it<sp/>!=<sp/>m.end();<sp/>it++)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>prefix<sp/>&lt;&lt;<sp/>prefix</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>it-&gt;first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>it-&gt;second</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;/&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>it-&gt;first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>prefix<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;/&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>tagName<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="classSimpleLogger_1a7fedd895d187e02c1ddd7388eccbc8c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a7fedd895d187e02c1ddd7388eccbc8c5" kindref="member">save</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>outFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>logFile<sp/>=<sp/>string(outFile);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(logFile.size()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logFile<sp/>=<sp/><ref refid="classSimpleLogger_1a44dce90a36f1640d22556d8ebd09414d" kindref="member">outputFile</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>messages.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&lt;/messages&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mapToXML&lt;string,<sp/>unsigned<sp/>long&gt;(<ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref>,<sp/><ref refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" kindref="member">elementsMap</ref>,<sp/></highlight><highlight class="stringliteral">&quot;data_structure&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mapToXML&lt;string,<sp/>float&gt;(<ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref>,<sp/><ref refid="classSimpleLogger_1a2cf1bc16c0bb0d1c4a33626edd596791" kindref="member">timekeeperMap</ref>,<sp/></highlight><highlight class="stringliteral">&quot;times&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&lt;end_time&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classSimpleLogger_1a140cdcacadabb4d33e5a70d9796f93cb" kindref="member">timeStamp</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;/end_time&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;/log&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fstream<sp/>logF;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logF.open(logFile.c_str(),<sp/>std::fstream::out<sp/>|<sp/>std::fstream::app);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logF<sp/>&lt;&lt;<sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref>.str();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logF.close();</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref>.str();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="classSimpleLogger_1a42902356e0f184377330bab6b306dec0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a42902356e0f184377330bab6b306dec0" kindref="member">isDir</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name<sp/>)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>OS_WINDOWS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_stat<sp/>buf;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>_stat(<sp/>name.c_str(),<sp/>&amp;buf<sp/>);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">stat<sp/>buf;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>stat(<sp/>name.c_str(),<sp/>&amp;buf<sp/>);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(result<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>S_ISDIR(buf.st_mode))</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279" refid="classSimpleLogger_1a9d3f7ba7a7c264883dd513f0c144e38e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a9d3f7ba7a7c264883dd513f0c144e38e" kindref="member">dump</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>msg,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>autoFormat<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>VERBOSITY<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss.precision(<sp/>12<sp/>);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>type<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>set<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reset<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>color<sp/>=<sp/><ref refid="simple__logger_8hpp_1a64543ab2ca6fd0b4867b9d147d4c244c" kindref="member">T_GREEN</ref>;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;WARNING&quot;</highlight><highlight class="normal"><sp/>||<sp/>type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;WARN&quot;</highlight><highlight class="normal"><sp/>||<sp/>type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;FIXME&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="simple__logger_8hpp_1af15bdef8bf61eba494d1cc4b5d08baba" kindref="member">T_YELLOW</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;DEBUG&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="simple__logger_8hpp_1ae52133bdae8ad5582695ef128aa68ca2" kindref="member">T_CYAN</ref>;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ERROR&quot;</highlight><highlight class="normal"><sp/>||<sp/>type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;FAIL&quot;</highlight><highlight class="normal"><sp/>||<sp/>type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;FATAL&quot;</highlight><highlight class="normal"><sp/>||<sp/>type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ASSERT_FAILURE&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="simple__logger_8hpp_1a026ed44cc87edf31832ae4277dec638b" kindref="member">T_RED</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;INFO&quot;</highlight><highlight class="normal"><sp/>||<sp/>type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;EXPECT_FAILURE&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="simple__logger_8hpp_1a8dcda1365112acb4f0b90ccbb83ad7e7" kindref="member">T_MAGENTA</ref>;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LOG&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="simple__logger_8hpp_1ab24e86707c2ad9eea9e55bf075183c89" kindref="member">T_BLUE</ref>;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>msg.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="charliteral">&apos;`&apos;</highlight><highlight class="normal"><sp/>==<sp/>msg[i])</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!set<sp/>and<sp/>reset)</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reset<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>color;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(set<sp/>&amp;&amp;<sp/>!reset)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reset<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/><ref refid="simple__logger_8hpp_1a2200db6bd258037917b0a5a4bbbedcce" kindref="member">T_RESET</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal"><sp/>==<sp/>msg[i])</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n<sp/>+<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>msg[i];</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>Be<sp/>safe<sp/>than<sp/>sorry<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!reset)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/><ref refid="simple__logger_8hpp_1a2200db6bd258037917b0a5a4bbbedcce" kindref="member">T_RESET</ref>;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref><sp/>&lt;&lt;<sp/>ss.str()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/>ss.str()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="classSimpleLogger_1af340812ea14a29262fce909d769e6b9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classSimpleLogger_1af340812ea14a29262fce909d769e6b9d" kindref="member">log</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_LOGGER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>time<sp/>=<sp/><ref refid="classSimpleLogger_1a140cdcacadabb4d33e5a70d9796f93cb" kindref="member">timeStamp</ref>();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fstream<sp/>logF;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logF.open(<ref refid="classSimpleLogger_1a44dce90a36f1640d22556d8ebd09414d" kindref="member">outputFile</ref>.c_str(),<sp/>std::fstream::out<sp/>|<sp/>std::fstream::app);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>type<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>time=\&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>time<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>msg<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;/&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>type<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logF<sp/>&lt;&lt;<sp/>ss.str();</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>logF.close();</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>newmsg<sp/>=<sp/>ss.str();</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>newmsg;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="365" refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;string,<sp/>unsigned<sp/>long&gt;<sp/><ref refid="classSimpleLogger_1a9b3e05a5fc05aad2c2268437dc9482bd" kindref="member">elementsMap</ref>;</highlight></codeline>
+<codeline lineno="366" refid="classSimpleLogger_1a2cf1bc16c0bb0d1c4a33626edd596791" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;string,<sp/>float&gt;<sp/><ref refid="classSimpleLogger_1a2cf1bc16c0bb0d1c4a33626edd596791" kindref="member">timekeeperMap</ref>;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370" refid="classSimpleLogger_1af21fdbdf6b27094a9de154625cb0e6af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1af21fdbdf6b27094a9de154625cb0e6af" kindref="member">mooseDir</ref>;</highlight></codeline>
+<codeline lineno="371" refid="classSimpleLogger_1a3883514b527c8e283abd999e3419e5ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a3883514b527c8e283abd999e3419e5ae" kindref="member">homeDir</ref>;</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373" refid="classSimpleLogger_1a44dce90a36f1640d22556d8ebd09414d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a44dce90a36f1640d22556d8ebd09414d" kindref="member">outputFile</ref>;</highlight></codeline>
+<codeline lineno="374" refid="classSimpleLogger_1a9afb5f5cd6324cbd2d4394ba7150af26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1a9afb5f5cd6324cbd2d4394ba7150af26" kindref="member">startTime</ref>;</highlight></codeline>
+<codeline lineno="375" refid="classSimpleLogger_1af88fd85924d43094e562711be7d60e60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger_1af88fd85924d43094e562711be7d60e60" kindref="member">endTime</ref>;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ostringstream<sp/><ref refid="classSimpleLogger_1a7bc02074c823e8541a36c243c882fbf2" kindref="member">logSS</ref>;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Map<sp/>to<sp/>keep<sp/>simulation<sp/>run-time<sp/>data.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380" refid="classSimpleLogger_1a5760cee1659d44c0f6871a83ec08775b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;float&gt;<sp/><ref refid="classSimpleLogger_1a5760cee1659d44c0f6871a83ec08775b" kindref="member">simulationTime</ref>;</highlight></codeline>
+<codeline lineno="381" refid="classSimpleLogger_1ae234826d510d07ce0cd1c035e5e57bcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;float&gt;<sp/><ref refid="classSimpleLogger_1ae234826d510d07ce0cd1c035e5e57bcc" kindref="member">initializationTime</ref>;</highlight></codeline>
+<codeline lineno="382" refid="classSimpleLogger_1a41c7c30e19b338b42c1c96497dd97561" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;float&gt;<sp/><ref refid="classSimpleLogger_1a41c7c30e19b338b42c1c96497dd97561" kindref="member">creationTime</ref>;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classSimpleLogger" kindref="compound">SimpleLogger</ref><sp/><ref refid="simple__logger_8hpp_1a4a8ce3c2601818fb0d6fbc2f5b255d82" kindref="member">logger</ref>;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----<sp/>#ifndef<sp/>MOOSE_LOGGER_INC<sp/><sp/>-----<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/utility/simple_logger.hpp"/>
+  </compounddef>
+</doxygen>

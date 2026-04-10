@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="testSynapse_8cpp" kind="file" language="C++">
+    <compoundname>testSynapse.cpp</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="testSynapse_8cpp_1a8c9707914c5af55f76b5ab6024a23838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testSynapse</definition>
+        <argsstring>()</argsstring>
+        <name>testSynapse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/testSynapse.cpp" line="205" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/testSynapse.cpp" bodystart="205" bodyend="212"/>
+        <referencedby refid="main_8cpp_1ad7f4e95b000b9506b098e1f322ca83a9" compoundref="main_8cpp" startline="235" endline="262">nonMpiTests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="testSynapse_8cpp_1afad8cc47d2711b394acb235ca3ea9756" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testSynapseProcess</definition>
+        <argsstring>()</argsstring>
+        <name>testSynapseProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/testSynapse.cpp" line="215" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/testSynapse.cpp" bodystart="215" bodyend="217"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2013<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DO_UNIT_TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Synapse_8h" kindref="compound">Synapse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SynEvent_8h" kindref="compound">SynEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SynHandlerBase_8h" kindref="compound">SynHandlerBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SimpleSynHandler_8h" kindref="compound">SimpleSynHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RollingMatrix_8h" kindref="compound">RollingMatrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SeqSynHandler_8h" kindref="compound">SeqSynHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../shell/Shell.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>doCorrel(<sp/><ref refid="classRollingMatrix" kindref="compound">RollingMatrix</ref>&amp;<sp/>rm,<sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;&gt;<sp/>&amp;<sp/>kernel<sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nr<sp/>=<sp/>kernel.size();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>correlVec(<sp/>nr,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nr;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1a112d18c72fb9b7668ae457edffaa9437" kindref="member">correl</ref>(<sp/>correlVec,<sp/>kernel[i],<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>seqActivation<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nr;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seqActivation<sp/>+=<sp/>correlVec[i];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>seqActivation;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>testRollingMatrix2()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nr<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix" kindref="compound">RollingMatrix</ref><sp/>rm;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1ad4c77261cc911ee4f6f46c47a1f842c4" kindref="member">resize</ref>(<sp/>nr,<sp/>nr<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;<sp/>kernel(<sp/>nr<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nr;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kernel[i].resize(<sp/>nr,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1accdf3bd71cb8884cdfd451c40f538437" kindref="member">zeroOutRow</ref>(<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>nr;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kernel[i][j]<sp/>=<sp/>16<sp/>-<sp/>(i-j)*(i-j);<sp/></highlight><highlight class="comment">//<sp/>symmetric,<sp/>forward</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1a4d01f563e3d3cc5297c7510fe15bfe24" kindref="member">sumIntoEntry</ref>(<sp/>(i==j),<sp/>i,<sp/>j<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ret1<sp/>=<sp/>doCorrel(<sp/>rm,<sp/>kernel<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nr;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kernel[i].clear();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kernel[i].resize(<sp/>nr,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1accdf3bd71cb8884cdfd451c40f538437" kindref="member">zeroOutRow</ref>(<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>nr;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>nr-i-1;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kernel[i][j]<sp/>=<sp/>16<sp/>-<sp/>(k-j)*(k-j);<sp/></highlight><highlight class="comment">//<sp/>symmetric,<sp/>backwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1a4d01f563e3d3cc5297c7510fe15bfe24" kindref="member">sumIntoEntry</ref>(<sp/>(k==j),<sp/>i,<sp/>j<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ret2<sp/>=<sp/>doCorrel(<sp/>rm,<sp/>kernel<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>ret1,<sp/>ret2<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>testRollingMatrix()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nr<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncol<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix" kindref="compound">RollingMatrix</ref><sp/>rm;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1ad4c77261cc911ee4f6f46c47a1f842c4" kindref="member">resize</ref>(<sp/>5,<sp/>10<sp/>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nr;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1a4d01f563e3d3cc5297c7510fe15bfe24" kindref="member">sumIntoEntry</ref>(<sp/>i<sp/>+<sp/>1,<sp/>i,<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nr;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>ncol;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>rm.<ref refid="classRollingMatrix_1adca60aacc12db01ea9bc7cc931741117" kindref="member">get</ref>(<sp/>i,<sp/>j<sp/>)<sp/>==<sp/>(<sp/>i<sp/>==<sp/>j<sp/>)<sp/>*<sp/>(i+1)<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>flush;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Old<sp/>row0<sp/>becomes<sp/>row1<sp/>and<sp/>so<sp/>on.<sp/>Old<sp/>row4<sp/>(now<sp/>0)<sp/>should<sp/>be<sp/>cleared.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1ab7d00fe107e4e8677faf94f7cac0f1ab" kindref="member">rollToNextRow</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nr;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>ncol;<sp/>++j<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cout<sp/>&lt;&lt;<sp/>rm.get(<sp/>i,<sp/>j<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>rm.<ref refid="classRollingMatrix_1adca60aacc12db01ea9bc7cc931741117" kindref="member">get</ref>(<sp/>i,<sp/>j<sp/>)<sp/>==<sp/>(<sp/>i<sp/>==<sp/>j+1<sp/>)<sp/>*<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>are<sp/>the<sp/>entries<sp/>in<sp/>the<sp/>rm.rows_<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>000000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>100000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>020000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>003000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>000400000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>flush;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>input(<sp/>10,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nr;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input[i]<sp/>=<sp/>i<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>0,<sp/>5<sp/>),<sp/>0.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>1,<sp/>5<sp/>),<sp/>1.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>2,<sp/>5<sp/>),<sp/>4.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>3,<sp/>5<sp/>),<sp/>9.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>4,<sp/>5<sp/>),<sp/>16.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>4,<sp/>6<sp/>),<sp/>12.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>4,<sp/>7<sp/>),<sp/>8.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>4,<sp/>8<sp/>),<sp/>4.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>rm.<ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>4,<sp/>9<sp/>),<sp/>0.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>the<sp/>input<sp/>and<sp/>the<sp/>row<sp/>are<sp/>aligned<sp/>at<sp/>col=5,<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>middle<sp/>of<sp/>the<sp/>input<sp/>vector.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1a051a67124f5690c1741b68cd4a89292d" kindref="member">sumIntoRow</ref>(<sp/>input,<sp/>0<sp/>);<sp/><sp/></highlight><highlight class="comment">//<sp/>input<sp/>==<sp/>[1234500000]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>corr;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1a112d18c72fb9b7668ae457edffaa9437" kindref="member">correl</ref>(<sp/>corr,<sp/>input,<sp/>4<sp/>);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rm[4]<sp/>==<sp/>[00040000]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[0],<sp/>0.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[1],<sp/>0.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[2],<sp/>0.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[3],<sp/>0.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[4],<sp/>20.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[5],<sp/>16.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[6],<sp/>12.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[7],<sp/>8.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[8],<sp/>4.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[9],<sp/>0.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>corr.assign(<sp/>corr.size(),<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>rm.<ref refid="classRollingMatrix_1a112d18c72fb9b7668ae457edffaa9437" kindref="member">correl</ref>(<sp/>corr,<sp/>input,<sp/>0<sp/>);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rm[0]<sp/>==<sp/>[1234500000]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[0],<sp/>0.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[1],<sp/>5.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[2],<sp/>14.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[3],<sp/>26.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[4],<sp/>40.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[5],<sp/>55.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[6],<sp/>40.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[7],<sp/>26.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[8],<sp/>14.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>corr[9],<sp/>5.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>flush;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FIXME:<sp/>This<sp/>test<sp/>is<sp/>failing<sp/>on<sp/>travis.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>testSeqSynapse()</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numSyn<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kernelWidth<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSeqSynHandler" kindref="compound">SeqSynHandler</ref><sp/>ssh;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b" kindref="member">vSetNumSynapses</ref>(<sp/>numSyn<sp/>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numSyn;<sp/>++i<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ssh.addSynapse();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>ssh.<ref refid="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140" kindref="member">vGetNumSynapses</ref>()<sp/>)<sp/>==<sp/>numSyn<sp/>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1aa88f8d8b2ad77cf65e8df2d30e323437" kindref="member">setSeqDt</ref>(<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1a6e12320bee3a90c0bc4d4ca34a5c470c" kindref="member">setHistoryTime</ref>(<sp/>5.0<sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1aa1faaeb5f539f86e66090f7dd1a97a8e" kindref="member">setKernelWidth</ref>(<sp/>kernelWidth<sp/>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1ad548af814d9438e7d0a718f5c9116e83" kindref="member">setKernelEquation</ref>(<sp/></highlight><highlight class="stringliteral">&quot;(x<sp/>==<sp/>t)*5<sp/>+<sp/>((x+1)==t<sp/>||<sp/>(x-1)==t)<sp/>*<sp/>2<sp/>-<sp/>1&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>ret<sp/>=<sp/>ssh.<ref refid="classSeqSynHandler_1a01825475fe51bab1543f5716e2b2ded4" kindref="member">getKernel</ref>();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>ret.size()<sp/>==<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(5<sp/>*<sp/>kernelWidth<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>k<sp/>=<sp/>ret.begin();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>0;<sp/>t<sp/>&lt;<sp/>5;<sp/>++t<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>kernelWidth;<sp/>++x<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>(x<sp/>==<sp/>t)*5<sp/>+<sp/>((x+1)==t<sp/>||<sp/>(x-1)==t)<sp/>*<sp/>2<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>*k++,<sp/>val<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>flush;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1aa73b3727d93de359d2ebdc6b1585d130" kindref="member">setBaseScale</ref>(<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1a1f0330c4465ec4df8dc9a61737ecb861" kindref="member">setSequenceScale</ref>(<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numSyn;<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1ac04135ba134d737204ef77dc26ff78da" kindref="member">addSpike</ref>(<sp/>i,<sp/>0.0,<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1a0a455f9fcfd03a357d4bec427a1f4439" kindref="member">setPlasticityScale</ref>(<sp/>1.0<sp/>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classProcInfo" kindref="compound">ProcInfo</ref><sp/>p;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEref" kindref="compound">Eref</ref><sp/>sheller(<sp/><ref refid="classId" kindref="compound">Id</ref>().eref()<sp/>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classShell" kindref="compound">Shell</ref>*<sp/>shell<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><sp/><ref refid="classShell" kindref="compound">Shell</ref>*<sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>sheller.data()<sp/>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>sid<sp/>=<sp/>shell-&gt;<ref refid="classShell_1a07391050d7d5c777fd0a366a78cea81e" kindref="member">doCreate</ref>(<sp/></highlight><highlight class="stringliteral">&quot;SeqSynHandler&quot;</highlight><highlight class="normal">,<sp/><ref refid="classId" kindref="compound">Id</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;sid&quot;</highlight><highlight class="normal">,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>sid.<ref refid="classId_1a574e06330597163aef0ea4c99de7ff4a" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" kindref="member">getName</ref>()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;sid&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh.<ref refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" kindref="member">vProcess</ref>(<sp/>sid.<ref refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" kindref="member">eref</ref>(),<sp/>&amp;p<sp/>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>we<sp/>correlate<sp/>the<sp/>vector<sp/>[1,1,1,1,1,1,1,1,1,1,1]<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>kernel<sp/>[4,1,-1,-1,-1]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Other<sp/>lines<sp/>are<sp/>zeros.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>ssh.<ref refid="classSeqSynHandler_1ac6d7b7b02f3edb39f78d2bbe42369e79" kindref="member">getSeqActivation</ref>(),<sp/>14.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>wts<sp/>=<sp/>ssh.<ref refid="classSeqSynHandler_1a9c3f4f60e5aea706cd19e25134cc4c4f" kindref="member">getWeightScaleVec</ref>();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>2;<sp/>i<sp/>&lt;<sp/>numSyn-2;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>wts[i],<sp/>2.0<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>wts[0],<sp/>-3<sp/>)<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Edge<sp/>effects.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>wts[1],<sp/>-2<sp/>)<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Edge<sp/>effects.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>wts[8],<sp/>3<sp/>)<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Edge<sp/>effects.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" kindref="member">doubleEq</ref>(<sp/>wts[9],<sp/>4<sp/>)<sp/>);<sp/></highlight><highlight class="comment">//<sp/>Edge<sp/>effects.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>flush;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>shell-&gt;<ref refid="classShell_1a74637ee170d32fb96218a2371657b717" kindref="member">doDelete</ref>(<sp/>sid<sp/>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DO_UNIT_TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>tests<sp/>stuff<sp/>without<sp/>using<sp/>the<sp/>messaging.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="classIntFire_1a8c9707914c5af55f76b5ab6024a23838" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="testSynapse_8cpp_1a8c9707914c5af55f76b5ab6024a23838" kindref="member">testSynapse</ref>()</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DO_UNIT_TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>testRollingMatrix();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>testRollingMatrix2();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>testSeqSynapse();</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DO_UNIT_TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>applicable<sp/>to<sp/>tests<sp/>that<sp/>use<sp/>the<sp/>messaging<sp/>and<sp/>scheduling.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="testSynapse_8cpp_1afad8cc47d2711b394acb235ca3ea9756" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="testSynapse_8cpp_1afad8cc47d2711b394acb235ca3ea9756" kindref="member">testSynapseProcess</ref>()</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/testSynapse.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classSynHandlerBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SynHandlerBase</compoundname>
+    <derivedcompoundref refid="classGraupnerBrunel2012CaPlasticitySynHandler" prot="public" virt="non-virtual">GraupnerBrunel2012CaPlasticitySynHandler</derivedcompoundref>
+    <derivedcompoundref refid="classSTDPSynHandler" prot="public" virt="non-virtual">STDPSynHandler</derivedcompoundref>
+    <derivedcompoundref refid="classSeqSynHandler" prot="public" virt="non-virtual">SeqSynHandler</derivedcompoundref>
+    <derivedcompoundref refid="classSimpleSynHandler" prot="public" virt="non-virtual">SimpleSynHandler</derivedcompoundref>
+    <includes refid="SynHandlerBase_8h" local="no">SynHandlerBase.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSynHandlerBase_1a6e3fbc7ee72933b8b92799c3cb85b1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SynHandlerBase::addSpike</definition>
+        <argsstring>(unsigned int index, double time, double weight)=0</argsstring>
+        <name>addSpike</name>
+        <qualifiedname>SynHandlerBase::addSpike</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1a6c4140efa30880f699b5281faed4c7d4">addSpike</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1ac04135ba134d737204ef77dc26ff78da">addSpike</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1a7576d18473f7b74e8863dce6559f8e07">addSpike</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1a2598530c3e8aecd4cfb1d9a3babc4532">addSpike</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Record arrival of a new spike event. The &apos;time&apos; is time for eventual arrival of the spike, and is typically well in the future. The index specifies which synapse the spike came to. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="80" column="18"/>
+        <referencedby refid="classSynapse_1ab28d0a19ae9a092210e45c56c396aa28" compoundref="Synapse_8cpp" startline="104" endline="113">Synapse::addSpike</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1aa99a2a75cb16611630461efbf5194eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int SynHandlerBase::addSynapse</definition>
+        <argsstring>()=0</argsstring>
+        <name>addSynapse</name>
+        <qualifiedname>SynHandlerBase::addSynapse</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1af35afb46664673f3d1e04a28c20517ec">addSynapse</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1a3ee9c482c794e1908bfa5435c7c08c78">addSynapse</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1a1a5af8623738e7af3ed2cc216cd6fe08">addSynapse</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1a66a41c022b825efe60debd6064011841">addSynapse</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new synapse, returns its index. This is triggered by addMsg of inputs to the child synapse. The SynHandler has to ensure that we have enough synapses allocated to handle the new message, and the return value is used so that the new message knows the fieldIndex to send the message to. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="65" column="26"/>
+        <referencedby refid="classSynapse_1ac77a8a83d4a014bf9b7f950b002a1f70" compoundref="Synapse_8cpp" startline="126" endline="138">Synapse::addMsgCallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a99b63feb54b68f6a0a880e3af517a9ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SynHandlerBase::dropSynapse</definition>
+        <argsstring>(unsigned int droppedSynNumber)=0</argsstring>
+        <name>dropSynapse</name>
+        <qualifiedname>SynHandlerBase::dropSynapse</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1a063713584b34d720062e188b1a9d4aae">dropSynapse</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1aee1799d9e9266f81390d6dc422705a30">dropSynapse</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1a75beb820fa37ba0e786a4d823ee9dc26">dropSynapse</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1a30c9003f326e566bbc0176cf9d64b849">dropSynapse</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>droppedSynNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drops an existing synapse, triggered by deleteMsg of an input to the child synapse. This is a little messy because we can&apos;t change the indices of the other synapses. The Handler has to figure out how to handle the &apos;holes&apos; in its array of synapses. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="73" column="18"/>
+        <referencedby refid="classSynapse_1a394a0921a6392eecb0afbde9b3d9cfac" compoundref="Synapse_8cpp" startline="145" endline="155">Synapse::dropMsgCallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a0022b30c918b1ed5bc6883a313ed9979" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int SynHandlerBase::getNumSynapses</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumSynapses</name>
+        <qualifiedname>SynHandlerBase::getNumSynapses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns number of synapses defined. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="40" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="109" bodyend="112"/>
+        <references refid="classSynHandlerBase_1ace8a160fca1d76382594c59f98d9ea53">vGetNumSynapses</references>
+        <referencedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1ae1431942fcd0a790402f22042a427aad" compoundref="GraupnerBrunel2012CaPlasticitySynHandler_8cpp" startline="21" endline="233">GraupnerBrunel2012CaPlasticitySynHandler::initCinfo</referencedby>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">SeqSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSimpleSynHandler_1a2eb40912ffc49f8eab83a38114cb134a" compoundref="SimpleSynHandler_8cpp" startline="17" endline="39">SimpleSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSTDPSynHandler_1acf8fa8af063775b3c862b3909f4ae934" compoundref="STDPSynHandler_8cpp" startline="18" endline="128">STDPSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSynHandlerBase_1adf7d7714a23a6da7aa46877a16f90424" compoundref="SynHandlerBase_8cpp" startline="31" endline="88">initCinfo</referencedby>
+        <referencedby refid="testAsync_8cpp_1a7c50c5998d50f456e03096a1a90e883d" compoundref="testAsync_8cpp" startline="345" endline="392">testSetGetSynapse</referencedby>
+        <referencedby refid="testAsync_8cpp_1a09259c385754d710703c99ebca386929" compoundref="testAsync_8cpp" startline="394" endline="430">testSetGetVec</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a000a56561ed2c0f605716a583ac11169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classSynapse" kindref="compound">Synapse</ref> *</type>
+        <definition>Synapse * SynHandlerBase::getSynapse</definition>
+        <argsstring>(unsigned int i)</argsstring>
+        <name>getSynapse</name>
+        <qualifiedname>SynHandlerBase::getSynapse</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets specified synapse </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="45" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="114" bodyend="117"/>
+        <references refid="classSynHandlerBase_1ae77bee46fe405773ca52a35ce19d30f1">vGetSynapse</references>
+        <referencedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1ae1431942fcd0a790402f22042a427aad" compoundref="GraupnerBrunel2012CaPlasticitySynHandler_8cpp" startline="21" endline="233">GraupnerBrunel2012CaPlasticitySynHandler::initCinfo</referencedby>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">SeqSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSimpleSynHandler_1a2eb40912ffc49f8eab83a38114cb134a" compoundref="SimpleSynHandler_8cpp" startline="17" endline="39">SimpleSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSTDPSynHandler_1acf8fa8af063775b3c862b3909f4ae934" compoundref="STDPSynHandler_8cpp" startline="18" endline="128">STDPSynHandler::initCinfo</referencedby>
+        <referencedby refid="testAsync_8cpp_1a7c50c5998d50f456e03096a1a90e883d" compoundref="testAsync_8cpp" startline="345" endline="392">testSetGetSynapse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a62cecef12de27500b9bacf693d57fd30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double SynHandlerBase::getTopSpike</definition>
+        <argsstring>(unsigned int index) const =0</argsstring>
+        <name>getTopSpike</name>
+        <qualifiedname>SynHandlerBase::getTopSpike</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1a9044ee9ac0b8ad1d95d6429b9f1cc20e">getTopSpike</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1a48dd66ad5d5bc0efa6a58df10e9d7b11">getTopSpike</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1aea9f3edb44ac3a479d3e13ab645a9ca1">getTopSpike</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1a820d0f7bac19dba85570761a41bf5f47">getTopSpike</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="82" column="20"/>
+        <referencedby refid="classSynapse_1acbc152f1146101c3c86d50d23f6a40e7" compoundref="Synapse_8cpp" startline="115" endline="118">Synapse::getTopSpike</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1acda10f074d0aaeea5ca3b87cf23e62c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SynHandlerBase::process</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>process</name>
+        <qualifiedname>SynHandlerBase::process</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="48" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="119" bodyend="122"/>
+        <references refid="classSynHandlerBase_1ad9e42665e8a3c09a631df3c5d900cffd">vProcess</references>
+        <referencedby refid="classSynHandlerBase_1adf7d7714a23a6da7aa46877a16f90424" compoundref="SynHandlerBase_8cpp" startline="31" endline="88">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a0dab0883f0962f0afde8efdba67def0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SynHandlerBase::rangeWarning</definition>
+        <argsstring>(const string &amp;field, double value)</argsstring>
+        <name>rangeWarning</name>
+        <qualifiedname>SynHandlerBase::rangeWarning</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A utility function to check for assignment to fields that must be &gt; 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="55" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="129" bodyend="140"/>
+        <references refid="SynHandlerBase_8cpp_1a11ccb7d67463df07b6588565ee3b3357" compoundref="SynHandlerBase_8cpp" startline="14">RANGE</references>
+        <referencedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1acbd9fd42f2681933c753ee4ab405a7c8" compoundref="GraupnerBrunel2012CaPlasticitySynHandler_8cpp" startline="709" endline="713">GraupnerBrunel2012CaPlasticitySynHandler::setTauCa</referencedby>
+        <referencedby refid="classSTDPSynHandler_1aa2694a802115aa5b65f95ce9d66b7294" compoundref="STDPSynHandler_8cpp" startline="339" endline="343">STDPSynHandler::setTauMinus</referencedby>
+        <referencedby refid="classSTDPSynHandler_1a741b9da47859811277c2a69c6518f844" compoundref="STDPSynHandler_8cpp" startline="360" endline="364">STDPSynHandler::setTauPlus</referencedby>
+        <referencedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1aa7d9c50e84c95780ef60563ac891cd02" compoundref="GraupnerBrunel2012CaPlasticitySynHandler_8cpp" startline="720" endline="724">GraupnerBrunel2012CaPlasticitySynHandler::setTauSyn</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a4e64cd0a20a30c236f213712d8044bf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SynHandlerBase::reinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)</argsstring>
+        <name>reinit</name>
+        <qualifiedname>SynHandlerBase::reinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="49" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="124" bodyend="127"/>
+        <references refid="classSynHandlerBase_1ac6699b80edc994f20a89a7181a0a800e">vReinit</references>
+        <referencedby refid="classSynHandlerBase_1adf7d7714a23a6da7aa46877a16f90424" compoundref="SynHandlerBase_8cpp" startline="31" endline="88">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a70e102fcf937cf2dd78a39dbed19163d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SynHandlerBase::setNumSynapses</definition>
+        <argsstring>(unsigned int num)</argsstring>
+        <name>setNumSynapses</name>
+        <qualifiedname>SynHandlerBase::setNumSynapses</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resizes the synapse storage </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="35" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="104" bodyend="107"/>
+        <references refid="classSynHandlerBase_1ae2c64fc1e7de3476887a44a9284b4267">vSetNumSynapses</references>
+        <referencedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1ae1431942fcd0a790402f22042a427aad" compoundref="GraupnerBrunel2012CaPlasticitySynHandler_8cpp" startline="21" endline="233">GraupnerBrunel2012CaPlasticitySynHandler::initCinfo</referencedby>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">SeqSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSimpleSynHandler_1a2eb40912ffc49f8eab83a38114cb134a" compoundref="SimpleSynHandler_8cpp" startline="17" endline="39">SimpleSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSTDPSynHandler_1acf8fa8af063775b3c862b3909f4ae934" compoundref="STDPSynHandler_8cpp" startline="18" endline="128">STDPSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSynHandlerBase_1adf7d7714a23a6da7aa46877a16f90424" compoundref="SynHandlerBase_8cpp" startline="31" endline="88">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a96d2e6db531ff8484656e1fbcd1262e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SynHandlerBase::SynHandlerBase</definition>
+        <argsstring>()</argsstring>
+        <name>SynHandlerBase</name>
+        <qualifiedname>SynHandlerBase::SynHandlerBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="25" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1ace8a160fca1d76382594c59f98d9ea53" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int SynHandlerBase::vGetNumSynapses</definition>
+        <argsstring>() const =0</argsstring>
+        <name>vGetNumSynapses</name>
+        <qualifiedname>SynHandlerBase::vGetNumSynapses</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1a5503b36f0aa75bc9692c45aaf4eabb38">vGetNumSynapses</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1a3a47bd50c477bb396c720b53491ae140">vGetNumSynapses</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1ae632e0383f5be736ee03492710f03d8d">vGetNumSynapses</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1a47edb6aae8ccc626f878d7092fb3f174">vGetNumSynapses</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="87" column="26"/>
+        <referencedby refid="classSynHandlerBase_1a0022b30c918b1ed5bc6883a313ed9979" compoundref="SynHandlerBase_8cpp" startline="109" endline="112">getNumSynapses</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1ae77bee46fe405773ca52a35ce19d30f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classSynapse" kindref="compound">Synapse</ref> *</type>
+        <definition>virtual Synapse * SynHandlerBase::vGetSynapse</definition>
+        <argsstring>(unsigned int i)=0</argsstring>
+        <name>vGetSynapse</name>
+        <qualifiedname>SynHandlerBase::vGetSynapse</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1affc6148439a55af4b4f21582e7b15715">vGetSynapse</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1a5c7b5ab04da88637a18e579ff890401e">vGetSynapse</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1a1775ba02949c07b7edb43976f50c3e21">vGetSynapse</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1a6723eb2c53260562d0f87908f91f3827">vGetSynapse</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="88" column="21"/>
+        <referencedby refid="classSynHandlerBase_1a000a56561ed2c0f605716a583ac11169" compoundref="SynHandlerBase_8cpp" startline="114" endline="117">getSynapse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1ad9e42665e8a3c09a631df3c5d900cffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SynHandlerBase::vProcess</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)=0</argsstring>
+        <name>vProcess</name>
+        <qualifiedname>SynHandlerBase::vProcess</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1a5bc922df890209b2307674f8e1bdbb67">vProcess</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75">vProcess</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1aeab919c16c3bf6ffae167cbcaa2e2ef6">vProcess</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1ac4de05c3d3a8e1d1a0670b813695c08d">vProcess</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="89" column="18"/>
+        <referencedby refid="classSynHandlerBase_1acda10f074d0aaeea5ca3b87cf23e62c3" compoundref="SynHandlerBase_8cpp" startline="119" endline="122">process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1ac6699b80edc994f20a89a7181a0a800e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SynHandlerBase::vReinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p)=0</argsstring>
+        <name>vReinit</name>
+        <qualifiedname>SynHandlerBase::vReinit</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1aea2e83f7cd742c3875c92bd9c8d01a89">vReinit</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1aa750d50b5e6c74c568187fd53ff9f7a0">vReinit</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1a4dce8c46880f6a9abb72946b56cb7668">vReinit</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1aa590abf076fbf14ba279e35a0e44a14d">vReinit</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="90" column="18"/>
+        <referencedby refid="classSynHandlerBase_1a4e64cd0a20a30c236f213712d8044bf1" compoundref="SynHandlerBase_8cpp" startline="124" endline="127">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1ae2c64fc1e7de3476887a44a9284b4267" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SynHandlerBase::vSetNumSynapses</definition>
+        <argsstring>(unsigned int num)=0</argsstring>
+        <name>vSetNumSynapses</name>
+        <qualifiedname>SynHandlerBase::vSetNumSynapses</qualifiedname>
+        <reimplementedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1ad81be340a605c900df191ac931fd8c9f">vSetNumSynapses</reimplementedby>
+        <reimplementedby refid="classSeqSynHandler_1a182b9836cc4e3b0243f9ce3dcf0b544b">vSetNumSynapses</reimplementedby>
+        <reimplementedby refid="classSimpleSynHandler_1a2ab90a8a56ead4666c8c0cf0cff1a345">vSetNumSynapses</reimplementedby>
+        <reimplementedby refid="classSTDPSynHandler_1afad32c0bb2b3a9cb6ca0c0a784cb1865">vSetNumSynapses</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="86" column="18"/>
+        <referencedby refid="classSynHandlerBase_1a70e102fcf937cf2dd78a39dbed19163d" compoundref="SynHandlerBase_8cpp" startline="104" endline="107">setNumSynapses</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1a76d6723bd4f877eb81a16c6f6027746f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>SynHandlerBase::~SynHandlerBase</definition>
+        <argsstring>()</argsstring>
+        <name>~SynHandlerBase</name>
+        <qualifiedname>SynHandlerBase::~SynHandlerBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="26" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classSynHandlerBase_1ad6fc78993526a88a821d2b01c7d1e6bf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classSrcFinfo1" kindref="compound">SrcFinfo1</ref>&lt; double &gt; *</type>
+        <definition>SrcFinfo1&lt; double &gt; * SynHandlerBase::activationOut</definition>
+        <argsstring>()</argsstring>
+        <name>activationOut</name>
+        <qualifiedname>SynHandlerBase::activationOut</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="92" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="16" bodyend="24"/>
+        <references refid="classSrcFinfo1_1a530c4cec4de6226aa2a32c28f8448b7e" compoundref="SrcFinfo_8h" startline="95" endline="97">SrcFinfo1&lt; T &gt;::SrcFinfo1</references>
+        <referencedby refid="classSynHandlerBase_1adf7d7714a23a6da7aa46877a16f90424" compoundref="SynHandlerBase_8cpp" startline="31" endline="88">initCinfo</referencedby>
+        <referencedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1a5bc922df890209b2307674f8e1bdbb67" compoundref="GraupnerBrunel2012CaPlasticitySynHandler_8cpp" startline="482" endline="590">GraupnerBrunel2012CaPlasticitySynHandler::vProcess</referencedby>
+        <referencedby refid="classSeqSynHandler_1a9eaf79c20e405819834915233316cf75" compoundref="SeqSynHandler_8cpp" startline="580" endline="682">SeqSynHandler::vProcess</referencedby>
+        <referencedby refid="classSimpleSynHandler_1aeab919c16c3bf6ffae167cbcaa2e2ef6" compoundref="SimpleSynHandler_8cpp" startline="98" endline="113">SimpleSynHandler::vProcess</referencedby>
+        <referencedby refid="classSTDPSynHandler_1ac4de05c3d3a8e1d1a0670b813695c08d" compoundref="STDPSynHandler_8cpp" startline="205" endline="293">STDPSynHandler::vProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSynHandlerBase_1adf7d7714a23a6da7aa46877a16f90424" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * SynHandlerBase::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>SynHandlerBase::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These are the base set of fields for any object managing synapses. Note that these are duplicated in SynChanBase: if you change anything here it must also be reflected there. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="93" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.cpp" bodystart="31" bodyend="88"/>
+        <references refid="classSynHandlerBase_1ad6fc78993526a88a821d2b01c7d1e6bf" compoundref="SynHandlerBase_8cpp" startline="16" endline="24">activationOut</references>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classSynHandlerBase_1a0022b30c918b1ed5bc6883a313ed9979" compoundref="SynHandlerBase_8cpp" startline="109" endline="112">getNumSynapses</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classSynHandlerBase_1acda10f074d0aaeea5ca3b87cf23e62c3" compoundref="SynHandlerBase_8cpp" startline="119" endline="122">process</references>
+        <references refid="classProcOpFunc_1a09abf4cb6cd3d1ed513fee1ed18054f4" compoundref="ProcOpFunc_8h" startline="76" endline="78">ProcOpFunc&lt; T &gt;::ProcOpFunc</references>
+        <references refid="classSynHandlerBase_1a4e64cd0a20a30c236f213712d8044bf1" compoundref="SynHandlerBase_8cpp" startline="124" endline="127">reinit</references>
+        <references refid="classSynHandlerBase_1a70e102fcf937cf2dd78a39dbed19163d" compoundref="SynHandlerBase_8cpp" startline="104" endline="107">setNumSynapses</references>
+        <references refid="classSharedFinfo_1a64b94efcbd56f0e785f92d027541ae29" compoundref="SharedFinfo_8cpp" startline="16" endline="30">SharedFinfo::SharedFinfo</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+        <referencedby refid="classGraupnerBrunel2012CaPlasticitySynHandler_1ae1431942fcd0a790402f22042a427aad" compoundref="GraupnerBrunel2012CaPlasticitySynHandler_8cpp" startline="21" endline="233">GraupnerBrunel2012CaPlasticitySynHandler::initCinfo</referencedby>
+        <referencedby refid="classSeqSynHandler_1a84c8323e49f09a53f04459715a5baa61" compoundref="SeqSynHandler_8cpp" startline="23" endline="209">SeqSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSimpleSynHandler_1a2eb40912ffc49f8eab83a38114cb134a" compoundref="SimpleSynHandler_8cpp" startline="17" endline="39">SimpleSynHandler::initCinfo</referencedby>
+        <referencedby refid="classSTDPSynHandler_1acf8fa8af063775b3c862b3909f4ae934" compoundref="STDPSynHandler_8cpp" startline="18" endline="128">STDPSynHandler::initCinfo</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a pure virtual base class for accessing and handling synapses. It provides a uniform interface so that all classes that use synapses can do so without duplication. The derived classes have the responsibility of handling the synaptic events as well as possible return events from the parent. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GraupnerBrunel2012CaPlasticitySynHandler</label>
+        <link refid="classGraupnerBrunel2012CaPlasticitySynHandler"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>STDPSynHandler</label>
+        <link refid="classSTDPSynHandler"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SeqSynHandler</label>
+        <link refid="classSeqSynHandler"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SimpleSynHandler</label>
+        <link refid="classSimpleSynHandler"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SynHandlerBase</label>
+        <link refid="classSynHandlerBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SynHandlerBase</label>
+        <link refid="classSynHandlerBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" line="22" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/SynHandlerBase.h" bodystart="23" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classSynHandlerBase_1ad6fc78993526a88a821d2b01c7d1e6bf" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>activationOut</name></member>
+      <member refid="classSynHandlerBase_1a6e3fbc7ee72933b8b92799c3cb85b1de" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>addSpike</name></member>
+      <member refid="classSynHandlerBase_1aa99a2a75cb16611630461efbf5194eb1" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>addSynapse</name></member>
+      <member refid="classSynHandlerBase_1a99b63feb54b68f6a0a880e3af517a9ef" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>dropSynapse</name></member>
+      <member refid="classSynHandlerBase_1a0022b30c918b1ed5bc6883a313ed9979" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>getNumSynapses</name></member>
+      <member refid="classSynHandlerBase_1a000a56561ed2c0f605716a583ac11169" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>getSynapse</name></member>
+      <member refid="classSynHandlerBase_1a62cecef12de27500b9bacf693d57fd30" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>getTopSpike</name></member>
+      <member refid="classSynHandlerBase_1adf7d7714a23a6da7aa46877a16f90424" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>initCinfo</name></member>
+      <member refid="classSynHandlerBase_1acda10f074d0aaeea5ca3b87cf23e62c3" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>process</name></member>
+      <member refid="classSynHandlerBase_1a0dab0883f0962f0afde8efdba67def0d" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>rangeWarning</name></member>
+      <member refid="classSynHandlerBase_1a4e64cd0a20a30c236f213712d8044bf1" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>reinit</name></member>
+      <member refid="classSynHandlerBase_1a70e102fcf937cf2dd78a39dbed19163d" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>setNumSynapses</name></member>
+      <member refid="classSynHandlerBase_1a96d2e6db531ff8484656e1fbcd1262e9" prot="public" virt="non-virtual"><scope>SynHandlerBase</scope><name>SynHandlerBase</name></member>
+      <member refid="classSynHandlerBase_1ace8a160fca1d76382594c59f98d9ea53" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>vGetNumSynapses</name></member>
+      <member refid="classSynHandlerBase_1ae77bee46fe405773ca52a35ce19d30f1" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>vGetSynapse</name></member>
+      <member refid="classSynHandlerBase_1ad9e42665e8a3c09a631df3c5d900cffd" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>vProcess</name></member>
+      <member refid="classSynHandlerBase_1ac6699b80edc994f20a89a7181a0a800e" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>vReinit</name></member>
+      <member refid="classSynHandlerBase_1ae2c64fc1e7de3476887a44a9284b4267" prot="public" virt="pure-virtual"><scope>SynHandlerBase</scope><name>vSetNumSynapses</name></member>
+      <member refid="classSynHandlerBase_1a76d6723bd4f877eb81a16c6f6027746f" prot="public" virt="virtual"><scope>SynHandlerBase</scope><name>~SynHandlerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

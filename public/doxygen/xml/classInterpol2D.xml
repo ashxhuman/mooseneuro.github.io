@@ -1,0 +1,1327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classInterpol2D" kind="class" language="C++" prot="public">
+    <compoundname>Interpol2D</compoundname>
+    <includes refid="Interpol2D_8h" local="no">Interpol2D.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classInterpol2D_1a2880f1dc53fff9b9bcc378f24031ff7b" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Interpol2D::MAX_DIVS</definition>
+        <argsstring></argsstring>
+        <name>MAX_DIVS</name>
+        <qualifiedname>Interpol2D::MAX_DIVS</qualifiedname>
+        <initializer>= 100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="101" column="27" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1ac276be88fec34e35cb0bfba3ba9de6fa" compoundref="Interpol2D_8cpp" startline="268" endline="280">setDx</referencedby>
+        <referencedby refid="classInterpol2D_1a2fafd55e39c1bc1c45442c8c6371a1c6" compoundref="Interpol2D_8cpp" startline="336" endline="350">setDy</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interpol2D::invDx_</definition>
+        <argsstring></argsstring>
+        <name>invDx_</name>
+        <qualifiedname>Interpol2D::invDx_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="105" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1ab7b080606e3b719d4a5a7c710e129c06" compoundref="Interpol2D_8cpp" startline="648" endline="678">appendTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a28f8bee1191dafedb0b588cb744f2465" compoundref="Interpol2D_8cpp" startline="489" endline="500">indexWithoutCheck</referencedby>
+        <referencedby refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" compoundref="Interpol2D_8cpp" startline="163" endline="171">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" compoundref="Interpol2D_8cpp" startline="173" endline="191">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" compoundref="Interpol2D_8cpp" startline="508" endline="572">interpolate</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="Interpol2D_8cpp_1a5904a3191c3807da6a9d32b4ab32c0f6" compoundref="Interpol2D_8cpp" startline="628" endline="644">operator&gt;&gt;</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a13fa776fe5c9d41ba4c6e3ad28bbcd27" compoundref="Interpol2D_8cpp" startline="243" endline="250">setXmax</referencedby>
+        <referencedby refid="classInterpol2D_1a74cbc0a82965529e48db2c16fa8ecc84" compoundref="Interpol2D_8cpp" startline="229" endline="236">setXmin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interpol2D::invDy_</definition>
+        <argsstring></argsstring>
+        <name>invDy_</name>
+        <qualifiedname>Interpol2D::invDy_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="108" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1a28f8bee1191dafedb0b588cb744f2465" compoundref="Interpol2D_8cpp" startline="489" endline="500">indexWithoutCheck</referencedby>
+        <referencedby refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" compoundref="Interpol2D_8cpp" startline="163" endline="171">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" compoundref="Interpol2D_8cpp" startline="173" endline="191">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" compoundref="Interpol2D_8cpp" startline="508" endline="572">interpolate</referencedby>
+        <referencedby refid="classInterpol2D_1ad31c924ae8c3996df26915f8a608eed9" compoundref="Interpol2D_8h" startline="76" endline="78">invDy</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="Interpol2D_8cpp_1a5904a3191c3807da6a9d32b4ab32c0f6" compoundref="Interpol2D_8cpp" startline="628" endline="644">operator&gt;&gt;</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1a2fafd55e39c1bc1c45442c8c6371a1c6" compoundref="Interpol2D_8cpp" startline="336" endline="350">setDy</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a1a90cecf3a35011c5efcf1ccf2e0eb48" compoundref="Interpol2D_8cpp" startline="307" endline="314">setYmax</referencedby>
+        <referencedby refid="classInterpol2D_1a2fe0fd1fee3eecc42fe0af9ca2a37eed" compoundref="Interpol2D_8cpp" startline="293" endline="300">setYmin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classInterpol2D_1a3511f3a78f4fb04546394af2e5ee132d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interpol2D::sy_</definition>
+        <argsstring></argsstring>
+        <name>sy_</name>
+        <qualifiedname>Interpol2D::sy_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="109" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1a2bb6313704bbcad0e4591c0702ea21e4" compoundref="Interpol2D_8cpp" startline="359" endline="362">getSy</referencedby>
+        <referencedby refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" compoundref="Interpol2D_8cpp" startline="163" endline="171">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" compoundref="Interpol2D_8cpp" startline="173" endline="191">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1a1ff6f88791df535b3d2253892affe147" compoundref="Interpol2D_8cpp" startline="364" endline="377">setSy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; double &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; double &gt; &gt; Interpol2D::table_</definition>
+        <argsstring></argsstring>
+        <name>table_</name>
+        <qualifiedname>Interpol2D::table_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="110" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1ab7b080606e3b719d4a5a7c710e129c06" compoundref="Interpol2D_8cpp" startline="648" endline="678">appendTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1ab7fb26ce2fb82987ae29da073a815b0e" compoundref="Interpol2D_8cpp" startline="402" endline="416">getTableValue</referencedby>
+        <referencedby refid="classInterpol2D_1acbebca9c981fcdf7fe09b44dddd64110" compoundref="Interpol2D_8cpp" startline="379" endline="382">getTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a6742b50d0401928e1837b001f494a1e6" compoundref="Interpol2D_8cpp" startline="262" endline="266">getXdivs</referencedby>
+        <referencedby refid="classInterpol2D_1a552e44c144d4d82d766e1294f63cc957" compoundref="Interpol2D_8cpp" startline="325" endline="330">getYdivs</referencedby>
+        <referencedby refid="classInterpol2D_1a28f8bee1191dafedb0b588cb744f2465" compoundref="Interpol2D_8cpp" startline="489" endline="500">indexWithoutCheck</referencedby>
+        <referencedby refid="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" compoundref="Interpol2D_8cpp" startline="574" endline="592">innerLookup</referencedby>
+        <referencedby refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" compoundref="Interpol2D_8cpp" startline="163" endline="171">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" compoundref="Interpol2D_8cpp" startline="508" endline="572">interpolate</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="classInterpol2D_1a194f5b408dc849c71c83867dc89a5a73" compoundref="Interpol2D_8cpp" startline="604" endline="622">operator&lt;</referencedby>
+        <referencedby refid="classInterpol2D_1a18e01d556cf9f7341452329c56879208" compoundref="Interpol2D_8cpp" startline="594" endline="602">operator==</referencedby>
+        <referencedby refid="Interpol2D_8cpp_1a5904a3191c3807da6a9d32b4ab32c0f6" compoundref="Interpol2D_8cpp" startline="628" endline="644">operator&gt;&gt;</referencedby>
+        <referencedby refid="classInterpol2D_1a57ba7cd7c5cf00c6d67efd6f5a426371" compoundref="Interpol2D_8cpp" startline="680" endline="697">print</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1a1ff6f88791df535b3d2253892affe147" compoundref="Interpol2D_8cpp" startline="364" endline="377">setSy</referencedby>
+        <referencedby refid="classInterpol2D_1a30a7b618e6996ffe4ac7259da3df893c" compoundref="Interpol2D_8cpp" startline="384" endline="394">setTableValue</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" compoundref="Interpol2D_8cpp" startline="427" endline="432">xdivs</referencedby>
+        <referencedby refid="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" compoundref="Interpol2D_8cpp" startline="434" endline="439">ydivs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interpol2D::xmax_</definition>
+        <argsstring></argsstring>
+        <name>xmax_</name>
+        <qualifiedname>Interpol2D::xmax_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="104" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1ab7b080606e3b719d4a5a7c710e129c06" compoundref="Interpol2D_8cpp" startline="648" endline="678">appendTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a6fdf166548719205d4898eccda90308f" compoundref="Interpol2D_8cpp" startline="282" endline="287">getDx</referencedby>
+        <referencedby refid="classInterpol2D_1a429f5b5fe95e125a7eed4634616a8b24" compoundref="Interpol2D_8cpp" startline="443" endline="466">getInterpolatedValue</referencedby>
+        <referencedby refid="classInterpol2D_1afab943738276f607b5af22db233a68bd" compoundref="Interpol2D_8cpp" startline="252" endline="255">getXmax</referencedby>
+        <referencedby refid="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" compoundref="Interpol2D_8cpp" startline="574" endline="592">innerLookup</referencedby>
+        <referencedby refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" compoundref="Interpol2D_8cpp" startline="163" endline="171">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" compoundref="Interpol2D_8cpp" startline="173" endline="191">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="classInterpol2D_1a18e01d556cf9f7341452329c56879208" compoundref="Interpol2D_8cpp" startline="594" endline="602">operator==</referencedby>
+        <referencedby refid="Interpol2D_8cpp_1a5904a3191c3807da6a9d32b4ab32c0f6" compoundref="Interpol2D_8cpp" startline="628" endline="644">operator&gt;&gt;</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1ac276be88fec34e35cb0bfba3ba9de6fa" compoundref="Interpol2D_8cpp" startline="268" endline="280">setDx</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a13fa776fe5c9d41ba4c6e3ad28bbcd27" compoundref="Interpol2D_8cpp" startline="243" endline="250">setXmax</referencedby>
+        <referencedby refid="classInterpol2D_1a74cbc0a82965529e48db2c16fa8ecc84" compoundref="Interpol2D_8cpp" startline="229" endline="236">setXmin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interpol2D::xmin_</definition>
+        <argsstring></argsstring>
+        <name>xmin_</name>
+        <qualifiedname>Interpol2D::xmin_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="103" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1ab7b080606e3b719d4a5a7c710e129c06" compoundref="Interpol2D_8cpp" startline="648" endline="678">appendTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a6fdf166548719205d4898eccda90308f" compoundref="Interpol2D_8cpp" startline="282" endline="287">getDx</referencedby>
+        <referencedby refid="classInterpol2D_1a429f5b5fe95e125a7eed4634616a8b24" compoundref="Interpol2D_8cpp" startline="443" endline="466">getInterpolatedValue</referencedby>
+        <referencedby refid="classInterpol2D_1a67db6c55d10c7e4ff7f1ba0d44afbce8" compoundref="Interpol2D_8cpp" startline="238" endline="241">getXmin</referencedby>
+        <referencedby refid="classInterpol2D_1a28f8bee1191dafedb0b588cb744f2465" compoundref="Interpol2D_8cpp" startline="489" endline="500">indexWithoutCheck</referencedby>
+        <referencedby refid="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" compoundref="Interpol2D_8cpp" startline="574" endline="592">innerLookup</referencedby>
+        <referencedby refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" compoundref="Interpol2D_8cpp" startline="163" endline="171">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" compoundref="Interpol2D_8cpp" startline="173" endline="191">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" compoundref="Interpol2D_8cpp" startline="508" endline="572">interpolate</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="classInterpol2D_1a18e01d556cf9f7341452329c56879208" compoundref="Interpol2D_8cpp" startline="594" endline="602">operator==</referencedby>
+        <referencedby refid="Interpol2D_8cpp_1a5904a3191c3807da6a9d32b4ab32c0f6" compoundref="Interpol2D_8cpp" startline="628" endline="644">operator&gt;&gt;</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1ac276be88fec34e35cb0bfba3ba9de6fa" compoundref="Interpol2D_8cpp" startline="268" endline="280">setDx</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a13fa776fe5c9d41ba4c6e3ad28bbcd27" compoundref="Interpol2D_8cpp" startline="243" endline="250">setXmax</referencedby>
+        <referencedby refid="classInterpol2D_1a74cbc0a82965529e48db2c16fa8ecc84" compoundref="Interpol2D_8cpp" startline="229" endline="236">setXmin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interpol2D::ymax_</definition>
+        <argsstring></argsstring>
+        <name>ymax_</name>
+        <qualifiedname>Interpol2D::ymax_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="107" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1a7eeeb6cfa38222b7c32c8992f90e5b46" compoundref="Interpol2D_8cpp" startline="352" endline="357">getDy</referencedby>
+        <referencedby refid="classInterpol2D_1a429f5b5fe95e125a7eed4634616a8b24" compoundref="Interpol2D_8cpp" startline="443" endline="466">getInterpolatedValue</referencedby>
+        <referencedby refid="classInterpol2D_1afdf38979fc5ff29abce0fdca5aff7c93" compoundref="Interpol2D_8cpp" startline="316" endline="319">getYmax</referencedby>
+        <referencedby refid="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" compoundref="Interpol2D_8cpp" startline="574" endline="592">innerLookup</referencedby>
+        <referencedby refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" compoundref="Interpol2D_8cpp" startline="163" endline="171">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" compoundref="Interpol2D_8cpp" startline="173" endline="191">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="classInterpol2D_1a18e01d556cf9f7341452329c56879208" compoundref="Interpol2D_8cpp" startline="594" endline="602">operator==</referencedby>
+        <referencedby refid="Interpol2D_8cpp_1a5904a3191c3807da6a9d32b4ab32c0f6" compoundref="Interpol2D_8cpp" startline="628" endline="644">operator&gt;&gt;</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1a2fafd55e39c1bc1c45442c8c6371a1c6" compoundref="Interpol2D_8cpp" startline="336" endline="350">setDy</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a1a90cecf3a35011c5efcf1ccf2e0eb48" compoundref="Interpol2D_8cpp" startline="307" endline="314">setYmax</referencedby>
+        <referencedby refid="classInterpol2D_1a2fe0fd1fee3eecc42fe0af9ca2a37eed" compoundref="Interpol2D_8cpp" startline="293" endline="300">setYmin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Interpol2D::ymin_</definition>
+        <argsstring></argsstring>
+        <name>ymin_</name>
+        <qualifiedname>Interpol2D::ymin_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="106" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="classInterpol2D_1a7eeeb6cfa38222b7c32c8992f90e5b46" compoundref="Interpol2D_8cpp" startline="352" endline="357">getDy</referencedby>
+        <referencedby refid="classInterpol2D_1a429f5b5fe95e125a7eed4634616a8b24" compoundref="Interpol2D_8cpp" startline="443" endline="466">getInterpolatedValue</referencedby>
+        <referencedby refid="classInterpol2D_1a5c2db5098ccbc7be470ebeb9b1847e68" compoundref="Interpol2D_8cpp" startline="302" endline="305">getYmin</referencedby>
+        <referencedby refid="classInterpol2D_1a28f8bee1191dafedb0b588cb744f2465" compoundref="Interpol2D_8cpp" startline="489" endline="500">indexWithoutCheck</referencedby>
+        <referencedby refid="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" compoundref="Interpol2D_8cpp" startline="574" endline="592">innerLookup</referencedby>
+        <referencedby refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" compoundref="Interpol2D_8cpp" startline="163" endline="171">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" compoundref="Interpol2D_8cpp" startline="173" endline="191">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" compoundref="Interpol2D_8cpp" startline="508" endline="572">interpolate</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="classInterpol2D_1a18e01d556cf9f7341452329c56879208" compoundref="Interpol2D_8cpp" startline="594" endline="602">operator==</referencedby>
+        <referencedby refid="Interpol2D_8cpp_1a5904a3191c3807da6a9d32b4ab32c0f6" compoundref="Interpol2D_8cpp" startline="628" endline="644">operator&gt;&gt;</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1a2fafd55e39c1bc1c45442c8c6371a1c6" compoundref="Interpol2D_8cpp" startline="336" endline="350">setDy</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a1a90cecf3a35011c5efcf1ccf2e0eb48" compoundref="Interpol2D_8cpp" startline="307" endline="314">setYmax</referencedby>
+        <referencedby refid="classInterpol2D_1a2fe0fd1fee3eecc42fe0af9ca2a37eed" compoundref="Interpol2D_8cpp" startline="293" endline="300">setYmin</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classInterpol2D_1ab7b080606e3b719d4a5a7c710e129c06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::appendTableVector</definition>
+        <argsstring>(const vector&lt; vector&lt; double &gt; &gt; &amp;value)</argsstring>
+        <name>appendTableVector</name>
+        <qualifiedname>Interpol2D::appendTableVector</qualifiedname>
+        <param>
+          <type>const vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="85" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="648" bodyend="678"/>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" compoundref="Interpol2D_8cpp" startline="427" endline="432">xdivs</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a929a387894848fdd7e199f6a3863f733" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::appendTableVector</definition>
+        <argsstring>(vector&lt; vector&lt; double &gt; &gt; value)</argsstring>
+        <name>appendTableVector</name>
+        <qualifiedname>Interpol2D::appendTableVector</qualifiedname>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="62" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a6fdf166548719205d4898eccda90308f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getDx</definition>
+        <argsstring>() const</argsstring>
+        <name>getDx</name>
+        <qualifiedname>Interpol2D::getDx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="36" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="282" bodyend="287"/>
+        <references refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" compoundref="Interpol2D_8cpp" startline="427" endline="432">xdivs</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a7eeeb6cfa38222b7c32c8992f90e5b46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getDy</definition>
+        <argsstring>() const</argsstring>
+        <name>getDy</name>
+        <qualifiedname>Interpol2D::getDy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="45" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="352" bodyend="357"/>
+        <references refid="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" compoundref="Interpol2D_8cpp" startline="434" endline="439">ydivs</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a429f5b5fe95e125a7eed4634616a8b24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getInterpolatedValue</definition>
+        <argsstring>(vector&lt; double &gt; xy) const</argsstring>
+        <name>getInterpolatedValue</name>
+        <qualifiedname>Interpol2D::getInterpolatedValue</qualifiedname>
+        <param>
+          <type>vector&lt; double &gt;</type>
+          <declname>xy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="50" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="443" bodyend="466"/>
+        <references refid="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" compoundref="Interpol2D_8cpp" startline="508" endline="572">interpolate</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a2bb6313704bbcad0e4591c0702ea21e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getSy</definition>
+        <argsstring>() const</argsstring>
+        <name>getSy</name>
+        <qualifiedname>Interpol2D::getSy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="48" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="359" bodyend="362"/>
+        <references refid="classInterpol2D_1a3511f3a78f4fb04546394af2e5ee132d" compoundref="Interpol2D_8h" startline="109">sy_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1ab7fb26ce2fb82987ae29da073a815b0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getTableValue</definition>
+        <argsstring>(vector&lt; unsigned int &gt; index) const</argsstring>
+        <name>getTableValue</name>
+        <qualifiedname>Interpol2D::getTableValue</qualifiedname>
+        <param>
+          <type>vector&lt; unsigned int &gt;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="81" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="402" bodyend="416"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classMarkovRateTable_1a1558e75f2ebd790d87c4558df57121cd" compoundref="MarkovRateTable_8cpp" startline="339" endline="361">MarkovRateTable::lookup2dIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1acbebca9c981fcdf7fe09b44dddd64110" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; double &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; double &gt; &gt; Interpol2D::getTableVector</definition>
+        <argsstring>() const</argsstring>
+        <name>getTableVector</name>
+        <qualifiedname>Interpol2D::getTableVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="84" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="379" bodyend="382"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <referencedby refid="classHHGate2D_1a3628ee1416c24fe7c69b43fd19a0b647" compoundref="HHGate2D_8cpp" startline="161" endline="164">HHGate2D::getTableA</referencedby>
+        <referencedby refid="classHHGate2D_1aa3666309a2e617200476e90a58b49a9e" compoundref="HHGate2D_8cpp" startline="171" endline="174">HHGate2D::getTableB</referencedby>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a6742b50d0401928e1837b001f494a1e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Interpol2D::getXdivs</definition>
+        <argsstring>() const</argsstring>
+        <name>getXdivs</name>
+        <qualifiedname>Interpol2D::getXdivs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="34" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="262" bodyend="266"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <referencedby refid="classHHGate2D_1a7438cf8b72ac3c603658ca28df9a56c0" compoundref="HHGate2D_8cpp" startline="221" endline="224">HHGate2D::getXdivs</referencedby>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classMarkovSolverBase_1a099b652344dd857b876061cd65cdd835" compoundref="MarkovSolverBase_8cpp" startline="697" endline="803">MarkovSolverBase::setLookupParams</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1afab943738276f607b5af22db233a68bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getXmax</definition>
+        <argsstring>() const</argsstring>
+        <name>getXmax</name>
+        <qualifiedname>Interpol2D::getXmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="32" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="252" bodyend="255"/>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <referencedby refid="classHHGate2D_1a7863f0aca0b8685487c6205ace233802" compoundref="HHGate2D_8cpp" startline="210" endline="213">HHGate2D::getXmax</referencedby>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classMarkovSolverBase_1a099b652344dd857b876061cd65cdd835" compoundref="MarkovSolverBase_8cpp" startline="697" endline="803">MarkovSolverBase::setLookupParams</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a67db6c55d10c7e4ff7f1ba0d44afbce8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getXmin</definition>
+        <argsstring>() const</argsstring>
+        <name>getXmin</name>
+        <qualifiedname>Interpol2D::getXmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="30" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="238" bodyend="241"/>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <referencedby refid="classHHGate2D_1a42c16c1b70c16717cf53814daea2ecec" compoundref="HHGate2D_8cpp" startline="199" endline="202">HHGate2D::getXmin</referencedby>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classMarkovSolverBase_1a099b652344dd857b876061cd65cdd835" compoundref="MarkovSolverBase_8cpp" startline="697" endline="803">MarkovSolverBase::setLookupParams</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a552e44c144d4d82d766e1294f63cc957" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Interpol2D::getYdivs</definition>
+        <argsstring>() const</argsstring>
+        <name>getYdivs</name>
+        <qualifiedname>Interpol2D::getYdivs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="43" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="325" bodyend="330"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <referencedby refid="classHHGate2D_1a3f685370413fbf4c0d79857c555ca2bf" compoundref="HHGate2D_8cpp" startline="254" endline="257">HHGate2D::getYdivs</referencedby>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classMarkovSolverBase_1a099b652344dd857b876061cd65cdd835" compoundref="MarkovSolverBase_8cpp" startline="697" endline="803">MarkovSolverBase::setLookupParams</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1afdf38979fc5ff29abce0fdca5aff7c93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getYmax</definition>
+        <argsstring>() const</argsstring>
+        <name>getYmax</name>
+        <qualifiedname>Interpol2D::getYmax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="41" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="316" bodyend="319"/>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <referencedby refid="classHHGate2D_1a0cdee7ab67c27d7b818d04e6ed5e158a" compoundref="HHGate2D_8cpp" startline="243" endline="246">HHGate2D::getYmax</referencedby>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classMarkovSolverBase_1a099b652344dd857b876061cd65cdd835" compoundref="MarkovSolverBase_8cpp" startline="697" endline="803">MarkovSolverBase::setLookupParams</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a5c2db5098ccbc7be470ebeb9b1847e68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::getYmin</definition>
+        <argsstring>() const</argsstring>
+        <name>getYmin</name>
+        <qualifiedname>Interpol2D::getYmin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="39" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="302" bodyend="305"/>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classHHGate2D_1aa5b25c5fbeb3ff965779b46151b79c46" compoundref="HHGate2D_8cpp" startline="232" endline="235">HHGate2D::getYmin</referencedby>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classMarkovSolverBase_1a099b652344dd857b876061cd65cdd835" compoundref="MarkovSolverBase_8cpp" startline="697" endline="803">MarkovSolverBase::setLookupParams</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a28f8bee1191dafedb0b588cb744f2465" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::indexWithoutCheck</definition>
+        <argsstring>(double x, double y) const</argsstring>
+        <name>indexWithoutCheck</name>
+        <qualifiedname>Interpol2D::indexWithoutCheck</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="68" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="489" bodyend="500"/>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::innerLookup</definition>
+        <argsstring>(double x, double y) const</argsstring>
+        <name>innerLookup</name>
+        <qualifiedname>Interpol2D::innerLookup</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="69" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="574" bodyend="592"/>
+        <references refid="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" compoundref="Interpol2D_8cpp" startline="508" endline="572">interpolate</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classMarkovRateTable_1abb7424cbfd9f4fc4088cb5c6935a2c61" compoundref="MarkovRateTable_8cpp" startline="319" endline="337">MarkovRateTable::lookup2dValue</referencedby>
+        <referencedby refid="classHHGate2D_1af56c7b4fb851c2caf699556e770c048e" compoundref="HHGate2D_8cpp" startline="117" endline="132">HHGate2D::lookupA</referencedby>
+        <referencedby refid="classHHGate2D_1aa0a2d2d2de2ee91a2af5ad88ea569bd1" compoundref="HHGate2D_8cpp" startline="134" endline="149">HHGate2D::lookupB</referencedby>
+        <referencedby refid="classHHGate2D_1a2f99fa53be142de5a93f8c4992a81bf8" compoundref="HHGate2D_8cpp" startline="151" endline="155">HHGate2D::lookupBoth</referencedby>
+        <referencedby refid="classInterpol2D_1a82f25c6be808dd05ae5c7898ef5331e4" compoundref="Interpol2D_8cpp" startline="478" endline="482">lookupReturn</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interpol2D::Interpol2D</definition>
+        <argsstring>()</argsstring>
+        <name>Interpol2D</name>
+        <qualifiedname>Interpol2D::Interpol2D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="21" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="163" bodyend="171"/>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a3511f3a78f4fb04546394af2e5ee132d" compoundref="Interpol2D_8h" startline="109">sy_</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classMarkovRateTable_1a6959f9071c48e8088626701b6983e528" compoundref="MarkovRateTable_8cpp" startline="248" endline="278">MarkovRateTable::innerSetInt2dChildTable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interpol2D::Interpol2D</definition>
+        <argsstring>(unsigned int xdivs, double xmin, double xmax, unsigned int ydivs, double ymin, double ymax)</argsstring>
+        <name>Interpol2D</name>
+        <qualifiedname>Interpol2D::Interpol2D</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>xdivs</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xmin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xmax</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>ydivs</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ymin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ymax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="22" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="173" bodyend="191"/>
+        <references refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" compoundref="doubleEq_8cpp" startline="16" endline="22">doubleEq</references>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</references>
+        <references refid="classInterpol2D_1a3511f3a78f4fb04546394af2e5ee132d" compoundref="Interpol2D_8h" startline="109">sy_</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::interpolate</definition>
+        <argsstring>(double x, double y) const</argsstring>
+        <name>interpolate</name>
+        <qualifiedname>Interpol2D::interpolate</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs bi-linear interpolation.</para>
+<para>Modified by Vishaka Datta S, 2011, NCBS. Interpolation now performs bounds checking. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="67" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="508" bodyend="572"/>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classInterpol2D_1a429f5b5fe95e125a7eed4634616a8b24" compoundref="Interpol2D_8cpp" startline="443" endline="466">getInterpolatedValue</referencedby>
+        <referencedby refid="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" compoundref="Interpol2D_8cpp" startline="574" endline="592">innerLookup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1ad31c924ae8c3996df26915f8a608eed9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Interpol2D::invDy</definition>
+        <argsstring>() const</argsstring>
+        <name>invDy</name>
+        <qualifiedname>Interpol2D::invDy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="76" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="76" bodyend="78"/>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::load</definition>
+        <argsstring>(const string &amp;fname, unsigned int skiplines)</argsstring>
+        <name>load</name>
+        <qualifiedname>Interpol2D::load</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>fname</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>skiplines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="98" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="699" bodyend="765"/>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="namespacemoose_1aea4faf9be206cc137d29ae514cf6b366" compoundref="strutil_8cpp" startline="53" endline="67">moose::trim</references>
+        <references refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" compoundref="Interpol2D_8cpp" startline="427" endline="432">xdivs</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" compoundref="Interpol2D_8cpp" startline="434" endline="439">ydivs</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a849706a1cf47aa6aae7b7d11f7b5f8d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::lookup</definition>
+        <argsstring>(double v1, double v2)</argsstring>
+        <name>lookup</name>
+        <qualifiedname>Interpol2D::lookup</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="60" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a82f25c6be808dd05ae5c7898ef5331e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::lookupReturn</definition>
+        <argsstring>(const Eref &amp;e, double v1, double v2)</argsstring>
+        <name>lookupReturn</name>
+        <qualifiedname>Interpol2D::lookupReturn</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Looks up table value based on indices v1 and v2, and sends value back on the &apos;lookupOut&apos; message.</para>
+<para>lookupReturn uses its argument to do an interpolating lookup of the table. It sends a return message to the originating object with the looked up value. This should be avoided, instead use the fastGet function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="59" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="478" bodyend="482"/>
+        <references refid="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" compoundref="Interpol2D_8cpp" startline="574" endline="592">innerLookup</references>
+        <references refid="Interpol2D_8cpp_1a57b6955bf13633d375b6045d9a87a7f7" compoundref="Interpol2D_8cpp" startline="18" endline="23">lookupOut</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a194f5b408dc849c71c83867dc89a5a73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interpol2D::operator&lt;</definition>
+        <argsstring>(const Interpol2D &amp;other) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>Interpol2D::operator&lt;</qualifiedname>
+        <param>
+          <type>const <ref refid="classInterpol2D" kindref="compound">Interpol2D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="71" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="604" bodyend="622"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a18e01d556cf9f7341452329c56879208" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interpol2D::operator==</definition>
+        <argsstring>(const Interpol2D &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>Interpol2D::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classInterpol2D" kindref="compound">Interpol2D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="70" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="594" bodyend="602"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a57ba7cd7c5cf00c6d67efd6f5a426371" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::print</definition>
+        <argsstring>(const string &amp;fname, bool doAppend) const</argsstring>
+        <name>print</name>
+        <qualifiedname>Interpol2D::print</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>fname</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>doAppend</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="97" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="680" bodyend="697"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::resize</definition>
+        <argsstring>(unsigned int xsize, unsigned int ysize, double init=0.0)</argsstring>
+        <name>resize</name>
+        <qualifiedname>Interpol2D::resize</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>xsize</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>ysize</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>init</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resizes 2-D vector. If either argument is zero, it remains unchanged </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="92" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="200" bodyend="223"/>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" compoundref="Interpol2D_8cpp" startline="427" endline="432">xdivs</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" compoundref="Interpol2D_8cpp" startline="434" endline="439">ydivs</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" compoundref="Interpol2D_8cpp" startline="173" endline="191">Interpol2D</referencedby>
+        <referencedby refid="classInterpol2D_1ac276be88fec34e35cb0bfba3ba9de6fa" compoundref="Interpol2D_8cpp" startline="268" endline="280">setDx</referencedby>
+        <referencedby refid="classInterpol2D_1ad06c365e998f95a5cbf8881a46ea2af3" compoundref="Interpol2D_8cpp" startline="257" endline="260">setXdivs</referencedby>
+        <referencedby refid="classInterpol2D_1ad30b8675f843dce9e99106c96eb0d15f" compoundref="Interpol2D_8cpp" startline="321" endline="323">setYdivs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1ac276be88fec34e35cb0bfba3ba9de6fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setDx</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setDx</name>
+        <qualifiedname>Interpol2D::setDx</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="35" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="268" bodyend="280"/>
+        <references refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" compoundref="doubleEq_8cpp" startline="16" endline="22">doubleEq</references>
+        <references refid="classInterpol2D_1a2880f1dc53fff9b9bcc378f24031ff7b" compoundref="Interpol2D_8h" startline="101">MAX_DIVS</references>
+        <references refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a2fafd55e39c1bc1c45442c8c6371a1c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setDy</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setDy</name>
+        <qualifiedname>Interpol2D::setDy</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="44" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="336" bodyend="350"/>
+        <references refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" compoundref="doubleEq_8cpp" startline="16" endline="22">doubleEq</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a2880f1dc53fff9b9bcc378f24031ff7b" compoundref="Interpol2D_8h" startline="101">MAX_DIVS</references>
+        <references refid="classInterpol2D_1ad30b8675f843dce9e99106c96eb0d15f" compoundref="Interpol2D_8cpp" startline="321" endline="323">setYdivs</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a1ff6f88791df535b3d2253892affe147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setSy</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setSy</name>
+        <qualifiedname>Interpol2D::setSy</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="47" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="364" bodyend="377"/>
+        <references refid="doubleEq_8h_1accfeefca4825a69921a3916e4f7538b7" compoundref="doubleEq_8cpp" startline="16" endline="22">doubleEq</references>
+        <references refid="classInterpol2D_1a3511f3a78f4fb04546394af2e5ee132d" compoundref="Interpol2D_8h" startline="109">sy_</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a30a7b618e6996ffe4ac7259da3df893c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setTableValue</definition>
+        <argsstring>(vector&lt; unsigned int &gt; index, double value)</argsstring>
+        <name>setTableValue</name>
+        <qualifiedname>Interpol2D::setTableValue</qualifiedname>
+        <param>
+          <type>vector&lt; unsigned int &gt;</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="80" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="384" bodyend="394"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setTableVector</definition>
+        <argsstring>(vector&lt; vector&lt; double &gt; &gt; value)</argsstring>
+        <name>setTableVector</name>
+        <qualifiedname>Interpol2D::setTableVector</qualifiedname>
+        <param>
+          <type>vector&lt; vector&lt; double &gt; &gt;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="83" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="420" bodyend="425"/>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <references refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" compoundref="Interpol2D_8cpp" startline="427" endline="432">xdivs</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <references refid="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" compoundref="Interpol2D_8cpp" startline="434" endline="439">ydivs</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classHHGate2D_1a65b601890577b419defae7a2f5ba1c51" compoundref="HHGate2D_8cpp" startline="166" endline="169">HHGate2D::setTableA</referencedby>
+        <referencedby refid="classHHGate2D_1af48a2b558802234af5fd6a5894af542a" compoundref="HHGate2D_8cpp" startline="176" endline="179">HHGate2D::setTableB</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1ad06c365e998f95a5cbf8881a46ea2af3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setXdivs</definition>
+        <argsstring>(unsigned int value)</argsstring>
+        <name>setXdivs</name>
+        <qualifiedname>Interpol2D::setXdivs</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="33" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="257" bodyend="260"/>
+        <references refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classHHGate2D_1aa00a53c56b0de878eaccca6ceefaf0c1" compoundref="HHGate2D_8cpp" startline="226" endline="230">HHGate2D::setXdivs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a13fa776fe5c9d41ba4c6e3ad28bbcd27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setXmax</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setXmax</name>
+        <qualifiedname>Interpol2D::setXmax</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="31" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="243" bodyend="250"/>
+        <references refid="doubleEq_8h_1a31471cf6c91778aa12bcdb8b13477699" compoundref="doubleEq_8cpp" startline="24" endline="30">doubleApprox</references>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" compoundref="Interpol2D_8cpp" startline="427" endline="432">xdivs</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classHHGate2D_1add0404f0adc6f2fc885132d90151614b" compoundref="HHGate2D_8cpp" startline="215" endline="219">HHGate2D::setXmax</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a74cbc0a82965529e48db2c16fa8ecc84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setXmin</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setXmin</name>
+        <qualifiedname>Interpol2D::setXmin</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="29" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="229" bodyend="236"/>
+        <references refid="doubleEq_8h_1a31471cf6c91778aa12bcdb8b13477699" compoundref="doubleEq_8cpp" startline="24" endline="30">doubleApprox</references>
+        <references refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" compoundref="Interpol2D_8h" startline="105">invDx_</references>
+        <references refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" compoundref="Interpol2D_8cpp" startline="427" endline="432">xdivs</references>
+        <references refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" compoundref="Interpol2D_8h" startline="104">xmax_</references>
+        <references refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" compoundref="Interpol2D_8h" startline="103">xmin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classHHGate2D_1aeed7724c7157d61c447365f7b3ec67db" compoundref="HHGate2D_8cpp" startline="204" endline="208">HHGate2D::setXmin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1ad30b8675f843dce9e99106c96eb0d15f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setYdivs</definition>
+        <argsstring>(unsigned int value)</argsstring>
+        <name>setYdivs</name>
+        <qualifiedname>Interpol2D::setYdivs</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="42" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="321" bodyend="323"/>
+        <references refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classInterpol2D_1a2fafd55e39c1bc1c45442c8c6371a1c6" compoundref="Interpol2D_8cpp" startline="336" endline="350">setDy</referencedby>
+        <referencedby refid="classHHGate2D_1a44da172c88599001640e33c1f3a49868" compoundref="HHGate2D_8cpp" startline="259" endline="263">HHGate2D::setYdivs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a1a90cecf3a35011c5efcf1ccf2e0eb48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setYmax</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setYmax</name>
+        <qualifiedname>Interpol2D::setYmax</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="40" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="307" bodyend="314"/>
+        <references refid="doubleEq_8h_1a31471cf6c91778aa12bcdb8b13477699" compoundref="doubleEq_8cpp" startline="24" endline="30">doubleApprox</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" compoundref="Interpol2D_8cpp" startline="434" endline="439">ydivs</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classHHGate2D_1a63011c940eb47e4a73ba736797e9d83b" compoundref="HHGate2D_8cpp" startline="248" endline="252">HHGate2D::setYmax</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a2fe0fd1fee3eecc42fe0af9ca2a37eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interpol2D::setYmin</definition>
+        <argsstring>(double value)</argsstring>
+        <name>setYmin</name>
+        <qualifiedname>Interpol2D::setYmin</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="38" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="293" bodyend="300"/>
+        <references refid="doubleEq_8h_1a31471cf6c91778aa12bcdb8b13477699" compoundref="doubleEq_8cpp" startline="24" endline="30">doubleApprox</references>
+        <references refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" compoundref="Interpol2D_8h" startline="108">invDy_</references>
+        <references refid="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" compoundref="Interpol2D_8cpp" startline="434" endline="439">ydivs</references>
+        <references refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" compoundref="Interpol2D_8h" startline="107">ymax_</references>
+        <references refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" compoundref="Interpol2D_8h" startline="106">ymin_</references>
+        <referencedby refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" compoundref="Interpol2D_8cpp" startline="25" endline="154">initCinfo</referencedby>
+        <referencedby refid="classHHGate2D_1aa95d0c64affe7c369f884eca86a990f0" compoundref="HHGate2D_8cpp" startline="237" endline="241">HHGate2D::setYmin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Interpol2D::xdivs</definition>
+        <argsstring>() const</argsstring>
+        <name>xdivs</name>
+        <qualifiedname>Interpol2D::xdivs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="94" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="427" bodyend="432"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <referencedby refid="classInterpol2D_1ab7b080606e3b719d4a5a7c710e129c06" compoundref="Interpol2D_8cpp" startline="648" endline="678">appendTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a6fdf166548719205d4898eccda90308f" compoundref="Interpol2D_8cpp" startline="282" endline="287">getDx</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a13fa776fe5c9d41ba4c6e3ad28bbcd27" compoundref="Interpol2D_8cpp" startline="243" endline="250">setXmax</referencedby>
+        <referencedby refid="classInterpol2D_1a74cbc0a82965529e48db2c16fa8ecc84" compoundref="Interpol2D_8cpp" startline="229" endline="236">setXmin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Interpol2D::ydivs</definition>
+        <argsstring>() const</argsstring>
+        <name>ydivs</name>
+        <qualifiedname>Interpol2D::ydivs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="95" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="434" bodyend="439"/>
+        <references refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" compoundref="Interpol2D_8h" startline="110">table_</references>
+        <referencedby refid="classInterpol2D_1a7eeeb6cfa38222b7c32c8992f90e5b46" compoundref="Interpol2D_8cpp" startline="352" endline="357">getDy</referencedby>
+        <referencedby refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" compoundref="Interpol2D_8cpp" startline="699" endline="765">load</referencedby>
+        <referencedby refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" compoundref="Interpol2D_8cpp" startline="200" endline="223">resize</referencedby>
+        <referencedby refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</referencedby>
+        <referencedby refid="classInterpol2D_1a1a90cecf3a35011c5efcf1ccf2e0eb48" compoundref="Interpol2D_8cpp" startline="307" endline="314">setYmax</referencedby>
+        <referencedby refid="classInterpol2D_1a2fe0fd1fee3eecc42fe0af9ca2a37eed" compoundref="Interpol2D_8cpp" startline="293" endline="300">setYmin</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classInterpol2D_1a897f3233230719f118131849a3dce676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>istream &amp;</type>
+        <definition>istream &amp; operator&gt;&gt;</definition>
+        <argsstring>(istream &amp;, Interpol2D &amp;)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <qualifiedname>Interpol2D::operator&gt;&gt;</qualifiedname>
+        <param>
+          <type>istream &amp;</type>
+        </param>
+        <param>
+          <type><ref refid="classInterpol2D" kindref="compound">Interpol2D</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="74" column="16"/>
+        <referencedby refid="MarkovRateTable_8cpp_1ab662301ba6897a00daba83d00618525f" compoundref="MarkovRateTable_8cpp" startline="568" endline="598">operator&gt;&gt;</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * Interpol2D::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>Interpol2D::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="100" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.cpp" bodystart="25" bodyend="154"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classEpFunc2_1a449f38ac36c9f1fdc9cc7a244841bbee" compoundref="EpFunc_8h" startline="87" endline="89">EpFunc2&lt; T, A1, A2 &gt;::EpFunc2</references>
+        <references refid="classInterpol2D_1a6fdf166548719205d4898eccda90308f" compoundref="Interpol2D_8cpp" startline="282" endline="287">getDx</references>
+        <references refid="classInterpol2D_1a7eeeb6cfa38222b7c32c8992f90e5b46" compoundref="Interpol2D_8cpp" startline="352" endline="357">getDy</references>
+        <references refid="classInterpol2D_1a429f5b5fe95e125a7eed4634616a8b24" compoundref="Interpol2D_8cpp" startline="443" endline="466">getInterpolatedValue</references>
+        <references refid="classInterpol2D_1ab7fb26ce2fb82987ae29da073a815b0e" compoundref="Interpol2D_8cpp" startline="402" endline="416">getTableValue</references>
+        <references refid="classInterpol2D_1acbebca9c981fcdf7fe09b44dddd64110" compoundref="Interpol2D_8cpp" startline="379" endline="382">getTableVector</references>
+        <references refid="classInterpol2D_1a6742b50d0401928e1837b001f494a1e6" compoundref="Interpol2D_8cpp" startline="262" endline="266">getXdivs</references>
+        <references refid="classInterpol2D_1afab943738276f607b5af22db233a68bd" compoundref="Interpol2D_8cpp" startline="252" endline="255">getXmax</references>
+        <references refid="classInterpol2D_1a67db6c55d10c7e4ff7f1ba0d44afbce8" compoundref="Interpol2D_8cpp" startline="238" endline="241">getXmin</references>
+        <references refid="classInterpol2D_1a552e44c144d4d82d766e1294f63cc957" compoundref="Interpol2D_8cpp" startline="325" endline="330">getYdivs</references>
+        <references refid="classInterpol2D_1afdf38979fc5ff29abce0fdca5aff7c93" compoundref="Interpol2D_8cpp" startline="316" endline="319">getYmax</references>
+        <references refid="classInterpol2D_1a5c2db5098ccbc7be470ebeb9b1847e68" compoundref="Interpol2D_8cpp" startline="302" endline="305">getYmin</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="Interpol2D_8cpp_1a57b6955bf13633d375b6045d9a87a7f7" compoundref="Interpol2D_8cpp" startline="18" endline="23">lookupOut</references>
+        <references refid="classInterpol2D_1a82f25c6be808dd05ae5c7898ef5331e4" compoundref="Interpol2D_8cpp" startline="478" endline="482">lookupReturn</references>
+        <references refid="classLookupValueFinfo_1ae091b10e988ce9da6099127e1374293b" compoundref="LookupValueFinfo_8h" startline="46" endline="62">LookupValueFinfo&lt; T, L, F &gt;::LookupValueFinfo</references>
+        <references refid="classReadOnlyLookupValueFinfo_1a3aa6c363601e4483657919db3355ff1a" compoundref="LookupValueFinfo_8h" startline="104" endline="115">ReadOnlyLookupValueFinfo&lt; T, L, F &gt;::ReadOnlyLookupValueFinfo</references>
+        <references refid="classInterpol2D_1ac276be88fec34e35cb0bfba3ba9de6fa" compoundref="Interpol2D_8cpp" startline="268" endline="280">setDx</references>
+        <references refid="classInterpol2D_1a2fafd55e39c1bc1c45442c8c6371a1c6" compoundref="Interpol2D_8cpp" startline="336" endline="350">setDy</references>
+        <references refid="classInterpol2D_1a30a7b618e6996ffe4ac7259da3df893c" compoundref="Interpol2D_8cpp" startline="384" endline="394">setTableValue</references>
+        <references refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" compoundref="Interpol2D_8cpp" startline="420" endline="425">setTableVector</references>
+        <references refid="classInterpol2D_1ad06c365e998f95a5cbf8881a46ea2af3" compoundref="Interpol2D_8cpp" startline="257" endline="260">setXdivs</references>
+        <references refid="classInterpol2D_1a13fa776fe5c9d41ba4c6e3ad28bbcd27" compoundref="Interpol2D_8cpp" startline="243" endline="250">setXmax</references>
+        <references refid="classInterpol2D_1a74cbc0a82965529e48db2c16fa8ecc84" compoundref="Interpol2D_8cpp" startline="229" endline="236">setXmin</references>
+        <references refid="classInterpol2D_1ad30b8675f843dce9e99106c96eb0d15f" compoundref="Interpol2D_8cpp" startline="321" endline="323">setYdivs</references>
+        <references refid="classInterpol2D_1a1a90cecf3a35011c5efcf1ccf2e0eb48" compoundref="Interpol2D_8cpp" startline="307" endline="314">setYmax</references>
+        <references refid="classInterpol2D_1a2fe0fd1fee3eecc42fe0af9ca2a37eed" compoundref="Interpol2D_8cpp" startline="293" endline="300">setYmin</references>
+        <references refid="classSharedFinfo_1a64b94efcbd56f0e785f92d027541ae29" compoundref="SharedFinfo_8cpp" startline="16" endline="30">SharedFinfo::SharedFinfo</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>2 Dimensional table, with interpolation. The internal vector is accessed like this: table_[ xIndex ][ yIndex ], with the x- and y-coordinates used as the first and second indices respectively. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Interpol2D</label>
+        <link refid="classInterpol2D"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" line="18" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Interpol2D.h" bodystart="19" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classInterpol2D_1a929a387894848fdd7e199f6a3863f733" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>appendTableVector</name></member>
+      <member refid="classInterpol2D_1ab7b080606e3b719d4a5a7c710e129c06" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>appendTableVector</name></member>
+      <member refid="classInterpol2D_1a6fdf166548719205d4898eccda90308f" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getDx</name></member>
+      <member refid="classInterpol2D_1a7eeeb6cfa38222b7c32c8992f90e5b46" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getDy</name></member>
+      <member refid="classInterpol2D_1a429f5b5fe95e125a7eed4634616a8b24" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getInterpolatedValue</name></member>
+      <member refid="classInterpol2D_1a2bb6313704bbcad0e4591c0702ea21e4" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getSy</name></member>
+      <member refid="classInterpol2D_1ab7fb26ce2fb82987ae29da073a815b0e" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getTableValue</name></member>
+      <member refid="classInterpol2D_1acbebca9c981fcdf7fe09b44dddd64110" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getTableVector</name></member>
+      <member refid="classInterpol2D_1a6742b50d0401928e1837b001f494a1e6" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getXdivs</name></member>
+      <member refid="classInterpol2D_1afab943738276f607b5af22db233a68bd" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getXmax</name></member>
+      <member refid="classInterpol2D_1a67db6c55d10c7e4ff7f1ba0d44afbce8" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getXmin</name></member>
+      <member refid="classInterpol2D_1a552e44c144d4d82d766e1294f63cc957" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getYdivs</name></member>
+      <member refid="classInterpol2D_1afdf38979fc5ff29abce0fdca5aff7c93" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getYmax</name></member>
+      <member refid="classInterpol2D_1a5c2db5098ccbc7be470ebeb9b1847e68" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>getYmin</name></member>
+      <member refid="classInterpol2D_1a28f8bee1191dafedb0b588cb744f2465" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>indexWithoutCheck</name></member>
+      <member refid="classInterpol2D_1a4b9c9fad0a71a377f98959de440a4544" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>initCinfo</name></member>
+      <member refid="classInterpol2D_1a495083e1ffb1cb22909ddd9342de0b5e" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>innerLookup</name></member>
+      <member refid="classInterpol2D_1a71c178da8ba38f4db051c38c7f45270f" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>Interpol2D</name></member>
+      <member refid="classInterpol2D_1ae6bd955a01f9ed12b8cff09fcdb0e834" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>Interpol2D</name></member>
+      <member refid="classInterpol2D_1ad65a5e0e379bd8cc0f40caf16f6807c7" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>interpolate</name></member>
+      <member refid="classInterpol2D_1ab47847083eb5f5dd5d07622ecfe316ab" prot="private" virt="non-virtual"><scope>Interpol2D</scope><name>invDx_</name></member>
+      <member refid="classInterpol2D_1ad31c924ae8c3996df26915f8a608eed9" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>invDy</name></member>
+      <member refid="classInterpol2D_1a07007466fabd6e5842bbde7584f14443" prot="private" virt="non-virtual"><scope>Interpol2D</scope><name>invDy_</name></member>
+      <member refid="classInterpol2D_1ad55cda5a924fc1fd25156603c1460f5d" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>load</name></member>
+      <member refid="classInterpol2D_1a849706a1cf47aa6aae7b7d11f7b5f8d4" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>lookup</name></member>
+      <member refid="classInterpol2D_1a82f25c6be808dd05ae5c7898ef5331e4" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>lookupReturn</name></member>
+      <member refid="classInterpol2D_1a2880f1dc53fff9b9bcc378f24031ff7b" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>MAX_DIVS</name></member>
+      <member refid="classInterpol2D_1a194f5b408dc849c71c83867dc89a5a73" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>operator&lt;</name></member>
+      <member refid="classInterpol2D_1a18e01d556cf9f7341452329c56879208" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>operator==</name></member>
+      <member refid="classInterpol2D_1a897f3233230719f118131849a3dce676" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classInterpol2D_1a57ba7cd7c5cf00c6d67efd6f5a426371" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>print</name></member>
+      <member refid="classInterpol2D_1af1fd19bf90049ff44a29134920d617d3" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>resize</name></member>
+      <member refid="classInterpol2D_1ac276be88fec34e35cb0bfba3ba9de6fa" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setDx</name></member>
+      <member refid="classInterpol2D_1a2fafd55e39c1bc1c45442c8c6371a1c6" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setDy</name></member>
+      <member refid="classInterpol2D_1a1ff6f88791df535b3d2253892affe147" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setSy</name></member>
+      <member refid="classInterpol2D_1a30a7b618e6996ffe4ac7259da3df893c" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setTableValue</name></member>
+      <member refid="classInterpol2D_1aa65470f8e2a3f3670b9560542fde76c4" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setTableVector</name></member>
+      <member refid="classInterpol2D_1ad06c365e998f95a5cbf8881a46ea2af3" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setXdivs</name></member>
+      <member refid="classInterpol2D_1a13fa776fe5c9d41ba4c6e3ad28bbcd27" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setXmax</name></member>
+      <member refid="classInterpol2D_1a74cbc0a82965529e48db2c16fa8ecc84" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setXmin</name></member>
+      <member refid="classInterpol2D_1ad30b8675f843dce9e99106c96eb0d15f" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setYdivs</name></member>
+      <member refid="classInterpol2D_1a1a90cecf3a35011c5efcf1ccf2e0eb48" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setYmax</name></member>
+      <member refid="classInterpol2D_1a2fe0fd1fee3eecc42fe0af9ca2a37eed" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>setYmin</name></member>
+      <member refid="classInterpol2D_1a3511f3a78f4fb04546394af2e5ee132d" prot="private" virt="non-virtual"><scope>Interpol2D</scope><name>sy_</name></member>
+      <member refid="classInterpol2D_1a29404629218a3ba177ac958c20b8f6fa" prot="private" virt="non-virtual"><scope>Interpol2D</scope><name>table_</name></member>
+      <member refid="classInterpol2D_1a707c67882a472ed9bb8aaa93781b6fd3" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>xdivs</name></member>
+      <member refid="classInterpol2D_1aca0c8edba1e6a7d545ee16caa6d5b4ce" prot="private" virt="non-virtual"><scope>Interpol2D</scope><name>xmax_</name></member>
+      <member refid="classInterpol2D_1afb9d72b088ae0cf26cbb1bf718451423" prot="private" virt="non-virtual"><scope>Interpol2D</scope><name>xmin_</name></member>
+      <member refid="classInterpol2D_1a3c3f81c6ab85d00cd4822f0746c17760" prot="public" virt="non-virtual"><scope>Interpol2D</scope><name>ydivs</name></member>
+      <member refid="classInterpol2D_1a63aa2fff6596333c15517c2002333ebf" prot="private" virt="non-virtual"><scope>Interpol2D</scope><name>ymax_</name></member>
+      <member refid="classInterpol2D_1a6f135e14d88ebc89824b60fb7eeadb1b" prot="private" virt="non-virtual"><scope>Interpol2D</scope><name>ymin_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

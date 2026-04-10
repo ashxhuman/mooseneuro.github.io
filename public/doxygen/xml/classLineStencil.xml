@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classLineStencil" kind="class" language="C++" prot="public">
+    <compoundname>LineStencil</compoundname>
+    <basecompoundref refid="classStencil" prot="public" virt="non-virtual">Stencil</basecompoundref>
+    <includes refid="Stencil_8h" local="no">Stencil.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLineStencil_1aeb11a3c4211fbd44fe89e35477ab07a1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LineStencil::h_</definition>
+        <argsstring></argsstring>
+        <name>h_</name>
+        <qualifiedname>LineStencil::h_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="59" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classLineStencil_1a50d1c9dcb8bcc67a4aadb9b69709b2d1" compoundref="Stencil_8cpp" startline="109" endline="118">LineStencil</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classLineStencil_1a6e645eaf0a5e519bca7ee22dc9725a94" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LineStencil::invHsq_</definition>
+        <argsstring></argsstring>
+        <name>invHsq_</name>
+        <qualifiedname>LineStencil::invHsq_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="60" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classLineStencil_1a1ce6016928d2123b00ae2af3e8130be7" compoundref="Stencil_8cpp" startline="124" endline="135">addFlux</referencedby>
+        <referencedby refid="classLineStencil_1a50d1c9dcb8bcc67a4aadb9b69709b2d1" compoundref="Stencil_8cpp" startline="109" endline="118">LineStencil</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLineStencil_1a1ce6016928d2123b00ae2af3e8130be7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LineStencil::addFlux</definition>
+        <argsstring>(unsigned int meshIndex, vector&lt; double &gt; &amp;f, const vector&lt; vector&lt; double &gt; &gt; &amp;S, const vector&lt; double &gt; &amp;diffConst) const</argsstring>
+        <name>addFlux</name>
+        <qualifiedname>LineStencil::addFlux</qualifiedname>
+        <reimplements refid="classStencil_1a8b6a62b116c865fc3adeab0f707d226a">addFlux</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const vector&lt; vector&lt; double &gt; &gt; &amp;</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>diffConst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>computes the <ref refid="classFlux" kindref="compound">Flux</ref> f in the voxel on meshIndex. Takes the matrix of molNumber[meshIndex][pool] and the vector of diffusionConst[pool] as arguments. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="55" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" bodystart="124" bodyend="135"/>
+        <references refid="classLineStencil_1a6e645eaf0a5e519bca7ee22dc9725a94" compoundref="Stencil_8h" startline="60">invHsq_</references>
+        <references refid="Stencil_8cpp_1a95e5003768054ad7044604ae8967ad68" compoundref="Stencil_8cpp" startline="18" endline="41">stencil1</references>
+      </memberdef>
+      <memberdef kind="function" id="classLineStencil_1a50d1c9dcb8bcc67a4aadb9b69709b2d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LineStencil::LineStencil</definition>
+        <argsstring>(double h)</argsstring>
+        <name>LineStencil</name>
+        <qualifiedname>LineStencil::LineStencil</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="53" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" bodystart="109" bodyend="118"/>
+        <references refid="classLineStencil_1aeb11a3c4211fbd44fe89e35477ab07a1" compoundref="Stencil_8h" startline="59">h_</references>
+        <references refid="classLineStencil_1a6e645eaf0a5e519bca7ee22dc9725a94" compoundref="Stencil_8h" startline="60">invHsq_</references>
+      </memberdef>
+      <memberdef kind="function" id="classLineStencil_1ad278d0ca0b7698c9550f88ecd3b68989" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LineStencil::~LineStencil</definition>
+        <argsstring>()</argsstring>
+        <name>~LineStencil</name>
+        <qualifiedname>LineStencil::~LineStencil</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="54" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.cpp" bodystart="121" bodyend="122"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Assumes a one-D uniform cartesian array, so the index offset for neighboring mesh points is always 1. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LineStencil</label>
+        <link refid="classLineStencil"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Stencil</label>
+        <link refid="classStencil"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LineStencil</label>
+        <link refid="classLineStencil"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Stencil</label>
+        <link refid="classStencil"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" line="50" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/Stencil.h" bodystart="51" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classLineStencil_1a1ce6016928d2123b00ae2af3e8130be7" prot="public" virt="virtual"><scope>LineStencil</scope><name>addFlux</name></member>
+      <member refid="classLineStencil_1aeb11a3c4211fbd44fe89e35477ab07a1" prot="private" virt="non-virtual"><scope>LineStencil</scope><name>h_</name></member>
+      <member refid="classLineStencil_1a6e645eaf0a5e519bca7ee22dc9725a94" prot="private" virt="non-virtual"><scope>LineStencil</scope><name>invHsq_</name></member>
+      <member refid="classLineStencil_1a50d1c9dcb8bcc67a4aadb9b69709b2d1" prot="public" virt="non-virtual"><scope>LineStencil</scope><name>LineStencil</name></member>
+      <member refid="classStencil_1a2be38ed2fbf48ae6936287e24047d220" prot="public" virt="non-virtual"><scope>LineStencil</scope><name>Stencil</name></member>
+      <member refid="classLineStencil_1ad278d0ca0b7698c9550f88ecd3b68989" prot="public" virt="non-virtual"><scope>LineStencil</scope><name>~LineStencil</name></member>
+      <member refid="classStencil_1a007f043b19ab256586ef6c61d6d67bd7" prot="public" virt="virtual"><scope>LineStencil</scope><name>~Stencil</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

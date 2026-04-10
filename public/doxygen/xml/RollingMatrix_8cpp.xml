@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="RollingMatrix_8cpp" kind="file" language="C++">
+    <compoundname>RollingMatrix.cpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">cassert</includes>
+    <includes refid="RollingMatrix_8h" local="yes">RollingMatrix.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/RollingMatrix.cpp</label>
+        <link refid="RollingMatrix_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>RollingMatrix.h</label>
+        <link refid="RollingMatrix_8h"/>
+      </node>
+      <node id="4">
+        <label>cassert</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RollingMatrix_8h" kindref="compound">RollingMatrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classRollingMatrix_1a241685a600626dd7b3a132d06f60ebe0" refkind="member"><highlight class="normal"><ref refid="classRollingMatrix_1a241685a600626dd7b3a132d06f60ebe0" kindref="member">RollingMatrix::RollingMatrix</ref>()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>nrows_(0),<sp/>ncolumns_(0),<sp/>currentStartRow_(0)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classRollingMatrix_1ac99e7e6326ac3b6cc78bbc6fda6f87f2" refkind="member"><highlight class="normal"><ref refid="classRollingMatrix_1ac99e7e6326ac3b6cc78bbc6fda6f87f2" kindref="member">RollingMatrix::~RollingMatrix</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classRollingMatrix_1ab09e8497f514a2ce82ec23bd4c30cc6b" refkind="member"><highlight class="normal"><ref refid="classRollingMatrix" kindref="compound">RollingMatrix</ref>&amp;<sp/><ref refid="classRollingMatrix_1ab09e8497f514a2ce82ec23bd4c30cc6b" kindref="member">RollingMatrix::operator=</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix" kindref="compound">RollingMatrix</ref>&amp;<sp/>other<sp/>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref><sp/>=<sp/>other.<ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1ab2ede31f1f03c9a6c7396ae879162a0b" kindref="member">ncolumns_</ref><sp/>=<sp/>other.<ref refid="classRollingMatrix_1ab2ede31f1f03c9a6c7396ae879162a0b" kindref="member">ncolumns_</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref><sp/>=<sp/>other.<ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref><sp/>=<sp/>other.<ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classRollingMatrix_1ad4c77261cc911ee4f6f46c47a1f842c4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1ad4c77261cc911ee4f6f46c47a1f842c4" kindref="member">RollingMatrix::resize</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nrows,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncolumns<sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>.resize(<sp/>nrows<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref><sp/>=<sp/>nrows;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1ab2ede31f1f03c9a6c7396ae879162a0b" kindref="member">ncolumns_</ref><sp/>=<sp/>ncolumns;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nrows;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>[i].resize(<sp/>ncolumns,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classRollingMatrix_1adca60aacc12db01ea9bc7cc931741117" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1adca60aacc12db01ea9bc7cc931741117" kindref="member">RollingMatrix::get</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>column<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="49"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>(row<sp/>+<sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref><sp/>)<sp/>%<sp/><ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>[index][column];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classRollingMatrix_1a4d01f563e3d3cc5297c7510fe15bfe24" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1a4d01f563e3d3cc5297c7510fe15bfe24" kindref="member">RollingMatrix::sumIntoEntry</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>input,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>column<sp/>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>(row<sp/>+<sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref><sp/>)<sp/>%<sp/><ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="RollingMatrix_8h_1af1edf27e9199f8645cedd33fac133d52" kindref="member">SparseVector</ref>&amp;<sp/>sv<sp/>=<sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>[index];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>sv[column]<sp/>+=<sp/>input;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classRollingMatrix_1a051a67124f5690c1741b68cd4a89292d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1a051a67124f5690c1741b68cd4a89292d" kindref="member">RollingMatrix::sumIntoRow</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>input,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row<sp/>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>(row<sp/>+<sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref>)<sp/>%<sp/><ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="RollingMatrix_8h_1af1edf27e9199f8645cedd33fac133d52" kindref="member">SparseVector</ref>&amp;<sp/>sv<sp/>=<sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>[index];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>input.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sv[i]<sp/>+=<sp/>input[i];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">RollingMatrix::dotProduct</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>input,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startColumn<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="73"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>(row<sp/>+<sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref>)<sp/>%<sp/><ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="RollingMatrix_8h_1af1edf27e9199f8645cedd33fac133d52" kindref="member">SparseVector</ref>&amp;<sp/>sv<sp/>=<sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>[index];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2<sp/>=<sp/>input.size()/2;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>istart<sp/>=<sp/>(startColumn<sp/>&gt;=<sp/>i2)<sp/>?<sp/>0<sp/>:<sp/>i2-startColumn;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>colstart<sp/>=<sp/>(startColumn<sp/>&lt;=<sp/>i2)<sp/>?<sp/>0<sp/>:<sp/>startColumn<sp/>-<sp/>i2;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iend<sp/>=<sp/>(sv.size()-startColumn<sp/>&gt;<sp/>i2<sp/>)<sp/>?<sp/>input.size()<sp/>:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2<sp/>-<sp/>startColumn<sp/>+<sp/>sv.size();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(<sp/>iend<sp/>&gt;=<sp/>istart<sp/>)<sp/>cout<sp/>&lt;&lt;<sp/>startColumn<sp/>&lt;&lt;<sp/>i2<sp/>&lt;&lt;<sp/>istart<sp/>&lt;&lt;<sp/>iend<sp/>&lt;&lt;<sp/>colstart<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>istart,<sp/>j<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>iend;<sp/>++i,<sp/>++j<sp/>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>+=<sp/>sv[j<sp/>+<sp/>colstart]<sp/>*<sp/>input[i];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/>double<sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(<sp/>input.size()<sp/>+<sp/>startColumn<sp/>&lt;=<sp/>sv.size()<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>input.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>+=<sp/>sv[i<sp/>+<sp/>startColumn]<sp/>*<sp/>input[i];</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/>}<sp/>else<sp/>if<sp/>(<sp/>sv.size()<sp/>&gt;<sp/>startColumn<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>end<sp/>=<sp/>sv.size()<sp/>-<sp/>startColumn;</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>end;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>+=<sp/>sv[i<sp/>+<sp/>startColumn]<sp/>*<sp/>input[i];</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classRollingMatrix_1a112d18c72fb9b7668ae457edffaa9437" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1a112d18c72fb9b7668ae457edffaa9437" kindref="member">RollingMatrix::correl</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>ret,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>input,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="104"><highlight class="keyword"></highlight></codeline>
+<codeline lineno="105"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ret.size()<sp/>&lt;<sp/><ref refid="classRollingMatrix_1ab2ede31f1f03c9a6c7396ae879162a0b" kindref="member">ncolumns_</ref><sp/>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.resize(<sp/><ref refid="classRollingMatrix_1ab2ede31f1f03c9a6c7396ae879162a0b" kindref="member">ncolumns_</ref>,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classRollingMatrix_1ab2ede31f1f03c9a6c7396ae879162a0b" kindref="member">ncolumns_</ref>;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret[i]<sp/>+=<sp/><ref refid="classRollingMatrix_1a802404d6fed12e5990afeba8b0696aa2" kindref="member">dotProduct</ref>(<sp/>input,<sp/>row,<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classRollingMatrix_1accdf3bd71cb8884cdfd451c40f538437" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1accdf3bd71cb8884cdfd451c40f538437" kindref="member">RollingMatrix::zeroOutRow</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row<sp/>)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>(row<sp/>+<sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref>)<sp/>%<sp/><ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>[index].assign(<sp/><ref refid="classRollingMatrix_1ac37643301f103c699b3f0d9b018aaf8f" kindref="member">rows_</ref>[index].size(),<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classRollingMatrix_1ab7d00fe107e4e8677faf94f7cac0f1ab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRollingMatrix_1ab7d00fe107e4e8677faf94f7cac0f1ab" kindref="member">RollingMatrix::rollToNextRow</ref>()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref><sp/>==<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref><sp/>=<sp/><ref refid="classRollingMatrix_1a9001cc10b7575acae83b221cf846c18d" kindref="member">nrows_</ref><sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1a5e081c281e33569eabf83c6c0d4b8c72" kindref="member">currentStartRow_</ref>--;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRollingMatrix_1accdf3bd71cb8884cdfd451c40f538437" kindref="member">zeroOutRow</ref>(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/synapse/RollingMatrix.cpp"/>
+  </compounddef>
+</doxygen>

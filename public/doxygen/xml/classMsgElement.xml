@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMsgElement" kind="class" language="C++" prot="public">
+    <compoundname>MsgElement</compoundname>
+    <basecompoundref refid="classElement" prot="public" virt="non-virtual">Element</basecompoundref>
+    <includes refid="MsgElement_8h" local="no">MsgElement.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMsgElement_1af90b2c14518fa680b7916152d81ff0b9" prot="private" static="no" mutable="no">
+        <type>char *(*</type>
+        <definition>char *(* MsgElement::lookupMsg_) (unsigned int)</definition>
+        <argsstring>)(unsigned int)</argsstring>
+        <name>lookupMsg_</name>
+        <qualifiedname>MsgElement::lookupMsg_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classFunction" kindref="compound">Function</ref> to return a pointer to the selected <ref refid="classMsg" kindref="compound">Msg</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="187" column="2" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="187" bodyend="-1"/>
+        <referencedby refid="classMsgElement_1a1a50fd94922645f14d96ad041c8618f8" compoundref="MsgElement_8h" startline="145" endline="149">data</referencedby>
+        <referencedby refid="classMsgElement_1ac260cd6d39fbeb18af00cf120207205f" compoundref="MsgElement_8h" startline="31" endline="38">MsgElement</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMsgElement_1a0801dab960183cd9bee3ee46f71f6c75" prot="private" static="no" mutable="no">
+        <type>unsigned int(*</type>
+        <definition>unsigned int(* MsgElement::numMsg_) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>numMsg_</name>
+        <qualifiedname>MsgElement::numMsg_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classFunction" kindref="compound">Function</ref> to return the # of Messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="182" column="11" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="182" bodyend="-1"/>
+        <referencedby refid="classMsgElement_1a1ebe028abc127064391495ae90f4f4f3" compoundref="MsgElement_8h" startline="121" endline="123">getNumOnNode</referencedby>
+        <referencedby refid="classMsgElement_1ac260cd6d39fbeb18af00cf120207205f" compoundref="MsgElement_8h" startline="31" endline="38">MsgElement</referencedby>
+        <referencedby refid="classMsgElement_1aef74b4b66a13d1bf10cd3e0c9f7b457a" compoundref="MsgElement_8h" startline="62" endline="65">numData</referencedby>
+        <referencedby refid="classMsgElement_1a2336c888904a02a36cae2f7f3b776332" compoundref="MsgElement_8h" startline="68" endline="71">numLocalData</referencedby>
+        <referencedby refid="classMsgElement_1a20d906c8b07a1fbd843b136c08372356" compoundref="MsgElement_8h" startline="85" endline="88">totNumLocalField</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMsgElement_1a09e3591c0e50670cf7e8d0d413e88cc7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classElement" kindref="compound">Element</ref> *</type>
+        <definition>Element * MsgElement::copyElement</definition>
+        <argsstring>(Id newParent, Id newId, unsigned int n, bool toGlobal) const</argsstring>
+        <name>copyElement</name>
+        <qualifiedname>MsgElement::copyElement</qualifiedname>
+        <reimplements refid="classElement_1a61eecedc48ea7e432d38138814f88bc4">copyElement</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>newParent</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>newId</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>toGlobal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual copier. Doesn&apos;t do anything. The copy happens at the lower level, involving the <ref refid="classMsg" kindref="compound">Msg</ref> classes and the <ref refid="classMsgElement" kindref="compound">MsgElement</ref> just manages them. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="51" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a1a50fd94922645f14d96ad041c8618f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>char *</type>
+        <definition>char * MsgElement::data</definition>
+        <argsstring>(unsigned int rawIndex, unsigned int fieldIndex=0) const</argsstring>
+        <name>data</name>
+        <qualifiedname>MsgElement::data</qualifiedname>
+        <reimplements refid="classElement_1a1978a0a584f1b10ea4a7c67e69880042">data</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>rawIndex</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>fieldIndex</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual. Looks up specified field data entry. On regular objects just returns the data entry specified by the rawIndex. On FieldElements like synapses, does a second lookup on the field index. Note that the index is NOT a DataIndex: it is instead the raw index of the data on the current node. Index is also NOT the character offset, but the index to the data array in whatever type the data may be.</para>
+<para>The DataIndex has to be filtered through the nodeMap to find a) if the entry is here, and b) what its raw index is.</para>
+<para>Returns 0 if either index is out of range. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="145" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="145" bodyend="149"/>
+        <references refid="classMsgElement_1af90b2c14518fa680b7916152d81ff0b9" compoundref="MsgElement_8h" startline="187">lookupMsg_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a19e72d863306b67e80c29a39f22dbe5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::getNode</definition>
+        <argsstring>(unsigned int dataIndex) const</argsstring>
+        <name>getNode</name>
+        <qualifiedname>MsgElement::getNode</qualifiedname>
+        <reimplements refid="classElement_1a6350d721871c508fbf68286a3907e4a1">getNode</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>dataIndex</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. Just returns current node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="91" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="91" bodyend="94"/>
+        <references refid="classShell_1a4c3608b6ca5fcec63a13b12c49b9d530" compoundref="ShellThreads_8cpp" startline="81" endline="84">Shell::myNode</references>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a1ebe028abc127064391495ae90f4f4f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::getNumOnNode</definition>
+        <argsstring>(unsigned int node) const</argsstring>
+        <name>getNumOnNode</name>
+        <qualifiedname>MsgElement::getNumOnNode</qualifiedname>
+        <reimplements refid="classElement_1a0c342358b941cf19c2c1076c95611c5d">getNumOnNode</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns number of data (or, if relevant, field) entries on specified node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="121" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="121" bodyend="123"/>
+        <references refid="classMsgElement_1a0801dab960183cd9bee3ee46f71f6c75" compoundref="MsgElement_8h" startline="182">numMsg_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a6b604f61126c9d288af5f3f996b5c642" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool MsgElement::hasFields</definition>
+        <argsstring>() const</argsstring>
+        <name>hasFields</name>
+        <qualifiedname>MsgElement::hasFields</qualifiedname>
+        <reimplements refid="classElement_1a8489d936deee408d78042cf199694bb5">hasFields</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual True if this is a <ref refid="classFieldElement" kindref="compound">FieldElement</ref> having an array of fields on each data entry. Clearly not true for the <ref refid="classMsgElement" kindref="compound">MsgElement</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="113" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a96977470c52e9b3b332fec491b104de4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool MsgElement::isGlobal</definition>
+        <argsstring>() const</argsstring>
+        <name>isGlobal</name>
+        <qualifiedname>MsgElement::isGlobal</qualifiedname>
+        <reimplements refid="classElement_1a695b42ddcfcbedf97d74718b92da5020">isGlobal</reimplements>
+        <briefdescription>
+<para>True if there is a copy of every dataEntry on all nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="117" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1af4e5f6ae3d999bb9b17497c72d66b5da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::localDataStart</definition>
+        <argsstring>() const</argsstring>
+        <name>localDataStart</name>
+        <qualifiedname>MsgElement::localDataStart</qualifiedname>
+        <reimplements refid="classElement_1a8d7debb27e67d5fc97697cddc9d69542">localDataStart</reimplements>
+        <briefdescription>
+<para>Inherited virtual. Returns index of first data entry on node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="74" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1ac260cd6d39fbeb18af00cf120207205f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MsgElement::MsgElement</definition>
+        <argsstring>(Id id, const Cinfo *c, const string &amp;name, unsigned int(*numMsg)(), char *(*lookupMsg)(unsigned int))</argsstring>
+        <name>MsgElement</name>
+        <qualifiedname>MsgElement::MsgElement</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>unsigned int(*)()</type>
+          <declname>numMsg</declname>
+        </param>
+        <param>
+          <type>char *(*)(unsigned int)</type>
+          <declname>lookupMsg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the main constructor, used by <ref refid="classShell_1ab970c2c6e17af730804e810b4431107c" kindref="member">Shell::innerCreate</ref> which makes most Elements. Also used to create base Elements to init the simulator in <ref refid="main_8cpp" kindref="compound">main.cpp</ref>. <ref refid="classId" kindref="compound">Id</ref> is the <ref refid="classId" kindref="compound">Id</ref> of the new <ref refid="classElement" kindref="compound">Element</ref> <ref refid="classCinfo" kindref="compound">Cinfo</ref> is the class name is its name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="31" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="31" bodyend="38"/>
+        <references refid="classElement_1afb56f1407c9b66cda3248246dfe3d91d" compoundref="Element_8cpp" startline="17" endline="28">Element::Element</references>
+        <references refid="classMsgElement_1af90b2c14518fa680b7916152d81ff0b9" compoundref="MsgElement_8h" startline="187">lookupMsg_</references>
+        <references refid="classMsgElement_1a0801dab960183cd9bee3ee46f71f6c75" compoundref="MsgElement_8h" startline="182">numMsg_</references>
+        <referencedby refid="classMsg_1af3de05897dc7602c64678a31c58ebece" compoundref="Msg_8cpp" startline="254" endline="302">Msg::initMsgManagers</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1aef74b4b66a13d1bf10cd3e0c9f7b457a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::numData</definition>
+        <argsstring>() const</argsstring>
+        <name>numData</name>
+        <qualifiedname>MsgElement::numData</qualifiedname>
+        <reimplements refid="classElement_1ae764f4baa2a88e55072eb0a5b15718c4">numData</reimplements>
+        <briefdescription>
+<para>Inherited virtual. Returns number of data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="62" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="62" bodyend="65"/>
+        <references refid="classMsgElement_1a0801dab960183cd9bee3ee46f71f6c75" compoundref="MsgElement_8h" startline="182">numMsg_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a8d5fcae90ba77248b885e5e1a67c496e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::numField</definition>
+        <argsstring>(unsigned int rawIndex) const</argsstring>
+        <name>numField</name>
+        <qualifiedname>MsgElement::numField</qualifiedname>
+        <reimplements refid="classElement_1aeb84ff73ecda4ab0a6feadb1ea443339">numField</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>rawIndex</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. Returns number of field entries for specified data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="80" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a2336c888904a02a36cae2f7f3b776332" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::numLocalData</definition>
+        <argsstring>() const</argsstring>
+        <name>numLocalData</name>
+        <qualifiedname>MsgElement::numLocalData</qualifiedname>
+        <reimplements refid="classElement_1abee6d5e3b26374c8c196c6065543706d">numLocalData</reimplements>
+        <briefdescription>
+<para>Inherited virtual. Returns number of data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="68" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="68" bodyend="71"/>
+        <references refid="classMsgElement_1a0801dab960183cd9bee3ee46f71f6c75" compoundref="MsgElement_8h" startline="182">numMsg_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a0b607ac1e37f771d588f29fa58dfcc46" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::rawIndex</definition>
+        <argsstring>(unsigned int dataIndex) const</argsstring>
+        <name>rawIndex</name>
+        <qualifiedname>MsgElement::rawIndex</qualifiedname>
+        <reimplements refid="classElement_1a73a0e468a3d6cfd6475fff4a56459075">rawIndex</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>dataIndex</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. Just returns index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="103" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a404a44c4503f4c1deb43fe5e41f30a9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MsgElement::resize</definition>
+        <argsstring>(unsigned int newNumData)</argsstring>
+        <name>resize</name>
+        <qualifiedname>MsgElement::resize</qualifiedname>
+        <reimplements refid="classElement_1a4ec25a0d30a73759b0063e4b2990073f">resize</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>newNumData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual Changes the number of entries in the data. Doesn&apos;t do anything for the <ref refid="classMsgElement" kindref="compound">MsgElement</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="156" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="156" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a2c83cf802dc41885529c6f35fcb61948" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MsgElement::resizeField</definition>
+        <argsstring>(unsigned int rawIndex, unsigned int newNumField)</argsstring>
+        <name>resizeField</name>
+        <qualifiedname>MsgElement::resizeField</qualifiedname>
+        <reimplements refid="classElement_1a548f821be009798fed2809c69d659f8c">resizeField</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>rawIndex</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>newNumField</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual. Changes the number of fields on the specified data entry. Doesn&apos;t do anything for the <ref refid="classMsgElement" kindref="compound">MsgElement</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="164" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="164" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a228424757351c23de75f0f5a0f387564" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::startDataIndex</definition>
+        <argsstring>(unsigned int node) const</argsstring>
+        <name>startDataIndex</name>
+        <qualifiedname>MsgElement::startDataIndex</qualifiedname>
+        <reimplements refid="classElement_1a7dcd66878b82eb7b1965dc90a30640b9">startDataIndex</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. As this is a global we always return zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="97" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a20d906c8b07a1fbd843b136c08372356" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MsgElement::totNumLocalField</definition>
+        <argsstring>() const</argsstring>
+        <name>totNumLocalField</name>
+        <qualifiedname>MsgElement::totNumLocalField</qualifiedname>
+        <reimplements refid="classElement_1a64bb754fc84fe165fc6e3b41eb515cbf">totNumLocalField</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns number of field entries on local node. If this is not a <ref refid="classFieldElement" kindref="compound">FieldElement</ref>, returns numLocalData, assuming 1 field per data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="85" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="85" bodyend="88"/>
+        <references refid="classMsgElement_1a0801dab960183cd9bee3ee46f71f6c75" compoundref="MsgElement_8h" startline="182">numMsg_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a100db7a7f3c0e87126fc700bdbb21351" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void MsgElement::zombieSwap</definition>
+        <argsstring>(const Cinfo *newCinfo)</argsstring>
+        <name>zombieSwap</name>
+        <qualifiedname>MsgElement::zombieSwap</qualifiedname>
+        <reimplements refid="classElement_1a68ae4e66066996955af229880e388aa4">zombieSwap</reimplements>
+        <param>
+          <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+          <declname>newCinfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual func. The parent does the data swap part, so here it is just the <ref refid="classCinfo" kindref="compound">Cinfo</ref> we replace. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="172" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="172" bodyend="175"/>
+        <references refid="classElement_1ad8bd882dd3ced9d59b35335069b2f880" compoundref="Element_8cpp" startline="740" endline="744">Element::replaceCinfo</references>
+        <references refid="classElement_1a68ae4e66066996955af229880e388aa4" compoundref="Element_8cpp" startline="159" endline="184">Element::zombieSwap</references>
+      </memberdef>
+      <memberdef kind="function" id="classMsgElement_1a8fc47126557917e05bb2c2de2eb7e31c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MsgElement::~MsgElement</definition>
+        <argsstring>()</argsstring>
+        <name>~MsgElement</name>
+        <qualifiedname>MsgElement::~MsgElement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual Destructor. Nothing to do here. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="43" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="43" bodyend="44"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a specialized <ref refid="classElement" kindref="compound">Element</ref> class for managing <ref refid="classMsg" kindref="compound">Msg</ref> data. Basically it just gives a wrapper for the vectors managed by each of the <ref refid="classMsg" kindref="compound">Msg</ref> classes. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Element</label>
+        <link refid="classElement"/>
+      </node>
+      <node id="1">
+        <label>MsgElement</label>
+        <link refid="classMsgElement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Cinfo</label>
+        <link refid="classCinfo"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-baseCinfo_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-dinfo_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-doc_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DinfoBase</label>
+        <link refid="classDinfoBase"/>
+      </node>
+      <node id="2">
+        <label>Element</label>
+        <link refid="classElement"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-id_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-cinfo_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="10">
+        <label>K</label>
+      </node>
+      <node id="1">
+        <label>MsgElement</label>
+        <link refid="classMsgElement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>T</label>
+      </node>
+      <node id="6">
+        <label>std::map&lt; std::string, std::string &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; std::string, std::string &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="9">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::string</label>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" line="20" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/MsgElement.h" bodystart="21" bodyend="188"/>
+    <listofallmembers>
+      <member refid="classElement_1adc7e3a3053b8874f9041a9aee7a6f857" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>addMsg</name></member>
+      <member refid="classElement_1a2939c6987ceef653ba246c750d55bf57" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>addMsgAndFunc</name></member>
+      <member refid="classElement_1a33610036b72724ca3b7fedaf7e692841" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>cinfo</name></member>
+      <member refid="classElement_1ae7b7d310e10fdbcda08afa74ef742306" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>cinfo_</name></member>
+      <member refid="classElement_1a72ca1a01f6ccce08c8877c21c1dd785b" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>clearAllMsgs</name></member>
+      <member refid="classElement_1ab1300400d72b986952ed4d06e3633557" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>clearBinding</name></member>
+      <member refid="classMsgElement_1a09e3591c0e50670cf7e8d0d413e88cc7" prot="public" virt="virtual"><scope>MsgElement</scope><name>copyElement</name></member>
+      <member refid="classMsgElement_1a1a50fd94922645f14d96ad041c8618f8" prot="public" virt="virtual"><scope>MsgElement</scope><name>data</name></member>
+      <member refid="classElement_1a87cf9193138c2667e450b3d5feacffb2" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>destroyElementTree</name></member>
+      <member refid="classElement_1a722a219697e0d390675dff185ae8de28" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>digestMessages</name></member>
+      <member refid="classElement_1a6a3be9af326c31f360600e9c83db2909" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>dropAllMsgsFromSrc</name></member>
+      <member refid="classElement_1a97ef24cbcdd65e62daac54a70a6c14cf" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>dropMsg</name></member>
+      <member refid="classElement_1afb56f1407c9b66cda3248246dfe3d91d" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>Element</name></member>
+      <member refid="classElement_1a0f7aa6c77f30cb8865cdd0a0dde03854" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>findBinding</name></member>
+      <member refid="classElement_1a3c07cf6355e6127827ce67682e3bb2a0" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>findCaller</name></member>
+      <member refid="classElement_1add9bc332e738794dbd3d7d3a1eb9b21e" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getFieldsOfOutgoingMsg</name></member>
+      <member refid="classElement_1ab4b3b46f036eccad622c2e1a67b9d3a7" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getInputMsgs</name></member>
+      <member refid="classElement_1a01e45f128db9727df0042ef067fd300b" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>getInputs</name></member>
+      <member refid="classElement_1accaea70e186111ea963703635a7130c6" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getInputsWithTgtIndex</name></member>
+      <member refid="classElement_1a80f025a43225fb9b30a793a7af6b5e43" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getMsgAndFunc</name></member>
+      <member refid="classElement_1a5faab65438b6244ad7455a5ac8359970" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getMsgSourceAndSender</name></member>
+      <member refid="classElement_1a447e56e4a242420578f7c7503e8dd397" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getMsgTargetAndFunctions</name></member>
+      <member refid="classElement_1a07fec02467adf5af906d0c963b647116" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getMsgTargets</name></member>
+      <member refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getName</name></member>
+      <member refid="classElement_1abec0b4d9c993bd1eb92b24563d9d8534" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getNeighbors</name></member>
+      <member refid="classMsgElement_1a19e72d863306b67e80c29a39f22dbe5c" prot="public" virt="virtual"><scope>MsgElement</scope><name>getNode</name></member>
+      <member refid="classMsgElement_1a1ebe028abc127064391495ae90f4f4f3" prot="public" virt="virtual"><scope>MsgElement</scope><name>getNumOnNode</name></member>
+      <member refid="classElement_1a33dde5b9a02ed1aba6f26d292f0db1bd" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>getOutputs</name></member>
+      <member refid="classElement_1a36586edca71c0070a9a5a8ccc036c333" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>getTick</name></member>
+      <member refid="classMsgElement_1a6b604f61126c9d288af5f3f996b5c642" prot="public" virt="virtual"><scope>MsgElement</scope><name>hasFields</name></member>
+      <member refid="classElement_1aa6bf0ad3ac2f537968453d836de0b7c1" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>hasMsgs</name></member>
+      <member refid="classElement_1a934907c01faf58e21f545d53a54cfefc" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>id</name></member>
+      <member refid="classElement_1a8393e8345bd258e51c1183a5bdec1f73" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>id_</name></member>
+      <member refid="classElement_1a8cec79a5d249aacb30d8317d07f4fef8" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>innerSetTick</name></member>
+      <member refid="classElement_1ad4212c0f8e2457fb59d39cc2181cd483" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>isDoomed</name></member>
+      <member refid="classElement_1a124c7eccf70171ea12f6ce430e9d691d" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>isDoomed_</name></member>
+      <member refid="classMsgElement_1a96977470c52e9b3b332fec491b104de4" prot="public" virt="virtual"><scope>MsgElement</scope><name>isGlobal</name></member>
+      <member refid="classElement_1a4a3bea246c008da45b5bcd06745590d2" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>isRewired_</name></member>
+      <member refid="classMsgElement_1af4e5f6ae3d999bb9b17497c72d66b5da" prot="public" virt="virtual"><scope>MsgElement</scope><name>localDataStart</name></member>
+      <member refid="classMsgElement_1af90b2c14518fa680b7916152d81ff0b9" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>lookupMsg_</name></member>
+      <member refid="classElement_1a4e0394bd52b504c52215cc3f1cd4e95d" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>m_</name></member>
+      <member refid="classElement_1a8cc2b63209eacd6dbf8bb6746f53a73f" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>markAsDoomed</name></member>
+      <member refid="classElement_1a91ba2615cb1c7a30cca2327d2003f34c" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>markRewired</name></member>
+      <member refid="classElement_1aec8af333353d3a47fa40a140d54de3fe" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>msgBinding_</name></member>
+      <member refid="classElement_1af00354d706575077c20c9865f340f93f" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>msgDigest</name></member>
+      <member refid="classElement_1a68d07ea428b581003a2fadfbfd2de798" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>msgDigest_</name></member>
+      <member refid="classMsgElement_1ac260cd6d39fbeb18af00cf120207205f" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>MsgElement</name></member>
+      <member refid="classElement_1a2e6f82b4f5c031ec6c59fd0e9bfbdbcf" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>msgIn</name></member>
+      <member refid="classElement_1a2a54efe73fc1a10aaafcf832a58fe390" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>name_</name></member>
+      <member refid="classMsgElement_1aef74b4b66a13d1bf10cd3e0c9f7b457a" prot="public" virt="virtual"><scope>MsgElement</scope><name>numData</name></member>
+      <member refid="classMsgElement_1a8d5fcae90ba77248b885e5e1a67c496e" prot="public" virt="virtual"><scope>MsgElement</scope><name>numField</name></member>
+      <member refid="classMsgElement_1a2336c888904a02a36cae2f7f3b776332" prot="public" virt="virtual"><scope>MsgElement</scope><name>numLocalData</name></member>
+      <member refid="classMsgElement_1a0801dab960183cd9bee3ee46f71f6c75" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>numMsg_</name></member>
+      <member refid="classElement_1adfcd4feead150b478faf5c72393c23e8" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>printMsgDigest</name></member>
+      <member refid="classElement_1a0782085917c558ec4d56be9566688743" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>putOffNodeTargetsInDigest</name></member>
+      <member refid="classElement_1ae5b80db45c08265b98ff433504fab66b" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>putTargetsInDigest</name></member>
+      <member refid="classMsgElement_1a0b607ac1e37f771d588f29fa58dfcc46" prot="public" virt="virtual"><scope>MsgElement</scope><name>rawIndex</name></member>
+      <member refid="classElement_1ad8bd882dd3ced9d59b35335069b2f880" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>replaceCinfo</name></member>
+      <member refid="classMsgElement_1a404a44c4503f4c1deb43fe5e41f30a9f" prot="public" virt="virtual"><scope>MsgElement</scope><name>resize</name></member>
+      <member refid="classMsgElement_1a2c83cf802dc41885529c6f35fcb61948" prot="public" virt="virtual"><scope>MsgElement</scope><name>resizeField</name></member>
+      <member refid="classElement_1a6c0df636b2976bfeefc411da7445df19" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>setName</name></member>
+      <member refid="classElement_1a43b35c94ab9c583103ac64138366167f" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>setTick</name></member>
+      <member refid="classElement_1afd25f8e1c4d1a51ecee979f2aa99d8e9" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>showFields</name></member>
+      <member refid="classElement_1af88855f082a9918e9074fb428682249b" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>showMsg</name></member>
+      <member refid="classMsgElement_1a228424757351c23de75f0f5a0f387564" prot="public" virt="virtual"><scope>MsgElement</scope><name>startDataIndex</name></member>
+      <member refid="classElement_1ad0001aa23fa803d182d6dc2ee92be286" prot="private" virt="non-virtual"><scope>MsgElement</scope><name>tick_</name></member>
+      <member refid="classMsgElement_1a20d906c8b07a1fbd843b136c08372356" prot="public" virt="virtual"><scope>MsgElement</scope><name>totNumLocalField</name></member>
+      <member refid="classMsgElement_1a100db7a7f3c0e87126fc700bdbb21351" prot="public" virt="virtual"><scope>MsgElement</scope><name>zombieSwap</name></member>
+      <member refid="classElement_1a13d54ba9c08b6bec651402f1c2bb002c" prot="public" virt="virtual"><scope>MsgElement</scope><name>~Element</name></member>
+      <member refid="classMsgElement_1a8fc47126557917e05bb2c2de2eb7e31c" prot="public" virt="non-virtual"><scope>MsgElement</scope><name>~MsgElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

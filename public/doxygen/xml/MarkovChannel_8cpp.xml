@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="MarkovChannel_8cpp" kind="file" language="C++">
+    <compoundname>MarkovChannel.cpp</compoundname>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes refid="VectorTable_8h" local="yes">VectorTable.h</includes>
+    <includes refid="Interpol2D_8h" local="yes">../builtins/Interpol2D.h</includes>
+    <includes refid="MarkovRateTable_8h" local="yes">MarkovRateTable.h</includes>
+    <includes refid="ChanBase_8h" local="yes">ChanBase.h</includes>
+    <includes refid="ChanCommon_8h" local="yes">ChanCommon.h</includes>
+    <includes refid="MarkovChannel_8h" local="yes">MarkovChannel.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="29">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="18">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="22">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="24">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="36">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="28">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="42">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="41">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="17">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="26">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="33">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="14">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="27">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="39">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="23">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="20">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="15">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="35">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="32">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="37">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="34">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="31">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="38">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="13">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="2">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>ChanBase.h</label>
+        <link refid="ChanBase_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>ChanCommon.h</label>
+        <link refid="ChanCommon_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp</label>
+        <link refid="MarkovChannel_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>MarkovChannel.h</label>
+        <link refid="MarkovChannel_8h"/>
+      </node>
+      <node id="46">
+        <label>MarkovRateTable.h</label>
+        <link refid="MarkovRateTable_8h"/>
+      </node>
+      <node id="44">
+        <label>VectorTable.h</label>
+        <link refid="VectorTable_8h"/>
+      </node>
+      <node id="45">
+        <label>../builtins/Interpol2D.h</label>
+        <link refid="Interpol2D_8h"/>
+      </node>
+      <node id="21">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="43">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="30">
+        <label>cstring</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="MarkovChannel_8cpp_1ad74efc7fa8669981fb7b2b509aca9d5f" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo* markovChannelCinfo</definition>
+        <argsstring></argsstring>
+        <name>markovChannelCinfo</name>
+        <initializer>= <ref refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" kindref="member">MarkovChannel::initCinfo</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" line="128" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2011<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VectorTable_8h" kindref="compound">VectorTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../builtins/Interpol2D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MarkovRateTable_8h" kindref="compound">MarkovRateTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ChanBase_8h" kindref="compound">ChanBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ChanCommon_8h" kindref="compound">ChanCommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MarkovChannel_8h" kindref="compound">MarkovChannel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>USE_GSL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" kindref="member">MarkovChannel::initCinfo</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Field<sp/>information.</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; MarkovChannel, double &gt;</ref><sp/>ligandconc(<sp/></highlight><highlight class="stringliteral">&quot;ligandConc&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Ligand<sp/>concentration.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a7d7285dda4f6313341720d51864b8c80" kindref="member">MarkovChannel::setLigandConc</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a84fcc4b85545d5db01be6df2c5180f0a" kindref="member">MarkovChannel::getLigandConc</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; MarkovChannel, double &gt;</ref><sp/>vm(<sp/></highlight><highlight class="stringliteral">&quot;Vm&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Membrane<sp/>voltage.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1af4ca0abb9c6dfc89ee076038831b48da" kindref="member">MarkovChannel::setVm</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a05c755dd3aa8bd8d0c2726e91d162f40" kindref="member">MarkovChannel::getVm</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; MarkovChannel, unsigned int &gt;</ref><sp/>numstates(<sp/></highlight><highlight class="stringliteral">&quot;numStates&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>number<sp/>of<sp/>states<sp/>that<sp/>the<sp/>channel<sp/>can<sp/>occupy.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a2f8bbe900071fb3911cc9aa03295c747" kindref="member">MarkovChannel::setNumStates</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a2780ce0bba192493b4038019524f113d" kindref="member">MarkovChannel::getNumStates</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; MarkovChannel, unsigned int &gt;</ref><sp/>numopenstates(<sp/></highlight><highlight class="stringliteral">&quot;numOpenStates&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;The<sp/>number<sp/>of<sp/>states<sp/>which<sp/>are<sp/>open/conducting.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a562aeeff882505f5108263057e82152d" kindref="member">MarkovChannel::setNumOpenStates</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a4d9c4b87f25f831e7068b2d7e7156e1e" kindref="member">MarkovChannel::getNumOpenStates</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; MarkovChannel, vector&lt; string &gt;</ref><sp/>&gt;<sp/>labels(</highlight><highlight class="stringliteral">&quot;labels&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Labels<sp/>for<sp/>each<sp/>state.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a4542da7800174e9d11caad0bb219be81" kindref="member">MarkovChannel::setStateLabels</ref>,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a97ab9e9b273cf4d114be3a4790b8df43" kindref="member">MarkovChannel::getStateLabels</ref></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classReadOnlyValueFinfo" kindref="compound">ReadOnlyValueFinfo&lt; MarkovChannel, vector&lt; double &gt;</ref><sp/>&gt;<sp/>state(<sp/></highlight><highlight class="stringliteral">&quot;state&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>a<sp/>row<sp/>vector<sp/>that<sp/>contains<sp/>the<sp/>probabilities<sp/>of<sp/>finding<sp/>the<sp/>channel<sp/>in<sp/>each<sp/>state.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1aec198ce8b6dd0db134d7a422aef315d9" kindref="member">MarkovChannel::getState</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; MarkovChannel, vector&lt; double &gt;</ref><sp/>&gt;<sp/>initialstate(<sp/></highlight><highlight class="stringliteral">&quot;initialState&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>a<sp/>row<sp/>vector<sp/>that<sp/>contains<sp/>the<sp/>probabilities<sp/>of<sp/>finding<sp/>the<sp/>channel<sp/>in<sp/>each<sp/>state<sp/>at<sp/>t<sp/>=<sp/>0.<sp/>The<sp/>state<sp/>of<sp/>the<sp/>channel<sp/>is<sp/>reset<sp/>to<sp/>this<sp/>value<sp/>during<sp/>a<sp/>call<sp/>to<sp/>reinit()&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1ab8595a2f147d54ee89d17ec8eead9f71" kindref="member">MarkovChannel::setInitialState</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a4c34329c895aa5dd7b1ecf4acf926fe7" kindref="member">MarkovChannel::getInitialState</ref></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classValueFinfo" kindref="compound">ValueFinfo&lt; MarkovChannel, vector&lt; double &gt;</ref><sp/>&gt;<sp/>gbar(<sp/></highlight><highlight class="stringliteral">&quot;gbar&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;A<sp/>row<sp/>vector<sp/>containing<sp/>the<sp/>conductance<sp/>associated<sp/>with<sp/>each<sp/>of<sp/>the<sp/>open/conducting<sp/>states.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a00493d2172d475b0f298f3a327f63e83" kindref="member">MarkovChannel::setGbars</ref>,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classMarkovChannel_1a7c523e85d8c7f0a97927cd92aad6dc6a" kindref="member">MarkovChannel::getGbars</ref></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//MsgDest<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/>handleligandconc(<sp/></highlight><highlight class="stringliteral">&quot;handleLigandConc&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Deals<sp/>with<sp/>incoming<sp/>messages<sp/>containing<sp/>information<sp/>of<sp/>ligand<sp/>concentration&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classOpFunc1" kindref="compound">OpFunc1&lt; MarkovChannel, double &gt;</ref>(&amp;<ref refid="classMarkovChannel_1aa8084f4c73f953208916556fbc7de306" kindref="member">MarkovChannel::handleLigandConc</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDestFinfo" kindref="compound">DestFinfo</ref><sp/>handlestate(</highlight><highlight class="stringliteral">&quot;handleState&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Deals<sp/>with<sp/>incoming<sp/>message<sp/>from<sp/>MarkovSolver<sp/>object<sp/>containing<sp/>state<sp/>information<sp/>of<sp/>the<sp/>channel.\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classOpFunc1" kindref="compound">OpFunc1</ref>&lt;<sp/><ref refid="classMarkovChannel" kindref="compound">MarkovChannel</ref>,<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;(&amp;<ref refid="classMarkovChannel_1ab1c77ea8b75a28304abeacec8b6978a6" kindref="member">MarkovChannel::handleState</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>MarkovChannelFinfos[]<sp/>=</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;ligandconc,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;vm,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;numstates,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;numopenstates,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;state,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;initialstate,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;labels,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;gbar,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;handleligandconc,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;handlestate,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>doc[]<sp/>=</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MarkovChannel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Author&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Vishaka<sp/>Datta<sp/>S,<sp/>2011,<sp/>NCBS<sp/>Bangalore&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Description&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MarkovChannel.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;It<sp/>deals<sp/>with<sp/>ion<sp/>channels<sp/>which<sp/>can<sp/>be<sp/>found<sp/>in<sp/>one<sp/>of<sp/>multiple<sp/>states,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;some<sp/>of<sp/>which<sp/>are<sp/>conducting.<sp/>This<sp/>implementation<sp/>assumes<sp/>the<sp/>occurence<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;of<sp/>first<sp/>order<sp/>kinetics<sp/>to<sp/>calculate<sp/>the<sp/>probabilities<sp/>of<sp/>the<sp/>channel<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;being<sp/>found<sp/>in<sp/>all<sp/>states.<sp/>Further,<sp/>the<sp/>rates<sp/>of<sp/>transition<sp/>between<sp/>these<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;states<sp/>can<sp/>be<sp/>constant,<sp/>voltage-dependent<sp/>or<sp/>ligand<sp/>dependent<sp/>(only<sp/>one<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ligand<sp/>species).<sp/>The<sp/>current<sp/>flow<sp/>obtained<sp/>from<sp/>the<sp/>channel<sp/>is<sp/>calculated<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;in<sp/>a<sp/>deterministic<sp/>method<sp/>by<sp/>solving<sp/>the<sp/>system<sp/>of<sp/>differential<sp/>equations<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;obtained<sp/>from<sp/>the<sp/>assumptions<sp/>above.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classDinfo" kindref="compound">Dinfo&lt; MarkovChannel &gt;</ref><sp/>dinfo;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref><sp/>MarkovChannelCinfo(</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;MarkovChannel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChanBase_1a636dddba7e9e9a4519362a2a94f190bc" kindref="member">ChanBase::initCinfo</ref>(),</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MarkovChannelFinfos,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/>MarkovChannelFinfos<sp/>)/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<sp/><ref refid="classFinfo" kindref="compound">Finfo</ref>*<sp/>),</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;dinfo,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>doc,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(doc)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;MarkovChannelCinfo;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="MarkovChannel_8cpp_1ad74efc7fa8669981fb7b2b509aca9d5f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="MarkovChannel_8cpp_1ad74efc7fa8669981fb7b2b509aca9d5f" kindref="member">markovChannelCinfo</ref><sp/>=<sp/><ref refid="classMarkovChannel_1a0e2c70f630a9a7ac4c148ecac03befb7" kindref="member">MarkovChannel::initCinfo</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" refkind="member"><highlight class="normal"><ref refid="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" kindref="member">MarkovChannel::MarkovChannel</ref>()<sp/>:</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>g_(0),</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>ligandConc_(0),</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>numStates_(0),</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>numOpenStates_(0)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{<sp/>;<sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="classMarkovChannel_1acd34238ac7aa3d3f48896cae7526e202" refkind="member"><highlight class="normal"><ref refid="classMarkovChannel_1a8a792badd15855bc92d2e7f5a2627666" kindref="member">MarkovChannel::MarkovChannel</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numStates,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numOpenStates)<sp/>:</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>g_(0),<sp/>ligandConc_(0),<sp/>numStates_(numStates),<sp/>numOpenStates_(numOpenStates)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1aff512ce58a1d6fc88c8f171da0a30754" kindref="member">stateLabels_</ref>.resize(<sp/>numStates<sp/>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" kindref="member">state_</ref>.resize(<sp/>numStates<sp/>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" kindref="member">initialState_</ref>.resize(<sp/>numStates<sp/>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" kindref="member">Gbars_</ref>.resize(<sp/>numOpenStates<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="classMarkovChannel_1a85894e649cd14cc090273dff7dc047ea" refkind="member"><highlight class="normal"><ref refid="classMarkovChannel_1a85894e649cd14cc090273dff7dc047ea" kindref="member">MarkovChannel::~MarkovChannel</ref>(<sp/>)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="classMarkovChannel_1a05c755dd3aa8bd8d0c2726e91d162f40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a05c755dd3aa8bd8d0c2726e91d162f40" kindref="member">MarkovChannel::getVm</ref>(<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="152"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classChanCommon_1a7089110696aab34addcabe3307b28302" kindref="member">Vm_</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classMarkovChannel_1af4ca0abb9c6dfc89ee076038831b48da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1af4ca0abb9c6dfc89ee076038831b48da" kindref="member">MarkovChannel::setVm</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Vm<sp/>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChanCommon_1a7089110696aab34addcabe3307b28302" kindref="member">Vm_</ref><sp/>=<sp/>Vm;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="classMarkovChannel_1a84fcc4b85545d5db01be6df2c5180f0a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a84fcc4b85545d5db01be6df2c5180f0a" kindref="member">MarkovChannel::getLigandConc</ref>(<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="162"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" kindref="member">ligandConc_</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="classMarkovChannel_1a7d7285dda4f6313341720d51864b8c80" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a7d7285dda4f6313341720d51864b8c80" kindref="member">MarkovChannel::setLigandConc</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ligandConc<sp/>)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" kindref="member">ligandConc_</ref><sp/>=<sp/>ligandConc;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classMarkovChannel_1a2780ce0bba192493b4038019524f113d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a2780ce0bba192493b4038019524f113d" kindref="member">MarkovChannel::getNumStates</ref>(<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="172"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1ae11a2a8b72aeab6f97a7c2ce12fdd612" kindref="member">numStates_</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="classMarkovChannel_1a2f8bbe900071fb3911cc9aa03295c747" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a2f8bbe900071fb3911cc9aa03295c747" kindref="member">MarkovChannel::setNumStates</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numStates<sp/>)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1ae11a2a8b72aeab6f97a7c2ce12fdd612" kindref="member">numStates_</ref><sp/>=<sp/>numStates;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="classMarkovChannel_1a4d9c4b87f25f831e7068b2d7e7156e1e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a4d9c4b87f25f831e7068b2d7e7156e1e" kindref="member">MarkovChannel::getNumOpenStates</ref>(<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="182"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" kindref="member">numOpenStates_</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="classMarkovChannel_1a562aeeff882505f5108263057e82152d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a562aeeff882505f5108263057e82152d" kindref="member">MarkovChannel::setNumOpenStates</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numOpenStates<sp/>)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" kindref="member">numOpenStates_</ref><sp/>=<sp/>numOpenStates;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="classMarkovChannel_1a97ab9e9b273cf4d114be3a4790b8df43" refkind="member"><highlight class="normal">vector&lt;<sp/>string<sp/>&gt;<sp/><ref refid="classMarkovChannel_1a97ab9e9b273cf4d114be3a4790b8df43" kindref="member">MarkovChannel::getStateLabels</ref>(<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="192"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1aff512ce58a1d6fc88c8f171da0a30754" kindref="member">stateLabels_</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="classMarkovChannel_1a4542da7800174e9d11caad0bb219be81" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a4542da7800174e9d11caad0bb219be81" kindref="member">MarkovChannel::setStateLabels</ref>(<sp/>vector&lt;<sp/>string<sp/>&gt;<sp/>stateLabels<sp/>)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1aff512ce58a1d6fc88c8f171da0a30754" kindref="member">stateLabels_</ref><sp/>=<sp/>stateLabels;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="classMarkovChannel_1aec198ce8b6dd0db134d7a422aef315d9" refkind="member"><highlight class="normal">vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classMarkovChannel_1aec198ce8b6dd0db134d7a422aef315d9" kindref="member">MarkovChannel::getState</ref><sp/>(<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="202"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" kindref="member">state_</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="classMarkovChannel_1a4c34329c895aa5dd7b1ecf4acf926fe7" refkind="member"><highlight class="normal">vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classMarkovChannel_1a4c34329c895aa5dd7b1ecf4acf926fe7" kindref="member">MarkovChannel::getInitialState</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="207"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" kindref="member">initialState_</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="classMarkovChannel_1ab8595a2f147d54ee89d17ec8eead9f71" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1ab8595a2f147d54ee89d17ec8eead9f71" kindref="member">MarkovChannel::setInitialState</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>initialState<sp/>)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" kindref="member">initialState_</ref><sp/>=<sp/>initialState;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" kindref="member">state_</ref><sp/>=<sp/>initialState;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="classMarkovChannel_1a7c523e85d8c7f0a97927cd92aad6dc6a" refkind="member"><highlight class="normal">vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classMarkovChannel_1a7c523e85d8c7f0a97927cd92aad6dc6a" kindref="member">MarkovChannel::getGbars</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="218"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" kindref="member">Gbars_</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="classMarkovChannel_1a00493d2172d475b0f298f3a327f63e83" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a00493d2172d475b0f298f3a327f63e83" kindref="member">MarkovChannel::setGbars</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>Gbars<sp/>)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" kindref="member">Gbars_</ref><sp/>=<sp/>Gbars;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="comment">//MsgDest<sp/>functions</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1a8929ca21a4a6d5536fdc5e267d68fc22" kindref="member">MarkovChannel::vProcess</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" kindref="member">g_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Cannot<sp/>use<sp/>the<sp/>Gbar_<sp/>variable<sp/>of<sp/>the<sp/>ChanBase<sp/>class.<sp/>The<sp/>conductance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Gk_<sp/>calculated<sp/>here<sp/>is<sp/>the<sp/>&quot;expected<sp/>conductance&quot;<sp/>of<sp/>the<sp/>channel<sp/>due<sp/>to<sp/>its</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//stochastic<sp/>nature.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classMarkovChannel_1aee31758e07478e416270fec99464d378" kindref="member">numOpenStates_</ref>;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" kindref="member">g_</ref><sp/>+=<sp/><ref refid="classMarkovChannel_1a42eb656aa84791f9522bfe9d42815fa5" kindref="member">Gbars_</ref>[i]<sp/>*<sp/><ref refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" kindref="member">state_</ref>[i];</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChanBase_1a5be7f8c73ae22fe65dfccb18fb67fb00" kindref="member">setGk</ref>(<sp/>e,<sp/><ref refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" kindref="member">g_</ref><sp/>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" kindref="member">updateIk</ref>();</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" kindref="member">sendProcessMsgs</ref>(<sp/>e,<sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="classMarkovChannel_1aa6f0cc5bd632d6f13f64980fafc7a541" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1aa6f0cc5bd632d6f13f64980fafc7a541" kindref="member">MarkovChannel::vReinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p<sp/>)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a75c1e6f9588372f826e700e6ed43d93c" kindref="member">g_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" kindref="member">initialState_</ref>.empty()<sp/>)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;MarkovChannel::reinit<sp/>:<sp/>Initial<sp/>state<sp/>has<sp/>not<sp/>been<sp/>set.!\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" kindref="member">state_</ref><sp/>=<sp/><ref refid="classMarkovChannel_1a5bc546026e9bfc9ab56406bde3859820" kindref="member">initialState_</ref>;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" kindref="member">sendReinitMsgs</ref>(<sp/>e,<sp/>p<sp/>);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262" refid="classMarkovChannel_1aa8084f4c73f953208916556fbc7de306" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1aa8084f4c73f953208916556fbc7de306" kindref="member">MarkovChannel::handleLigandConc</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ligandConc<sp/>)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a169fdf4747dec174f028680a75423764" kindref="member">ligandConc_</ref><sp/>=<sp/>ligandConc;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="classMarkovChannel_1ab1c77ea8b75a28304abeacec8b6978a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovChannel_1ab1c77ea8b75a28304abeacec8b6978a6" kindref="member">MarkovChannel::handleState</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>state<sp/>)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovChannel_1a17529084483802cb36d96da7d5ddf457" kindref="member">state_</ref><sp/>=<sp/>state;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovChannel.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,867 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="GssaVoxelPools_8cpp" kind="file" language="C++">
+    <compoundname>GssaVoxelPools.cpp</compoundname>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes refid="randnum_8h" local="yes">../randnum/randnum.h</includes>
+    <includes refid="RateTerm_8h" local="yes">RateTerm.h</includes>
+    <includes refid="FuncTerm_8h" local="yes">FuncTerm.h</includes>
+    <includes refid="SparseMatrix_8h" local="yes">../basecode/SparseMatrix.h</includes>
+    <includes refid="KinSparseMatrix_8h" local="yes">KinSparseMatrix.h</includes>
+    <includes refid="VoxelPoolsBase_8h" local="yes">VoxelPoolsBase.h</includes>
+    <includes refid="VoxelJunction_8h" local="yes">../mesh/VoxelJunction.h</includes>
+    <includes refid="XferInfo_8h" local="yes">XferInfo.h</includes>
+    <includes refid="KsolveBase_8h" local="yes">KsolveBase.h</includes>
+    <includes refid="Stoich_8h" local="yes">Stoich.h</includes>
+    <includes refid="GssaSystem_8h" local="yes">GssaSystem.h</includes>
+    <includes refid="GssaVoxelPools_8h" local="yes">GssaVoxelPools.h</includes>
+    <incdepgraph>
+      <node id="66">
+        <label>../external/exprtk/exprtk.hpp</label>
+      </node>
+      <node id="16">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="29">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="18">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="22">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="24">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="36">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="28">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="42">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="41">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="17">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="26">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="33">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="14">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="27">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="39">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="23">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="20">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="15">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="35">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="32">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="37">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="34">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="67">
+        <label>../basecode/SparseMatrix.h</label>
+        <link refid="SparseMatrix_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="38">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="13">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="55">
+        <label>../basecode/global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>../builtins/MooseParser.h</label>
+        <link refid="MooseParser_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>FuncTerm.h</label>
+        <link refid="FuncTerm_8h"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>GssaSystem.h</label>
+        <link refid="GssaSystem_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/GssaVoxelPools.cpp</label>
+        <link refid="GssaVoxelPools_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>GssaVoxelPools.h</label>
+        <link refid="GssaVoxelPools_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>KinSparseMatrix.h</label>
+        <link refid="KinSparseMatrix_8h"/>
+      </node>
+      <node id="72">
+        <label>KsolveBase.h</label>
+        <link refid="KsolveBase_8h"/>
+      </node>
+      <node id="51">
+        <label>RateTerm.h</label>
+        <link refid="RateTerm_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>Stoich.h</label>
+        <link refid="Stoich_8h"/>
+      </node>
+      <node id="69">
+        <label>VoxelPoolsBase.h</label>
+        <link refid="VoxelPoolsBase_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>XferInfo.h</label>
+        <link refid="XferInfo_8h"/>
+      </node>
+      <node id="70">
+        <label>../mesh/VoxelJunction.h</label>
+        <link refid="VoxelJunction_8h"/>
+      </node>
+      <node id="21">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="48">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>../randnum/randnum.h</label>
+        <link refid="randnum_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="52">
+        <label>../utility/numutil.h</label>
+        <link refid="numutil_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="54">
+        <label>cfloat</label>
+      </node>
+      <node id="53">
+        <label>cmath</label>
+      </node>
+      <node id="30">
+        <label>cstring</label>
+      </node>
+      <node id="56">
+        <label>ctime</label>
+      </node>
+      <node id="65">
+        <label>exception</label>
+      </node>
+      <node id="59">
+        <label>fstream</label>
+      </node>
+      <node id="60">
+        <label>iomanip</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="47">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="64">
+        <label>memory</label>
+      </node>
+      <node id="45">
+        <label>random</label>
+      </node>
+      <node id="63">
+        <label>regex</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>typeinfo</label>
+      </node>
+      <node id="8">
+        <label>unordered_map</label>
+      </node>
+      <node id="57">
+        <label>valarray</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="GssaVoxelPools_8cpp_1ab989cea8a44816ccfa6dfc14a9ab509b" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double SAFETY_FACTOR</definition>
+        <argsstring></argsstring>
+        <name>SAFETY_FACTOR</name>
+        <initializer>= 1.0 + 1.0e-9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The SAFETY_FACTOR Protects against the total propensity exceeding the cumulative sum of propensities, atot. We do a lot of adding and subtracting of dependency terms from atot. Roundoff error will eventually cause this to drift from the true sum. To guarantee that we never lose the propensity of the last reaction, this safety factor scales the first calculation of atot to be slightly larger. Periodically this will cause the reaction picking step to exceed the last reaction index. This is safe, we just pick another random number. This will happen rather infrequently. That is also a good time to update the cumulative sum. A double should have &gt;15 digits, so cumulative error will be much smaller than this. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/GssaVoxelPools.cpp" line="39" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/GssaVoxelPools.cpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" compoundref="GssaVoxelPools_8cpp" startline="130" endline="144">GssaVoxelPools::refreshAtot</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2010<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../randnum/randnum.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RateTerm_8h" kindref="compound">RateTerm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FuncTerm_8h" kindref="compound">FuncTerm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/SparseMatrix.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="KinSparseMatrix_8h" kindref="compound">KinSparseMatrix.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VoxelPoolsBase_8h" kindref="compound">VoxelPoolsBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mesh/VoxelJunction.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="XferInfo_8h" kindref="compound">XferInfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="KsolveBase_8h" kindref="compound">KsolveBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Stoich_8h" kindref="compound">Stoich.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="GssaSystem_8h" kindref="compound">GssaSystem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="GssaVoxelPools_8h" kindref="compound">GssaVoxelPools.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="GssaVoxelPools_8cpp_1ab989cea8a44816ccfa6dfc14a9ab509b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="GssaVoxelPools_8cpp_1ab989cea8a44816ccfa6dfc14a9ab509b" kindref="member">SAFETY_FACTOR</ref><sp/>=<sp/>1.0<sp/>+<sp/>1.0e-9;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Class<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classGssaVoxelPools_1a1f144adca2e32830cb8dc07a9c378dbb" refkind="member"><highlight class="normal"><ref refid="classGssaVoxelPools_1a1f144adca2e32830cb8dc07a9c378dbb" kindref="member">GssaVoxelPools::GssaVoxelPools</ref>():<sp/><ref refid="classVoxelPoolsBase" kindref="compound">VoxelPoolsBase</ref>(),<sp/>t_(<sp/>0.0<sp/>),<sp/>atot_(<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{;}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classGssaVoxelPools_1aed4810d574806c12457b77333864c86e" refkind="member"><highlight class="normal"><ref refid="classGssaVoxelPools_1aed4810d574806c12457b77333864c86e" kindref="member">GssaVoxelPools::~GssaVoxelPools</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>[i]<sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="comment">//<sp/>Solver<sp/>ops</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classGssaVoxelPools_1a2423e059de906fb9f63f4626c484b338" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a2423e059de906fb9f63f4626c484b338" kindref="member">GssaVoxelPools::updateDependentMathExpn</ref>(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref>*<sp/>g,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rindex,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>issue<sp/>is<sp/>that<sp/>if<sp/>the<sp/>expression<sp/>depends<sp/>on<sp/>t,<sp/>we<sp/>really<sp/>need</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>update<sp/>it<sp/>every<sp/>timestep.<sp/>But<sp/>then<sp/>a<sp/>cascading<sp/>set<sp/>of<sp/>reacs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>should<sp/>also<sp/>be<sp/>updated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>lower<sp/>commented<sp/>block<sp/>has<sp/>all<sp/>funcs<sp/>updated<sp/>every<sp/>time<sp/>step,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>but<sp/>this<sp/>too</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>doesn&apos;t<sp/>update<sp/>the<sp/>cascading<sp/>reacs.<sp/>So<sp/>this<sp/>is<sp/>now<sp/>handled<sp/>by<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>useClockedUpdate<sp/>flag,<sp/>and<sp/>we<sp/>use<sp/>the<sp/>lower<sp/>block<sp/>here<sp/>instead.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>deps<sp/>=<sp/>g-&gt;dependentMathExpn[<sp/>rindex<sp/>];</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/>for(<sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;::const_iterator</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>deps.begin();<sp/>i<sp/>!=<sp/>deps.end();<sp/>++i<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;stoich-&gt;funcs(<sp/>*i<sp/>)-&gt;evalPool(<sp/>varS(),<sp/>time<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>numFuncs<sp/>=<sp/>g-&gt;stoich-&gt;getNumFuncs();</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/>for(<sp/>unsigned<sp/>int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numFuncs;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;stoich-&gt;funcs(<sp/>i<sp/>)-&gt;evalPool(<sp/>varS(),<sp/>time<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>is<sp/>equivalent<sp/>to<sp/>the<sp/>loop<sp/>above.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1acf8597b477b135eb38e301d8a9257b77" kindref="member">updateFuncs</ref>(<sp/><ref refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" kindref="member">varS</ref>(),<sp/>time<sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classGssaVoxelPools_1a930db119e72272d520c45e1fb99793c9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a930db119e72272d520c45e1fb99793c9" kindref="member">GssaVoxelPools::updateDependentRates</ref>(</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;&amp;<sp/>deps,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStoich" kindref="compound">Stoich</ref>*<sp/>stoich<sp/>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>deps.cbegin();<sp/>i<sp/>!=<sp/>deps.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>-=<sp/>fabs(<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>[<sp/>*i<sp/>]<sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>+=<sp/>fabs(<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>[<sp/>*i<sp/>]<sp/>=<sp/><ref refid="classGssaVoxelPools_1a6f675fb978d518280508c0dfdbe0fd27" kindref="member">getReacVelocity</ref>(<sp/>*i,<sp/><ref refid="classVoxelPoolsBase_1a14f40161f05d91149be12bdcd5fc5f79" kindref="member">S</ref>()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classGssaVoxelPools_1a3a687ddce118faade0a1e7cd569d824c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a3a687ddce118faade0a1e7cd569d824c" kindref="member">GssaVoxelPools::pickReac</ref>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r<sp/>=<sp/><ref refid="classGssaVoxelPools_1a13dec6f59091037155763e112cfa7d49" kindref="member">rng_</ref>.<ref refid="classmoose_1_1RNG_1a9337240a35e8230966e80c9d174292b1" kindref="member">uniform</ref>(<sp/>)<sp/>*<sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>an<sp/>inefficient<sp/>way<sp/>to<sp/>do<sp/>it.<sp/>Can<sp/>easily<sp/>get<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>log<sp/>time<sp/>or<sp/>thereabouts<sp/>by<sp/>doing<sp/>one<sp/>or<sp/>two<sp/>levels<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>subsidiary<sp/>tables.<sp/>Too<sp/>many<sp/>levels<sp/>causes<sp/>slow-down<sp/>because</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>overhead<sp/>in<sp/>managing<sp/>the<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Slepoy,<sp/>Thompson<sp/>and<sp/>Plimpton<sp/>2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>report<sp/>a<sp/>linear<sp/>time<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.cbegin();<sp/>i<sp/>!=<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>r<sp/>&lt;<sp/>(<sp/>sum<sp/>+=<sp/>fabs(<sp/>*i<sp/>)<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>vel<sp/>=<sp/>fabs(<sp/>getReacVelocity(<sp/>i<sp/>-<sp/>v_.begin(),<sp/>S()<sp/>)<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>assert(<sp/>vel<sp/>&gt;=<sp/>0<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>i<sp/>-<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.begin()<sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.size();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classGssaVoxelPools_1ad9475a2a68725d33a9de874bcfb3b6ac" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1ad9475a2a68725d33a9de874bcfb3b6ac" kindref="member">GssaVoxelPools::setNumReac</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.clear();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.resize(<sp/>n,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1acf5c251c27f5aacce6ba9508fc8819ce" kindref="member">numFire_</ref>.resize(<sp/>n,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" kindref="member">GssaVoxelPools::refreshAtot</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref>*<sp/>g<sp/>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1acf8597b477b135eb38e301d8a9257b77" kindref="member">updateFuncs</ref>(<sp/><ref refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" kindref="member">varS</ref>(),<sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1ad4fc6515575ad28ed614c09647fdf20d" kindref="member">updateReacVelocities</ref>(<sp/>g,<sp/><ref refid="classVoxelPoolsBase_1a14f40161f05d91149be12bdcd5fc5f79" kindref="member">S</ref>(),<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref><sp/>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.cbegin();<sp/>i<sp/>!=<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.cend();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>+=<sp/>fabs(*i);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>*=<sp/><ref refid="GssaVoxelPools_8cpp_1ab989cea8a44816ccfa6dfc14a9ab509b" kindref="member">SAFETY_FACTOR</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>system<sp/>is<sp/>in<sp/>a<sp/>stuck<sp/>state.<sp/>If<sp/>so,<sp/>terminate.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>&lt;=<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="classGssaVoxelPools_1aa67869cf153fd4efc6b9b143b60a3a32" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1aa67869cf153fd4efc6b9b143b60a3a32" kindref="member">GssaVoxelPools::recalcTime</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref>*<sp/>g,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>currTime<sp/>)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" kindref="member">refreshAtot</ref>(<sp/>g<sp/>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>&gt;<sp/>currTime<sp/>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>=<sp/>currTime;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r<sp/>=<sp/><ref refid="classGssaVoxelPools_1a13dec6f59091037155763e112cfa7d49" kindref="member">rng_</ref>.<ref refid="classmoose_1_1RNG_1a9337240a35e8230966e80c9d174292b1" kindref="member">uniform</ref>(<sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>r<sp/>==<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/><ref refid="classGssaVoxelPools_1a13dec6f59091037155763e112cfa7d49" kindref="member">rng_</ref>.<ref refid="classmoose_1_1RNG_1a9337240a35e8230966e80c9d174292b1" kindref="member">uniform</ref>(<sp/>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>-=<sp/>(<sp/>1.0<sp/>/<sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>)<sp/>*<sp/>log(<sp/>r<sp/>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="classGssaVoxelPools_1a74bee940e747819eafbdb179df6833e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a04388bcc64302d99f9ee195b8e8d98c4" kindref="member">GssaVoxelPools::advance</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classProcInfo" kindref="compound">ProcInfo</ref>*<sp/>p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref>*<sp/>g<sp/>)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nextt<sp/>=<sp/>p-&gt;<ref refid="classProcInfo_1a6343499a8c6e17affc28b69181d2b2cb" kindref="member">currTime</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>&lt;<sp/>nextt<sp/>)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>&lt;=<sp/>0.0<sp/>)<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reac<sp/>system<sp/>is<sp/>stuck,<sp/>will<sp/>not<sp/>advance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>=<sp/>nextt;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1acf8597b477b135eb38e301d8a9257b77" kindref="member">updateFuncs</ref>(<sp/><ref refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" kindref="member">varS</ref>(),<sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rindex<sp/>=<sp/><ref refid="classGssaVoxelPools_1a3a687ddce118faade0a1e7cd569d824c" kindref="member">pickReac</ref>();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1a39d1868cebe3c20837e974cbb1d336de" kindref="member">getNumRates</ref>()<sp/>==<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>rindex<sp/>&gt;=<sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1a39d1868cebe3c20837e974cbb1d336de" kindref="member">getNumRates</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>probably<sp/>cumulative<sp/>roundoff<sp/>error<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recalculate<sp/>atot<sp/>to<sp/>avoid,<sp/>and<sp/>redo.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" kindref="member">refreshAtot</ref>(<sp/>g<sp/>)<sp/>)<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stuck<sp/>state.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>=<sp/>nextt;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1acf8597b477b135eb38e301d8a9257b77" kindref="member">updateFuncs</ref>(<sp/><ref refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" kindref="member">varS</ref>(),<sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>had<sp/>a<sp/>roundoff<sp/>error,<sp/>fixed<sp/>it,<sp/>but<sp/>now<sp/>need<sp/>to<sp/>be<sp/>sure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>only<sp/>fire<sp/>a<sp/>reaction<sp/>where<sp/>this<sp/>is<sp/>permissible.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.size();<sp/>i<sp/>&gt;<sp/>0;<sp/>--i<sp/>)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>fabs(<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>[i-1]<sp/>)<sp/>&gt;<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rindex<sp/>=<sp/>i<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>rindex<sp/>&lt;<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sign<sp/>=<sp/>std::copysign(<sp/>1,<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>[rindex]<sp/>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;<ref refid="classGssaSystem_1ae94a9cd90ae9919d075a72c8f4adbd2f" kindref="member">transposeN</ref>.<ref refid="classKinSparseMatrix_1a497304dc594faad57c85d78bf9173ff7" kindref="member">fireReac</ref>(<sp/>rindex,<sp/><ref refid="classVoxelPoolsBase_1af5e1c75777f866323c53c267f6eae9c5" kindref="member">Svec</ref>(),<sp/>sign<sp/>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1acf5c251c27f5aacce6ba9508fc8819ce" kindref="member">numFire_</ref>[rindex]++;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r<sp/>=<sp/><ref refid="classGssaVoxelPools_1a13dec6f59091037155763e112cfa7d49" kindref="member">rng_</ref>.<ref refid="classmoose_1_1RNG_1a9337240a35e8230966e80c9d174292b1" kindref="member">uniform</ref>();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>r<sp/>&lt;=<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/><ref refid="classGssaVoxelPools_1a13dec6f59091037155763e112cfa7d49" kindref="member">rng_</ref>.<ref refid="classmoose_1_1RNG_1a9337240a35e8230966e80c9d174292b1" kindref="member">uniform</ref>();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>-=<sp/>(<sp/>1.0<sp/>/<sp/><ref refid="classGssaVoxelPools_1a62ec12e73887bc6350ade58ba3e94137" kindref="member">atot_</ref><sp/>)<sp/>*<sp/>log(<sp/>r<sp/>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1acf8597b477b135eb38e301d8a9257b77" kindref="member">updateFuncs</ref>(<sp/><ref refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" kindref="member">varS</ref>(),<sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a930db119e72272d520c45e1fb99793c9" kindref="member">updateDependentRates</ref>(<sp/>g-&gt;<ref refid="classGssaSystem_1ab8e03659f22c701d94b37a83c8faae0a" kindref="member">dependency</ref>[<sp/>rindex<sp/>],<sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref><sp/>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="classGssaVoxelPools_1a3a83f5ee0406fe9fffda7546c3aaeabc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classVoxelPoolsBase_1a6c9c831d491fa62b8baeb84a6d91e2ea" kindref="member">GssaVoxelPools::reinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref>*<sp/>g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rngSeedOffset<sp/>)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a13dec6f59091037155763e112cfa7d49" kindref="member">rng_</ref>.<ref refid="classmoose_1_1RNG_1ad310f016166b1548e23fb8f3b54f83d7" kindref="member">setSeed</ref>(<sp/><ref refid="namespacemoose_1ab4eece6df5cb87722952f36d8aea6d98" kindref="member">moose::getGlobalSeed</ref>()<sp/>+<sp/>rngSeedOffset<sp/>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a6c9c831d491fa62b8baeb84a6d91e2ea" kindref="member">VoxelPoolsBase::reinit</ref>();<sp/></highlight><highlight class="comment">//<sp/>Assigns<sp/>S<sp/>=<sp/>NA<sp/>*<sp/>vol<sp/>*<sp/>Cinit;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numVarPools<sp/>=<sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1a9b29e415b8c69dc92a59c06d943d1094" kindref="member">getNumVarPools</ref>();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1acf8597b477b135eb38e301d8a9257b77" kindref="member">updateFuncs</ref>(<sp/><ref refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" kindref="member">varS</ref>(),<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>n<sp/>=<sp/><ref refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" kindref="member">varS</ref>();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>error<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_prev<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>g-&gt;<ref refid="classGssaSystem_1acd5e79ac3a4ce1ddd38299c56d528916" kindref="member">useRandInit</ref><sp/>)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;double,<sp/>vector&lt;Eref&gt;&gt;<sp/>groupByVal;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numVarPools;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_prev<sp/>=<sp/>n[i];</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n[i]<sp/>=<sp/><ref refid="numutil_8h_1a2ebbef1d22f42f5542acfa9b80c76b7b" kindref="member">approximateWithInteger</ref>(_prev,<sp/><ref refid="classGssaVoxelPools_1a13dec6f59091037155763e112cfa7d49" kindref="member">rng_</ref>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>+=<sp/>fabs(_prev<sp/>-<sp/>n[i]);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Show<sp/>warning<sp/>to<sp/>user<sp/>if<sp/>extra<sp/>molecules<sp/>in<sp/>the<sp/>system<sp/>after</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>converting<sp/>floats<sp/>to<sp/>integer<sp/>is<sp/>larger<sp/>than<sp/>1.0.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Jan<sp/>2024:<sp/>Disable<sp/>until<sp/>I<sp/>come<sp/>up<sp/>with<sp/>a<sp/>good<sp/>way<sp/>to<sp/>handle.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>also<sp/>that<sp/>this<sp/>is<sp/>likely<sp/>when<sp/>we<sp/>have<sp/>more<sp/>pools.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>0<sp/>&amp;&amp;<sp/>std::abs(error)<sp/>&gt;=<sp/>1.0<sp/>)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__function_8hpp_1aaac3d9d5236a9bb0dc8818cf10c7673a" kindref="member">MOOSE_WARN</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Extra<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>error</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>molecules<sp/>in<sp/>system<sp/>after<sp/>converting<sp/>fractional<sp/>to<sp/>integer.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>round<sp/>to<sp/>the<sp/>nearest<sp/>int.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numVarPools;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n[i]<sp/>=<sp/>std::round(n[i]);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a0c411f528cab55d02ac4e9335cdea165" kindref="member">t_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" kindref="member">refreshAtot</ref>(<sp/>g<sp/>);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1acf5c251c27f5aacce6ba9508fc8819ce" kindref="member">numFire_</ref>.assign(<sp/><ref refid="classGssaVoxelPools_1a34e18c08cab90b162fdd03e25bb69017" kindref="member">v_</ref>.size(),<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="classGssaVoxelPools_1ac64a6f93a371185a76657e3f422c34b8" refkind="member"><highlight class="normal">vector&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/><ref refid="classGssaVoxelPools_1ac64a6f93a371185a76657e3f422c34b8" kindref="member">GssaVoxelPools::numFire</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="257"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1acf5c251c27f5aacce6ba9508fc8819ce" kindref="member">numFire_</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="comment">//<sp/>Rate<sp/>computation<sp/>functions</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" kindref="member">GssaVoxelPools::updateAllRateTerms</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>RateTerm*<sp/>&gt;&amp;<sp/>rates,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numCoreRates<sp/>)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>[i]<sp/>);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>.resize(<sp/>rates.size()<sp/>);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numCoreRates;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>[i]<sp/>=<sp/>rates[i]-&gt;copyWithVolScaling(<sp/><ref refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" kindref="member">getVolume</ref>(),<sp/>1,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>numCoreRates;<sp/>i<sp/>&lt;<sp/>rates.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>[i]<sp/>=<sp/>rates[i]-&gt;copyWithVolScaling(<sp/><ref refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" kindref="member">getVolume</ref>(),</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a2a6aa77950aca1807968ca4be966760f" kindref="member">getXreacScaleSubstrates</ref>(i<sp/>-<sp/>numCoreRates),</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a39840280ada4fe2b44567c5d90aff845" kindref="member">getXreacScaleProducts</ref>(i<sp/>-<sp/>numCoreRates<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795" kindref="member">GssaVoxelPools::updateRateTerms</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>RateTerm*<sp/>&gt;&amp;<sp/>rates,</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numCoreRates,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>During<sp/>setup<sp/>or<sp/>expansion<sp/>of<sp/>the<sp/>reac<sp/>system,<sp/>this<sp/>might<sp/>be<sp/>called</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>before<sp/>the<sp/>local<sp/>rates_<sp/>term<sp/>is<sp/>assigned.<sp/>If<sp/>so,<sp/>ignore.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>index<sp/>&gt;=<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>.size()<sp/>)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>[index]<sp/>);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>index<sp/>&gt;=<sp/>numCoreRates<sp/>)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>[index]<sp/>=<sp/>rates[index]-&gt;copyWithVolScaling(</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" kindref="member">getVolume</ref>(),</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a2a6aa77950aca1807968ca4be966760f" kindref="member">getXreacScaleSubstrates</ref>(index<sp/>-<sp/>numCoreRates),</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a39840280ada4fe2b44567c5d90aff845" kindref="member">getXreacScaleProducts</ref>(index<sp/>-<sp/>numCoreRates)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>[index]<sp/>=<sp/>rates[index]-&gt;copyWithVolScaling(<ref refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" kindref="member">getVolume</ref>(),<sp/>1.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304" refid="classGssaVoxelPools_1ad4fc6515575ad28ed614c09647fdf20d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1ad4fc6515575ad28ed614c09647fdf20d" kindref="member">GssaVoxelPools::updateReacVelocities</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref>*<sp/>g,</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>s,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>v<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="306"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classKinSparseMatrix" kindref="compound">KinSparseMatrix</ref>&amp;<sp/>N<sp/>=<sp/>g-&gt;<ref refid="classGssaSystem_1aca3f5e6b8350a8d36dc2be0a24ff1aa4" kindref="member">stoich</ref>-&gt;<ref refid="classStoich_1a2e9ff77fe6dbfb8dd3b92602ab32ccc1" kindref="member">getStoichiometryMatrix</ref>();</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>N.<ref refid="classSparseMatrix_1a34a568e3db0bafd38cf0ccc37cd2086b" kindref="member">nColumns</ref>()<sp/>==<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>RateTerm*<sp/>&gt;::const_iterator<sp/>i;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>v.clear();</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>v.resize(<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>.size(),<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>j<sp/>=<sp/>v.begin();</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>.end();<sp/>i++)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*j++<sp/>=<sp/>(**i)(<sp/>s<sp/>);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>!std::isnan(<sp/>*(<sp/>j-1<sp/>)<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="classGssaVoxelPools_1a6f675fb978d518280508c0dfdbe0fd27" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a6f675fb978d518280508c0dfdbe0fd27" kindref="member">GssaVoxelPools::getReacVelocity</ref>(</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>s<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="324"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>=<sp/><ref refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" kindref="member">rates_</ref>[r]-&gt;operator()(<sp/>s<sp/>);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="classGssaVoxelPools_1aeaf1dcd115f3d768b87bf0c9f7400fcb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1aeaf1dcd115f3d768b87bf0c9f7400fcb" kindref="member">GssaVoxelPools::setStoich</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStoich" kindref="compound">Stoich</ref>*<sp/>stoichPtr<sp/>)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" kindref="member">stoichPtr_</ref><sp/>=<sp/>stoichPtr;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Handle<sp/>volume<sp/>updates.<sp/>Inherited<sp/>virtual<sp/>func.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335" refid="classGssaVoxelPools_1a1a4ecc59c4d07dfb139574c44d74196f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1a1a4ecc59c4d07dfb139574c44d74196f" kindref="member">GssaVoxelPools::setVolumeAndDependencies</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vol<sp/>)</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classVoxelPoolsBase_1a8c740ddc9e1e61c9a0533b31720b31b6" kindref="member">VoxelPoolsBase::setVolumeAndDependencies</ref>(<sp/>vol<sp/>);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" kindref="member">updateAllRateTerms</ref>(<ref refid="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" kindref="member">stoichPtr_</ref>-&gt;<ref refid="classStoich_1a05ba653fd2112861f21bd2c27b3a76a3" kindref="member">getRateTerms</ref>(),<sp/><ref refid="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" kindref="member">stoichPtr_</ref>-&gt;<ref refid="classStoich_1aa81bfbaf5389d4ee173aa18cfaf15fd4" kindref="member">getNumCoreRates</ref>());</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Handle<sp/>cross<sp/>compartment<sp/>reactions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="classGssaVoxelPools_1aace8f5b93c2890d5f5da51395856f06a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGssaVoxelPools_1aace8f5b93c2890d5f5da51395856f06a" kindref="member">GssaVoxelPools::xferIn</ref>(<sp/><ref refid="classXferInfo" kindref="compound">XferInfo</ref>&amp;<sp/>xf,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxelIndex,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGssaSystem" kindref="compound">GssaSystem</ref>*<sp/>g<sp/>)</highlight></codeline>
+<codeline lineno="343"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset<sp/>=<sp/>voxelIndex<sp/>*<sp/>xf.<ref refid="classXferInfo_1a684481cfca3f73d2cb947145f6539bd1" kindref="member">xferPoolIdx</ref>.size();</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>xf.<ref refid="classXferInfo_1aa163407c599bf58b222f83fda053aa0a" kindref="member">values</ref>.cbegin()<sp/>+<sp/>offset;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>xf.<ref refid="classXferInfo_1aa4bf3d88d7638a0ec700414eec1f95c2" kindref="member">lastValues</ref>.cbegin()<sp/>+<sp/>offset;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>xf.<ref refid="classXferInfo_1ab0838eb57a9963a2622948e815ec74f4" kindref="member">subzero</ref>.begin()<sp/>+<sp/>offset;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>s<sp/>=<sp/><ref refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" kindref="member">varS</ref>();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>xf.<ref refid="classXferInfo_1a684481cfca3f73d2cb947145f6539bd1" kindref="member">xferPoolIdx</ref>.cbegin();<sp/>k<sp/>!=<sp/>xf.<ref refid="classXferInfo_1a684481cfca3f73d2cb947145f6539bd1" kindref="member">xferPoolIdx</ref>.end();<sp/>++k<sp/>)</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>x<sp/>=<sp/>s[*k];</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>*i++<sp/>-<sp/>*j++;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>x<sp/>+=<sp/>approximateWithInteger_debug(__FUNCTION__,<sp/>dx,<sp/>rng_);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>+=<sp/><ref refid="numutil_8h_1a2ebbef1d22f42f5542acfa9b80c76b7b" kindref="member">approximateWithInteger</ref>(dx,<sp/><ref refid="classGssaVoxelPools_1a13dec6f59091037155763e112cfa7d49" kindref="member">rng_</ref>);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>x<sp/>&lt;<sp/>*m<sp/>)</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*m<sp/>-=<sp/>x;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>-=<sp/>*m;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*m<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m++;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>S<sp/>has<sp/>changed,<sp/>then<sp/>I<sp/>should<sp/>update<sp/>rates<sp/>of<sp/>all<sp/>affected<sp/>reacs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Go<sp/>through<sp/>stoich<sp/>matrix<sp/>to<sp/>find<sp/>affected<sp/>reacs<sp/>for<sp/>each<sp/>mol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>in<sp/>list,<sp/>since<sp/>some<sp/>may<sp/>be<sp/>hit<sp/>more<sp/>than<sp/>once<sp/>in<sp/>this<sp/>func.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>done,<sp/>go<sp/>through<sp/>and<sp/>update<sp/>all<sp/>affected<sp/>ones.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Does<sp/>this<sp/>fix<sp/>the<sp/>problem<sp/>of<sp/>negative<sp/>concs?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" kindref="member">refreshAtot</ref>(<sp/>g<sp/>);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/GssaVoxelPools.cpp"/>
+  </compounddef>
+</doxygen>

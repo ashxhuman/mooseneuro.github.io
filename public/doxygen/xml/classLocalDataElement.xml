@@ -1,0 +1,558 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classLocalDataElement" kind="class" language="C++" prot="public">
+    <compoundname>LocalDataElement</compoundname>
+    <basecompoundref refid="classDataElement" prot="public" virt="non-virtual">DataElement</basecompoundref>
+    <includes refid="LocalDataElement_8h" local="no">LocalDataElement.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLocalDataElement_1ad26c50e8d60b6cceb38e12d50a612a57" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::localDataStart_</definition>
+        <argsstring></argsstring>
+        <name>localDataStart_</name>
+        <qualifiedname>LocalDataElement::localDataStart_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Precomputed value for start index of data on this node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="121" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classLocalDataElement_1ad7348d1c2a47209fe8d53f33e4a6fe4e" compoundref="LocalDataElement_8cpp" startline="64" endline="68">localDataStart</referencedby>
+        <referencedby refid="classLocalDataElement_1a7dadce6a3e9c4f2ba2ba214d34d2bb71" compoundref="LocalDataElement_8cpp" startline="101" endline="113">setDataSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classLocalDataElement_1a5594abf481cf401a04a0e86af5ad22a2" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::numData_</definition>
+        <argsstring></argsstring>
+        <name>numData_</name>
+        <qualifiedname>LocalDataElement::numData_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the total number of data entries on this <ref refid="classElement" kindref="compound">Element</ref>, in the entire simulation. Note that these entries do not have to be on this node, some may be farmed out to other nodes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="109" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="classLocalDataElement_1a4822fc4080404fb4102a1b99896a6695" compoundref="LocalDataElement_8cpp" startline="121" endline="129">getNumOnNode</referencedby>
+        <referencedby refid="classLocalDataElement_1aef42a3d8057237c4e52e21a9965bdf98" compoundref="LocalDataElement_8cpp" startline="59" endline="62">numData</referencedby>
+        <referencedby refid="classLocalDataElement_1a7dadce6a3e9c4f2ba2ba214d34d2bb71" compoundref="LocalDataElement_8cpp" startline="101" endline="113">setDataSize</referencedby>
+        <referencedby refid="classLocalDataElement_1a346c56993ed6cbbac5b399a867c86737" compoundref="LocalDataElement_8cpp" startline="85" endline="91">startDataIndex</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classLocalDataElement_1a89a6675f7624139543b4207488c46580" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::numPerNode_</definition>
+        <argsstring></argsstring>
+        <name>numPerNode_</name>
+        <qualifiedname>LocalDataElement::numPerNode_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the number of data entries per node, except for possibly the last node if they don&apos;t divide evenly. Useful for intermediate calculations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="116" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="classLocalDataElement_1ab2383d6f81e3b8b99e1bcc79af929af1" compoundref="LocalDataElement_8cpp" startline="72" endline="82">getNode</referencedby>
+        <referencedby refid="classLocalDataElement_1a4822fc4080404fb4102a1b99896a6695" compoundref="LocalDataElement_8cpp" startline="121" endline="129">getNumOnNode</referencedby>
+        <referencedby refid="classLocalDataElement_1aaab69f831f902cd07d5d145b8b28577c" compoundref="LocalDataElement_8cpp" startline="93" endline="95">rawIndex</referencedby>
+        <referencedby refid="classLocalDataElement_1a7dadce6a3e9c4f2ba2ba214d34d2bb71" compoundref="LocalDataElement_8cpp" startline="101" endline="113">setDataSize</referencedby>
+        <referencedby refid="classLocalDataElement_1a346c56993ed6cbbac5b399a867c86737" compoundref="LocalDataElement_8cpp" startline="85" endline="91">startDataIndex</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLocalDataElement_1a5f62924657fa5921010743e1f9a897eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classElement" kindref="compound">Element</ref> *</type>
+        <definition>Element * LocalDataElement::copyElement</definition>
+        <argsstring>(Id newParent, Id newId, unsigned int n, bool toGlobal) const</argsstring>
+        <name>copyElement</name>
+        <qualifiedname>LocalDataElement::copyElement</qualifiedname>
+        <reimplements refid="classElement_1a61eecedc48ea7e432d38138814f88bc4">copyElement</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>newParent</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>newId</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>toGlobal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual copier. Makes a copy of self. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="49" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="41" bodyend="51"/>
+        <references refid="classLocalDataElement_1a2eec255cd733568c370344d1f48a361f" compoundref="LocalDataElement_8cpp" startline="28" endline="33">LocalDataElement</references>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1ab2383d6f81e3b8b99e1bcc79af929af1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::getNode</definition>
+        <argsstring>(unsigned int dataId) const</argsstring>
+        <name>getNode</name>
+        <qualifiedname>LocalDataElement::getNode</qualifiedname>
+        <reimplements refid="classElement_1a6350d721871c508fbf68286a3907e4a1">getNode</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>dataId</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. Returns node location of specified object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="63" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="72" bodyend="82"/>
+        <references refid="header_8h_1ac6002a3ce5ca0ea7d7161d9cb3b14066" compoundref="header_8h" startline="47">ALLDATA</references>
+        <references refid="classShell_1a4c3608b6ca5fcec63a13b12c49b9d530" compoundref="ShellThreads_8cpp" startline="81" endline="84">Shell::myNode</references>
+        <references refid="classDataElement_1a8db5259611cea40d992d84af1fa14bd4" compoundref="DataElement_8cpp" startline="61" endline="64">DataElement::numLocalData</references>
+        <references refid="classLocalDataElement_1a89a6675f7624139543b4207488c46580" compoundref="LocalDataElement_8h" startline="116">numPerNode_</references>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1a4822fc4080404fb4102a1b99896a6695" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::getNumOnNode</definition>
+        <argsstring>(unsigned int node) const</argsstring>
+        <name>getNumOnNode</name>
+        <qualifiedname>LocalDataElement::getNumOnNode</qualifiedname>
+        <reimplements refid="classElement_1a0c342358b941cf19c2c1076c95611c5d">getNumOnNode</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="78" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="121" bodyend="129"/>
+        <references refid="classLocalDataElement_1aef42a3d8057237c4e52e21a9965bdf98" compoundref="LocalDataElement_8cpp" startline="59" endline="62">numData</references>
+        <references refid="classLocalDataElement_1a5594abf481cf401a04a0e86af5ad22a2" compoundref="LocalDataElement_8h" startline="109">numData_</references>
+        <references refid="classLocalDataElement_1a89a6675f7624139543b4207488c46580" compoundref="LocalDataElement_8h" startline="116">numPerNode_</references>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1a463442177d703b189436b247a1d479b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool LocalDataElement::isGlobal</definition>
+        <argsstring>() const</argsstring>
+        <name>isGlobal</name>
+        <qualifiedname>LocalDataElement::isGlobal</qualifiedname>
+        <reimplements refid="classElement_1a695b42ddcfcbedf97d74718b92da5020">isGlobal</reimplements>
+        <briefdescription>
+<para>Inherited virtual. Reports if this is Global, which it isn&apos;t. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="73" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1aca94feb65168d07988f034228d6efb0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LocalDataElement::LocalDataElement</definition>
+        <argsstring>(Id id, const Cinfo *c, const string &amp;name, unsigned int numData=1)</argsstring>
+        <name>LocalDataElement</name>
+        <qualifiedname>LocalDataElement::LocalDataElement</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numData</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the main constructor, used by <ref refid="classShell_1ab970c2c6e17af730804e810b4431107c" kindref="member">Shell::innerCreate</ref> which makes most Elements. Also used to create base Elements to init the simulator in <ref refid="main_8cpp" kindref="compound">main.cpp</ref>. <ref refid="classId" kindref="compound">Id</ref> is the <ref refid="classId" kindref="compound">Id</ref> of the new <ref refid="classElement" kindref="compound">Element</ref> <ref refid="classCinfo" kindref="compound">Cinfo</ref> is the class name is its name numData is the number of data entries, defaults to a singleton. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="32" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="14" bodyend="18"/>
+        <references refid="classDataElement_1a3ad941ae390cd501ec9a755d62ce7557" compoundref="DataElement_8cpp" startline="13" endline="22">DataElement::DataElement</references>
+        <references refid="classLocalDataElement_1a7dadce6a3e9c4f2ba2ba214d34d2bb71" compoundref="LocalDataElement_8cpp" startline="101" endline="113">setDataSize</references>
+        <referencedby refid="classShell_1ab970c2c6e17af730804e810b4431107c" compoundref="Shell_8cpp" startline="628" endline="655">Shell::innerCreate</referencedby>
+        <referencedby refid="testBuiltins_8cpp_1a0b23c31b7503dd93064294b42d4ff085" compoundref="testBuiltins_8cpp" startline="61" endline="123">testFibonacci</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1a2eec255cd733568c370344d1f48a361f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LocalDataElement::LocalDataElement</definition>
+        <argsstring>(Id id, const Element *orig, unsigned int n)</argsstring>
+        <name>LocalDataElement</name>
+        <qualifiedname>LocalDataElement::LocalDataElement</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classElement" kindref="compound">Element</ref> *</type>
+          <declname>orig</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor copies over the original n times. It is used for doing all copies, in Shell::innerCopyElements. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="39" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="28" bodyend="33"/>
+        <references refid="classDataElement_1ae615b746f85bd758b0c3731bd67e574c" compoundref="DataElement_8cpp" startline="35" endline="45">DataElement::DataElement</references>
+        <references refid="classShell_1a4c3608b6ca5fcec63a13b12c49b9d530" compoundref="ShellThreads_8cpp" startline="81" endline="84">Shell::myNode</references>
+        <references refid="classShell_1a2191e15a0bcd49569fbb297b0724a765" compoundref="ShellThreads_8cpp" startline="76" endline="79">Shell::numNodes</references>
+        <references refid="classLocalDataElement_1a7dadce6a3e9c4f2ba2ba214d34d2bb71" compoundref="LocalDataElement_8cpp" startline="101" endline="113">setDataSize</references>
+        <referencedby refid="classGlobalDataElement_1ae23788ee2d8ea6789031b13806dda1b2" compoundref="GlobalDataElement_8cpp" startline="38" endline="45">GlobalDataElement::copyElement</referencedby>
+        <referencedby refid="classLocalDataElement_1a5f62924657fa5921010743e1f9a897eb" compoundref="LocalDataElement_8cpp" startline="41" endline="51">copyElement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1ad7348d1c2a47209fe8d53f33e4a6fe4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::localDataStart</definition>
+        <argsstring>() const</argsstring>
+        <name>localDataStart</name>
+        <qualifiedname>LocalDataElement::localDataStart</qualifiedname>
+        <reimplements refid="classElement_1a8d7debb27e67d5fc97697cddc9d69542">localDataStart</reimplements>
+        <briefdescription>
+<para>Inherited virtual. Returns index of first entry on this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="60" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="64" bodyend="68"/>
+        <references refid="classLocalDataElement_1ad26c50e8d60b6cceb38e12d50a612a57" compoundref="LocalDataElement_8h" startline="121">localDataStart_</references>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1aef42a3d8057237c4e52e21a9965bdf98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::numData</definition>
+        <argsstring>() const</argsstring>
+        <name>numData</name>
+        <qualifiedname>LocalDataElement::numData</qualifiedname>
+        <reimplements refid="classElement_1ae764f4baa2a88e55072eb0a5b15718c4">numData</reimplements>
+        <briefdescription>
+<para>Inherited virtual. Returns number of data entries over all nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="57" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="59" bodyend="62"/>
+        <references refid="classLocalDataElement_1a5594abf481cf401a04a0e86af5ad22a2" compoundref="LocalDataElement_8h" startline="109">numData_</references>
+        <referencedby refid="classLocalDataElement_1a4822fc4080404fb4102a1b99896a6695" compoundref="LocalDataElement_8cpp" startline="121" endline="129">getNumOnNode</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1aaab69f831f902cd07d5d145b8b28577c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::rawIndex</definition>
+        <argsstring>(unsigned int dataId) const</argsstring>
+        <name>rawIndex</name>
+        <qualifiedname>LocalDataElement::rawIndex</qualifiedname>
+        <reimplements refid="classElement_1a73a0e468a3d6cfd6475fff4a56459075">rawIndex</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>dataId</declname>
+        </param>
+        <briefdescription>
+<para>Converts dataId to index on current node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="69" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="93" bodyend="95"/>
+        <references refid="classLocalDataElement_1a89a6675f7624139543b4207488c46580" compoundref="LocalDataElement_8h" startline="116">numPerNode_</references>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1ab9550b62224cd9e4c8c916d5af64e2ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LocalDataElement::resize</definition>
+        <argsstring>(unsigned int newNumData)</argsstring>
+        <name>resize</name>
+        <qualifiedname>LocalDataElement::resize</qualifiedname>
+        <reimplements refid="classDataElement_1a8443974b3b89cba50902a7ad4630a0d7">resize</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>newNumData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the <ref refid="classDataElement_1a876c14eecb8408978122a757d053dce1" kindref="member">data()</ref> function is inherited from <ref refid="classDataElement" kindref="compound">DataElement</ref> and used as is. Inherited virtual. Changes the total number of data entries on <ref refid="classElement" kindref="compound">Element</ref> in entire simulation. Not permitted for FieldElements since they are just fields on the data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="94" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="116" bodyend="119"/>
+        <references refid="classDataElement_1a8443974b3b89cba50902a7ad4630a0d7" compoundref="DataElement_8cpp" startline="95" endline="103">DataElement::resize</references>
+        <references refid="classLocalDataElement_1a7dadce6a3e9c4f2ba2ba214d34d2bb71" compoundref="LocalDataElement_8cpp" startline="101" endline="113">setDataSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1a7dadce6a3e9c4f2ba2ba214d34d2bb71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::setDataSize</definition>
+        <argsstring>(unsigned int numData)</argsstring>
+        <name>setDataSize</name>
+        <qualifiedname>LocalDataElement::setDataSize</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>numData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="100" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="101" bodyend="113"/>
+        <references refid="classLocalDataElement_1ad26c50e8d60b6cceb38e12d50a612a57" compoundref="LocalDataElement_8h" startline="121">localDataStart_</references>
+        <references refid="classShell_1a4c3608b6ca5fcec63a13b12c49b9d530" compoundref="ShellThreads_8cpp" startline="81" endline="84">Shell::myNode</references>
+        <references refid="classLocalDataElement_1a5594abf481cf401a04a0e86af5ad22a2" compoundref="LocalDataElement_8h" startline="109">numData_</references>
+        <references refid="classShell_1a2191e15a0bcd49569fbb297b0724a765" compoundref="ShellThreads_8cpp" startline="76" endline="79">Shell::numNodes</references>
+        <references refid="classLocalDataElement_1a89a6675f7624139543b4207488c46580" compoundref="LocalDataElement_8h" startline="116">numPerNode_</references>
+        <referencedby refid="classLocalDataElement_1aca94feb65168d07988f034228d6efb0b" compoundref="LocalDataElement_8cpp" startline="14" endline="18">LocalDataElement</referencedby>
+        <referencedby refid="classLocalDataElement_1a2eec255cd733568c370344d1f48a361f" compoundref="LocalDataElement_8cpp" startline="28" endline="33">LocalDataElement</referencedby>
+        <referencedby refid="classLocalDataElement_1ab9550b62224cd9e4c8c916d5af64e2ec" compoundref="LocalDataElement_8cpp" startline="116" endline="119">resize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1a346c56993ed6cbbac5b399a867c86737" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LocalDataElement::startDataIndex</definition>
+        <argsstring>(unsigned int node) const</argsstring>
+        <name>startDataIndex</name>
+        <qualifiedname>LocalDataElement::startDataIndex</qualifiedname>
+        <reimplements refid="classElement_1a7dcd66878b82eb7b1965dc90a30640b9">startDataIndex</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Inherited virtual. Returns start DataIndex on specified node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inherited virtual. Returns start DataId on specified node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="66" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="85" bodyend="91"/>
+        <references refid="classLocalDataElement_1a5594abf481cf401a04a0e86af5ad22a2" compoundref="LocalDataElement_8h" startline="109">numData_</references>
+        <references refid="classLocalDataElement_1a89a6675f7624139543b4207488c46580" compoundref="LocalDataElement_8h" startline="116">numPerNode_</references>
+      </memberdef>
+      <memberdef kind="function" id="classLocalDataElement_1a9c05f38a017a5c05d2144db934ded669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LocalDataElement::~LocalDataElement</definition>
+        <argsstring>()</argsstring>
+        <name>~LocalDataElement</name>
+        <qualifiedname>LocalDataElement::~LocalDataElement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="44" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.cpp" bodystart="36" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the class for handling the local portion of a data element that is distributed over many nodes. Does block-wise partitioning between nodes. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DataElement</label>
+        <link refid="classDataElement"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Element</label>
+        <link refid="classElement"/>
+      </node>
+      <node id="1">
+        <label>LocalDataElement</label>
+        <link refid="classLocalDataElement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>Cinfo</label>
+        <link refid="classCinfo"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-baseCinfo_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-dinfo_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-doc_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DataElement</label>
+        <link refid="classDataElement"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DinfoBase</label>
+        <link refid="classDinfoBase"/>
+      </node>
+      <node id="3">
+        <label>Element</label>
+        <link refid="classElement"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-id_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-cinfo_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="11">
+        <label>K</label>
+      </node>
+      <node id="1">
+        <label>LocalDataElement</label>
+        <link refid="classLocalDataElement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>T</label>
+      </node>
+      <node id="7">
+        <label>std::map&lt; std::string, std::string &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; std::string, std::string &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="10">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::string</label>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" line="20" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/basecode/LocalDataElement.h" bodystart="21" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classElement_1adc7e3a3053b8874f9041a9aee7a6f857" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>addMsg</name></member>
+      <member refid="classElement_1a2939c6987ceef653ba246c750d55bf57" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>addMsgAndFunc</name></member>
+      <member refid="classElement_1a33610036b72724ca3b7fedaf7e692841" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>cinfo</name></member>
+      <member refid="classElement_1ae7b7d310e10fdbcda08afa74ef742306" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>cinfo_</name></member>
+      <member refid="classElement_1a72ca1a01f6ccce08c8877c21c1dd785b" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>clearAllMsgs</name></member>
+      <member refid="classElement_1ab1300400d72b986952ed4d06e3633557" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>clearBinding</name></member>
+      <member refid="classLocalDataElement_1a5f62924657fa5921010743e1f9a897eb" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>copyElement</name></member>
+      <member refid="classDataElement_1a876c14eecb8408978122a757d053dce1" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>data</name></member>
+      <member refid="classDataElement_1a1950c31ca269ee675f666f6eb88889db" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>data_</name></member>
+      <member refid="classDataElement_1a3ad941ae390cd501ec9a755d62ce7557" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>DataElement</name></member>
+      <member refid="classDataElement_1ae615b746f85bd758b0c3731bd67e574c" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>DataElement</name></member>
+      <member refid="classElement_1a87cf9193138c2667e450b3d5feacffb2" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>destroyElementTree</name></member>
+      <member refid="classElement_1a722a219697e0d390675dff185ae8de28" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>digestMessages</name></member>
+      <member refid="classElement_1a6a3be9af326c31f360600e9c83db2909" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>dropAllMsgsFromSrc</name></member>
+      <member refid="classElement_1a97ef24cbcdd65e62daac54a70a6c14cf" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>dropMsg</name></member>
+      <member refid="classElement_1afb56f1407c9b66cda3248246dfe3d91d" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>Element</name></member>
+      <member refid="classElement_1a0f7aa6c77f30cb8865cdd0a0dde03854" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>findBinding</name></member>
+      <member refid="classElement_1a3c07cf6355e6127827ce67682e3bb2a0" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>findCaller</name></member>
+      <member refid="classElement_1add9bc332e738794dbd3d7d3a1eb9b21e" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getFieldsOfOutgoingMsg</name></member>
+      <member refid="classElement_1ab4b3b46f036eccad622c2e1a67b9d3a7" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getInputMsgs</name></member>
+      <member refid="classElement_1a01e45f128db9727df0042ef067fd300b" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>getInputs</name></member>
+      <member refid="classElement_1accaea70e186111ea963703635a7130c6" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getInputsWithTgtIndex</name></member>
+      <member refid="classElement_1a80f025a43225fb9b30a793a7af6b5e43" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getMsgAndFunc</name></member>
+      <member refid="classElement_1a5faab65438b6244ad7455a5ac8359970" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getMsgSourceAndSender</name></member>
+      <member refid="classElement_1a447e56e4a242420578f7c7503e8dd397" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getMsgTargetAndFunctions</name></member>
+      <member refid="classElement_1a07fec02467adf5af906d0c963b647116" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getMsgTargets</name></member>
+      <member refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getName</name></member>
+      <member refid="classElement_1abec0b4d9c993bd1eb92b24563d9d8534" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getNeighbors</name></member>
+      <member refid="classLocalDataElement_1ab2383d6f81e3b8b99e1bcc79af929af1" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>getNode</name></member>
+      <member refid="classLocalDataElement_1a4822fc4080404fb4102a1b99896a6695" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>getNumOnNode</name></member>
+      <member refid="classElement_1a33dde5b9a02ed1aba6f26d292f0db1bd" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>getOutputs</name></member>
+      <member refid="classElement_1a36586edca71c0070a9a5a8ccc036c333" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>getTick</name></member>
+      <member refid="classDataElement_1a21afa1807388c0626ef2d0fd000c8f0a" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>hasFields</name></member>
+      <member refid="classElement_1aa6bf0ad3ac2f537968453d836de0b7c1" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>hasMsgs</name></member>
+      <member refid="classElement_1a934907c01faf58e21f545d53a54cfefc" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>id</name></member>
+      <member refid="classElement_1a8393e8345bd258e51c1183a5bdec1f73" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>id_</name></member>
+      <member refid="classElement_1a8cec79a5d249aacb30d8317d07f4fef8" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>innerSetTick</name></member>
+      <member refid="classElement_1ad4212c0f8e2457fb59d39cc2181cd483" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>isDoomed</name></member>
+      <member refid="classElement_1a124c7eccf70171ea12f6ce430e9d691d" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>isDoomed_</name></member>
+      <member refid="classLocalDataElement_1a463442177d703b189436b247a1d479b7" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>isGlobal</name></member>
+      <member refid="classElement_1a4a3bea246c008da45b5bcd06745590d2" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>isRewired_</name></member>
+      <member refid="classLocalDataElement_1aca94feb65168d07988f034228d6efb0b" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>LocalDataElement</name></member>
+      <member refid="classLocalDataElement_1a2eec255cd733568c370344d1f48a361f" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>LocalDataElement</name></member>
+      <member refid="classLocalDataElement_1ad7348d1c2a47209fe8d53f33e4a6fe4e" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>localDataStart</name></member>
+      <member refid="classLocalDataElement_1ad26c50e8d60b6cceb38e12d50a612a57" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>localDataStart_</name></member>
+      <member refid="classElement_1a4e0394bd52b504c52215cc3f1cd4e95d" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>m_</name></member>
+      <member refid="classElement_1a8cc2b63209eacd6dbf8bb6746f53a73f" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>markAsDoomed</name></member>
+      <member refid="classElement_1a91ba2615cb1c7a30cca2327d2003f34c" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>markRewired</name></member>
+      <member refid="classElement_1aec8af333353d3a47fa40a140d54de3fe" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>msgBinding_</name></member>
+      <member refid="classElement_1af00354d706575077c20c9865f340f93f" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>msgDigest</name></member>
+      <member refid="classElement_1a68d07ea428b581003a2fadfbfd2de798" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>msgDigest_</name></member>
+      <member refid="classElement_1a2e6f82b4f5c031ec6c59fd0e9bfbdbcf" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>msgIn</name></member>
+      <member refid="classElement_1a2a54efe73fc1a10aaafcf832a58fe390" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>name_</name></member>
+      <member refid="classLocalDataElement_1aef42a3d8057237c4e52e21a9965bdf98" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>numData</name></member>
+      <member refid="classLocalDataElement_1a5594abf481cf401a04a0e86af5ad22a2" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>numData_</name></member>
+      <member refid="classDataElement_1a9b1f0c279a0d968aab9ffb92a9eaaf97" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>numField</name></member>
+      <member refid="classDataElement_1a8db5259611cea40d992d84af1fa14bd4" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>numLocalData</name></member>
+      <member refid="classDataElement_1abcf42c9c6ed5db100779303ec06f97c8" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>numLocalData_</name></member>
+      <member refid="classLocalDataElement_1a89a6675f7624139543b4207488c46580" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>numPerNode_</name></member>
+      <member refid="classElement_1adfcd4feead150b478faf5c72393c23e8" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>printMsgDigest</name></member>
+      <member refid="classElement_1a0782085917c558ec4d56be9566688743" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>putOffNodeTargetsInDigest</name></member>
+      <member refid="classElement_1ae5b80db45c08265b98ff433504fab66b" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>putTargetsInDigest</name></member>
+      <member refid="classLocalDataElement_1aaab69f831f902cd07d5d145b8b28577c" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>rawIndex</name></member>
+      <member refid="classElement_1ad8bd882dd3ced9d59b35335069b2f880" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>replaceCinfo</name></member>
+      <member refid="classLocalDataElement_1ab9550b62224cd9e4c8c916d5af64e2ec" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>resize</name></member>
+      <member refid="classDataElement_1a4d3a28c17cb88a6e8372be7d889181dc" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>resizeField</name></member>
+      <member refid="classLocalDataElement_1a7dadce6a3e9c4f2ba2ba214d34d2bb71" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>setDataSize</name></member>
+      <member refid="classElement_1a6c0df636b2976bfeefc411da7445df19" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>setName</name></member>
+      <member refid="classElement_1a43b35c94ab9c583103ac64138366167f" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>setTick</name></member>
+      <member refid="classElement_1afd25f8e1c4d1a51ecee979f2aa99d8e9" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>showFields</name></member>
+      <member refid="classElement_1af88855f082a9918e9074fb428682249b" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>showMsg</name></member>
+      <member refid="classDataElement_1adfdecf5f35c1f5507f9b311a9f4c3d49" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>size_</name></member>
+      <member refid="classLocalDataElement_1a346c56993ed6cbbac5b399a867c86737" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>startDataIndex</name></member>
+      <member refid="classElement_1ad0001aa23fa803d182d6dc2ee92be286" prot="private" virt="non-virtual"><scope>LocalDataElement</scope><name>tick_</name></member>
+      <member refid="classDataElement_1a420b6caf3da0905e713ddf20485049c9" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>totNumLocalField</name></member>
+      <member refid="classDataElement_1a7c7851377bcf11ce85ec2b6bdd0d3adb" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>zombieSwap</name></member>
+      <member refid="classDataElement_1aab9a69f9f0e5959fe17843c4d537f273" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>~DataElement</name></member>
+      <member refid="classElement_1a13d54ba9c08b6bec651402f1c2bb002c" prot="public" virt="virtual"><scope>LocalDataElement</scope><name>~Element</name></member>
+      <member refid="classLocalDataElement_1a9c05f38a017a5c05d2144db934ded669" prot="public" virt="non-virtual"><scope>LocalDataElement</scope><name>~LocalDataElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

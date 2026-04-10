@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="SteadyStateBoost_8h" kind="file" language="C++">
+    <compoundname>SteadyStateBoost.h</compoundname>
+    <includes local="no">boost/numeric/ublas/matrix.hpp</includes>
+    <includes refid="BoostSys_8h" local="yes">BoostSys.h</includes>
+    <includes refid="RNG_8h" local="yes">../randnum/RNG.h</includes>
+    <includedby refid="SteadyStateBoost_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>BoostSys.h</label>
+        <link refid="BoostSys_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.h</label>
+        <link refid="SteadyStateBoost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../randnum/RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="8">
+        <label>cassert</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>random</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.cpp</label>
+        <link refid="SteadyStateBoost_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.h</label>
+        <link refid="SteadyStateBoost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSteadyState" prot="public">SteadyState</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="SteadyStateBoost_8h_1a7fb4ad3146619103f3e44e300d7e36c7" prot="public" static="no" extern="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * initSteadyStateCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initSteadyStateCinfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.h" line="134" column="20" declfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.h" declline="134" declcolumn="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment,</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>also<sp/>known<sp/>as<sp/>GENESIS<sp/>3<sp/>base<sp/>code.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copyright<sp/>(C)<sp/>2003-2009<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_STEADYSTATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_STEADYSTATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/numeric/ublas/matrix.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BoostSys_8h" kindref="compound">BoostSys.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../randnum/RNG.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classNonlinearSystem" kindref="compound">NonlinearSystem</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classSteadyState" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSteadyState" kindref="compound">SteadyState</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DO_UNIT_TESTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>testSteadyState();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSteadyState_1a4e1bb7053890d92fa03c35c01d5cd054" kindref="member">SteadyState</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSteadyState_1a3d9bf7695e650932512d4cb151960cd5" kindref="member">~SteadyState</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Field<sp/>function<sp/>definitions</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classSteadyState_1acc2b6efb779653e41911fcd184f42f6a" kindref="member">getStoich</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ab7b11efd4dde8f4426faa85d6970b1a3" kindref="member">setStoich</ref>(<sp/><ref refid="classId" kindref="compound">Id</ref><sp/>s<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ac0178d22778a5c1a768516f53070cb16" kindref="member">badStoichiometry</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ad96caac71666c77dd08f1a139b5723b3" kindref="member">isInitialized</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ad953385f42d22d62d2f41381661f4fac" kindref="member">getRank</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a76a9fe6b8aedb74a8495346ee89e16cd" kindref="member">getNumVarPools</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1aa7cae9fa217bc827017da265bda859e7" kindref="member">getNiter</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1aabf6799e416aea564693765e08e8ae69" kindref="member">getMaxIter</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a82e2672a5104b9716451f3fd39374989" kindref="member">setMaxIter</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a6101afd4456be5e9308ac89fff222770" kindref="member">getStatus</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a27cd28b27466a829fa8039c8b23dcd8f" kindref="member">getConvergenceCriterion</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a96d118581bdb7db14b6fae8d1c0dd503" kindref="member">setConvergenceCriterion</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a808c79ab7351fc47de307d1e5f3c8f29" kindref="member">getTotal</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1af0f1637c6c371861cf9e42a521ab5a34" kindref="member">setTotal</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a6010fe6d861608d4c80a9ecc89e73ee5" kindref="member">getEigenvalue</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47" refid="classSteadyState_1a4ac221e7be6878c2927ee63bbc6a78cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a4ac221e7be6878c2927ee63bbc6a78cb" kindref="member">setEigenvalue</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a91591d6c86459d31f9324e2bd6a53dc3" kindref="member">getStateType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a746bab83385d24c3ee1c6c398b25f310" kindref="member">getNnegEigenvalues</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a9c66f65de63842cbe7b573e97b1bdceb" kindref="member">getNposEigenvalues</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a5e05be455fc2f3e78a2ef60b096bdf9b" kindref="member">getSolutionStatus</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Msg<sp/>Dest<sp/>function<sp/>definitions</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a8160576c6957b6d503e66236d93f791f" kindref="member">setupMatrix</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a5e84c6303842ee1df24bc1230eb9b66d" kindref="member">settleFunc</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a44429e390852061e89387a0a7ba00913" kindref="member">resettleFunc</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a71733e40b1de677ad5c63a9e9a8e6692" kindref="member">settle</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>forceSetup<sp/>);</highlight></codeline>
+<codeline lineno="60" refid="classSteadyState_1a929b2d80a3a889c54bef9eb369963c5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a929b2d80a3a889c54bef9eb369963c5a" kindref="member">showMatricesFunc</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1adea87c11928bae7486928e067c258652" kindref="member">showMatrices</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a9bc80713692d5ae8792f676698c92028" kindref="member">randomizeInitialCondition</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a850490a39324ab50eda1f0b8ec57837e" kindref="member">assignY</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>S<sp/>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>static<sp/>void<sp/>randomInitFunc();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>randomInit();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Utility<sp/>functions<sp/>for<sp/>randomInit</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/>int<sp/>isLastConsvMol(<sp/>int<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>recalcRemainingTotal(</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>y,<sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>tot<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a71764b681a6b2e01c153c3576ff29fd7" kindref="member">fitConservationRules</ref>(</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::numeric::ublas::matrix&lt;<sp/>value_type_<sp/>&gt;&amp;<sp/>U</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>value_type_<sp/>&gt;&amp;<sp/>eliminatedTotal</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>vector<sp/>&lt;value_type_&gt;<sp/>&amp;yi</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>funcs<sp/>to<sp/>handle<sp/>externally<sp/>imposed<sp/>changes<sp/>in<sp/>mol<sp/>N</highlight></codeline>
+<codeline lineno="85" refid="classSteadyState_1a08472f42893ae8142cc61febbfc1088f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a08472f42893ae8142cc61febbfc1088f" kindref="member">setMolN</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>static<sp/>void<sp/>assignStoichFunc(<sp/>void*<sp/>stoich<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>assignStoichFuncLocal(<sp/>void*<sp/>stoich<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ae0ecdfb26e869f2e7c40ad46de33f46b" kindref="member">classifyState</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>T<sp/>);</highlight></codeline>
+<codeline lineno="89" refid="classSteadyState_1afe18dbaa6d1df76fafad2370c57f3a31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1afe18dbaa6d1df76fafad2370c57f3a31" kindref="member">EPSILON</ref>;</highlight></codeline>
+<codeline lineno="90" refid="classSteadyState_1a55280e3195d79bcd2e216fbddc28cccb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a55280e3195d79bcd2e216fbddc28cccb" kindref="member">DELTA</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classSteadyState_1a6438c5f8b70d75e64954f185cded7fce" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a101621c5d7a434557886e7ed155644fe" kindref="member">setupSSmatrix</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Internal<sp/>fields.</highlight></codeline>
+<codeline lineno="101" refid="classSteadyState_1ac8b0d77ef23e54d484ad1fc4444a591f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ac8b0d77ef23e54d484ad1fc4444a591f" kindref="member">nIter_</ref>;</highlight></codeline>
+<codeline lineno="102" refid="classSteadyState_1aaf821b812952fad634457360f60eea72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1aaf821b812952fad634457360f60eea72" kindref="member">maxIter_</ref>;</highlight></codeline>
+<codeline lineno="103" refid="classSteadyState_1ab55ac6dad6c7e78fd831f4d6d3fcaa92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ab55ac6dad6c7e78fd831f4d6d3fcaa92" kindref="member">badStoichiometry_</ref>;</highlight></codeline>
+<codeline lineno="104" refid="classSteadyState_1aa9a7da8cb66d9e402cd01538783217a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1aa9a7da8cb66d9e402cd01538783217a4" kindref="member">status_</ref>;</highlight></codeline>
+<codeline lineno="105" refid="classSteadyState_1a28e291c41cc2823f031fa5a0794579a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a28e291c41cc2823f031fa5a0794579a4" kindref="member">isInitialized_</ref>;</highlight></codeline>
+<codeline lineno="106" refid="classSteadyState_1acbaed05ecef423ad06b126cc9ea2bda2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1acbaed05ecef423ad06b126cc9ea2bda2" kindref="member">isSetup_</ref>;</highlight></codeline>
+<codeline lineno="107" refid="classSteadyState_1ab093dbf15a5fe88f67ce40c41534d23e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ab093dbf15a5fe88f67ce40c41534d23e" kindref="member">convergenceCriterion_</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classSteadyState_1a539af0e447727935064ce411fa798785" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::numeric::ublas::matrix&lt;<sp/>value_type_<sp/>&gt;<sp/><ref refid="classSteadyState_1a539af0e447727935064ce411fa798785" kindref="member">LU_</ref>;</highlight></codeline>
+<codeline lineno="110" refid="classSteadyState_1a76af37874bbe4f98ebb34cbb35b7cda9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::numeric::ublas::matrix&lt;<sp/>value_type_<sp/>&gt;<sp/><ref refid="classSteadyState_1a76af37874bbe4f98ebb34cbb35b7cda9" kindref="member">Nr_</ref>;</highlight></codeline>
+<codeline lineno="111" refid="classSteadyState_1a02497f3017168397d05dadc461eea4b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::numeric::ublas::matrix&lt;<sp/>value_type_<sp/>&gt;<sp/><ref refid="classSteadyState_1a02497f3017168397d05dadc461eea4b9" kindref="member">gamma_</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classSteadyState_1a9c8504a3c70e4a8a198f2f04f8a64d47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classId" kindref="compound">Id</ref><sp/><ref refid="classSteadyState_1a9c8504a3c70e4a8a198f2f04f8a64d47" kindref="member">stoich_</ref>;</highlight></codeline>
+<codeline lineno="114" refid="classSteadyState_1aa7440b85b22d6ee4aee8603096efcc86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1aa7440b85b22d6ee4aee8603096efcc86" kindref="member">numVarPools_</ref>;</highlight></codeline>
+<codeline lineno="115" refid="classSteadyState_1ab6d8373e0a441f4976ff6ae51f6e625d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ab6d8373e0a441f4976ff6ae51f6e625d" kindref="member">nReacs_</ref>;</highlight></codeline>
+<codeline lineno="116" refid="classSteadyState_1aecc5ead7c1d2ce0ec5ad4d4382cdaaa9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1aecc5ead7c1d2ce0ec5ad4d4382cdaaa9" kindref="member">rank_</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classSteadyState_1a85666acc4909dfe18ff914c11348be88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classSteadyState_1a85666acc4909dfe18ff914c11348be88" kindref="member">total_</ref>;</highlight></codeline>
+<codeline lineno="119" refid="classSteadyState_1adb17e0fbe7cfaee9a1d44c3a24df26a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1adb17e0fbe7cfaee9a1d44c3a24df26a1" kindref="member">reassignTotal_</ref>;</highlight></codeline>
+<codeline lineno="120" refid="classSteadyState_1a76cbf33682fafd9bd771c45e43636866" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a76cbf33682fafd9bd771c45e43636866" kindref="member">nNegEigenvalues_</ref>;</highlight></codeline>
+<codeline lineno="121" refid="classSteadyState_1a27915081e8232a09ed27ab337591e582" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a27915081e8232a09ed27ab337591e582" kindref="member">nPosEigenvalues_</ref>;</highlight></codeline>
+<codeline lineno="122" refid="classSteadyState_1a9a6469bb4cc37054cb54f07acced6837" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classSteadyState_1a9a6469bb4cc37054cb54f07acced6837" kindref="member">eigenvalues_</ref>;</highlight></codeline>
+<codeline lineno="123" refid="classSteadyState_1aa577f2a1109dfec16e7c742d7a3a36af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1aa577f2a1109dfec16e7c742d7a3a36af" kindref="member">stateType_</ref>;</highlight></codeline>
+<codeline lineno="124" refid="classSteadyState_1a16e02d80f3fdb935f982573f4de21a1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1a16e02d80f3fdb935f982573f4de21a1d" kindref="member">solutionStatus_</ref>;</highlight></codeline>
+<codeline lineno="125" refid="classSteadyState_1ae8e6ff788a867c1bc5281c9b9f8a4b92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSteadyState_1ae8e6ff788a867c1bc5281c9b9f8a4b92" kindref="member">numFailed_</ref>;</highlight></codeline>
+<codeline lineno="126" refid="classSteadyState_1a4643ea499fd63fc00f908dedfa2c655f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classVoxelPools" kindref="compound">VoxelPools</ref><sp/><ref refid="classSteadyState_1a4643ea499fd63fc00f908dedfa2c655f" kindref="member">pool_</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>USE_BOOST_ODE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classNonlinearSystem" kindref="compound">NonlinearSystem</ref>*<sp/>ss;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="SteadyStateBoost_8h_1a7fb4ad3146619103f3e44e300d7e36c7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="SteadyStateBoost_8h_1a7fb4ad3146619103f3e44e300d7e36c7" kindref="member">initSteadyStateCinfo</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_STEADYSTATE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/SteadyStateBoost.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classStochNOrder" kind="class" language="C++" prot="public">
+    <compoundname>StochNOrder</compoundname>
+    <basecompoundref refid="classNOrder" prot="public" virt="non-virtual">NOrder</basecompoundref>
+    <includes refid="RateTerm_8h" local="no">RateTerm.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStochNOrder_1ae89488e586bcfb9306d28278e69406b5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classRateTerm" kindref="compound">RateTerm</ref> *</type>
+        <definition>RateTerm * StochNOrder::copyWithVolScaling</definition>
+        <argsstring>(double vol, double sub, double prd) const</argsstring>
+        <name>copyWithVolScaling</name>
+        <qualifiedname>StochNOrder::copyWithVolScaling</qualifiedname>
+        <reimplements refid="classNOrder_1a15de3563ebd52d34c5bf1335d12d6931">copyWithVolScaling</reimplements>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>prd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duplicates rate term and then applies volume scaling. Arguments are volume of reference voxel, product of vol/refVol for all substrates: applied to R1 product of vol/refVol for all products: applied to R2</para>
+<para>Note that unless the reaction is cross-compartment, the vol/refVol will be one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="572" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="572" bodyend="578"/>
+        <references refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" compoundref="RateTerm_8h" startline="341">ZeroOrder::k_</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classStochNOrder_1af72c72a8a3d6b1da91c89c432b5feb78" compoundref="RateTerm_8cpp" startline="21" endline="28">StochNOrder</references>
+        <references refid="classNOrder_1aa2df3bd3227a6107aecf4c84e94e0889" compoundref="RateTerm_8h" startline="555">NOrder::v_</references>
+      </memberdef>
+      <memberdef kind="function" id="classStochNOrder_1a940712b3135c9a7cb606f9b05e382cdd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double StochNOrder::operator()</definition>
+        <argsstring>(const double *S) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>StochNOrder::operator()</qualifiedname>
+        <reimplements refid="classNOrder_1a4d59b0b6cf668fe80cf3fab4c840c12c">operator()</reimplements>
+        <param>
+          <type>const double *</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Computes the rate. The argument is the molecule array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="570" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.cpp" bodystart="30" bodyend="51"/>
+        <references refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" compoundref="RateTerm_8h" startline="341">ZeroOrder::k_</references>
+        <references refid="classNOrder_1aa2df3bd3227a6107aecf4c84e94e0889" compoundref="RateTerm_8h" startline="555">NOrder::v_</references>
+      </memberdef>
+      <memberdef kind="function" id="classStochNOrder_1af72c72a8a3d6b1da91c89c432b5feb78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StochNOrder::StochNOrder</definition>
+        <argsstring>(double k, vector&lt; unsigned int &gt; v)</argsstring>
+        <name>StochNOrder</name>
+        <qualifiedname>StochNOrder::StochNOrder</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>vector&lt; unsigned int &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="568" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.cpp" bodystart="21" bodyend="28"/>
+        <references refid="classNOrder_1adfee440fb72270cdfc207a4a1f26eda4" compoundref="RateTerm_8h" startline="514" endline="516">NOrder::NOrder</references>
+        <references refid="classNOrder_1aa2df3bd3227a6107aecf4c84e94e0889" compoundref="RateTerm_8h" startline="555">NOrder::v_</references>
+        <referencedby refid="classStoich_1a08295665d027898de0471e13921af9d6" compoundref="Stoich_8cpp" startline="1177" endline="1195">Stoich::convertRatesToStochasticForm</referencedby>
+        <referencedby refid="classStochNOrder_1ae89488e586bcfb9306d28278e69406b5" compoundref="RateTerm_8h" startline="572" endline="578">copyWithVolScaling</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is an unpleasant case, like the <ref refid="classStochSecondOrderSingleSubstrate" kindref="compound">StochSecondOrderSingleSubstrate</ref>. Here we deal with the possibility that one or more of the substrates may be of order greater than one. If so, we need to diminish the N of each substrate by one for each time the substrate is factored into the rate. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>NOrder</label>
+        <link refid="classNOrder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="1">
+        <label>StochNOrder</label>
+        <link refid="classStochNOrder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ZeroOrder</label>
+        <link refid="classZeroOrder"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>NOrder</label>
+        <link refid="classNOrder"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#v_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="1">
+        <label>StochNOrder</label>
+        <link refid="classStochNOrder"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>T</label>
+      </node>
+      <node id="3">
+        <label>ZeroOrder</label>
+        <link refid="classZeroOrder"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="565" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="566" bodyend="579"/>
+    <listofallmembers>
+      <member refid="classStochNOrder_1ae89488e586bcfb9306d28278e69406b5" prot="public" virt="virtual"><scope>StochNOrder</scope><name>copyWithVolScaling</name></member>
+      <member refid="classRateTerm_1a211734fd07c0ef1949907d832d9d03fd" prot="public" virt="non-virtual"><scope>StochNOrder</scope><name>EPSILON</name></member>
+      <member refid="classZeroOrder_1a4f1253a6b404035ac256fc9c873b8074" prot="public" virt="virtual"><scope>StochNOrder</scope><name>getR1</name></member>
+      <member refid="classZeroOrder_1af276750427ae4d85a4fe10ca3285f371" prot="public" virt="virtual"><scope>StochNOrder</scope><name>getR2</name></member>
+      <member refid="classNOrder_1a2035e90249b181f9f774807b324f8b31" prot="public" virt="virtual"><scope>StochNOrder</scope><name>getReactants</name></member>
+      <member refid="classZeroOrder_1a203d659a97645b4e5c4020ea0a331c8b" prot="protected" virt="non-virtual"><scope>StochNOrder</scope><name>k_</name></member>
+      <member refid="classNOrder_1adfee440fb72270cdfc207a4a1f26eda4" prot="public" virt="non-virtual"><scope>StochNOrder</scope><name>NOrder</name></member>
+      <member refid="classStochNOrder_1a940712b3135c9a7cb606f9b05e382cdd" prot="public" virt="virtual"><scope>StochNOrder</scope><name>operator()</name></member>
+      <member refid="classRateTerm_1a3fe9a3f2a9c5701276de7aaf89e4bd06" prot="public" virt="non-virtual"><scope>StochNOrder</scope><name>RateTerm</name></member>
+      <member refid="classNOrder_1abbf59897c9683da697a60e00f760389c" prot="public" virt="virtual"><scope>StochNOrder</scope><name>rescaleVolume</name></member>
+      <member refid="classZeroOrder_1a128619ce58b35a0f4507ec69a3eb30f4" prot="public" virt="non-virtual"><scope>StochNOrder</scope><name>setK</name></member>
+      <member refid="classZeroOrder_1a4c4982b8242f448f63a1377f2b867998" prot="public" virt="virtual"><scope>StochNOrder</scope><name>setR1</name></member>
+      <member refid="classZeroOrder_1a2c84e13c671f27cea28f56957b9eceab" prot="public" virt="virtual"><scope>StochNOrder</scope><name>setR2</name></member>
+      <member refid="classZeroOrder_1af20df8df444598cdd6f23584b278b5f1" prot="public" virt="virtual"><scope>StochNOrder</scope><name>setRates</name></member>
+      <member refid="classStochNOrder_1af72c72a8a3d6b1da91c89c432b5feb78" prot="public" virt="non-virtual"><scope>StochNOrder</scope><name>StochNOrder</name></member>
+      <member refid="classNOrder_1aa2df3bd3227a6107aecf4c84e94e0889" prot="protected" virt="non-virtual"><scope>StochNOrder</scope><name>v_</name></member>
+      <member refid="classZeroOrder_1ad578154a7360bc42bd883465270b8dbf" prot="public" virt="non-virtual"><scope>StochNOrder</scope><name>ZeroOrder</name></member>
+      <member refid="classRateTerm_1a097b1971a7652a8771245f17f28356a1" prot="public" virt="virtual"><scope>StochNOrder</scope><name>~RateTerm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classReadSwc" kind="class" language="C++" prot="public">
+    <compoundname>ReadSwc</compoundname>
+    <includes refid="ReadSwc_8h" local="no">ReadSwc.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classReadSwc_1a7b94bea1ad27318c07af31d7b61c4185" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classSwcBranch" kindref="compound">SwcBranch</ref> &gt;</type>
+        <definition>vector&lt; SwcBranch &gt; ReadSwc::branches_</definition>
+        <argsstring></argsstring>
+        <name>branches_</name>
+        <qualifiedname>ReadSwc::branches_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>branches holds the NeuroMorpho index of the end segment of each branch. Note that NeuroMorph index starts from 1. To traverse the branch, go to the end segment, and traverse through all parents till you get to a fork. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="48" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classReadSwc_1a542eecd2af5b5e8b4587d6a4ca298607" compoundref="ReadSwc_8cpp" startline="382" endline="488">build</referencedby>
+        <referencedby refid="classReadSwc_1a969abd8c654c82fef8f1ff33dc7c6ae8" compoundref="ReadSwc_8cpp" startline="274" endline="310">parseBranches</referencedby>
+        <referencedby refid="classReadSwc_1a17d574342aa712300646c03090de1f44" compoundref="ReadSwc_8cpp" startline="38" endline="74">ReadSwc</referencedby>
+        <referencedby refid="classReadSwc_1a9df878d8ba393b0f20a3aaa5a4bc5447" compoundref="ReadSwc_8cpp" startline="366" endline="380">testIfOnlyBasalsArePresent</referencedby>
+        <referencedby refid="classReadSwc_1a7bdeaa86ecda8aaca402035e968ad375" compoundref="ReadSwc_8cpp" startline="76" endline="106">validate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classSwcSegment" kindref="compound">SwcSegment</ref> &gt;</type>
+        <definition>vector&lt; SwcSegment &gt; ReadSwc::segs_</definition>
+        <argsstring></argsstring>
+        <name>segs_</name>
+        <qualifiedname>ReadSwc::segs_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="40" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classReadSwc_1a90848d2aace9038d02ebbd16e0aeb978" compoundref="ReadSwc_8cpp" startline="108" endline="120">assignKids</referencedby>
+        <referencedby refid="classReadSwc_1a542eecd2af5b5e8b4587d6a4ca298607" compoundref="ReadSwc_8cpp" startline="382" endline="488">build</referencedby>
+        <referencedby refid="classReadSwc_1aa64380d99d62bb20ac4eb1ef6516a960" compoundref="ReadSwc_8cpp" startline="148" endline="248">cleanMultipointSoma</referencedby>
+        <referencedby refid="classReadSwc_1a3ad4713aeaffadd769209d3b89461474" compoundref="ReadSwc_8cpp" startline="122" endline="146">cleanZeroLength</referencedby>
+        <referencedby refid="classReadSwc_1a033eb1ef3f56174a4e02527b06b08616" compoundref="ReadSwc_8cpp" startline="312" endline="324">diagnostics</referencedby>
+        <referencedby refid="classReadSwc_1a969abd8c654c82fef8f1ff33dc7c6ae8" compoundref="ReadSwc_8cpp" startline="274" endline="310">parseBranches</referencedby>
+        <referencedby refid="classReadSwc_1a17d574342aa712300646c03090de1f44" compoundref="ReadSwc_8cpp" startline="38" endline="74">ReadSwc</referencedby>
+        <referencedby refid="classReadSwc_1a9df878d8ba393b0f20a3aaa5a4bc5447" compoundref="ReadSwc_8cpp" startline="366" endline="380">testIfOnlyBasalsArePresent</referencedby>
+        <referencedby refid="classReadSwc_1a7e27d9fe6b7623bc9434d5ab2ffc8e55" compoundref="ReadSwc_8cpp" startline="250" endline="272">traverseBranch</referencedby>
+        <referencedby refid="classReadSwc_1a7bdeaa86ecda8aaca402035e968ad375" compoundref="ReadSwc_8cpp" startline="76" endline="106">validate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadSwc_1a90848d2aace9038d02ebbd16e0aeb978" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadSwc::assignKids</definition>
+        <argsstring>()</argsstring>
+        <name>assignKids</name>
+        <qualifiedname>ReadSwc::assignKids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="27" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="108" bodyend="120"/>
+        <references refid="classSwcSegment_1a527ac0592dc33110466a7dd5e0549fb4" compoundref="SwcSegment_8h" startline="56" endline="58">SwcSegment::addChild</references>
+        <references refid="classSwcSegment_1a8a71ec52aa5a00196ebe2f740f749c04" compoundref="SwcSegment_8cpp" startline="77" endline="86">SwcSegment::figureOutType</references>
+        <references refid="classSwcSegment_1ac0625346df48c8b9952595987f86ce74" compoundref="SwcSegment_8h" startline="52" endline="54">SwcSegment::myIndex</references>
+        <references refid="classSwcSegment_1a6bd611aed4bd9fde19d0cd1f45bc6b66" compoundref="SwcSegment_8h" startline="44" endline="46">SwcSegment::parent</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <referencedby refid="classReadSwc_1a17d574342aa712300646c03090de1f44" compoundref="ReadSwc_8cpp" startline="38" endline="74">ReadSwc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1a542eecd2af5b5e8b4587d6a4ca298607" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ReadSwc::build</definition>
+        <argsstring>(Id parent, double lambda, double RM, double RA, double CM)</argsstring>
+        <name>build</name>
+        <qualifiedname>ReadSwc::build</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RM</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RA</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>CM</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="34" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="382" bodyend="488"/>
+        <references refid="classSwcSegment_1a33e99975b5b9f37499f1378de147e956" compoundref="SwcSegment_8h" startline="124">SwcSegment::AXON</references>
+        <references refid="classSwcSegment_1a6b448428dcc2b1f88012511cbd38f67a" compoundref="SwcSegment_8h" startline="125">SwcSegment::BASAL</references>
+        <references refid="classReadSwc_1a7b94bea1ad27318c07af31d7b61c4185" compoundref="ReadSwc_8h" startline="48">branches_</references>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classShell_1a65a582f672762a22cb5ed642e97cd824" compoundref="Shell_8cpp" startline="254" endline="298">Shell::doAddMsg</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" compoundref="Element_8cpp" startline="56" endline="59">Element::getName</references>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classSwcSegment_1a54b6c46a62de6fc64b9bd2acf2c13d0b" compoundref="SwcSegment_8h" startline="62" endline="65">SwcSegment::kids</references>
+        <references refid="ReadSwc_8cpp_1ad5114e28e3ab2d4190a950dc2ab24530" compoundref="ReadSwc_8cpp" startline="326" endline="364">makeCompt</references>
+        <references refid="classSwcSegment_1ac0625346df48c8b9952595987f86ce74" compoundref="SwcSegment_8h" startline="52" endline="54">SwcSegment::myIndex</references>
+        <references refid="classSwcSegment_1a5dce1d98d7fb0663f520fd059adec345" compoundref="SwcSegment_8h" startline="34" endline="37">SwcSegment::OK</references>
+        <references refid="classId_1a6a4a7d5c9e8524644febc6b6e8dc1ab9" compoundref="Id_8h" startline="133" endline="137">Id::operator!=</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classSwcSegment_1a6bd611aed4bd9fde19d0cd1f45bc6b66" compoundref="SwcSegment_8h" startline="44" endline="46">SwcSegment::parent</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <references refid="classSwcBranch_1a0d3cdd0a3512441cc8603bdaf4b17a5e" compoundref="SwcSegment_8h" startline="196">SwcBranch::segs_</references>
+        <references refid="classSwcSegment_1a26ca74756f60f1de043a58009492028c" compoundref="SwcSegment_8h" startline="123">SwcSegment::SOMA</references>
+        <references refid="classReadSwc_1a9df878d8ba393b0f20a3aaa5a4bc5447" compoundref="ReadSwc_8cpp" startline="366" endline="380">testIfOnlyBasalsArePresent</references>
+        <references refid="classSwcSegment_1ae5cdee84ae23e89f364eb5c8a2b23244" compoundref="SwcSegment_8h" startline="72" endline="74">SwcSegment::type</references>
+        <referencedby refid="classShell_1a506ff431369e3bce87f0e6c767fe475c" compoundref="LoadModels_8cpp" startline="132" endline="190">Shell::doLoadModel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1aa64380d99d62bb20ac4eb1ef6516a960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadSwc::cleanMultipointSoma</definition>
+        <argsstring>()</argsstring>
+        <name>cleanMultipointSoma</name>
+        <qualifiedname>ReadSwc::cleanMultipointSoma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="29" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="148" bodyend="248"/>
+        <references refid="classVec_1a226019f1225faafaec3dc235724a418d" compoundref="Vec_8h" startline="34" endline="36">Vec::a0</references>
+        <references refid="classVec_1a702d1ea183ea05e153f22e4631b57e3f" compoundref="Vec_8h" startline="37" endline="39">Vec::a1</references>
+        <references refid="classVec_1a445c0d24660fdd56d4dc4179518c4d80" compoundref="Vec_8h" startline="40" endline="42">Vec::a2</references>
+        <references refid="classSwcSegment_1a54b6c46a62de6fc64b9bd2acf2c13d0b" compoundref="SwcSegment_8h" startline="62" endline="65">SwcSegment::kids</references>
+        <references refid="classSwcSegment_1ac0625346df48c8b9952595987f86ce74" compoundref="SwcSegment_8h" startline="52" endline="54">SwcSegment::myIndex</references>
+        <references refid="classSwcSegment_1a6bd611aed4bd9fde19d0cd1f45bc6b66" compoundref="SwcSegment_8h" startline="44" endline="46">SwcSegment::parent</references>
+        <references refid="classSwcSegment_1aa7bd026436357a6bb220c446b893383c" compoundref="SwcSegment_8h" startline="76" endline="78">SwcSegment::radius</references>
+        <references refid="classSwcSegment_1a3d6d729aa0bec716cee05a921ed0fe69" compoundref="SwcSegment_8h" startline="67" endline="70">SwcSegment::replaceKids</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <references refid="classSwcSegment_1ab7dcc01b9fbc2983db690624dcc07fe3" compoundref="SwcSegment_8h" startline="39" endline="41">SwcSegment::setBad</references>
+        <references refid="classSwcSegment_1a1ebc959ccd96f2c44002d6c8ae92ea05" compoundref="SwcSegment_8h" startline="48" endline="50">SwcSegment::setParent</references>
+        <references refid="classSwcSegment_1a26ca74756f60f1de043a58009492028c" compoundref="SwcSegment_8h" startline="123">SwcSegment::SOMA</references>
+        <references refid="classSwcSegment_1ae5cdee84ae23e89f364eb5c8a2b23244" compoundref="SwcSegment_8h" startline="72" endline="74">SwcSegment::type</references>
+        <references refid="classSwcSegment_1a8fd6b3e36a70d597fe20f93fbed60082" compoundref="SwcSegment_8h" startline="91" endline="93">SwcSegment::vec</references>
+        <referencedby refid="classReadSwc_1a17d574342aa712300646c03090de1f44" compoundref="ReadSwc_8cpp" startline="38" endline="74">ReadSwc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1a3ad4713aeaffadd769209d3b89461474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadSwc::cleanZeroLength</definition>
+        <argsstring>()</argsstring>
+        <name>cleanZeroLength</name>
+        <qualifiedname>ReadSwc::cleanZeroLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="28" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="122" bodyend="146"/>
+        <references refid="classSwcSegment_1ac122024c107655032f13e8a49e057b38" compoundref="SwcSegment_8h" startline="87" endline="89">SwcSegment::distance</references>
+        <references refid="classSwcSegment_1a54b6c46a62de6fc64b9bd2acf2c13d0b" compoundref="SwcSegment_8h" startline="62" endline="65">SwcSegment::kids</references>
+        <references refid="classSwcSegment_1ac0625346df48c8b9952595987f86ce74" compoundref="SwcSegment_8h" startline="52" endline="54">SwcSegment::myIndex</references>
+        <references refid="classSwcSegment_1a6bd611aed4bd9fde19d0cd1f45bc6b66" compoundref="SwcSegment_8h" startline="44" endline="46">SwcSegment::parent</references>
+        <references refid="classSwcSegment_1a3d6d729aa0bec716cee05a921ed0fe69" compoundref="SwcSegment_8h" startline="67" endline="70">SwcSegment::replaceKids</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <references refid="classSwcSegment_1ab7dcc01b9fbc2983db690624dcc07fe3" compoundref="SwcSegment_8h" startline="39" endline="41">SwcSegment::setBad</references>
+        <references refid="classSwcSegment_1a1ebc959ccd96f2c44002d6c8ae92ea05" compoundref="SwcSegment_8h" startline="48" endline="50">SwcSegment::setParent</references>
+        <referencedby refid="classReadSwc_1a17d574342aa712300646c03090de1f44" compoundref="ReadSwc_8cpp" startline="38" endline="74">ReadSwc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1a033eb1ef3f56174a4e02527b06b08616" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadSwc::diagnostics</definition>
+        <argsstring>() const</argsstring>
+        <name>diagnostics</name>
+        <qualifiedname>ReadSwc::diagnostics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="36" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="312" bodyend="324"/>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <references refid="classSwcSegment_1ae5cdee84ae23e89f364eb5c8a2b23244" compoundref="SwcSegment_8h" startline="72" endline="74">SwcSegment::type</references>
+        <referencedby refid="classReadSwc_1a17d574342aa712300646c03090de1f44" compoundref="ReadSwc_8cpp" startline="38" endline="74">ReadSwc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1a969abd8c654c82fef8f1ff33dc7c6ae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadSwc::parseBranches</definition>
+        <argsstring>()</argsstring>
+        <name>parseBranches</name>
+        <qualifiedname>ReadSwc::parseBranches</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="30" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="274" bodyend="310"/>
+        <references refid="classReadSwc_1a7b94bea1ad27318c07af31d7b61c4185" compoundref="ReadSwc_8h" startline="48">branches_</references>
+        <references refid="classSwcSegment_1a54b6c46a62de6fc64b9bd2acf2c13d0b" compoundref="SwcSegment_8h" startline="62" endline="65">SwcSegment::kids</references>
+        <references refid="classSwcSegment_1a5dce1d98d7fb0663f520fd059adec345" compoundref="SwcSegment_8h" startline="34" endline="37">SwcSegment::OK</references>
+        <references refid="classSwcSegment_1a6bd611aed4bd9fde19d0cd1f45bc6b66" compoundref="SwcSegment_8h" startline="44" endline="46">SwcSegment::parent</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <references refid="classSwcBranch_1a0d3cdd0a3512441cc8603bdaf4b17a5e" compoundref="SwcSegment_8h" startline="196">SwcBranch::segs_</references>
+        <references refid="classSwcSegment_1a1ebc959ccd96f2c44002d6c8ae92ea05" compoundref="SwcSegment_8h" startline="48" endline="50">SwcSegment::setParent</references>
+        <references refid="classSwcBranch_1a8e824cf962cce721512c4f6de0ff052c" compoundref="SwcSegment_8cpp" startline="90" endline="107">SwcBranch::SwcBranch</references>
+        <references refid="classReadSwc_1a7e27d9fe6b7623bc9434d5ab2ffc8e55" compoundref="ReadSwc_8cpp" startline="250" endline="272">traverseBranch</references>
+        <referencedby refid="classReadSwc_1a17d574342aa712300646c03090de1f44" compoundref="ReadSwc_8cpp" startline="38" endline="74">ReadSwc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1a17d574342aa712300646c03090de1f44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ReadSwc::ReadSwc</definition>
+        <argsstring>(const string &amp;fname)</argsstring>
+        <name>ReadSwc</name>
+        <qualifiedname>ReadSwc::ReadSwc</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>fname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Each line is of the form n T x y z R P </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="25" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="38" bodyend="74"/>
+        <references refid="classReadSwc_1a90848d2aace9038d02ebbd16e0aeb978" compoundref="ReadSwc_8cpp" startline="108" endline="120">assignKids</references>
+        <references refid="classReadSwc_1a7b94bea1ad27318c07af31d7b61c4185" compoundref="ReadSwc_8h" startline="48">branches_</references>
+        <references refid="classReadSwc_1aa64380d99d62bb20ac4eb1ef6516a960" compoundref="ReadSwc_8cpp" startline="148" endline="248">cleanMultipointSoma</references>
+        <references refid="classReadSwc_1a3ad4713aeaffadd769209d3b89461474" compoundref="ReadSwc_8cpp" startline="122" endline="146">cleanZeroLength</references>
+        <references refid="classReadSwc_1a033eb1ef3f56174a4e02527b06b08616" compoundref="ReadSwc_8cpp" startline="312" endline="324">diagnostics</references>
+        <references refid="ReadSwc_8cpp_1aa25b3013efbb0cd363c0a65140cd534f" compoundref="ReadSwc_8cpp" startline="25" endline="36">isWhitespaceOnly</references>
+        <references refid="classSwcSegment_1a5dce1d98d7fb0663f520fd059adec345" compoundref="SwcSegment_8h" startline="34" endline="37">SwcSegment::OK</references>
+        <references refid="classReadSwc_1a969abd8c654c82fef8f1ff33dc7c6ae8" compoundref="ReadSwc_8cpp" startline="274" endline="310">parseBranches</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <references refid="classSwcSegment_1a65f08e888425db9020491931b27d6224" compoundref="SwcSegment_8cpp" startline="29" endline="56">SwcSegment::SwcSegment</references>
+        <references refid="classReadSwc_1a7bdeaa86ecda8aaca402035e968ad375" compoundref="ReadSwc_8cpp" startline="76" endline="106">validate</references>
+        <referencedby refid="classShell_1a506ff431369e3bce87f0e6c767fe475c" compoundref="LoadModels_8cpp" startline="132" endline="190">Shell::doLoadModel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1a9df878d8ba393b0f20a3aaa5a4bc5447" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ReadSwc::testIfOnlyBasalsArePresent</definition>
+        <argsstring>() const</argsstring>
+        <name>testIfOnlyBasalsArePresent</name>
+        <qualifiedname>ReadSwc::testIfOnlyBasalsArePresent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Some SWCs label all non-soma segments as basals.</para>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="37" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="366" bodyend="380"/>
+        <references refid="classSwcSegment_1a6b448428dcc2b1f88012511cbd38f67a" compoundref="SwcSegment_8h" startline="125">SwcSegment::BASAL</references>
+        <references refid="classReadSwc_1a7b94bea1ad27318c07af31d7b61c4185" compoundref="ReadSwc_8h" startline="48">branches_</references>
+        <references refid="classSwcSegment_1acada7789b1b73cf4e87a7c7fe6c93908" compoundref="SwcSegment_8h" startline="126">SwcSegment::DEND</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <references refid="classSwcBranch_1a0d3cdd0a3512441cc8603bdaf4b17a5e" compoundref="SwcSegment_8h" startline="196">SwcBranch::segs_</references>
+        <references refid="classSwcSegment_1ae5cdee84ae23e89f364eb5c8a2b23244" compoundref="SwcSegment_8h" startline="72" endline="74">SwcSegment::type</references>
+        <referencedby refid="classReadSwc_1a542eecd2af5b5e8b4587d6a4ca298607" compoundref="ReadSwc_8cpp" startline="382" endline="488">build</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1a7e27d9fe6b7623bc9434d5ab2ffc8e55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReadSwc::traverseBranch</definition>
+        <argsstring>(const SwcSegment &amp;s, double &amp;len, double &amp;L, vector&lt; int &gt; &amp;cable) const</argsstring>
+        <name>traverseBranch</name>
+        <qualifiedname>ReadSwc::traverseBranch</qualifiedname>
+        <param>
+          <type>const <ref refid="classSwcSegment" kindref="compound">SwcSegment</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>vector&lt; int &gt; &amp;</type>
+          <declname>cable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="31" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="250" bodyend="272"/>
+        <references refid="classSwcSegment_1ac122024c107655032f13e8a49e057b38" compoundref="SwcSegment_8h" startline="87" endline="89">SwcSegment::distance</references>
+        <references refid="classSwcSegment_1a54b6c46a62de6fc64b9bd2acf2c13d0b" compoundref="SwcSegment_8h" startline="62" endline="65">SwcSegment::kids</references>
+        <references refid="classSwcSegment_1a1a6848eb5c1bc019a5595da2a3b2004d" compoundref="SwcSegment_8h" startline="83" endline="85">SwcSegment::L</references>
+        <references refid="classSwcSegment_1ac0625346df48c8b9952595987f86ce74" compoundref="SwcSegment_8h" startline="52" endline="54">SwcSegment::myIndex</references>
+        <references refid="classSwcSegment_1a6bd611aed4bd9fde19d0cd1f45bc6b66" compoundref="SwcSegment_8h" startline="44" endline="46">SwcSegment::parent</references>
+        <references refid="classSwcSegment_1aa7bd026436357a6bb220c446b893383c" compoundref="SwcSegment_8h" startline="76" endline="78">SwcSegment::radius</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <referencedby refid="classReadSwc_1a969abd8c654c82fef8f1ff33dc7c6ae8" compoundref="ReadSwc_8cpp" startline="274" endline="310">parseBranches</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classReadSwc_1a7bdeaa86ecda8aaca402035e968ad375" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ReadSwc::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <qualifiedname>ReadSwc::validate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="26" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.cpp" bodystart="76" bodyend="106"/>
+        <references refid="classReadSwc_1a7b94bea1ad27318c07af31d7b61c4185" compoundref="ReadSwc_8h" startline="48">branches_</references>
+        <references refid="ReadSwc_8cpp_1aaa3fc9a2551ca055608bee442579b3fa" compoundref="ReadSwc_8cpp" startline="23">MinRadius</references>
+        <references refid="classSwcSegment_1ac0625346df48c8b9952595987f86ce74" compoundref="SwcSegment_8h" startline="52" endline="54">SwcSegment::myIndex</references>
+        <references refid="classSwcSegment_1a6bd611aed4bd9fde19d0cd1f45bc6b66" compoundref="SwcSegment_8h" startline="44" endline="46">SwcSegment::parent</references>
+        <references refid="classSwcSegment_1aa7bd026436357a6bb220c446b893383c" compoundref="SwcSegment_8h" startline="76" endline="78">SwcSegment::radius</references>
+        <references refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" compoundref="ReadSwc_8h" startline="40">segs_</references>
+        <referencedby refid="classReadSwc_1a17d574342aa712300646c03090de1f44" compoundref="ReadSwc_8cpp" startline="38" endline="74">ReadSwc</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is used to read in SWC files as found in NeuroMorph.org and other places. Note that these are only passive models at this stage. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ReadSwc</label>
+        <link refid="classReadSwc"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" line="18" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/ReadSwc.h" bodystart="19" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classReadSwc_1a90848d2aace9038d02ebbd16e0aeb978" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>assignKids</name></member>
+      <member refid="classReadSwc_1a7b94bea1ad27318c07af31d7b61c4185" prot="private" virt="non-virtual"><scope>ReadSwc</scope><name>branches_</name></member>
+      <member refid="classReadSwc_1a542eecd2af5b5e8b4587d6a4ca298607" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>build</name></member>
+      <member refid="classReadSwc_1aa64380d99d62bb20ac4eb1ef6516a960" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>cleanMultipointSoma</name></member>
+      <member refid="classReadSwc_1a3ad4713aeaffadd769209d3b89461474" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>cleanZeroLength</name></member>
+      <member refid="classReadSwc_1a033eb1ef3f56174a4e02527b06b08616" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>diagnostics</name></member>
+      <member refid="classReadSwc_1a969abd8c654c82fef8f1ff33dc7c6ae8" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>parseBranches</name></member>
+      <member refid="classReadSwc_1a17d574342aa712300646c03090de1f44" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>ReadSwc</name></member>
+      <member refid="classReadSwc_1a566d56a778dbb12f7409f00daadb647a" prot="private" virt="non-virtual"><scope>ReadSwc</scope><name>segs_</name></member>
+      <member refid="classReadSwc_1a9df878d8ba393b0f20a3aaa5a4bc5447" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>testIfOnlyBasalsArePresent</name></member>
+      <member refid="classReadSwc_1a7e27d9fe6b7623bc9434d5ab2ffc8e55" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>traverseBranch</name></member>
+      <member refid="classReadSwc_1a7bdeaa86ecda8aaca402035e968ad375" prot="public" virt="non-virtual"><scope>ReadSwc</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

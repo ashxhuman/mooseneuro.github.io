@@ -1,0 +1,1025 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="pymoose_8cpp" kind="file" language="C++">
+    <compoundname>pymoose.cpp</compoundname>
+    <includes local="no">Python.h</includes>
+    <includes local="no">nanobind/nanobind.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">csignal</includes>
+    <includes refid="global_8h" local="yes">../basecode/global.h</includes>
+    <includes refid="header_8h" local="yes">../basecode/header.h</includes>
+    <includes refid="randnum_8h" local="yes">../randnum/randnum.h</includes>
+    <includes refid="Shell_8h" local="yes">../shell/Shell.h</includes>
+    <includes refid="Wildcard_8h" local="yes">../shell/Wildcard.h</includes>
+    <includes refid="MooseVec_8h" local="yes">MooseVec.h</includes>
+    <includes refid="pymoose_2Finfo_8h" local="yes">Finfo.h</includes>
+    <includes refid="pymoose_8h" local="yes">pymoose.h</includes>
+    <includes refid="docs_8h" local="yes">docs.h</includes>
+    <incdepgraph>
+      <node id="79">
+        <label>../external/fmt/include/fmt/core.h</label>
+      </node>
+      <node id="26">
+        <label>Cinfo.h</label>
+        <link refid="Cinfo_8h"/>
+      </node>
+      <node id="39">
+        <label>Conv.h</label>
+        <link refid="Conv_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>DataElement.h</label>
+        <link refid="DataElement_8h"/>
+      </node>
+      <node id="28">
+        <label>DestFinfo.h</label>
+        <link refid="DestFinfo_8h"/>
+      </node>
+      <node id="32">
+        <label>Dinfo.h</label>
+        <link refid="Dinfo_8h"/>
+      </node>
+      <node id="34">
+        <label>Element.h</label>
+        <link refid="Element_8h"/>
+      </node>
+      <node id="45">
+        <label>EpFunc.h</label>
+        <link refid="EpFunc_8h"/>
+      </node>
+      <node id="38">
+        <label>Eref.h</label>
+        <link refid="Eref_8h"/>
+      </node>
+      <node id="51">
+        <label>FieldElement.h</label>
+        <link refid="FieldElement_8h"/>
+      </node>
+      <node id="50">
+        <label>FieldElementFinfo.h</label>
+        <link refid="FieldElementFinfo_8h"/>
+      </node>
+      <node id="27">
+        <label>Finfo.h</label>
+        <link refid="basecode_2Finfo_8h"/>
+      </node>
+      <node id="36">
+        <label>GlobalDataElement.h</label>
+        <link refid="GlobalDataElement_8h"/>
+      </node>
+      <node id="42">
+        <label>HopFunc.h</label>
+        <link refid="HopFunc_8h"/>
+      </node>
+      <node id="24">
+        <label>Id.h</label>
+        <link refid="Id_8h"/>
+      </node>
+      <node id="37">
+        <label>LocalDataElement.h</label>
+        <link refid="LocalDataElement_8h"/>
+      </node>
+      <node id="48">
+        <label>LookupValueFinfo.h</label>
+        <link refid="LookupValueFinfo_8h"/>
+      </node>
+      <node id="33">
+        <label>MsgDigest.h</label>
+        <link refid="MsgDigest_8h"/>
+      </node>
+      <node id="30">
+        <label>MsgFuncBinding.h</label>
+        <link refid="MsgFuncBinding_8h"/>
+      </node>
+      <node id="25">
+        <label>ObjId.h</label>
+        <link refid="ObjId_8h"/>
+      </node>
+      <node id="44">
+        <label>OpFunc.h</label>
+        <link refid="OpFunc_8h"/>
+      </node>
+      <node id="41">
+        <label>OpFuncBase.h</label>
+        <link refid="OpFuncBase_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ProcInfo.h</label>
+        <link refid="ProcInfo_8h"/>
+      </node>
+      <node id="46">
+        <label>ProcOpFunc.h</label>
+        <link refid="ProcOpFunc_8h"/>
+      </node>
+      <node id="43">
+        <label>SetGet.h</label>
+        <link refid="SetGet_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>SharedFinfo.h</label>
+        <link refid="SharedFinfo_8h"/>
+      </node>
+      <node id="74">
+        <label>../basecode/SparseMatrix.h</label>
+        <link refid="SparseMatrix_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>SrcFinfo.h</label>
+        <link refid="SrcFinfo_8h"/>
+      </node>
+      <node id="47">
+        <label>ValueFinfo.h</label>
+        <link refid="ValueFinfo_8h"/>
+      </node>
+      <node id="23">
+        <label>doubleEq.h</label>
+        <link refid="doubleEq_8h"/>
+      </node>
+      <node id="6">
+        <label>../basecode/global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../basecode/header.h</label>
+        <link refid="header_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>../builtins/Variable.h</label>
+        <link refid="Variable_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>../mpi/PostMaster.h</label>
+        <link refid="PostMaster_8h"/>
+      </node>
+      <node id="75">
+        <label>../msg/DiagonalMsg.h</label>
+        <link refid="DiagonalMsg_8h"/>
+      </node>
+      <node id="31">
+        <label>../msg/Msg.h</label>
+        <link refid="Msg_8h"/>
+      </node>
+      <node id="71">
+        <label>../msg/OneToAllMsg.h</label>
+        <link refid="OneToAllMsg_8h"/>
+      </node>
+      <node id="70">
+        <label>../msg/OneToOneMsg.h</label>
+        <link refid="OneToOneMsg_8h"/>
+      </node>
+      <node id="72">
+        <label>../msg/SingleMsg.h</label>
+        <link refid="SingleMsg_8h"/>
+      </node>
+      <node id="73">
+        <label>../msg/SparseMsg.h</label>
+        <link refid="SparseMsg_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>Finfo.h</label>
+        <link refid="pymoose_2Finfo_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>MooseVec.h</label>
+        <link refid="MooseVec_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>docs.h</label>
+        <link refid="docs_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/pymoose.cpp</label>
+        <link refid="pymoose_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>pymoose.h</label>
+        <link refid="pymoose_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>Definitions.h</label>
+        <link refid="Definitions_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>Distributions.h</label>
+        <link refid="Distributions_8h"/>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>NormalDistribution.hpp</label>
+        <link refid="NormalDistribution_8hpp"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>RNG.h</label>
+        <link refid="RNG_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>../randnum/randnum.h</label>
+        <link refid="randnum_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>../scheduling/Clock.h</label>
+        <link refid="Clock_8h"/>
+      </node>
+      <node id="52">
+        <label>../shell/Neutral.h</label>
+        <link refid="Neutral_8h"/>
+      </node>
+      <node id="60">
+        <label>../shell/Shell.h</label>
+        <link refid="Shell_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>../shell/Wildcard.h</label>
+        <link refid="Wildcard_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../utility/print_function.hpp</label>
+        <link refid="print__function_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>../utility/strutil.h</label>
+        <link refid="strutil_8h"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Python.h</label>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="22">
+        <label>cassert</label>
+      </node>
+      <node id="5">
+        <label>csignal</label>
+      </node>
+      <node id="17">
+        <label>cstring</label>
+      </node>
+      <node id="7">
+        <label>ctime</label>
+      </node>
+      <node id="13">
+        <label>fstream</label>
+      </node>
+      <node id="15">
+        <label>iomanip</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="56">
+        <label>limits</label>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="19">
+        <label>math.h</label>
+      </node>
+      <node id="3">
+        <label>nanobind/nanobind.h</label>
+      </node>
+      <node id="67">
+        <label>nanobind/ndarray.h</label>
+      </node>
+      <node id="66">
+        <label>nanobind/stl/map.h</label>
+      </node>
+      <node id="64">
+        <label>nanobind/stl/string.h</label>
+      </node>
+      <node id="65">
+        <label>nanobind/stl/vector.h</label>
+      </node>
+      <node id="54">
+        <label>random</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="21">
+        <label>typeinfo</label>
+      </node>
+      <node id="20">
+        <label>unordered_map</label>
+      </node>
+      <node id="10">
+        <label>valarray</label>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacenb_1_1literals">nb::literals</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="pymoose_8cpp_1a8650e41c2375717fa66fb61a653d866e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NB_MODULE</definition>
+        <argsstring>(_moose, m)</argsstring>
+        <name>NB_MODULE</name>
+        <param>
+          <type>_moose</type>
+        </param>
+        <param>
+          <type>m</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/pymoose.cpp" line="33" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/pymoose.cpp" bodystart="33" bodyend="435"/>
+        <references refid="namespacepymoose_1ac084ce08f68367317e7c014c61520ac9" compoundref="helper_8cpp" startline="39" endline="77">pymoose::initShell</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>pymoose.cpp<sp/>---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Filename:<sp/>pymoose.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Subhasis<sp/>Ray</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/>Fri<sp/>Dec<sp/>26<sp/>14:45:14<sp/>2025<sp/>(+0530)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Code:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Python.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nanobind/nanobind.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;csignal&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/global.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/header.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../randnum/randnum.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../shell/Shell.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../shell/Wildcard.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MooseVec_8h" kindref="compound">MooseVec.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pymoose_2Finfo_8h" kindref="compound">Finfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pymoose_8h" kindref="compound">pymoose.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="docs_8h" kindref="compound">docs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">nb::literals;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classpymoose_1_1MooseVec" kindref="compound">pymoose::MooseVec</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpymoose_1_1MooseVecIterator" kindref="compound">pymoose::MooseVecIterator</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepymoose_1_1docs" kindref="compound">docs</ref><sp/>=<sp/><ref refid="namespacepymoose_1_1docs" kindref="compound">pymoose::docs</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="pymoose_8cpp_1a8650e41c2375717fa66fb61a653d866e" refkind="member"><highlight class="normal"><ref refid="pymoose_8cpp_1a8650e41c2375717fa66fb61a653d866e" kindref="member">NB_MODULE</ref>(_moose,<sp/>m)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>m.doc()<sp/>=</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R</highlight><highlight class="stringliteral">&quot;mdoc(MOOSE:<sp/>The<sp/>Multiscale<sp/>Object-Oriented<sp/>Simulation<sp/>Environment</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral">Designed<sp/>to<sp/>simulate<sp/>neural<sp/>systems<sp/>at<sp/>multiple<sp/>scales:<sp/>From<sp/>subcellular<sp/>components<sp/>and<sp/>biochemical<sp/>reactions<sp/>to<sp/>complex<sp/>models<sp/>of<sp/>individual<sp/>neurons,<sp/>neural<sp/>circuits,<sp/>and<sp/>large-scale<sp/>neuronal<sp/>networks.</highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral">)mdoc&quot;;</highlight></codeline>
+<codeline lineno="40"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Must<sp/>initialize<sp/>shell<sp/>before<sp/>all<sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1ac084ce08f68367317e7c014c61520ac9" kindref="member">pymoose::initShell</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Message<sp/>directions<sp/>-<sp/>to<sp/>allow<sp/>both<sp/>numeric<sp/>and<sp/>enum<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::enum_&lt;pymoose::MsgDirection&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;MsgDirection&quot;</highlight><highlight class="normal">,<sp/>nb::is_arithmetic())</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.value(</highlight><highlight class="stringliteral">&quot;Out&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a7c147cda9e49590f6abe83d118b7353b" kindref="member">pymoose::MsgDirection::Out</ref>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.value(</highlight><highlight class="stringliteral">&quot;In&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641aefeb369cccbd560588a756610865664c" kindref="member">pymoose::MsgDirection::In</ref>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.value(</highlight><highlight class="stringliteral">&quot;Both&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a130c5b3473c57faa76e2a1c54e26f88e" kindref="member">pymoose::MsgDirection::Both</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;pymoose::LookupField&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;LookupField&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getitem__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1LookupField_1a499d3e3302bd18c0310d9a06c95a0a32" kindref="member">pymoose::LookupField::get</ref>)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__setitem__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1LookupField_1a0736d284590227d4956fd7193015a335" kindref="member">pymoose::LookupField::set</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__call__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1LookupField_1a499d3e3302bd18c0310d9a06c95a0a32" kindref="member">pymoose::LookupField::get</ref>)<sp/><sp/></highlight><highlight class="comment">//<sp/>also<sp/>callable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__repr__&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="structpymoose_1_1LookupField" kindref="compound">pymoose::LookupField</ref><sp/>&amp;f)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&lt;moose.LookupField<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1af55d9af1aa8f9885e92df9c8d2498edf" kindref="member">finfo_</ref>-&gt;<ref refid="classFinfo_1a61d1ed4e356444e2c94611a419b3440a" kindref="member">name</ref>()<sp/>+</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>owner=<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1ae3eda6377d376c5e286f0b17ea46602d" kindref="member">oid_</ref>.<ref refid="classObjId_1a4d6f6e6b6f3c279334cf9f10a277df49" kindref="member">path</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;keyType=&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1ad7078e22bf0d0532dad7627f04e9d049" kindref="member">keyType_</ref><sp/>+</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>valueType=&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1ad3fce8468b43eb23e913efd3cb5d0843" kindref="member">valueType_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;pymoose::ElementFieldIterator&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;ElementFieldIterator&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__iter__&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](<ref refid="structpymoose_1_1ElementFieldIterator" kindref="compound">pymoose::ElementFieldIterator</ref><sp/>&amp;self)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self;<sp/>})</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__next__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1ElementFieldIterator_1a3407e36f162f72a462d04e90766484f7" kindref="member">pymoose::ElementFieldIterator::next</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;pymoose::ElementField&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;ElementField&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__len__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1ElementField_1ad66d575f929317227114dc1fe246bae0" kindref="member">pymoose::ElementField::size</ref>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getitem__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1ElementField_1a069146e928f385564a7e82f8d6a74ffa" kindref="member">pymoose::ElementField::getItem</ref>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__iter__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1ElementField_1a5f9bc8a72eccafc9420bf625c9e0657d" kindref="member">pymoose::ElementField::iter</ref>)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpymoose_1_1ElementField" kindref="compound">pymoose::ElementField</ref><sp/>&amp;f)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>f.foid_.path();<sp/>})</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__repr__&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](<ref refid="structpymoose_1_1ElementField" kindref="compound">pymoose::ElementField</ref><sp/>&amp;f)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&lt;moose.ElementField<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1af55d9af1aa8f9885e92df9c8d2498edf" kindref="member">finfo_</ref>-&gt;<ref refid="classFinfo_1a61d1ed4e356444e2c94611a419b3440a" kindref="member">name</ref>()<sp/>+</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>owner=&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1ae3eda6377d376c5e286f0b17ea46602d" kindref="member">oid_</ref>.<ref refid="classObjId_1a4d6f6e6b6f3c279334cf9f10a277df49" kindref="member">path</ref>()<sp/>+</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>size=&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(f.size())<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_rw(</highlight><highlight class="stringliteral">&quot;num&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1ElementField_1a8b2ae354098487951cc1619a4143103a" kindref="member">pymoose::ElementField::getNum</ref>,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structpymoose_1_1ElementField_1ace8618182ba374ba58d2995d60d01129" kindref="member">pymoose::ElementField::setNum</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1aa20d76e4c0c1e18d4149d8bac8da1c5d" kindref="member">docs::ElementField_num</ref>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_rw(</highlight><highlight class="stringliteral">&quot;numField&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1ElementField_1a8b2ae354098487951cc1619a4143103a" kindref="member">pymoose::ElementField::getNum</ref>,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structpymoose_1_1ElementField_1ace8618182ba374ba58d2995d60d01129" kindref="member">pymoose::ElementField::setNum</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1aa20d76e4c0c1e18d4149d8bac8da1c5d" kindref="member">docs::ElementField_num</ref>)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpymoose_1_1ElementField" kindref="compound">pymoose::ElementField</ref><sp/>&amp;f)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>f.foid_.id;<sp/>},</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1acb08d4ac1fd4b4398823bd3a17636025" kindref="member">docs::ElementField_id</ref>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;oid&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpymoose_1_1ElementField" kindref="compound">pymoose::ElementField</ref><sp/>&amp;f)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>f.foid_;<sp/>},</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a14b7e6df38c4bda9cc19d00c0a62ef5b" kindref="member">docs::ElementField_oid</ref>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;owner&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpymoose_1_1ElementField" kindref="compound">pymoose::ElementField</ref><sp/>&amp;f)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>f.<ref refid="structpymoose_1_1LookupField_1ae3eda6377d376c5e286f0b17ea46602d" kindref="member">oid_</ref>;<sp/>},</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a289e68f6b79ade8c98616d68800db738" kindref="member">docs::ElementField_owner</ref>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpymoose_1_1ElementField" kindref="compound">pymoose::ElementField</ref><sp/>&amp;f)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">pymoose::MooseVec</ref>(f.foid_);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a537d357e17babb3f7573ca57dc055159" kindref="member">docs::ElementField_vec</ref>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getattr__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1ElementField_1a5ba93893e0a1e1d2b3abf4312b4c9459" kindref="member">pymoose::ElementField::getAttribute</ref>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__setattr__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1ElementField_1a44c859eb5ef4ca5c84a95ed9375244a8" kindref="member">pymoose::ElementField::setAttribute</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Access<sp/>LookupField<sp/>for<sp/>vec<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;pymoose::VecLookupField&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;VecLookupField&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getitem__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1VecLookupField_1ad4dc6ac78420b5ed0a0b076f024bcc15" kindref="member">pymoose::VecLookupField::get</ref>)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__setitem__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1VecLookupField_1ac559287e84826e7852853e8fba2e02d3" kindref="member">pymoose::VecLookupField::set</ref>)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__repr__&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="structpymoose_1_1VecLookupField" kindref="compound">pymoose::VecLookupField</ref><sp/>&amp;f)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&lt;moose.VecLookupField<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1af55d9af1aa8f9885e92df9c8d2498edf" kindref="member">finfo_</ref>-&gt;<ref refid="classFinfo_1a61d1ed4e356444e2c94611a419b3440a" kindref="member">name</ref>()<sp/>+</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>owner=&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.id_.path()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>keyType=&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1ad7078e22bf0d0532dad7627f04e9d049" kindref="member">keyType_</ref><sp/>+</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>valueType=&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1ad3fce8468b43eb23e913efd3cb5d0843" kindref="member">valueType_</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;pymoose::VecElementField&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;VecElementField&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__len__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1VecElementField_1ab085c52a8923616d22c9507d25783ff6" kindref="member">pymoose::VecElementField::size</ref>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getitem__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1VecElementField_1a4029c9601b3c54ea7d23ad1602aa1852" kindref="member">pymoose::VecElementField::getItem</ref>)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;sizes&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1VecElementField_1ab0ab7e87a7f4f4b59ee4a8efc8c70521" kindref="member">pymoose::VecElementField::sizes</ref>,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::rv_policy::automatic)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpymoose_1_1VecElementField" kindref="compound">pymoose::VecElementField</ref><sp/>&amp;f)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>f.parentId_.path()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1af55d9af1aa8f9885e92df9c8d2498edf" kindref="member">finfo_</ref>-&gt;<ref refid="classFinfo_1a61d1ed4e356444e2c94611a419b3440a" kindref="member">name</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getattr__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1VecElementField_1a6232079e89647041e8a1f96ff4d85281" kindref="member">pymoose::VecElementField::getAttribute</ref>)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__setattr__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1VecElementField_1a70d00c1fa079ee86447d8e548bf05a95" kindref="member">pymoose::VecElementField::setAttribute</ref>)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__repr__&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="structpymoose_1_1VecElementField" kindref="compound">pymoose::VecElementField</ref><sp/>&amp;f)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&lt;moose.VecElementField<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.<ref refid="structpymoose_1_1LookupField_1af55d9af1aa8f9885e92df9c8d2498edf" kindref="member">finfo_</ref>-&gt;<ref refid="classFinfo_1a61d1ed4e356444e2c94611a419b3440a" kindref="member">name</ref>()<sp/>+</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>owner=&quot;</highlight><highlight class="normal"><sp/>+<sp/>f.parentId_.path()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Id<sp/>class<sp/>wrapper</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;Id&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;Id&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" kindref="member">Id::path</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1aaf40dd6dbb5c678c1b72b88c7919bd83" kindref="member">docs::Id_path</ref>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getitem__&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>index);<sp/>})</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Id<sp/>attributes<sp/>are<sp/>same<sp/>as<sp/>ObjItem<sp/>attributes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getattr__&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;key)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a912dfe811e3de112b50dabefad96a7c8" kindref="member">pymoose::getFieldGeneric</ref>(<ref refid="classObjId" kindref="compound">ObjId</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">),<sp/>key);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__setattr__&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nb::object<sp/>&amp;val)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1ae41cc79348c5fa83aefb0f1bc4fe3f94" kindref="member">pymoose::setFieldGeneric</ref>(<ref refid="classObjId" kindref="compound">ObjId</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">),<sp/>key,<sp/>val);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__repr__&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&lt;moose.Id<sp/><sp/>path=&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">.path()<sp/>+</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>id=&quot;</highlight><highlight class="normal"><sp/>+<sp/>to_string(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">.value())<sp/>+</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>class=&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">.element()-&gt;cinfo()-&gt;name()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__eq__&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>==<sp/>b;<sp/>})</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__ne__&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>!=<sp/>b;<sp/>})</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__hash__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classId_1a123c4b585336d50834324026daed286e" kindref="member">Id::value</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ObjId<sp/>class<sp/>wrapper</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;ObjId&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;ObjId&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(nb::init&lt;&gt;(),<sp/><ref refid="namespacepymoose_1_1docs_1a94d18e36fe05abe912e8dc15de3eccb3" kindref="member">docs::ObjId_init_root</ref>)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(nb::init&lt;const<sp/>ObjId<sp/>&amp;&gt;(),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;other&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a24c7662a8bc9334c4bbccee041e60dd9" kindref="member">docs::ObjId_init_other</ref>)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(nb::init&lt;Id,<sp/>unsigned<sp/>int,<sp/>unsigned<sp/>int&gt;(),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;i&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;d&quot;</highlight><highlight class="normal">)<sp/>=<sp/>0,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;f&quot;</highlight><highlight class="normal">)<sp/>=<sp/>0,<sp/><ref refid="namespacepymoose_1_1docs_1a119b717fffb29ab3eb1c83542a9f6297" kindref="member">docs::ObjId_init_id</ref>)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(nb::init&lt;const<sp/>string<sp/>&amp;&gt;(),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">),<sp/><ref refid="namespacepymoose_1_1docs_1a6385c0b00565618e98b98a3ce3e6983d" kindref="member">docs::ObjId_init_path</ref>)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;oid)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref>(oid);<sp/>},</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a82c7e2958bddcfdf33f73f709e6ffebd" kindref="member">docs::ObjId_vec</ref>)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="classObjId" kindref="compound">ObjId</ref><sp/>oid)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>oid.<ref refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" kindref="member">getName</ref>();<sp/>},</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1af22b0004bc21467e051d50445f8f5b81" kindref="member">docs::ObjId_name</ref>)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;className&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](<ref refid="classObjId" kindref="compound">ObjId</ref><sp/>oid)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>oid.<ref refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" kindref="member">name</ref>();<sp/>},</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a5dd484c636ffe0bb47523ffae25c8900" kindref="member">docs::ObjId_className</ref>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;type&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="classObjId" kindref="compound">ObjId</ref><sp/>oid)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>oid.<ref refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" kindref="member">name</ref>();<sp/>},</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Class<sp/>of<sp/>the<sp/>element&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;parent&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;oid)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classNeutral_1adb4bf1f5f07dcc7daf38fec7c4d0278d" kindref="member">Neutral::parent</ref>(oid);<sp/>},</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a18fc4abe67d1dd34aa71eadd333a92bc" kindref="member">docs::ObjId_parent</ref>)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;children&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;oid)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Id&gt;<sp/>childIds;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classNeutral_1aa7d356ebdc188aa0ba82c5d3d28e118d" kindref="member">Neutral::children</ref>(oid.<ref refid="classObjId_1a76a3d4b89944235a24eff983030a5e91" kindref="member">eref</ref>(),<sp/>childIds);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;ObjId&gt;<sp/>ret;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.reserve(childIds.size());</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>:<sp/>childIds)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.emplace_back(<ref refid="classObjId" kindref="compound">ObjId</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a3363b39770f4c30a3ce1a3960b66b1e6" kindref="member">docs::ObjId_children</ref>)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_ro(</highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" kindref="member">ObjId::id</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1a662bf0881e5f79a11c49a1786f3af7a7" kindref="member">docs::ObjId_id</ref>)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_ro(</highlight><highlight class="stringliteral">&quot;dataIndex&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classObjId_1a57f0ba8f44f988d2b28b8d013d74155e" kindref="member">ObjId::dataIndex</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1a25ab38af850b2e728c5f7a445e7890ba" kindref="member">docs::ObjId_dataIndex</ref>)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_ro(</highlight><highlight class="stringliteral">&quot;fieldIndex&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classObjId_1adb85285987b1360491b77ca2a28edc5f" kindref="member">ObjId::fieldIndex</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1aa09a99e7ae0d5a536435fb849eb85d07" kindref="member">docs::ObjId_fieldIndex</ref>)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>.def_prop_ro(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>&quot;dt&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>[](const<sp/>ObjId<sp/>&amp;oid)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>pymoose::getFieldGeneric(oid,<sp/>&quot;dt&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>},</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>docs::ObjId_dt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>.def_prop_ro(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>&quot;tick&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>[](const<sp/>ObjId<sp/>&amp;oid)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>pymoose::getFieldGeneric(oid,<sp/>&quot;tick&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>},</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>docs::ObjId_tick)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__eq__&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>==<sp/>b;<sp/>})</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__ne__&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>!=<sp/>b;<sp/>})</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__hash__&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;oid)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>oid.<ref refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" kindref="member">id</ref>.<ref refid="classId_1a123c4b585336d50834324026daed286e" kindref="member">value</ref>();<sp/>})</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getattr__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a912dfe811e3de112b50dabefad96a7c8" kindref="member">pymoose::getFieldGeneric</ref>)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__setattr__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1ae41cc79348c5fa83aefb0f1bc4fe3f94" kindref="member">pymoose::setFieldGeneric</ref>)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;connect&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;self,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;srcfield,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;dest,</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;destfield,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;msgtype)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a6e5b0d80b93411c9178b6c0eee779c5b" kindref="member">pymoose::connect</ref>(self,<sp/>srcfield,<sp/>dest,<sp/>destfield,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msgtype);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;srcfield&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;dest&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;destfield&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;msgtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Single&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a915d9ae31440d45c075a904df08061c3" kindref="member">docs::ObjId_connect</ref>)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;connect&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;self,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;srcfield,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;dest,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;destfield,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;msgtype)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a471483f4ec6373aa45bbb19ea4ebdbec" kindref="member">pymoose::connectToVec</ref>(self,<sp/>srcfield,<sp/>dest,<sp/>destfield,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msgtype);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;srcfield&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;dest&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;destfield&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;msgtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Single&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a915d9ae31440d45c075a904df08061c3" kindref="member">docs::ObjId_connect</ref>)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__repr__&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;oid)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&lt;moose.&quot;</highlight><highlight class="normal"><sp/>+<sp/>oid.<ref refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" kindref="member">name</ref>()<sp/>+</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>path=&quot;</highlight><highlight class="normal"><sp/>+<sp/>oid.<ref refid="classObjId_1a4d6f6e6b6f3c279334cf9f10a277df49" kindref="member">path</ref>()<sp/>+</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>id=&quot;</highlight><highlight class="normal"><sp/>+<sp/>to_string(oid.<ref refid="classObjId_1a44214297bbe3d7f069fcc6dbed17a5d7" kindref="member">id</ref>.<ref refid="classId_1a123c4b585336d50834324026daed286e" kindref="member">value</ref>())<sp/>+</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>dataIndex=&quot;</highlight><highlight class="normal"><sp/>+<sp/>to_string(oid.<ref refid="classObjId_1a57f0ba8f44f988d2b28b8d013d74155e" kindref="member">dataIndex</ref>)<sp/>+</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>fieldIndex=&quot;</highlight><highlight class="normal"><sp/>+<sp/>to_string(oid.<ref refid="classObjId_1adb85285987b1360491b77ca2a28edc5f" kindref="member">fieldIndex</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;getFieldNames&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;self,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;finfoType)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a31f592f68c6b1d3d59b9879d485a6bbd" kindref="member">pymoose::getFieldNames</ref>(self.element()-&gt;cinfo()-&gt;name(),</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>finfoType);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1ae171b61e098e594ae578a75c021d8e9c" kindref="member">docs::getFieldNames</ref>)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;getFieldTypeDict&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;self,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;finfoType)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a217cd1047c8f75378914842182c32659" kindref="member">pymoose::getFieldTypeDict</ref>(</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.element()-&gt;cinfo()-&gt;name(),<sp/>finfoType);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a0e54cbf47da742fd165087014418173d" kindref="member">docs::getFieldTypeDict</ref>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;MooseVecIterator&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;MooseVecIterator&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__iter__&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="structpymoose_1_1MooseVecIterator" kindref="compound">MooseVecIterator</ref><sp/>&amp;self)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self;<sp/>})</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__next__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="structpymoose_1_1MooseVecIterator_1ad9a21faca864986c13c55ee9209c3e17" kindref="member">MooseVecIterator::next</ref>);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>vec<sp/>class<sp/>for<sp/>vectorization<sp/>over<sp/>dataIndex<sp/>or<sp/>fieldIndex.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>nb::class_&lt;MooseVec&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;vec&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(nb::init&lt;const<sp/>string<sp/>&amp;,<sp/>unsigned<sp/>int,<sp/>const<sp/>string<sp/>&amp;&gt;(),</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;n&quot;</highlight><highlight class="normal">)<sp/>=<sp/>1,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;dtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a50c1982ba6267005a62140f911c2940d" kindref="member">docs::MooseVec_init</ref>)<sp/><sp/></highlight><highlight class="comment">//<sp/>Default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(nb::init&lt;const<sp/>ObjId<sp/>&amp;&gt;())</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__eq__&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;a,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.oid()<sp/>==<sp/>b.oid();<sp/>})</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__ne__&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;a,</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.oid()<sp/>!=<sp/>b.oid();<sp/>})</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__len__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1ac7b19a1a4c6ceda95055f87689695226" kindref="member">MooseVec::size</ref>)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__iter__&quot;</highlight><highlight class="normal">,<sp/>[](<ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;self)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpymoose_1_1MooseVecIterator" kindref="compound">MooseVecIterator</ref>(self);<sp/>})</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getitem__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1a6a5263ebc420ecf81a0aafec47d6a68b" kindref="member">MooseVec::getItem</ref>)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getitem__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1af1f1b5d1f8c553bbdbc45fa65deb9ec5" kindref="member">MooseVec::getItemRange</ref>)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Templated<sp/>function<sp/>won&apos;t<sp/>work<sp/>here.<sp/>The<sp/>first<sp/>one<sp/>is<sp/>always<sp/>called.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__getattr__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1a99a45119cb4a389017413f2713b6b180" kindref="member">MooseVec::getAttribute</ref>)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__setattr__&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1a9a8e5cfcea85511699004778649f25fc" kindref="member">MooseVec::setAttribute</ref>)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;__repr__&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;v)<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&lt;moose.vec<sp/>class=&quot;</highlight><highlight class="normal"><sp/>+<sp/>v.<ref refid="classpymoose_1_1MooseVec_1a8756813bffb8860bf4f6a6e837a619f6" kindref="member">dtype</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>path=&quot;</highlight><highlight class="normal"><sp/>+<sp/>v.<ref refid="classpymoose_1_1MooseVec_1aad6b83438ab48c18550b80c42101d7d3" kindref="member">path</ref>()<sp/>+</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>id=&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(v.<ref refid="classpymoose_1_1MooseVec_1ac09360d87c8f91dda307e9c15e4d4ae4" kindref="member">id</ref>())<sp/>+</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>size=&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(v.<ref refid="classpymoose_1_1MooseVec_1ac7b19a1a4c6ceda95055f87689695226" kindref="member">size</ref>())<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;type&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;v)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;moose.vec&quot;</highlight><highlight class="normal">;<sp/>})</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;connect&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1aa59e19c73b0ba102fbaf81cb412bafc3" kindref="member">MooseVec::connectToSingle</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;srcfield&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;dest&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;destfield&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;msgtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Single&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a8b66c290facf96cf6b13b09f119fb375" kindref="member">docs::MooseVec_connect</ref>)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;connect&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1a94c0d47ae80556e45d1d8056b592fbbe" kindref="member">MooseVec::connectToVec</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;srcfield&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;dest&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;destfield&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;msgtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Single&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a8b66c290facf96cf6b13b09f119fb375" kindref="member">docs::MooseVec_connect</ref>)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Thi<sp/>properties<sp/>are<sp/>not<sp/>vectorised.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;parent&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1ab44ba6f1d1130391d81b8478cf6182a0" kindref="member">MooseVec::parent</ref>)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;children&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1acb5ec3d177f873eabf5cb0f1a2cc0be4" kindref="member">MooseVec::children</ref>)</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1ac596ef90de962794bcfc40c37570c36e" kindref="member">MooseVec::name</ref>)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1aad6b83438ab48c18550b80c42101d7d3" kindref="member">MooseVec::path</ref>)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wrapped<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def_prop_ro(</highlight><highlight class="stringliteral">&quot;oid&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classpymoose_1_1MooseVec_1a001141cfb698185a48b0f3ed166db540" kindref="member">MooseVec::oid</ref>)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;getFieldNames&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;finfoType)<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a31f592f68c6b1d3d59b9879d485a6bbd" kindref="member">pymoose::getFieldNames</ref>(vec.<ref refid="classpymoose_1_1MooseVec_1a8756813bffb8860bf4f6a6e837a619f6" kindref="member">dtype</ref>(),<sp/>finfoType);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1ae171b61e098e594ae578a75c021d8e9c" kindref="member">docs::getFieldNames</ref>)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;getFieldTypeDict&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;self,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;finfoType)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a217cd1047c8f75378914842182c32659" kindref="member">pymoose::getFieldTypeDict</ref>(self.dtype(),<sp/>finfoType);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a0e54cbf47da742fd165087014418173d" kindref="member">docs::getFieldTypeDict</ref>);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Module<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;seed&quot;</highlight><highlight class="normal">,<sp/>[](nb::object<sp/>&amp;a)<sp/>{<sp/><ref refid="namespacemoose_1a016d92a21244e86231ea80932c1c9175" kindref="member">moose::mtseed</ref>(nb::cast&lt;int&gt;(a));<sp/>},</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1aa7b216c6ba3bcc8eed1d86ee0d75d1f8" kindref="member">docs::seed</ref>);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;rand&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemoose_1ae65f9d4e187c732b37450b5cb8dab7a7" kindref="member">moose::mtrand</ref>(a,<sp/>b);<sp/>},</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;a&quot;</highlight><highlight class="normal">)<sp/>=<sp/>0,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">)<sp/>=<sp/>1,<sp/><ref refid="namespacepymoose_1_1docs_1a656682d3595988c264b5a72107868ef4" kindref="member">docs::rand</ref>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>a<sp/>wrapper<sp/>to<sp/>Shell::wildcardFind.<sp/>The<sp/>python<sp/>interface<sp/>must</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>override<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;wildcardFind&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="Wildcard_8h_1ae5d6c269ce01e9c5f7ffbfd9eebba0d6" kindref="member">::wildcardFind2</ref>);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;element&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1aa8a2d6545079b63d01d00cd116311910" kindref="member">pymoose::convertToObjId</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1a615fb028965b41263dfd73e778dd320c" kindref="member">docs::convertToObjId</ref>);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;delete&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a5acab71cd4e33affabb11ec9ef5e36ed" kindref="member">pymoose::doDelete</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1a776e4b1a84c42d4079975c6356d14ce1" kindref="member">docs::doDelete</ref>);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;copy&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a3f7fa06877e41b342d7863f921c0527e" kindref="member">pymoose::copy</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;orig&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;parent&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;num&quot;</highlight><highlight class="normal">)<sp/>=<sp/>1,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;toGlobal&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;copyExtMsgs&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a73db2cca7814403285c33f501e6b359a" kindref="member">docs::copy</ref>);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;move&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a5b3d77bb57672a696d603a4521dc4e7d" kindref="member">pymoose::move</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;orig&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;parent&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1ae9663d9684b9aaf778d2ec1e12ce3397" kindref="member">docs::move</ref>);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;reinit&quot;</highlight><highlight class="normal">,<sp/>[]()<sp/>{<sp/><ref refid="namespacepymoose_1ad0fa25ae67141e070894b4ce3ec68e3d" kindref="member">pymoose::getShellPtr</ref>()-&gt;<ref refid="classShell_1a11a41136a3731f01e7789dd8fc251370" kindref="member">doReinit</ref>();<sp/>},<sp/><ref refid="namespacepymoose_1_1docs_1a937f055db31f325814104f9cb51b83a2" kindref="member">docs::reinit</ref>);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;start&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1aeb8f138bffd660be625851c64ece0e94" kindref="member">pymoose::start</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;runtime&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;notify&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a815a6a360432dbb967d86858c6c6abd6" kindref="member">docs::start</ref>);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;stop&quot;</highlight><highlight class="normal">,<sp/>[]()<sp/>{<sp/><ref refid="namespacepymoose_1ad0fa25ae67141e070894b4ce3ec68e3d" kindref="member">pymoose::getShellPtr</ref>()-&gt;<ref refid="classShell_1a1aaada83b3e6350f1550125c84584aa8" kindref="member">doStop</ref>();<sp/>},<sp/><ref refid="namespacepymoose_1_1docs_1ac1f1a2a03be613876ff69fb061de4f33" kindref="member">docs::stop</ref>);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;isRunning&quot;</highlight><highlight class="normal">,<sp/>[]()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1ad0fa25ae67141e070894b4ce3ec68e3d" kindref="member">pymoose::getShellPtr</ref>()-&gt;<ref refid="classShell_1aca06ce6784f5a644b3c2f283d14bc132" kindref="member">isRunning</ref>();<sp/>},</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a8b575d4b394d155f3d4ba2b555f26f43" kindref="member">docs::isRunning</ref>);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;exists&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path)<sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classId" kindref="compound">Id</ref>(path)<sp/>!=<sp/><ref refid="classId" kindref="compound">Id</ref>()<sp/>&amp;&amp;<sp/>path<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>path<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;/root&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">),<sp/><ref refid="namespacepymoose_1_1docs_1ab9212c008f7681b161bc6ecb95609200" kindref="member">docs::exists</ref>);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;getCwe&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a198ef5af598f282936e353cbb50bac68" kindref="member">pymoose::getCwe</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1a300ebe3fa5da241da3a67e5ab3dc9402" kindref="member">docs::getCwe</ref>);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;pwe&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a198ef5af598f282936e353cbb50bac68" kindref="member">pymoose::getCwe</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1a300ebe3fa5da241da3a67e5ab3dc9402" kindref="member">docs::getCwe</ref>);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;setCwe&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1aaf45ced19b22b0feae55e1db2bea4737" kindref="member">pymoose::setCwe</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1aa0ec2325a799910bb74ffda61bec633d" kindref="member">docs::setCwe</ref>);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;ce&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1aaf45ced19b22b0feae55e1db2bea4737" kindref="member">pymoose::setCwe</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1aa0ec2325a799910bb74ffda61bec633d" kindref="member">docs::setCwe</ref>);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;le&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a0037db2c2010ef37bc69f9794b1359b3" kindref="member">pymoose::listElements</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1a2c4e6422a5b08dc01128e4c27ac9b981" kindref="member">docs::listElements</ref>);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;showmsg&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a4d61839df1e5054e9dec905cf074bb78" kindref="member">pymoose::showMsg</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;obj&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;direction&quot;</highlight><highlight class="normal">)<sp/>=<sp/><ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a130c5b3473c57faa76e2a1c54e26f88e" kindref="member">pymoose::MsgDirection::Both</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1ae3367f3d7e1574342d7e98f2878d51c4" kindref="member">docs::showMsg</ref>);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;listmsg&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a7e417b57726a76504140d97856e0086e" kindref="member">pymoose::listMsg</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;element&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;direction&quot;</highlight><highlight class="normal">)<sp/>=<sp/><ref refid="namespacepymoose_1a846136cc09a95eb24119d86b0f14d641a130c5b3473c57faa76e2a1c54e26f88e" kindref="member">pymoose::MsgDirection::Both</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1a9f1f0019e65440a88cc4cb0f10d9d745" kindref="member">docs::listMsg</ref>);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;neighbors&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1af225fc92bfd9d3d13808fab3b1b60ab5" kindref="member">pymoose::getNeighbors</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;obj&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;field&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;msgType&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;direction&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1af5a589c55dbe500d293d1feb58361722" kindref="member">docs::getNeighbors</ref>);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;connect&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a6e5b0d80b93411c9178b6c0eee779c5b" kindref="member">pymoose::connect</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;src&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;srcfield&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;dest&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;destfield&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;msgtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Single&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1af7c65636275416d68117b910fbfe92a3" kindref="member">docs::connect</ref>);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;connect&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a471483f4ec6373aa45bbb19ea4ebdbec" kindref="member">pymoose::connectToVec</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;src&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;srcfield&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;dest&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;destfield&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;msgtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Single&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1af7c65636275416d68117b910fbfe92a3" kindref="member">docs::connect</ref>);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;getFieldNames&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a31f592f68c6b1d3d59b9879d485a6bbd" kindref="member">pymoose::getFieldNames</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;classname&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1ae171b61e098e594ae578a75c021d8e9c" kindref="member">docs::getFieldNames</ref>);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;getFieldNames&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;oid,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;finfoType)<sp/>{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a31f592f68c6b1d3d59b9879d485a6bbd" kindref="member">pymoose::getFieldNames</ref>(oid.<ref refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" kindref="member">name</ref>(),</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>finfoType);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;obj&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1ae171b61e098e594ae578a75c021d8e9c" kindref="member">docs::getFieldNames</ref>);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;getFieldNames&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;finfoType)<sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a31f592f68c6b1d3d59b9879d485a6bbd" kindref="member">pymoose::getFieldNames</ref>(vec.<ref refid="classpymoose_1_1MooseVec_1a8756813bffb8860bf4f6a6e837a619f6" kindref="member">dtype</ref>(),<sp/>finfoType);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;obj&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1ae171b61e098e594ae578a75c021d8e9c" kindref="member">docs::getFieldNames</ref>);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;getFieldTypeDict&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a217cd1047c8f75378914842182c32659" kindref="member">pymoose::getFieldTypeDict</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;classname&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a0e54cbf47da742fd165087014418173d" kindref="member">docs::getFieldTypeDict</ref>);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;getFieldTypeDict&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>&amp;oid,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;finfoType)<sp/>{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a217cd1047c8f75378914842182c32659" kindref="member">pymoose::getFieldTypeDict</ref>(oid.<ref refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" kindref="member">element</ref>()-&gt;<ref refid="classElement_1a33610036b72724ca3b7fedaf7e692841" kindref="member">cinfo</ref>()-&gt;<ref refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" kindref="member">name</ref>(),</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>finfoType);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;obj&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a0e54cbf47da742fd165087014418173d" kindref="member">docs::getFieldTypeDict</ref>);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;getFieldTypeDict&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpymoose_1_1MooseVec" kindref="compound">MooseVec</ref><sp/>&amp;vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;finfoType)<sp/>{</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1a217cd1047c8f75378914842182c32659" kindref="member">pymoose::getFieldTypeDict</ref>(vec.<ref refid="classpymoose_1_1MooseVec_1a8756813bffb8860bf4f6a6e837a619f6" kindref="member">dtype</ref>(),<sp/>finfoType);</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;obj&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fieldtype&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepymoose_1_1docs_1a0e54cbf47da742fd165087014418173d" kindref="member">docs::getFieldTypeDict</ref>);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;getField&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a912dfe811e3de112b50dabefad96a7c8" kindref="member">pymoose::getFieldGeneric</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;obj&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;field&quot;</highlight><highlight class="normal">),<sp/><ref refid="namespacepymoose_1_1docs_1a76ab3ad8073522a3b774a1916d650b59" kindref="member">docs::getFieldGeneric</ref>);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;setClock&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a62a1c2f4aeb490d1a127e5a165266a61" kindref="member">pymoose::setClock</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;tick&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;dt&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepymoose_1_1docs_1aae3d78193018dc340f68c4df8d08622e" kindref="member">docs::setClock</ref>);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;useClock&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1adf445480c1ab0f8d6c999522ae48ebab" kindref="member">pymoose::useClock</ref>,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;tick&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;fn&quot;</highlight><highlight class="normal">),<sp/><ref refid="namespacepymoose_1_1docs_1a8f40fc56c566db2c992e2e4a2ee76a7e" kindref="member">docs::useClock</ref>);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;loadModelInternal&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a995d880f6c2e5cfb0545ec3640f76eef" kindref="member">pymoose::loadModelInternal</ref>);</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;loadSwcInternal&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;file,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;path,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RM,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RA,</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CM)<sp/>{</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepymoose_1ad0fa25ae67141e070894b4ce3ec68e3d" kindref="member">pymoose::getShellPtr</ref>()-&gt;<ref refid="classShell_1a506ff431369e3bce87f0e6c767fe475c" kindref="member">doLoadModel</ref>(file,<sp/>path,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>RM,<sp/>RA,<sp/>CM);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;file&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;path&quot;</highlight><highlight class="normal">),<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;RM&quot;</highlight><highlight class="normal">)<sp/>=<sp/>1.0,</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;RA&quot;</highlight><highlight class="normal">)<sp/>=<sp/>1.0,<sp/>nb::arg(</highlight><highlight class="stringliteral">&quot;CM&quot;</highlight><highlight class="normal">)<sp/>=<sp/>0.01);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;getDoc&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a0819eb362ab7586a5c7450fcfb3fa814" kindref="member">pymoose::getDoc</ref>,<sp/><ref refid="namespacepymoose_1_1docs_1a5c4292e67702e2dc04d3fe1de2cb228d" kindref="member">docs::getDoc</ref>);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;version_info&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="namespacepymoose_1a951f93346e673f03fed02472b64eef2f" kindref="member">pymoose::getVersionInfo</ref>);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Global<sp/>Constant<sp/>Attributes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;NA&quot;</highlight><highlight class="normal">)<sp/>=<sp/><ref refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" kindref="member">NA</ref>;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;PI&quot;</highlight><highlight class="normal">)<sp/>=<sp/><ref refid="header_8h_1a299aabc5fc8285cbf99025330a3d0d0d" kindref="member">PI</ref>;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;FaradayConst&quot;</highlight><highlight class="normal">)<sp/>=<sp/><ref refid="header_8h_1a1d1e5586376d0ef6c8dd757180d64c03" kindref="member">FaradayConst</ref>;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;GasConst&quot;</highlight><highlight class="normal">)<sp/>=<sp/><ref refid="header_8h_1a0185eee3db2df1feb586dcdface8b01e" kindref="member">GasConst</ref>;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;OUTMSG&quot;</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;INMSG&quot;</highlight><highlight class="normal">)<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;ALLMSG&quot;</highlight><highlight class="normal">)<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PyRun<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;PYRUN_PROC&quot;</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;PYRUN_TRIG&quot;</highlight><highlight class="normal">)<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;PYRUN_BOTH&quot;</highlight><highlight class="normal">)<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Version<sp/>information.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;__version__&quot;</highlight><highlight class="normal">)<sp/>=<sp/>MOOSE_VERSION;</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/>m.attr(</highlight><highlight class="stringliteral">&quot;__generated_by__&quot;</highlight><highlight class="normal">)<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;nanobind&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight><highlight class="comment">//<sp/>pymoose.cpp<sp/>ends<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/pymoose/pymoose.cpp"/>
+  </compounddef>
+</doxygen>

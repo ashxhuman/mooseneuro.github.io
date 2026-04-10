@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="Streamer_8h" kind="file" language="C++">
+    <compoundname>Streamer.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">map</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes refid="StreamerBase_8h" local="yes">StreamerBase.h</includes>
+    <includes refid="Table_8h" local="yes">Table.h</includes>
+    <includedby refid="Streamer_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Streamer.cpp</includedby>
+    <includedby refid="Shell_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/Shell.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Streamer.h</label>
+        <link refid="Streamer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>StreamerBase.h</label>
+        <link refid="StreamerBase_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Table.h</label>
+        <link refid="Table_8h"/>
+      </node>
+      <node id="8">
+        <label>TableBase.h</label>
+        <link refid="TableBase_8h"/>
+      </node>
+      <node id="5">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Streamer.cpp</label>
+        <link refid="Streamer_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Streamer.h</label>
+        <link refid="Streamer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/shell/Shell.cpp</label>
+        <link refid="Shell_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classStreamer" prot="public">Streamer</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="Streamer_8h_1a1d367cee33eb22e1c4bdc17105bacb15" prot="public" static="no">
+        <name>STRINGSTREAM_DOUBLE_PRECISION</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Streamer.h" line="20" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Streamer.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Filename:<sp/><sp/>Streamer.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Description:<sp/><sp/>Stream<sp/>table<sp/>data<sp/>to<sp/>a<sp/><sp/>stream.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Version:<sp/><sp/>0.0.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Created:<sp/><sp/>2016-04-26</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Revision:<sp/><sp/>none</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/><sp/>Dilawar<sp/>Singh<sp/>&lt;dilawars@ncbs.res.in&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Organization:<sp/><sp/>NCBS<sp/>Bangalore</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>License:<sp/><sp/>GNU<sp/>GPL2</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/>Streamer_INC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>Streamer_INC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="Streamer_8h_1a1d367cee33eb22e1c4bdc17105bacb15" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STRINGSTREAM_DOUBLE_PRECISION<sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="StreamerBase_8h" kindref="compound">StreamerBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Table_8h" kindref="compound">Table.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classStreamer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classStreamer" kindref="compound">Streamer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classStreamerBase" kindref="compound">StreamerBase</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStreamer_1a4a4539a7dfea1cd036727aaf64d6cc8c" kindref="member">Streamer</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStreamer_1a713b5c47448af40f966d5e641f402af3" kindref="member">~Streamer</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStreamer" kindref="compound">Streamer</ref>&amp;<sp/><ref refid="classStreamer_1afbd31a0a717bafc3086ca6ba33cda534" kindref="member">operator=</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStreamer" kindref="compound">Streamer</ref>&amp;<sp/>st<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cleaup<sp/>before<sp/>quitting<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1ac45645f5e157ff2c4001a1009f974d9e" kindref="member">cleanUp</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a12949ac51c6c1cac84afad394dfa141d" kindref="member">getDatafilePath</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1ad98d2b4cb2ae9d7af7935c22b13e3c4d" kindref="member">setDatafilePath</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1aa41d95be7008bb8f44df3d8ad95262d1" kindref="member">getFormat</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1aefebf36dd99a55366420da012c69355e" kindref="member">setFormat</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>format<sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1aa6ccc1ae7ccce57b6a91eac7c520fe22" kindref="member">getNumTables</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a5b85bd9c01e74bcd77b2cf45b0ea9e03" kindref="member">getNumWriteEvents</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a443ec87c302abbdbb3f55417fcb9d225" kindref="member">addTable</ref>(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>table<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1af9717a4ee55be57c871ff40869a9010f" kindref="member">addTables</ref>(<sp/>vector&lt;ObjId&gt;<sp/>tables);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a742f6d5614fc68421d42d2e3e6cedfd5" kindref="member">removeTable</ref>(<sp/><ref refid="classObjId" kindref="compound">ObjId</ref><sp/>table<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1ad864648d4d35053b646109b16967de16" kindref="member">removeTables</ref>(<sp/>vector&lt;ObjId&gt;<sp/>table<sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1aaa83549da537721524b419d75f021155" kindref="member">zipWithTime</ref>(<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1adb699461306fc3a1ddcf32f6ce7763b3" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a6fb99b503325b2696fec74672090807e" kindref="member">reinit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>p);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref><sp/>*<sp/><ref refid="classStreamer_1ac907f2b6e6605333f338367f2712e7e3" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classStreamer_1ae52c6ce320e86b5e8e8aec4d0f9af371" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1ae52c6ce320e86b5e8e8aec4d0f9af371" kindref="member">datafilePath_</ref>;</highlight></codeline>
+<codeline lineno="77" refid="classStreamer_1a52af08547ed76b478554040ad233fd13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a52af08547ed76b478554040ad233fd13" kindref="member">format_</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classStreamer_1a94e5596a226de4bf1eb81a1ab313a947" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a94e5596a226de4bf1eb81a1ab313a947" kindref="member">numWriteEvents_</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classStreamer_1a94e388e31fed03512015736e2963af0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a94e388e31fed03512015736e2963af0b" kindref="member">isOutfilePathSet_</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dt_<sp/>and<sp/>tick<sp/>number<sp/>of<sp/>Table&apos;s<sp/>clock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classStreamer_1af4c796556bb69dc1ea2753927494fa5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;double&gt;<sp/><ref refid="classStreamer_1af4c796556bb69dc1ea2753927494fa5d" kindref="member">tableDt_</ref>;</highlight></codeline>
+<codeline lineno="85" refid="classStreamer_1ad7d353a28e4b64c0fccbcc14cae44c0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;unsigned<sp/>int&gt;<sp/><ref refid="classStreamer_1ad7d353a28e4b64c0fccbcc14cae44c0d" kindref="member">tableTick_</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>currTime<sp/>is<sp/>not<sp/>computed<sp/>using<sp/>the<sp/>ProcPtr<sp/>but<sp/>rather<sp/>using<sp/>Tables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dt_<sp/>and<sp/>number<sp/>of<sp/>entries<sp/>written.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classStreamer_1a5b658fed7288b9ff98344750b8d2f20c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStreamer_1a5b658fed7288b9ff98344750b8d2f20c" kindref="member">currTime_</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Used<sp/>for<sp/>adding<sp/>or<sp/>removing<sp/>tables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classStreamer_1a948af9bd90ba90d6ecd94dfe9cf2e4cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ObjId&gt;<sp/><ref refid="classStreamer_1a948af9bd90ba90d6ecd94dfe9cf2e4cf" kindref="member">tableIds_</ref>;</highlight></codeline>
+<codeline lineno="93" refid="classStreamer_1a514bb3de1eba9ebba4c954193fe4ac2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Table*&gt;<sp/><ref refid="classStreamer_1a514bb3de1eba9ebba4c954193fe4ac2d" kindref="member">tables_</ref>;</highlight></codeline>
+<codeline lineno="94" refid="classStreamer_1a291d863821095c9db0b00ab37f3de93d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;string&gt;<sp/><ref refid="classStreamer_1a291d863821095c9db0b00ab37f3de93d" kindref="member">columns_</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>Keep<sp/>data<sp/>in<sp/>vector<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classStreamer_1a17173c1a94b8ac1f1e581f690035d5f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;double&gt;<sp/><ref refid="classStreamer_1a17173c1a94b8ac1f1e581f690035d5f9" kindref="member">data_</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----<sp/>#ifndef<sp/>Streamer_INC<sp/><sp/>-----<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/builtins/Streamer.h"/>
+  </compounddef>
+</doxygen>

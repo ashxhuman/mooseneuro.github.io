@@ -1,0 +1,646 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMeshCompt" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>MeshCompt</compoundname>
+    <basecompoundref refid="classChemCompt" prot="public" virt="non-virtual">ChemCompt</basecompoundref>
+    <derivedcompoundref refid="classCubeMesh" prot="public" virt="non-virtual">CubeMesh</derivedcompoundref>
+    <derivedcompoundref refid="classCylMesh" prot="public" virt="non-virtual">CylMesh</derivedcompoundref>
+    <derivedcompoundref refid="classEndoMesh" prot="public" virt="non-virtual">EndoMesh</derivedcompoundref>
+    <derivedcompoundref refid="classNeuroMesh" prot="public" virt="non-virtual">NeuroMesh</derivedcompoundref>
+    <derivedcompoundref refid="classPresynMesh" prot="public" virt="non-virtual">PresynMesh</derivedcompoundref>
+    <derivedcompoundref refid="classPsdMesh" prot="public" virt="non-virtual">PsdMesh</derivedcompoundref>
+    <derivedcompoundref refid="classSpineMesh" prot="public" virt="non-virtual">SpineMesh</derivedcompoundref>
+    <includes refid="MeshCompt_8h" local="no">MeshCompt.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" prot="private" static="no" mutable="no">
+        <type><ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>&lt; double &gt;</type>
+        <definition>SparseMatrix&lt; double &gt; MeshCompt::coreStencil_</definition>
+        <argsstring></argsstring>
+        <name>coreStencil_</name>
+        <qualifiedname>MeshCompt::coreStencil_</qualifiedname>
+        <briefdescription>
+<para>Handles the core stencil for own vol. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="74" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="classMeshCompt_1a781b9a02f4af37458eda4ffb1a6e615d" compoundref="MeshCompt_8cpp" startline="98" endline="104">addRow</referencedby>
+        <referencedby refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" compoundref="MeshCompt_8cpp" startline="121" endline="202">extendStencil</referencedby>
+        <referencedby refid="classMeshCompt_1a9342f82bc2304c99fb58daad6016cd5c" compoundref="MeshCompt_8cpp" startline="60" endline="63">getStencil</referencedby>
+        <referencedby refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" compoundref="MeshCompt_8cpp" startline="49" endline="52">innerResetStencil</referencedby>
+        <referencedby refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" compoundref="MeshCompt_8cpp" startline="106" endline="110">setStencilSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MeshCompt::extendedMeshEntryVolume_</definition>
+        <argsstring></argsstring>
+        <name>extendedMeshEntryVolume_</name>
+        <qualifiedname>MeshCompt::extendedMeshEntryVolume_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vector of meshEntryVolumes for abutting surfaces, needed to compute diffusion rates across junctions. Indexed from zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="85" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="classMeshCompt_1a2bc6647b552e0140c6f8e8a05599af95" compoundref="MeshCompt_8cpp" startline="43" endline="46">clearExtendedMeshEntryVolume</referencedby>
+        <referencedby refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9" compoundref="MeshCompt_8cpp" startline="36" endline="40">extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" compoundref="MeshCompt_8cpp" startline="121" endline="202">extendStencil</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" prot="private" static="no" mutable="no">
+        <type><ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>&lt; double &gt;</type>
+        <definition>SparseMatrix&lt; double &gt; MeshCompt::m_</definition>
+        <argsstring></argsstring>
+        <name>m_</name>
+        <qualifiedname>MeshCompt::m_</qualifiedname>
+        <briefdescription>
+<para>Handles stencil for core + abutting voxels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="77" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" compoundref="MeshCompt_8cpp" startline="121" endline="202">extendStencil</referencedby>
+        <referencedby refid="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516" compoundref="MeshCompt_8cpp" startline="69" endline="80">getNeighbors</referencedby>
+        <referencedby refid="classMeshCompt_1aae2b570a057a43104858c5f6c02f423e" compoundref="MeshCompt_8cpp" startline="54" endline="58">getStencilRow</referencedby>
+        <referencedby refid="classMeshCompt_1a7b8e15d0a73de4f467efcf733e095cb7" compoundref="MeshCompt_8cpp" startline="85" endline="96">innerGetStencilRate</referencedby>
+        <referencedby refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" compoundref="MeshCompt_8cpp" startline="49" endline="52">innerResetStencil</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMeshCompt_1a781b9a02f4af37458eda4ffb1a6e615d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshCompt::addRow</definition>
+        <argsstring>(unsigned int index, const vector&lt; double &gt; &amp;entry, const vector&lt; unsigned int &gt; &amp;colIndex)</argsstring>
+        <name>addRow</name>
+        <qualifiedname>MeshCompt::addRow</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>colIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="56" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="98" bodyend="104"/>
+        <references refid="classSparseMatrix_1a873cc36079017efce916136e0bc50c20" compoundref="SparseMatrix_8h" startline="410" endline="425">SparseMatrix&lt; T &gt;::addRow</references>
+        <references refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" compoundref="MeshCompt_8h" startline="74">coreStencil_</references>
+        <referencedby refid="classCubeMesh_1a15fd949e84856e14321830ce459258d4" compoundref="CubeMesh_8cpp" startline="1089" endline="1144">CubeMesh::buildStencil</referencedby>
+        <referencedby refid="classCylMesh_1a2f481d81c9725d5ec0c323cf703652a6" compoundref="CylMesh_8cpp" startline="815" endline="851">CylMesh::buildStencil</referencedby>
+        <referencedby refid="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" compoundref="NeuroMesh_8cpp" startline="1164" endline="1237">NeuroMesh::buildStencil</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1a2bc6647b552e0140c6f8e8a05599af95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MeshCompt::clearExtendedMeshEntryVolume</definition>
+        <argsstring>()</argsstring>
+        <name>clearExtendedMeshEntryVolume</name>
+        <qualifiedname>MeshCompt::clearExtendedMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1af2fadfbdf4178364cedda3278c344506">clearExtendedMeshEntryVolume</reimplements>
+        <briefdescription>
+<para>Inherited virtual function to clear the vector of MeshEntryVolume. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="34" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="43" bodyend="46"/>
+        <references refid="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" compoundref="MeshCompt_8h" startline="85">extendedMeshEntryVolume_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double MeshCompt::extendedMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>extendedMeshEntryVolume</name>
+        <qualifiedname>MeshCompt::extendedMeshEntryVolume</qualifiedname>
+        <reimplements refid="classChemCompt_1ab0942d216e28565e0008176079840bec">extendedMeshEntryVolume</reimplements>
+        <reimplementedby refid="classNeuroMesh_1a448f674cb83dca4432577406e1849ba3">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a168811d19e0c22a00654ef164264e65d">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1aeda46d15ed35b9f588309c0e2614c913">extendedMeshEntryVolume</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return volume of mesh Entry, including. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility function to return volume of any voxel including those diffusively coupled and aubtting the present volume. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="31" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="36" bodyend="40"/>
+        <references refid="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" compoundref="MeshCompt_8h" startline="85">extendedMeshEntryVolume_</references>
+        <referencedby refid="classCubeMesh_1a5e587ada1049e5ba1d862bb65e06c425" compoundref="CubeMesh_8cpp" startline="808" endline="815">CubeMesh::extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classCylMesh_1a497e91f7c73f6d0719138129890db10e" compoundref="CylMesh_8cpp" startline="599" endline="606">CylMesh::extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classEndoMesh_1a05f55fd2932337e61ec855339d6a3c43" compoundref="EndoMesh_8cpp" startline="325" endline="329">EndoMesh::extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classNeuroMesh_1a448f674cb83dca4432577406e1849ba3" compoundref="NeuroMesh_8cpp" startline="969" endline="979">NeuroMesh::extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855" compoundref="PsdMesh_8cpp" startline="362" endline="369">PsdMesh::extendedMeshEntryVolume</referencedby>
+        <referencedby refid="classSpineMesh_1aeda46d15ed35b9f588309c0e2614c913" compoundref="SpineMesh_8cpp" startline="345" endline="352">SpineMesh::extendedMeshEntryVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MeshCompt::extendStencil</definition>
+        <argsstring>(const ChemCompt *other, const vector&lt; VoxelJunction &gt; &amp;vj)</argsstring>
+        <name>extendStencil</name>
+        <qualifiedname>MeshCompt::extendStencil</qualifiedname>
+        <reimplements refid="classChemCompt_1ac3e4a67cd363f6ddc4030e0af56f61f3">extendStencil</reimplements>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>const vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>vj</declname>
+        </param>
+        <briefdescription>
+<para>Add boundary voxels to stencil for cross-solver junctions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>extendStencil adds voxels to the current stencil m_, to build up a monolithic stencil that also handles the entries just past all the boundaries. This function may be called many times to deal with the addition of multiple junctions. Before the first of these calls, the m_ matrix should be set to the coreStencil_. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Organizes vj by voxel, that is, by row.</para>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="64" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="121" bodyend="202"/>
+        <references refid="classSparseMatrix_1a873cc36079017efce916136e0bc50c20" compoundref="SparseMatrix_8h" startline="410" endline="425">SparseMatrix&lt; T &gt;::addRow</references>
+        <references refid="classSparseMatrix_1aabc77208663f5a59bb2bbb0559b614f7" compoundref="SparseMatrix_8h" startline="443" endline="449">SparseMatrix&lt; T &gt;::clear</references>
+        <references refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" compoundref="MeshCompt_8h" startline="74">coreStencil_</references>
+        <references refid="classVoxelJunction_1a8d8503053acdf4178d98cbf5d94a402a" compoundref="VoxelJunction_8h" startline="44">VoxelJunction::diffScale</references>
+        <references refid="MeshCompt_8cpp_1a0f681f48c87646c19321b4e7d16cc83e" compoundref="MeshCompt_8cpp" startline="19">EMPTY</references>
+        <references refid="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" compoundref="MeshCompt_8h" startline="85">extendedMeshEntryVolume_</references>
+        <references refid="classVoxelJunction_1a726300f19ba547690ed7ab3150cfba9c" compoundref="VoxelJunction_8h" startline="40">VoxelJunction::first</references>
+        <references refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a">ChemCompt::getMeshEntryVolume</references>
+        <references refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" compoundref="SparseMatrix_8h" startline="288" endline="307">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" compoundref="MeshCompt_8h" startline="77">m_</references>
+        <references refid="classSparseMatrix_1a2c51cee470d726cf04e262a4038625f5" compoundref="SparseMatrix_8h" startline="87" endline="90">SparseMatrix&lt; T &gt;::nRows</references>
+        <references refid="classVoxelJunction_1a6175a7d3b1fba6320dca8bf2ca3bf693" compoundref="VoxelJunction_8h" startline="41">VoxelJunction::second</references>
+        <references refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" compoundref="SparseMatrix_8h" startline="126" endline="155">SparseMatrix&lt; T &gt;::setSize</references>
+        <references refid="classVoxelJunction_1aee2e9d56c68e5cbd462d805a3ceeabe9" compoundref="VoxelJunction_8h" startline="21" endline="25">VoxelJunction::VoxelJunction</references>
+        <referencedby refid="testMesh_8cpp_1a18d83fbb87a6057ceee2198c71f061f5" compoundref="testMesh_8cpp" startline="724" endline="785">testCubeMeshExtendStencil</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; MeshCompt::getNeighbors</definition>
+        <argsstring>(unsigned int fid) const</argsstring>
+        <name>getNeighbors</name>
+        <qualifiedname>MeshCompt::getNeighbors</qualifiedname>
+        <reimplements refid="classChemCompt_1a426bea293c2987a1cb7cfa8d3fec2ee2">getNeighbors</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Looks up stencil to return vector of indices of coupled voxels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to return info on Entries connected to this one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="48" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="69" bodyend="80"/>
+        <references refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" compoundref="SparseMatrix_8h" startline="288" endline="307">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" compoundref="MeshCompt_8h" startline="77">m_</references>
+        <referencedby refid="classNeuroMesh_1a957bff17a5b461240f3c05571de0ead4" compoundref="NeuroMesh_8cpp" startline="934" endline="949">NeuroMesh::getDiffusionArea</referencedby>
+        <referencedby refid="testMesh_8cpp_1a15465209926d048327e50a93ad4cddd3" compoundref="testMesh_8cpp" startline="598" endline="722">testCubeMesh</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1a240b1e27d1bd66056e7c6c092e6b7b1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>virtual vector&lt; unsigned int &gt; MeshCompt::getParentVoxel</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getParentVoxel</name>
+        <qualifiedname>MeshCompt::getParentVoxel</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a63feb1a66a194c85b4b5635a566f2952">getParentVoxel</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a3a3b602958de38a63234aa23d992ada4">getParentVoxel</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1abb69e42b19bb4238e020d0dfd57e78ff">getParentVoxel</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1ae132e52b7d722380583a0601c915043e">getParentVoxel</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a0c22a0cc329ff4af4d5f374a411043bc">getParentVoxel</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a53bfe1b01a11ff3a87ee41bd47d5b8a1">getParentVoxel</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a191bf4fafccb3b83fad5ca0984ffede4">getParentVoxel</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="67" column="16"/>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+        <referencedby refid="classEndoMesh_1abb69e42b19bb4238e020d0dfd57e78ff" compoundref="EndoMesh_8cpp" startline="379" endline="386">EndoMesh::getParentVoxel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1a9342f82bc2304c99fb58daad6016cd5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>&lt; double &gt; &amp;</type>
+        <definition>const SparseMatrix&lt; double &gt; &amp; MeshCompt::getStencil</definition>
+        <argsstring>() const</argsstring>
+        <name>getStencil</name>
+        <qualifiedname>MeshCompt::getStencil</qualifiedname>
+        <briefdescription>
+<para>Returns entire sparse matrix of mesh. Used by diffusion solver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="45" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="60" bodyend="63"/>
+        <references refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" compoundref="MeshCompt_8h" startline="74">coreStencil_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1aae2b570a057a43104858c5f6c02f423e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MeshCompt::getStencilRow</definition>
+        <argsstring>(unsigned int meshIndex, const double **entry, const unsigned int **colIndex) const</argsstring>
+        <name>getStencilRow</name>
+        <qualifiedname>MeshCompt::getStencilRow</qualifiedname>
+        <reimplements refid="classChemCompt_1a7ba25e291ed41bb090ae08aadf9073bc">getStencilRow</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type>const double **</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const unsigned int **</type>
+          <declname>colIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Derived function to return SparseMatrix-style row info for specified mesh entry. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="41" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="54" bodyend="58"/>
+        <references refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" compoundref="SparseMatrix_8h" startline="288" endline="307">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" compoundref="MeshCompt_8h" startline="77">m_</references>
+        <referencedby refid="testMesh_8cpp_1a18d83fbb87a6057ceee2198c71f061f5" compoundref="testMesh_8cpp" startline="724" endline="785">testCubeMeshExtendStencil</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1ad0b8b02617f99d8f15c7655e4e068cc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>virtual const vector&lt; double &gt; &amp; MeshCompt::getVoxelArea</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getVoxelArea</name>
+        <qualifiedname>MeshCompt::getVoxelArea</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1ac185bf15648c37584381f11a8e90cc70">getVoxelArea</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a8b7c86ca88cf0e1d39c88c8643905446">getVoxelArea</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a148cbabeac4b1f0f6dafdc866ba35cfa">getVoxelArea</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a486bbc7d2f13a98b535d9796596bbb56">getVoxelArea</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1ae000fc2a2b90ac910166fda36292d862">getVoxelArea</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a8c13866fd9271428f661c3753a1fa394">getVoxelArea</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a4cb3176ef0fca61aab5f23ed5b23a268">getVoxelArea</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="68" column="22"/>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1aa7a21c23e8d57611c313f59dc2cb3827" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>virtual const vector&lt; double &gt; &amp; MeshCompt::getVoxelLength</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getVoxelLength</name>
+        <qualifiedname>MeshCompt::getVoxelLength</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a0875151f9ff8259013b370b0ab3ae089">getVoxelLength</reimplementedby>
+        <reimplementedby refid="classCylMesh_1af80ade6e220c5407c7378f8811fa5d30">getVoxelLength</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a8d757a199192323b20771acc5d473525">getVoxelLength</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a6d80c4904ca07d5d4b5343889e114e47">getVoxelLength</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a3df8fe2881990bd3e19aaa156e8c41fc">getVoxelLength</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a02c81426d3700b09e2b77c6b0768b554">getVoxelLength</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1af7edbc754b36da2b57aabc62e08b2d51">getVoxelLength</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="69" column="22"/>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+        <referencedby refid="classEndoMesh_1a77e7321f762d13a06de933f335bf50da" compoundref="EndoMesh_8cpp" startline="438" endline="468">EndoMesh::matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1a7b8e15d0a73de4f467efcf733e095cb7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; MeshCompt::innerGetStencilRate</definition>
+        <argsstring>(unsigned int row) const</argsstring>
+        <name>innerGetStencilRate</name>
+        <qualifiedname>MeshCompt::innerGetStencilRate</qualifiedname>
+        <reimplements refid="classChemCompt_1a3a7b9dedcebd30c2afafbcc2e75052a5">innerGetStencilRate</reimplements>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Looks up stencil to return vector of diffusion coupling to neighbor voxels. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="54" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="85" bodyend="96"/>
+        <references refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" compoundref="SparseMatrix_8h" startline="288" endline="307">SparseMatrix&lt; T &gt;::getRow</references>
+        <references refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" compoundref="MeshCompt_8h" startline="77">m_</references>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MeshCompt::innerResetStencil</definition>
+        <argsstring>()</argsstring>
+        <name>innerResetStencil</name>
+        <qualifiedname>MeshCompt::innerResetStencil</qualifiedname>
+        <reimplements refid="classChemCompt_1af29fc9469ff820e6ad144f22f496a40d">innerResetStencil</reimplements>
+        <briefdescription>
+<para>virtual func implemented here. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="37" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="49" bodyend="52"/>
+        <references refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" compoundref="MeshCompt_8h" startline="74">coreStencil_</references>
+        <references refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" compoundref="MeshCompt_8h" startline="77">m_</references>
+        <referencedby refid="classCubeMesh_1a15fd949e84856e14321830ce459258d4" compoundref="CubeMesh_8cpp" startline="1089" endline="1144">CubeMesh::buildStencil</referencedby>
+        <referencedby refid="classCylMesh_1a2f481d81c9725d5ec0c323cf703652a6" compoundref="CylMesh_8cpp" startline="815" endline="851">CylMesh::buildStencil</referencedby>
+        <referencedby refid="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" compoundref="NeuroMesh_8cpp" startline="1164" endline="1237">NeuroMesh::buildStencil</referencedby>
+        <referencedby refid="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" compoundref="PsdMesh_8cpp" startline="431" endline="435">PsdMesh::buildStencil</referencedby>
+        <referencedby refid="classSpineMesh_1ad8ad99b477713fd04e0d1f7859f9a7f2" compoundref="SpineMesh_8cpp" startline="472" endline="477">SpineMesh::buildStencil</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1ad92606a51823a508e19ace8c08cc4af2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeshCompt::MeshCompt</definition>
+        <argsstring>()</argsstring>
+        <name>MeshCompt</name>
+        <qualifiedname>MeshCompt::MeshCompt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="23" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshCompt::setStencilSize</definition>
+        <argsstring>(unsigned int numRows, unsigned int numCols)</argsstring>
+        <name>setStencilSize</name>
+        <qualifiedname>MeshCompt::setStencilSize</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>numRows</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numCols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="59" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="106" bodyend="110"/>
+        <references refid="classSparseMatrix_1aabc77208663f5a59bb2bbb0559b614f7" compoundref="SparseMatrix_8h" startline="443" endline="449">SparseMatrix&lt; T &gt;::clear</references>
+        <references refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" compoundref="MeshCompt_8h" startline="74">coreStencil_</references>
+        <references refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" compoundref="SparseMatrix_8h" startline="126" endline="155">SparseMatrix&lt; T &gt;::setSize</references>
+        <referencedby refid="classCubeMesh_1a15fd949e84856e14321830ce459258d4" compoundref="CubeMesh_8cpp" startline="1089" endline="1144">CubeMesh::buildStencil</referencedby>
+        <referencedby refid="classCylMesh_1a2f481d81c9725d5ec0c323cf703652a6" compoundref="CylMesh_8cpp" startline="815" endline="851">CylMesh::buildStencil</referencedby>
+        <referencedby refid="classNeuroMesh_1ae5cd8716e7247e87c5a528c35e620954" compoundref="NeuroMesh_8cpp" startline="1164" endline="1237">NeuroMesh::buildStencil</referencedby>
+        <referencedby refid="classPsdMesh_1a4a2cdecb918f9bd1b182e1bcbdb4e6d2" compoundref="PsdMesh_8cpp" startline="431" endline="435">PsdMesh::buildStencil</referencedby>
+        <referencedby refid="classSpineMesh_1ad8ad99b477713fd04e0d1f7859f9a7f2" compoundref="SpineMesh_8cpp" startline="472" endline="477">SpineMesh::buildStencil</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMeshCompt_1adb85de0aa1c67c78a484d9876299857a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeshCompt::~MeshCompt</definition>
+        <argsstring>()</argsstring>
+        <name>~MeshCompt</name>
+        <qualifiedname>MeshCompt::~MeshCompt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="24" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classMeshCompt" kindref="compound">MeshCompt</ref> represents the base class for all compartments which are set up as a meshes. These include <ref refid="classCubeMesh" kindref="compound">CubeMesh</ref>, <ref refid="classCylMesh" kindref="compound">CylMesh</ref> and <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref>. The <ref refid="classMeshCompt" kindref="compound">MeshCompt</ref> handles the stencil that is the core of all the meshes. The stencil specifies which compartments diffuse into each other, and by how much. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+      </node>
+      <node id="3">
+        <label>CubeMesh</label>
+        <link refid="classCubeMesh"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CylMesh</label>
+        <link refid="classCylMesh"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>EndoMesh</label>
+        <link refid="classEndoMesh"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>NeuroMesh</label>
+        <link refid="classNeuroMesh"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PresynMesh</label>
+        <link refid="classPresynMesh"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>PsdMesh</label>
+        <link refid="classPsdMesh"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SpineMesh</label>
+        <link refid="classSpineMesh"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-entry_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-coreStencil_</edgelabel>
+          <edgelabel>-m_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-extendedMeshEntryVolume_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MeshEntry</label>
+        <link refid="classMeshEntry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#N_</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>T</label>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" line="20" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/MeshCompt.h" bodystart="21" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classMeshCompt_1a781b9a02f4af37458eda4ffb1a6e615d" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>addRow</name></member>
+      <member refid="classChemCompt_1a7127a2f6f2fc7bb9e1b5e23c0b3c704d" prot="private" virt="non-virtual"><scope>MeshCompt</scope><name>boundaries_</name></member>
+      <member refid="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>buildDefaultMesh</name></member>
+      <member refid="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>buildJunction</name></member>
+      <member refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>ChemCompt</name></member>
+      <member refid="classMeshCompt_1a2bc6647b552e0140c6f8e8a05599af95" prot="public" virt="virtual"><scope>MeshCompt</scope><name>clearExtendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a0d6179c226187d89a97a290491e4f714" prot="private" virt="non-virtual"><scope>MeshCompt</scope><name>coreStencil_</name></member>
+      <member refid="classChemCompt_1a510fac43d511a189853bbb6d32afb774" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>distance</name></member>
+      <member refid="classChemCompt_1a82073727afa7625b507772406d39476f" prot="private" virt="non-virtual"><scope>MeshCompt</scope><name>entry_</name></member>
+      <member refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9" prot="public" virt="virtual"><scope>MeshCompt</scope><name>extendedMeshEntryVolume</name></member>
+      <member refid="classMeshCompt_1a38cfb22d8a6dc5e036d0ca9885c851ea" prot="private" virt="non-virtual"><scope>MeshCompt</scope><name>extendedMeshEntryVolume_</name></member>
+      <member refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" prot="public" virt="virtual"><scope>MeshCompt</scope><name>extendStencil</name></member>
+      <member refid="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>flipRet</name></member>
+      <member refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getChildConcs</name></member>
+      <member refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getCoordinates</name></member>
+      <member refid="classChemCompt_1a2915e3d0730c4b18a305ebc57e49b2eb" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getDiffusionArea</name></member>
+      <member refid="classChemCompt_1a081367d727b267b5f75e825c0deb9330" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getDiffusionScaling</name></member>
+      <member refid="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getDimensions</name></member>
+      <member refid="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getEntireVolume</name></member>
+      <member refid="classChemCompt_1aa15b66e3669574b15f303a35af341102" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getIsMembraneBound</name></member>
+      <member refid="classChemCompt_1ae26d4e8d6fcf619f172d06737d4f098f" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getMeshDimensions</name></member>
+      <member refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a50c687c6bb40a49ae6d629def63ed139" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getMeshType</name></member>
+      <member refid="classChemCompt_1ab2c1ef2c7882e253a2b7c045db87c7fb" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getMethod</name></member>
+      <member refid="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516" prot="public" virt="virtual"><scope>MeshCompt</scope><name>getNeighbors</name></member>
+      <member refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getNumEntries</name></member>
+      <member refid="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getOneVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getOneVoxelVolume</name></member>
+      <member refid="classMeshCompt_1a240b1e27d1bd66056e7c6c092e6b7b1e" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getParentVoxel</name></member>
+      <member refid="classMeshCompt_1a9342f82bc2304c99fb58daad6016cd5c" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getStencil</name></member>
+      <member refid="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getStencilIndex</name></member>
+      <member refid="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getStencilRate</name></member>
+      <member refid="classMeshCompt_1aae2b570a057a43104858c5f6c02f423e" prot="public" virt="virtual"><scope>MeshCompt</scope><name>getStencilRow</name></member>
+      <member refid="classMeshCompt_1ad0b8b02617f99d8f15c7655e4e068cc3" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getVoxelArea</name></member>
+      <member refid="classMeshCompt_1aa7a21c23e8d57611c313f59dc2cb3827" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>getVoxelLength</name></member>
+      <member refid="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>getVoxelVolume</name></member>
+      <member refid="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>handleNodeInfo</name></member>
+      <member refid="classChemCompt_1a16a4f8317f8b9c8b9042d96cb3230084" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>indexToSpace</name></member>
+      <member refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>initCinfo</name></member>
+      <member refid="classChemCompt_1ad47583c93af9b85b1f5979a8f2730e29" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>innerBuildDefaultMesh</name></member>
+      <member refid="classChemCompt_1ae6347eff16c758abcd89202283c168d7" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>innerGetDimensions</name></member>
+      <member refid="classChemCompt_1a470081742eabd0580f158c1b165549f7" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>innerGetNumEntries</name></member>
+      <member refid="classMeshCompt_1a7b8e15d0a73de4f467efcf733e095cb7" prot="public" virt="virtual"><scope>MeshCompt</scope><name>innerGetStencilRate</name></member>
+      <member refid="classChemCompt_1a2ef09b42b75a38963cde30ff66e68216" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>innerHandleNodeInfo</name></member>
+      <member refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257" prot="public" virt="virtual"><scope>MeshCompt</scope><name>innerResetStencil</name></member>
+      <member refid="classChemCompt_1aa7641511cdf773c5bbaacef66b6ea5e5" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>innerSetNumEntries</name></member>
+      <member refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" prot="private" virt="non-virtual"><scope>MeshCompt</scope><name>isMembraneBound_</name></member>
+      <member refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>lookupEntry</name></member>
+      <member refid="classMeshCompt_1a32be6bcaae44b684ba9c274126404fec" prot="private" virt="non-virtual"><scope>MeshCompt</scope><name>m_</name></member>
+      <member refid="classChemCompt_1a40842a753e317d720a5495166c56dd58" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>matchMeshEntries</name></member>
+      <member refid="classMeshCompt_1ad92606a51823a508e19ace8c08cc4af2" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>MeshCompt</name></member>
+      <member refid="classChemCompt_1ac9f3fa6dce7fafe302a205156668c390" prot="private" virt="non-virtual"><scope>MeshCompt</scope><name>method_</name></member>
+      <member refid="classChemCompt_1a6669c8fe5495d97b22da6d6244a88d12" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>nearest</name></member>
+      <member refid="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>resetStencil</name></member>
+      <member refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>setChildConcs</name></member>
+      <member refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>setEntireVolume</name></member>
+      <member refid="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>setIsMembraneBound</name></member>
+      <member refid="classChemCompt_1ac2343832803b9366231f1d2d816a0e21" prot="public" virt="virtual"><scope>MeshCompt</scope><name>setMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a346cbd4ea599c929638609bc7f16f83a" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>setMethod</name></member>
+      <member refid="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>setNumEntries</name></member>
+      <member refid="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>setOneVoxelVolume</name></member>
+      <member refid="classMeshCompt_1a3dc8eb0fdcddcf79579584e1060c83b0" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>setStencilSize</name></member>
+      <member refid="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>setVolumeNotRates</name></member>
+      <member refid="classChemCompt_1a546b5a40463c3e84cc5b33baae6fd709" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>vGetEntireVolume</name></member>
+      <member refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>vGetVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>vGetVoxelVolume</name></member>
+      <member refid="classChemCompt_1a1df70b909fac1208b80586b9092341e9" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>voxelVolOut</name></member>
+      <member refid="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c" prot="public" virt="pure-virtual"><scope>MeshCompt</scope><name>vSetVolumeNotRates</name></member>
+      <member refid="classChemCompt_1ae7cb5e1f801974d1c3cd68373dff5cfc" prot="public" virt="virtual"><scope>MeshCompt</scope><name>~ChemCompt</name></member>
+      <member refid="classMeshCompt_1adb85de0aa1c67c78a484d9876299857a" prot="public" virt="non-virtual"><scope>MeshCompt</scope><name>~MeshCompt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

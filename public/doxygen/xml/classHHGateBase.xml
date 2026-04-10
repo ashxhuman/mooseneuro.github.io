@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classHHGateBase" kind="class" language="C++" prot="public">
+    <compoundname>HHGateBase</compoundname>
+    <derivedcompoundref refid="classHHGate" prot="public" virt="non-virtual">HHGate</derivedcompoundref>
+    <derivedcompoundref refid="classHHGate2D" prot="public" virt="non-virtual">HHGate2D</derivedcompoundref>
+    <derivedcompoundref refid="classHHGateF" prot="public" virt="non-virtual">HHGateF</derivedcompoundref>
+    <includes refid="HHGateBase_8h" local="no">HHGateBase.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classHHGateBase_1a7a418822ffe683c37186ea55b2467ced" prot="protected" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id HHGateBase::originalChanId_</definition>
+        <argsstring></argsstring>
+        <name>originalChanId_</name>
+        <qualifiedname>HHGateBase::originalChanId_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of original channel, the one which has actually allocated it, All other Elements have to treat the values as readonly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="77" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classHHGateBase_1ac1911058c354b26abf41df915995954b" compoundref="HHGateBase_8cpp" startline="17" endline="20">HHGateBase</referencedby>
+        <referencedby refid="classHHGateBase_1a660b38c0b79b16104afe4524a2ff92ec" compoundref="HHGateBase_8cpp" startline="22" endline="27">HHGateBase</referencedby>
+        <referencedby refid="classHHGateBase_1a788b4f944d7e8da7965b65824a7eff10" compoundref="HHGateBase_8cpp" startline="43" endline="47">isOriginalChannel</referencedby>
+        <referencedby refid="classHHGateBase_1ab8f274ca8241b0778a64dacf21fa9ca8" compoundref="HHGateBase_8cpp" startline="54" endline="57">originalChannelId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHGateBase_1afdfc2a209ba7b6f0b3d2c59b2fb9495b" prot="protected" static="no" mutable="no">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id HHGateBase::originalGateId_</definition>
+        <argsstring></argsstring>
+        <name>originalGateId_</name>
+        <qualifiedname>HHGateBase::originalGateId_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classId" kindref="compound">Id</ref> of original Gate, the one which was created with the original channel. All other Elements have to treat the values as readonly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="84" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" compoundref="HHGateBase_8cpp" startline="33" endline="41">checkOriginal</referencedby>
+        <referencedby refid="classHHGateBase_1ac1911058c354b26abf41df915995954b" compoundref="HHGateBase_8cpp" startline="17" endline="20">HHGateBase</referencedby>
+        <referencedby refid="classHHGateBase_1a660b38c0b79b16104afe4524a2ff92ec" compoundref="HHGateBase_8cpp" startline="22" endline="27">HHGateBase</referencedby>
+        <referencedby refid="classHHGateBase_1a38767f0bfebaf94223c0ecc8ab7cbd25" compoundref="HHGateBase_8cpp" startline="49" endline="52">isOriginalGate</referencedby>
+        <referencedby refid="classHHGateBase_1af7ed1da0def32bc76c617dd932371174" compoundref="HHGateBase_8cpp" startline="59" endline="62">originalGateId</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HHGateBase::checkOriginal</definition>
+        <argsstring>(Id id, const string &amp;field) const</argsstring>
+        <name>checkOriginal</name>
+        <qualifiedname>HHGateBase::checkOriginal</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the provided <ref refid="classId" kindref="compound">Id</ref> is the one that the <ref refid="classHHGate" kindref="compound">HHGate</ref> was created on. If true, fine, otherwise complains about trying to set the field. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="46" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.cpp" bodystart="33" bodyend="41"/>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classHHGateBase_1afdfc2a209ba7b6f0b3d2c59b2fb9495b" compoundref="HHGateBase_8h" startline="84">originalGateId_</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <referencedby refid="classHHGateF_1a02d457b68e6d3b416c10e8ac5efe9d65" compoundref="HHGateF_8cpp" startline="195" endline="207">HHGateF::setAlpha</referencedby>
+        <referencedby refid="classHHGate_1ac5be99e28d5bc76ab5333d11a7256458" compoundref="HHGate_8cpp" startline="374" endline="387">HHGate::setAlpha</referencedby>
+        <referencedby refid="classHHGate_1acbea65597778334900bd339b2a1fa2cf" compoundref="HHGate_8cpp" startline="548" endline="554">HHGate::setAlphaExpr</referencedby>
+        <referencedby refid="classHHGateF_1a77461985bff1ec98695d90bca502a515" compoundref="HHGateF_8cpp" startline="214" endline="226">HHGateF::setBeta</referencedby>
+        <referencedby refid="classHHGate_1afabc941732822811b7615279a0981532" compoundref="HHGate_8cpp" startline="394" endline="407">HHGate::setBeta</referencedby>
+        <referencedby refid="classHHGate_1afb5ef943e349dad862aa5b62ac23b36c" compoundref="HHGate_8cpp" startline="561" endline="567">HHGate::setBetaExpr</referencedby>
+        <referencedby refid="classHHGate_1a6ecbeb88f8da694dfec21df5806a3a92" compoundref="HHGate_8cpp" startline="650" endline="666">HHGate::setDivs</referencedby>
+        <referencedby refid="classHHGateF_1afadc0abe651ea9159b9547e472d6c6fd" compoundref="HHGateF_8cpp" startline="252" endline="264">HHGateF::setInf</referencedby>
+        <referencedby refid="classHHGate_1a2f6ddfb3cce0bd2e80cc771f87e94682" compoundref="HHGate_8cpp" startline="587" endline="593">HHGate::setInfExpr</referencedby>
+        <referencedby refid="classHHGate_1aaf1876cbef3c9a463d956a902c224ff8" compoundref="HHGate_8cpp" startline="627" endline="643">HHGate::setMax</referencedby>
+        <referencedby refid="classHHGate_1a5921949b1ffa08132280c39ce4e6070c" compoundref="HHGate_8cpp" startline="605" endline="620">HHGate::setMin</referencedby>
+        <referencedby refid="classHHGate_1a4a4b8433ce126fd2e17602add06d7a85" compoundref="HHGate_8cpp" startline="434" endline="447">HHGate::setMinfinity</referencedby>
+        <referencedby refid="classHHGate_1a2aad40f13091ca961b8c43d1c7a5785f" compoundref="HHGate_8cpp" startline="673" endline="687">HHGate::setTableA</referencedby>
+        <referencedby refid="classHHGate_1a9e3678b068293ce3500783cd56504dbf" compoundref="HHGate_8cpp" startline="694" endline="707">HHGate::setTableB</referencedby>
+        <referencedby refid="classHHGateF_1a4cdb18e8a31ba7c2935440240d0c6582" compoundref="HHGateF_8cpp" startline="233" endline="245">HHGateF::setTau</referencedby>
+        <referencedby refid="classHHGate_1a7cefceaa2b6a0314178e5bdaac009e00" compoundref="HHGate_8cpp" startline="414" endline="427">HHGate::setTau</referencedby>
+        <referencedby refid="classHHGate_1a2f1a7aad4631ff0c6922b9ad8ea09e8f" compoundref="HHGate_8cpp" startline="574" endline="580">HHGate::setTauExpr</referencedby>
+        <referencedby refid="classHHGate_1a65393346a0f47f47789d3caf50d551c2" compoundref="HHGate_8cpp" startline="720" endline="736">HHGate::setupAlpha</referencedby>
+        <referencedby refid="classHHGate_1a6b4f513c2d8fcfa134f0dcefc053799f" compoundref="HHGate_8cpp" startline="912" endline="985">HHGate::setupGate</referencedby>
+        <referencedby refid="classHHGate_1a0c91e5dbb806608cc359bd325c33cb7c" compoundref="HHGate_8cpp" startline="753" endline="763">HHGate::setupTau</referencedby>
+        <referencedby refid="classHHGate_1a070f312ef12897e23692214bd7b79d25" compoundref="HHGate_8cpp" startline="714" endline="718">HHGate::setUseInterpolation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGateBase_1ac1911058c354b26abf41df915995954b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HHGateBase::HHGateBase</definition>
+        <argsstring>()</argsstring>
+        <name>HHGateBase</name>
+        <qualifiedname>HHGateBase::HHGateBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dummy constructor, to keep <ref refid="classDinfo" kindref="compound">Dinfo</ref> happy. Should never be used </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="28" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.cpp" bodystart="17" bodyend="20"/>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classHHGateBase_1a7a418822ffe683c37186ea55b2467ced" compoundref="HHGateBase_8h" startline="77">originalChanId_</references>
+        <references refid="classHHGateBase_1afdfc2a209ba7b6f0b3d2c59b2fb9495b" compoundref="HHGateBase_8h" startline="84">originalGateId_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGateBase_1a660b38c0b79b16104afe4524a2ff92ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HHGateBase::HHGateBase</definition>
+        <argsstring>(Id originalChanId, Id originalGateId)</argsstring>
+        <name>HHGateBase</name>
+        <qualifiedname>HHGateBase::HHGateBase</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>originalChanId</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>originalGateId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor is the one meant to be used. It takes the originalId of the parent <ref refid="classHHChannel" kindref="compound">HHChannel</ref> as a required argument, so that any subsequent &apos;write&apos; functions can be checked to see if they are legal. Also tracks its own <ref refid="classId" kindref="compound">Id</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="36" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.cpp" bodystart="22" bodyend="27"/>
+        <references refid="classHHGateBase_1a7a418822ffe683c37186ea55b2467ced" compoundref="HHGateBase_8h" startline="77">originalChanId_</references>
+        <references refid="classHHGateBase_1afdfc2a209ba7b6f0b3d2c59b2fb9495b" compoundref="HHGateBase_8h" startline="84">originalGateId_</references>
+        <referencedby refid="classHHGate_1acda5f32905ab0d86750ee25776fd990c" compoundref="HHGate_8cpp" startline="283" endline="295">HHGate::HHGate</referencedby>
+        <referencedby refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate::HHGate</referencedby>
+        <referencedby refid="classHHGate2D_1ae50830b517becd5fb5e91a7814b75a94" compoundref="HHGate2D_8cpp" startline="108" endline="112">HHGate2D::HHGate2D</referencedby>
+        <referencedby refid="classHHGateF_1aa961f351f450e5f0a34160a9f4060e8b" compoundref="HHGateF_8cpp" startline="127" endline="130">HHGateF::HHGateF</referencedby>
+        <referencedby refid="classHHGateF_1a27c42d36672cf99c8ac6c69b0b3930d8" compoundref="HHGateF_8cpp" startline="132" endline="144">HHGateF::HHGateF</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGateBase_1a788b4f944d7e8da7965b65824a7eff10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HHGateBase::isOriginalChannel</definition>
+        <argsstring>(Id id) const</argsstring>
+        <name>isOriginalChannel</name>
+        <qualifiedname>HHGateBase::isOriginalChannel</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>isOriginalChannel returns true if the provided <ref refid="classId" kindref="compound">Id</ref> is the <ref refid="classId" kindref="compound">Id</ref> of the channel on which the <ref refid="classHHGate" kindref="compound">HHGate</ref> was created. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="52" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.cpp" bodystart="43" bodyend="47"/>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classHHGateBase_1a7a418822ffe683c37186ea55b2467ced" compoundref="HHGateBase_8h" startline="77">originalChanId_</references>
+        <referencedby refid="classHHChannel_1af99fd659b088b19e70069c2f41a3c70c" compoundref="HHChannel_8cpp" startline="108" endline="119">HHChannel::checkOriginal</referencedby>
+        <referencedby refid="classHHChannelF_1ac413e239ddce71cc8da2b84fb2f19bac" compoundref="HHChannelF_8cpp" startline="87" endline="97">HHChannelF::checkOriginal</referencedby>
+        <referencedby refid="classHHChannelF2D_1a26ad1a4612177e372ccf5b2c92a3c5ed" compoundref="HHChannelF2D_8cpp" startline="474" endline="487">HHChannelF2D::checkOriginal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHGateBase_1a38767f0bfebaf94223c0ecc8ab7cbd25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HHGateBase::isOriginalGate</definition>
+        <argsstring>(Id id) const</argsstring>
+        <name>isOriginalGate</name>
+        <qualifiedname>HHGateBase::isOriginalGate</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>isOriginalChannel returns true if the provided <ref refid="classId" kindref="compound">Id</ref> is the <ref refid="classId" kindref="compound">Id</ref> of the Gate created at the same time as the original channel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="58" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.cpp" bodystart="49" bodyend="52"/>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classHHGateBase_1afdfc2a209ba7b6f0b3d2c59b2fb9495b" compoundref="HHGateBase_8h" startline="84">originalGateId_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGateBase_1ab8f274ca8241b0778a64dacf21fa9ca8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id HHGateBase::originalChannelId</definition>
+        <argsstring>() const</argsstring>
+        <name>originalChannelId</name>
+        <qualifiedname>HHGateBase::originalChannelId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <ref refid="classId" kindref="compound">Id</ref> of the original Channel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="63" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.cpp" bodystart="54" bodyend="57"/>
+        <references refid="classHHGateBase_1a7a418822ffe683c37186ea55b2467ced" compoundref="HHGateBase_8h" startline="77">originalChanId_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHGateBase_1af7ed1da0def32bc76c617dd932371174" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classId" kindref="compound">Id</ref></type>
+        <definition>Id HHGateBase::originalGateId</definition>
+        <argsstring>() const</argsstring>
+        <name>originalGateId</name>
+        <qualifiedname>HHGateBase::originalGateId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the <ref refid="classId" kindref="compound">Id</ref> of the original Gate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="68" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.cpp" bodystart="59" bodyend="62"/>
+        <references refid="classHHGateBase_1afdfc2a209ba7b6f0b3d2c59b2fb9495b" compoundref="HHGateBase_8h" startline="84">originalGateId_</references>
+        <referencedby refid="classHSolveUtils_1abded29d89bd4fbc7fe23ca4b5fc3fc60" compoundref="HSolveUtils_8cpp" startline="75" endline="120">HSolveUtils::gates</referencedby>
+        <referencedby refid="classHSolveUtils_1a2e2d6f729ab88311b21db26bf26465d2" compoundref="HSolveUtils_8cpp" startline="205" endline="252">HSolveUtils::rates</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classHHGateBase_1a13388ad0120d2b19a5ddf51ead111d54" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>static const Cinfo * HHGateBase::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>HHGateBase::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="70" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is the base for gates in Hodgkin-Huxley type channels (HHGates). HHGates are typically shared. This means that when you make a copy or a vector of an <ref refid="classHHChannel" kindref="compound">HHChannel</ref>, there is only a single <ref refid="classHHGate" kindref="compound">HHGate</ref> created, and its pointer is used by all the copies. The lookup functions are thread-safe. <ref refid="classField" kindref="compound">Field</ref> assignment to the <ref refid="classHHGate" kindref="compound">HHGate</ref> should be possible only from the original <ref refid="classHHChannel" kindref="compound">HHChannel</ref>, but all the others do have read permission. This base class only factors out the tracking of the ownership. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>HHGate</label>
+        <link refid="classHHGate"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HHGate2D</label>
+        <link refid="classHHGate2D"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HHGateBase</label>
+        <link refid="classHHGateBase"/>
+      </node>
+      <node id="4">
+        <label>HHGateF</label>
+        <link refid="classHHGateF"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>HHGateF2D</label>
+        <link refid="classHHGateF2D"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>HHGateBase</label>
+        <link refid="classHHGateBase"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#originalChanId_</edgelabel>
+          <edgelabel>#originalGateId_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" line="23" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHGateBase.h" bodystart="23" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classHHGateBase_1af5ec33b1a27dff42b92dd43ad2d2f0fa" prot="public" virt="non-virtual"><scope>HHGateBase</scope><name>checkOriginal</name></member>
+      <member refid="classHHGateBase_1ac1911058c354b26abf41df915995954b" prot="public" virt="non-virtual"><scope>HHGateBase</scope><name>HHGateBase</name></member>
+      <member refid="classHHGateBase_1a660b38c0b79b16104afe4524a2ff92ec" prot="public" virt="non-virtual"><scope>HHGateBase</scope><name>HHGateBase</name></member>
+      <member refid="classHHGateBase_1a13388ad0120d2b19a5ddf51ead111d54" prot="public" virt="non-virtual"><scope>HHGateBase</scope><name>initCinfo</name></member>
+      <member refid="classHHGateBase_1a788b4f944d7e8da7965b65824a7eff10" prot="public" virt="non-virtual"><scope>HHGateBase</scope><name>isOriginalChannel</name></member>
+      <member refid="classHHGateBase_1a38767f0bfebaf94223c0ecc8ab7cbd25" prot="public" virt="non-virtual"><scope>HHGateBase</scope><name>isOriginalGate</name></member>
+      <member refid="classHHGateBase_1a7a418822ffe683c37186ea55b2467ced" prot="protected" virt="non-virtual"><scope>HHGateBase</scope><name>originalChanId_</name></member>
+      <member refid="classHHGateBase_1ab8f274ca8241b0778a64dacf21fa9ca8" prot="public" virt="non-virtual"><scope>HHGateBase</scope><name>originalChannelId</name></member>
+      <member refid="classHHGateBase_1af7ed1da0def32bc76c617dd932371174" prot="public" virt="non-virtual"><scope>HHGateBase</scope><name>originalGateId</name></member>
+      <member refid="classHHGateBase_1afdfc2a209ba7b6f0b3d2c59b2fb9495b" prot="protected" virt="non-virtual"><scope>HHGateBase</scope><name>originalGateId_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

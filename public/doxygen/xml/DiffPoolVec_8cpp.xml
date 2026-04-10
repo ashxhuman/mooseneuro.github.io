@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="DiffPoolVec_8cpp" kind="file" language="C++">
+    <compoundname>DiffPoolVec.cpp</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="SparseMatrix_8h" local="yes">../basecode/SparseMatrix.h</includes>
+    <includes refid="DiffPoolVec_8h" local="yes">DiffPoolVec.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>../basecode/SparseMatrix.h</label>
+        <link refid="SparseMatrix_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/DiffPoolVec.cpp</label>
+        <link refid="DiffPoolVec_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DiffPoolVec.h</label>
+        <link refid="DiffPoolVec_8h"/>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+      <node id="5">
+        <label>cassert</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2014<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../basecode/SparseMatrix.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DiffPoolVec_8h" kindref="compound">DiffPoolVec.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classDiffPoolVec_1a61d9558cb5b0a5284198e69a2369323c" refkind="member"><highlight class="normal"><ref refid="classDiffPoolVec_1a61d9558cb5b0a5284198e69a2369323c" kindref="member">DiffPoolVec::DiffPoolVec</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>id_(<sp/>0<sp/>),<sp/>n_(<sp/>1,<sp/>0.0<sp/>),<sp/>concInit_(<sp/>1,<sp/>0.0<sp/>),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>diffConst_(<sp/>1.0e-12<sp/>),<sp/>motorConst_(<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classDiffPoolVec_1af32ab38ca7c6aa642e32ebf78867cb80" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1af32ab38ca7c6aa642e32ebf78867cb80" kindref="member">DiffPoolVec::getConcInit</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="33"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>voxel<sp/>&lt;<sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>[<sp/>voxel<sp/>];</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classDiffPoolVec_1a27dc343a9b07b32492c671ecd151ab8b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a27dc343a9b07b32492c671ecd151ab8b" kindref="member">DiffPoolVec::setConcInit</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>voxel<sp/>&lt;<sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>[<sp/>voxel<sp/>]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classDiffPoolVec_1adff89de588238c0796720423f85312ac" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1adff89de588238c0796720423f85312ac" kindref="member">DiffPoolVec::getN</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="45"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>voxel<sp/>&lt;<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>[<sp/>voxel<sp/>];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classDiffPoolVec_1a2c1afbd06c6d141bbe43060341730534" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a2c1afbd06c6d141bbe43060341730534" kindref="member">DiffPoolVec::setN</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>voxel<sp/>&lt;<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>[<sp/>voxel<sp/>]<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classDiffPoolVec_1a132f4d621d2b31f1269012c1011df566" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a132f4d621d2b31f1269012c1011df566" kindref="member">DiffPoolVec::getPrev</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voxel<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="57"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>voxel<sp/>&lt;<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1aa6a9e199462fb9d318d0d30b6c1398cf" kindref="member">prev_</ref>[<sp/>voxel<sp/>];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classDiffPoolVec_1abddb702fd606060e32a949619940a482" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/><ref refid="classDiffPoolVec_1abddb702fd606060e32a949619940a482" kindref="member">DiffPoolVec::getNvec</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="63"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classDiffPoolVec_1af4f9b1d5218eed991a8f434d4f0f4a79" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1af4f9b1d5218eed991a8f434d4f0f4a79" kindref="member">DiffPoolVec::setNvec</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>vec<sp/>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>vec.size()<sp/>==<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref><sp/>=<sp/>vec;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classDiffPoolVec_1a705e9b9fd1f78eb381ef0b320b891352" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1af4f9b1d5218eed991a8f434d4f0f4a79" kindref="member">DiffPoolVec::setNvec</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::const_iterator<sp/>q<sp/>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/>start<sp/>+<sp/>num<sp/>&lt;=<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;::iterator<sp/>p<sp/>=<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.begin()<sp/>+<sp/>start;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>num;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*p++<sp/>=<sp/>*q++;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classDiffPoolVec_1af0afeeb49ac4e831aa4628f17d25282b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1af0afeeb49ac4e831aa4628f17d25282b" kindref="member">DiffPoolVec::setPrevVec</ref>()</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1aa6a9e199462fb9d318d0d30b6c1398cf" kindref="member">prev_</ref><sp/>=<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classDiffPoolVec_1ade6a3f8bee7d3f1e0aeb4ce8c1bbf43e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1ade6a3f8bee7d3f1e0aeb4ce8c1bbf43e" kindref="member">DiffPoolVec::getDiffConst</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="88"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1adc50dbfd03853fcd9f4a7265f62c09fd" kindref="member">diffConst_</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classDiffPoolVec_1a2d3f3ed1c924e10eadaf66f7b93956a5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a2d3f3ed1c924e10eadaf66f7b93956a5" kindref="member">DiffPoolVec::setDiffConst</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1adc50dbfd03853fcd9f4a7265f62c09fd" kindref="member">diffConst_</ref><sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classDiffPoolVec_1a08647899dab8b2bf922ad6b8a6952961" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a08647899dab8b2bf922ad6b8a6952961" kindref="member">DiffPoolVec::getMotorConst</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="98"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a2d093e0df5ca897eff0bab0e67a9a83b" kindref="member">motorConst_</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classDiffPoolVec_1a071acc5dfdd5f67cbb89fb9d0b57e905" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a071acc5dfdd5f67cbb89fb9d0b57e905" kindref="member">DiffPoolVec::setMotorConst</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v<sp/>)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1a2d093e0df5ca897eff0bab0e67a9a83b" kindref="member">motorConst_</ref><sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classDiffPoolVec_1ab4abd440f075c7cce3dcbd60e3bd5d31" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1ab4abd440f075c7cce3dcbd60e3bd5d31" kindref="member">DiffPoolVec::setNumVoxels</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num<sp/>)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>.resize(<sp/>num,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.resize(<sp/>num,<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classDiffPoolVec_1abb3a20a57cf04ddd2ca96d8716d1b20a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1abb3a20a57cf04ddd2ca96d8716d1b20a" kindref="member">DiffPoolVec::getNumVoxels</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="114"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classDiffPoolVec_1a1d43d481372d381ede78ee837a1520a4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a1d43d481372d381ede78ee837a1520a4" kindref="member">DiffPoolVec::setId</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1a357604804e1e675bc3e789c0f5468207" kindref="member">id_</ref><sp/>=<sp/>id;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classDiffPoolVec_1a7e766c12f5bca7d54c9b07a9ca85f2bc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a7e766c12f5bca7d54c9b07a9ca85f2bc" kindref="member">DiffPoolVec::getId</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="124"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a357604804e1e675bc3e789c0f5468207" kindref="member">id_</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classDiffPoolVec_1acbb8a35230e014317fb0f4991e435d3d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1acbb8a35230e014317fb0f4991e435d3d" kindref="member">DiffPoolVec::setOps</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/><ref refid="classTriplet" kindref="compound">Triplet&lt; double &gt;</ref><sp/>&gt;&amp;<sp/>ops,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>diagVal<sp/>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ops.size()<sp/>&gt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<sp/>diagVal.size()<sp/>==<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1a70a02b05c1adc9254e014ff5b21cd9d1" kindref="member">ops_</ref><sp/>=<sp/>ops;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1aae5e3054ca4284ace3002ea990ef1537" kindref="member">diagVal_</ref><sp/>=<sp/>diagVal;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1a70a02b05c1adc9254e014ff5b21cd9d1" kindref="member">ops_</ref>.clear();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1aae5e3054ca4284ace3002ea990ef1537" kindref="member">diagVal_</ref>.clear();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classDiffPoolVec_1aad2230e0c43adf33314b3d0ab6063d91" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1aad2230e0c43adf33314b3d0ab6063d91" kindref="member">DiffPoolVec::advance</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt<sp/>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classDiffPoolVec_1a70a02b05c1adc9254e014ff5b21cd9d1" kindref="member">ops_</ref>.size()<sp/>==<sp/>0<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="classDiffPoolVec_1a70a02b05c1adc9254e014ff5b21cd9d1" kindref="member">ops_</ref>.cbegin();<sp/>i<sp/>!=<sp/><ref refid="classDiffPoolVec_1a70a02b05c1adc9254e014ff5b21cd9d1" kindref="member">ops_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>[i-&gt;c_]<sp/>-=<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>[i-&gt;b_]<sp/>*<sp/>i-&gt;a_;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size()<sp/>==<sp/><ref refid="classDiffPoolVec_1aae5e3054ca4284ace3002ea990ef1537" kindref="member">diagVal_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>iy<sp/>=<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.begin();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="classDiffPoolVec_1aae5e3054ca4284ace3002ea990ef1537" kindref="member">diagVal_</ref>.cbegin();<sp/>i<sp/>!=<sp/><ref refid="classDiffPoolVec_1aae5e3054ca4284ace3002ea990ef1537" kindref="member">diagVal_</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*iy++<sp/>*=<sp/>*i;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="classDiffPoolVec_1a9cab1cbc0bc5a68aa4d041b88ef37a45" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDiffPoolVec_1a9cab1cbc0bc5a68aa4d041b88ef37a45" kindref="member">DiffPoolVec::reinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;<sp/>double<sp/>&gt;&amp;<sp/>vols<sp/>)<sp/></highlight><highlight class="comment">//<sp/>Not<sp/>called<sp/>by<sp/>the<sp/>clock,<sp/>but<sp/>by<sp/>parent.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>NA_<sp/>=<sp/>6.0221415e23;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref>.size()<sp/>==<sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>.size()<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>vols(<sp/>concInit_.size(),<sp/>1.0<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>nInit(<sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>.size(),<sp/>0.0<sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>.size();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nInit[i]<sp/>=<sp/><ref refid="classDiffPoolVec_1aa15add9bb98782051be8e131eebf64b6" kindref="member">concInit_</ref>[i]<sp/>*<sp/>NA_<sp/>*<sp/>vols[i];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDiffPoolVec_1aa6a9e199462fb9d318d0d30b6c1398cf" kindref="member">prev_</ref><sp/>=<sp/><ref refid="classDiffPoolVec_1a7d56e00ce5766db51e82058d64281313" kindref="member">n_</ref><sp/>=<sp/>nInit;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/DiffPoolVec.cpp"/>
+  </compounddef>
+</doxygen>

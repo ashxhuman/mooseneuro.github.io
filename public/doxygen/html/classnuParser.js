@@ -1,0 +1,35 @@
+var classnuParser =
+[
+    [ "valArgs", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46", [
+      [ "EXPR", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46a88e61c52c75c31e8f2f7115aa00df6ff", null ],
+      [ "P", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46a2e94cb2203b157b89b47932a2aaceeac", null ],
+      [ "G", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46a1d8c06dc25bafb2d1e0a17dd45b8c4d5", null ],
+      [ "EL", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46a787023d0dab9023a6471d22f21139113", null ],
+      [ "LEN", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46ae092f4c64e72d216844adc14597d26de", null ],
+      [ "DIA", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46ac2d9357593ad58abe4df62f09703b91a", null ],
+      [ "MAXP", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46ada8bc4ceb94a1894226474102ba95d58", null ],
+      [ "MAXG", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46a5a2c325e16d3058f55d3ebbce9caa100", null ],
+      [ "MAXL", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46aa34d7a64f0d74d2039110dd79f396676", null ],
+      [ "X", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46ab1bde87668a049a011e8fc585101a705", null ],
+      [ "Y", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46ab61ea8fb57e1028e138777313b455d12", null ],
+      [ "Z", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46ac744f0ad9d9e6bb7e96bc3f81dce7fdb", null ],
+      [ "OLDVAL", "classnuParser.html#a7deeee53db0429bb9dd629b58e4afc46a6003e62206ff7d35581296d9e0c9c5fe", null ]
+    ] ],
+    [ "nuParser", "classnuParser.html#acefd8c2af549c61f58dd09ca8c265d53", null ],
+    [ "eval", "classnuParser.html#ae11d3ea466758bbbfea900177b4469f7", null ],
+    [ "H", "classnuParser.html#a37b42d710d1ef498d2eda00c69d14ec3", null ],
+    [ "dia", "classnuParser.html#a090381920834b8fc7ea352c6fcac9d41", null ],
+    [ "g", "classnuParser.html#a2779b750e890347b32288a596d4d3f4a", null ],
+    [ "L", "classnuParser.html#a2c0f1f45d7453dab641490bc1f40b949", null ],
+    [ "len", "classnuParser.html#a307948d3e7a9aab5b32e47f3f99641d5", null ],
+    [ "maxG", "classnuParser.html#aa0b34f358948dece3d41eab27b6a6ca2", null ],
+    [ "maxL", "classnuParser.html#a014ae0cdb9d08dc45cb7c2f21c22e094", null ],
+    [ "maxP", "classnuParser.html#a98a30691fb5ef3b22ebb52c76518c049", null ],
+    [ "numVal", "classnuParser.html#ad4be6cdef5fbc01551a546439a0e28de", null ],
+    [ "oldVal", "classnuParser.html#a57f0ee8cd8c1f622c4c8e8d431385efd", null ],
+    [ "p", "classnuParser.html#aa07a28f9f51133b57bb19ee630b6af70", null ],
+    [ "useOldVal", "classnuParser.html#a10c3cb4ec0033a47ba40874f78263d56", null ],
+    [ "x", "classnuParser.html#a7e3c54c339ab18eb35de492c325b43e0", null ],
+    [ "y", "classnuParser.html#a8ef743ffc4b28639c36ed3a985362d19", null ],
+    [ "z", "classnuParser.html#aaabd3c80bf05b8cbd7274c133e4e92a2", null ]
+];

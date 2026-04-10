@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classFastElim" kind="class" language="C++" prot="public">
+    <compoundname>FastElim</compoundname>
+    <basecompoundref refid="classSparseMatrix" prot="public" virt="non-virtual">SparseMatrix&lt; double &gt;</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFastElim_1ac5fe739084ecbbd78a12094a3c34c118" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double *</type>
+        <definition>const double * FastElim::allEntries</definition>
+        <argsstring>() const</argsstring>
+        <name>allEntries</name>
+        <qualifiedname>FastElim::allEntries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" line="56" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classFastElim_1a590fb2ef34751a0c2dc550a5652e5e9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastElim::buildBackwardSub</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;diag, vector&lt; Triplet&lt; double &gt; &gt; &amp;bops, vector&lt; double &gt; &amp;diagVal)</argsstring>
+        <name>buildBackwardSub</name>
+        <qualifiedname>FastElim::buildBackwardSub</qualifiedname>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>diag</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classTriplet" kindref="compound">Triplet</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>bops</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>diagVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operations to be done on the RHS for the back sub are generated and put into the bops (backward ops) vector. col &gt; row here, row is the entry being operated on, and col is given by rowsToSub. offDiagVal is the value on the off-diagonal at row,col. diagVal is the value on the diagonal at [row][row]. RHS[row] = ( RHS[row] - offDiagVal * RHS[col] ) / diagVal </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" line="50" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" bodystart="383" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="classFastElim_1a3689f7d4c21b804b243c72eb801cf625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastElim::buildForwardElim</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;diag, vector&lt; Triplet&lt; double &gt; &gt; &amp;fops)</argsstring>
+        <name>buildForwardElim</name>
+        <qualifiedname>FastElim::buildForwardElim</qualifiedname>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>diag</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classTriplet" kindref="compound">Triplet</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>fops</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Builds the vector of forward ops: ratio, i, j RHS[i] = RHS[i] - RHS[j] * ratio This vec tells the routine which rows below have to be eliminated. This includes the rows if any in the tridiagonal band and also rows, if any, on branches. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" line="48" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" bodystart="304" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classFastElim_1ae2b72cb10c768aa374b2faa1de9a19a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool FastElim::hinesReorder</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;parentVoxel)</argsstring>
+        <name>hinesReorder</name>
+        <qualifiedname>FastElim::hinesReorder</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>parentVoxel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reorders rows and columns to put the matrix in the form suitable for rapid single-pass inversion. Returns 0 on failure. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" line="55" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" bodystart="86" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classFastElim_1a7b19e136ad65f6ca6edd15e1dbacd8a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastElim::makeTestMatrix</definition>
+        <argsstring>(const double *test, unsigned int numCompts)</argsstring>
+        <name>makeTestMatrix</name>
+        <qualifiedname>FastElim::makeTestMatrix</qualifiedname>
+        <param>
+          <type>const double *</type>
+          <declname>test</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numCompts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds the &apos;twigs&apos; of the matrix: Only one end connected. void FastElim::extractTwig( unsigned int i,
+                        vector&lt; unsigned int &gt;&amp; rowReorder,
+                        vector&lt; bool &gt;&amp; extracted ) { ; }</para>
+<para>void FastElim::findClosedEnds(
+                        vector&lt; unsigned int &gt;&amp; rowReorder,
+                        vector&lt; bool &gt;&amp; extracted ) { ; }</para>
+<para>void FastElim::extractClosedEnds( unsigned int i,
+                        vector&lt; unsigned int &gt;&amp; rowReorder,
+                        vector&lt; bool &gt;&amp; extracted ) { ; } </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" line="43" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" bodystart="268" bodyend="289"/>
+        <referencedby refid="standaloneTestFastElim_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="standaloneTestFastElim_8cpp" startline="474" endline="682">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFastElim_1ac45a2ddad0e65483bbdeb903c43a85c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FastElim::shuffleRows</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;lookupOldRowFromNew)</argsstring>
+        <name>shuffleRows</name>
+        <qualifiedname>FastElim::shuffleRows</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>lookupOldRowFromNew</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" line="57" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" bodystart="140" bodyend="170"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FastElim</label>
+        <link refid="classFastElim"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+      </node>
+      <node id="2">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FastElim</label>
+        <link refid="classFastElim"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SparseMatrix&lt; double &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#N_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" line="40" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/diffusion/standaloneTestFastElim.cpp" bodystart="41" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classSparseMatrix_1a0bf45bbe509508455280e65ac22b4cfc" prot="public" virt="non-virtual"><scope>FastElim</scope><name>addRow</name></member>
+      <member refid="classSparseMatrix_1a873cc36079017efce916136e0bc50c20" prot="public" virt="non-virtual"><scope>FastElim</scope><name>addRow</name></member>
+      <member refid="classFastElim_1ac5fe739084ecbbd78a12094a3c34c118" prot="public" virt="non-virtual"><scope>FastElim</scope><name>allEntries</name></member>
+      <member refid="classFastElim_1a590fb2ef34751a0c2dc550a5652e5e9f" prot="public" virt="non-virtual"><scope>FastElim</scope><name>buildBackwardSub</name></member>
+      <member refid="classFastElim_1a3689f7d4c21b804b243c72eb801cf625" prot="public" virt="non-virtual"><scope>FastElim</scope><name>buildForwardElim</name></member>
+      <member refid="classSparseMatrix_1aabc77208663f5a59bb2bbb0559b614f7" prot="public" virt="non-virtual"><scope>FastElim</scope><name>clear</name></member>
+      <member refid="classSparseMatrix_1ad55323ab4bc7dd7a99db3d95d9288ee1" prot="public" virt="non-virtual"><scope>FastElim</scope><name>colIndex</name></member>
+      <member refid="classSparseMatrix_1ab5dc915f34dc4fbdaa8e34874e3cb1b8" prot="protected" virt="non-virtual"><scope>FastElim</scope><name>colIndex_</name></member>
+      <member refid="classSparseMatrix_1aa7910d9d8252b628ac1d13ba31eef66c" prot="public" virt="non-virtual"><scope>FastElim</scope><name>get</name></member>
+      <member refid="classSparseMatrix_1a5ed7e8d630004f91d4b46b3cbdfcbad3" prot="public" virt="non-virtual"><scope>FastElim</scope><name>getColumn</name></member>
+      <member refid="classSparseMatrix_1a354ec2999a4fa10d5c1127ca769d116b" prot="public" virt="non-virtual"><scope>FastElim</scope><name>getRow</name></member>
+      <member refid="classSparseMatrix_1a5d8d69c9a34cbf241483691d6eda63a8" prot="public" virt="non-virtual"><scope>FastElim</scope><name>getRow</name></member>
+      <member refid="classFastElim_1ae2b72cb10c768aa374b2faa1de9a19a4" prot="public" virt="non-virtual"><scope>FastElim</scope><name>hinesReorder</name></member>
+      <member refid="classFastElim_1a7b19e136ad65f6ca6edd15e1dbacd8a3" prot="public" virt="non-virtual"><scope>FastElim</scope><name>makeTestMatrix</name></member>
+      <member refid="classSparseMatrix_1aadecaf442db01a422f54cead458c3e2b" prot="public" virt="non-virtual"><scope>FastElim</scope><name>matrixEntry</name></member>
+      <member refid="classSparseMatrix_1a245d77f4e31013dc13ff4c979c36db4f" prot="protected" virt="non-virtual"><scope>FastElim</scope><name>N_</name></member>
+      <member refid="classSparseMatrix_1a34a568e3db0bafd38cf0ccc37cd2086b" prot="public" virt="non-virtual"><scope>FastElim</scope><name>nColumns</name></member>
+      <member refid="classSparseMatrix_1a6b4f879cfce0abbe1094736a1d551f9f" prot="protected" virt="non-virtual"><scope>FastElim</scope><name>ncolumns_</name></member>
+      <member refid="classSparseMatrix_1a9da8c93d288d66c72f3584e378fa582e" prot="public" virt="non-virtual"><scope>FastElim</scope><name>nEntries</name></member>
+      <member refid="classSparseMatrix_1a2c51cee470d726cf04e262a4038625f5" prot="public" virt="non-virtual"><scope>FastElim</scope><name>nRows</name></member>
+      <member refid="classSparseMatrix_1ab20517e10c664d52fc2894b305605e5c" prot="protected" virt="non-virtual"><scope>FastElim</scope><name>nrows_</name></member>
+      <member refid="classSparseMatrix_1a570dec21ec6f18b20514a3cc9259cd9c" prot="public" virt="non-virtual"><scope>FastElim</scope><name>pairFill</name></member>
+      <member refid="classSparseMatrix_1a9ce5500b7dfde25db326d2977812981d" prot="public" virt="non-virtual"><scope>FastElim</scope><name>print</name></member>
+      <member refid="classSparseMatrix_1adeb305405622ab73abe69e40bb228812" prot="public" virt="non-virtual"><scope>FastElim</scope><name>printInternal</name></member>
+      <member refid="classSparseMatrix_1aa36961d264020e8701f658e97323f59c" prot="public" virt="non-virtual"><scope>FastElim</scope><name>printTriplet</name></member>
+      <member refid="classSparseMatrix_1aba47de30cd631afe8923a6bb03d7db7d" prot="public" virt="non-virtual"><scope>FastElim</scope><name>reorderColumns</name></member>
+      <member refid="classSparseMatrix_1a7c2646d67d8cde76ef422e4092e0fc20" prot="public" virt="non-virtual"><scope>FastElim</scope><name>rowStart</name></member>
+      <member refid="classSparseMatrix_1a53b0cae8d922d769eecade1b99803bfc" prot="protected" virt="non-virtual"><scope>FastElim</scope><name>rowStart_</name></member>
+      <member refid="classSparseMatrix_1a0dddc631322ef8cae33f24b770bafe60" prot="public" virt="non-virtual"><scope>FastElim</scope><name>set</name></member>
+      <member refid="classSparseMatrix_1a6ceeff27e7ff6df253e88f3c6a24f820" prot="public" virt="non-virtual"><scope>FastElim</scope><name>setSize</name></member>
+      <member refid="classFastElim_1ac45a2ddad0e65483bbdeb903c43a85c8" prot="public" virt="non-virtual"><scope>FastElim</scope><name>shuffleRows</name></member>
+      <member refid="classSparseMatrix_1a7cc1357950b026509513c9cc88796c00" prot="public" virt="non-virtual"><scope>FastElim</scope><name>SparseMatrix</name></member>
+      <member refid="classSparseMatrix_1a41427e7c9dc8a9d9a863fcca7987107d" prot="public" virt="non-virtual"><scope>FastElim</scope><name>SparseMatrix</name></member>
+      <member refid="classSparseMatrix_1abd7817874559248caf8bd3fdac8c242f" prot="public" virt="non-virtual"><scope>FastElim</scope><name>transpose</name></member>
+      <member refid="classSparseMatrix_1a6fb0fb48e97c13b49c2b7a0e1a8066dc" prot="public" virt="non-virtual"><scope>FastElim</scope><name>tripletFill</name></member>
+      <member refid="classSparseMatrix_1a00c3ac994b0cdcdb6c6981b4ab353177" prot="public" virt="non-virtual"><scope>FastElim</scope><name>unset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

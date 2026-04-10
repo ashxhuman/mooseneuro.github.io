@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classHinesMatrix" kind="class" language="C++" prot="public">
+    <compoundname>HinesMatrix</compoundname>
+    <derivedcompoundref refid="classHSolvePassive" prot="public" virt="non-virtual">HSolvePassive</derivedcompoundref>
+    <includes refid="HinesMatrix_8h" local="no">HinesMatrix.h</includes>
+    <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classHinesMatrix_1a2a6e6b0f7efe2e51a6862ed0b1838dfb" prot="protected" static="no">
+        <type>vector&lt; double &gt;::iterator</type>
+        <definition>typedef vector&lt;double&gt;::iterator HinesMatrix::vdIterator</definition>
+        <argsstring></argsstring>
+        <name>vdIterator</name>
+        <qualifiedname>HinesMatrix::vdIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="68" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classHinesMatrix_1aa3cf66c934d6246bf083fd6b47446078" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classHinesMatrix_1a2a6e6b0f7efe2e51a6862ed0b1838dfb" kindref="member">vdIterator</ref> &gt;</type>
+        <definition>vector&lt; vdIterator &gt; HinesMatrix::backOperand_</definition>
+        <argsstring></argsstring>
+        <name>backOperand_</name>
+        <qualifiedname>HinesMatrix::backOperand_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="86" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">HSolvePassive::backwardSubstitute</referencedby>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HinesMatrix::dt_</definition>
+        <argsstring></argsstring>
+        <name>dt_</name>
+        <qualifiedname>HinesMatrix::dt_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="71" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" compoundref="HSolvePassive_8cpp" startline="35" endline="43">HSolvePassive::clear</referencedby>
+        <referencedby refid="classHinesMatrix_1a440ba2efd96580a979539e4dfa6b1b3a" compoundref="HinesMatrix_8cpp" startline="16" endline="23">HinesMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" compoundref="HSolvePassive_8cpp" startline="100" endline="165">HSolvePassive::initialize</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">HSolveActive::readCalcium</referencedby>
+        <referencedby refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">setup</referencedby>
+        <referencedby refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" compoundref="HSolvePassive_8cpp" startline="14" endline="22">HSolvePassive::setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HinesMatrix::HJ_</definition>
+        <argsstring></argsstring>
+        <name>HJ_</name>
+        <qualifiedname>HinesMatrix::HJ_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hines, junctions. Flattened array containing the off-diagonal elements of the Hines matrix </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="79" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" compoundref="HinesMatrix_8cpp" startline="375" endline="434">getA</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">HSolveActive::updateMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" compoundref="HSolvePassive_8cpp" startline="211" endline="244">HSolvePassive::updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HinesMatrix::HJCopy_</definition>
+        <argsstring></argsstring>
+        <name>HJCopy_</name>
+        <qualifiedname>HinesMatrix::HJCopy_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="82" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">HSolveActive::updateMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" compoundref="HSolvePassive_8cpp" startline="211" endline="244">HSolvePassive::updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HinesMatrix::HS_</definition>
+        <argsstring></argsstring>
+        <name>HS_</name>
+        <qualifiedname>HinesMatrix::HS_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hines, series. Flattened array containing the tridiagonal of the approximately tridiagonal Hines matrix, stacked against the column vector &quot;b&quot; that appears on the RHS of the equation that we&apos;re trying to solve: Ax=b. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="74" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">HSolvePassive::backwardSubstitute</referencedby>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" compoundref="HSolvePassive_8cpp" startline="246" endline="323">HSolvePassive::forwardEliminate</referencedby>
+        <referencedby refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" compoundref="HinesMatrix_8cpp" startline="375" endline="434">getA</referencedby>
+        <referencedby refid="classHinesMatrix_1ae4702b04adb8ce17a05ce8ba74dfe5e7" compoundref="HinesMatrix_8cpp" startline="436" endline="439">getB</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">HSolveActive::updateMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" compoundref="HSolvePassive_8cpp" startline="211" endline="244">HSolvePassive::updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structJunctionStruct" kindref="compound">JunctionStruct</ref> &gt;</type>
+        <definition>vector&lt; JunctionStruct &gt; HinesMatrix::junction_</definition>
+        <argsstring></argsstring>
+        <name>junction_</name>
+        <qualifiedname>HinesMatrix::junction_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="73" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">HSolvePassive::backwardSubstitute</referencedby>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" compoundref="HSolvePassive_8cpp" startline="246" endline="323">HSolvePassive::forwardEliminate</referencedby>
+        <referencedby refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" compoundref="HinesMatrix_8cpp" startline="84" endline="130">makeJunctions</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int HinesMatrix::nCompt_</definition>
+        <argsstring></argsstring>
+        <name>nCompt_</name>
+        <qualifiedname>HinesMatrix::nCompt_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="70" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="classHSolve_1a6467f443993a541acee40235ab86fe38" compoundref="HSolveInterface_8cpp" startline="213" endline="219">HSolve::addInject</referencedby>
+        <referencedby refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">HSolvePassive::backwardSubstitute</referencedby>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" compoundref="HSolvePassive_8cpp" startline="246" endline="323">HSolvePassive::forwardEliminate</referencedby>
+        <referencedby refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" compoundref="HinesMatrix_8cpp" startline="375" endline="434">getA</referencedby>
+        <referencedby refid="classHSolve_1aa39f10de28785bebc1b0bc032179c562" compoundref="HSolveInterface_8cpp" startline="161" endline="182">HSolve::getIm</referencedby>
+        <referencedby refid="classHSolve_1a5f5212c79a8bdf511ae1a8fd537ddc8e" compoundref="HSolveInterface_8cpp" startline="190" endline="203">HSolve::getInject</referencedby>
+        <referencedby refid="classHinesMatrix_1a10d80ca6a84506c3c83efd026967347b" compoundref="HinesMatrix_8cpp" startline="370" endline="373">getSize</referencedby>
+        <referencedby refid="classHinesMatrix_1a440ba2efd96580a979539e4dfa6b1b3a" compoundref="HinesMatrix_8cpp" startline="16" endline="23">HinesMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" compoundref="HSolvePassive_8cpp" startline="100" endline="165">HSolvePassive::initialize</referencedby>
+        <referencedby refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" compoundref="HinesMatrix_8cpp" startline="84" endline="130">makeJunctions</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">HSolveActive::readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">HSolveActive::readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" compoundref="HSolveActiveSetup_8cpp" startline="535" endline="574">HSolveActive::readSynapses</referencedby>
+        <referencedby refid="classHSolveActive_1a936531b1c40d560addf5db77fc411ad2" compoundref="HSolveActiveSetup_8cpp" startline="61" endline="65">HSolveActive::reinitCompartments</referencedby>
+        <referencedby refid="classHSolve_1a43f1b8dbdcff2da3ee7e30d828acbdc4" compoundref="HSolveInterface_8cpp" startline="205" endline="211">HSolve::setInject</referencedby>
+        <referencedby refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">setup</referencedby>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">HSolveActive::step</referencedby>
+        <referencedby refid="classHSolvePassive_1ab123ed2dcb0c7ec88d5a6da4990e93cf" compoundref="HSolvePassive_8cpp" startline="167" endline="205">HSolvePassive::storeTree</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a34fc144edf8086f30faec267d14ed109" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classHinesMatrix_1a2a6e6b0f7efe2e51a6862ed0b1838dfb" kindref="member">vdIterator</ref> &gt;</type>
+        <definition>vector&lt; vdIterator &gt; HinesMatrix::operand_</definition>
+        <argsstring></argsstring>
+        <name>operand_</name>
+        <qualifiedname>HinesMatrix::operand_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="85" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">HSolvePassive::backwardSubstitute</referencedby>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" compoundref="HSolvePassive_8cpp" startline="246" endline="323">HSolvePassive::forwardEliminate</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HinesMatrix::stage_</definition>
+        <argsstring></argsstring>
+        <name>stage_</name>
+        <qualifiedname>HinesMatrix::stage_</qualifiedname>
+        <briefdescription>
+<para>reached. Used in getA. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Which stage the simulation has </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="87" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">HSolvePassive::backwardSubstitute</referencedby>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" compoundref="HSolvePassive_8cpp" startline="246" endline="323">HSolvePassive::forwardEliminate</referencedby>
+        <referencedby refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" compoundref="HinesMatrix_8cpp" startline="375" endline="434">getA</referencedby>
+        <referencedby refid="classHinesMatrix_1a440ba2efd96580a979539e4dfa6b1b3a" compoundref="HinesMatrix_8cpp" startline="16" endline="23">HinesMatrix</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">HSolveActive::updateMatrix</referencedby>
+        <referencedby refid="classHSolvePassive_1a32ecffa47b7ecaf24dc95db01c671991" compoundref="HSolvePassive_8cpp" startline="211" endline="244">HSolvePassive::updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HinesMatrix::VMid_</definition>
+        <argsstring></argsstring>
+        <name>VMid_</name>
+        <qualifiedname>HinesMatrix::VMid_</qualifiedname>
+        <briefdescription>
+<para>middle of a time step. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Compartment voltage at the </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="83" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">HSolveActive::advanceCalcium</referencedby>
+        <referencedby refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">HSolvePassive::backwardSubstitute</referencedby>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1aafc7e33d10d03061f4ca6fea51f516ad" compoundref="HinesMatrix_8cpp" startline="441" endline="444">getVMid</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; unsigned int &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; unsigned int &gt; &gt; HinesMatrix::coupled_</definition>
+        <argsstring></argsstring>
+        <name>coupled_</name>
+        <qualifiedname>HinesMatrix::coupled_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contains a list of all children of a given compt. Also contains the parent itself. i.e., for each compartment that has more than one child, coupled_ stores a vector containing the children of the compartment and the compartment itself. coupled_ is therefore a vector of such vectors. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="115" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" compoundref="HinesMatrix_8cpp" startline="375" endline="434">getA</referencedby>
+        <referencedby refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" compoundref="HinesMatrix_8cpp" startline="84" endline="130">makeJunctions</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a5ea32130ef624f4fb26956a35220435b" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HinesMatrix::Ga_</definition>
+        <argsstring></argsstring>
+        <name>Ga_</name>
+        <qualifiedname>HinesMatrix::Ga_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="114" column="30" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a50485325e404b083769cf368784da28b" prot="private" static="no" mutable="no">
+        <type>map&lt; unsigned int, unsigned int &gt;</type>
+        <definition>map&lt; unsigned int, unsigned int &gt; HinesMatrix::groupNumber_</definition>
+        <argsstring></argsstring>
+        <name>groupNumber_</name>
+        <qualifiedname>HinesMatrix::groupNumber_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tells you the index of a compartment&apos;s group within coupled_, given the compartment&apos;s Hines index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="124" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" compoundref="HinesMatrix_8cpp" startline="375" endline="434">getA</referencedby>
+        <referencedby refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" compoundref="HinesMatrix_8cpp" startline="84" endline="130">makeJunctions</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a9fd9da528596db99a34da1e592c9281d" prot="private" static="no" mutable="no">
+        <type>map&lt; unsigned int, <ref refid="classHinesMatrix_1a2a6e6b0f7efe2e51a6862ed0b1838dfb" kindref="member">vdIterator</ref> &gt;</type>
+        <definition>map&lt; unsigned int, vdIterator &gt; HinesMatrix::operandBase_</definition>
+        <argsstring></argsstring>
+        <name>operandBase_</name>
+        <qualifiedname>HinesMatrix::operandBase_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contains iterators into HJ_ demarcating where a child&apos;s neighbours begin. Used for iterating through HJ_ along with junction_. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="121" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHinesMatrix_1a8a75c78455d32be9df243404afdf2b93" prot="private" static="no" mutable="no">
+        <type>const vector&lt; <ref refid="structTreeNodeStruct" kindref="compound">TreeNodeStruct</ref> &gt; *</type>
+        <definition>const vector&lt; TreeNodeStruct &gt;* HinesMatrix::tree_</definition>
+        <argsstring></argsstring>
+        <name>tree_</name>
+        <qualifiedname>HinesMatrix::tree_</qualifiedname>
+        <briefdescription>
+<para>setup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores compt info for </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="112" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</referencedby>
+        <referencedby refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" compoundref="HinesMatrix_8cpp" startline="84" endline="130">makeJunctions</referencedby>
+        <referencedby refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</referencedby>
+        <referencedby refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">setup</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HinesMatrix::getA</definition>
+        <argsstring>(unsigned int row, unsigned int col) const</argsstring>
+        <name>getA</name>
+        <qualifiedname>HinesMatrix::getA</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="63" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="375" bodyend="434"/>
+        <references refid="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" compoundref="HinesMatrix_8h" startline="115">coupled_</references>
+        <references refid="classHinesMatrix_1a50485325e404b083769cf368784da28b" compoundref="HinesMatrix_8h" startline="124">groupNumber_</references>
+        <references refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" compoundref="HinesMatrix_8h" startline="79">HJ_</references>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HS_</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">nCompt_</references>
+        <references refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" compoundref="HinesMatrix_8h" startline="87">stage_</references>
+        <referencedby refid="HinesMatrix_8cpp_1afd65eb597df22cbef1c92e4aa81e44a9" compoundref="HinesMatrix_8cpp" startline="449" endline="470">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHinesMatrix_1ae4702b04adb8ce17a05ce8ba74dfe5e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HinesMatrix::getB</definition>
+        <argsstring>(unsigned int row) const</argsstring>
+        <name>getB</name>
+        <qualifiedname>HinesMatrix::getB</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="64" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="436" bodyend="439"/>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HS_</references>
+        <referencedby refid="HinesMatrix_8cpp_1afd65eb597df22cbef1c92e4aa81e44a9" compoundref="HinesMatrix_8cpp" startline="449" endline="470">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHinesMatrix_1a10d80ca6a84506c3c83efd026967347b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int HinesMatrix::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <qualifiedname>HinesMatrix::getSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="62" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="370" bodyend="373"/>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">nCompt_</references>
+        <referencedby refid="HinesMatrix_8cpp_1afd65eb597df22cbef1c92e4aa81e44a9" compoundref="HinesMatrix_8cpp" startline="449" endline="470">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHinesMatrix_1aafc7e33d10d03061f4ca6fea51f516ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HinesMatrix::getVMid</definition>
+        <argsstring>(unsigned int row) const</argsstring>
+        <name>getVMid</name>
+        <qualifiedname>HinesMatrix::getVMid</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="65" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="441" bodyend="444"/>
+        <references refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" compoundref="HinesMatrix_8h" startline="83">VMid_</references>
+        <referencedby refid="HinesMatrix_8cpp_1afd65eb597df22cbef1c92e4aa81e44a9" compoundref="HinesMatrix_8cpp" startline="449" endline="470">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHinesMatrix_1a440ba2efd96580a979539e4dfa6b1b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HinesMatrix::HinesMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>HinesMatrix</name>
+        <qualifiedname>HinesMatrix::HinesMatrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="58" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="16" bodyend="23"/>
+        <references refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" compoundref="HinesMatrix_8h" startline="71">dt_</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">nCompt_</references>
+        <references refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" compoundref="HinesMatrix_8h" startline="87">stage_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HinesMatrix::setup</definition>
+        <argsstring>(const vector&lt; TreeNodeStruct &gt; &amp;tree, double dt)</argsstring>
+        <name>setup</name>
+        <qualifiedname>HinesMatrix::setup</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="structTreeNodeStruct" kindref="compound">TreeNodeStruct</ref> &gt; &amp;</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="60" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="25" bodyend="51"/>
+        <references refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" compoundref="HinesMatrix_8cpp" startline="53" endline="71">clear</references>
+        <references refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" compoundref="HinesMatrix_8h" startline="71">dt_</references>
+        <references refid="classHinesMatrix_1a5ea32130ef624f4fb26956a35220435b" compoundref="HinesMatrix_8h" startline="114">Ga_</references>
+        <references refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" compoundref="HinesMatrix_8cpp" startline="84" endline="130">makeJunctions</references>
+        <references refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" compoundref="HinesMatrix_8cpp" startline="133" endline="223">makeMatrix</references>
+        <references refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" compoundref="HinesMatrix_8cpp" startline="226" endline="365">makeOperands</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">nCompt_</references>
+        <references refid="structTreeNodeStruct_1a882913e35a99986b63b9fa077b8448dc" compoundref="HinesMatrix_8h" startline="48">TreeNodeStruct::Ra</references>
+        <references refid="classHinesMatrix_1a8a75c78455d32be9df243404afdf2b93" compoundref="HinesMatrix_8h" startline="112">tree_</references>
+        <referencedby refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" compoundref="HSolvePassive_8cpp" startline="14" endline="22">HSolvePassive::setup</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HinesMatrix::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>HinesMatrix::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="91" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="53" bodyend="71"/>
+        <references refid="classHinesMatrix_1aa3cf66c934d6246bf083fd6b47446078" compoundref="HinesMatrix_8h" startline="86">backOperand_</references>
+        <references refid="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" compoundref="HinesMatrix_8h" startline="115">coupled_</references>
+        <references refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" compoundref="HinesMatrix_8h" startline="71">dt_</references>
+        <references refid="classHinesMatrix_1a5ea32130ef624f4fb26956a35220435b" compoundref="HinesMatrix_8h" startline="114">Ga_</references>
+        <references refid="classHinesMatrix_1a50485325e404b083769cf368784da28b" compoundref="HinesMatrix_8h" startline="124">groupNumber_</references>
+        <references refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" compoundref="HinesMatrix_8h" startline="79">HJ_</references>
+        <references refid="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" compoundref="HinesMatrix_8h" startline="82">HJCopy_</references>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HS_</references>
+        <references refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" compoundref="HinesMatrix_8h" startline="73">junction_</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">nCompt_</references>
+        <references refid="classHinesMatrix_1a34fc144edf8086f30faec267d14ed109" compoundref="HinesMatrix_8h" startline="85">operand_</references>
+        <references refid="classHinesMatrix_1a9fd9da528596db99a34da1e592c9281d" compoundref="HinesMatrix_8h" startline="121">operandBase_</references>
+        <references refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" compoundref="HinesMatrix_8h" startline="87">stage_</references>
+        <references refid="classHinesMatrix_1a8a75c78455d32be9df243404afdf2b93" compoundref="HinesMatrix_8h" startline="112">tree_</references>
+        <references refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" compoundref="HinesMatrix_8h" startline="83">VMid_</references>
+        <referencedby refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HinesMatrix::makeJunctions</definition>
+        <argsstring>()</argsstring>
+        <name>makeJunctions</name>
+        <qualifiedname>HinesMatrix::makeJunctions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates junction structs to be stored in junction_. It does so by first looking through all compartments and finding those which have more than zero or one child. The zero-one child compts are left alone. coupled_ is populated with the rest of the compartments. Each element of coupled_ is sorted (they are all unsigned ints) and coupled_ itself is sorted by the first element in each element (groupCompare does this comparison in <ref refid="HinesMatrix_8cpp" kindref="compound">HinesMatrix.cpp</ref>). Note: the children themselves are unsigned ints that store the Hines index of the corresponding child compartment. So essentially, at each branch, a <ref refid="structJunctionStruct" kindref="compound">JunctionStruct</ref> is created for each child, which contains the hines index of that child and its rank, which is group-size() - childIndex - 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="92" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="84" bodyend="130"/>
+        <references refid="structTreeNodeStruct_1a3070894cc4f33aaf5096971dde1b43ff" compoundref="HinesMatrix_8h" startline="47">TreeNodeStruct::children</references>
+        <references refid="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" compoundref="HinesMatrix_8h" startline="115">coupled_</references>
+        <references refid="HinesMatrix_8cpp_1a5f35710fa741edafdeb4ffd018f63670" compoundref="HinesMatrix_8cpp" startline="73" endline="81">groupCompare</references>
+        <references refid="classHinesMatrix_1a50485325e404b083769cf368784da28b" compoundref="HinesMatrix_8h" startline="124">groupNumber_</references>
+        <references refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" compoundref="HinesMatrix_8h" startline="73">junction_</references>
+        <references refid="structJunctionStruct_1a768236deb69ad71f5f15686552c733e4" compoundref="HinesMatrix_8h" startline="27" endline="32">JunctionStruct::JunctionStruct</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">nCompt_</references>
+        <references refid="classHinesMatrix_1a8a75c78455d32be9df243404afdf2b93" compoundref="HinesMatrix_8h" startline="112">tree_</references>
+        <referencedby refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HinesMatrix::makeMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>makeMatrix</name>
+        <qualifiedname>HinesMatrix::makeMatrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Populates HS_ and HJ_. All of the electrical circuit analysis goes into this one single function (and updateMatrix, of course). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="106" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="133" bodyend="223"/>
+        <references refid="structTreeNodeStruct_1a66cbaa56e6f1cf0466aa3354875aa652" compoundref="HinesMatrix_8h" startline="50">TreeNodeStruct::Cm</references>
+        <references refid="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" compoundref="HinesMatrix_8h" startline="115">coupled_</references>
+        <references refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" compoundref="HinesMatrix_8h" startline="71">dt_</references>
+        <references refid="classHinesMatrix_1a5ea32130ef624f4fb26956a35220435b" compoundref="HinesMatrix_8h" startline="114">Ga_</references>
+        <references refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" compoundref="HinesMatrix_8h" startline="79">HJ_</references>
+        <references refid="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" compoundref="HinesMatrix_8h" startline="82">HJCopy_</references>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HS_</references>
+        <references refid="structJunctionStruct_1af71e9d031cfe285fe2a870525dea2d65" compoundref="HinesMatrix_8h" startline="39">JunctionStruct::index</references>
+        <references refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" compoundref="HinesMatrix_8h" startline="73">junction_</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">nCompt_</references>
+        <references refid="classHinesMatrix_1a9fd9da528596db99a34da1e592c9281d" compoundref="HinesMatrix_8h" startline="121">operandBase_</references>
+        <references refid="structTreeNodeStruct_1a1c08eb244ac8b5e71029a0811103b592" compoundref="HinesMatrix_8h" startline="49">TreeNodeStruct::Rm</references>
+        <references refid="classHinesMatrix_1a8a75c78455d32be9df243404afdf2b93" compoundref="HinesMatrix_8h" startline="112">tree_</references>
+        <referencedby refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HinesMatrix::makeOperands</definition>
+        <argsstring>()</argsstring>
+        <name>makeOperands</name>
+        <qualifiedname>HinesMatrix::makeOperands</qualifiedname>
+        <briefdescription>
+<para>elimination easier. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes operands in order to make forward </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="109" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.cpp" bodystart="226" bodyend="365"/>
+        <references refid="classHinesMatrix_1aa3cf66c934d6246bf083fd6b47446078" compoundref="HinesMatrix_8h" startline="86">backOperand_</references>
+        <references refid="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" compoundref="HinesMatrix_8h" startline="115">coupled_</references>
+        <references refid="classHinesMatrix_1a50485325e404b083769cf368784da28b" compoundref="HinesMatrix_8h" startline="124">groupNumber_</references>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HS_</references>
+        <references refid="structJunctionStruct_1af71e9d031cfe285fe2a870525dea2d65" compoundref="HinesMatrix_8h" startline="39">JunctionStruct::index</references>
+        <references refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" compoundref="HinesMatrix_8h" startline="73">junction_</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">nCompt_</references>
+        <references refid="classHinesMatrix_1a34fc144edf8086f30faec267d14ed109" compoundref="HinesMatrix_8h" startline="85">operand_</references>
+        <references refid="classHinesMatrix_1a9fd9da528596db99a34da1e592c9281d" compoundref="HinesMatrix_8h" startline="121">operandBase_</references>
+        <references refid="structJunctionStruct_1a33dbced62c4782ec61293b0ceff0d1f7" compoundref="HinesMatrix_8h" startline="40">JunctionStruct::rank</references>
+        <references refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" compoundref="HinesMatrix_8h" startline="83">VMid_</references>
+        <referencedby refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" compoundref="HinesMatrix_8cpp" startline="25" endline="51">setup</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>HSolve</label>
+        <link refid="classHSolve"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HSolveActive</label>
+        <link refid="classHSolveActive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HSolvePassive</label>
+        <link refid="classHSolvePassive"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HinesMatrix</label>
+        <link refid="classHinesMatrix"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>HinesMatrix</label>
+        <link refid="classHinesMatrix"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#HJCopy_</edgelabel>
+          <edgelabel>#HJ_</edgelabel>
+          <edgelabel>#HS_</edgelabel>
+          <edgelabel>#VMid_</edgelabel>
+          <edgelabel>-Ga_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-tree_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="6">
+        <label>TreeNodeStruct</label>
+        <link refid="structTreeNodeStruct"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+children</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; TreeNodeStruct &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; TreeNodeStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" line="55" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HinesMatrix.h" bodystart="56" bodyend="127"/>
+    <listofallmembers>
+      <member refid="classHinesMatrix_1aa3cf66c934d6246bf083fd6b47446078" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>backOperand_</name></member>
+      <member refid="classHinesMatrix_1a6bc0e93cc3973f50fd7d84f51ca1cac7" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>clear</name></member>
+      <member refid="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>coupled_</name></member>
+      <member refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>dt_</name></member>
+      <member refid="classHinesMatrix_1a5ea32130ef624f4fb26956a35220435b" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>Ga_</name></member>
+      <member refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" prot="public" virt="non-virtual"><scope>HinesMatrix</scope><name>getA</name></member>
+      <member refid="classHinesMatrix_1ae4702b04adb8ce17a05ce8ba74dfe5e7" prot="public" virt="non-virtual"><scope>HinesMatrix</scope><name>getB</name></member>
+      <member refid="classHinesMatrix_1a10d80ca6a84506c3c83efd026967347b" prot="public" virt="non-virtual"><scope>HinesMatrix</scope><name>getSize</name></member>
+      <member refid="classHinesMatrix_1aafc7e33d10d03061f4ca6fea51f516ad" prot="public" virt="non-virtual"><scope>HinesMatrix</scope><name>getVMid</name></member>
+      <member refid="classHinesMatrix_1a50485325e404b083769cf368784da28b" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>groupNumber_</name></member>
+      <member refid="classHinesMatrix_1a440ba2efd96580a979539e4dfa6b1b3a" prot="public" virt="non-virtual"><scope>HinesMatrix</scope><name>HinesMatrix</name></member>
+      <member refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>HJ_</name></member>
+      <member refid="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>HJCopy_</name></member>
+      <member refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>HS_</name></member>
+      <member refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>junction_</name></member>
+      <member refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>makeJunctions</name></member>
+      <member refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>makeMatrix</name></member>
+      <member refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>makeOperands</name></member>
+      <member refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>nCompt_</name></member>
+      <member refid="classHinesMatrix_1a34fc144edf8086f30faec267d14ed109" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>operand_</name></member>
+      <member refid="classHinesMatrix_1a9fd9da528596db99a34da1e592c9281d" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>operandBase_</name></member>
+      <member refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" prot="public" virt="non-virtual"><scope>HinesMatrix</scope><name>setup</name></member>
+      <member refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>stage_</name></member>
+      <member refid="classHinesMatrix_1a8a75c78455d32be9df243404afdf2b93" prot="private" virt="non-virtual"><scope>HinesMatrix</scope><name>tree_</name></member>
+      <member refid="classHinesMatrix_1a2a6e6b0f7efe2e51a6862ed0b1838dfb" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>vdIterator</name></member>
+      <member refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" prot="protected" virt="non-virtual"><scope>HinesMatrix</scope><name>VMid_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

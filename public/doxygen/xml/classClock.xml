@@ -1,0 +1,1153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classClock" kind="class" language="C++" prot="public">
+    <compoundname>Clock</compoundname>
+    <includes refid="Clock_8h" local="no">Clock.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Clock::numTicks</definition>
+        <argsstring></argsstring>
+        <name>numTicks</name>
+        <qualifiedname>Clock::numTicks</qualifiedname>
+        <initializer>= 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of Ticks.</para>
+<para>The <ref refid="classClock" kindref="compound">Clock</ref> manages simulation scheduling, in a close collaboration with the Tick. This version does this using an array of child Ticks, which it manages directly.</para>
+<para>Simulation scheduling requires that certain functions of groups of objects be called in a strict sequence according to a range of timesteps, dt. For example, the numerical integration function of a compartment may be called every 10 microseconds. Furthermore, there may be ion channels in the simulation which also have to be called every 10 microseconds, but always after all the compartments have been called. Finally, the graphical update function to plot the compartment voltage may be called every 1 millisecond of simulation time. The whole sequence has to be repeated till the runtime of the simulation is complete.</para>
+<para>This scheduler uses integral multiples of the base timestep dt_.</para>
+<para>The system works like this:<orderedlist>
+<listitem><para>Assign times to each Tick. This is divided by dt_ and the rounded value is used for the integral multiple. Zero means the tick is not scheduled.</para>
+</listitem><listitem><para>The process call goes through all active ticks in order every timestep. Each Tick increments its counter and decides if it is time to fire.</para>
+</listitem><listitem><para>The Reinit call goes through all active ticks in order, just once.</para>
+</listitem><listitem><para>We connect up the Ticks to their target objects.</para>
+</listitem><listitem><para>We begin the simulation by calling &apos;start&apos; or &apos;step&apos; on the <ref refid="classClock" kindref="compound">Clock</ref>. &apos;step&apos; executes exactly one timestep (of the minimum dt_), visiting all ticks as above.. &apos;start&apos; executes an integral number of such timesteps.</para>
+</listitem><listitem><para>To interrupt the simulation at some intermediate time, call &apos;stop&apos;. This lets the system complete its current step.</para>
+</listitem><listitem><para>To restart the simulation from where it left off, use the same &apos;start&apos; or &apos;step&apos; function on the <ref refid="classClock" kindref="compound">Clock</ref>. As all the ticks retain their state, the simulation can resume smoothly. </para>
+</listitem></orderedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="121" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classClock_1a571833d04a0a4827b0107ca6efd2c54b" compoundref="Clock_8cpp" startline="871" endline="1026">buildDefaultTick</referencedby>
+        <referencedby refid="Clock_8cpp_1af450f9b72afd534422a9d89a753932cd" compoundref="Clock_8cpp" startline="80" endline="93">buildProcessVec</referencedby>
+        <referencedby refid="classClock_1af4b29f2c746782c9d98bbcfb06fb4bd7" compoundref="Clock_8cpp" startline="552" endline="568">checkTickNum</referencedby>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a92fe50b4152a2cf13c4b10e0efac5756" compoundref="Clock_8cpp" startline="522" endline="525">getNumTicks</referencedby>
+        <referencedby refid="classClock_1a5095283a5e8a83ba76b1676a57ba59af" compoundref="Clock_8cpp" startline="616" endline="621">getTickDt</referencedby>
+        <referencedby refid="classClock_1a7e80998218886d040e968d34d6cfa7c4" compoundref="Clock_8cpp" startline="575" endline="580">getTickStep</referencedby>
+        <referencedby refid="classClock_1aa3ca006d0d290db62df082f36656c93d" compoundref="Clock_8cpp" startline="586" endline="614">setTickDt</referencedby>
+        <referencedby refid="Clock_8cpp_1a46eb58c7fa5aec0dc0dd02cd3b74de57" compoundref="Clock_8cpp" startline="111" endline="130">sharedProcVec</referencedby>
+        <referencedby refid="classClock_1afc976ce68fa85e15cc06f9ed47bddb7c" compoundref="Clock_8cpp" startline="473" endline="484">~Clock</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classClock_1ade88843b11a7386195e532d40d001b94" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; Clock::activeTicks_</definition>
+        <argsstring></argsstring>
+        <name>activeTicks_</name>
+        <qualifiedname>Clock::activeTicks_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array of active ticks. Drops out ticks lacking targets or with a zero step. Sorted in increasing order of tick index. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="158" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="classClock_1a665a9d5e5c294d342ac4fd3cc293aff8" compoundref="Clock_8cpp" startline="670" endline="687">buildTicks</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a5a36acfa4e6ce6f4d6a0b92187f8298d" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; Clock::activeTicksMap_</definition>
+        <argsstring></argsstring>
+        <name>activeTicksMap_</name>
+        <qualifiedname>Clock::activeTicksMap_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maps the activeTicks_ array to the ticks index so we can trigger the appropriate message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="163" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="163" bodyend="-1"/>
+        <referencedby refid="classClock_1a665a9d5e5c294d342ac4fd3cc293aff8" compoundref="Clock_8cpp" startline="670" endline="687">buildTicks</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a2d2eaa4191f4c5f654e034d7228cf65c" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long Clock::currentStep_</definition>
+        <argsstring></argsstring>
+        <name>currentStep_</name>
+        <qualifiedname>Clock::currentStep_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="128" column="19" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a1600b5873fc1356f08d842cfc4f0c695" compoundref="Clock_8cpp" startline="517" endline="520">getCurrentStep</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a8ae7d90a7931e343b1a508673290ec74" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Clock::currentTime_</definition>
+        <argsstring></argsstring>
+        <name>currentTime_</name>
+        <qualifiedname>Clock::currentTime_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="126" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a55a4f38df7c441711819d8a36949444c" compoundref="Clock_8cpp" startline="507" endline="510">getCurrentTime</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+        <referencedby refid="classClock_1ac03f093ece9f8922943b8077e26f9a32" compoundref="Clock_8cpp" startline="652" endline="664">innerReportClock</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a7b948aea4170e3f33a48333273029b2d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Clock::doingReinit_</definition>
+        <argsstring></argsstring>
+        <name>doingReinit_</name>
+        <qualifiedname>Clock::doingReinit_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True while the system is doing a reinit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="140" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="classClock_1af4b29f2c746782c9d98bbcfb06fb4bd7" compoundref="Clock_8cpp" startline="552" endline="568">checkTickNum</referencedby>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+        <referencedby refid="classClock_1a877396c4a8b37cc2ac4a49d287456c61" compoundref="Clock_8cpp" startline="547" endline="550">isDoingReinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1af6e91b4dcf1107fd62ab72327482c91e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Clock::dt_</definition>
+        <argsstring></argsstring>
+        <name>dt_</name>
+        <qualifiedname>Clock::dt_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="130" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a115635f4412651d5531b488d59c2e2cd" compoundref="Clock_8cpp" startline="498" endline="501">getDt</referencedby>
+        <referencedby refid="classClock_1ac641a243b9a8b2b2291cd3c7fec4aed8" compoundref="Clock_8cpp" startline="532" endline="540">getDts</referencedby>
+        <referencedby refid="classClock_1a5095283a5e8a83ba76b1676a57ba59af" compoundref="Clock_8cpp" startline="616" endline="621">getTickDt</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a80873e518985317ecaeade59568c9f39" compoundref="Clock_8cpp" startline="694" endline="701">handleStart</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+        <referencedby refid="classClock_1ac03f093ece9f8922943b8077e26f9a32" compoundref="Clock_8cpp" startline="652" endline="664">innerReportClock</referencedby>
+        <referencedby refid="classClock_1a8fb6978d2def7e15edf19f2466042fff" compoundref="Clock_8cpp" startline="488" endline="496">setDt</referencedby>
+        <referencedby refid="classClock_1aa3ca006d0d290db62df082f36656c93d" compoundref="Clock_8cpp" startline="586" endline="614">setTickDt</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a6d900a91a112d4c5d2e87d265df3fcec" prot="private" static="no" mutable="no">
+        <type><ref refid="classProcInfo" kindref="compound">ProcInfo</ref></type>
+        <definition>ProcInfo Clock::info_</definition>
+        <argsstring></argsstring>
+        <name>info_</name>
+        <qualifiedname>Clock::info_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maintains Process info </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="145" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Clock::isRunning_</definition>
+        <argsstring></argsstring>
+        <name>isRunning_</name>
+        <qualifiedname>Clock::isRunning_</qualifiedname>
+        <briefdescription>
+<para>The minimum dt. All ticks are a multiple of this. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>True while a process job is running </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="135" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="135" bodyend="-1"/>
+        <referencedby refid="classClock_1af4b29f2c746782c9d98bbcfb06fb4bd7" compoundref="Clock_8cpp" startline="552" endline="568">checkTickNum</referencedby>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+        <referencedby refid="classClock_1ac03f093ece9f8922943b8077e26f9a32" compoundref="Clock_8cpp" startline="652" endline="664">innerReportClock</referencedby>
+        <referencedby refid="classClock_1a5deab76244f8effa84068d2e21cc3658" compoundref="Clock_8cpp" startline="542" endline="545">isRunning</referencedby>
+        <referencedby refid="classClock_1a8fb6978d2def7e15edf19f2466042fff" compoundref="Clock_8cpp" startline="488" endline="496">setDt</referencedby>
+        <referencedby refid="classClock_1a0b77c3e7f33eb7ae0f018e469d96a250" compoundref="Clock_8cpp" startline="636" endline="639">stop</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a1201920b556dbd2bd8766d5f0c1fae92" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Clock::notify_</definition>
+        <argsstring></argsstring>
+        <name>notify_</name>
+        <qualifiedname>Clock::notify_</qualifiedname>
+        <briefdescription>
+<para>When set to true, notify user about the status of simulation by emitting message whenever 10% of simultion is over. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="178" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="178" bodyend="-1"/>
+        <referencedby refid="classClock_1a80873e518985317ecaeade59568c9f39" compoundref="Clock_8cpp" startline="694" endline="701">handleStart</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a368cd025ad35a49ee6d47d2a4f0c9630" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long Clock::nSteps_</definition>
+        <argsstring></argsstring>
+        <name>nSteps_</name>
+        <qualifiedname>Clock::nSteps_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="127" column="19" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1af679d833fdf4b909c88e1f89d83b155e" compoundref="Clock_8cpp" startline="512" endline="515">getNsteps</referencedby>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a74e32113b64a2390ed41e14a60753805" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Clock::runTime_</definition>
+        <argsstring></argsstring>
+        <name>runTime_</name>
+        <qualifiedname>Clock::runTime_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="125" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a0482b89cf6a350ebd9552e39323beda7" compoundref="Clock_8cpp" startline="502" endline="505">getRunTime</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+        <referencedby refid="classClock_1ac03f093ece9f8922943b8077e26f9a32" compoundref="Clock_8cpp" startline="652" endline="664">innerReportClock</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1ac69efd3e5e06a80d2878cab0919681a1" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Clock::stride_</definition>
+        <argsstring></argsstring>
+        <name>stride_</name>
+        <qualifiedname>Clock::stride_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="129" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="classClock_1a665a9d5e5c294d342ac4fd3cc293aff8" compoundref="Clock_8cpp" startline="670" endline="687">buildTicks</referencedby>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1a2a63b0edde502e67839e44b2d18339c2" compoundref="Clock_8cpp" startline="527" endline="530">getStride</referencedby>
+        <referencedby refid="classClock_1a80873e518985317ecaeade59568c9f39" compoundref="Clock_8cpp" startline="694" endline="701">handleStart</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a01c66df0a178c900563424deddbeb4c2" prot="private" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; Clock::ticks_</definition>
+        <argsstring></argsstring>
+        <name>ticks_</name>
+        <qualifiedname>Clock::ticks_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ticks are sub-elements and send messages to sets of target Elements that handle calculations in which update order does not matter. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="152" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="152" bodyend="-1"/>
+        <referencedby refid="classClock_1a665a9d5e5c294d342ac4fd3cc293aff8" compoundref="Clock_8cpp" startline="670" endline="687">buildTicks</referencedby>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+        <referencedby refid="classClock_1ac641a243b9a8b2b2291cd3c7fec4aed8" compoundref="Clock_8cpp" startline="532" endline="540">getDts</referencedby>
+        <referencedby refid="classClock_1a5095283a5e8a83ba76b1676a57ba59af" compoundref="Clock_8cpp" startline="616" endline="621">getTickDt</referencedby>
+        <referencedby refid="classClock_1a7e80998218886d040e968d34d6cfa7c4" compoundref="Clock_8cpp" startline="575" endline="580">getTickStep</referencedby>
+        <referencedby refid="classClock_1ac03f093ece9f8922943b8077e26f9a32" compoundref="Clock_8cpp" startline="652" endline="664">innerReportClock</referencedby>
+        <referencedby refid="classClock_1aa3ca006d0d290db62df082f36656c93d" compoundref="Clock_8cpp" startline="586" endline="614">setTickDt</referencedby>
+        <referencedby refid="classClock_1a3fb346126a2d39c28a128543e0606114" compoundref="Clock_8cpp" startline="570" endline="574">setTickStep</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classClock_1a8fad963b3f12548e4870844bd7223ca3" prot="private" static="yes" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; Clock::defaultDt_</definition>
+        <argsstring></argsstring>
+        <name>defaultDt_</name>
+        <qualifiedname>Clock::defaultDt_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="171" column="19" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="171" bodyend="-1"/>
+        <referencedby refid="classClock_1a571833d04a0a4827b0107ca6efd2c54b" compoundref="Clock_8cpp" startline="871" endline="1026">buildDefaultTick</referencedby>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classClock_1a20e3ab378701b9a0b31e4da1b2aa883c" prot="private" static="yes" mutable="no">
+        <type>map&lt; string, unsigned int &gt;</type>
+        <definition>map&lt; string, unsigned int &gt; Clock::defaultTick_</definition>
+        <argsstring></argsstring>
+        <name>defaultTick_</name>
+        <qualifiedname>Clock::defaultTick_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the database of default scheduling. Assigns classes to ticks. Filled in at <ref refid="classClock" kindref="compound">Clock</ref> creation time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="169" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="169" bodyend="-1"/>
+        <referencedby refid="classClock_1a571833d04a0a4827b0107ca6efd2c54b" compoundref="Clock_8cpp" startline="871" endline="1026">buildDefaultTick</referencedby>
+        <referencedby refid="classClock_1a7eba4d8abea7cebf1d3630285cf4d017" compoundref="Clock_8cpp" startline="1029" endline="1040">lookupDefaultTick</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classClock_1a4339f7cf8602fa138ff4dceca02286b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testClock</definition>
+        <argsstring>()</argsstring>
+        <name>testClock</name>
+        <qualifiedname>Clock::testClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check that clock scheduling works. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="27" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/testScheduling.cpp" bodystart="80" bodyend="169"/>
+        <referencedby refid="testScheduling_8cpp_1a27eb8cd460d044fd565427496d2a616b" compoundref="testScheduling_8cpp" startline="183" endline="187">testScheduling</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classClock_1af4b29f2c746782c9d98bbcfb06fb4bd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Clock::checkTickNum</definition>
+        <argsstring>(const string &amp;funcName, unsigned int i) const</argsstring>
+        <name>checkTickNum</name>
+        <qualifiedname>Clock::checkTickNum</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>funcName</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Utility func to range-check when Ticks are being changed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="98" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="552" bodyend="568"/>
+        <references refid="classClock_1a7b948aea4170e3f33a48333273029b2d" compoundref="Clock_8h" startline="140">doingReinit_</references>
+        <references refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" compoundref="Clock_8h" startline="135">isRunning_</references>
+        <references refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" compoundref="Clock_8h" startline="121">numTicks</references>
+        <referencedby refid="classClock_1aa3ca006d0d290db62df082f36656c93d" compoundref="Clock_8cpp" startline="586" endline="614">setTickDt</referencedby>
+        <referencedby refid="classClock_1a3fb346126a2d39c28a128543e0606114" compoundref="Clock_8cpp" startline="570" endline="574">setTickStep</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1adbc370eb6b5f8d01645cf440188160a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Clock::Clock</definition>
+        <argsstring>()</argsstring>
+        <name>Clock</name>
+        <qualifiedname>Clock::Clock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="29" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="453" bodyend="471"/>
+        <references refid="classClock_1a571833d04a0a4827b0107ca6efd2c54b" compoundref="Clock_8cpp" startline="871" endline="1026">buildDefaultTick</references>
+        <references refid="classClock_1a2d2eaa4191f4c5f654e034d7228cf65c" compoundref="Clock_8h" startline="128">currentStep_</references>
+        <references refid="classClock_1a8ae7d90a7931e343b1a508673290ec74" compoundref="Clock_8h" startline="126">currentTime_</references>
+        <references refid="classClock_1a8fad963b3f12548e4870844bd7223ca3" compoundref="Clock_8h" startline="171">defaultDt_</references>
+        <references refid="classClock_1a7b948aea4170e3f33a48333273029b2d" compoundref="Clock_8h" startline="140">doingReinit_</references>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="classClock_1a6d900a91a112d4c5d2e87d265df3fcec" compoundref="Clock_8h" startline="145">info_</references>
+        <references refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" compoundref="Clock_8h" startline="135">isRunning_</references>
+        <references refid="classClock_1a368cd025ad35a49ee6d47d2a4f0c9630" compoundref="Clock_8h" startline="127">nSteps_</references>
+        <references refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" compoundref="Clock_8h" startline="121">numTicks</references>
+        <references refid="classProcInfo_1a3c90e3be7b6e2febd2368bef90225068" compoundref="ProcInfo_8h" startline="15" endline="17">ProcInfo::ProcInfo</references>
+        <references refid="classClock_1a74e32113b64a2390ed41e14a60753805" compoundref="Clock_8h" startline="125">runTime_</references>
+        <references refid="classClock_1ac69efd3e5e06a80d2878cab0919681a1" compoundref="Clock_8h" startline="129">stride_</references>
+        <references refid="classClock_1a01c66df0a178c900563424deddbeb4c2" compoundref="Clock_8h" startline="152">ticks_</references>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a1600b5873fc1356f08d842cfc4f0c695" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long Clock::getCurrentStep</definition>
+        <argsstring>() const</argsstring>
+        <name>getCurrentStep</name>
+        <qualifiedname>Clock::getCurrentStep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="40" column="19" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="517" bodyend="520"/>
+        <references refid="classClock_1a2d2eaa4191f4c5f654e034d7228cf65c" compoundref="Clock_8h" startline="128">currentStep_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a55a4f38df7c441711819d8a36949444c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Clock::getCurrentTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getCurrentTime</name>
+        <qualifiedname>Clock::getCurrentTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="38" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="507" bodyend="510"/>
+        <references refid="classClock_1a8ae7d90a7931e343b1a508673290ec74" compoundref="Clock_8h" startline="126">currentTime_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a839dc14aeb997054d3c18b6e391daf49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Clock::getDefaultTick</definition>
+        <argsstring>(string className) const</argsstring>
+        <name>getDefaultTick</name>
+        <qualifiedname>Clock::getDefaultTick</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>className</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="47" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="623" bodyend="626"/>
+        <references refid="classClock_1a7eba4d8abea7cebf1d3630285cf4d017" compoundref="Clock_8cpp" startline="1029" endline="1040">lookupDefaultTick</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a115635f4412651d5531b488d59c2e2cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Clock::getDt</definition>
+        <argsstring>() const</argsstring>
+        <name>getDt</name>
+        <qualifiedname>Clock::getDt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="36" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="498" bodyend="501"/>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1ac641a243b9a8b2b2291cd3c7fec4aed8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; Clock::getDts</definition>
+        <argsstring>() const</argsstring>
+        <name>getDts</name>
+        <qualifiedname>Clock::getDts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="49" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="532" bodyend="540"/>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="classClock_1a01c66df0a178c900563424deddbeb4c2" compoundref="Clock_8h" startline="152">ticks_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1af679d833fdf4b909c88e1f89d83b155e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long Clock::getNsteps</definition>
+        <argsstring>() const</argsstring>
+        <name>getNsteps</name>
+        <qualifiedname>Clock::getNsteps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="39" column="19" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="512" bodyend="515"/>
+        <references refid="classClock_1a368cd025ad35a49ee6d47d2a4f0c9630" compoundref="Clock_8h" startline="127">nSteps_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a92fe50b4152a2cf13c4b10e0efac5756" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Clock::getNumTicks</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumTicks</name>
+        <qualifiedname>Clock::getNumTicks</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="77" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="522" bodyend="525"/>
+        <references refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" compoundref="Clock_8h" startline="121">numTicks</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a0482b89cf6a350ebd9552e39323beda7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Clock::getRunTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getRunTime</name>
+        <qualifiedname>Clock::getRunTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="37" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="502" bodyend="505"/>
+        <references refid="classClock_1a74e32113b64a2390ed41e14a60753805" compoundref="Clock_8h" startline="125">runTime_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a2a63b0edde502e67839e44b2d18339c2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Clock::getStride</definition>
+        <argsstring>() const</argsstring>
+        <name>getStride</name>
+        <qualifiedname>Clock::getStride</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="41" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="527" bodyend="530"/>
+        <references refid="classClock_1ac69efd3e5e06a80d2878cab0919681a1" compoundref="Clock_8h" startline="129">stride_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a5095283a5e8a83ba76b1676a57ba59af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Clock::getTickDt</definition>
+        <argsstring>(unsigned int i) const</argsstring>
+        <name>getTickDt</name>
+        <qualifiedname>Clock::getTickDt</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="46" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="616" bodyend="621"/>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" compoundref="Clock_8h" startline="121">numTicks</references>
+        <references refid="classClock_1a01c66df0a178c900563424deddbeb4c2" compoundref="Clock_8h" startline="152">ticks_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+        <referencedby refid="classSocketStreamer_1aaa359ded08d03cc9344b47848fd54c7d" compoundref="SocketStreamer_8cpp" startline="440" endline="470">SocketStreamer::reinit</referencedby>
+        <referencedby refid="classStreamer_1a6fb99b503325b2696fec74672090807e" compoundref="Streamer_8cpp" startline="174" endline="249">Streamer::reinit</referencedby>
+        <referencedby refid="classTable_1a040cc5f0464ddfa06356d558381a6f0f" compoundref="Table_8cpp" startline="300" endline="349">Table::reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a7e80998218886d040e968d34d6cfa7c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Clock::getTickStep</definition>
+        <argsstring>(unsigned int i) const</argsstring>
+        <name>getTickStep</name>
+        <qualifiedname>Clock::getTickStep</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="44" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="575" bodyend="580"/>
+        <references refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" compoundref="Clock_8h" startline="121">numTicks</references>
+        <references refid="classClock_1a01c66df0a178c900563424deddbeb4c2" compoundref="Clock_8h" startline="152">ticks_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a4a94366237fde44496d500e8dc7f0ef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::handleReinit</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>handleReinit</name>
+        <qualifiedname>Clock::handleReinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>dest function for message to trigger reinit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the dest function that sets off the reinit. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="67" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="806" bodyend="832"/>
+        <references refid="classClock_1ade88843b11a7386195e532d40d001b94" compoundref="Clock_8h" startline="158">activeTicks_</references>
+        <references refid="classClock_1a5a36acfa4e6ce6f4d6a0b92187f8298d" compoundref="Clock_8h" startline="163">activeTicksMap_</references>
+        <references refid="classClock_1a665a9d5e5c294d342ac4fd3cc293aff8" compoundref="Clock_8cpp" startline="670" endline="687">buildTicks</references>
+        <references refid="classClock_1a2d2eaa4191f4c5f654e034d7228cf65c" compoundref="Clock_8h" startline="128">currentStep_</references>
+        <references refid="classClock_1a8ae7d90a7931e343b1a508673290ec74" compoundref="Clock_8h" startline="126">currentTime_</references>
+        <references refid="classProcInfo_1a6343499a8c6e17affc28b69181d2b2cb" compoundref="ProcInfo_8h" startline="19">ProcInfo::currTime</references>
+        <references refid="classClock_1a7b948aea4170e3f33a48333273029b2d" compoundref="Clock_8h" startline="140">doingReinit_</references>
+        <references refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" compoundref="ProcInfo_8h" startline="18">ProcInfo::dt</references>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="classClock_1a6d900a91a112d4c5d2e87d265df3fcec" compoundref="Clock_8h" startline="145">info_</references>
+        <references refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" compoundref="Clock_8h" startline="135">isRunning_</references>
+        <references refid="classClock_1a368cd025ad35a49ee6d47d2a4f0c9630" compoundref="Clock_8h" startline="127">nSteps_</references>
+        <references refid="Clock_8cpp_1a1ba57bcbe8b99c7e2de834a2738f0a1f" compoundref="Clock_8cpp" startline="104" endline="109">reinitVec</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <references refid="classProcInfo_1a22844b93584e4a81921ef2aaef002a38" compoundref="ProcInfo_8h" startline="27" endline="27">ProcInfo::setReinit</references>
+        <references refid="classProcInfo_1a1be3a9ee6b9878d14c19ed2d18cdc987" compoundref="ProcInfo_8h" startline="26" endline="26">ProcInfo::setRunning</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a80873e518985317ecaeade59568c9f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::handleStart</definition>
+        <argsstring>(const Eref &amp;e, double runtime, bool notify)</argsstring>
+        <name>handleStart</name>
+        <qualifiedname>Clock::handleStart</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>runtime</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>notify</declname>
+        </param>
+        <briefdescription>
+<para>dest function for message to run simulation for specified time </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Start has to happen gracefully: If the simulation was stopped for any reason, it has to pick up where it left off. The &quot;runtime&quot; argument is the additional time to run the simulation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="61" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="694" bodyend="701"/>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</references>
+        <references refid="classClock_1a1201920b556dbd2bd8766d5f0c1fae92" compoundref="Clock_8h" startline="178">notify_</references>
+        <references refid="classClock_1ac69efd3e5e06a80d2878cab0919681a1" compoundref="Clock_8h" startline="129">stride_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a2f0cb7e2334aecda810f97bb568359c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::handleStep</definition>
+        <argsstring>(const Eref &amp;e, unsigned long steps)</argsstring>
+        <name>handleStep</name>
+        <qualifiedname>Clock::handleStep</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>steps</declname>
+        </param>
+        <briefdescription>
+<para>dest function for message to run simulation for specified steps </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="64" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="703" bodyend="801"/>
+        <references refid="classClock_1ade88843b11a7386195e532d40d001b94" compoundref="Clock_8h" startline="158">activeTicks_</references>
+        <references refid="classClock_1a5a36acfa4e6ce6f4d6a0b92187f8298d" compoundref="Clock_8h" startline="163">activeTicksMap_</references>
+        <references refid="classClock_1a665a9d5e5c294d342ac4fd3cc293aff8" compoundref="Clock_8cpp" startline="670" endline="687">buildTicks</references>
+        <references refid="classClock_1a2d2eaa4191f4c5f654e034d7228cf65c" compoundref="Clock_8h" startline="128">currentStep_</references>
+        <references refid="classClock_1a8ae7d90a7931e343b1a508673290ec74" compoundref="Clock_8h" startline="126">currentTime_</references>
+        <references refid="classProcInfo_1a6343499a8c6e17affc28b69181d2b2cb" compoundref="ProcInfo_8h" startline="19">ProcInfo::currTime</references>
+        <references refid="classClock_1a7b948aea4170e3f33a48333273029b2d" compoundref="Clock_8h" startline="140">doingReinit_</references>
+        <references refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" compoundref="ProcInfo_8h" startline="18">ProcInfo::dt</references>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="Clock_8cpp_1a02c4da6caa4744e2349b953f51e4b008" compoundref="Clock_8cpp" startline="70" endline="77">finished</references>
+        <references refid="classClock_1a6d900a91a112d4c5d2e87d265df3fcec" compoundref="Clock_8h" startline="145">info_</references>
+        <references refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" compoundref="Clock_8h" startline="135">isRunning_</references>
+        <references refid="classClock_1a1201920b556dbd2bd8766d5f0c1fae92" compoundref="Clock_8h" startline="178">notify_</references>
+        <references refid="classClock_1a368cd025ad35a49ee6d47d2a4f0c9630" compoundref="Clock_8h" startline="127">nSteps_</references>
+        <references refid="Clock_8cpp_1aac27149af014996a88958a10741f4c4e" compoundref="Clock_8cpp" startline="97" endline="102">processVec</references>
+        <references refid="classClock_1a74e32113b64a2390ed41e14a60753805" compoundref="Clock_8h" startline="125">runTime_</references>
+        <references refid="classSrcFinfo0_1aacaff89500b041a4903cfd118f4cda1f" compoundref="SrcFinfo_8cpp" startline="70" endline="90">SrcFinfo0::send</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <references refid="classProcInfo_1ac7f7d52ce8ee7cb790ff73937c5bd6dd" compoundref="ProcInfo_8h" startline="25" endline="25">ProcInfo::setContinue</references>
+        <references refid="classProcInfo_1a1731c73e1f73b0fd34df9af3ded43a35" compoundref="ProcInfo_8h" startline="24" endline="24">ProcInfo::setFirstStep</references>
+        <references refid="classProcInfo_1a1be3a9ee6b9878d14c19ed2d18cdc987" compoundref="ProcInfo_8h" startline="26" endline="26">ProcInfo::setRunning</references>
+        <references refid="classClock_1ac69efd3e5e06a80d2878cab0919681a1" compoundref="Clock_8h" startline="129">stride_</references>
+        <referencedby refid="classClock_1a80873e518985317ecaeade59568c9f39" compoundref="Clock_8cpp" startline="694" endline="701">handleStart</referencedby>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1ac03f093ece9f8922943b8077e26f9a32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::innerReportClock</definition>
+        <argsstring>() const</argsstring>
+        <name>innerReportClock</name>
+        <qualifiedname>Clock::innerReportClock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="92" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="652" bodyend="664"/>
+        <references refid="classClock_1a8ae7d90a7931e343b1a508673290ec74" compoundref="Clock_8h" startline="126">currentTime_</references>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" compoundref="Clock_8h" startline="135">isRunning_</references>
+        <references refid="classClock_1a74e32113b64a2390ed41e14a60753805" compoundref="Clock_8h" startline="125">runTime_</references>
+        <references refid="classClock_1a01c66df0a178c900563424deddbeb4c2" compoundref="Clock_8h" startline="152">ticks_</references>
+        <referencedby refid="classClock_1aab22405b4cb887de004cb5f838efdd70" compoundref="Clock_8cpp" startline="646" endline="650">reportClock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a877396c4a8b37cc2ac4a49d287456c61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Clock::isDoingReinit</definition>
+        <argsstring>() const</argsstring>
+        <name>isDoingReinit</name>
+        <qualifiedname>Clock::isDoingReinit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag: True when the simulation is busy with reinit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="86" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="547" bodyend="550"/>
+        <references refid="classClock_1a7b948aea4170e3f33a48333273029b2d" compoundref="Clock_8h" startline="140">doingReinit_</references>
+        <referencedby refid="Shell_8cpp_1aaa1ce5985c5ebea00a26a26a2a381dcc" compoundref="Shell_8cpp" startline="330" endline="336">isDoingReinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a5deab76244f8effa84068d2e21cc3658" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Clock::isRunning</definition>
+        <argsstring>() const</argsstring>
+        <name>isRunning</name>
+        <qualifiedname>Clock::isRunning</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag: True when the simulation is still running. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="82" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="542" bodyend="545"/>
+        <references refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" compoundref="Clock_8h" startline="135">isRunning_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+        <referencedby refid="classShell_1aca06ce6784f5a644b3c2f283d14bc132" compoundref="Shell_8cpp" startline="560" endline="566">Shell::isRunning</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a03e3557063ebfdeedef1c89fdf01da16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::process</definition>
+        <argsstring>()</argsstring>
+        <name>process</name>
+        <qualifiedname>Clock::process</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="73" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a8fb6978d2def7e15edf19f2466042fff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::setDt</definition>
+        <argsstring>(double v)</argsstring>
+        <name>setDt</name>
+        <qualifiedname>Clock::setDt</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="35" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="488" bodyend="496"/>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" compoundref="Clock_8h" startline="135">isRunning_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1aa3ca006d0d290db62df082f36656c93d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::setTickDt</definition>
+        <argsstring>(unsigned int i, double v)</argsstring>
+        <name>setTickDt</name>
+        <qualifiedname>Clock::setTickDt</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A little nasty because we want to ensure that the main clock dt is set intelligently from the assignment here. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="45" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="586" bodyend="614"/>
+        <references refid="classClock_1af4b29f2c746782c9d98bbcfb06fb4bd7" compoundref="Clock_8cpp" startline="552" endline="568">checkTickNum</references>
+        <references refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" compoundref="Clock_8h" startline="130">dt_</references>
+        <references refid="Clock_8cpp_1a1a7b7be3a7eea1f5da9f9fdc3516818b" compoundref="Clock_8cpp" startline="62">minimumDt</references>
+        <references refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" compoundref="Clock_8h" startline="121">numTicks</references>
+        <references refid="classClock_1a01c66df0a178c900563424deddbeb4c2" compoundref="Clock_8h" startline="152">ticks_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a3fb346126a2d39c28a128543e0606114" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::setTickStep</definition>
+        <argsstring>(unsigned int i, unsigned int v)</argsstring>
+        <name>setTickStep</name>
+        <qualifiedname>Clock::setTickStep</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="43" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="570" bodyend="574"/>
+        <references refid="classClock_1af4b29f2c746782c9d98bbcfb06fb4bd7" compoundref="Clock_8cpp" startline="552" endline="568">checkTickNum</references>
+        <references refid="classClock_1a01c66df0a178c900563424deddbeb4c2" compoundref="Clock_8h" startline="152">ticks_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a0b77c3e7f33eb7ae0f018e469d96a250" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>Clock::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Halts running simulation gracefully, letting it restart wherever it left off from.</para>
+<para>Does a graceful stop of the simulation, leaving so it can continue cleanly with another step or start command. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="58" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="636" bodyend="639"/>
+        <references refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" compoundref="Clock_8h" startline="135">isRunning_</references>
+        <referencedby refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" compoundref="Clock_8cpp" startline="132" endline="446">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1afc976ce68fa85e15cc06f9ed47bddb7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Clock::~Clock</definition>
+        <argsstring>()</argsstring>
+        <name>~Clock</name>
+        <qualifiedname>Clock::~Clock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="30" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="473" bodyend="484"/>
+        <references refid="classMsg_1a4e0008bf93b2a7b57e1754f41dc47307" compoundref="Msg_8cpp" startline="343" endline="346">Msg::isLastTrump</references>
+        <references refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" compoundref="Clock_8h" startline="121">numTicks</references>
+        <references refid="Clock_8cpp_1aac27149af014996a88958a10741f4c4e" compoundref="Clock_8cpp" startline="97" endline="102">processVec</references>
+        <references refid="Clock_8cpp_1a1ba57bcbe8b99c7e2de834a2738f0a1f" compoundref="Clock_8cpp" startline="104" endline="109">reinitVec</references>
+        <references refid="Clock_8cpp_1a46eb58c7fa5aec0dc0dd02cd3b74de57" compoundref="Clock_8cpp" startline="111" endline="130">sharedProcVec</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classClock_1a571833d04a0a4827b0107ca6efd2c54b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::buildDefaultTick</definition>
+        <argsstring>()</argsstring>
+        <name>buildDefaultTick</name>
+        <qualifiedname>Clock::buildDefaultTick</qualifiedname>
+        <briefdescription>
+<para>Builds the default scheduling map of classes to ticks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the authoritative database of default tick assignments for each class. This is here because one needs to see relative locations of all assignments in order to do this. This assumes that in cases where there are two ticks (such as init and process) for a single class, then they are sequential. Base classes are also represented here. They are checked as a fallback if the more specific class lookup fails. Certain classes, such as Zombies, explicitly do not get scheduled even though they may inherit process messages. These are given the tick ~0U. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="109" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="871" bodyend="1026"/>
+        <references refid="classClock_1a8fad963b3f12548e4870844bd7223ca3" compoundref="Clock_8h" startline="171">defaultDt_</references>
+        <references refid="classClock_1a20e3ab378701b9a0b31e4da1b2aa883c" compoundref="Clock_8h" startline="169">defaultTick_</references>
+        <references refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" compoundref="Clock_8h" startline="121">numTicks</references>
+        <referencedby refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" compoundref="Clock_8cpp" startline="453" endline="471">Clock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a340c4fcfc35fdff169e8b919b971994d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * Clock::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>Clock::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="95" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="132" bodyend="446"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classEpFunc0_1a65a165d2b5236827e20b5f84536e3ecb" compoundref="EpFunc_8h" startline="54" endline="56">EpFunc0&lt; T &gt;::EpFunc0</references>
+        <references refid="classEpFunc1_1aa6a9cc9446afac48f3e2f51a116766c0" compoundref="EpFunc_8h" startline="70" endline="72">EpFunc1&lt; T, A &gt;::EpFunc1</references>
+        <references refid="classEpFunc2_1a449f38ac36c9f1fdc9cc7a244841bbee" compoundref="EpFunc_8h" startline="87" endline="89">EpFunc2&lt; T, A1, A2 &gt;::EpFunc2</references>
+        <references refid="Clock_8cpp_1a02c4da6caa4744e2349b953f51e4b008" compoundref="Clock_8cpp" startline="70" endline="77">finished</references>
+        <references refid="classClock_1a1600b5873fc1356f08d842cfc4f0c695" compoundref="Clock_8cpp" startline="517" endline="520">getCurrentStep</references>
+        <references refid="classClock_1a55a4f38df7c441711819d8a36949444c" compoundref="Clock_8cpp" startline="507" endline="510">getCurrentTime</references>
+        <references refid="classClock_1a839dc14aeb997054d3c18b6e391daf49" compoundref="Clock_8cpp" startline="623" endline="626">getDefaultTick</references>
+        <references refid="classClock_1a115635f4412651d5531b488d59c2e2cd" compoundref="Clock_8cpp" startline="498" endline="501">getDt</references>
+        <references refid="classClock_1ac641a243b9a8b2b2291cd3c7fec4aed8" compoundref="Clock_8cpp" startline="532" endline="540">getDts</references>
+        <references refid="classClock_1af679d833fdf4b909c88e1f89d83b155e" compoundref="Clock_8cpp" startline="512" endline="515">getNsteps</references>
+        <references refid="classClock_1a92fe50b4152a2cf13c4b10e0efac5756" compoundref="Clock_8cpp" startline="522" endline="525">getNumTicks</references>
+        <references refid="classClock_1a0482b89cf6a350ebd9552e39323beda7" compoundref="Clock_8cpp" startline="502" endline="505">getRunTime</references>
+        <references refid="classClock_1a2a63b0edde502e67839e44b2d18339c2" compoundref="Clock_8cpp" startline="527" endline="530">getStride</references>
+        <references refid="classClock_1a5095283a5e8a83ba76b1676a57ba59af" compoundref="Clock_8cpp" startline="616" endline="621">getTickDt</references>
+        <references refid="classClock_1a7e80998218886d040e968d34d6cfa7c4" compoundref="Clock_8cpp" startline="575" endline="580">getTickStep</references>
+        <references refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</references>
+        <references refid="classClock_1a80873e518985317ecaeade59568c9f39" compoundref="Clock_8cpp" startline="694" endline="701">handleStart</references>
+        <references refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classClock_1a5deab76244f8effa84068d2e21cc3658" compoundref="Clock_8cpp" startline="542" endline="545">isRunning</references>
+        <references refid="classLookupValueFinfo_1ae091b10e988ce9da6099127e1374293b" compoundref="LookupValueFinfo_8h" startline="46" endline="62">LookupValueFinfo&lt; T, L, F &gt;::LookupValueFinfo</references>
+        <references refid="classOpFunc0_1acb12ec1c7fa3d906097f5402e0f4183c" compoundref="OpFunc_8h" startline="16" endline="18">OpFunc0&lt; T &gt;::OpFunc0</references>
+        <references refid="classReadOnlyLookupValueFinfo_1a3aa6c363601e4483657919db3355ff1a" compoundref="LookupValueFinfo_8h" startline="104" endline="115">ReadOnlyLookupValueFinfo&lt; T, L, F &gt;::ReadOnlyLookupValueFinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classClock_1a8fb6978d2def7e15edf19f2466042fff" compoundref="Clock_8cpp" startline="488" endline="496">setDt</references>
+        <references refid="classClock_1aa3ca006d0d290db62df082f36656c93d" compoundref="Clock_8cpp" startline="586" endline="614">setTickDt</references>
+        <references refid="classClock_1a3fb346126a2d39c28a128543e0606114" compoundref="Clock_8cpp" startline="570" endline="574">setTickStep</references>
+        <references refid="classSharedFinfo_1a64b94efcbd56f0e785f92d027541ae29" compoundref="SharedFinfo_8cpp" startline="16" endline="30">SharedFinfo::SharedFinfo</references>
+        <references refid="Clock_8cpp_1a46eb58c7fa5aec0dc0dd02cd3b74de57" compoundref="Clock_8cpp" startline="111" endline="130">sharedProcVec</references>
+        <references refid="classClock_1a0b77c3e7f33eb7ae0f018e469d96a250" compoundref="Clock_8cpp" startline="636" endline="639">stop</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+        <referencedby refid="main_8cpp_1a6e304b494f9a324f952d9f2033b2b136" compoundref="main_8cpp" startline="137" endline="227">init</referencedby>
+        <referencedby refid="testBuiltins_8cpp_1a0b23c31b7503dd93064294b42d4ff085" compoundref="testBuiltins_8cpp" startline="61" endline="123">testFibonacci</referencedby>
+        <referencedby refid="testShell_8cpp_1ae735a0a41a973dd5976fee234f11149c" compoundref="testShell_8cpp" startline="836" endline="1075">testShellAddMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1a7eba4d8abea7cebf1d3630285cf4d017" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Clock::lookupDefaultTick</definition>
+        <argsstring>(const string &amp;className)</argsstring>
+        <name>lookupDefaultTick</name>
+        <qualifiedname>Clock::lookupDefaultTick</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>className</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Look up the default Tick number for the specified class. Note that for objects having an &apos;init&apos; action as well as process, the assigned tick is for &apos;init&apos; and the next number will be used for &apos;process&apos;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="106" column="25" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="1029" bodyend="1040"/>
+        <references refid="classClock_1a20e3ab378701b9a0b31e4da1b2aa883c" compoundref="Clock_8h" startline="169">defaultTick_</references>
+        <referencedby refid="classClock_1a839dc14aeb997054d3c18b6e391daf49" compoundref="Clock_8cpp" startline="623" endline="626">getDefaultTick</referencedby>
+        <referencedby refid="ShellCopy_8cpp_1aa3c56b44e26d421fdd1b25efab488284" compoundref="ShellCopy_8cpp" startline="63" endline="91">innerCopyElements</referencedby>
+        <referencedby refid="classShell_1ab970c2c6e17af730804e810b4431107c" compoundref="Shell_8cpp" startline="628" endline="655">Shell::innerCreate</referencedby>
+        <referencedby refid="classStoich_1a45c75f8d02a175c94814978d7690018a" compoundref="Stoich_8cpp" startline="1344" endline="1389">Stoich::unZombifyModel</referencedby>
+        <referencedby refid="classElement_1a68ae4e66066996955af229880e388aa4" compoundref="Element_8cpp" startline="159" endline="184">Element::zombieSwap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classClock_1aab22405b4cb887de004cb5f838efdd70" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::reportClock</definition>
+        <argsstring>()</argsstring>
+        <name>reportClock</name>
+        <qualifiedname>Clock::reportClock</qualifiedname>
+        <briefdescription>
+<para>Static function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility function to tell us about the scheduling </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="91" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="646" bodyend="650"/>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classClock_1ac03f093ece9f8922943b8077e26f9a32" compoundref="Clock_8cpp" startline="652" endline="664">innerReportClock</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classClock_1a665a9d5e5c294d342ac4fd3cc293aff8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Clock::buildTicks</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>buildTicks</name>
+        <qualifiedname>Clock::buildTicks</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="124" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.cpp" bodystart="670" bodyend="687"/>
+        <references refid="classClock_1ade88843b11a7386195e532d40d001b94" compoundref="Clock_8h" startline="158">activeTicks_</references>
+        <references refid="classClock_1a5a36acfa4e6ce6f4d6a0b92187f8298d" compoundref="Clock_8h" startline="163">activeTicksMap_</references>
+        <references refid="classEref_1a47b59ab86165cceb0bde80c76c3f7fa2" compoundref="Eref_8h" startline="30" endline="33">Eref::element</references>
+        <references refid="classSrcFinfo_1aa90db29c818e71d31322c35bfec2f731" compoundref="SrcFinfo_8cpp" startline="28" endline="34">SrcFinfo::getBindIndex</references>
+        <references refid="classElement_1aa6bf0ad3ac2f537968453d836de0b7c1" compoundref="Element_8cpp" startline="307" endline="310">Element::hasMsgs</references>
+        <references refid="Clock_8cpp_1aac27149af014996a88958a10741f4c4e" compoundref="Clock_8cpp" startline="97" endline="102">processVec</references>
+        <references refid="classClock_1ac69efd3e5e06a80d2878cab0919681a1" compoundref="Clock_8h" startline="129">stride_</references>
+        <references refid="classClock_1a01c66df0a178c900563424deddbeb4c2" compoundref="Clock_8h" startline="152">ticks_</references>
+        <referencedby refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" compoundref="Clock_8cpp" startline="806" endline="832">handleReinit</referencedby>
+        <referencedby refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" compoundref="Clock_8cpp" startline="703" endline="801">handleStep</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classClock" kindref="compound">Clock</ref> now uses integral scheduling. The <ref refid="classClock" kindref="compound">Clock</ref> has an array of child Ticks, each of which controls the process and reinit calls of its targets. The <ref refid="classClock" kindref="compound">Clock</ref> has a minimum dt. All ticks operate with (positive) integral multiples of this, from 1 to anything. If multiple Ticks are due to go off in a given cycle, the order is from lowest to highest. Within a Tick the order of execution of target objects is undefined.</para>
+<para>The Reinit call goes through all Ticks in order. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Clock</label>
+        <link refid="classClock"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-info_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-activeTicksMap_</edgelabel>
+          <edgelabel>-activeTicks_</edgelabel>
+          <edgelabel>-ticks_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-defaultDt_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ProcInfo</label>
+        <link refid="classProcInfo"/>
+      </node>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" line="25" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/scheduling/Clock.h" bodystart="26" bodyend="179"/>
+    <listofallmembers>
+      <member refid="classClock_1ade88843b11a7386195e532d40d001b94" prot="private" virt="non-virtual"><scope>Clock</scope><name>activeTicks_</name></member>
+      <member refid="classClock_1a5a36acfa4e6ce6f4d6a0b92187f8298d" prot="private" virt="non-virtual"><scope>Clock</scope><name>activeTicksMap_</name></member>
+      <member refid="classClock_1a571833d04a0a4827b0107ca6efd2c54b" prot="public" virt="non-virtual"><scope>Clock</scope><name>buildDefaultTick</name></member>
+      <member refid="classClock_1a665a9d5e5c294d342ac4fd3cc293aff8" prot="private" virt="non-virtual"><scope>Clock</scope><name>buildTicks</name></member>
+      <member refid="classClock_1af4b29f2c746782c9d98bbcfb06fb4bd7" prot="public" virt="non-virtual"><scope>Clock</scope><name>checkTickNum</name></member>
+      <member refid="classClock_1adbc370eb6b5f8d01645cf440188160a8" prot="public" virt="non-virtual"><scope>Clock</scope><name>Clock</name></member>
+      <member refid="classClock_1a2d2eaa4191f4c5f654e034d7228cf65c" prot="private" virt="non-virtual"><scope>Clock</scope><name>currentStep_</name></member>
+      <member refid="classClock_1a8ae7d90a7931e343b1a508673290ec74" prot="private" virt="non-virtual"><scope>Clock</scope><name>currentTime_</name></member>
+      <member refid="classClock_1a8fad963b3f12548e4870844bd7223ca3" prot="private" virt="non-virtual"><scope>Clock</scope><name>defaultDt_</name></member>
+      <member refid="classClock_1a20e3ab378701b9a0b31e4da1b2aa883c" prot="private" virt="non-virtual"><scope>Clock</scope><name>defaultTick_</name></member>
+      <member refid="classClock_1a7b948aea4170e3f33a48333273029b2d" prot="private" virt="non-virtual"><scope>Clock</scope><name>doingReinit_</name></member>
+      <member refid="classClock_1af6e91b4dcf1107fd62ab72327482c91e" prot="private" virt="non-virtual"><scope>Clock</scope><name>dt_</name></member>
+      <member refid="classClock_1a1600b5873fc1356f08d842cfc4f0c695" prot="public" virt="non-virtual"><scope>Clock</scope><name>getCurrentStep</name></member>
+      <member refid="classClock_1a55a4f38df7c441711819d8a36949444c" prot="public" virt="non-virtual"><scope>Clock</scope><name>getCurrentTime</name></member>
+      <member refid="classClock_1a839dc14aeb997054d3c18b6e391daf49" prot="public" virt="non-virtual"><scope>Clock</scope><name>getDefaultTick</name></member>
+      <member refid="classClock_1a115635f4412651d5531b488d59c2e2cd" prot="public" virt="non-virtual"><scope>Clock</scope><name>getDt</name></member>
+      <member refid="classClock_1ac641a243b9a8b2b2291cd3c7fec4aed8" prot="public" virt="non-virtual"><scope>Clock</scope><name>getDts</name></member>
+      <member refid="classClock_1af679d833fdf4b909c88e1f89d83b155e" prot="public" virt="non-virtual"><scope>Clock</scope><name>getNsteps</name></member>
+      <member refid="classClock_1a92fe50b4152a2cf13c4b10e0efac5756" prot="public" virt="non-virtual"><scope>Clock</scope><name>getNumTicks</name></member>
+      <member refid="classClock_1a0482b89cf6a350ebd9552e39323beda7" prot="public" virt="non-virtual"><scope>Clock</scope><name>getRunTime</name></member>
+      <member refid="classClock_1a2a63b0edde502e67839e44b2d18339c2" prot="public" virt="non-virtual"><scope>Clock</scope><name>getStride</name></member>
+      <member refid="classClock_1a5095283a5e8a83ba76b1676a57ba59af" prot="public" virt="non-virtual"><scope>Clock</scope><name>getTickDt</name></member>
+      <member refid="classClock_1a7e80998218886d040e968d34d6cfa7c4" prot="public" virt="non-virtual"><scope>Clock</scope><name>getTickStep</name></member>
+      <member refid="classClock_1a4a94366237fde44496d500e8dc7f0ef3" prot="public" virt="non-virtual"><scope>Clock</scope><name>handleReinit</name></member>
+      <member refid="classClock_1a80873e518985317ecaeade59568c9f39" prot="public" virt="non-virtual"><scope>Clock</scope><name>handleStart</name></member>
+      <member refid="classClock_1a2f0cb7e2334aecda810f97bb568359c4" prot="public" virt="non-virtual"><scope>Clock</scope><name>handleStep</name></member>
+      <member refid="classClock_1a6d900a91a112d4c5d2e87d265df3fcec" prot="private" virt="non-virtual"><scope>Clock</scope><name>info_</name></member>
+      <member refid="classClock_1a340c4fcfc35fdff169e8b919b971994d" prot="public" virt="non-virtual"><scope>Clock</scope><name>initCinfo</name></member>
+      <member refid="classClock_1ac03f093ece9f8922943b8077e26f9a32" prot="public" virt="non-virtual"><scope>Clock</scope><name>innerReportClock</name></member>
+      <member refid="classClock_1a877396c4a8b37cc2ac4a49d287456c61" prot="public" virt="non-virtual"><scope>Clock</scope><name>isDoingReinit</name></member>
+      <member refid="classClock_1a5deab76244f8effa84068d2e21cc3658" prot="public" virt="non-virtual"><scope>Clock</scope><name>isRunning</name></member>
+      <member refid="classClock_1af6d5ac0ab711c952a03f3a2e88f7e385" prot="private" virt="non-virtual"><scope>Clock</scope><name>isRunning_</name></member>
+      <member refid="classClock_1a7eba4d8abea7cebf1d3630285cf4d017" prot="public" virt="non-virtual"><scope>Clock</scope><name>lookupDefaultTick</name></member>
+      <member refid="classClock_1a1201920b556dbd2bd8766d5f0c1fae92" prot="private" virt="non-virtual"><scope>Clock</scope><name>notify_</name></member>
+      <member refid="classClock_1a368cd025ad35a49ee6d47d2a4f0c9630" prot="private" virt="non-virtual"><scope>Clock</scope><name>nSteps_</name></member>
+      <member refid="classClock_1afab1f4a1ce8c06f08380d1feb2c3b08e" prot="public" virt="non-virtual"><scope>Clock</scope><name>numTicks</name></member>
+      <member refid="classClock_1a03e3557063ebfdeedef1c89fdf01da16" prot="public" virt="non-virtual"><scope>Clock</scope><name>process</name></member>
+      <member refid="classClock_1aab22405b4cb887de004cb5f838efdd70" prot="public" virt="non-virtual"><scope>Clock</scope><name>reportClock</name></member>
+      <member refid="classClock_1a74e32113b64a2390ed41e14a60753805" prot="private" virt="non-virtual"><scope>Clock</scope><name>runTime_</name></member>
+      <member refid="classClock_1a8fb6978d2def7e15edf19f2466042fff" prot="public" virt="non-virtual"><scope>Clock</scope><name>setDt</name></member>
+      <member refid="classClock_1aa3ca006d0d290db62df082f36656c93d" prot="public" virt="non-virtual"><scope>Clock</scope><name>setTickDt</name></member>
+      <member refid="classClock_1a3fb346126a2d39c28a128543e0606114" prot="public" virt="non-virtual"><scope>Clock</scope><name>setTickStep</name></member>
+      <member refid="classClock_1a0b77c3e7f33eb7ae0f018e469d96a250" prot="public" virt="non-virtual"><scope>Clock</scope><name>stop</name></member>
+      <member refid="classClock_1ac69efd3e5e06a80d2878cab0919681a1" prot="private" virt="non-virtual"><scope>Clock</scope><name>stride_</name></member>
+      <member refid="classClock_1a4339f7cf8602fa138ff4dceca02286b9" prot="private" virt="non-virtual"><scope>Clock</scope><name>testClock</name></member>
+      <member refid="classClock_1a01c66df0a178c900563424deddbeb4c2" prot="private" virt="non-virtual"><scope>Clock</scope><name>ticks_</name></member>
+      <member refid="classClock_1afc976ce68fa85e15cc06f9ed47bddb7c" prot="public" virt="non-virtual"><scope>Clock</scope><name>~Clock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

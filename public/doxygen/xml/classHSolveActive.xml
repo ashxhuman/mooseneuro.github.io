@@ -1,0 +1,1965 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classHSolveActive" kind="class" language="C++" prot="public">
+    <compoundname>HSolveActive</compoundname>
+    <basecompoundref refid="classHSolvePassive" prot="public" virt="non-virtual">HSolvePassive</basecompoundref>
+    <derivedcompoundref refid="classHSolve" prot="public" virt="non-virtual">HSolve</derivedcompoundref>
+    <includes refid="HSolveActive_8h" local="no">HSolveActive.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classHSolveActive_1a47f2da707ced98491cc29aacee394fab" prot="private" static="no">
+        <type>vector&lt; <ref refid="structCurrentStruct" kindref="compound">CurrentStruct</ref> &gt;::iterator</type>
+        <definition>typedef vector&lt;CurrentStruct&gt;::iterator HSolveActive::currentVecIter</definition>
+        <argsstring></argsstring>
+        <name>currentVecIter</name>
+        <qualifiedname>HSolveActive::currentVecIter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="31" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HSolveActive::ca_</definition>
+        <argsstring></argsstring>
+        <name>ca_</name>
+        <qualifiedname>HSolveActive::ca_</qualifiedname>
+        <briefdescription>
+<para>Ca conc in each pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="81" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">advanceCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolve_1af471b426ecdf23cb181436c44c599ba9" compoundref="HSolveInterface_8cpp" startline="453" endline="458">HSolve::getCa</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1a4f454fe2126b1c7264e8161a5b880fc9" compoundref="HSolveActiveSetup_8cpp" startline="67" endline="76">reinitCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</referencedby>
+        <referencedby refid="classHSolve_1a1e1bab1c423e1db06129a3259124aca5" compoundref="HSolveInterface_8cpp" startline="460" endline="467">HSolve::setCa</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1aa54bb10de0a08aabf67aeaad51d505b1" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HSolveActive::caActivation_</definition>
+        <argsstring></argsstring>
+        <name>caActivation_</name>
+        <qualifiedname>HSolveActive::caActivation_</qualifiedname>
+        <briefdescription>
+<para>calcium pool </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Ca current entering each </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="82" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">advanceCalcium</referencedby>
+        <referencedby refid="classHSolve_1aa9e772749c02776cf67e4db05faec6ec" compoundref="HSolveInterface_8cpp" startline="469" endline="480">HSolve::iCa</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1a4f454fe2126b1c7264e8161a5b880fc9" compoundref="HSolveActiveSetup_8cpp" startline="67" endline="76">reinitCalcium</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HSolveActive::caAdvance_</definition>
+        <argsstring></argsstring>
+        <name>caAdvance_</name>
+        <qualifiedname>HSolveActive::caAdvance_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Solver parameters: exposed as fields in MOOSE caAdvance_: This flag determines how current flowing into a calcium pool is computed. A value of 0 means that the membrane potential at the beginning of the time-step is used for the calculation. This is how GENESIS does its computations. A value of 1 means the membrane potential at the middle of the time-step is used. This is the correct way of integration, and is the default way. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="53" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">advanceCalcium</referencedby>
+        <referencedby refid="classHSolve_1afc6dca6514348252fb28947b6a6a329b" compoundref="HSolve_8cpp" startline="436" endline="439">HSolve::getCaAdvance</referencedby>
+        <referencedby refid="classHSolveActive_1afc13271ad2ed260c5bb01e1e18a51fde" compoundref="HSolveActive_8cpp" startline="33" endline="40">HSolveActive</referencedby>
+        <referencedby refid="classHSolve_1aa681e676ac04355cc05742c83b748de2" compoundref="HSolve_8cpp" startline="425" endline="434">HSolve::setCaAdvance</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1ac31e744fbd7b77b40e9fa70afb927589" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structCaConcStruct" kindref="compound">CaConcStruct</ref> &gt;</type>
+        <definition>vector&lt; CaConcStruct &gt; HSolveActive::caConc_</definition>
+        <argsstring></argsstring>
+        <name>caConc_</name>
+        <qualifiedname>HSolveActive::caConc_</qualifiedname>
+        <briefdescription>
+<para>Ca pool info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="80" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">advanceCalcium</referencedby>
+        <referencedby refid="classHSolve_1af471b426ecdf23cb181436c44c599ba9" compoundref="HSolveInterface_8cpp" startline="453" endline="458">HSolve::getCa</referencedby>
+        <referencedby refid="classHSolve_1a16c45277b26c969d47c4788b0bf9e006" compoundref="HSolveInterface_8cpp" startline="482" endline="487">HSolve::getCaBasal</referencedby>
+        <referencedby refid="classHSolve_1ade0de2735a5d57840afb23e78bc7087e" compoundref="HSolveInterface_8cpp" startline="505" endline="510">HSolve::getCaCeiling</referencedby>
+        <referencedby refid="classHSolve_1ac019d787c72f08d7eb64dace10bf866d" compoundref="HSolveInterface_8cpp" startline="520" endline="525">HSolve::getCaFloor</referencedby>
+        <referencedby refid="classHSolve_1aa9e772749c02776cf67e4db05faec6ec" compoundref="HSolveInterface_8cpp" startline="469" endline="480">HSolve::iCa</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1a4f454fe2126b1c7264e8161a5b880fc9" compoundref="HSolveActiveSetup_8cpp" startline="67" endline="76">reinitCalcium</referencedby>
+        <referencedby refid="classHSolve_1a1e1bab1c423e1db06129a3259124aca5" compoundref="HSolveInterface_8cpp" startline="460" endline="467">HSolve::setCa</referencedby>
+        <referencedby refid="classHSolve_1ae4a7a53824bdf6e46c76b06c5e1e83bf" compoundref="HSolveInterface_8cpp" startline="489" endline="495">HSolve::setCaBasal</referencedby>
+        <referencedby refid="classHSolve_1a9eecd089157d32f5c442c19d171a8663" compoundref="HSolveInterface_8cpp" startline="512" endline="518">HSolve::setCaCeiling</referencedby>
+        <referencedby refid="classHSolve_1a713652f838c30e0cdbc9f5d0e07a3eb2" compoundref="HSolveInterface_8cpp" startline="527" endline="533">HSolve::setCaFloor</referencedby>
+        <referencedby refid="classHSolve_1a31cddc0e8bd3ec9ef1a9effb9ef46e7a" compoundref="HSolveInterface_8cpp" startline="497" endline="503">HSolve::setTauB</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; HSolveActive::caConcId_</definition>
+        <argsstring></argsstring>
+        <name>caConcId_</name>
+        <qualifiedname>HSolveActive::caConcId_</qualifiedname>
+        <briefdescription>
+<para>calcium from difshells </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used for localIndex-ing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="124" column="25" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" compoundref="HSolveActiveSetup_8cpp" startline="596" endline="672">manageOutgoingMessages</referencedby>
+        <referencedby refid="classHSolve_1a23ee1b6f33568fffcc8e93cecd83adbf" compoundref="HSolveInterface_8cpp" startline="49" endline="60">HSolve::mapIds</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</referencedby>
+        <referencedby refid="classHSolve_1a423981576f253b33c6e9091cb3ae0ea6" compoundref="HSolve_8cpp" startline="264" endline="284">HSolve::unzombify</referencedby>
+        <referencedby refid="classHSolve_1aa86d341407e0eb9928b085c9df38b06c" compoundref="HSolve_8cpp" startline="235" endline="262">HSolve::zombify</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a676855085b67e334ece6496c119d72f3" prot="protected" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; HSolveActive::caCount_</definition>
+        <argsstring></argsstring>
+        <name>caCount_</name>
+        <qualifiedname>HSolveActive::caCount_</qualifiedname>
+        <briefdescription>
+<para>each compartment </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of calcium pools in </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="91" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a55ef1587bf53d839cc7071b0e714011c" prot="protected" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt; int &gt; HSolveActive::caDependIndex_</definition>
+        <argsstring></argsstring>
+        <name>caDependIndex_</name>
+        <qualifiedname>HSolveActive::caDependIndex_</qualifiedname>
+        <briefdescription>
+<para>depdt channel depend upon? </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Which pool does each Ca </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="93" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a42bf9631c6525923fddd82305114f67f" compoundref="HSolveActiveSetup_8cpp" startline="674" endline="679">cleanup</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a48a81a94f3840255662704d8f9d0aa22" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HSolveActive::caDiv_</definition>
+        <argsstring></argsstring>
+        <name>caDiv_</name>
+        <qualifiedname>HSolveActive::caDiv_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="68" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolve_1ad1f1b1533ef104ad755652785e736327" compoundref="HSolve_8cpp" startline="476" endline="479">HSolve::getCaDiv</referencedby>
+        <referencedby refid="classHSolve_1a2d9d63b229e5c0843f59d5c595bd6925" compoundref="HSolve_8cpp" startline="471" endline="474">HSolve::setCaDiv</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a8eb9befb7809ca38e895933eb2836b7e" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSolveActive::caMax_</definition>
+        <argsstring></argsstring>
+        <name>caMax_</name>
+        <qualifiedname>HSolveActive::caMax_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="67" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolve_1a552f30356abca6ee22f028eaeba3a24e" compoundref="HSolve_8cpp" startline="496" endline="499">HSolve::getCaMax</referencedby>
+        <referencedby refid="classHSolve_1a9144633075c158ae44dadfe8d5753f43" compoundref="HSolve_8cpp" startline="491" endline="494">HSolve::setCaMax</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a52e05db023c4642cda092f476ccae8b5" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSolveActive::caMin_</definition>
+        <argsstring></argsstring>
+        <name>caMin_</name>
+        <qualifiedname>HSolveActive::caMin_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="66" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolve_1ac669b098da44cbe7ef2e673ea27e5a67" compoundref="HSolve_8cpp" startline="486" endline="489">HSolve::getCaMin</referencedby>
+        <referencedby refid="classHSolve_1ad6dace2410827e46d37156cdf515f00a" compoundref="HSolve_8cpp" startline="481" endline="484">HSolve::setCaMin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a9342caabc56e88bf9301529f33346aac" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structLookupRow" kindref="compound">LookupRow</ref> * &gt;</type>
+        <definition>vector&lt; LookupRow* &gt; HSolveActive::caRow_</definition>
+        <argsstring></argsstring>
+        <name>caRow_</name>
+        <qualifiedname>HSolveActive::caRow_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Points into caRowCompt. For each channel, points to the appropriate pool&apos;s <ref refid="structLookupRow" kindref="compound">LookupRow</ref> in the caRowCompt vector. This value is then used by the channel. Also happens in <ref refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" kindref="member">HSolveActive::advanceChannels</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="104" column="17" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a1e9e5d916a02a35e2c7e3695c60d1388" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structLookupRow" kindref="compound">LookupRow</ref> &gt;</type>
+        <definition>vector&lt; LookupRow &gt; HSolveActive::caRowCompt_</definition>
+        <argsstring></argsstring>
+        <name>caRowCompt_</name>
+        <qualifiedname>HSolveActive::caRowCompt_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lookup row buffer. For each compartment, the lookup rows for calcium dependent channels are loaded into this vector before being used. The vector is then reused for the next compartment. This vector therefore has a size equal to the maximum number of calcium pools across all compartments. This is done in <ref refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" kindref="member">HSolveActive::advanceChannels</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="97" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" prot="protected" static="no" mutable="no">
+        <type><ref refid="classLookupTable" kindref="compound">LookupTable</ref></type>
+        <definition>LookupTable HSolveActive::caTable_</definition>
+        <argsstring></argsstring>
+        <name>caTable_</name>
+        <qualifiedname>HSolveActive::caTable_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="88" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a3bd80d16fd6945b8544b69fc9c127807" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double * &gt;</type>
+        <definition>vector&lt; double* &gt; HSolveActive::caTarget_</definition>
+        <argsstring></argsstring>
+        <name>caTarget_</name>
+        <qualifiedname>HSolveActive::caTarget_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For each channel, which calcium pool is being fed? Points into caActivation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="84" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">advanceCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a5a4338efce5c7f4a54a299ca8d491866" prot="protected" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; HSolveActive::chan2compt_</definition>
+        <argsstring></argsstring>
+        <name>chan2compt_</name>
+        <qualifiedname>HSolveActive::chan2compt_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Index of the compt to which a given (index) channel belongs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="114" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classHSolve_1ad089488d8042e8ec6e8837bc4bc86c74" compoundref="HSolveInterface_8cpp" startline="330" endline="339">HSolve::getIk</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a2244a7d0c8eae51f813788228b119643" prot="protected" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; HSolveActive::chan2state_</definition>
+        <argsstring></argsstring>
+        <name>chan2state_</name>
+        <qualifiedname>HSolveActive::chan2state_</qualifiedname>
+        <briefdescription>
+<para>a state index </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts a chnnel index to </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="117" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="classHSolve_1a2f231ba434acf5c715c35efd35219a7e" compoundref="HSolveInterface_8cpp" startline="341" endline="353">HSolve::getX</referencedby>
+        <referencedby refid="classHSolve_1aa2495069cffc6b9966a9dfa349ce79cc" compoundref="HSolveInterface_8cpp" startline="369" endline="385">HSolve::getY</referencedby>
+        <referencedby refid="classHSolve_1a0e8cdedb2431e2c95c145ee7caccec44" compoundref="HSolveInterface_8cpp" startline="405" endline="423">HSolve::getZ</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</referencedby>
+        <referencedby refid="classHSolve_1a65c970eee15b57908744f21b315a39a7" compoundref="HSolveInterface_8cpp" startline="355" endline="367">HSolve::setX</referencedby>
+        <referencedby refid="classHSolve_1a9526e4c0f523117c9ddd294732c9a26b" compoundref="HSolveInterface_8cpp" startline="387" endline="403">HSolve::setY</referencedby>
+        <referencedby refid="classHSolve_1a16aed3a1c25dfe43b96c01c7b0124293" compoundref="HSolveInterface_8cpp" startline="425" endline="443">HSolve::setZ</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structChannelStruct" kindref="compound">ChannelStruct</ref> &gt;</type>
+        <definition>vector&lt; ChannelStruct &gt; HSolveActive::channel_</definition>
+        <argsstring></argsstring>
+        <name>channel_</name>
+        <qualifiedname>HSolveActive::channel_</qualifiedname>
+        <briefdescription>
+<para>to compartment: chan2compt </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of channels. Link </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="76" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" compoundref="HSolveActive_8cpp" startline="68" endline="83">calculateChannelCurrents</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolve_1a65789b9c9fefcde66fd8b644c6a04962" compoundref="HSolveInterface_8cpp" startline="287" endline="292">HSolve::getHHChannelGbar</referencedby>
+        <referencedby refid="classHSolve_1a6fb859b26b4ac497b904cb5e7215cc2a" compoundref="HSolveInterface_8cpp" startline="273" endline="278">HSolve::getInstant</referencedby>
+        <referencedby refid="classHSolve_1a2f231ba434acf5c715c35efd35219a7e" compoundref="HSolveInterface_8cpp" startline="341" endline="353">HSolve::getX</referencedby>
+        <referencedby refid="classHSolve_1aa2495069cffc6b9966a9dfa349ce79cc" compoundref="HSolveInterface_8cpp" startline="369" endline="385">HSolve::getY</referencedby>
+        <referencedby refid="classHSolve_1a0e8cdedb2431e2c95c145ee7caccec44" compoundref="HSolveInterface_8cpp" startline="405" endline="423">HSolve::getZ</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+        <referencedby refid="classHSolve_1a9525f1abdff46046c7ae051b11017268" compoundref="HSolveInterface_8cpp" startline="294" endline="300">HSolve::setHHChannelGbar</referencedby>
+        <referencedby refid="classHSolve_1a85347be12a7e9586fa43eeab38978526" compoundref="HSolveInterface_8cpp" startline="445" endline="451">HSolve::setHHmodulation</referencedby>
+        <referencedby refid="classHSolve_1aba343b5d4d07cb8e4dd1319502dcef0c" compoundref="HSolveInterface_8cpp" startline="280" endline="285">HSolve::setInstant</referencedby>
+        <referencedby refid="classHSolve_1abec93d6be6b5f53f69cc2e0985f3de0c" compoundref="HSolveInterface_8cpp" startline="262" endline="271">HSolve::setPowers</referencedby>
+        <referencedby refid="classHSolve_1a65c970eee15b57908744f21b315a39a7" compoundref="HSolveInterface_8cpp" startline="355" endline="367">HSolve::setX</referencedby>
+        <referencedby refid="classHSolve_1a9526e4c0f523117c9ddd294732c9a26b" compoundref="HSolveInterface_8cpp" startline="387" endline="403">HSolve::setY</referencedby>
+        <referencedby refid="classHSolve_1a16aed3a1c25dfe43b96c01c7b0124293" compoundref="HSolveInterface_8cpp" startline="425" endline="443">HSolve::setZ</referencedby>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1ad87a5bf2418ed380d2ece21aac2e2036" prot="protected" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt; int &gt; HSolveActive::channelCount_</definition>
+        <argsstring></argsstring>
+        <name>channelCount_</name>
+        <qualifiedname>HSolveActive::channelCount_</qualifiedname>
+        <briefdescription>
+<para>compartment </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of channels in each </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="109" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; HSolveActive::channelId_</definition>
+        <argsstring></argsstring>
+        <name>channelId_</name>
+        <qualifiedname>HSolveActive::channelId_</qualifiedname>
+        <briefdescription>
+<para>Used for localIndex-ing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="125" column="25" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" compoundref="HSolveActiveSetup_8cpp" startline="596" endline="672">manageOutgoingMessages</referencedby>
+        <referencedby refid="classHSolve_1a23ee1b6f33568fffcc8e93cecd83adbf" compoundref="HSolveInterface_8cpp" startline="49" endline="60">HSolve::mapIds</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1a319c40d53a11edb462d02515183059d1" compoundref="HSolveActiveSetup_8cpp" startline="239" endline="252">readGates</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</referencedby>
+        <referencedby refid="classHSolve_1a423981576f253b33c6e9091cb3ae0ea6" compoundref="HSolve_8cpp" startline="264" endline="284">HSolve::unzombify</referencedby>
+        <referencedby refid="classHSolve_1aa86d341407e0eb9928b085c9df38b06c" compoundref="HSolve_8cpp" startline="235" endline="262">HSolve::zombify</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1add2c5d6f16dc04ababf387a786e6f4c6" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structLookupColumn" kindref="compound">LookupColumn</ref> &gt;</type>
+        <definition>vector&lt; LookupColumn &gt; HSolveActive::column_</definition>
+        <argsstring></argsstring>
+        <name>column_</name>
+        <qualifiedname>HSolveActive::column_</qualifiedname>
+        <briefdescription>
+<para>to lookup for this species </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Which column in the table </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="95" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structCurrentStruct" kindref="compound">CurrentStruct</ref> &gt;</type>
+        <definition>vector&lt; CurrentStruct &gt; HSolveActive::current_</definition>
+        <argsstring></argsstring>
+        <name>current_</name>
+        <qualifiedname>HSolveActive::current_</qualifiedname>
+        <briefdescription>
+<para>Channel current. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal data structures. Will also be accessed in derived class <ref refid="classHSolve" kindref="compound">HSolve</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="73" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">advanceCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" compoundref="HSolveActive_8cpp" startline="68" endline="83">calculateChannelCurrents</referencedby>
+        <referencedby refid="classHSolve_1a220cc3c2ed784b78c97f7cb7ae95ca0d" compoundref="HSolveInterface_8cpp" startline="302" endline="307">HSolve::getEk</referencedby>
+        <referencedby refid="classHSolve_1a9becf1e0fb4c111e625816b2028d245d" compoundref="HSolveInterface_8cpp" startline="316" endline="321">HSolve::getGk</referencedby>
+        <referencedby refid="classHSolve_1ad089488d8042e8ec6e8837bc4bc86c74" compoundref="HSolveInterface_8cpp" startline="330" endline="339">HSolve::getIk</referencedby>
+        <referencedby refid="classHSolve_1aa39f10de28785bebc1b0bc032179c562" compoundref="HSolveInterface_8cpp" startline="161" endline="182">HSolve::getIm</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</referencedby>
+        <referencedby refid="classHSolve_1a8a128caa7c506a882537f8421c9e22f5" compoundref="HSolveInterface_8cpp" startline="309" endline="314">HSolve::setEk</referencedby>
+        <referencedby refid="classHSolve_1a287e240fbb448c55e592b7d5ef22bbcd" compoundref="HSolveInterface_8cpp" startline="323" endline="328">HSolve::setGk</referencedby>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classHSolveActive_1a47f2da707ced98491cc29aacee394fab" kindref="member">currentVecIter</ref> &gt;</type>
+        <definition>vector&lt; currentVecIter &gt; HSolveActive::currentBoundary_</definition>
+        <argsstring></argsstring>
+        <name>currentBoundary_</name>
+        <qualifiedname>HSolveActive::currentBoundary_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to designate compt boundaries in the current_ vector. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="111" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">advanceCalcium</referencedby>
+        <referencedby refid="classHSolve_1aa39f10de28785bebc1b0bc032179c562" compoundref="HSolveInterface_8cpp" startline="161" endline="182">HSolve::getIm</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a8cd34b6274d9f15256a02c9e87222905" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HSolveActive::externalCalcium_</definition>
+        <argsstring></argsstring>
+        <name>externalCalcium_</name>
+        <qualifiedname>HSolveActive::externalCalcium_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="123" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classHSolve_1ab0d6aa3b7d1322a6bc6cabe6a3bad871" compoundref="HSolveInterface_8cpp" startline="254" endline="259">HSolve::addConc</referencedby>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HSolveActive::externalCurrent_</definition>
+        <argsstring></argsstring>
+        <name>externalCurrent_</name>
+        <qualifiedname>HSolveActive::externalCurrent_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External currents from channels that <ref refid="classHSolve" kindref="compound">HSolve</ref> cannot internalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="119" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="classHSolve_1a5b717002c908b76ea9689bb654989d00" compoundref="HSolveInterface_8cpp" startline="246" endline="252">HSolve::addGkEk</referencedby>
+        <referencedby refid="classHSolve_1aa39f10de28785bebc1b0bc032179c562" compoundref="HSolveInterface_8cpp" startline="161" endline="182">HSolve::getIm</referencedby>
+        <referencedby refid="classHSolveActive_1ae99b2bc59ad4b09fe0c364a8960a3c66" compoundref="HSolveActiveSetup_8cpp" startline="576" endline="594">readExternalChannels</referencedby>
+        <referencedby refid="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" compoundref="HSolveActiveSetup_8cpp" startline="43" endline="52">reinit</referencedby>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+        <referencedby refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">updateMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a6f1b84beb9677b98ab6f5ef8607ae611" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt;</type>
+        <definition>vector&lt; Id &gt; HSolveActive::gateId_</definition>
+        <argsstring></argsstring>
+        <name>gateId_</name>
+        <qualifiedname>HSolveActive::gateId_</qualifiedname>
+        <briefdescription>
+<para>Used for localIndex-ing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="126" column="25" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1a319c40d53a11edb462d02515183059d1" compoundref="HSolveActiveSetup_8cpp" startline="239" endline="252">readGates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a1f531c701c2cdf31fdf5b71068883f59" prot="protected" static="no" mutable="no">
+        <type>vector&lt; bool &gt;</type>
+        <definition>vector&lt; bool &gt; HSolveActive::gCaDepend_</definition>
+        <argsstring></argsstring>
+        <name>gCaDepend_</name>
+        <qualifiedname>HSolveActive::gCaDepend_</qualifiedname>
+        <briefdescription>
+<para>depend on Ca conc? </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Does the conductance </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="89" column="23" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a42bf9631c6525923fddd82305114f67f" compoundref="HSolveActiveSetup_8cpp" startline="674" endline="679">cleanup</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1a319c40d53a11edb462d02515183059d1" compoundref="HSolveActiveSetup_8cpp" startline="239" endline="252">readGates</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1aaae520d3fd31fe63ee5b459802975c68" prot="protected" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; HSolveActive::outCa_</definition>
+        <argsstring></argsstring>
+        <name>outCa_</name>
+        <qualifiedname>HSolveActive::outCa_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>concOut info. Tells you which compartments have external calcium-dependent channels so that you can send out Calcium concentrations in only those compartments. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="132" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="132" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" compoundref="HSolveActiveSetup_8cpp" startline="596" endline="672">manageOutgoingMessages</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a8b94074e202bb585a200db65d16861af" prot="protected" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; HSolveActive::outIk_</definition>
+        <argsstring></argsstring>
+        <name>outIk_</name>
+        <qualifiedname>HSolveActive::outIk_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="136" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="136" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" compoundref="HSolveActiveSetup_8cpp" startline="596" endline="672">manageOutgoingMessages</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1ab16256f86710d75b157bfbb9512877c8" prot="protected" static="no" mutable="no">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; HSolveActive::outVm_</definition>
+        <argsstring></argsstring>
+        <name>outVm_</name>
+        <qualifiedname>HSolveActive::outVm_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>VmOut info. Tells you which compartments have external voltage-dependent channels (if any), so that you can send out Vm values only in those places </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="128" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" compoundref="HSolveActiveSetup_8cpp" startline="596" endline="672">manageOutgoingMessages</referencedby>
+        <referencedby refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a8dd88071f862589b982c80a653e754ed" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HSolveActive::prevExtCurr_</definition>
+        <argsstring></argsstring>
+        <name>prevExtCurr_</name>
+        <qualifiedname>HSolveActive::prevExtCurr_</qualifiedname>
+        <briefdescription>
+<para>Last tick&apos;s externalCurrent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="122" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="classHSolve_1aa39f10de28785bebc1b0bc032179c562" compoundref="HSolveInterface_8cpp" startline="161" endline="182">HSolve::getIm</referencedby>
+        <referencedby refid="classHSolveActive_1ae99b2bc59ad4b09fe0c364a8960a3c66" compoundref="HSolveActiveSetup_8cpp" startline="576" endline="594">readExternalChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a99b23c45c02ac6e0c06ed42c8228cbbc" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structSpikeGenStruct" kindref="compound">SpikeGenStruct</ref> &gt;</type>
+        <definition>vector&lt; SpikeGenStruct &gt; HSolveActive::spikegen_</definition>
+        <argsstring></argsstring>
+        <name>spikegen_</name>
+        <qualifiedname>HSolveActive::spikegen_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="78" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" compoundref="HSolveActiveSetup_8cpp" startline="535" endline="574">readSynapses</referencedby>
+        <referencedby refid="classHSolveActive_1a4f77ec4dfd3bdb9f63080e95d2659eae" compoundref="HSolveActiveSetup_8cpp" startline="54" endline="59">reinitSpikeGens</referencedby>
+        <referencedby refid="classHSolveActive_1a55b273e4f4ddfb1a6b18e02954d49287" compoundref="HSolveActive_8cpp" startline="343" endline="348">sendSpikes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; HSolveActive::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <qualifiedname>HSolveActive::state_</qualifiedname>
+        <briefdescription>
+<para>Fraction of gates open. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="74" column="21" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" compoundref="HSolveActive_8cpp" startline="68" endline="83">calculateChannelCurrents</referencedby>
+        <referencedby refid="classHSolve_1a2f231ba434acf5c715c35efd35219a7e" compoundref="HSolveInterface_8cpp" startline="341" endline="353">HSolve::getX</referencedby>
+        <referencedby refid="classHSolve_1aa2495069cffc6b9966a9dfa349ce79cc" compoundref="HSolveInterface_8cpp" startline="369" endline="385">HSolve::getY</referencedby>
+        <referencedby refid="classHSolve_1a0e8cdedb2431e2c95c145ee7caccec44" compoundref="HSolveInterface_8cpp" startline="405" endline="423">HSolve::getZ</referencedby>
+        <referencedby refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+        <referencedby refid="classHSolve_1a65c970eee15b57908744f21b315a39a7" compoundref="HSolveInterface_8cpp" startline="355" endline="367">HSolve::setX</referencedby>
+        <referencedby refid="classHSolve_1a9526e4c0f523117c9ddd294732c9a26b" compoundref="HSolveInterface_8cpp" startline="387" endline="403">HSolve::setY</referencedby>
+        <referencedby refid="classHSolve_1a16aed3a1c25dfe43b96c01c7b0124293" compoundref="HSolveInterface_8cpp" startline="425" endline="443">HSolve::setZ</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a25e8ea3a62290a18b0f02434067c766d" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structSynChanStruct" kindref="compound">SynChanStruct</ref> &gt;</type>
+        <definition>vector&lt; SynChanStruct &gt; HSolveActive::synchan_</definition>
+        <argsstring></argsstring>
+        <name>synchan_</name>
+        <qualifiedname>HSolveActive::synchan_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="79" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" compoundref="HSolveActiveSetup_8cpp" startline="535" endline="574">readSynapses</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1af17f0bc719614f769b0e0b705d564039" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HSolveActive::vDiv_</definition>
+        <argsstring></argsstring>
+        <name>vDiv_</name>
+        <qualifiedname>HSolveActive::vDiv_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="65" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolve_1afa0b368a91cd8e591f6f62d2326a911d" compoundref="HSolve_8cpp" startline="446" endline="449">HSolve::getVDiv</referencedby>
+        <referencedby refid="classHSolve_1ac63244e68efd21f8102d324ef7fcfbd2" compoundref="HSolve_8cpp" startline="441" endline="444">HSolve::setVDiv</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a1dabcfdd16bef6b18330e3a2c7485efe" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSolveActive::vMax_</definition>
+        <argsstring></argsstring>
+        <name>vMax_</name>
+        <qualifiedname>HSolveActive::vMax_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="64" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolve_1a7159fdee8cbcd6970de1a7a523391af4" compoundref="HSolve_8cpp" startline="466" endline="469">HSolve::getVMax</referencedby>
+        <referencedby refid="classHSolve_1abb8ebf7a2be79e22f242945192362999" compoundref="HSolve_8cpp" startline="461" endline="464">HSolve::setVMax</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a4b213165632ab9fe77ed5241a10282b9" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSolveActive::vMin_</definition>
+        <argsstring></argsstring>
+        <name>vMin_</name>
+        <qualifiedname>HSolveActive::vMin_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vMin_, vMax_, vDiv_, caMin_, caMax_, caDiv_:</para>
+<para>These are the parameters for the lookup tables for rate constants. &apos;min&apos; and &apos;max&apos; are the boundaries within which the function is defined. &apos;div&apos; is the number of divisions between min and max. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="63" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolve_1a394f3048881f7ea9455abf5c523f4020" compoundref="HSolve_8cpp" startline="456" endline="459">HSolve::getVMin</referencedby>
+        <referencedby refid="classHSolve_1a6cd8d5ac0b9f512ac88ce3bdee7e21cf" compoundref="HSolve_8cpp" startline="451" endline="454">HSolve::setVMin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" prot="protected" static="no" mutable="no">
+        <type><ref refid="classLookupTable" kindref="compound">LookupTable</ref></type>
+        <definition>LookupTable HSolveActive::vTable_</definition>
+        <argsstring></argsstring>
+        <name>vTable_</name>
+        <qualifiedname>HSolveActive::vTable_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="87" column="31" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+        <referencedby refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</referencedby>
+        <referencedby refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classHSolveActive_1ad133215b6370771d51340104a4ed4fcb" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int HSolveActive::INSTANT_X</definition>
+        <argsstring></argsstring>
+        <name>INSTANT_X</name>
+        <qualifiedname>HSolveActive::INSTANT_X</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="173" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="173" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1af0dbdde00d5d0dfad8f9aa99a2c55347" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int HSolveActive::INSTANT_Y</definition>
+        <argsstring></argsstring>
+        <name>INSTANT_Y</name>
+        <qualifiedname>HSolveActive::INSTANT_Y</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="174" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHSolveActive_1aebd37b053bfa3b846f093a1af5e38a76" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int HSolveActive::INSTANT_Z</definition>
+        <argsstring></argsstring>
+        <name>INSTANT_Z</name>
+        <qualifiedname>HSolveActive::INSTANT_Z</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="175" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="175" bodyend="-1"/>
+        <referencedby refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHSolveActive_1afc13271ad2ed260c5bb01e1e18a51fde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HSolveActive::HSolveActive</definition>
+        <argsstring>()</argsstring>
+        <name>HSolveActive</name>
+        <qualifiedname>HSolveActive::HSolveActive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="34" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="33" bodyend="40"/>
+        <references refid="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" compoundref="HSolveActive_8h" startline="53">caAdvance_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::reinit</definition>
+        <argsstring>(ProcPtr info)</argsstring>
+        <name>reinit</name>
+        <qualifiedname>HSolveActive::reinit</qualifiedname>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="38" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="43" bodyend="52"/>
+        <references refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" compoundref="HSolveActive_8h" startline="119">externalCurrent_</references>
+        <references refid="classHSolveActive_1a4f454fe2126b1c7264e8161a5b880fc9" compoundref="HSolveActiveSetup_8cpp" startline="67" endline="76">reinitCalcium</references>
+        <references refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" compoundref="HSolveActiveSetup_8cpp" startline="78" endline="162">reinitChannels</references>
+        <references refid="classHSolveActive_1a936531b1c40d560addf5db77fc411ad2" compoundref="HSolveActiveSetup_8cpp" startline="61" endline="65">reinitCompartments</references>
+        <references refid="classHSolveActive_1a4f77ec4dfd3bdb9f63080e95d2659eae" compoundref="HSolveActiveSetup_8cpp" startline="54" endline="59">reinitSpikeGens</references>
+        <references refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</references>
+        <referencedby refid="classHSolve_1a8d6ce28ba426ce033ddf0d8bba021bdc" compoundref="HSolve_8cpp" startline="229" endline="233">HSolve::reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::setup</definition>
+        <argsstring>(Id seed, double dt)</argsstring>
+        <name>setup</name>
+        <qualifiedname>HSolveActive::setup</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="36" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="17" bodyend="41"/>
+        <references refid="classHSolveActive_1a42bf9631c6525923fddd82305114f67f" compoundref="HSolveActiveSetup_8cpp" startline="674" endline="679">cleanup</references>
+        <references refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" compoundref="HSolveActiveSetup_8cpp" startline="341" endline="523">createLookupTables</references>
+        <references refid="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" compoundref="HSolveActiveSetup_8cpp" startline="596" endline="672">manageOutgoingMessages</references>
+        <references refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" compoundref="HSolveActiveSetup_8cpp" startline="254" endline="339">readCalcium</references>
+        <references refid="classHSolveActive_1ae99b2bc59ad4b09fe0c364a8960a3c66" compoundref="HSolveActiveSetup_8cpp" startline="576" endline="594">readExternalChannels</references>
+        <references refid="classHSolveActive_1a319c40d53a11edb462d02515183059d1" compoundref="HSolveActiveSetup_8cpp" startline="239" endline="252">readGates</references>
+        <references refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" compoundref="HSolveActiveSetup_8cpp" startline="164" endline="237">readHHChannels</references>
+        <references refid="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" compoundref="HSolveActiveSetup_8cpp" startline="535" endline="574">readSynapses</references>
+        <references refid="classHSolvePassive_1ab3256b134f389a083b2739885b41f4cd" compoundref="HSolvePassive_8cpp" startline="14" endline="22">HSolvePassive::setup</references>
+        <referencedby refid="classHSolve_1a2e768e9eb17b2c732c9129c018889f79" compoundref="HSolve_8cpp" startline="286" endline="293">HSolve::setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::step</definition>
+        <argsstring>(ProcPtr info)</argsstring>
+        <name>step</name>
+        <qualifiedname>HSolveActive::step</qualifiedname>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Equivalent to process. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="37" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="45" bodyend="66"/>
+        <references refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" compoundref="HSolveActive_8cpp" startline="153" endline="216">advanceCalcium</references>
+        <references refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" compoundref="HSolveActive_8cpp" startline="218" endline="333">advanceChannels</references>
+        <references refid="classHSolveActive_1a38544ea9b37f87535fa69b91eb7e6174" compoundref="HSolveActive_8cpp" startline="338" endline="341">advanceSynChans</references>
+        <references refid="classHSolvePassive_1a31400f9d3ff489de460db0dca20d5e9f" compoundref="HSolvePassive_8cpp" startline="325" endline="401">HSolvePassive::backwardSubstitute</references>
+        <references refid="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" compoundref="HSolveActive_8cpp" startline="68" endline="83">calculateChannelCurrents</references>
+        <references refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" compoundref="HSolveActive_8h" startline="76">channel_</references>
+        <references refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" compoundref="HSolveActive_8h" startline="73">current_</references>
+        <references refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" compoundref="ProcInfo_8h" startline="18">ProcInfo::dt</references>
+        <references refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" compoundref="HSolveActive_8h" startline="119">externalCurrent_</references>
+        <references refid="classHSolvePassive_1abace3f08afdfddad0fdddf679ab445c5" compoundref="HSolvePassive_8cpp" startline="246" endline="323">HSolvePassive::forwardEliminate</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <references refid="classHSolveActive_1a8dd88071f862589b982c80a653e754ed" compoundref="HSolveActive_8h" startline="122">prevExtCurr_</references>
+        <references refid="classHSolveActive_1a55b273e4f4ddfb1a6b18e02954d49287" compoundref="HSolveActive_8cpp" startline="343" endline="348">sendSpikes</references>
+        <references refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" compoundref="HSolveActive_8cpp" startline="355" endline="386">sendValues</references>
+        <references refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" compoundref="HSolveActive_8cpp" startline="85" endline="151">updateMatrix</references>
+        <referencedby refid="classHSolve_1aad6ce3589e253fe6ad19cb4c247f83d2" compoundref="HSolve_8cpp" startline="221" endline="227">HSolve::process</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::advanceCalcium</definition>
+        <argsstring>()</argsstring>
+        <name>advanceCalcium</name>
+        <qualifiedname>HSolveActive::advanceCalcium</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="167" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="153" bodyend="216"/>
+        <references refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" compoundref="HSolveActive_8h" startline="81">ca_</references>
+        <references refid="classHSolveActive_1aa54bb10de0a08aabf67aeaad51d505b1" compoundref="HSolveActive_8h" startline="82">caActivation_</references>
+        <references refid="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" compoundref="HSolveActive_8h" startline="53">caAdvance_</references>
+        <references refid="classHSolveActive_1ac31e744fbd7b77b40e9fa70afb927589" compoundref="HSolveActive_8h" startline="80">caConc_</references>
+        <references refid="classHSolveActive_1a3bd80d16fd6945b8544b69fc9c127807" compoundref="HSolveActive_8h" startline="84">caTarget_</references>
+        <references refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" compoundref="HSolveActive_8h" startline="73">current_</references>
+        <references refid="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" compoundref="HSolveActive_8h" startline="111">currentBoundary_</references>
+        <references refid="structCurrentStruct_1aacfd9e0ea2088e176b7b3ba9ba20b6e8" compoundref="HSolveStruct_8h" startline="51">CurrentStruct::Ek</references>
+        <references refid="structCurrentStruct_1a8ff178798301db8760b706b8a52e6f06" compoundref="HSolveStruct_8h" startline="50">CurrentStruct::Gk</references>
+        <references refid="structCaConcStruct_1a83cfc910b0dbf55d4483a106ead8e36e" compoundref="HSolveStruct_8cpp" startline="139" endline="155">CaConcStruct::process</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">HSolvePassive::V_</references>
+        <references refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" compoundref="HinesMatrix_8h" startline="83">HinesMatrix::VMid_</references>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::advanceChannels</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>advanceChannels</name>
+        <qualifiedname>HSolveActive::advanceChannels</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="168" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="218" bodyend="333"/>
+        <references refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" compoundref="HSolveActive_8h" startline="81">ca_</references>
+        <references refid="classHSolveActive_1a676855085b67e334ece6496c119d72f3" compoundref="HSolveActive_8h" startline="91">caCount_</references>
+        <references refid="classHSolveActive_1a9342caabc56e88bf9301529f33346aac" compoundref="HSolveActive_8h" startline="104">caRow_</references>
+        <references refid="classHSolveActive_1a1e9e5d916a02a35e2c7e3695c60d1388" compoundref="HSolveActive_8h" startline="97">caRowCompt_</references>
+        <references refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" compoundref="HSolveActive_8h" startline="88">caTable_</references>
+        <references refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" compoundref="HSolveActive_8h" startline="76">channel_</references>
+        <references refid="classHSolveActive_1ad87a5bf2418ed380d2ece21aac2e2036" compoundref="HSolveActive_8h" startline="109">channelCount_</references>
+        <references refid="classHSolveActive_1add2c5d6f16dc04ababf387a786e6f4c6" compoundref="HSolveActive_8h" startline="95">column_</references>
+        <references refid="classLookupTable_1af7d0cc8a9f7c8972b7c15f39419f13b0" compoundref="RateLookup_8h" startline="65" endline="67">LookupTable::empty</references>
+        <references refid="classHSolveActive_1a8cd34b6274d9f15256a02c9e87222905" compoundref="HSolveActive_8h" startline="123">externalCalcium_</references>
+        <references refid="structChannelStruct_1a706ea57ae427bef8b7366bd6a70f3ad3" compoundref="HSolveStruct_8h" startline="71">ChannelStruct::instant_</references>
+        <references refid="classHSolveActive_1ad133215b6370771d51340104a4ed4fcb" compoundref="HSolveActive_8h" startline="173">INSTANT_X</references>
+        <references refid="classHSolveActive_1af0dbdde00d5d0dfad8f9aa99a2c55347" compoundref="HSolveActive_8h" startline="174">INSTANT_Y</references>
+        <references refid="classHSolveActive_1aebd37b053bfa3b846f093a1af5e38a76" compoundref="HSolveActive_8h" startline="175">INSTANT_Z</references>
+        <references refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" compoundref="RateLookup_8cpp" startline="82" endline="109">LookupTable::lookup</references>
+        <references refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" compoundref="RateLookup_8cpp" startline="64" endline="80">LookupTable::row</references>
+        <references refid="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" compoundref="HSolveActive_8h" startline="74">state_</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">HSolvePassive::V_</references>
+        <references refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" compoundref="HSolveActive_8h" startline="87">vTable_</references>
+        <references refid="structChannelStruct_1a6d46bb827e6d9794a8e25cd442f69bd6" compoundref="HSolveStruct_8h" startline="62">ChannelStruct::Xpower_</references>
+        <references refid="structChannelStruct_1ab4f4507f755a41f691c483bb656ccecf" compoundref="HSolveStruct_8h" startline="63">ChannelStruct::Ypower_</references>
+        <references refid="structChannelStruct_1afb61d031cac7396d4fe8220657950c40" compoundref="HSolveStruct_8h" startline="64">ChannelStruct::Zpower_</references>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a38544ea9b37f87535fa69b91eb7e6174" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::advanceSynChans</definition>
+        <argsstring>(ProcPtr info)</argsstring>
+        <name>advanceSynChans</name>
+        <qualifiedname>HSolveActive::advanceSynChans</qualifiedname>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SynChans are currently not under solver&apos;s control </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="169" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="338" bodyend="341"/>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1ae5ff881815478bdae8b060d84f4882d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::backwardSubstitute</definition>
+        <argsstring>()</argsstring>
+        <name>backwardSubstitute</name>
+        <qualifiedname>HSolveActive::backwardSubstitute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="166" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::calculateChannelCurrents</definition>
+        <argsstring>()</argsstring>
+        <name>calculateChannelCurrents</name>
+        <qualifiedname>HSolveActive::calculateChannelCurrents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Integration: Defined in <ref refid="HSolveActive_8cpp" kindref="compound">HSolveActive.cpp</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="163" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="68" bodyend="83"/>
+        <references refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" compoundref="HSolveActive_8h" startline="76">channel_</references>
+        <references refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" compoundref="HSolveActive_8h" startline="73">current_</references>
+        <references refid="structChannelStruct_1a0d20aeb6e5846b1474d2432732457bd5" compoundref="HSolveStruct_8cpp" startline="53" endline="65">ChannelStruct::process</references>
+        <references refid="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" compoundref="HSolveActive_8h" startline="74">state_</references>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a42bf9631c6525923fddd82305114f67f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <qualifiedname>HSolveActive::cleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="150" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="674" bodyend="679"/>
+        <references refid="classHSolveActive_1a55ef1587bf53d839cc7071b0e714011c" compoundref="HSolveActive_8h" startline="93">caDependIndex_</references>
+        <references refid="classHSolveActive_1a1f531c701c2cdf31fdf5b71068883f59" compoundref="HSolveActive_8h" startline="89">gCaDepend_</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::createLookupTables</definition>
+        <argsstring>()</argsstring>
+        <name>createLookupTables</name>
+        <qualifiedname>HSolveActive::createLookupTables</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="147" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="341" bodyend="523"/>
+        <references refid="classLookupTable_1a58e03a4896fe70b80df57638c701ebbe" compoundref="RateLookup_8cpp" startline="33" endline="56">LookupTable::addColumns</references>
+        <references refid="classHSolveActive_1a676855085b67e334ece6496c119d72f3" compoundref="HSolveActive_8h" startline="91">caCount_</references>
+        <references refid="classHSolveActive_1a55ef1587bf53d839cc7071b0e714011c" compoundref="HSolveActive_8h" startline="93">caDependIndex_</references>
+        <references refid="classHSolveActive_1a48a81a94f3840255662704d8f9d0aa22" compoundref="HSolveActive_8h" startline="68">caDiv_</references>
+        <references refid="classHSolveActive_1a8eb9befb7809ca38e895933eb2836b7e" compoundref="HSolveActive_8h" startline="67">caMax_</references>
+        <references refid="classHSolveActive_1a52e05db023c4642cda092f476ccae8b5" compoundref="HSolveActive_8h" startline="66">caMin_</references>
+        <references refid="classHSolveActive_1a9342caabc56e88bf9301529f33346aac" compoundref="HSolveActive_8h" startline="104">caRow_</references>
+        <references refid="classHSolveActive_1a1e9e5d916a02a35e2c7e3695c60d1388" compoundref="HSolveActive_8h" startline="97">caRowCompt_</references>
+        <references refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" compoundref="HSolveActive_8h" startline="88">caTable_</references>
+        <references refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" compoundref="HSolveActive_8h" startline="76">channel_</references>
+        <references refid="classLookupTable_1a5377d83ebc93f5fb5a42200949c7b67c" compoundref="RateLookup_8cpp" startline="58" endline="62">LookupTable::column</references>
+        <references refid="classHSolveActive_1add2c5d6f16dc04ababf387a786e6f4c6" compoundref="HSolveActive_8h" startline="95">column_</references>
+        <references refid="classHSolveActive_1a6f1b84beb9677b98ab6f5ef8607ae611" compoundref="HSolveActive_8h" startline="126">gateId_</references>
+        <references refid="classHSolveActive_1a1f531c701c2cdf31fdf5b71068883f59" compoundref="HSolveActive_8h" startline="89">gCaDepend_</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classHSolveUtils_1_1Grid_1ac84479b859b4a0d0aabdfa5ec2d66ea7" compoundref="HSolveUtils_8h" startline="45" endline="52">HSolveUtils::Grid::Grid</references>
+        <references refid="classLookupTable_1a0b88926909bc6e58a550a6663d88871d" compoundref="RateLookup_8cpp" startline="17" endline="31">LookupTable::LookupTable</references>
+        <references refid="classHSolveUtils_1a2e2d6f729ab88311b21db26bf26465d2" compoundref="HSolveUtils_8cpp" startline="205" endline="252">HSolveUtils::rates</references>
+        <references refid="classHSolveUtils_1_1Grid_1a4504d106d258368a00e442af9c58dc3d" compoundref="HSolveUtils_8cpp" startline="193" endline="196">HSolveUtils::Grid::size</references>
+        <references refid="classHSolveActive_1af17f0bc719614f769b0e0b705d564039" compoundref="HSolveActive_8h" startline="65">vDiv_</references>
+        <references refid="classHSolveActive_1a1dabcfdd16bef6b18330e3a2c7485efe" compoundref="HSolveActive_8h" startline="64">vMax_</references>
+        <references refid="classHSolveActive_1a4b213165632ab9fe77ed5241a10282b9" compoundref="HSolveActive_8h" startline="63">vMin_</references>
+        <references refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" compoundref="HSolveActive_8h" startline="87">vTable_</references>
+        <references refid="structChannelStruct_1afb61d031cac7396d4fe8220657950c40" compoundref="HSolveStruct_8h" startline="64">ChannelStruct::Zpower_</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a824608df769c75904a5eddf26b764b75" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::forwardEliminate</definition>
+        <argsstring>()</argsstring>
+        <name>forwardEliminate</name>
+        <qualifiedname>HSolveActive::forwardEliminate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="165" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::manageOutgoingMessages</definition>
+        <argsstring>()</argsstring>
+        <name>manageOutgoingMessages</name>
+        <qualifiedname>HSolveActive::manageOutgoingMessages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="148" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="596" bodyend="672"/>
+        <references refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" compoundref="HSolveActive_8h" startline="124">caConcId_</references>
+        <references refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" compoundref="HSolveActive_8h" startline="125">channelId_</references>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">HSolvePassive::compartmentId_</references>
+        <references refid="classHSolveActive_1aaae520d3fd31fe63ee5b459802975c68" compoundref="HSolveActive_8h" startline="132">outCa_</references>
+        <references refid="classHSolveActive_1a8b94074e202bb585a200db65d16861af" compoundref="HSolveActive_8h" startline="136">outIk_</references>
+        <references refid="classHSolveActive_1ab16256f86710d75b157bfbb9512877c8" compoundref="HSolveActive_8h" startline="128">outVm_</references>
+        <references refid="classHSolveUtils_1ab8519f84c4e290a998a773727d151b9b" compoundref="HSolveUtils_8cpp" startline="303" endline="341">HSolveUtils::targets</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::readCalcium</definition>
+        <argsstring>()</argsstring>
+        <name>readCalcium</name>
+        <qualifiedname>HSolveActive::readCalcium</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="144" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="254" bodyend="339"/>
+        <references refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" compoundref="HSolveActive_8h" startline="81">ca_</references>
+        <references refid="classHSolveActive_1aa54bb10de0a08aabf67aeaad51d505b1" compoundref="HSolveActive_8h" startline="82">caActivation_</references>
+        <references refid="classHSolveActive_1ac31e744fbd7b77b40e9fa70afb927589" compoundref="HSolveActive_8h" startline="80">caConc_</references>
+        <references refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" compoundref="HSolveActive_8h" startline="124">caConcId_</references>
+        <references refid="structCaConcStruct_1aa370238694f203279d75e84116917513" compoundref="HSolveStruct_8cpp" startline="92" endline="106">CaConcStruct::CaConcStruct</references>
+        <references refid="classHSolveActive_1a676855085b67e334ece6496c119d72f3" compoundref="HSolveActive_8h" startline="91">caCount_</references>
+        <references refid="classHSolveUtils_1af9ed9bfa0fa6558d64abdbbb7b278b08" compoundref="HSolveUtils_8cpp" startline="144" endline="147">HSolveUtils::caDepend</references>
+        <references refid="classHSolveActive_1a55ef1587bf53d839cc7071b0e714011c" compoundref="HSolveActive_8h" startline="93">caDependIndex_</references>
+        <references refid="classHSolveUtils_1a011c303f211a38dc3997d0bec2db57c5" compoundref="HSolveUtils_8cpp" startline="139" endline="142">HSolveUtils::caTarget</references>
+        <references refid="classHSolveActive_1a3bd80d16fd6945b8544b69fc9c127807" compoundref="HSolveActive_8h" startline="84">caTarget_</references>
+        <references refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" compoundref="HSolveActive_8h" startline="76">channel_</references>
+        <references refid="classHSolveActive_1ad87a5bf2418ed380d2ece21aac2e2036" compoundref="HSolveActive_8h" startline="109">channelCount_</references>
+        <references refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" compoundref="HSolveActive_8h" startline="125">channelId_</references>
+        <references refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" compoundref="HinesMatrix_8h" startline="71">HinesMatrix::dt_</references>
+        <references refid="classHSolveActive_1a8cd34b6274d9f15256a02c9e87222905" compoundref="HSolveActive_8h" startline="123">externalCalcium_</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1ae99b2bc59ad4b09fe0c364a8960a3c66" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::readExternalChannels</definition>
+        <argsstring>()</argsstring>
+        <name>readExternalChannels</name>
+        <qualifiedname>HSolveActive::readExternalChannels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="146" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="576" bodyend="594"/>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">HSolvePassive::compartmentId_</references>
+        <references refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" compoundref="HSolveActive_8h" startline="119">externalCurrent_</references>
+        <references refid="classHSolveActive_1a8dd88071f862589b982c80a653e754ed" compoundref="HSolveActive_8h" startline="122">prevExtCurr_</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a319c40d53a11edb462d02515183059d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::readGates</definition>
+        <argsstring>()</argsstring>
+        <name>readGates</name>
+        <qualifiedname>HSolveActive::readGates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="143" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="239" bodyend="252"/>
+        <references refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" compoundref="HSolveActive_8h" startline="125">channelId_</references>
+        <references refid="classHSolveActive_1a6f1b84beb9677b98ab6f5ef8607ae611" compoundref="HSolveActive_8h" startline="126">gateId_</references>
+        <references refid="classHSolveUtils_1abded29d89bd4fbc7fe23ca4b5fc3fc60" compoundref="HSolveUtils_8cpp" startline="75" endline="120">HSolveUtils::gates</references>
+        <references refid="classHSolveActive_1a1f531c701c2cdf31fdf5b71068883f59" compoundref="HSolveActive_8h" startline="89">gCaDepend_</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::readHHChannels</definition>
+        <argsstring>()</argsstring>
+        <name>readHHChannels</name>
+        <qualifiedname>HSolveActive::readHHChannels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setting up of data structures: Defined in <ref refid="HSolveActiveSetup_8cpp" kindref="compound">HSolveActiveSetup.cpp</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="142" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="164" bodyend="237"/>
+        <references refid="classHSolveActive_1a5a4338efce5c7f4a54a299ca8d491866" compoundref="HSolveActive_8h" startline="114">chan2compt_</references>
+        <references refid="classHSolveActive_1a2244a7d0c8eae51f813788228b119643" compoundref="HSolveActive_8h" startline="117">chan2state_</references>
+        <references refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" compoundref="HSolveActive_8h" startline="76">channel_</references>
+        <references refid="classHSolveActive_1ad87a5bf2418ed380d2ece21aac2e2036" compoundref="HSolveActive_8h" startline="109">channelCount_</references>
+        <references refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" compoundref="HSolveActive_8h" startline="125">channelId_</references>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">HSolvePassive::compartmentId_</references>
+        <references refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" compoundref="HSolveActive_8h" startline="73">current_</references>
+        <references refid="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" compoundref="HSolveActive_8h" startline="111">currentBoundary_</references>
+        <references refid="structCurrentStruct_1aacfd9e0ea2088e176b7b3ba9ba20b6e8" compoundref="HSolveStruct_8h" startline="51">CurrentStruct::Ek</references>
+        <references refid="structChannelStruct_1a691d2cb93c7b5184a0105ae8f2c65eda" compoundref="HSolveStruct_8h" startline="58">ChannelStruct::Gbar_</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classHSolveUtils_1a60cdc77aea3a1053247960224824fd28" compoundref="HSolveUtils_8cpp" startline="64" endline="69">HSolveUtils::hhchannels</references>
+        <references refid="structChannelStruct_1a706ea57ae427bef8b7366bd6a70f3ad3" compoundref="HSolveStruct_8h" startline="71">ChannelStruct::instant_</references>
+        <references refid="structChannelStruct_1a05dde9ef4c762a099d450a841d651519" compoundref="HSolveStruct_8h" startline="77">ChannelStruct::modulation_</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <references refid="structChannelStruct_1a6cb812d6e498c339b0c946d6df2fe068" compoundref="HSolveStruct_8cpp" startline="15" endline="28">ChannelStruct::setPowers</references>
+        <references refid="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" compoundref="HSolveActive_8h" startline="74">state_</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::readSynapses</definition>
+        <argsstring>()</argsstring>
+        <name>readSynapses</name>
+        <qualifiedname>HSolveActive::readSynapses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads in SynChans and SpikeGens.</para>
+<para>Unlike Compartments, HHChannels, etc., neither of these are zombified. In other words, their fields are not managed by <ref refid="classHSolve" kindref="compound">HSolve</ref>, and their &quot;process&quot; functions are invoked to do their calculations. For SynChans, the process calls are made by their respective clocks, and hence the process message is not dropped. On the other hand, we drop the <ref refid="classSpikeGen" kindref="compound">SpikeGen</ref> process messages here, and explicitly call the <ref refid="classSpikeGen" kindref="compound">SpikeGen</ref> process() from the <ref refid="classHSolve" kindref="compound">HSolve</ref> via a pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="145" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="535" bodyend="574"/>
+        <references refid="classObjId_1a79e041eb24b2bcfcdf62a488cf7b0572" compoundref="ObjId_8cpp" startline="18" endline="36">ObjId::bad</references>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">HSolvePassive::compartmentId_</references>
+        <references refid="structSynChanStruct_1a89569c431ea09a46b90a2628e457392d" compoundref="HSolveStruct_8h" startline="133">SynChanStruct::compt_</references>
+        <references refid="classMsg_1a9054f484d20ef3f0cf1e21b366e7da4d" compoundref="Msg_8cpp" startline="53" endline="57">Msg::deleteMsg</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="structSynChanStruct_1a9ca45f82c0a89a735fbb71deb2ba1cdc" compoundref="HSolveStruct_8h" startline="134">SynChanStruct::elm_</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classElement_1a3c07cf6355e6127827ce67682e3bb2a0" compoundref="Element_8cpp" startline="350" endline="372">Element::findCaller</references>
+        <references refid="classCinfo_1a7642d2a9ffe54cc8008df39de171ab63" compoundref="Cinfo_8cpp" startline="259" endline="265">Cinfo::findFinfo</references>
+        <references refid="classDestFinfo_1a6efef23ddcfbaef03eca8aa75fdd98cd" compoundref="DestFinfo_8cpp" startline="45" endline="48">DestFinfo::getFid</references>
+        <references refid="classSpikeGen_1a9f98de819ab1bfaa103dcdb069ac94a3" compoundref="SpikeGen_8cpp" startline="22" endline="123">SpikeGen::initCinfo</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <references refid="classHSolveActive_1a99b23c45c02ac6e0c06ed42c8228cbbc" compoundref="HSolveActive_8h" startline="78">spikegen_</references>
+        <references refid="classHSolveUtils_1a125c6d5805ff9308b1015cc2e7f81b8d" compoundref="HSolveUtils_8cpp" startline="122" endline="125">HSolveUtils::spikegens</references>
+        <references refid="structSpikeGenStruct_1af6ee3a3b9f0f81c93e48821690c107e5" compoundref="HSolveStruct_8h" startline="116" endline="120">SpikeGenStruct::SpikeGenStruct</references>
+        <references refid="classHSolveActive_1a25e8ea3a62290a18b0f02434067c766d" compoundref="HSolveActive_8h" startline="79">synchan_</references>
+        <references refid="classHSolveUtils_1ad2b81f722d63e33577d8b617e7e01ca8" compoundref="HSolveUtils_8cpp" startline="127" endline="132">HSolveUtils::synchans</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">HSolvePassive::V_</references>
+        <referencedby refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" compoundref="HSolveActiveSetup_8cpp" startline="17" endline="41">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a4f454fe2126b1c7264e8161a5b880fc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::reinitCalcium</definition>
+        <argsstring>()</argsstring>
+        <name>reinitCalcium</name>
+        <qualifiedname>HSolveActive::reinitCalcium</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="157" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="67" bodyend="76"/>
+        <references refid="structCaConcStruct_1ad5b7084ca99fe116796a0f1e19ba593e" compoundref="HSolveStruct_8h" startline="139">CaConcStruct::c_</references>
+        <references refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" compoundref="HSolveActive_8h" startline="81">ca_</references>
+        <references refid="classHSolveActive_1aa54bb10de0a08aabf67aeaad51d505b1" compoundref="HSolveActive_8h" startline="82">caActivation_</references>
+        <references refid="structCaConcStruct_1a9f5b811f76e40ed50f5a473388cb137b" compoundref="HSolveStruct_8h" startline="140">CaConcStruct::CaBasal_</references>
+        <references refid="classHSolveActive_1ac31e744fbd7b77b40e9fa70afb927589" compoundref="HSolveActive_8h" startline="80">caConc_</references>
+        <referencedby refid="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" compoundref="HSolveActiveSetup_8cpp" startline="43" endline="52">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::reinitChannels</definition>
+        <argsstring>()</argsstring>
+        <name>reinitChannels</name>
+        <qualifiedname>HSolveActive::reinitChannels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="158" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="78" bodyend="162"/>
+        <references refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" compoundref="HSolveActive_8h" startline="81">ca_</references>
+        <references refid="classHSolveActive_1a676855085b67e334ece6496c119d72f3" compoundref="HSolveActive_8h" startline="91">caCount_</references>
+        <references refid="classHSolveActive_1a9342caabc56e88bf9301529f33346aac" compoundref="HSolveActive_8h" startline="104">caRow_</references>
+        <references refid="classHSolveActive_1a1e9e5d916a02a35e2c7e3695c60d1388" compoundref="HSolveActive_8h" startline="97">caRowCompt_</references>
+        <references refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" compoundref="HSolveActive_8h" startline="88">caTable_</references>
+        <references refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" compoundref="HSolveActive_8h" startline="76">channel_</references>
+        <references refid="classHSolveActive_1ad87a5bf2418ed380d2ece21aac2e2036" compoundref="HSolveActive_8h" startline="109">channelCount_</references>
+        <references refid="classHSolveActive_1add2c5d6f16dc04ababf387a786e6f4c6" compoundref="HSolveActive_8h" startline="95">column_</references>
+        <references refid="classLookupTable_1af7d0cc8a9f7c8972b7c15f39419f13b0" compoundref="RateLookup_8h" startline="65" endline="67">LookupTable::empty</references>
+        <references refid="classHSolveActive_1a8cd34b6274d9f15256a02c9e87222905" compoundref="HSolveActive_8h" startline="123">externalCalcium_</references>
+        <references refid="classLookupTable_1a4a3b1577b1e7b30757d5cde180052482" compoundref="RateLookup_8cpp" startline="82" endline="109">LookupTable::lookup</references>
+        <references refid="classLookupTable_1aa6959b30c9028c80b5014c71b48506a7" compoundref="RateLookup_8cpp" startline="64" endline="80">LookupTable::row</references>
+        <references refid="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" compoundref="HSolveActive_8h" startline="74">state_</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">HSolvePassive::V_</references>
+        <references refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" compoundref="HSolveActive_8h" startline="87">vTable_</references>
+        <references refid="structChannelStruct_1a6d46bb827e6d9794a8e25cd442f69bd6" compoundref="HSolveStruct_8h" startline="62">ChannelStruct::Xpower_</references>
+        <references refid="structChannelStruct_1ab4f4507f755a41f691c483bb656ccecf" compoundref="HSolveStruct_8h" startline="63">ChannelStruct::Ypower_</references>
+        <references refid="structChannelStruct_1afb61d031cac7396d4fe8220657950c40" compoundref="HSolveStruct_8h" startline="64">ChannelStruct::Zpower_</references>
+        <referencedby refid="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" compoundref="HSolveActiveSetup_8cpp" startline="43" endline="52">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a936531b1c40d560addf5db77fc411ad2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::reinitCompartments</definition>
+        <argsstring>()</argsstring>
+        <name>reinitCompartments</name>
+        <qualifiedname>HSolveActive::reinitCompartments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="156" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="61" bodyend="65"/>
+        <references refid="structTreeNodeStruct_1a3add4411b77a2f0e1abda5e5c44c7b3f" compoundref="HinesMatrix_8h" startline="52">TreeNodeStruct::initVm</references>
+        <references refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" compoundref="HinesMatrix_8h" startline="70">HinesMatrix::nCompt_</references>
+        <references refid="classHSolvePassive_1a78c55193b02a12e4fe5d86546b7717fe" compoundref="HSolvePassive_8h" startline="41">HSolvePassive::tree_</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">HSolvePassive::V_</references>
+        <referencedby refid="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" compoundref="HSolveActiveSetup_8cpp" startline="43" endline="52">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a4f77ec4dfd3bdb9f63080e95d2659eae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::reinitSpikeGens</definition>
+        <argsstring>(ProcPtr info)</argsstring>
+        <name>reinitSpikeGens</name>
+        <qualifiedname>HSolveActive::reinitSpikeGens</qualifiedname>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reinit code: Defined in <ref refid="HSolveActiveSetup_8cpp" kindref="compound">HSolveActiveSetup.cpp</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="155" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActiveSetup.cpp" bodystart="54" bodyend="59"/>
+        <references refid="structSpikeGenStruct_1a83b38806b3b88d4378d849a4629411ec" compoundref="HSolveStruct_8cpp" startline="67" endline="72">SpikeGenStruct::reinit</references>
+        <references refid="classHSolveActive_1a99b23c45c02ac6e0c06ed42c8228cbbc" compoundref="HSolveActive_8h" startline="78">spikegen_</references>
+        <referencedby refid="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" compoundref="HSolveActiveSetup_8cpp" startline="43" endline="52">reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a55b273e4f4ddfb1a6b18e02954d49287" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::sendSpikes</definition>
+        <argsstring>(ProcPtr info)</argsstring>
+        <name>sendSpikes</name>
+        <qualifiedname>HSolveActive::sendSpikes</qualifiedname>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="170" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="343" bodyend="348"/>
+        <references refid="structSpikeGenStruct_1aa8d95cdde9d592e496d69b4151711633" compoundref="HSolveStruct_8cpp" startline="74" endline="80">SpikeGenStruct::send</references>
+        <references refid="classHSolveActive_1a99b23c45c02ac6e0c06ed42c8228cbbc" compoundref="HSolveActive_8h" startline="78">spikegen_</references>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::sendValues</definition>
+        <argsstring>(ProcPtr info)</argsstring>
+        <name>sendValues</name>
+        <qualifiedname>HSolveActive::sendValues</qualifiedname>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function dispatches state values via any source messages on biophysical objects which have been taken over. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="171" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="355" bodyend="386"/>
+        <references refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" compoundref="HSolveActive_8h" startline="81">ca_</references>
+        <references refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" compoundref="HSolveActive_8h" startline="124">caConcId_</references>
+        <references refid="classHSolveActive_1a5a4338efce5c7f4a54a299ca8d491866" compoundref="HSolveActive_8h" startline="114">chan2compt_</references>
+        <references refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" compoundref="HSolveActive_8h" startline="125">channelId_</references>
+        <references refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" compoundref="HSolvePassive_8h" startline="37">HSolvePassive::compartmentId_</references>
+        <references refid="classCaConcBase_1ae958f791e592e1e9b448d80772a388aa" compoundref="CaConcBase_8cpp" startline="27" endline="31">CaConcBase::concOut</references>
+        <references refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" compoundref="HSolveActive_8h" startline="73">current_</references>
+        <references refid="structCurrentStruct_1aacfd9e0ea2088e176b7b3ba9ba20b6e8" compoundref="HSolveStruct_8h" startline="51">CurrentStruct::Ek</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="structCurrentStruct_1a8ff178798301db8760b706b8a52e6f06" compoundref="HSolveStruct_8h" startline="50">CurrentStruct::Gk</references>
+        <references refid="classChanBase_1ad247c54be6894447b422a7539e952cf7" compoundref="ChanBase_8cpp" startline="28" endline="34">ChanBase::IkOut</references>
+        <references refid="classHSolveActive_1aaae520d3fd31fe63ee5b459802975c68" compoundref="HSolveActive_8h" startline="132">outCa_</references>
+        <references refid="classHSolveActive_1a8b94074e202bb585a200db65d16861af" compoundref="HSolveActive_8h" startline="136">outIk_</references>
+        <references refid="classHSolveActive_1ab16256f86710d75b157bfbb9512877c8" compoundref="HSolveActive_8h" startline="128">outVm_</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">HSolvePassive::V_</references>
+        <references refid="classmoose_1_1CompartmentBase_1af3bd2b58b58a5232233e2a01fd28c4bc" compoundref="CompartmentBase_8cpp" startline="26" endline="30">moose::CompartmentBase::VmOut</references>
+        <referencedby refid="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" compoundref="HSolveActiveSetup_8cpp" startline="43" endline="52">reinit</referencedby>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HSolveActive::updateMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>updateMatrix</name>
+        <qualifiedname>HSolveActive::updateMatrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="164" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.cpp" bodystart="85" bodyend="151"/>
+        <references refid="structCompartmentStruct_1aa01218b04a4307e651a42c03d3fa50dc" compoundref="HSolveStruct_8h" startline="17">CompartmentStruct::CmByDt</references>
+        <references refid="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" compoundref="HSolvePassive_8h" startline="36">HSolvePassive::compartment_</references>
+        <references refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" compoundref="HSolveActive_8h" startline="73">current_</references>
+        <references refid="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" compoundref="HSolveActive_8h" startline="111">currentBoundary_</references>
+        <references refid="structCurrentStruct_1aacfd9e0ea2088e176b7b3ba9ba20b6e8" compoundref="HSolveStruct_8h" startline="51">CurrentStruct::Ek</references>
+        <references refid="structCompartmentStruct_1a16de90f8dba5c64f963d00fb723b50b7" compoundref="HSolveStruct_8h" startline="18">CompartmentStruct::EmByRm</references>
+        <references refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" compoundref="HSolveActive_8h" startline="119">externalCurrent_</references>
+        <references refid="structCurrentStruct_1a8ff178798301db8760b706b8a52e6f06" compoundref="HSolveStruct_8h" startline="50">CurrentStruct::Gk</references>
+        <references refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" compoundref="HinesMatrix_8h" startline="79">HinesMatrix::HJ_</references>
+        <references refid="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" compoundref="HinesMatrix_8h" startline="82">HinesMatrix::HJCopy_</references>
+        <references refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" compoundref="HinesMatrix_8h" startline="74">HinesMatrix::HS_</references>
+        <references refid="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" compoundref="HSolvePassive_8h" startline="45">HSolvePassive::inject_</references>
+        <references refid="structInjectStruct_1a92ddf146a67c56acb80df0c1a186ca2d" compoundref="HSolveStruct_8h" startline="41">InjectStruct::injectBasal</references>
+        <references refid="structInjectStruct_1a4e12f83f6122af2e5b3198f8cc73f29b" compoundref="HSolveStruct_8h" startline="40">InjectStruct::injectVarying</references>
+        <references refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" compoundref="HinesMatrix_8h" startline="87">HinesMatrix::stage_</references>
+        <references refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" compoundref="HSolvePassive_8h" startline="38">HSolvePassive::V_</references>
+        <referencedby refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" compoundref="HSolveActive_8cpp" startline="45" endline="66">step</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>HSolve</label>
+        <link refid="classHSolve"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HSolveActive</label>
+        <link refid="classHSolveActive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HSolvePassive</label>
+        <link refid="classHSolvePassive"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HinesMatrix</label>
+        <link refid="classHinesMatrix"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="34">
+        <label>CaConcStruct</label>
+        <link refid="structCaConcStruct"/>
+      </node>
+      <node id="21">
+        <label>ChannelStruct</label>
+        <link refid="structChannelStruct"/>
+      </node>
+      <node id="26">
+        <label>Cinfo</label>
+        <link refid="classCinfo"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>-baseCinfo_</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>-dinfo_</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>-doc_</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>CompartmentStruct</label>
+        <link refid="structCompartmentStruct"/>
+      </node>
+      <node id="19">
+        <label>CurrentStruct</label>
+        <link refid="structCurrentStruct"/>
+      </node>
+      <node id="27">
+        <label>DinfoBase</label>
+        <link refid="classDinfoBase"/>
+      </node>
+      <node id="25">
+        <label>Element</label>
+        <link refid="classElement"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-id_</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>-cinfo_</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Eref</label>
+        <link refid="classEref"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-e_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HSolveActive</label>
+        <link refid="classHSolveActive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>#current_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#caActivation_</edgelabel>
+          <edgelabel>#ca_</edgelabel>
+          <edgelabel>#externalCalcium_</edgelabel>
+          <edgelabel>#externalCurrent_</edgelabel>
+          <edgelabel>#prevExtCurr_</edgelabel>
+          <edgelabel>#state_</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>#channel_</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>#spikegen_</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>#synchan_</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>#caConc_</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>#caTarget_</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>#caTable_</edgelabel>
+          <edgelabel>#vTable_</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>#gCaDepend_</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#caCount_</edgelabel>
+          <edgelabel>#chan2compt_</edgelabel>
+          <edgelabel>#chan2state_</edgelabel>
+          <edgelabel>#outCa_</edgelabel>
+          <edgelabel>#outIk_</edgelabel>
+          <edgelabel>#outVm_</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>#caDependIndex_</edgelabel>
+          <edgelabel>#channelCount_</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>#column_</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>#caRowCompt_</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>#caRow_</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>#currentBoundary_</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#caConcId_</edgelabel>
+          <edgelabel>#channelId_</edgelabel>
+          <edgelabel>#gateId_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HSolvePassive</label>
+        <link refid="classHSolvePassive"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>#compartment_</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#compartmentId_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#V_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#tree_</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>#inject_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HinesMatrix</label>
+        <link refid="classHinesMatrix"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#HJCopy_</edgelabel>
+          <edgelabel>#HJ_</edgelabel>
+          <edgelabel>#HS_</edgelabel>
+          <edgelabel>#VMid_</edgelabel>
+          <edgelabel>-Ga_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-tree_</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="15">
+        <label>InjectStruct</label>
+        <link refid="structInjectStruct"/>
+      </node>
+      <node id="17">
+        <label>K</label>
+      </node>
+      <node id="40">
+        <label>LookupColumn</label>
+        <link refid="structLookupColumn"/>
+      </node>
+      <node id="42">
+        <label>LookupRow</label>
+        <link refid="structLookupRow"/>
+      </node>
+      <node id="36">
+        <label>LookupTable</label>
+        <link refid="classLookupTable"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>SpikeGenStruct</label>
+        <link refid="structSpikeGenStruct"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+e_</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>SynChanStruct</label>
+        <link refid="structSynChanStruct"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+elm_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>T</label>
+      </node>
+      <node id="8">
+        <label>TreeNodeStruct</label>
+        <link refid="structTreeNodeStruct"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+children</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>std::map&lt; std::string, std::string &gt;</label>
+        <childnode refid="29" relation="usage">
+          <edgelabel>+elements</edgelabel>
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="template-instance">
+          <edgelabel>&lt; std::string, std::string &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>std::map&lt; unsigned int, InjectStruct &gt;</label>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="template-instance">
+          <edgelabel>&lt; unsigned int, InjectStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="16">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>std::string</label>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>std::vector&lt; CaConcStruct &gt;</label>
+        <childnode refid="34" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; CaConcStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>std::vector&lt; ChannelStruct &gt;</label>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; ChannelStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>std::vector&lt; CompartmentStruct &gt;</label>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; CompartmentStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>std::vector&lt; CurrentStruct &gt;</label>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; CurrentStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>std::vector&lt; Id &gt;</label>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; Id &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>std::vector&lt; LookupColumn &gt;</label>
+        <childnode refid="40" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; LookupColumn &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>std::vector&lt; LookupRow * &gt;</label>
+        <childnode refid="42" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; LookupRow * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>std::vector&lt; LookupRow &gt;</label>
+        <childnode refid="42" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; LookupRow &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>std::vector&lt; SpikeGenStruct &gt;</label>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; SpikeGenStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>std::vector&lt; SynChanStruct &gt;</label>
+        <childnode refid="32" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; SynChanStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::vector&lt; TreeNodeStruct &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; TreeNodeStruct &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>std::vector&lt; bool &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; bool &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>std::vector&lt; currentVecIter &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; currentVecIter &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>std::vector&lt; double * &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; double * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>std::vector&lt; int &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" line="29" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveActive.h" bodystart="30" bodyend="176"/>
+    <listofallmembers>
+      <member refid="classHSolveActive_1ac7b9bda85a0815a8d5d2eaf1aeec6d61" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>advanceCalcium</name></member>
+      <member refid="classHSolveActive_1ada759bb4abb14f5625eee447f70c2c67" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>advanceChannels</name></member>
+      <member refid="classHSolveActive_1a38544ea9b37f87535fa69b91eb7e6174" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>advanceSynChans</name></member>
+      <member refid="classHinesMatrix_1aa3cf66c934d6246bf083fd6b47446078" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>backOperand_</name></member>
+      <member refid="classHSolveActive_1ae5ff881815478bdae8b060d84f4882d9" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>backwardSubstitute</name></member>
+      <member refid="classHSolveActive_1a49d98a1be4beadbd8d7e34bad5b34ad1" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>ca_</name></member>
+      <member refid="classHSolveActive_1aa54bb10de0a08aabf67aeaad51d505b1" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caActivation_</name></member>
+      <member refid="classHSolveActive_1a10d4f6fd99853a8e109ec2f4f5c4d97c" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caAdvance_</name></member>
+      <member refid="classHSolveActive_1ac31e744fbd7b77b40e9fa70afb927589" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caConc_</name></member>
+      <member refid="classHSolveActive_1ad79c184c201558d4f36cba1d1f3477eb" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caConcId_</name></member>
+      <member refid="classHSolveActive_1a676855085b67e334ece6496c119d72f3" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caCount_</name></member>
+      <member refid="classHSolveActive_1a55ef1587bf53d839cc7071b0e714011c" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caDependIndex_</name></member>
+      <member refid="classHSolveActive_1a48a81a94f3840255662704d8f9d0aa22" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caDiv_</name></member>
+      <member refid="classHSolveActive_1a8c9effe1330fc56d5c74fc00529d8ee1" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>calculateChannelCurrents</name></member>
+      <member refid="classHSolveActive_1a8eb9befb7809ca38e895933eb2836b7e" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caMax_</name></member>
+      <member refid="classHSolveActive_1a52e05db023c4642cda092f476ccae8b5" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caMin_</name></member>
+      <member refid="classHSolveActive_1a9342caabc56e88bf9301529f33346aac" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caRow_</name></member>
+      <member refid="classHSolveActive_1a1e9e5d916a02a35e2c7e3695c60d1388" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caRowCompt_</name></member>
+      <member refid="classHSolveActive_1a4d3c1016faa9cb38ce7bd1eac46ee75b" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caTable_</name></member>
+      <member refid="classHSolveActive_1a3bd80d16fd6945b8544b69fc9c127807" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>caTarget_</name></member>
+      <member refid="classHSolveActive_1a5a4338efce5c7f4a54a299ca8d491866" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>chan2compt_</name></member>
+      <member refid="classHSolveActive_1a2244a7d0c8eae51f813788228b119643" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>chan2state_</name></member>
+      <member refid="classHSolveActive_1a94681286ed1f8397866835fee15c37a5" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>channel_</name></member>
+      <member refid="classHSolveActive_1ad87a5bf2418ed380d2ece21aac2e2036" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>channelCount_</name></member>
+      <member refid="classHSolveActive_1a797fcd045ec12d23b25872981d9ee99e" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>channelId_</name></member>
+      <member refid="classHSolveActive_1a42bf9631c6525923fddd82305114f67f" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>cleanup</name></member>
+      <member refid="classHSolvePassive_1a85b6f1a0249b5c8dfc8bf5e056d8a438" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>clear</name></member>
+      <member refid="classHSolveActive_1add2c5d6f16dc04ababf387a786e6f4c6" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>column_</name></member>
+      <member refid="classHSolvePassive_1acefd3af6c82aab1ac1e797027abf8219" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>compartment_</name></member>
+      <member refid="classHSolvePassive_1a7e74bd8c0a5f927f4bfc91dbf4409fa7" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>compartmentId_</name></member>
+      <member refid="classHinesMatrix_1ad1c34a0f1ca6cfff6ea124be9dd7f0e8" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>coupled_</name></member>
+      <member refid="classHSolveActive_1a800dacfc45f5f55cb02d634e6dd603a3" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>createLookupTables</name></member>
+      <member refid="classHSolveActive_1ac0a0039c67542a25e9a1ea33f47e7a85" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>current_</name></member>
+      <member refid="classHSolveActive_1aaba36b54a3673ef2b1933b5d26dc7367" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>currentBoundary_</name></member>
+      <member refid="classHSolveActive_1a47f2da707ced98491cc29aacee394fab" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>currentVecIter</name></member>
+      <member refid="classHinesMatrix_1a684069af3480c4317faeedf58f7c6c98" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>dt_</name></member>
+      <member refid="classHSolveActive_1a8cd34b6274d9f15256a02c9e87222905" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>externalCalcium_</name></member>
+      <member refid="classHSolveActive_1aaad80c5cb1bfb58646fd474237c3eea7" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>externalCurrent_</name></member>
+      <member refid="classHSolveActive_1a824608df769c75904a5eddf26b764b75" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>forwardEliminate</name></member>
+      <member refid="classHinesMatrix_1a5ea32130ef624f4fb26956a35220435b" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>Ga_</name></member>
+      <member refid="classHSolveActive_1a6f1b84beb9677b98ab6f5ef8607ae611" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>gateId_</name></member>
+      <member refid="classHSolveActive_1a1f531c701c2cdf31fdf5b71068883f59" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>gCaDepend_</name></member>
+      <member refid="classHinesMatrix_1a83ae35079f30be50f0f3d739f09a8782" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>getA</name></member>
+      <member refid="classHinesMatrix_1ae4702b04adb8ce17a05ce8ba74dfe5e7" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>getB</name></member>
+      <member refid="classHinesMatrix_1a10d80ca6a84506c3c83efd026967347b" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>getSize</name></member>
+      <member refid="classHSolvePassive_1a8f8714a09d229812c1b12643561c403c" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>getV</name></member>
+      <member refid="classHinesMatrix_1aafc7e33d10d03061f4ca6fea51f516ad" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>getVMid</name></member>
+      <member refid="classHinesMatrix_1a50485325e404b083769cf368784da28b" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>groupNumber_</name></member>
+      <member refid="classHinesMatrix_1a440ba2efd96580a979539e4dfa6b1b3a" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>HinesMatrix</name></member>
+      <member refid="classHinesMatrix_1abeb52705ce8895eb37c5538f6542ebe0" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>HJ_</name></member>
+      <member refid="classHinesMatrix_1aefc7524b10e0b10e45c8a3cf9b929976" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>HJCopy_</name></member>
+      <member refid="classHinesMatrix_1a3743fde6dda0fb125e20924beb5e7f7c" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>HS_</name></member>
+      <member refid="classHSolveActive_1afc13271ad2ed260c5bb01e1e18a51fde" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>HSolveActive</name></member>
+      <member refid="classHSolvePassive_1a7baa982f7dc9b1c31cecdf80a540c996" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>initialize</name></member>
+      <member refid="classHSolvePassive_1a5d654a2666e5610290a0c5b606157262" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>inject_</name></member>
+      <member refid="classHSolveActive_1ad133215b6370771d51340104a4ed4fcb" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>INSTANT_X</name></member>
+      <member refid="classHSolveActive_1af0dbdde00d5d0dfad8f9aa99a2c55347" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>INSTANT_Y</name></member>
+      <member refid="classHSolveActive_1aebd37b053bfa3b846f093a1af5e38a76" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>INSTANT_Z</name></member>
+      <member refid="classHinesMatrix_1ab2da5dc5dbe4bfaf892166dd0dbe29a4" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>junction_</name></member>
+      <member refid="classHinesMatrix_1aa12204764a651f71446c5046ce17a8be" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>makeJunctions</name></member>
+      <member refid="classHinesMatrix_1a8f0ff3c0f376374f24a84de7de2d9010" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>makeMatrix</name></member>
+      <member refid="classHinesMatrix_1afc1ddd48fe67625927aaaa4c2d5f88c6" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>makeOperands</name></member>
+      <member refid="classHSolveActive_1aefcd65520f59cf48377b332ef9ee6607" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>manageOutgoingMessages</name></member>
+      <member refid="classHinesMatrix_1a4e1d82e0be3c669ec6ce5e66fb9d95ed" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>nCompt_</name></member>
+      <member refid="classHinesMatrix_1a34fc144edf8086f30faec267d14ed109" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>operand_</name></member>
+      <member refid="classHinesMatrix_1a9fd9da528596db99a34da1e592c9281d" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>operandBase_</name></member>
+      <member refid="classHSolveActive_1aaae520d3fd31fe63ee5b459802975c68" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>outCa_</name></member>
+      <member refid="classHSolveActive_1a8b94074e202bb585a200db65d16861af" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>outIk_</name></member>
+      <member refid="classHSolveActive_1ab16256f86710d75b157bfbb9512877c8" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>outVm_</name></member>
+      <member refid="classHSolveActive_1a8dd88071f862589b982c80a653e754ed" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>prevExtCurr_</name></member>
+      <member refid="classHSolveActive_1a389bd2da94abe67bdf477b9cb8207fe6" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>readCalcium</name></member>
+      <member refid="classHSolveActive_1ae99b2bc59ad4b09fe0c364a8960a3c66" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>readExternalChannels</name></member>
+      <member refid="classHSolveActive_1a319c40d53a11edb462d02515183059d1" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>readGates</name></member>
+      <member refid="classHSolveActive_1af741be2e50555413cda5e3bfb7bde4a1" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>readHHChannels</name></member>
+      <member refid="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>readSynapses</name></member>
+      <member refid="classHSolveActive_1aaff65b0f1078b16d328f0cab1facf75a" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>reinit</name></member>
+      <member refid="classHSolveActive_1a4f454fe2126b1c7264e8161a5b880fc9" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>reinitCalcium</name></member>
+      <member refid="classHSolveActive_1af351fca901797bfd22475bf460a4f26d" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>reinitChannels</name></member>
+      <member refid="classHSolveActive_1a936531b1c40d560addf5db77fc411ad2" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>reinitCompartments</name></member>
+      <member refid="classHSolveActive_1a4f77ec4dfd3bdb9f63080e95d2659eae" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>reinitSpikeGens</name></member>
+      <member refid="classHSolveActive_1a55b273e4f4ddfb1a6b18e02954d49287" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>sendSpikes</name></member>
+      <member refid="classHSolveActive_1a2429bfa9fdc69c4c0b105a3f6e459768" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>sendValues</name></member>
+      <member refid="classHSolveActive_1abe1e04be095f6b2e77e0de5ff3c56b3d" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>setup</name></member>
+      <member refid="classHinesMatrix_1af5318143d11163ada233ffad635dbc0b" prot="public" virt="non-virtual" ambiguityscope="HinesMatrix::"><scope>HSolveActive</scope><name>setup</name></member>
+      <member refid="classHSolvePassive_1aac561a096fa851b831ead5e59f013ae5" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>solve</name></member>
+      <member refid="classHSolveActive_1a99b23c45c02ac6e0c06ed42c8228cbbc" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>spikegen_</name></member>
+      <member refid="classHinesMatrix_1abe7c00e56d99294b695538afd4647470" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>stage_</name></member>
+      <member refid="classHSolveActive_1aa99f197a8bfa15996be89aaafade68af" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>state_</name></member>
+      <member refid="classHSolveActive_1a2fa4c89fc57e5a3bf48933f1f71b331c" prot="public" virt="non-virtual"><scope>HSolveActive</scope><name>step</name></member>
+      <member refid="classHSolvePassive_1ab123ed2dcb0c7ec88d5a6da4990e93cf" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>storeTree</name></member>
+      <member refid="classHSolveActive_1a25e8ea3a62290a18b0f02434067c766d" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>synchan_</name></member>
+      <member refid="classHSolvePassive_1a78c55193b02a12e4fe5d86546b7717fe" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>tree_</name></member>
+      <member refid="classHSolveActive_1aa4b14536090d8e73454d0576c1dcf3e3" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>updateMatrix</name></member>
+      <member refid="classHSolvePassive_1a1a076dc66c871285120772c980b6246d" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>V_</name></member>
+      <member refid="classHinesMatrix_1a2a6e6b0f7efe2e51a6862ed0b1838dfb" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>vdIterator</name></member>
+      <member refid="classHSolveActive_1af17f0bc719614f769b0e0b705d564039" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>vDiv_</name></member>
+      <member refid="classHSolveActive_1a1dabcfdd16bef6b18330e3a2c7485efe" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>vMax_</name></member>
+      <member refid="classHinesMatrix_1a91817ff50e49f823db79d3aaeaeddf2e" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>VMid_</name></member>
+      <member refid="classHSolveActive_1a4b213165632ab9fe77ed5241a10282b9" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>vMin_</name></member>
+      <member refid="classHSolveActive_1a3c7d020ff4f8cb42b9e0a76e0085236d" prot="protected" virt="non-virtual"><scope>HSolveActive</scope><name>vTable_</name></member>
+      <member refid="classHSolvePassive_1a7c0785982abce69a7cb825251fd1ced6" prot="private" virt="non-virtual"><scope>HSolveActive</scope><name>walkTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

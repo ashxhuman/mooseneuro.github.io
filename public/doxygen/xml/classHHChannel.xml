@@ -1,0 +1,876 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classHHChannel" kind="class" language="C++" prot="public">
+    <compoundname>HHChannel</compoundname>
+    <basecompoundref refid="classHHChannelBase" prot="public" virt="non-virtual">HHChannelBase</basecompoundref>
+    <includes refid="HHChannel_8h" local="no">HHChannel.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHHChannel_1a51c2908dbe35126d68adc40bc97405c1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HHChannel::conc_</definition>
+        <argsstring></argsstring>
+        <name>conc_</name>
+        <qualifiedname>HHChannel::conc_</qualifiedname>
+        <briefdescription>
+<para>Conc_ is input variable for Ca-dependent channels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="185" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" bodystart="185" bodyend="-1"/>
+        <referencedby refid="classHHChannel_1a65f926c9f3808e5551d659db4ce9a24d" compoundref="HHChannel_8cpp" startline="75" endline="75">HHChannel</referencedby>
+        <referencedby refid="classHHChannel_1ac98b9dec681231a5933aad0004e44d8f" compoundref="HHChannel_8cpp" startline="353" endline="353">vHandleConc</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">vProcess</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" prot="private" static="no" mutable="no">
+        <type><ref refid="classHHGate" kindref="compound">HHGate</ref> *</type>
+        <definition>HHGate* HHChannel::xGate_</definition>
+        <argsstring></argsstring>
+        <name>xGate_</name>
+        <qualifiedname>HHChannel::xGate_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classHHGate" kindref="compound">HHGate</ref> data structure for the xGate. This is writable only on the <ref refid="classHHChannel" kindref="compound">HHChannel</ref> that originally created the <ref refid="classHHGate" kindref="compound">HHGate</ref>, for others it must be treated as readonly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="192" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" bodystart="192" bodyend="-1"/>
+        <referencedby refid="classHHChannel_1af99fd659b088b19e70069c2f41a3c70c" compoundref="HHChannel_8cpp" startline="108" endline="119">checkOriginal</referencedby>
+        <referencedby refid="classHHChannel_1a629f02c43a7893ea95ec1a5c04894d0e" compoundref="HHChannel_8cpp" startline="162" endline="179">destroyGate</referencedby>
+        <referencedby refid="classHHChannel_1a596579fd9c1dcfa8e3e72c1871807c50" compoundref="HHChannel_8cpp" startline="197" endline="197">getNumXgates</referencedby>
+        <referencedby refid="classHHChannel_1a77aa85cb7ae12fb5af4540d00c3f1a36" compoundref="HHChannel_8cpp" startline="189" endline="189">getXgate</referencedby>
+        <referencedby refid="classHHChannel_1a65f926c9f3808e5551d659db4ce9a24d" compoundref="HHChannel_8cpp" startline="75" endline="75">HHChannel</referencedby>
+        <referencedby refid="classHHChannel_1ae0a3ec99ce129c5170c601a022b825ab" compoundref="HHChannel_8cpp" startline="132" endline="149">vCreateGate</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">vProcess</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" prot="private" static="no" mutable="no">
+        <type><ref refid="classHHGate" kindref="compound">HHGate</ref> *</type>
+        <definition>HHGate* HHChannel::yGate_</definition>
+        <argsstring></argsstring>
+        <name>yGate_</name>
+        <qualifiedname>HHChannel::yGate_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classHHGate" kindref="compound">HHGate</ref> data structure for the yGate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="195" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" bodystart="195" bodyend="-1"/>
+        <referencedby refid="classHHChannel_1af99fd659b088b19e70069c2f41a3c70c" compoundref="HHChannel_8cpp" startline="108" endline="119">checkOriginal</referencedby>
+        <referencedby refid="classHHChannel_1a629f02c43a7893ea95ec1a5c04894d0e" compoundref="HHChannel_8cpp" startline="162" endline="179">destroyGate</referencedby>
+        <referencedby refid="classHHChannel_1a07861bdd19a598c90e55ab7b4fa29ad5" compoundref="HHChannel_8cpp" startline="199" endline="199">getNumYgates</referencedby>
+        <referencedby refid="classHHChannel_1ad5ed67b449fed3431844d6d866efbd5e" compoundref="HHChannel_8cpp" startline="191" endline="191">getYgate</referencedby>
+        <referencedby refid="classHHChannel_1a65f926c9f3808e5551d659db4ce9a24d" compoundref="HHChannel_8cpp" startline="75" endline="75">HHChannel</referencedby>
+        <referencedby refid="classHHChannel_1ae0a3ec99ce129c5170c601a022b825ab" compoundref="HHChannel_8cpp" startline="132" endline="149">vCreateGate</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">vProcess</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">vReinit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" prot="private" static="no" mutable="no">
+        <type><ref refid="classHHGate" kindref="compound">HHGate</ref> *</type>
+        <definition>HHGate* HHChannel::zGate_</definition>
+        <argsstring></argsstring>
+        <name>zGate_</name>
+        <qualifiedname>HHChannel::zGate_</qualifiedname>
+        <briefdescription>
+<para><ref refid="classHHGate" kindref="compound">HHGate</ref> data structure for the yGate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="198" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" bodystart="198" bodyend="-1"/>
+        <referencedby refid="classHHChannel_1af99fd659b088b19e70069c2f41a3c70c" compoundref="HHChannel_8cpp" startline="108" endline="119">checkOriginal</referencedby>
+        <referencedby refid="classHHChannel_1a629f02c43a7893ea95ec1a5c04894d0e" compoundref="HHChannel_8cpp" startline="162" endline="179">destroyGate</referencedby>
+        <referencedby refid="classHHChannel_1a3166a7f95179014597d6d8fcb173ea10" compoundref="HHChannel_8cpp" startline="201" endline="201">getNumZgates</referencedby>
+        <referencedby refid="classHHChannel_1a80198af9ca8b47c84e09cba6cc0c3803" compoundref="HHChannel_8cpp" startline="193" endline="193">getZgate</referencedby>
+        <referencedby refid="classHHChannel_1a65f926c9f3808e5551d659db4ce9a24d" compoundref="HHChannel_8cpp" startline="75" endline="75">HHChannel</referencedby>
+        <referencedby refid="classHHChannel_1ae0a3ec99ce129c5170c601a022b825ab" compoundref="HHChannel_8cpp" startline="132" endline="149">vCreateGate</referencedby>
+        <referencedby refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" compoundref="HHChannel_8cpp" startline="208" endline="253">vProcess</referencedby>
+        <referencedby refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" compoundref="HHChannel_8cpp" startline="259" endline="351">vReinit</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHHChannel_1af99fd659b088b19e70069c2f41a3c70c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool HHChannel::checkOriginal</definition>
+        <argsstring>(Id chanId) const override</argsstring>
+        <name>checkOriginal</name>
+        <qualifiedname>HHChannel::checkOriginal</qualifiedname>
+        <reimplements refid="classHHChannelBase_1ae750bf84c5314103fcf2085c09c58488">checkOriginal</reimplements>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>chanId</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if channel is original, false if copy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the gate exists and has only this element for input, then change the gate power. If the gate exists and has multiple parents, then make a new gate, set its power. If the gate does not exist, make a new gate, set its power.</para>
+<para>The function is designed with the idea that if copies of this channel are made, then they all point back to the original <ref refid="classHHGate" kindref="compound">HHGate</ref>. (Unless they are cross-node copies). It is only if we subsequently alter the <ref refid="classHHGate" kindref="compound">HHGate</ref> of this channel that we need to make our own variant of the <ref refid="classHHGate" kindref="compound">HHGate</ref>, or disconnect from an existing one.  </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="164" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="108" bodyend="119"/>
+        <references refid="classHHGateBase_1a788b4f944d7e8da7965b65824a7eff10" compoundref="HHGateBase_8cpp" startline="43" endline="47">HHGateBase::isOriginalChannel</references>
+        <references refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" compoundref="HHChannel_8h" startline="192">xGate_</references>
+        <references refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" compoundref="HHChannel_8h" startline="195">yGate_</references>
+        <references refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" compoundref="HHChannel_8h" startline="198">zGate_</references>
+        <referencedby refid="classHHChannel_1a629f02c43a7893ea95ec1a5c04894d0e" compoundref="HHChannel_8cpp" startline="162" endline="179">destroyGate</referencedby>
+        <referencedby refid="classHHChannel_1ae0a3ec99ce129c5170c601a022b825ab" compoundref="HHChannel_8cpp" startline="132" endline="149">vCreateGate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a629f02c43a7893ea95ec1a5c04894d0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HHChannel::destroyGate</definition>
+        <argsstring>(const Eref &amp;e, string gateType) override</argsstring>
+        <name>destroyGate</name>
+        <qualifiedname>HHChannel::destroyGate</qualifiedname>
+        <reimplements refid="classHHChannelBase_1aa51b3686084d9d91dd9eb344f2496df5">destroyGate</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>gateType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility function for destroying gate. Works only on original <ref refid="classHHChannel" kindref="compound">HHChannel</ref>. Somewhat dangerous, should never be used after a copy has been made as the pointer of the gate will be in use elsewhere. This needs to be virtual as it needs to call subclass specific delete methods for the gate pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="167" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="162" bodyend="179"/>
+        <references refid="classHHChannel_1af99fd659b088b19e70069c2f41a3c70c" compoundref="HHChannel_8cpp" startline="108" endline="119">checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classHHChannel_1aa1046d9b6fadc75050bb60c65e271531" compoundref="HHChannel_8cpp" startline="151" endline="160">innerDestroyGate</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" compoundref="HHChannel_8h" startline="192">xGate_</references>
+        <references refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" compoundref="HHChannel_8h" startline="195">yGate_</references>
+        <references refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" compoundref="HHChannel_8h" startline="198">zGate_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a596579fd9c1dcfa8e3e72c1871807c50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int HHChannel::getNumXgates</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumXgates</name>
+        <qualifiedname>HHChannel::getNumXgates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="155" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="197" bodyend="197"/>
+        <references refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" compoundref="HHChannel_8h" startline="192">xGate_</references>
+        <referencedby refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" compoundref="HHChannel_8cpp" startline="23" endline="67">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a07861bdd19a598c90e55ab7b4fa29ad5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int HHChannel::getNumYgates</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumYgates</name>
+        <qualifiedname>HHChannel::getNumYgates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="156" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="199" bodyend="199"/>
+        <references refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" compoundref="HHChannel_8h" startline="195">yGate_</references>
+        <referencedby refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" compoundref="HHChannel_8cpp" startline="23" endline="67">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a3166a7f95179014597d6d8fcb173ea10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int HHChannel::getNumZgates</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumZgates</name>
+        <qualifiedname>HHChannel::getNumZgates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="157" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="201" bodyend="201"/>
+        <references refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" compoundref="HHChannel_8h" startline="198">zGate_</references>
+        <referencedby refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" compoundref="HHChannel_8cpp" startline="23" endline="67">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a77aa85cb7ae12fb5af4540d00c3f1a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classHHGate" kindref="compound">HHGate</ref> *</type>
+        <definition>HHGate * HHChannel::getXgate</definition>
+        <argsstring>(unsigned int i)</argsstring>
+        <name>getXgate</name>
+        <qualifiedname>HHChannel::getXgate</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="150" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="189" bodyend="189"/>
+        <references refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" compoundref="HHChannel_8h" startline="192">xGate_</references>
+        <referencedby refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" compoundref="HHChannel_8cpp" startline="23" endline="67">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1ad5ed67b449fed3431844d6d866efbd5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classHHGate" kindref="compound">HHGate</ref> *</type>
+        <definition>HHGate * HHChannel::getYgate</definition>
+        <argsstring>(unsigned int i)</argsstring>
+        <name>getYgate</name>
+        <qualifiedname>HHChannel::getYgate</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="151" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="191" bodyend="191"/>
+        <references refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" compoundref="HHChannel_8h" startline="195">yGate_</references>
+        <referencedby refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" compoundref="HHChannel_8cpp" startline="23" endline="67">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a80198af9ca8b47c84e09cba6cc0c3803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classHHGate" kindref="compound">HHGate</ref> *</type>
+        <definition>HHGate * HHChannel::getZgate</definition>
+        <argsstring>(unsigned int i)</argsstring>
+        <name>getZgate</name>
+        <qualifiedname>HHChannel::getZgate</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="152" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="193" bodyend="193"/>
+        <references refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" compoundref="HHChannel_8h" startline="198">zGate_</references>
+        <referencedby refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" compoundref="HHChannel_8cpp" startline="23" endline="67">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a65f926c9f3808e5551d659db4ce9a24d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HHChannel::HHChannel</definition>
+        <argsstring>()</argsstring>
+        <name>HHChannel</name>
+        <qualifiedname>HHChannel::HHChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="62" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="75" bodyend="75"/>
+        <references refid="classHHChannel_1a51c2908dbe35126d68adc40bc97405c1" compoundref="HHChannel_8h" startline="185">conc_</references>
+        <references refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" compoundref="HHChannel_8h" startline="192">xGate_</references>
+        <references refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" compoundref="HHChannel_8h" startline="195">yGate_</references>
+        <references refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" compoundref="HHChannel_8h" startline="198">zGate_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a66ceac62368e1dc33fc408379e05e5dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHChannel::innerCreateGate</definition>
+        <argsstring>(const string &amp;gateName, HHGate **gatePtr, Id chanId, Id gateId)</argsstring>
+        <name>innerCreateGate</name>
+        <qualifiedname>HHChannel::innerCreateGate</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>gateName</declname>
+        </param>
+        <param>
+          <type><ref refid="classHHGate" kindref="compound">HHGate</ref> **</type>
+          <declname>gatePtr</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>chanId</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>gateId</declname>
+        </param>
+        <briefdescription>
+<para>Inner utility function for creating the gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="160" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="121" bodyend="130"/>
+        <references refid="classHHGate_1ad5acba5750f159b0207ab71f46fa5fd3" compoundref="HHGate_8cpp" startline="297" endline="311">HHGate::HHGate</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <referencedby refid="classHHChannel_1ae0a3ec99ce129c5170c601a022b825ab" compoundref="HHChannel_8cpp" startline="132" endline="149">vCreateGate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1aa1046d9b6fadc75050bb60c65e271531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHChannel::innerDestroyGate</definition>
+        <argsstring>(const string &amp;gateName, HHGate **gatePtr, Id chanId)</argsstring>
+        <name>innerDestroyGate</name>
+        <qualifiedname>HHChannel::innerDestroyGate</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>gateName</declname>
+        </param>
+        <param>
+          <type><ref refid="classHHGate" kindref="compound">HHGate</ref> **</type>
+          <declname>gatePtr</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>chanId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inner utility for destroying the gate </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="172" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="151" bodyend="160"/>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <referencedby refid="classHHChannel_1a629f02c43a7893ea95ec1a5c04894d0e" compoundref="HHChannel_8cpp" startline="162" endline="179">destroyGate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a1eb80d3675f519fe8473e408c7e73bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHChannel::innerSetXpower</definition>
+        <argsstring>(double Xpower)</argsstring>
+        <name>innerSetXpower</name>
+        <qualifiedname>HHChannel::innerSetXpower</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Xpower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="103" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1aa7e1197b2d016b939e891d127408f6ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHChannel::innerSetYpower</definition>
+        <argsstring>(double Ypower)</argsstring>
+        <name>innerSetYpower</name>
+        <qualifiedname>HHChannel::innerSetYpower</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Ypower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="104" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a73bb303c88c9bc5298766f177b922c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHChannel::innerSetZpower</definition>
+        <argsstring>(double Zpower)</argsstring>
+        <name>innerSetZpower</name>
+        <qualifiedname>HHChannel::innerSetZpower</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>Zpower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="105" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a9fd0cb69f8439b208923748485223197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HHChannel::setNumGates</definition>
+        <argsstring>(unsigned int num)</argsstring>
+        <name>setNumGates</name>
+        <qualifiedname>HHChannel::setNumGates</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="154" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="195" bodyend="195"/>
+        <referencedby refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" compoundref="HHChannel_8cpp" startline="23" endline="67">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1ae0a3ec99ce129c5170c601a022b825ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HHChannel::vCreateGate</definition>
+        <argsstring>(const Eref &amp;e, string gateType) override</argsstring>
+        <name>vCreateGate</name>
+        <qualifiedname>HHChannel::vCreateGate</qualifiedname>
+        <reimplements refid="classHHChannelBase_1aeabe0e067f795179db1589d64cfd71d9">vCreateGate</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>gateType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="166" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="132" bodyend="149"/>
+        <references refid="classHHChannel_1af99fd659b088b19e70069c2f41a3c70c" compoundref="HHChannel_8cpp" startline="108" endline="119">checkOriginal</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <references refid="classId_1a93dba2b91874b368b751a73a035523e0" compoundref="Id_8cpp" startline="25" endline="28">Id::Id</references>
+        <references refid="classHHChannel_1a66ceac62368e1dc33fc408379e05e5dc" compoundref="HHChannel_8cpp" startline="121" endline="130">innerCreateGate</references>
+        <references refid="classId_1ad0984685af5a98bc7aa429b03a97bd01" compoundref="Id_8cpp" startline="74" endline="95">Id::path</references>
+        <references refid="classId_1a123c4b585336d50834324026daed286e" compoundref="Id_8cpp" startline="195" endline="198">Id::value</references>
+        <references refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" compoundref="HHChannel_8h" startline="192">xGate_</references>
+        <references refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" compoundref="HHChannel_8h" startline="195">yGate_</references>
+        <references refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" compoundref="HHChannel_8h" startline="198">zGate_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1ac98b9dec681231a5933aad0004e44d8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HHChannel::vHandleConc</definition>
+        <argsstring>(const Eref &amp;e, double conc) override</argsstring>
+        <name>vHandleConc</name>
+        <qualifiedname>HHChannel::vHandleConc</qualifiedname>
+        <reimplements refid="classHHChannelBase_1a9e85258c367d78b33502c15aa3aade6b">vHandleConc</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>conc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign the local Vm_ to the incoming Vm from the compartment void <ref refid="classChanBase_1afe0d330506bd5c57635d3f9e4c629473" kindref="member">handleVm( double Vm )</ref>; Assign the local conc_ to the incoming conc from the concentration calculations for the compartment. Typically the message source will be a <ref refid="classCaConc" kindref="compound">CaConc</ref> object, but there are other options for computing the conc. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="145" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="353" bodyend="353"/>
+        <references refid="classHHChannel_1a51c2908dbe35126d68adc40bc97405c1" compoundref="HHChannel_8h" startline="185">conc_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HHChannel::vProcess</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p) override</argsstring>
+        <name>vProcess</name>
+        <qualifiedname>HHChannel::vProcess</qualifiedname>
+        <reimplements refid="classChanBase_1a2d33f628004a68330a80e45ba8e6eeb1">vProcess</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>processFunc handles the update and calculations every clock tick. It first sends the request for evaluation of the gate variables to the respective gate objects and recieves their response immediately through a return message. This is done so that many channel instances can share the same gate lookup tables, but do so cleanly. Such messages should never go to a remote node. Then the function does its own little calculations to send back to the parent compartment through regular messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="123" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="208" bodyend="253"/>
+        <references refid="classHHChannel_1a51c2908dbe35126d68adc40bc97405c1" compoundref="HHChannel_8h" startline="185">conc_</references>
+        <references refid="classProcInfo_1a36b2fdf985c2fb67443b156fb3f28fbd" compoundref="ProcInfo_8h" startline="18">ProcInfo::dt</references>
+        <references refid="classHHChannelBase_1a8cc1a9844f11b6b4ab5863b6ae77fc01" compoundref="HHChannelBase_8h" startline="203">HHChannelBase::g_</references>
+        <references refid="classHHChannelBase_1a71ae6ad9d17aac96f6c67833dd833044" compoundref="HHChannelBase_8h" startline="200">HHChannelBase::instant_</references>
+        <references refid="classHHChannelBase_1a971cb335fad0d58fdf6dcf6e8a531568" compoundref="HHChannelBase_8h" startline="209">HHChannelBase::INSTANT_X</references>
+        <references refid="classHHChannelBase_1a8a2bed6f1609dca45cc62934880fe72c" compoundref="HHChannelBase_8h" startline="210">HHChannelBase::INSTANT_Y</references>
+        <references refid="classHHChannelBase_1aadd10fffa398cb46556abcc4e851d3f1" compoundref="HHChannelBase_8h" startline="211">HHChannelBase::INSTANT_Z</references>
+        <references refid="classHHChannelBase_1aa25920f9cbee5f4b02bd8364c5d1437f" compoundref="HHChannelBase_8cpp" startline="268" endline="274">HHChannelBase::integrate</references>
+        <references refid="classHHGate_1a66a3a862d4e11156f9ba0e83e17cc969" compoundref="HHGate_8cpp" startline="344" endline="367">HHGate::lookupBoth</references>
+        <references refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" compoundref="ChanCommon_8cpp" startline="102" endline="110">ChanCommon::sendProcessMsgs</references>
+        <references refid="classHHChannelBase_1abcae1992781fb64f64981621c5f25e9d" compoundref="HHChannelBase_8h" startline="185">HHChannelBase::takeXpower_</references>
+        <references refid="classHHChannelBase_1a20b245ea8066f97a297525e76ae9846e" compoundref="HHChannelBase_8h" startline="186">HHChannelBase::takeYpower_</references>
+        <references refid="classHHChannelBase_1a260f9578717457b0583cf49daf2425f3" compoundref="HHChannelBase_8h" startline="187">HHChannelBase::takeZpower_</references>
+        <references refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" compoundref="ChanCommon_8cpp" startline="121" endline="124">ChanCommon::updateIk</references>
+        <references refid="classHHChannelBase_1acf4fe206fb659ce00757563d9af8ec07" compoundref="HHChannelBase_8h" startline="195">HHChannelBase::useConcentration_</references>
+        <references refid="classChanCommon_1a28b9838d6c41ae3d9205b4003026be28" compoundref="ChanCommon_8cpp" startline="41" endline="44">ChanCommon::vGetGbar</references>
+        <references refid="classChanCommon_1a993b966413b6113096b16f44a5c2ed90" compoundref="ChanCommon_8cpp" startline="51" endline="54">ChanCommon::vGetModulation</references>
+        <references refid="classChanCommon_1a7089110696aab34addcabe3307b28302" compoundref="ChanCommon_8h" startline="88">ChanCommon::Vm_</references>
+        <references refid="classChanCommon_1a49f87214aeb41e8b7fc8e194857bb52f" compoundref="ChanCommon_8cpp" startline="70" endline="73">ChanCommon::vSetGk</references>
+        <references refid="classHHChannelBase_1a4f1c0f6707d69d2655bab9cd842a1652" compoundref="HHChannelBase_8h" startline="202">HHChannelBase::X_</references>
+        <references refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" compoundref="HHChannel_8h" startline="192">xGate_</references>
+        <references refid="classHHChannelBase_1a9a9ed7c5e1ce0242b36850ba30247c19" compoundref="HHChannelBase_8h" startline="189">HHChannelBase::Xpower_</references>
+        <references refid="classHHChannelBase_1a1c30b565bd74a546f3fefd17565d25ee" compoundref="HHChannelBase_8h" startline="202">HHChannelBase::Y_</references>
+        <references refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" compoundref="HHChannel_8h" startline="195">yGate_</references>
+        <references refid="classHHChannelBase_1a74a4a173a4b23b09362a8a43915a7d83" compoundref="HHChannelBase_8h" startline="191">HHChannelBase::Ypower_</references>
+        <references refid="classHHChannelBase_1a138e8acd37c38b7932140c1760969f7c" compoundref="HHChannelBase_8h" startline="202">HHChannelBase::Z_</references>
+        <references refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" compoundref="HHChannel_8h" startline="198">zGate_</references>
+        <references refid="classHHChannelBase_1a30f70de36bd95c2cb1cfedab75a5785b" compoundref="HHChannelBase_8h" startline="193">HHChannelBase::Zpower_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HHChannel::vReinit</definition>
+        <argsstring>(const Eref &amp;e, ProcPtr p) override</argsstring>
+        <name>vReinit</name>
+        <qualifiedname>HHChannel::vReinit</qualifiedname>
+        <reimplements refid="classChanBase_1a83a714adc1fc74ee8df9cbab1d23800a">vReinit</reimplements>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+          <defname>er</defname>
+        </param>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>p</declname>
+          <defname>info</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reinitializes the values for the channel. This involves computing the steady-state value for the channel gates using the provided Vm from the parent compartment. It involves a similar cycle through the gates and then updates to the parent compartment as for the processFunc.</para>
+<para>Here we get the steady-state values for the gate (the &apos;instant&apos; calculation) as A_/B_. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="132" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="259" bodyend="351"/>
+        <references refid="classHHChannel_1a51c2908dbe35126d68adc40bc97405c1" compoundref="HHChannel_8h" startline="185">conc_</references>
+        <references refid="classEref_1a47b59ab86165cceb0bde80c76c3f7fa2" compoundref="Eref_8h" startline="30" endline="33">Eref::element</references>
+        <references refid="classHHChannelBase_1a6e77a9dc8208438da4076278cc1929ac" compoundref="HHChannelBase_8h" startline="208">HHChannelBase::EPSILON</references>
+        <references refid="classHHGate_1a398b7b3e3c0d9ad7b4b7d86dfdade67d" compoundref="HHGate_8cpp" startline="450" endline="541">HHGate::fillFromExpr</references>
+        <references refid="classHHChannelBase_1a8cc1a9844f11b6b4ab5863b6ae77fc01" compoundref="HHChannelBase_8h" startline="203">HHChannelBase::g_</references>
+        <references refid="classHHGate_1ab334dc41d8cd12395c61e96f3cf654db" compoundref="HHGate_8cpp" startline="595" endline="598">HHGate::getForm</references>
+        <references refid="classHHGate_1a98c3786a365b83d2f6160102a8fc6a4a" compoundref="HHGate_8cpp" startline="622" endline="625">HHGate::getMax</references>
+        <references refid="classHHGate_1a2cf44f078f7b67331c79e38eb5872263" compoundref="HHGate_8cpp" startline="600" endline="603">HHGate::getMin</references>
+        <references refid="classElement_1a1a2068a4e70da0f951bc3e73b758ef4a" compoundref="Element_8cpp" startline="56" endline="59">Element::getName</references>
+        <references refid="classHHGate_1a66a3a862d4e11156f9ba0e83e17cc969" compoundref="HHGate_8cpp" startline="344" endline="367">HHGate::lookupBoth</references>
+        <references refid="classEref_1ab305a4ab972b50443b7d35cfd516861a" compoundref="Eref_8cpp" startline="63" endline="66">Eref::objId</references>
+        <references refid="classObjId_1a4d6f6e6b6f3c279334cf9f10a277df49" compoundref="ObjId_8cpp" startline="120" endline="123">ObjId::path</references>
+        <references refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" compoundref="ChanCommon_8cpp" startline="113" endline="119">ChanCommon::sendReinitMsgs</references>
+        <references refid="classHHChannelBase_1abcae1992781fb64f64981621c5f25e9d" compoundref="HHChannelBase_8h" startline="185">HHChannelBase::takeXpower_</references>
+        <references refid="classHHChannelBase_1a20b245ea8066f97a297525e76ae9846e" compoundref="HHChannelBase_8h" startline="186">HHChannelBase::takeYpower_</references>
+        <references refid="classHHChannelBase_1a260f9578717457b0583cf49daf2425f3" compoundref="HHChannelBase_8h" startline="187">HHChannelBase::takeZpower_</references>
+        <references refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" compoundref="ChanCommon_8cpp" startline="121" endline="124">ChanCommon::updateIk</references>
+        <references refid="classHHChannelBase_1acf4fe206fb659ce00757563d9af8ec07" compoundref="HHChannelBase_8h" startline="195">HHChannelBase::useConcentration_</references>
+        <references refid="classChanCommon_1a28b9838d6c41ae3d9205b4003026be28" compoundref="ChanCommon_8cpp" startline="41" endline="44">ChanCommon::vGetGbar</references>
+        <references refid="classChanCommon_1a993b966413b6113096b16f44a5c2ed90" compoundref="ChanCommon_8cpp" startline="51" endline="54">ChanCommon::vGetModulation</references>
+        <references refid="classChanCommon_1a7089110696aab34addcabe3307b28302" compoundref="ChanCommon_8h" startline="88">ChanCommon::Vm_</references>
+        <references refid="classChanCommon_1a49f87214aeb41e8b7fc8e194857bb52f" compoundref="ChanCommon_8cpp" startline="70" endline="73">ChanCommon::vSetGk</references>
+        <references refid="classHHChannelBase_1a4f1c0f6707d69d2655bab9cd842a1652" compoundref="HHChannelBase_8h" startline="202">HHChannelBase::X_</references>
+        <references refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" compoundref="HHChannel_8h" startline="192">xGate_</references>
+        <references refid="classHHChannelBase_1af9741dc73d7b467577175e8bb297fd0e" compoundref="HHChannelBase_8h" startline="197">HHChannelBase::xInited_</references>
+        <references refid="classHHChannelBase_1a9a9ed7c5e1ce0242b36850ba30247c19" compoundref="HHChannelBase_8h" startline="189">HHChannelBase::Xpower_</references>
+        <references refid="classHHChannelBase_1a1c30b565bd74a546f3fefd17565d25ee" compoundref="HHChannelBase_8h" startline="202">HHChannelBase::Y_</references>
+        <references refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" compoundref="HHChannel_8h" startline="195">yGate_</references>
+        <references refid="classHHChannelBase_1afeaabf71162d271902348ca0c2516f1e" compoundref="HHChannelBase_8h" startline="197">HHChannelBase::yInited_</references>
+        <references refid="classHHChannelBase_1a74a4a173a4b23b09362a8a43915a7d83" compoundref="HHChannelBase_8h" startline="191">HHChannelBase::Ypower_</references>
+        <references refid="classHHChannelBase_1a138e8acd37c38b7932140c1760969f7c" compoundref="HHChannelBase_8h" startline="202">HHChannelBase::Z_</references>
+        <references refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" compoundref="HHChannel_8h" startline="198">zGate_</references>
+        <references refid="classHHChannelBase_1ad9d31b0271115d12665de4e0d608b955" compoundref="HHChannelBase_8h" startline="197">HHChannelBase::zInited_</references>
+        <references refid="classHHChannelBase_1a30f70de36bd95c2cb1cfedab75a5785b" compoundref="HHChannelBase_8h" startline="193">HHChannelBase::Zpower_</references>
+      </memberdef>
+      <memberdef kind="function" id="classHHChannel_1a53a456d24af6fbe1440ad623ea8218a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HHChannel::~HHChannel</definition>
+        <argsstring>()</argsstring>
+        <name>~HHChannel</name>
+        <qualifiedname>HHChannel::~HHChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="63" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="77" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * HHChannel::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>HHChannel::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="181" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.cpp" bodystart="23" bodyend="67"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classFieldElementFinfo_1aaab885fe6cafb69f4ff0c4fb76d26221" compoundref="FieldElementFinfo_8h" startline="107" endline="141">FieldElementFinfo&lt; T, F &gt;::FieldElementFinfo</references>
+        <references refid="classHHChannel_1a596579fd9c1dcfa8e3e72c1871807c50" compoundref="HHChannel_8cpp" startline="197" endline="197">getNumXgates</references>
+        <references refid="classHHChannel_1a07861bdd19a598c90e55ab7b4fa29ad5" compoundref="HHChannel_8cpp" startline="199" endline="199">getNumYgates</references>
+        <references refid="classHHChannel_1a3166a7f95179014597d6d8fcb173ea10" compoundref="HHChannel_8cpp" startline="201" endline="201">getNumZgates</references>
+        <references refid="classHHChannel_1a77aa85cb7ae12fb5af4540d00c3f1a36" compoundref="HHChannel_8cpp" startline="189" endline="189">getXgate</references>
+        <references refid="classHHChannel_1ad5ed67b449fed3431844d6d866efbd5e" compoundref="HHChannel_8cpp" startline="191" endline="191">getYgate</references>
+        <references refid="classHHChannel_1a80198af9ca8b47c84e09cba6cc0c3803" compoundref="HHChannel_8cpp" startline="193" endline="193">getZgate</references>
+        <references refid="classHHChannelBase_1a953c3941d807e2e680ddb5dcb62abb17" compoundref="HHChannelBase_8cpp" startline="22" endline="124">HHChannelBase::initCinfo</references>
+        <references refid="classHHGate_1a3f79d6db37dc14409b861527effdf727" compoundref="HHGate_8cpp" startline="21" endline="277">HHGate::initCinfo</references>
+        <references refid="classHHChannel_1a9fd0cb69f8439b208923748485223197" compoundref="HHChannel_8cpp" startline="195" endline="195">setNumGates</references>
+        <referencedby refid="classHSolve_1a423981576f253b33c6e9091cb3ae0ea6" compoundref="HSolve_8cpp" startline="264" endline="284">HSolve::unzombify</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classHHChannel" kindref="compound">HHChannel</ref> class sets up a Hodkin-Huxley type ion channel. The form used here is quite general and can handle up to 3 gates, named X, Y and Z. The Z gate can be a function of concentration as well as voltage. The gates are normally computed using the form <verbatim>       alpha(V)
+</verbatim> closed &lt;---------<mdash/>&gt; open beta(V)</para>
+<para>where the rates for the transition are alpha and beta, and both are functions of V. The state variables for each gate (X_, Y_, and Z_) are the fraction in the open state.</para>
+<para>Gates can also be computed instantaneously, giving the instantaneous ratio of alpha to beta rather than solving the above conversion process. The actual functions alpha and beta are provided by an auxiliary class, the <ref refid="classHHGate" kindref="compound">HHGate</ref>. The idea is that all copies of a channel share the same gate, thus saving a great deal of space. It also makes it possible to cleanly change the parameters of all the channels of a give class, all at once. Should one want to mutate a subset of channels, they just need to set up separate gates.</para>
+<para>HHGates are implemented as a special category of <ref refid="classFieldElement" kindref="compound">FieldElement</ref>, so that they can be accessed as readonly pointers available to the <ref refid="classHHChannel" kindref="compound">HHChannel</ref>. The <ref refid="classFieldElement" kindref="compound">FieldElement</ref> containing the <ref refid="classHHGate" kindref="compound">HHGate</ref> appears as a child <ref refid="classElement" kindref="compound">Element</ref> of the <ref refid="classHHChannel" kindref="compound">HHChannel</ref>. The <ref refid="classHHChannel" kindref="compound">HHChannel</ref> <ref refid="classElement" kindref="compound">Element</ref> can be an array; the associated <ref refid="classHHGate" kindref="compound">HHGate</ref> is a singleton. So there has to be a local copy of the <ref refid="classHHGate" kindref="compound">HHGate</ref> on each node. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>ChanBase</label>
+        <link refid="classChanBase"/>
+      </node>
+      <node id="3">
+        <label>ChanCommon</label>
+        <link refid="classChanCommon"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HHChannel</label>
+        <link refid="classHHChannel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HHChannelBase</label>
+        <link refid="classHHChannelBase"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ChanBase</label>
+        <link refid="classChanBase"/>
+      </node>
+      <node id="3">
+        <label>ChanCommon</label>
+        <link refid="classChanCommon"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HHChannel</label>
+        <link refid="classHHChannel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-xGate_</edgelabel>
+          <edgelabel>-yGate_</edgelabel>
+          <edgelabel>-zGate_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HHChannelBase</label>
+        <link refid="classHHChannelBase"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#myId_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>HHGate</label>
+        <link refid="classHHGate"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-A_</edgelabel>
+          <edgelabel>-B_</edgelabel>
+          <edgelabel>-alpha_</edgelabel>
+          <edgelabel>-beta_</edgelabel>
+          <edgelabel>-mInfinity_</edgelabel>
+          <edgelabel>-tau_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-originalChanId_</edgelabel>
+          <edgelabel>-originalGateId_</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>HHGateBase</label>
+        <link refid="classHHGateBase"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#originalChanId_</edgelabel>
+          <edgelabel>#originalGateId_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="10">
+        <label>T</label>
+      </node>
+      <node id="9">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" line="55" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/HHChannel.h" bodystart="55" bodyend="206"/>
+    <listofallmembers>
+      <member refid="classChanBase_1a0b4ce2e2886ace64e7d68eb41ee53d54" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>ChanBase</name></member>
+      <member refid="classChanCommon_1a3e03ac7bcda2746e677f0cf8a2befe9d" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>ChanCommon</name></member>
+      <member refid="classChanBase_1a47abb439c48f25b313e2b6594070d1a7" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>channelOut</name></member>
+      <member refid="classHHChannel_1af99fd659b088b19e70069c2f41a3c70c" prot="public" virt="virtual"><scope>HHChannel</scope><name>checkOriginal</name></member>
+      <member refid="classHHChannel_1a51c2908dbe35126d68adc40bc97405c1" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>conc_</name></member>
+      <member refid="classHHChannelBase_1a67517b3918d38bc2a7c0d1463fd0091e" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>createGate</name></member>
+      <member refid="classHHChannel_1a629f02c43a7893ea95ec1a5c04894d0e" prot="public" virt="virtual"><scope>HHChannel</scope><name>destroyGate</name></member>
+      <member refid="classChanCommon_1ace6cb96a49bcc5a3ccacc9180aec1198" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>Ek_</name></member>
+      <member refid="classHHChannelBase_1a6e77a9dc8208438da4076278cc1929ac" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>EPSILON</name></member>
+      <member refid="classHHChannelBase_1a8cc1a9844f11b6b4ab5863b6ae77fc01" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>g_</name></member>
+      <member refid="classChanCommon_1a3be12631216cac2216d832c1d1d95de2" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>Gbar_</name></member>
+      <member refid="classChanBase_1a7e74d61abc548efead13a96ed29a5b82" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getEk</name></member>
+      <member refid="classChanCommon_1a3cfd15c9edef381013aa781d23a4ef8a" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getGbar</name></member>
+      <member refid="classChanBase_1a17ce4e4fec56ad50bd8b97fa45339505" prot="public" virt="non-virtual" ambiguityscope="ChanBase::"><scope>HHChannel</scope><name>getGbar</name></member>
+      <member refid="classChanBase_1ad4887c265e2aaf5d02d6233f6c9b4c7b" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getGk</name></member>
+      <member refid="classChanBase_1a284b1719ed6cf2cbdc2e79c5a4ccea3b" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getIk</name></member>
+      <member refid="classHHChannelBase_1a723e029eb4be188770468fa1641416d0" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getInstant</name></member>
+      <member refid="classChanCommon_1a350572336cf35de7032820ea90df8ad0" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>getModulation</name></member>
+      <member refid="classChanBase_1af7c5dd8cbc739a833b9c125c3d232f29" prot="public" virt="non-virtual" ambiguityscope="ChanBase::"><scope>HHChannel</scope><name>getModulation</name></member>
+      <member refid="classHHChannel_1a596579fd9c1dcfa8e3e72c1871807c50" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getNumXgates</name></member>
+      <member refid="classHHChannel_1a07861bdd19a598c90e55ab7b4fa29ad5" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getNumYgates</name></member>
+      <member refid="classHHChannel_1a3166a7f95179014597d6d8fcb173ea10" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getNumZgates</name></member>
+      <member refid="classHHChannelBase_1a14525ad15cb22113d7411718706b9c2d" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getUseConcentration</name></member>
+      <member refid="classChanCommon_1adfc62716d0b50f6a78eda4e794869e7a" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getVm</name></member>
+      <member refid="classHHChannelBase_1a81cecc6893fba824e301e23a653a975b" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getX</name></member>
+      <member refid="classHHChannel_1a77aa85cb7ae12fb5af4540d00c3f1a36" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getXgate</name></member>
+      <member refid="classHHChannelBase_1a86ecaa357e6d681ccb4f6af14abe3c34" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getXpower</name></member>
+      <member refid="classHHChannelBase_1acc371bb1bd388de487df13e8fcf9a7bc" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getY</name></member>
+      <member refid="classHHChannel_1ad5ed67b449fed3431844d6d866efbd5e" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getYgate</name></member>
+      <member refid="classHHChannelBase_1a2f3b2bfdb43c308fe1e6c3d5e206f5f6" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getYpower</name></member>
+      <member refid="classHHChannelBase_1a01ca6dce5e6bc9d47735a2215ab75ffb" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getZ</name></member>
+      <member refid="classHHChannel_1a80198af9ca8b47c84e09cba6cc0c3803" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getZgate</name></member>
+      <member refid="classHHChannelBase_1a3724527bdde3231d03e95617dfd1b462" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>getZpower</name></member>
+      <member refid="classChanCommon_1a7acab8b01fc7c40a6d63088633361e55" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>Gk_</name></member>
+      <member refid="classHHChannelBase_1aa5a35319f7ec7cc59c6e147cb0b3703c" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>handleConc</name></member>
+      <member refid="classChanBase_1afe0d330506bd5c57635d3f9e4c629473" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>handleVm</name></member>
+      <member refid="classHHChannel_1a65f926c9f3808e5551d659db4ce9a24d" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>HHChannel</name></member>
+      <member refid="classHHChannelBase_1a95ae7f77bea86646b8c823dd435c8916" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>HHChannelBase</name></member>
+      <member refid="classChanCommon_1a80644e10ddcd988ed3d28fc2dafdf161" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>Ik_</name></member>
+      <member refid="classChanBase_1ad247c54be6894447b422a7539e952cf7" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>IkOut</name></member>
+      <member refid="classHHChannel_1a8b1b7177a3d0b0c06b671d9d1242a4ec" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>initCinfo</name></member>
+      <member refid="classHHChannel_1a66ceac62368e1dc33fc408379e05e5dc" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>innerCreateGate</name></member>
+      <member refid="classHHChannel_1aa1046d9b6fadc75050bb60c65e271531" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>innerDestroyGate</name></member>
+      <member refid="classHHChannel_1a1eb80d3675f519fe8473e408c7e73bd3" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>innerSetXpower</name></member>
+      <member refid="classHHChannel_1aa7e1197b2d016b939e891d127408f6ea" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>innerSetYpower</name></member>
+      <member refid="classHHChannel_1a73bb303c88c9bc5298766f177b922c5c" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>innerSetZpower</name></member>
+      <member refid="classHHChannelBase_1a71ae6ad9d17aac96f6c67833dd833044" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>instant_</name></member>
+      <member refid="classHHChannelBase_1a971cb335fad0d58fdf6dcf6e8a531568" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>INSTANT_X</name></member>
+      <member refid="classHHChannelBase_1a8a2bed6f1609dca45cc62934880fe72c" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>INSTANT_Y</name></member>
+      <member refid="classHHChannelBase_1aadd10fffa398cb46556abcc4e851d3f1" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>INSTANT_Z</name></member>
+      <member refid="classHHChannelBase_1aa25920f9cbee5f4b02bd8364c5d1437f" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>integrate</name></member>
+      <member refid="classChanCommon_1a3bf0c36087f72dce6d6b6d0426bd5c39" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>modulation_</name></member>
+      <member refid="classHHChannelBase_1a1ac6f944a28e786ed307a072cd0d1c7e" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>myId_</name></member>
+      <member refid="classChanBase_1a0ac42064c9b59a9e36285ded2af3cc64" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>permeability</name></member>
+      <member refid="classHHChannelBase_1ac9805d491ab2da8eb9c49b38fe5cd8c1" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>power1</name></member>
+      <member refid="classHHChannelBase_1aee72be88034ce98b79e32de828dc8680" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>power2</name></member>
+      <member refid="classHHChannelBase_1a66514e40e45df724642e844d3b71643a" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>power3</name></member>
+      <member refid="classHHChannelBase_1a87d5f310f7615f6b1ef71f89d654531f" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>power4</name></member>
+      <member refid="classHHChannelBase_1a2b2b6bb6b1fdcb3b99ccba7d90408f6b" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>powerN</name></member>
+      <member refid="classChanBase_1a47e2838dcc33e707dfb648c724150d27" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>process</name></member>
+      <member refid="classChanBase_1a0f1b1067d2a3507758537e0ef135dd02" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>reinit</name></member>
+      <member refid="classHHChannelBase_1a7aac8005728483e91b98075c930ca746" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>selectPower</name></member>
+      <member refid="classChanCommon_1a80540ed7a8a6ed9e94a7e56f412d4836" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>sendProcessMsgs</name></member>
+      <member refid="classChanCommon_1a2c17aa0f9530d2f5737975fc32825b40" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>sendReinitMsgs</name></member>
+      <member refid="classChanBase_1ab398afed3726484d5590eb9f8251651d" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setEk</name></member>
+      <member refid="classHHChannelBase_1abbb6ca71235987aecf03803a495c492c" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setGatePower</name></member>
+      <member refid="classChanBase_1af1ee22625fc9a829ca1290b103d6fb23" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setGbar</name></member>
+      <member refid="classChanBase_1a5be7f8c73ae22fe65dfccb18fb67fb00" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setGk</name></member>
+      <member refid="classChanBase_1a04ca8976f3b126349a6e9ca5d91044bc" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setIk</name></member>
+      <member refid="classHHChannelBase_1a02e2e42fd6ffb81adcbee4652939b244" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setInstant</name></member>
+      <member refid="classChanBase_1a8fef557fb1049b3d6d6d47397e266275" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setModulation</name></member>
+      <member refid="classHHChannel_1a9fd0cb69f8439b208923748485223197" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setNumGates</name></member>
+      <member refid="classHHChannelBase_1abfb34b1152d79937d13543b74d4b1c7d" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setUseConcentration</name></member>
+      <member refid="classHHChannelBase_1a5f37021b6cce3ea3a06eb1cd607bc862" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setX</name></member>
+      <member refid="classHHChannelBase_1a8d5d301a32b520afed08a80996dbfc58" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setXpower</name></member>
+      <member refid="classHHChannelBase_1a017cb3b5f8b4c7597b10b2fc2d550fda" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setY</name></member>
+      <member refid="classHHChannelBase_1a6acf02d91545b27e2ba99bbb1c4bfcb8" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setYpower</name></member>
+      <member refid="classHHChannelBase_1af7f44f4b8424a1612d7ac9e3f8757659" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setZ</name></member>
+      <member refid="classHHChannelBase_1aea187bba9e514af477d486c28f95b20e" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>setZpower</name></member>
+      <member refid="classHHChannelBase_1abcae1992781fb64f64981621c5f25e9d" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>takeXpower_</name></member>
+      <member refid="classHHChannelBase_1a20b245ea8066f97a297525e76ae9846e" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>takeYpower_</name></member>
+      <member refid="classHHChannelBase_1a260f9578717457b0583cf49daf2425f3" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>takeZpower_</name></member>
+      <member refid="classChanCommon_1a75b4b288b8f6d0b4ec4574c8b76636d0" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>updateIk</name></member>
+      <member refid="classHHChannelBase_1acf4fe206fb659ce00757563d9af8ec07" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>useConcentration_</name></member>
+      <member refid="classHHChannel_1ae0a3ec99ce129c5170c601a022b825ab" prot="public" virt="virtual"><scope>HHChannel</scope><name>vCreateGate</name></member>
+      <member refid="classChanCommon_1a581a129b51ff4f4586bb607051880c21" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetEk</name></member>
+      <member refid="classChanCommon_1a28b9838d6c41ae3d9205b4003026be28" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetGbar</name></member>
+      <member refid="classChanCommon_1ab600fe01a8c7a4f1c45f47769b025309" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetGk</name></member>
+      <member refid="classChanCommon_1a697488c62d9074aa00403fab07991cf1" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetIk</name></member>
+      <member refid="classHHChannelBase_1abf63946147517f145fb28b61250fd148" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetInstant</name></member>
+      <member refid="classChanCommon_1a993b966413b6113096b16f44a5c2ed90" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetModulation</name></member>
+      <member refid="classHHChannelBase_1aadae82f2ea885d9c5e89d5346b00daca" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetX</name></member>
+      <member refid="classHHChannelBase_1a399a010784f603ecc1fa7a5218453d99" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetY</name></member>
+      <member refid="classHHChannelBase_1a5b5f42c6373696f3fbbf5e75f7533d7d" prot="public" virt="virtual"><scope>HHChannel</scope><name>vGetZ</name></member>
+      <member refid="classHHChannel_1ac98b9dec681231a5933aad0004e44d8f" prot="public" virt="virtual"><scope>HHChannel</scope><name>vHandleConc</name></member>
+      <member refid="classChanCommon_1a448ef98f6a3825344db6a9e45c6d32e6" prot="public" virt="virtual"><scope>HHChannel</scope><name>vHandleVm</name></member>
+      <member refid="classChanCommon_1a7089110696aab34addcabe3307b28302" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>Vm_</name></member>
+      <member refid="classHHChannel_1ae4ae24e811e1d298a9ea5e1129d40c44" prot="public" virt="virtual"><scope>HHChannel</scope><name>vProcess</name></member>
+      <member refid="classHHChannel_1a6aff0899c46ba1dc65bb99835e90924a" prot="public" virt="virtual"><scope>HHChannel</scope><name>vReinit</name></member>
+      <member refid="classChanCommon_1ab0945ad38439d0bb036b1d41deaf5b8e" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetEk</name></member>
+      <member refid="classChanCommon_1ae56f5f4b2cd2a39025dd99ddc3d37043" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetGbar</name></member>
+      <member refid="classChanCommon_1a49f87214aeb41e8b7fc8e194857bb52f" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetGk</name></member>
+      <member refid="classChanCommon_1adbb054601c03513e1c55b4d4194c1b25" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetIk</name></member>
+      <member refid="classHHChannelBase_1a00de4b2567f544f0d79d36f01e61c5cc" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetInstant</name></member>
+      <member refid="classChanCommon_1abfa0f3cc0f9a39a8fa564c07f190a5cf" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetModulation</name></member>
+      <member refid="classHHChannelBase_1acdd8f6fa2ccef2ef6df069b19abe46a8" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetSolver</name></member>
+      <member refid="classHHChannelBase_1a7a2d591f1150051bb4d926d503119c15" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetUseConcentration</name></member>
+      <member refid="classHHChannelBase_1a9bfc30cb3edaf31c135ebeef85f93e4a" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetX</name></member>
+      <member refid="classHHChannelBase_1a7b070722e824ec86c29f3c828a0384ee" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetXpower</name></member>
+      <member refid="classHHChannelBase_1ac5542d970f5e9425a8e6eb4c66278607" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetY</name></member>
+      <member refid="classHHChannelBase_1aa6b3423c7d63e2f56ee2e14bfe7b74bc" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetYpower</name></member>
+      <member refid="classHHChannelBase_1a1e127d46a9faec622126aeeddc23a744" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetZ</name></member>
+      <member refid="classHHChannelBase_1a1b8b588d9a14e624d15e2a132af1dde9" prot="public" virt="virtual"><scope>HHChannel</scope><name>vSetZpower</name></member>
+      <member refid="classHHChannelBase_1a4f1c0f6707d69d2655bab9cd842a1652" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>X_</name></member>
+      <member refid="classHHChannel_1a49da7fcfc17efe4cc356c31ff8f8b790" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>xGate_</name></member>
+      <member refid="classHHChannelBase_1af9741dc73d7b467577175e8bb297fd0e" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>xInited_</name></member>
+      <member refid="classHHChannelBase_1a9a9ed7c5e1ce0242b36850ba30247c19" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>Xpower_</name></member>
+      <member refid="classHHChannelBase_1a1c30b565bd74a546f3fefd17565d25ee" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>Y_</name></member>
+      <member refid="classHHChannel_1ab070f9c7e20a40f7c102fe00ba3aa16f" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>yGate_</name></member>
+      <member refid="classHHChannelBase_1afeaabf71162d271902348ca0c2516f1e" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>yInited_</name></member>
+      <member refid="classHHChannelBase_1a74a4a173a4b23b09362a8a43915a7d83" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>Ypower_</name></member>
+      <member refid="classHHChannelBase_1a138e8acd37c38b7932140c1760969f7c" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>Z_</name></member>
+      <member refid="classHHChannel_1a69c7d034da207e6ca66db343c7d3e42a" prot="private" virt="non-virtual"><scope>HHChannel</scope><name>zGate_</name></member>
+      <member refid="classHHChannelBase_1ad9d31b0271115d12665de4e0d608b955" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>zInited_</name></member>
+      <member refid="classHHChannelBase_1a8a7d720cbe717c42de49cefeb599c89f" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>zombify</name></member>
+      <member refid="classHHChannelBase_1a30f70de36bd95c2cb1cfedab75a5785b" prot="protected" virt="non-virtual"><scope>HHChannel</scope><name>Zpower_</name></member>
+      <member refid="classChanBase_1ad4999175c719674abd1e13c35d4f2000" prot="public" virt="pure-virtual"><scope>HHChannel</scope><name>~ChanBase</name></member>
+      <member refid="classChanCommon_1ae966e08d0785e0dd49f251c877aaca33" prot="public" virt="pure-virtual"><scope>HHChannel</scope><name>~ChanCommon</name></member>
+      <member refid="classHHChannel_1a53a456d24af6fbe1440ad623ea8218a3" prot="public" virt="non-virtual"><scope>HHChannel</scope><name>~HHChannel</name></member>
+      <member refid="classHHChannelBase_1aba44f1316c8ea8f931f326a5e3d0a39e" prot="public" virt="pure-virtual"><scope>HHChannel</scope><name>~HHChannelBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

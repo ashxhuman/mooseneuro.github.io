@@ -1,0 +1,1645 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classChemCompt" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ChemCompt</compoundname>
+    <derivedcompoundref refid="classMeshCompt" prot="public" virt="non-virtual">MeshCompt</derivedcompoundref>
+    <includes refid="ChemCompt_8h" local="no">ChemCompt.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classChemCompt_1a7127a2f6f2fc7bb9e1b5e23c0b3c704d" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classBoundary" kindref="compound">Boundary</ref> &gt;</type>
+        <definition>vector&lt;Boundary&gt; ChemCompt::boundaries_</definition>
+        <argsstring></argsstring>
+        <name>boundaries_</name>
+        <qualifiedname>ChemCompt::boundaries_</qualifiedname>
+        <briefdescription>
+<para>Wrapper for self ptr. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The Boundaries are <ref refid="classElement" kindref="compound">Element</ref> Fields. They appear as distinct Elements, though they are controlled by the <ref refid="classChemCompt" kindref="compound">ChemCompt</ref>. These are the interfaces between compartments, or just the boundaries of the current one. Each <ref refid="classBoundary" kindref="compound">Boundary</ref> can be diffusive, reflective, or an interface where molecules in different compartments can talk to each other. All boundaries have a message to a Geometry. The Geometries may be shared, which is why the boundary isn&apos;t a Geometry itself. If it is an interface (diffusive or other) then the boundary also contains a message to the adjacent compartment. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="336" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChemCompt_1a82073727afa7625b507772406d39476f" prot="private" static="no" mutable="no">
+        <type><ref refid="classMeshEntry" kindref="compound">MeshEntry</ref></type>
+        <definition>MeshEntry ChemCompt::entry_</definition>
+        <argsstring></argsstring>
+        <name>entry_</name>
+        <qualifiedname>ChemCompt::entry_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="322" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" bodystart="322" bodyend="-1"/>
+        <referencedby refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" compoundref="ChemCompt_8cpp" startline="224" endline="230">ChemCompt</referencedby>
+        <referencedby refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" compoundref="ChemCompt_8cpp" startline="439" endline="442">lookupEntry</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ChemCompt::isMembraneBound_</definition>
+        <argsstring></argsstring>
+        <name>isMembraneBound_</name>
+        <qualifiedname>ChemCompt::isMembraneBound_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag, set to True for meshes where each voxel is membrane bound. <ref refid="classNeuroMesh" kindref="compound">NeuroMesh</ref> and <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> are false <ref refid="classCubeMesh" kindref="compound">CubeMesh</ref>, <ref refid="classCylMesh" kindref="compound">CylMesh</ref>, and <ref refid="classEndoMesh" kindref="compound">EndoMesh</ref> can be either. If they are membrane bound they can still interact via channels and cross-compartment reactions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="352" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" bodystart="352" bodyend="-1"/>
+        <referencedby refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" compoundref="ChemCompt_8cpp" startline="224" endline="230">ChemCompt</referencedby>
+        <referencedby refid="classChemCompt_1aa15b66e3669574b15f303a35af341102" compoundref="ChemCompt_8cpp" startline="415" endline="418">getIsMembraneBound</referencedby>
+        <referencedby refid="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" compoundref="ChemCompt_8cpp" startline="420" endline="423">setIsMembraneBound</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classChemCompt_1ac9f3fa6dce7fafe302a205156668c390" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ChemCompt::method_</definition>
+        <argsstring></argsstring>
+        <name>method_</name>
+        <qualifiedname>ChemCompt::method_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hint to system indicating method to be used on this compartment. Defaults to blank, which then leaves the decision to the calling function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="343" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::buildDefaultMesh</definition>
+        <argsstring>(const Eref &amp;e, double volume, unsigned int numEntries)</argsstring>
+        <name>buildDefaultMesh</name>
+        <qualifiedname>ChemCompt::buildDefaultMesh</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numEntries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>buildDefaultMesh tells the <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> to make a standard mesh partitioning with the specified total volume and the specified number of subdivisions. For example, a <ref refid="classCubeMesh" kindref="compound">CubeMesh</ref> of volume 8 and subdivisions 8 would make a 2x2x2 mesh. This function is specialized in each derived class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="128" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="246" bodyend="250"/>
+        <references refid="classChemCompt_1ad47583c93af9b85b1f5979a8f2730e29">innerBuildDefaultMesh</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::buildJunction</definition>
+        <argsstring>(ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret)</argsstring>
+        <name>buildJunction</name>
+        <qualifiedname>ChemCompt::buildJunction</qualifiedname>
+        <param>
+          <type><ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper function to buld junction between two meshes, and to extend the meshes so that their stencils also handle update to the voxels abutting the boundary on the neighbor mesh. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="218" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="460" bodyend="464"/>
+        <references refid="classChemCompt_1ac3e4a67cd363f6ddc4030e0af56f61f3">extendStencil</references>
+        <references refid="classChemCompt_1a40842a753e317d720a5495166c56dd58">matchMeshEntries</references>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChemCompt::ChemCompt</definition>
+        <argsstring>()</argsstring>
+        <name>ChemCompt</name>
+        <qualifiedname>ChemCompt::ChemCompt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="26" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="224" bodyend="230"/>
+        <references refid="classChemCompt_1a82073727afa7625b507772406d39476f" compoundref="ChemCompt_8h" startline="322">entry_</references>
+        <references refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" compoundref="ChemCompt_8h" startline="352">isMembraneBound_</references>
+        <references refid="classMeshEntry_1a5b0fd763eef44c6f0a628b155d01d266" compoundref="MeshEntry_8cpp" startline="187" endline="189">MeshEntry::MeshEntry</references>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1af2fadfbdf4178364cedda3278c344506" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ChemCompt::clearExtendedMeshEntryVolume</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearExtendedMeshEntryVolume</name>
+        <qualifiedname>ChemCompt::clearExtendedMeshEntryVolume</qualifiedname>
+        <reimplementedby refid="classMeshCompt_1a2bc6647b552e0140c6f8e8a05599af95">clearExtendedMeshEntryVolume</reimplementedby>
+        <briefdescription>
+<para>clear out extended mesh entries for rebuilding. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="283" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ab0942d216e28565e0008176079840bec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double ChemCompt::extendedMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const =0</argsstring>
+        <name>extendedMeshEntryVolume</name>
+        <qualifiedname>ChemCompt::extendedMeshEntryVolume</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a5e587ada1049e5ba1d862bb65e06c425">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a497e91f7c73f6d0719138129890db10e">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a05f55fd2932337e61ec855339d6a3c43">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classMeshCompt_1acc625499b7f77fa59a292b93a17407c9">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a448f674cb83dca4432577406e1849ba3">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a168811d19e0c22a00654ef164264e65d">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1ab398a0bc3cf3db395508769b6ac31855">extendedMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1aeda46d15ed35b9f588309c0e2614c913">extendedMeshEntryVolume</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Volume of mesh Entry including abutting diff-coupled voxels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="280" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ac3e4a67cd363f6ddc4030e0af56f61f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ChemCompt::extendStencil</definition>
+        <argsstring>(const ChemCompt *other, const vector&lt; VoxelJunction &gt; &amp;vj)=0</argsstring>
+        <name>extendStencil</name>
+        <qualifiedname>ChemCompt::extendStencil</qualifiedname>
+        <reimplementedby refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453">extendStencil</reimplementedby>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>const vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>vj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classFunction" kindref="compound">Function</ref> to add voxels for boundaries. This is done so that the solver can do reaction-diffusion computations on the entire mesh including voxels of neighboring solvers abutting the boundary. It uses these to stitch together the computations that span multiple solvers and compartments. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="313" column="18"/>
+        <referencedby refid="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" compoundref="ChemCompt_8cpp" startline="460" endline="464">buildJunction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::flipRet</definition>
+        <argsstring>(vector&lt; VoxelJunction &gt; &amp;ret) const</argsstring>
+        <name>flipRet</name>
+        <qualifiedname>ChemCompt::flipRet</qualifiedname>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+<para>Utility function for swapping first and second in VoxelJunctions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="254" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="466" bodyend="478"/>
+        <references refid="classVoxelJunction_1a726300f19ba547690ed7ab3150cfba9c" compoundref="VoxelJunction_8h" startline="40">VoxelJunction::first</references>
+        <references refid="classVoxelJunction_1abe324bb2629c6d403681fad230251b8a" compoundref="VoxelJunction_8h" startline="42">VoxelJunction::firstVol</references>
+        <references refid="classVoxelJunction_1a6175a7d3b1fba6320dca8bf2ca3bf693" compoundref="VoxelJunction_8h" startline="41">VoxelJunction::second</references>
+        <references refid="classVoxelJunction_1a532dcc2bddde6c6cce5f9994d1366195" compoundref="VoxelJunction_8h" startline="43">VoxelJunction::secondVol</references>
+        <referencedby refid="classCubeMesh_1a6fcb94a3d173f908d73f3ca560d740e5" compoundref="CubeMesh_8cpp" startline="1510" endline="1557">CubeMesh::matchCubeMeshEntries</referencedby>
+        <referencedby refid="classCubeMesh_1a97497fef6c15fa47649eb1904caa4a71" compoundref="CubeMesh_8cpp" startline="1576" endline="1581">CubeMesh::matchCylMeshEntries</referencedby>
+        <referencedby refid="classCylMesh_1a48c7586a88efb888be82cab3ddd77c6a" compoundref="CylMesh_8cpp" startline="857" endline="886">CylMesh::matchMeshEntries</referencedby>
+        <referencedby refid="classCubeMesh_1a70f68ef447c9887db376e002e4cecaa2" compoundref="CubeMesh_8cpp" startline="1155" endline="1184">CubeMesh::matchMeshEntries</referencedby>
+        <referencedby refid="classNeuroMesh_1a87f8811cba83e45b1a24c8da92aa0fc0" compoundref="NeuroMesh_8cpp" startline="1249" endline="1279">NeuroMesh::matchMeshEntries</referencedby>
+        <referencedby refid="classSpineMesh_1a64e7b686dbb5cbda0c92b0e4dfc43393" compoundref="SpineMesh_8cpp" startline="483" endline="503">SpineMesh::matchMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::getChildConcs</definition>
+        <argsstring>(const Eref &amp;e, vector&lt; double &gt; &amp;childConcs) const</argsstring>
+        <name>getChildConcs</name>
+        <qualifiedname>ChemCompt::getChildConcs</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>childConcs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursively traverses all children, depth_first, scooping up concentration terms: conc and concInit for pools, Kf and Kb for Reacs, and Km for enzymes. These are inserted in order into the vector of childConcs. Does not traverse into children of other ChemCompts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="191" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="294" bodyend="322"/>
+        <references refid="classNeutral_1aa7d356ebdc188aa0ba82c5d3d28e118d" compoundref="Neutral_8cpp" startline="325" endline="366">Neutral::children</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" compoundref="ChemCompt_8cpp" startline="294" endline="322">getChildConcs</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <referencedby refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" compoundref="ChemCompt_8cpp" startline="294" endline="322">getChildConcs</referencedby>
+        <referencedby refid="classCylMesh_1a55cc9c1669f08b82e56f2ccbab7c0be5" compoundref="CylMesh_8cpp" startline="357" endline="375">CylMesh::innerSetCoords</referencedby>
+        <referencedby refid="classCylMesh_1adc64f57e92cd8262423383dbd24c67f5" compoundref="CylMesh_8cpp" startline="407" endline="428">CylMesh::setDiffLength</referencedby>
+        <referencedby refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" compoundref="ChemCompt_8cpp" startline="268" endline="287">setEntireVolume</referencedby>
+        <referencedby refid="classCylMesh_1a2ed8b970266b374d9530b8254fd22ff0" compoundref="CylMesh_8cpp" startline="275" endline="281">CylMesh::setR0</referencedby>
+        <referencedby refid="classCylMesh_1a057f1b7493e723be0cdb976ddc2fac94" compoundref="CylMesh_8cpp" startline="344" endline="350">CylMesh::setR1</referencedby>
+        <referencedby refid="classCylMesh_1a1d14548d01ca5b1679c323bde16eaee4" compoundref="CylMesh_8cpp" startline="236" endline="242">CylMesh::setX0</referencedby>
+        <referencedby refid="classCylMesh_1a1acfedd2835704ee9979eebccf0363af" compoundref="CylMesh_8cpp" startline="289" endline="311">CylMesh::setX1</referencedby>
+        <referencedby refid="classCylMesh_1aa0ab6042a287e07866445f97947e30d8" compoundref="CylMesh_8cpp" startline="249" endline="255">CylMesh::setY0</referencedby>
+        <referencedby refid="classCylMesh_1a22c462a886f495a7d581566aa011c01d" compoundref="CylMesh_8cpp" startline="318" endline="324">CylMesh::setY1</referencedby>
+        <referencedby refid="classCylMesh_1ac2b0842847b13b70bff9f5c4b57dbb52" compoundref="CylMesh_8cpp" startline="262" endline="268">CylMesh::setZ0</referencedby>
+        <referencedby refid="classCylMesh_1a9868005bf94ae6e1152dc9b758fbf6d1" compoundref="CylMesh_8cpp" startline="331" endline="337">CylMesh::setZ1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; ChemCompt::getCoordinates</definition>
+        <argsstring>(unsigned int fid) const =0</argsstring>
+        <name>getCoordinates</name>
+        <qualifiedname>ChemCompt::getCoordinates</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a5f81829acfba1fb151772b09cec6e52b">getCoordinates</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a907eeda2dcd972a457e37f395a4cca05">getCoordinates</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a5260a07b9a9ad620d2c39347926a9ca5">getCoordinates</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1afc83707be240b6c0b49ccaae3c486551">getCoordinates</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a16f88d68e2de6e41a70eebd13e3c0772">getCoordinates</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a52f73354e225e22cb9596837e8edd926">getCoordinates</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1aff83d4c8a3df79fff5f4703c77cabe81">getCoordinates</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return coords of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="271" column="20" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="366" bodyend="369"/>
+        <references refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca" compoundref="ChemCompt_8cpp" startline="366" endline="369">getCoordinates</references>
+        <referencedby refid="classMeshEntry_1ab63621e97772e8f8a1abbcbed9477127" compoundref="MeshEntry_8cpp" startline="242" endline="245">MeshEntry::getCoordinates</referencedby>
+        <referencedby refid="classEndoMesh_1a5260a07b9a9ad620d2c39347926a9ca5" compoundref="EndoMesh_8cpp" startline="294" endline="307">EndoMesh::getCoordinates</referencedby>
+        <referencedby refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca" compoundref="ChemCompt_8cpp" startline="366" endline="369">getCoordinates</referencedby>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a2915e3d0730c4b18a305ebc57e49b2eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>virtual vector&lt; double &gt; ChemCompt::getDiffusionArea</definition>
+        <argsstring>(unsigned int fid) const =0</argsstring>
+        <name>getDiffusionArea</name>
+        <qualifiedname>ChemCompt::getDiffusionArea</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1aa83021ea252b9564c65aa633a274f36d">getDiffusionArea</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a2475baaa8507d345f70bf2fb2b90b723">getDiffusionArea</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a59a0e39308a855d6b5ff44dd3927c4fc">getDiffusionArea</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a957bff17a5b461240f3c05571de0ead4">getDiffusionArea</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a5cdf83dd84817e2f6472b894d5f64817">getDiffusionArea</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a10341e251b9ea19e7a11313a574bb284">getDiffusionArea</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a5656f07ab133ab608c52e9116f1ccc43">getDiffusionArea</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return diffusion X-section area per neighbor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="275" column="20"/>
+        <referencedby refid="classMeshEntry_1af58f59c553ae651de1ad86785aeaa5ab" compoundref="MeshEntry_8cpp" startline="253" endline="256">MeshEntry::getDiffusionArea</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a081367d727b267b5f75e825c0deb9330" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>virtual vector&lt; double &gt; ChemCompt::getDiffusionScaling</definition>
+        <argsstring>(unsigned int fid) const =0</argsstring>
+        <name>getDiffusionScaling</name>
+        <qualifiedname>ChemCompt::getDiffusionScaling</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1adfd313dca6963ebc7a493ee72ae984dc">getDiffusionScaling</reimplementedby>
+        <reimplementedby refid="classCylMesh_1ad8814ad5c9c73ea007bdc890a2e8e9d6">getDiffusionScaling</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1af643131583cec71d279f9511f572b3ab">getDiffusionScaling</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a5894c34f0b842b10d86ad90bb6807f07">getDiffusionScaling</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a4654a0d1a8a16b576fa9abdbd108bffe">getDiffusionScaling</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1ad871d1640a761b99c60cad9cd31224ff">getDiffusionScaling</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1aabb0b9d29ef873b10bd809a4d932f9e9">getDiffusionScaling</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return scale factor for diffusion. 1 here. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="277" column="20"/>
+        <referencedby refid="classMeshEntry_1a7aebe154416515153f0be9bf48d07a52" compoundref="MeshEntry_8cpp" startline="259" endline="262">MeshEntry::getDiffusionScaling</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int ChemCompt::getDimensions</definition>
+        <argsstring>() const</argsstring>
+        <name>getDimensions</name>
+        <qualifiedname>ChemCompt::getDimensions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns # of dimensions of mesh. This is 3 for cube, and 1 for cylinder or neurons. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="59" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="400" bodyend="403"/>
+        <references refid="classChemCompt_1ae6347eff16c758abcd89202283c168d7">innerGetDimensions</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+        <referencedby refid="testMesh_8cpp_1a15465209926d048327e50a93ad4cddd3" compoundref="testMesh_8cpp" startline="598" endline="722">testCubeMesh</referencedby>
+        <referencedby refid="testMesh_8cpp_1a18d83fbb87a6057ceee2198c71f061f5" compoundref="testMesh_8cpp" startline="724" endline="785">testCubeMeshExtendStencil</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ChemCompt::getEntireVolume</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getEntireVolume</name>
+        <qualifiedname>ChemCompt::getEntireVolume</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns volume, area, or length of compartment, depending on dimensionality. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="36" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="289" bodyend="292"/>
+        <references refid="classChemCompt_1a546b5a40463c3e84cc5b33baae6fd709">vGetEntireVolume</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1aa15b66e3669574b15f303a35af341102" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ChemCompt::getIsMembraneBound</definition>
+        <argsstring>() const</argsstring>
+        <name>getIsMembraneBound</name>
+        <qualifiedname>ChemCompt::getIsMembraneBound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="71" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="415" bodyend="418"/>
+        <references refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" compoundref="ChemCompt_8h" startline="352">isMembraneBound_</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ae26d4e8d6fcf619f172d06737d4f098f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int ChemCompt::getMeshDimensions</definition>
+        <argsstring>(unsigned int fid) const =0</argsstring>
+        <name>getMeshDimensions</name>
+        <qualifiedname>ChemCompt::getMeshDimensions</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1aac5b58b298cbfc1e8da813af9b9867ab">getMeshDimensions</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a54d0262bec48d3dd9977f44607848976">getMeshDimensions</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a303f188c29588fab22317d15569a3136">getMeshDimensions</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1af6521251c152e82f9fa383fab5620d33">getMeshDimensions</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1aca40371900a8c9bbb165169f0f93477d">getMeshDimensions</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1ac41b063615beae779fbaa6008b5a4744">getMeshDimensions</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a103fd05ba6806fbfab2396025ea16749">getMeshDimensions</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return dimensions of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="262" column="26"/>
+        <referencedby refid="classMeshEntry_1a6c1e4c67c9fd0bcf82d840a3202f6e08" compoundref="MeshEntry_8cpp" startline="232" endline="235">MeshEntry::getDimensions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double ChemCompt::getMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid) const =0</argsstring>
+        <name>getMeshEntryVolume</name>
+        <qualifiedname>ChemCompt::getMeshEntryVolume</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a5a146259f8cebb8c7eadba7e5ffb8451">getMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a89e66693b04a0e2508acab06fb79dcab">getMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a6ed802efc4aff8a39f7730eaad21e303">getMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1aa3c76d3a0de019c16ec50e9b71ddcb63">getMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a4458fbaa789980a94f0cd438554d1288">getMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a539661eec77ddacbcb9c564821d1c2b6">getMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a0c9927abf0ac27595badcf92f69e4fcf">getMeshEntryVolume</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return volume of mesh Entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="264" column="20"/>
+        <referencedby refid="classMeshCompt_1abb421136c1f46decfb6ec994b01a3453" compoundref="MeshCompt_8cpp" startline="121" endline="202">MeshCompt::extendStencil</referencedby>
+        <referencedby refid="classEndoMesh_1a6ed802efc4aff8a39f7730eaad21e303" compoundref="EndoMesh_8cpp" startline="286" endline="290">EndoMesh::getMeshEntryVolume</referencedby>
+        <referencedby refid="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" compoundref="ChemCompt_8cpp" startline="384" endline="387">getOneVoxelVolume</referencedby>
+        <referencedby refid="classMeshEntry_1aba28e3a5b0da7a8ec6f9b6d144ae508a" compoundref="MeshEntry_8cpp" startline="226" endline="230">MeshEntry::getVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a50c687c6bb40a49ae6d629def63ed139" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int ChemCompt::getMeshType</definition>
+        <argsstring>(unsigned int fid) const =0</argsstring>
+        <name>getMeshType</name>
+        <qualifiedname>ChemCompt::getMeshType</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a2570d1f839028e9021642280da48688b">getMeshType</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a1734c139a560594e286fb240de76836d">getMeshType</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a220182a002690120f0d315c420325f6a">getMeshType</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1aa387bd21287919a203058c4fd694f7b4">getMeshType</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1aa5a1ed997556932d6ca8f66db3f70442">getMeshType</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a788318254f79a64cd922c6f8b3c760d7">getMeshType</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a52cbfadcdb58aaa7aaacf927904cc170">getMeshType</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return MeshType of specified entry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="260" column="26"/>
+        <referencedby refid="classMeshEntry_1a67d8e8e43f898013c21d02301ac7f695" compoundref="MeshEntry_8cpp" startline="237" endline="240">MeshEntry::getMeshType</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ab2c1ef2c7882e253a2b7c045db87c7fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ChemCompt::getMethod</definition>
+        <argsstring>() const</argsstring>
+        <name>getMethod</name>
+        <qualifiedname>ChemCompt::getMethod</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="69" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a426bea293c2987a1cb7cfa8d3fec2ee2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>virtual vector&lt; unsigned int &gt; ChemCompt::getNeighbors</definition>
+        <argsstring>(unsigned int fid) const =0</argsstring>
+        <name>getNeighbors</name>
+        <qualifiedname>ChemCompt::getNeighbors</qualifiedname>
+        <reimplementedby refid="classMeshCompt_1a0852f23b48db2fa5ec925a640b43d516">getNeighbors</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function to return info on Entries connected to this one. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="273" column="20"/>
+        <referencedby refid="classMeshEntry_1a9ca18100db6eca41ed982494f363725e" compoundref="MeshEntry_8cpp" startline="247" endline="250">MeshEntry::getNeighbors</referencedby>
+        <referencedby refid="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" compoundref="ChemCompt_8cpp" startline="410" endline="413">getStencilIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int ChemCompt::getNumEntries</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumEntries</name>
+        <qualifiedname>ChemCompt::getNumEntries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of MeshEntries on this <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="160" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="450" bodyend="453"/>
+        <references refid="classChemCompt_1a470081742eabd0580f158c1b165549f7">innerGetNumEntries</references>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+        <referencedby refid="classEndoMesh_1a59a0e39308a855d6b5ff44dd3927c4fc" compoundref="EndoMesh_8cpp" startline="311" endline="314">EndoMesh::getDiffusionArea</referencedby>
+        <referencedby refid="classEndoMesh_1af643131583cec71d279f9511f572b3ab" compoundref="EndoMesh_8cpp" startline="318" endline="321">EndoMesh::getDiffusionScaling</referencedby>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+        <referencedby refid="classEndoMesh_1a40ab1c68a31df6883d5ac79fa0eba093" compoundref="EndoMesh_8cpp" startline="336" endline="342">EndoMesh::innerHandleRequestMeshStats</referencedby>
+        <referencedby refid="classCylBase_1afb7f14b8bb133072656c780053b36de8" compoundref="CylBase_8cpp" startline="317" endline="369">CylBase::matchCubeMeshEntries</referencedby>
+        <referencedby refid="classCylMesh_1aec216c19764ec8489d8e45c29fdf1c67" compoundref="CylMesh_8cpp" startline="1013" endline="1049">CylMesh::matchCubeMeshEntries</referencedby>
+        <referencedby refid="classMeshEntry_1a21da1c171c5a4e41044e080a63ba05f8" compoundref="MeshEntry_8cpp" startline="267" endline="276">MeshEntry::triggerRemesh</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; ChemCompt::getOneVoxelMidpoint</definition>
+        <argsstring>(unsigned int vox) const</argsstring>
+        <name>getOneVoxelMidpoint</name>
+        <qualifiedname>ChemCompt::getOneVoxelMidpoint</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>vox</declname>
+        </param>
+        <briefdescription>
+<para>Looks up specified voxel midpoint, from vGetVoxelMidpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="101" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="371" bodyend="382"/>
+        <references refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70">vGetVoxelMidpoint</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ChemCompt::getOneVoxelVolume</definition>
+        <argsstring>(const Eref &amp;e, unsigned int voxel) const</argsstring>
+        <name>getOneVoxelVolume</name>
+        <qualifiedname>ChemCompt::getOneVoxelVolume</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns volume of specified voxel </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="52" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="384" bodyend="387"/>
+        <references refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a">getMeshEntryVolume</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; ChemCompt::getStencilIndex</definition>
+        <argsstring>(unsigned int row) const</argsstring>
+        <name>getStencilIndex</name>
+        <qualifiedname>ChemCompt::getStencilIndex</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classFunction" kindref="compound">Function</ref> to return the stencil indices used in the diffusion calculations for voxelized compartments. Refers to the getNeighbors virtual function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="88" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="410" bodyend="413"/>
+        <references refid="classChemCompt_1a426bea293c2987a1cb7cfa8d3fec2ee2">getNeighbors</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; ChemCompt::getStencilRate</definition>
+        <argsstring>(unsigned int row) const</argsstring>
+        <name>getStencilRate</name>
+        <qualifiedname>ChemCompt::getStencilRate</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classFunction" kindref="compound">Function</ref> to return the stencil values used in the diffusion calculations for voxelized compartments. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="78" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="405" bodyend="408"/>
+        <references refid="classChemCompt_1a3a7b9dedcebd30c2afafbcc2e75052a5">innerGetStencilRate</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a7ba25e291ed41bb090ae08aadf9073bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int ChemCompt::getStencilRow</definition>
+        <argsstring>(unsigned int meshIndex, const double **entry, const unsigned int **colIndex) const =0</argsstring>
+        <name>getStencilRow</name>
+        <qualifiedname>ChemCompt::getStencilRow</qualifiedname>
+        <reimplementedby refid="classMeshCompt_1aae2b570a057a43104858c5f6c02f423e">getStencilRow</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type>const double **</type>
+          <declname>entry</declname>
+        </param>
+        <param>
+          <type>const unsigned int **</type>
+          <declname>colIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classFunction" kindref="compound">Function</ref> to look up scale factor derived from area and length of compartment junction, for all the mesh entries connected to the specified one. Modeled on equivalent function in <ref refid="classSparseMatrix" kindref="compound">SparseMatrix</ref>. meshIndex: index of reference mesh entry entry: array of values of scale factor colIndex: array of relative indices for each entry. The values returned here are the offset from the meshIndex. Returns number of entries and colIndexes. For a 1-D mesh, there will be 2 except at boundaries For a 2-D mesh, there will be 4 except at boundaries For a 3-D mesh, there will be 6 except at boundaries For a neuromesh, there will be a variable number depending on branching. For a <ref refid="classCylMesh" kindref="compound">CylMesh</ref> there are 2 except at boundaries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="302" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; ChemCompt::getVoxelMidpoint</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelMidpoint</name>
+        <qualifiedname>ChemCompt::getVoxelMidpoint</qualifiedname>
+        <briefdescription>
+<para>Returns vector of all voxel midpoints in compartment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="96" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="361" bodyend="364"/>
+        <references refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70">vGetVoxelMidpoint</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a254b431607d0002da8087a4f711bbf19" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; ChemCompt::getVoxelVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>getVoxelVolume</name>
+        <qualifiedname>ChemCompt::getVoxelVolume</qualifiedname>
+        <briefdescription>
+<para>Returns vector of all voxel volumes in compartment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="91" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="356" bodyend="359"/>
+        <references refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">vGetVoxelVolume</references>
+        <referencedby refid="classDsolve_1a893e748c8fda3ab595c7692815d0ec59" compoundref="Dsolve_8cpp" startline="819" endline="858">Dsolve::build</referencedby>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+        <referencedby refid="Dsolve_8cpp_1a7fd3dc9b07a80d2005f84f984f68721c" compoundref="Dsolve_8cpp" startline="1044" endline="1062">mapVoxelsBetweenMeshes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::handleNodeInfo</definition>
+        <argsstring>(const Eref &amp;e, unsigned int numNodes, unsigned int numThreads)</argsstring>
+        <name>handleNodeInfo</name>
+        <qualifiedname>ChemCompt::handleNodeInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numNodes</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numThreads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="142" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="252" bodyend="257"/>
+        <references refid="classChemCompt_1a2ef09b42b75a38963cde30ff66e68216">innerHandleNodeInfo</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a16a4f8317f8b9c8b9042d96cb3230084" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ChemCompt::indexToSpace</definition>
+        <argsstring>(unsigned int index, double &amp;x, double &amp;y, double &amp;z) const =0</argsstring>
+        <name>indexToSpace</name>
+        <qualifiedname>ChemCompt::indexToSpace</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a6df8d315c2b4641a040758de93fc0e71">indexToSpace</reimplementedby>
+        <reimplementedby refid="classCylMesh_1aaca18e4579592b3451f50b817caf8848">indexToSpace</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a41b92a9dac5f278432ba079c12c2f75e">indexToSpace</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1ababbd158eb32d21eb52f68b519b73e62">indexToSpace</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a2c8b7bd0ef19db42b360d1e1a8d3e513">indexToSpace</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a6f838cfe557ff4ad340aa3d3d69c0255">indexToSpace</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1afd206c7bc30079befd60218c66b19918">indexToSpace</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts specified index to xyz coords of middle of voxel Values out of range return original xyz </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="250" column="18"/>
+        <referencedby refid="classEndoMesh_1a41b92a9dac5f278432ba079c12c2f75e" compoundref="EndoMesh_8cpp" startline="478" endline="482">EndoMesh::indexToSpace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ad47583c93af9b85b1f5979a8f2730e29" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ChemCompt::innerBuildDefaultMesh</definition>
+        <argsstring>(const Eref &amp;e, double volume, unsigned int numEntries)=0</argsstring>
+        <name>innerBuildDefaultMesh</name>
+        <qualifiedname>ChemCompt::innerBuildDefaultMesh</qualifiedname>
+        <reimplementedby refid="classNeuroMesh_1a79cf7938a69c50fb6a126fe68d29ae8f">innerBuildDefaultMesh</reimplementedby>
+        <reimplementedby refid="classCubeMesh_1a3742b4fa234428947a651332defa8940">innerBuildDefaultMesh</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a0a52d2819554b67d665b5dfb8d4f3e8b">innerBuildDefaultMesh</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a9773eb71a8888320242e547ef1548ffb">innerBuildDefaultMesh</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a9b228e164055c3727f5d78cd0ac8d0c8">innerBuildDefaultMesh</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a1dfaa044fb71ab487d898b605156e62c">innerBuildDefaultMesh</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a5340d2376bd57a2ddd2ecd0bcba417ae">innerBuildDefaultMesh</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numEntries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="130" column="18"/>
+        <referencedby refid="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" compoundref="ChemCompt_8cpp" startline="246" endline="250">buildDefaultMesh</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ae6347eff16c758abcd89202283c168d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int ChemCompt::innerGetDimensions</definition>
+        <argsstring>() const =0</argsstring>
+        <name>innerGetDimensions</name>
+        <qualifiedname>ChemCompt::innerGetDimensions</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1abdda561e9636d62a070ecf7a26d99c63">innerGetDimensions</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a213f1af31ec8bf0f53fec118e683af47">innerGetDimensions</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1aa7e4ee88ba7e44e11d37e9e70b7b17a3">innerGetDimensions</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a35885f3e64055f435297f3bcf8bbd019">innerGetDimensions</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a9dcad1befbdf6d4f7ad7ac112ccf0172">innerGetDimensions</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a4756471b33f6452f34b544f5cd1a98aa">innerGetDimensions</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a7fc175e1eeb6c776a1096256f4f0c5ef">innerGetDimensions</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="60" column="26"/>
+        <referencedby refid="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" compoundref="ChemCompt_8cpp" startline="400" endline="403">getDimensions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a470081742eabd0580f158c1b165549f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int ChemCompt::innerGetNumEntries</definition>
+        <argsstring>() const =0</argsstring>
+        <name>innerGetNumEntries</name>
+        <qualifiedname>ChemCompt::innerGetNumEntries</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a97c362cfb13016b5f514a6c53fb945e9">innerGetNumEntries</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a3dba98f17230d7bfbfa0b05a41e2bb05">innerGetNumEntries</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1aa6ea5045ec9bc13e6208ba82e69a2447">innerGetNumEntries</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a42ad7b7980c7ef66bd46a987d13914be">innerGetNumEntries</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a7b5a8cf714c4188c5d944ace85f0683c">innerGetNumEntries</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1aea367c53084ccfe9e84251eef4c90338">innerGetNumEntries</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a8835bbe2ffd844d92999e08f4f4eff82">innerGetNumEntries</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="161" column="26"/>
+        <referencedby refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" compoundref="ChemCompt_8cpp" startline="450" endline="453">getNumEntries</referencedby>
+        <referencedby refid="classEndoMesh_1abb69e42b19bb4238e020d0dfd57e78ff" compoundref="EndoMesh_8cpp" startline="379" endline="386">EndoMesh::getParentVoxel</referencedby>
+        <referencedby refid="classEndoMesh_1aa6ea5045ec9bc13e6208ba82e69a2447" compoundref="EndoMesh_8cpp" startline="354" endline="357">EndoMesh::innerGetNumEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a3a7b9dedcebd30c2afafbcc2e75052a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>virtual vector&lt; double &gt; ChemCompt::innerGetStencilRate</definition>
+        <argsstring>(unsigned int row) const =0</argsstring>
+        <name>innerGetStencilRate</name>
+        <qualifiedname>ChemCompt::innerGetStencilRate</qualifiedname>
+        <reimplementedby refid="classMeshCompt_1a7b8e15d0a73de4f467efcf733e095cb7">innerGetStencilRate</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Virtual func for getting stencil rates for the derived classes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="81" column="20"/>
+        <referencedby refid="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" compoundref="ChemCompt_8cpp" startline="405" endline="408">getStencilRate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a2ef09b42b75a38963cde30ff66e68216" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ChemCompt::innerHandleNodeInfo</definition>
+        <argsstring>(const Eref &amp;e, unsigned int numNodes, unsigned int numThreads)=0</argsstring>
+        <name>innerHandleNodeInfo</name>
+        <qualifiedname>ChemCompt::innerHandleNodeInfo</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1ab02f46d818cb932d0c3641fb73e4c28c">innerHandleNodeInfo</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a97f82187693b788022458500986c7163">innerHandleNodeInfo</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1ac7fc58a87bc39221240cff8eb9d22470">innerHandleNodeInfo</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a3db7c5f062e4c28a21775be08fd2466a">innerHandleNodeInfo</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1ad9a146eeb55bd3d29969beed07dfb33f">innerHandleNodeInfo</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a59554733ee0583e8fd5049c9ebd0b7de">innerHandleNodeInfo</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1ac2a6c77f7c6f778b9e4df49089d77a73">innerHandleNodeInfo</reimplementedby>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numNodes</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numThreads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="144" column="18"/>
+        <referencedby refid="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" compoundref="ChemCompt_8cpp" startline="252" endline="257">handleNodeInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1af29fc9469ff820e6ad144f22f496a40d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ChemCompt::innerResetStencil</definition>
+        <argsstring>()=0</argsstring>
+        <name>innerResetStencil</name>
+        <qualifiedname>ChemCompt::innerResetStencil</qualifiedname>
+        <reimplementedby refid="classMeshCompt_1a2a9074af295cab3af79ee77f68a16257">innerResetStencil</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="152" column="18"/>
+        <referencedby refid="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" compoundref="ChemCompt_8cpp" startline="259" endline="262">resetStencil</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1aa7641511cdf773c5bbaacef66b6ea5e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ChemCompt::innerSetNumEntries</definition>
+        <argsstring>(unsigned int n)=0</argsstring>
+        <name>innerSetNumEntries</name>
+        <qualifiedname>ChemCompt::innerSetNumEntries</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a199aca3acf1d8bcd8020919e453fa181">innerSetNumEntries</reimplementedby>
+        <reimplementedby refid="classCylMesh_1af0f2c705f23f20f457cf4b2f6425cdce">innerSetNumEntries</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1aae08b6ac882ae72de5e6a607d2f61578">innerSetNumEntries</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a71aa45e785032672bd4a653c95c1d2fd">innerSetNumEntries</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1addd70a7c096c731ef5ecefa985db9882">innerSetNumEntries</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a728467744444952b234f253ebc1716e1">innerSetNumEntries</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1ae1abf8c73f2645711f8dfc314b4bec4a">innerSetNumEntries</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="168" column="18"/>
+        <referencedby refid="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" compoundref="ChemCompt_8cpp" startline="444" endline="448">setNumEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a9008423afbd932d8d151a07464e1c939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMeshEntry" kindref="compound">MeshEntry</ref> *</type>
+        <definition>MeshEntry * ChemCompt::lookupEntry</definition>
+        <argsstring>(unsigned int index)</argsstring>
+        <name>lookupEntry</name>
+        <qualifiedname>ChemCompt::lookupEntry</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the matched lookupEntry </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="173" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="439" bodyend="442"/>
+        <references refid="classChemCompt_1a82073727afa7625b507772406d39476f" compoundref="ChemCompt_8h" startline="322">entry_</references>
+        <referencedby refid="classPsdMesh_1a1d6ae3bb65289810e59121bb4e1f8c53" compoundref="PsdMesh_8cpp" startline="225" endline="286">PsdMesh::handlePsdList</referencedby>
+        <referencedby refid="classSpineMesh_1abf7db6994f920d5966037928321fe3c5" compoundref="SpineMesh_8cpp" startline="244" endline="285">SpineMesh::handleSpineList</referencedby>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a40842a753e317d720a5495166c56dd58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ChemCompt::matchMeshEntries</definition>
+        <argsstring>(const ChemCompt *other, vector&lt; VoxelJunction &gt; &amp;ret) const =0</argsstring>
+        <name>matchMeshEntries</name>
+        <qualifiedname>ChemCompt::matchMeshEntries</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a70f68ef447c9887db376e002e4cecaa2">matchMeshEntries</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1a77e7321f762d13a06de933f335bf50da">matchMeshEntries</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a87f8811cba83e45b1a24c8da92aa0fc0">matchMeshEntries</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1aeb4d6b9889c89a7a629803f021704f3f">matchMeshEntries</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a2bfc08990d7ba7c781bcc5907f4a0ce2">matchMeshEntries</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a64e7b686dbb5cbda0c92b0e4dfc43393">matchMeshEntries</reimplementedby>
+        <param>
+          <type>const <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classVoxelJunction" kindref="compound">VoxelJunction</ref> &gt; &amp;</type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the meshIndices (NOT spatial indices) of all adjacent mesh entry pairs on ether side of the (self, other) junction. meshIndices are the indices that look up entries in the vector of pools. spatialIndices are (iz * ny + iy) * nx + ix, that is, a linear conversion of cartesian spatial indices. So, for two touching cubes, the return vector is the paired meshIndices on either side of the plane of contact. If one mesh has a finer mesh than the other, or if there are more than one contact points from self to other (for example, at a corner), then we just have multiple pairs using the same meshIndex of the repeated voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="234" column="18"/>
+        <referencedby refid="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" compoundref="ChemCompt_8cpp" startline="460" endline="464">buildJunction</referencedby>
+        <referencedby refid="Dsolve_8cpp_1a7fd3dc9b07a80d2005f84f984f68721c" compoundref="Dsolve_8cpp" startline="1044" endline="1062">mapVoxelsBetweenMeshes</referencedby>
+        <referencedby refid="classCubeMesh_1a97497fef6c15fa47649eb1904caa4a71" compoundref="CubeMesh_8cpp" startline="1576" endline="1581">CubeMesh::matchCylMeshEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a6669c8fe5495d97b22da6d6244a88d12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double ChemCompt::nearest</definition>
+        <argsstring>(double x, double y, double z, unsigned int &amp;index) const =0</argsstring>
+        <name>nearest</name>
+        <qualifiedname>ChemCompt::nearest</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1ac548c8f4b39e48289dc432eea0730cba">nearest</reimplementedby>
+        <reimplementedby refid="classCylMesh_1ac3cbdb4e27840a2ab581340cb6c6684c">nearest</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1ab4012e36dbcbfc9a5de014b45a7ed2e2">nearest</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a23d9de4910b03e34288a30fed813fa3f">nearest</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a8e2fa26fbaaea0c77d76aea9e59d0a41">nearest</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a80ae3d0a7fc08e4ea046e4a220a9eb51">nearest</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a130ffd77713609521a12ce4f389cbe9c">nearest</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns distance and index of nearest mesh entry. Computes each mesh entry position as its geometric centre. If the current location is not inside a valid mesh entry, distance returned is negative. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="243" column="20"/>
+        <referencedby refid="classEndoMesh_1ab4012e36dbcbfc9a5de014b45a7ed2e2" compoundref="EndoMesh_8cpp" startline="471" endline="475">EndoMesh::nearest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::resetStencil</definition>
+        <argsstring>()</argsstring>
+        <name>resetStencil</name>
+        <qualifiedname>ChemCompt::resetStencil</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset stencil m_ to coreStencil_. This is needed as a prelude to rebuilding the junctions using extendStencil. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="151" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="259" bodyend="262"/>
+        <references refid="classChemCompt_1af29fc9469ff820e6ad144f22f496a40d">innerResetStencil</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int ChemCompt::setChildConcs</definition>
+        <argsstring>(const Eref &amp;e, const vector&lt; double &gt; &amp;childConcs, unsigned int start) const</argsstring>
+        <name>setChildConcs</name>
+        <qualifiedname>ChemCompt::setChildConcs</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>childConcs</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursively traverses all children, depth_first, restoring concentration terms as scooped up by getChildConcs. Does conc and concInit for pools, Kf and Kb for Reacs, and Km for enzymes. These are restored in order into the vector of childConcs. Does not traverse into children of other ChemCompts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="201" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="324" bodyend="354"/>
+        <references refid="classNeutral_1aa7d356ebdc188aa0ba82c5d3d28e118d" compoundref="Neutral_8cpp" startline="325" endline="366">Neutral::children</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classId_1adac7a40d04024a7b9dcb7eae7b9fdf9b" compoundref="Id_8cpp" startline="127" endline="131">Id::eref</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classField_1a54d309d8d4b5304d70475275b39ff40e" compoundref="SetGet_8h" startline="271" endline="276">Field&lt; A &gt;::set</references>
+        <references refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" compoundref="ChemCompt_8cpp" startline="324" endline="354">setChildConcs</references>
+        <referencedby refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" compoundref="ChemCompt_8cpp" startline="324" endline="354">setChildConcs</referencedby>
+        <referencedby refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" compoundref="ChemCompt_8cpp" startline="268" endline="287">setEntireVolume</referencedby>
+        <referencedby refid="classCylMesh_1ad1154c4549fb9db51fd3899ec60eb73e" compoundref="CylMesh_8cpp" startline="204" endline="234">CylMesh::updateCoords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a2fe10479b4eee6199142422a697def76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::setEntireVolume</definition>
+        <argsstring>(const Eref &amp;e, double volume)</argsstring>
+        <name>setEntireVolume</name>
+        <qualifiedname>ChemCompt::setEntireVolume</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a little nasty. It calls buildDefaultMesh with the current numEntries. Should not be used if the mesh has been changed to something more interesting. Perhaps I need to do something like changeVolOfExistingMesh. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="47" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="268" bodyend="287"/>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classEref_1a47b59ab86165cceb0bde80c76c3f7fa2" compoundref="Eref_8h" startline="30" endline="33">Eref::element</references>
+        <references refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" compoundref="ChemCompt_8cpp" startline="294" endline="322">getChildConcs</references>
+        <references refid="classElement_1a07fec02467adf5af906d0c963b647116" compoundref="Element_8cpp" startline="856" endline="885">Element::getMsgTargets</references>
+        <references refid="classSrcFinfo1_1af6ead5e2fe7259ae6ad46a943ca0284c" compoundref="SrcFinfo_8h" startline="99" endline="125">SrcFinfo1&lt; T &gt;::send</references>
+        <references refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" compoundref="ChemCompt_8cpp" startline="324" endline="354">setChildConcs</references>
+        <references refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec">vGetVoxelVolume</references>
+        <references refid="classChemCompt_1a1df70b909fac1208b80586b9092341e9" compoundref="ChemCompt_8cpp" startline="17" endline="24">voxelVolOut</references>
+        <references refid="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c">vSetVolumeNotRates</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::setIsMembraneBound</definition>
+        <argsstring>(bool v)</argsstring>
+        <name>setIsMembraneBound</name>
+        <qualifiedname>ChemCompt::setIsMembraneBound</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="72" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="420" bodyend="423"/>
+        <references refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" compoundref="ChemCompt_8h" startline="352">isMembraneBound_</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ac2343832803b9366231f1d2d816a0e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChemCompt::setMeshEntryVolume</definition>
+        <argsstring>(unsigned int fid, double volume)</argsstring>
+        <name>setMeshEntryVolume</name>
+        <qualifiedname>ChemCompt::setMeshEntryVolume</qualifiedname>
+        <reimplementedby refid="classPsdMesh_1ae769a97fbb065ceb3a4fc1ea1bed744b">setMeshEntryVolume</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1ae4b57e5a3263c1e018d97f294775ac73">setMeshEntryVolume</reimplementedby>
+        <param>
+          <type>unsigned int</type>
+          <declname>fid</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual function to assign volume of mesh Entry. Does nothing in most cases, but is operational in <ref refid="classSpineMesh" kindref="compound">SpineMesh</ref> and <ref refid="classPsdMesh" kindref="compound">PsdMesh</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="268" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="395" bodyend="398"/>
+        <referencedby refid="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" compoundref="ChemCompt_8cpp" startline="389" endline="392">setOneVoxelVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a346cbd4ea599c929638609bc7f16f83a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::setMethod</definition>
+        <argsstring>(string method)</argsstring>
+        <name>setMethod</name>
+        <qualifiedname>ChemCompt::setMethod</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>method</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hint to system indicating method to be used on this compartment. Defaults to blank, which then leaves the decision to the calling function. Doesn&apos;t do anything unless the <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> is parsed by the SimManager. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::setNumEntries</definition>
+        <argsstring>(unsigned int num)</argsstring>
+        <name>setNumEntries</name>
+        <qualifiedname>ChemCompt::setNumEntries</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dummy function. The numEntries is only set by other functions that define compartment decomposition. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="167" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="444" bodyend="448"/>
+        <references refid="classChemCompt_1aa7641511cdf773c5bbaacef66b6ea5e5">innerSetNumEntries</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::setOneVoxelVolume</definition>
+        <argsstring>(const Eref &amp;e, unsigned int voxel, double volume)</argsstring>
+        <name>setOneVoxelVolume</name>
+        <qualifiedname>ChemCompt::setOneVoxelVolume</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="53" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="389" bodyend="392"/>
+        <references refid="classChemCompt_1ac2343832803b9366231f1d2d816a0e21" compoundref="ChemCompt_8cpp" startline="395" endline="398">setMeshEntryVolume</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChemCompt::setVolumeNotRates</definition>
+        <argsstring>(double volume)</argsstring>
+        <name>setVolumeNotRates</name>
+        <qualifiedname>ChemCompt::setVolumeNotRates</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true on success. Changes volume but does not notify any child objects. For some classes, this only works if the <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> has just one voxel. It will return false if it can&apos;t handle it. This function will invalidate any concentration term in the model. If you don&apos;t know why you would want to do this, then you shouldn&apos;t use this function.", </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="116" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="430" bodyend="433"/>
+        <references refid="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c">vSetVolumeNotRates</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a546b5a40463c3e84cc5b33baae6fd709" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double ChemCompt::vGetEntireVolume</definition>
+        <argsstring>() const =0</argsstring>
+        <name>vGetEntireVolume</name>
+        <qualifiedname>ChemCompt::vGetEntireVolume</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a374938bb1381e6007e37999553946caa">vGetEntireVolume</reimplementedby>
+        <reimplementedby refid="classCylMesh_1aa24a6af5905d73bdc5719707c70bbf84">vGetEntireVolume</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1ad2339b22f7490c7cc4615eeadc4934ab">vGetEntireVolume</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a7142154a3c88836a9422cf4cafcf0a2d">vGetEntireVolume</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a58252b04bf12c32677dd5095791f137f">vGetEntireVolume</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a13eb23d457eb248964fbfaf36b40e6e6">vGetEntireVolume</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1abb8be59e0dc2ad7b73dbe901056ac8c2">vGetEntireVolume</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="39" column="20"/>
+        <referencedby refid="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" compoundref="ChemCompt_8cpp" startline="289" endline="292">getEntireVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>virtual const vector&lt; double &gt; &amp; ChemCompt::vGetVoxelMidpoint</definition>
+        <argsstring>() const =0</argsstring>
+        <name>vGetVoxelMidpoint</name>
+        <qualifiedname>ChemCompt::vGetVoxelMidpoint</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a3bd87b7f9c2eefcd0f1f805aed86e188">vGetVoxelMidpoint</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a153045ec22b822e251925715c50b60a7">vGetVoxelMidpoint</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1acf8d5b5b6b054517b133137e780e0518">vGetVoxelMidpoint</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1a1f313b79fc22daf70bd1e09f156ce0e9">vGetVoxelMidpoint</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1acd4ae4d3547585b9df04fca0baeb5ad1">vGetVoxelMidpoint</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a11eb43f06da539dd15b260d9d0e4b254">vGetVoxelMidpoint</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a9dd17dfd99f2a77dd4630d233a8cd1ff">vGetVoxelMidpoint</reimplementedby>
+        <briefdescription>
+<para>Virtual func so that derived classes can return voxel midpoint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="98" column="26"/>
+        <referencedby refid="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" compoundref="ChemCompt_8cpp" startline="371" endline="382">getOneVoxelMidpoint</referencedby>
+        <referencedby refid="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" compoundref="ChemCompt_8cpp" startline="361" endline="364">getVoxelMidpoint</referencedby>
+        <referencedby refid="classEndoMesh_1acf8d5b5b6b054517b133137e780e0518" compoundref="EndoMesh_8cpp" startline="397" endline="400">EndoMesh::vGetVoxelMidpoint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const vector&lt; double &gt; &amp;</type>
+        <definition>virtual const vector&lt; double &gt; &amp; ChemCompt::vGetVoxelVolume</definition>
+        <argsstring>() const =0</argsstring>
+        <name>vGetVoxelVolume</name>
+        <qualifiedname>ChemCompt::vGetVoxelVolume</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1af1adb6049c597ae3faf16048f4d782f5">vGetVoxelVolume</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a6c70eb8eb08ab0ab1f93b7361feaf8af">vGetVoxelVolume</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd">vGetVoxelVolume</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1af20105c5f6f30d6b3353989d989258ab">vGetVoxelVolume</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a053a5aaefd9edaa3f9cf21390b699fa0">vGetVoxelVolume</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a6eabf3ffc66cfd7d0d894a1a91686838">vGetVoxelVolume</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1a4fc215b2bc1b91ae16140ac5da777f6d">vGetVoxelVolume</reimplementedby>
+        <briefdescription>
+<para>Virtual func so that derived classes can pass voxel volume back. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="93" column="26"/>
+        <referencedby refid="classDsolve_1a2312b092685293edb3ebe89536e5f182" compoundref="Dsolve_8cpp" startline="478" endline="518">Dsolve::calcLocalChan</referencedby>
+        <referencedby refid="classEndoMesh_1a148cbabeac4b1f0f6dafdc866ba35cfa" compoundref="EndoMesh_8cpp" startline="402" endline="409">EndoMesh::getVoxelArea</referencedby>
+        <referencedby refid="classEndoMesh_1a8d757a199192323b20771acc5d473525" compoundref="EndoMesh_8cpp" startline="411" endline="418">EndoMesh::getVoxelLength</referencedby>
+        <referencedby refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" compoundref="ChemCompt_8cpp" startline="356" endline="359">getVoxelVolume</referencedby>
+        <referencedby refid="classEndoMesh_1a77e7321f762d13a06de933f335bf50da" compoundref="EndoMesh_8cpp" startline="438" endline="468">EndoMesh::matchMeshEntries</referencedby>
+        <referencedby refid="classDsolve_1a087672d35965fba1767c745d3594b4e7" compoundref="Dsolve_8cpp" startline="557" endline="564">Dsolve::reinit</referencedby>
+        <referencedby refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" compoundref="ChemCompt_8cpp" startline="268" endline="287">setEntireVolume</referencedby>
+        <referencedby refid="classEndoMesh_1af8f9cdc96a37cb61725a330270da0cfd" compoundref="EndoMesh_8cpp" startline="388" endline="395">EndoMesh::vGetVoxelVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool ChemCompt::vSetVolumeNotRates</definition>
+        <argsstring>(double volume)=0</argsstring>
+        <name>vSetVolumeNotRates</name>
+        <qualifiedname>ChemCompt::vSetVolumeNotRates</qualifiedname>
+        <reimplementedby refid="classCubeMesh_1a1a4d7d00caa14f169f24cecd921f86df">vSetVolumeNotRates</reimplementedby>
+        <reimplementedby refid="classCylMesh_1a965da69cbbacd8f093290598078fb722">vSetVolumeNotRates</reimplementedby>
+        <reimplementedby refid="classEndoMesh_1aeed9a2e4e17cd45567e1d26eb95b9670">vSetVolumeNotRates</reimplementedby>
+        <reimplementedby refid="classNeuroMesh_1af927c307d1eaf9cb408f9d7d64ea7172">vSetVolumeNotRates</reimplementedby>
+        <reimplementedby refid="classPresynMesh_1a565689a51b3c9ed060108d2be1b36910">vSetVolumeNotRates</reimplementedby>
+        <reimplementedby refid="classPsdMesh_1a2109fadf54e64876cf31aa7a0b33e214">vSetVolumeNotRates</reimplementedby>
+        <reimplementedby refid="classSpineMesh_1aea134dd6fb52a768e819e8d2574cab69">vSetVolumeNotRates</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Virtual function for actually doing this. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="119" column="18"/>
+        <referencedby refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" compoundref="ChemCompt_8cpp" startline="268" endline="287">setEntireVolume</referencedby>
+        <referencedby refid="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" compoundref="ChemCompt_8cpp" startline="430" endline="433">setVolumeNotRates</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1ae7cb5e1f801974d1c3cd68373dff5cfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>ChemCompt::~ChemCompt</definition>
+        <argsstring>()</argsstring>
+        <name>~ChemCompt</name>
+        <qualifiedname>ChemCompt::~ChemCompt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="27" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="232" bodyend="240"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classChemCompt_1a510fac43d511a189853bbb6d32afb774" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ChemCompt::distance</definition>
+        <argsstring>(double x, double y, double z)</argsstring>
+        <name>distance</name>
+        <qualifiedname>ChemCompt::distance</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="178" column="19" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="483" bodyend="486"/>
+        <referencedby refid="classCylMesh_1a81ae3311fb8197e5092909b640c68e95" compoundref="CylMesh_8cpp" startline="891" endline="967">CylMesh::matchCylMeshEntries</referencedby>
+        <referencedby refid="classCylMesh_1a83b5d3673e859af9fe89c81be079ca58" compoundref="CylMesh_8cpp" startline="1075" endline="1102">CylMesh::nearest</referencedby>
+        <referencedby refid="classCubeMesh_1ac548c8f4b39e48289dc432eea0730cba" compoundref="CubeMesh_8cpp" startline="1223" endline="1262">CubeMesh::nearest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * ChemCompt::initCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initCinfo</name>
+        <qualifiedname>ChemCompt::initCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="319" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="26" bodyend="216"/>
+        <references refid="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" compoundref="ChemCompt_8cpp" startline="246" endline="250">buildDefaultMesh</references>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classElementValueFinfo_1a920b84a2ae5d17c07322009467413ca1" compoundref="ElementValueFinfo_8h" startline="26" endline="45">ElementValueFinfo&lt; T, F &gt;::ElementValueFinfo</references>
+        <references refid="classEpFunc2_1a449f38ac36c9f1fdc9cc7a244841bbee" compoundref="EpFunc_8h" startline="87" endline="89">EpFunc2&lt; T, A1, A2 &gt;::EpFunc2</references>
+        <references refid="classFieldElementFinfo_1aaab885fe6cafb69f4ff0c4fb76d26221" compoundref="FieldElementFinfo_8h" startline="107" endline="141">FieldElementFinfo&lt; T, F &gt;::FieldElementFinfo</references>
+        <references refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca" compoundref="ChemCompt_8cpp" startline="366" endline="369">getCoordinates</references>
+        <references refid="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" compoundref="ChemCompt_8cpp" startline="400" endline="403">getDimensions</references>
+        <references refid="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" compoundref="ChemCompt_8cpp" startline="289" endline="292">getEntireVolume</references>
+        <references refid="classChemCompt_1aa15b66e3669574b15f303a35af341102" compoundref="ChemCompt_8cpp" startline="415" endline="418">getIsMembraneBound</references>
+        <references refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" compoundref="ChemCompt_8cpp" startline="450" endline="453">getNumEntries</references>
+        <references refid="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" compoundref="ChemCompt_8cpp" startline="371" endline="382">getOneVoxelMidpoint</references>
+        <references refid="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" compoundref="ChemCompt_8cpp" startline="384" endline="387">getOneVoxelVolume</references>
+        <references refid="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" compoundref="ChemCompt_8cpp" startline="410" endline="413">getStencilIndex</references>
+        <references refid="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" compoundref="ChemCompt_8cpp" startline="405" endline="408">getStencilRate</references>
+        <references refid="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" compoundref="ChemCompt_8cpp" startline="361" endline="364">getVoxelMidpoint</references>
+        <references refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" compoundref="ChemCompt_8cpp" startline="356" endline="359">getVoxelVolume</references>
+        <references refid="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" compoundref="ChemCompt_8cpp" startline="252" endline="257">handleNodeInfo</references>
+        <references refid="classMeshEntry_1aa59ce346b8a8685f6bf4e5ade55959a7" compoundref="MeshEntry_8cpp" startline="47" endline="176">MeshEntry::initCinfo</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classLookupElementValueFinfo_1acaa7a64c655e5b2e96aea29981783a3b" compoundref="LookupElementValueFinfo_8h" startline="27" endline="46">LookupElementValueFinfo&lt; T, L, F &gt;::LookupElementValueFinfo</references>
+        <references refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" compoundref="ChemCompt_8cpp" startline="439" endline="442">lookupEntry</references>
+        <references refid="classOpFunc0_1acb12ec1c7fa3d906097f5402e0f4183c" compoundref="OpFunc_8h" startline="16" endline="18">OpFunc0&lt; T &gt;::OpFunc0</references>
+        <references refid="classOpFunc1_1abc0aeb50c1657a6777c508d17c872809" compoundref="OpFunc_8h" startline="31" endline="33">OpFunc1&lt; T, A &gt;::OpFunc1</references>
+        <references refid="classReadOnlyLookupValueFinfo_1a3aa6c363601e4483657919db3355ff1a" compoundref="LookupValueFinfo_8h" startline="104" endline="115">ReadOnlyLookupValueFinfo&lt; T, L, F &gt;::ReadOnlyLookupValueFinfo</references>
+        <references refid="classReadOnlyValueFinfo_1a45da388415fe4e2aebb7fc6eb8e16b07" compoundref="ValueFinfo_8h" startline="94" endline="105">ReadOnlyValueFinfo&lt; T, F &gt;::ReadOnlyValueFinfo</references>
+        <references refid="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" compoundref="ChemCompt_8cpp" startline="259" endline="262">resetStencil</references>
+        <references refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" compoundref="ChemCompt_8cpp" startline="268" endline="287">setEntireVolume</references>
+        <references refid="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" compoundref="ChemCompt_8cpp" startline="420" endline="423">setIsMembraneBound</references>
+        <references refid="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" compoundref="ChemCompt_8cpp" startline="444" endline="448">setNumEntries</references>
+        <references refid="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" compoundref="ChemCompt_8cpp" startline="389" endline="392">setOneVoxelVolume</references>
+        <references refid="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" compoundref="ChemCompt_8cpp" startline="430" endline="433">setVolumeNotRates</references>
+        <references refid="classValueFinfo_1afc85efa500f5640f0ef55da08396bbf8" compoundref="ValueFinfo_8h" startline="44" endline="63">ValueFinfo&lt; T, F &gt;::ValueFinfo</references>
+        <references refid="classChemCompt_1a1df70b909fac1208b80586b9092341e9" compoundref="ChemCompt_8cpp" startline="17" endline="24">voxelVolOut</references>
+        <referencedby refid="classCubeMesh_1a32d11717019490a8e18666da3f1e4b3b" compoundref="CubeMesh_8cpp" startline="31" endline="251">CubeMesh::initCinfo</referencedby>
+        <referencedby refid="classCylMesh_1ab62f154fc318fbe4e30c10fea35c0516" compoundref="CylMesh_8cpp" startline="27" endline="158">CylMesh::initCinfo</referencedby>
+        <referencedby refid="classEndoMesh_1ac719a6b3592ec0a4c7c4d615f9f9fee1" compoundref="EndoMesh_8cpp" startline="29" endline="138">EndoMesh::initCinfo</referencedby>
+        <referencedby refid="classNeuroMesh_1a131784a1f5af526113a98464ab4c4357" compoundref="NeuroMesh_8cpp" startline="64" endline="274">NeuroMesh::initCinfo</referencedby>
+        <referencedby refid="classPresynMesh_1a52795d3835decd603599f6d60c6f28a4" compoundref="PresynMesh_8cpp" startline="23" endline="162">PresynMesh::initCinfo</referencedby>
+        <referencedby refid="classPsdMesh_1a1615c139cfbb025a45b891c56927aa6d" compoundref="PsdMesh_8cpp" startline="26" endline="123">PsdMesh::initCinfo</referencedby>
+        <referencedby refid="classSpineMesh_1ae7bb51c2e7cf67fe3df6881eb256c4f4" compoundref="SpineMesh_8cpp" startline="46" endline="141">SpineMesh::initCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChemCompt_1a1df70b909fac1208b80586b9092341e9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classSrcFinfo1" kindref="compound">SrcFinfo1</ref>&lt; vector&lt; double &gt; &gt; *</type>
+        <definition>SrcFinfo1&lt; vector&lt; double &gt; &gt; * ChemCompt::voxelVolOut</definition>
+        <argsstring>()</argsstring>
+        <name>voxelVolOut</name>
+        <qualifiedname>ChemCompt::voxelVolOut</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="317" column="22" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.cpp" bodystart="17" bodyend="24"/>
+        <references refid="classSrcFinfo1_1a530c4cec4de6226aa2a32c28f8448b7e" compoundref="SrcFinfo_8h" startline="95" endline="97">SrcFinfo1&lt; T &gt;::SrcFinfo1</references>
+        <referencedby refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" compoundref="ChemCompt_8cpp" startline="26" endline="216">initCinfo</referencedby>
+        <referencedby refid="classCubeMesh_1a9a6bed3f99e8a96645049b29db93c151" compoundref="CubeMesh_8cpp" startline="643" endline="648">CubeMesh::setCoords</referencedby>
+        <referencedby refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" compoundref="ChemCompt_8cpp" startline="268" endline="287">setEntireVolume</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classChemCompt" kindref="compound">ChemCompt</ref> represents a chemically identified compartment. This may be spatially extended, and may even be discontinuous. The same set of reactions and molecules populates any given compartment. Examples of compartments might be: nucleus, cell membrane, early endosomes, spine heads. Connects to one or more &apos;Geometry&apos; elements to define its boundaries. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+      </node>
+      <node id="3">
+        <label>CubeMesh</label>
+        <link refid="classCubeMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CylMesh</label>
+        <link refid="classCylMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>EndoMesh</label>
+        <link refid="classEndoMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MeshCompt</label>
+        <link refid="classMeshCompt"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>NeuroMesh</label>
+        <link refid="classNeuroMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PresynMesh</label>
+        <link refid="classPresynMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>PsdMesh</label>
+        <link refid="classPsdMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SpineMesh</label>
+        <link refid="classSpineMesh"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ChemCompt</label>
+        <link refid="classChemCompt"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-entry_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MeshEntry</label>
+        <link refid="classMeshEntry"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-parent_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" line="23" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/mesh/ChemCompt.h" bodystart="24" bodyend="353"/>
+    <listofallmembers>
+      <member refid="classChemCompt_1a7127a2f6f2fc7bb9e1b5e23c0b3c704d" prot="private" virt="non-virtual"><scope>ChemCompt</scope><name>boundaries_</name></member>
+      <member refid="classChemCompt_1ad1bb93b7745deaba55c05d255242320e" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>buildDefaultMesh</name></member>
+      <member refid="classChemCompt_1ae8827533aff40f65e21fe5b9c12ff688" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>buildJunction</name></member>
+      <member refid="classChemCompt_1a2ec9e0eed3cf08993ed1c6f8d245a94e" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>ChemCompt</name></member>
+      <member refid="classChemCompt_1af2fadfbdf4178364cedda3278c344506" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>clearExtendedMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a510fac43d511a189853bbb6d32afb774" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>distance</name></member>
+      <member refid="classChemCompt_1a82073727afa7625b507772406d39476f" prot="private" virt="non-virtual"><scope>ChemCompt</scope><name>entry_</name></member>
+      <member refid="classChemCompt_1ab0942d216e28565e0008176079840bec" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>extendedMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1ac3e4a67cd363f6ddc4030e0af56f61f3" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>extendStencil</name></member>
+      <member refid="classChemCompt_1abb604cbf2dce71dcb3d3cf708719a0df" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>flipRet</name></member>
+      <member refid="classChemCompt_1acb11a0e997851863ce85fd1ae96f7798" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getChildConcs</name></member>
+      <member refid="classChemCompt_1a887495fc19265369a14f0f39cfcb7dca" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>getCoordinates</name></member>
+      <member refid="classChemCompt_1a2915e3d0730c4b18a305ebc57e49b2eb" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>getDiffusionArea</name></member>
+      <member refid="classChemCompt_1a081367d727b267b5f75e825c0deb9330" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>getDiffusionScaling</name></member>
+      <member refid="classChemCompt_1a017b3ccd4236818f65beafda6660bfa9" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getDimensions</name></member>
+      <member refid="classChemCompt_1ad03608b4329c3bc8cd6b9bf0fa3a33aa" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getEntireVolume</name></member>
+      <member refid="classChemCompt_1aa15b66e3669574b15f303a35af341102" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getIsMembraneBound</name></member>
+      <member refid="classChemCompt_1ae26d4e8d6fcf619f172d06737d4f098f" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>getMeshDimensions</name></member>
+      <member refid="classChemCompt_1a88c411f2113e2805376c1ce68e2c4d3a" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>getMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a50c687c6bb40a49ae6d629def63ed139" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>getMeshType</name></member>
+      <member refid="classChemCompt_1ab2c1ef2c7882e253a2b7c045db87c7fb" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getMethod</name></member>
+      <member refid="classChemCompt_1a426bea293c2987a1cb7cfa8d3fec2ee2" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>getNeighbors</name></member>
+      <member refid="classChemCompt_1adc7adf60b1bb45b961e444556941ac8a" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getNumEntries</name></member>
+      <member refid="classChemCompt_1a672d7a079827dce48e52f4982b2f41a3" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getOneVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1aaf4f4a85f8e9a06e72a2c102617d3532" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getOneVoxelVolume</name></member>
+      <member refid="classChemCompt_1afd6c63067464036c5fe3f3d5034f39ac" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getStencilIndex</name></member>
+      <member refid="classChemCompt_1a936da11075d11373d3a68b9d3ee60e32" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getStencilRate</name></member>
+      <member refid="classChemCompt_1a7ba25e291ed41bb090ae08aadf9073bc" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>getStencilRow</name></member>
+      <member refid="classChemCompt_1a5c134d97bd2019d1d1cc099d8de8a9b6" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1a254b431607d0002da8087a4f711bbf19" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>getVoxelVolume</name></member>
+      <member refid="classChemCompt_1a95dcbf23dca28d519d1ffd095abeb7ac" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>handleNodeInfo</name></member>
+      <member refid="classChemCompt_1a16a4f8317f8b9c8b9042d96cb3230084" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>indexToSpace</name></member>
+      <member refid="classChemCompt_1af8fde3187d87c0f274e1b65aaf2f76de" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>initCinfo</name></member>
+      <member refid="classChemCompt_1ad47583c93af9b85b1f5979a8f2730e29" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>innerBuildDefaultMesh</name></member>
+      <member refid="classChemCompt_1ae6347eff16c758abcd89202283c168d7" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>innerGetDimensions</name></member>
+      <member refid="classChemCompt_1a470081742eabd0580f158c1b165549f7" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>innerGetNumEntries</name></member>
+      <member refid="classChemCompt_1a3a7b9dedcebd30c2afafbcc2e75052a5" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>innerGetStencilRate</name></member>
+      <member refid="classChemCompt_1a2ef09b42b75a38963cde30ff66e68216" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>innerHandleNodeInfo</name></member>
+      <member refid="classChemCompt_1af29fc9469ff820e6ad144f22f496a40d" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>innerResetStencil</name></member>
+      <member refid="classChemCompt_1aa7641511cdf773c5bbaacef66b6ea5e5" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>innerSetNumEntries</name></member>
+      <member refid="classChemCompt_1a73b7feefb8fa61547e9713780f29542e" prot="private" virt="non-virtual"><scope>ChemCompt</scope><name>isMembraneBound_</name></member>
+      <member refid="classChemCompt_1a9008423afbd932d8d151a07464e1c939" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>lookupEntry</name></member>
+      <member refid="classChemCompt_1a40842a753e317d720a5495166c56dd58" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>matchMeshEntries</name></member>
+      <member refid="classChemCompt_1ac9f3fa6dce7fafe302a205156668c390" prot="private" virt="non-virtual"><scope>ChemCompt</scope><name>method_</name></member>
+      <member refid="classChemCompt_1a6669c8fe5495d97b22da6d6244a88d12" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>nearest</name></member>
+      <member refid="classChemCompt_1ab0f1d3b8c6728c29f39b85575e2ff8ad" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>resetStencil</name></member>
+      <member refid="classChemCompt_1a0f14bf9e42d2c208a66e0689684b92e5" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>setChildConcs</name></member>
+      <member refid="classChemCompt_1a2fe10479b4eee6199142422a697def76" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>setEntireVolume</name></member>
+      <member refid="classChemCompt_1a0e85577f54a5797eb4772b9cfb7b9341" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>setIsMembraneBound</name></member>
+      <member refid="classChemCompt_1ac2343832803b9366231f1d2d816a0e21" prot="public" virt="virtual"><scope>ChemCompt</scope><name>setMeshEntryVolume</name></member>
+      <member refid="classChemCompt_1a346cbd4ea599c929638609bc7f16f83a" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>setMethod</name></member>
+      <member refid="classChemCompt_1abc59c3b1d17cb391d9b4250a72ae962b" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>setNumEntries</name></member>
+      <member refid="classChemCompt_1af5566aff4979a7d5c8a2a6a6fdc67354" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>setOneVoxelVolume</name></member>
+      <member refid="classChemCompt_1ab5db10d1496b9b668a4fe85ce6116131" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>setVolumeNotRates</name></member>
+      <member refid="classChemCompt_1a546b5a40463c3e84cc5b33baae6fd709" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>vGetEntireVolume</name></member>
+      <member refid="classChemCompt_1a1e76cfede52c19f0bc81c786cacb5b70" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>vGetVoxelMidpoint</name></member>
+      <member refid="classChemCompt_1a0b9802765228a4549aa1e9f6b70f83ec" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>vGetVoxelVolume</name></member>
+      <member refid="classChemCompt_1a1df70b909fac1208b80586b9092341e9" prot="public" virt="non-virtual"><scope>ChemCompt</scope><name>voxelVolOut</name></member>
+      <member refid="classChemCompt_1a544b26b3d6699a740a9d3693e9514a1c" prot="public" virt="pure-virtual"><scope>ChemCompt</scope><name>vSetVolumeNotRates</name></member>
+      <member refid="classChemCompt_1ae7cb5e1f801974d1c3cd68373dff5cfc" prot="public" virt="virtual"><scope>ChemCompt</scope><name>~ChemCompt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

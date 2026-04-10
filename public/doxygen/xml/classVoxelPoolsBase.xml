@@ -1,0 +1,1427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classVoxelPoolsBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>VoxelPoolsBase</compoundname>
+    <derivedcompoundref refid="classGssaVoxelPools" prot="public" virt="non-virtual">GssaVoxelPools</derivedcompoundref>
+    <derivedcompoundref refid="classVoxelPools" prot="public" virt="non-virtual">VoxelPools</derivedcompoundref>
+    <includes refid="VoxelPoolsBase_8h" local="no">VoxelPoolsBase.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classVoxelPoolsBase_1ab6644df6bb543b848651c02d06fb0da0" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int VoxelPoolsBase::numVoxels_</definition>
+        <argsstring></argsstring>
+        <name>numVoxels_</name>
+        <qualifiedname>VoxelPoolsBase::numVoxels_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of voxels. If &gt; 1, set flag for LSODA to handle molecule flux on each timestep during diffusion, which slows it down. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="220" column="14" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="220" bodyend="-1"/>
+        <referencedby refid="classVoxelPools_1a51be6a923d1147f72e665be2a1f5fb41" compoundref="VoxelPools_8cpp" startline="108" endline="311">VoxelPools::advance</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ae0667fdb032724686f4d3cd0771946a5" compoundref="VoxelPoolsBase_8cpp" startline="142" endline="145">setNumVoxels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classRateTerm" kindref="compound">RateTerm</ref> * &gt;</type>
+        <definition>vector&lt; RateTerm* &gt; VoxelPoolsBase::rates_</definition>
+        <argsstring></argsstring>
+        <name>rates_</name>
+        <qualifiedname>VoxelPoolsBase::rates_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="215" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="215" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1a7b46a598d44eac6ee37d3a1757de92d7" compoundref="VoxelPoolsBase_8cpp" startline="325" endline="378">filterCrossRateTerms</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a2c4c0263d71fccd67d8a3b377d11e3da" compoundref="VoxelPoolsBase_8cpp" startline="163" endline="166">getR1</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a6f675fb978d518280508c0dfdbe0fd27" compoundref="GssaVoxelPools_8cpp" startline="322" endline="327">GssaVoxelPools::getReacVelocity</referencedby>
+        <referencedby refid="classVoxelPools_1a10836f94f76055f37aeb2d5fd68c8765" compoundref="VoxelPools_8cpp" startline="459" endline="464">VoxelPools::print</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">print</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">scaleVolsBufsRates</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" compoundref="GssaVoxelPools_8cpp" startline="265" endline="280">GssaVoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1abda1b74b70b1b86408f9f239169bf9af" compoundref="VoxelPools_8cpp" startline="369" endline="390">VoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1ab473f3886b4c10ba216a3e09c659c045" compoundref="VoxelPools_8cpp" startline="411" endline="433">VoxelPools::updateRates</referencedby>
+        <referencedby refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795" compoundref="GssaVoxelPools_8cpp" startline="282" endline="298">GssaVoxelPools::updateRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1acf619908fabad6579dd94eb927c65c96" compoundref="VoxelPools_8cpp" startline="392" endline="409">VoxelPools::updateRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1ad752502b7293130ca142bb7dd9b17fdf" compoundref="VoxelPools_8cpp" startline="440" endline="456">VoxelPools::updateReacVelocities</referencedby>
+        <referencedby refid="classGssaVoxelPools_1ad4fc6515575ad28ed614c09647fdf20d" compoundref="GssaVoxelPools_8cpp" startline="304" endline="320">GssaVoxelPools::updateReacVelocities</referencedby>
+        <referencedby refid="classGssaVoxelPools_1aed4810d574806c12457b77333864c86e" compoundref="GssaVoxelPools_8cpp" startline="46" endline="50">GssaVoxelPools::~GssaVoxelPools</referencedby>
+        <referencedby refid="classVoxelPools_1a97a91c3f44188d92ad22a533c69d6352" compoundref="VoxelPools_8cpp" startline="45" endline="53">VoxelPools::~VoxelPools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="classStoich" kindref="compound">Stoich</ref> *</type>
+        <definition>const Stoich* VoxelPoolsBase::stoichPtr_</definition>
+        <argsstring></argsstring>
+        <name>stoichPtr_</name>
+        <qualifiedname>VoxelPoolsBase::stoichPtr_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="214" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="214" bodyend="-1"/>
+        <referencedby refid="classVoxelPools_1a51be6a923d1147f72e665be2a1f5fb41" compoundref="VoxelPools_8cpp" startline="108" endline="311">VoxelPools::advance</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a7b46a598d44eac6ee37d3a1757de92d7" compoundref="VoxelPoolsBase_8cpp" startline="325" endline="378">filterCrossRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1a6ba67eb7349f43b493a8b22d92bf1e7f" compoundref="VoxelPools_8cpp" startline="102" endline="106">VoxelPools::getMethod</referencedby>
+        <referencedby refid="classVoxelPools_1a9fea259924a72a148ec3307eacb72354" compoundref="VoxelPools_8cpp" startline="348" endline="363">VoxelPools::lsodaSys</referencedby>
+        <referencedby refid="classVoxelPools_1a10836f94f76055f37aeb2d5fd68c8765" compoundref="VoxelPools_8cpp" startline="459" endline="464">VoxelPools::print</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">scaleVolsBufsRates</referencedby>
+        <referencedby refid="classGssaVoxelPools_1aeaf1dcd115f3d768b87bf0c9f7400fcb" compoundref="GssaVoxelPools_8cpp" startline="329" endline="332">GssaVoxelPools::setStoich</referencedby>
+        <referencedby refid="classVoxelPools_1a6137168b093bf6196c2f218697247358" compoundref="VoxelPools_8cpp" startline="78" endline="100">VoxelPools::setStoich</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a1a4ecc59c4d07dfb139574c44d74196f" compoundref="GssaVoxelPools_8cpp" startline="335" endline="339">GssaVoxelPools::setVolumeAndDependencies</referencedby>
+        <referencedby refid="classVoxelPools_1afe65f03338ce56fdcd4bdc506fa65baf" compoundref="VoxelPools_8cpp" startline="470" endline="474">VoxelPools::setVolumeAndDependencies</referencedby>
+        <referencedby refid="classVoxelPools_1ab473f3886b4c10ba216a3e09c659c045" compoundref="VoxelPools_8cpp" startline="411" endline="433">VoxelPools::updateRates</referencedby>
+        <referencedby refid="classVoxelPools_1ad752502b7293130ca142bb7dd9b17fdf" compoundref="VoxelPools_8cpp" startline="440" endline="456">VoxelPools::updateReacVelocities</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a890a325f98612eed6cff7d4dd476708e" compoundref="VoxelPoolsBase_8cpp" startline="24" endline="31">VoxelPoolsBase</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ac612c9bd8abeb799fae6e56b8b63095e" compoundref="VoxelPoolsBase_8cpp" startline="210" endline="230">xferInOnlyProxies</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; VoxelPoolsBase::Cinit_</definition>
+        <argsstring></argsstring>
+        <name>Cinit_</name>
+        <qualifiedname>VoxelPoolsBase::Cinit_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cinit_ specifies initial conc at t = 0. Whenever the reac system is rebuilt or reinited, all S_ values become set to Cinit. scaled for volume and NA. Also used for buffered molecules as the fixed values of these molecules. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="246" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="246" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1ad620dfdd7a80491a4a32aa9f3e214690" compoundref="VoxelPoolsBase_8cpp" startline="72" endline="75">Cinit</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a4d43731c339c22c7943759f82f87d770" compoundref="VoxelPoolsBase_8cpp" startline="176" endline="179">getConcInit</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a6c9c831d491fa62b8baeb84a6d91e2ea" compoundref="VoxelPoolsBase_8cpp" startline="46" endline="52">reinit</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1aacd119b7fc41a573c1fcb477a7fc4325" compoundref="VoxelPoolsBase_8cpp" startline="40" endline="44">resizeArrays</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">scaleVolsBufsRates</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1aad9070d9804ae9f2afc9b33212f04432" compoundref="VoxelPoolsBase_8cpp" startline="169" endline="174">setConcInit</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ab77b743ec417b4879106490e5663816b" compoundref="VoxelPoolsBase_8cpp" startline="82" endline="85">size</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a33e8434f9f11241c89d5c904979e8fb5" compoundref="VoxelPoolsBase_8cpp" startline="77" endline="80">varCinit</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a890a325f98612eed6cff7d4dd476708e" compoundref="VoxelPoolsBase_8cpp" startline="24" endline="31">VoxelPoolsBase</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ac612c9bd8abeb799fae6e56b8b63095e" compoundref="VoxelPoolsBase_8cpp" startline="210" endline="230">xferInOnlyProxies</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1a66a70fc1f59e0a8acd314158bd35e6ad" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="classId" kindref="compound">Id</ref>, unsigned int &gt;</type>
+        <definition>map&lt; Id, unsigned int &gt; VoxelPoolsBase::proxyComptMap_</definition>
+        <argsstring></argsstring>
+        <name>proxyComptMap_</name>
+        <qualifiedname>VoxelPoolsBase::proxyComptMap_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Looks up comptIndex from compt. Actually just a set would do. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="265" column="9" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="265" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1adf7a12fe5817136cd12150fc7639f60c" compoundref="VoxelPoolsBase_8cpp" startline="246" endline="256">addProxyVoxy</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ac70f1257a3c915310e8d5e6890e41e8d" compoundref="VoxelPoolsBase_8cpp" startline="273" endline="285">isVoxelJunctionPresent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1af601347ce52e5d23cac52e3df3ba74cb" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; unsigned int &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; unsigned int &gt; &gt; VoxelPoolsBase::proxyPoolVoxels_</definition>
+        <argsstring></argsstring>
+        <name>proxyPoolVoxels_</name>
+        <qualifiedname>VoxelPoolsBase::proxyPoolVoxels_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>proxyPoolVoxels_[comptIndex][#] Used to build the transfer vector. Stores the voxels of proxy pools in specified compartment, </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="253" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="253" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1adf7a12fe5817136cd12150fc7639f60c" compoundref="VoxelPoolsBase_8cpp" startline="246" endline="256">addProxyVoxy</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a8caeca2de946284211312108bb19e484" compoundref="VoxelPoolsBase_8cpp" startline="266" endline="271">hasXfer</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">print</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1ac9df7df8fa087890a966d4841ab5026c" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; unsigned int &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; unsigned int &gt; &gt; VoxelPoolsBase::proxyTransferIndex_</definition>
+        <argsstring></argsstring>
+        <name>proxyTransferIndex_</name>
+        <qualifiedname>VoxelPoolsBase::proxyTransferIndex_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>proxyTransferIndex_[comptIndex][#] Stores the index in the transfer vector for proxy pools that live on this voxel. The poolIndex and # of pools is known from the xferPoolIdx_ vector stored on the <ref refid="classKsolve" kindref="compound">Ksolve</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="260" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="260" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1ae0bb4057b92023ca352f34d2975f48a4" compoundref="VoxelPoolsBase_8cpp" startline="258" endline="264">addProxyTransferIndex</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">print</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; VoxelPoolsBase::S_</definition>
+        <argsstring></argsstring>
+        <name>S_</name>
+        <qualifiedname>VoxelPoolsBase::S_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>S_ is the array of molecules. Stored as n, number of molecules per mesh entry. The poolIndex specifies which molecular species pool to use.</para>
+<para>The first numVarPools_ in the poolIndex are state variables and are integrated using the ODE solver or the GSSA solver. The next numBufPools_ are fixed but can be changed by the script. The next numFuncPools_ are computed using arbitrary functions of any of the molecule levels, and the time. The functions evaluate <emphasis>before</emphasis> the solver. The functions should not cascade as there is no guarantee of execution order. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="237" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="237" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1a3ebc384ed8c94aab9df2a6ab2fa56e32" compoundref="VoxelPoolsBase_8cpp" startline="158" endline="161">getN</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">print</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a6c9c831d491fa62b8baeb84a6d91e2ea" compoundref="VoxelPoolsBase_8cpp" startline="46" endline="52">reinit</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1aacd119b7fc41a573c1fcb477a7fc4325" compoundref="VoxelPoolsBase_8cpp" startline="40" endline="44">resizeArrays</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a14f40161f05d91149be12bdcd5fc5f79" compoundref="VoxelPoolsBase_8cpp" startline="57" endline="60">S</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">scaleVolsBufsRates</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a89dadc3f6348282a295a8a29e8338829" compoundref="VoxelPoolsBase_8cpp" startline="151" endline="156">setN</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a8c740ddc9e1e61c9a0533b31720b31b6" compoundref="VoxelPoolsBase_8cpp" startline="97" endline="107">setVolumeAndDependencies</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1af5e1c75777f866323c53c267f6eae9c5" compoundref="VoxelPoolsBase_8cpp" startline="62" endline="65">Svec</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" compoundref="VoxelPoolsBase_8cpp" startline="67" endline="70">varS</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a890a325f98612eed6cff7d4dd476708e" compoundref="VoxelPoolsBase_8cpp" startline="24" endline="31">VoxelPoolsBase</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a7fbc9a8222cc19309432c7db9716b320" compoundref="VoxelPoolsBase_8cpp" startline="194" endline="208">xferIn</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ac612c9bd8abeb799fae6e56b8b63095e" compoundref="VoxelPoolsBase_8cpp" startline="210" endline="230">xferInOnlyProxies</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a66e7b120d1a183cebe1f53a066a38d61" compoundref="VoxelPoolsBase_8cpp" startline="232" endline="244">xferOut</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double VoxelPoolsBase::volume_</definition>
+        <argsstring></argsstring>
+        <name>volume_</name>
+        <qualifiedname>VoxelPoolsBase::volume_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is what I would need to fully identify proxy compts and voxels for each proxy reac. vector&lt; Id, Id, unsigned int, unsigned int&gt; proxyComptVoxel Volume of voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="275" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="275" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" compoundref="VoxelPoolsBase_8cpp" startline="92" endline="95">getVolume</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">print</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a6c9c831d491fa62b8baeb84a6d91e2ea" compoundref="VoxelPoolsBase_8cpp" startline="46" endline="52">reinit</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">scaleVolsBufsRates</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ae1ddc05cd455fdde8ceb51673a61d674" compoundref="VoxelPoolsBase_8cpp" startline="87" endline="90">setVolume</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a8c740ddc9e1e61c9a0533b31720b31b6" compoundref="VoxelPoolsBase_8cpp" startline="97" endline="107">setVolumeAndDependencies</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a890a325f98612eed6cff7d4dd476708e" compoundref="VoxelPoolsBase_8cpp" startline="24" endline="31">VoxelPoolsBase</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1ac612c9bd8abeb799fae6e56b8b63095e" compoundref="VoxelPoolsBase_8cpp" startline="210" endline="230">xferInOnlyProxies</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1aa00420e8ae72e277924861393b7254ed" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; VoxelPoolsBase::xReacScaleProducts_</definition>
+        <argsstring></argsstring>
+        <name>xReacScaleProducts_</name>
+        <qualifiedname>VoxelPoolsBase::xReacScaleProducts_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xReacScaleProducts_[crossRateTermIndex] Product of productVol/voxelVol for each of the products, for reverse reacs. Applied to R2 of the <ref refid="classRateTerm" kindref="compound">RateTerm</ref>. Used only for cross reactions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="291" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="291" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1affe56b0a0b74a833e111b1f2d2760246" compoundref="VoxelPoolsBase_8cpp" startline="304" endline="309">backwardReacVolumeFactor</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a39840280ada4fe2b44567c5d90aff845" compoundref="VoxelPoolsBase_8cpp" startline="316" endline="319">getXreacScaleProducts</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">print</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a49a8827268426b9ef57c23fc533dd0b0" compoundref="VoxelPoolsBase_8cpp" startline="291" endline="295">resetXreacScale</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classVoxelPoolsBase_1a278c9646ea46d2965b81d9ae56212367" prot="private" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; VoxelPoolsBase::xReacScaleSubstrates_</definition>
+        <argsstring></argsstring>
+        <name>xReacScaleSubstrates_</name>
+        <qualifiedname>VoxelPoolsBase::xReacScaleSubstrates_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xReacScaleSubstrates_[crossRateTermIndex] Product of substrateVol/voxelVol for each of the substrates, for forward reacs. Applied to R1 of the <ref refid="classRateTerm" kindref="compound">RateTerm</ref>. Used only for cross reactions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="283" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="283" bodyend="-1"/>
+        <referencedby refid="classVoxelPoolsBase_1acb2cd03e4980f53c0d9316c68d1b7b10" compoundref="VoxelPoolsBase_8cpp" startline="297" endline="302">forwardReacVolumeFactor</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a2a6aa77950aca1807968ca4be966760f" compoundref="VoxelPoolsBase_8cpp" startline="311" endline="314">getXreacScaleSubstrates</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">print</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a49a8827268426b9ef57c23fc533dd0b0" compoundref="VoxelPoolsBase_8cpp" startline="291" endline="295">resetXreacScale</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classVoxelPoolsBase_1ae0bb4057b92023ca352f34d2975f48a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::addProxyTransferIndex</definition>
+        <argsstring>(unsigned int comptIndex, unsigned int transferIndex)</argsstring>
+        <name>addProxyTransferIndex</name>
+        <qualifiedname>VoxelPoolsBase::addProxyTransferIndex</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>comptIndex</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>transferIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="154" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="258" bodyend="264"/>
+        <references refid="classVoxelPoolsBase_1ac9df7df8fa087890a966d4841ab5026c" compoundref="VoxelPoolsBase_8h" startline="260">proxyTransferIndex_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1adf7a12fe5817136cd12150fc7639f60c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::addProxyVoxy</definition>
+        <argsstring>(unsigned int comptIndex, Id comptId, unsigned int voxel)</argsstring>
+        <name>addProxyVoxy</name>
+        <qualifiedname>VoxelPoolsBase::addProxyVoxy</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>comptIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>comptId</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxel</declname>
+        </param>
+        <briefdescription>
+<para>Adds the index of a voxel to which proxy data should go. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="152" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="246" bodyend="256"/>
+        <references refid="classVoxelPoolsBase_1a66a70fc1f59e0a8acd314158bd35e6ad" compoundref="VoxelPoolsBase_8h" startline="265">proxyComptMap_</references>
+        <references refid="classVoxelPoolsBase_1af601347ce52e5d23cac52e3df3ba74cb" compoundref="VoxelPoolsBase_8h" startline="253">proxyPoolVoxels_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1affe56b0a0b74a833e111b1f2d2760246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::backwardReacVolumeFactor</definition>
+        <argsstring>(unsigned int i, double volume)</argsstring>
+        <name>backwardReacVolumeFactor</name>
+        <qualifiedname>VoxelPoolsBase::backwardReacVolumeFactor</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Multiply in scale factor for different cross-reac volumes, to be applied to specified <ref refid="classRateTerm" kindref="compound">RateTerm</ref> in the rates_ vector. Applies to backward reaction terms </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="192" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="304" bodyend="309"/>
+        <references refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" compoundref="VoxelPoolsBase_8cpp" startline="92" endline="95">getVolume</references>
+        <references refid="classVoxelPoolsBase_1aa00420e8ae72e277924861393b7254ed" compoundref="VoxelPoolsBase_8h" startline="291">xReacScaleProducts_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ad620dfdd7a80491a4a32aa9f3e214690" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double *</type>
+        <definition>const double * VoxelPoolsBase::Cinit</definition>
+        <argsstring>() const</argsstring>
+        <name>Cinit</name>
+        <qualifiedname>VoxelPoolsBase::Cinit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the array of doubles of initial mol #s at the specified mesh index </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="67" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="72" bodyend="75"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a7b46a598d44eac6ee37d3a1757de92d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::filterCrossRateTerms</definition>
+        <argsstring>(const vector&lt; Id &gt; &amp;offSolverReacs, const vector&lt; pair&lt; Id, Id &gt; &gt; &amp;offSolverReacCompts)</argsstring>
+        <name>filterCrossRateTerms</name>
+        <qualifiedname>VoxelPoolsBase::filterCrossRateTerms</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classId" kindref="compound">Id</ref> &gt; &amp;</type>
+          <declname>offSolverReacs</declname>
+        </param>
+        <param>
+          <type>const vector&lt; pair&lt; <ref refid="classId" kindref="compound">Id</ref>, <ref refid="classId" kindref="compound">Id</ref> &gt; &gt; &amp;</type>
+          <declname>offSolverReacCompts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Changes cross rate terms to zero if there is no junction</para>
+<para>Zeroes out rate terms that are involved in cross-reactions that are not present on current voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="122" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="325" bodyend="378"/>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classStoich_1aec594bfef9a6dc7c12bb6683bbbdaccb" compoundref="Stoich_8cpp" startline="1400" endline="1406">Stoich::convertIdToReacIndex</references>
+        <references refid="classId_1a574e06330597163aef0ea4c99de7ff4a" compoundref="Id_8cpp" startline="115" endline="118">Id::element</references>
+        <references refid="classStoich_1a72cd076eda0e32a722b8f791e1b00d3b" compoundref="Stoich_8cpp" startline="322" endline="325">Stoich::getOneWay</references>
+        <references refid="classCinfo_1a71378b635327a694971a29e946f6e886" compoundref="Cinfo_8cpp" startline="321" endline="332">Cinfo::isA</references>
+        <references refid="classVoxelPoolsBase_1ac70f1257a3c915310e8d5e6890e41e8d" compoundref="VoxelPoolsBase_8cpp" startline="273" endline="285">isVoxelJunctionPresent</references>
+        <references refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" compoundref="VoxelPoolsBase_8h" startline="215">rates_</references>
+        <references refid="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" compoundref="VoxelPoolsBase_8h" startline="214">stoichPtr_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1acb2cd03e4980f53c0d9316c68d1b7b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::forwardReacVolumeFactor</definition>
+        <argsstring>(unsigned int i, double volume)</argsstring>
+        <name>forwardReacVolumeFactor</name>
+        <qualifiedname>VoxelPoolsBase::forwardReacVolumeFactor</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Multiply in scale factor for different cross-reac volumes, to be applied to specified <ref refid="classRateTerm" kindref="compound">RateTerm</ref> in the rates_ vector. Applies to forward reaction terms </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="185" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="297" bodyend="302"/>
+        <references refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" compoundref="VoxelPoolsBase_8cpp" startline="92" endline="95">getVolume</references>
+        <references refid="classVoxelPoolsBase_1a278c9646ea46d2965b81d9ae56212367" compoundref="VoxelPoolsBase_8h" startline="283">xReacScaleSubstrates_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a4d43731c339c22c7943759f82f87d770" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double VoxelPoolsBase::getConcInit</definition>
+        <argsstring>(unsigned int) const</argsstring>
+        <name>getConcInit</name>
+        <qualifiedname>VoxelPoolsBase::getConcInit</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="99" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="176" bodyend="179"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+        <referencedby refid="classGsolve_1a8235e5b90e20752b0206a3ec414cc3ae" compoundref="Gsolve_8cpp" startline="1016" endline="1022">Gsolve::getConcInit</referencedby>
+        <referencedby refid="classKsolve_1abb7543d8958db5d9dfef445986fa0723" compoundref="Ksolve_8cpp" startline="779" endline="785">Ksolve::getConcInit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a86699946666d18588f6939199b2d771f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double VoxelPoolsBase::getDiffConst</definition>
+        <argsstring>(unsigned int) const</argsstring>
+        <name>getDiffConst</name>
+        <qualifiedname>VoxelPoolsBase::getDiffConst</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="101" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="186" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a3ebc384ed8c94aab9df2a6ab2fa56e32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double VoxelPoolsBase::getN</definition>
+        <argsstring>(unsigned int) const</argsstring>
+        <name>getN</name>
+        <qualifiedname>VoxelPoolsBase::getN</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="96" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="158" bodyend="161"/>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <referencedby refid="classGsolve_1a585e65a543d2a4e4ecb2a3a269369dd0" compoundref="Gsolve_8cpp" startline="985" endline="991">Gsolve::getN</referencedby>
+        <referencedby refid="classKsolve_1a779cfdec2d88315dfe192219ba7ec766" compoundref="Ksolve_8cpp" startline="756" endline="762">Ksolve::getN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a2c4c0263d71fccd67d8a3b377d11e3da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double VoxelPoolsBase::getR1</definition>
+        <argsstring>(unsigned int) const</argsstring>
+        <name>getR1</name>
+        <qualifiedname>VoxelPoolsBase::getR1</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="97" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="163" bodyend="166"/>
+        <references refid="classRateTerm_1a59765605f8379adff7e8d53f9fa691e3">RateTerm::getR1</references>
+        <references refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" compoundref="VoxelPoolsBase_8h" startline="215">rates_</references>
+        <referencedby refid="classGsolve_1ad433baf09ca930e8c4b3715af4809311" compoundref="Gsolve_8cpp" startline="993" endline="999">Gsolve::getR1</referencedby>
+        <referencedby refid="classKsolve_1a3b1424fae70db83dd3e36ce049e172e2" compoundref="Ksolve_8cpp" startline="764" endline="770">Ksolve::getR1</referencedby>
+        <referencedby refid="classKsolve_1a39feccbf14210b05d18b953bfa9bf96c" compoundref="Ksolve_8cpp" startline="501" endline="508">Ksolve::getR1vec</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double VoxelPoolsBase::getVolume</definition>
+        <argsstring>() const</argsstring>
+        <name>getVolume</name>
+        <qualifiedname>VoxelPoolsBase::getVolume</qualifiedname>
+        <briefdescription>
+<para>Return the volume of the voxel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="83" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="92" bodyend="95"/>
+        <references refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" compoundref="VoxelPoolsBase_8h" startline="275">volume_</references>
+        <referencedby refid="classVoxelPoolsBase_1affe56b0a0b74a833e111b1f2d2760246" compoundref="VoxelPoolsBase_8cpp" startline="304" endline="309">backwardReacVolumeFactor</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1acb2cd03e4980f53c0d9316c68d1b7b10" compoundref="VoxelPoolsBase_8cpp" startline="297" endline="302">forwardReacVolumeFactor</referencedby>
+        <referencedby refid="classGsolve_1a76294512f5fb25c72f87402c999b6653" compoundref="Gsolve_8cpp" startline="1024" endline="1028">Gsolve::getVolumeOfPool</referencedby>
+        <referencedby refid="classKsolve_1a7f4ea57143186c1f1922a0a50d079d60" compoundref="Ksolve_8cpp" startline="787" endline="791">Ksolve::getVolumeOfPool</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">scaleVolsBufsRates</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" compoundref="GssaVoxelPools_8cpp" startline="265" endline="280">GssaVoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1abda1b74b70b1b86408f9f239169bf9af" compoundref="VoxelPools_8cpp" startline="369" endline="390">VoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795" compoundref="GssaVoxelPools_8cpp" startline="282" endline="298">GssaVoxelPools::updateRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1acf619908fabad6579dd94eb927c65c96" compoundref="VoxelPools_8cpp" startline="392" endline="409">VoxelPools::updateRateTerms</referencedby>
+        <referencedby refid="classGsolve_1aca890cc327b6809f57ffc9728734dec9" compoundref="Gsolve_8cpp" startline="1150" endline="1155">Gsolve::volume</referencedby>
+        <referencedby refid="classKsolve_1a52926eef0b3e60e7e4f76cde2ce8746f" compoundref="Ksolve_8cpp" startline="835" endline="840">Ksolve::volume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a39840280ada4fe2b44567c5d90aff845" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double VoxelPoolsBase::getXreacScaleProducts</definition>
+        <argsstring>(unsigned int i) const</argsstring>
+        <name>getXreacScaleProducts</name>
+        <qualifiedname>VoxelPoolsBase::getXreacScaleProducts</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return scale factor for specified entry on rate terms. Index is # of cross-compartment rate term. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="204" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="316" bodyend="319"/>
+        <references refid="classVoxelPoolsBase_1aa00420e8ae72e277924861393b7254ed" compoundref="VoxelPoolsBase_8h" startline="291">xReacScaleProducts_</references>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">scaleVolsBufsRates</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" compoundref="GssaVoxelPools_8cpp" startline="265" endline="280">GssaVoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1abda1b74b70b1b86408f9f239169bf9af" compoundref="VoxelPools_8cpp" startline="369" endline="390">VoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795" compoundref="GssaVoxelPools_8cpp" startline="282" endline="298">GssaVoxelPools::updateRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1acf619908fabad6579dd94eb927c65c96" compoundref="VoxelPools_8cpp" startline="392" endline="409">VoxelPools::updateRateTerms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a2a6aa77950aca1807968ca4be966760f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double VoxelPoolsBase::getXreacScaleSubstrates</definition>
+        <argsstring>(unsigned int i) const</argsstring>
+        <name>getXreacScaleSubstrates</name>
+        <qualifiedname>VoxelPoolsBase::getXreacScaleSubstrates</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return scale factor for specified entry on rate terms. Index is # of cross-compartment rate term. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="198" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="311" bodyend="314"/>
+        <references refid="classVoxelPoolsBase_1a278c9646ea46d2965b81d9ae56212367" compoundref="VoxelPoolsBase_8h" startline="283">xReacScaleSubstrates_</references>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">scaleVolsBufsRates</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" compoundref="GssaVoxelPools_8cpp" startline="265" endline="280">GssaVoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1abda1b74b70b1b86408f9f239169bf9af" compoundref="VoxelPools_8cpp" startline="369" endline="390">VoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795" compoundref="GssaVoxelPools_8cpp" startline="282" endline="298">GssaVoxelPools::updateRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1acf619908fabad6579dd94eb927c65c96" compoundref="VoxelPools_8cpp" startline="392" endline="409">VoxelPools::updateRateTerms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a8caeca2de946284211312108bb19e484" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool VoxelPoolsBase::hasXfer</definition>
+        <argsstring>(unsigned int comptIndex) const</argsstring>
+        <name>hasXfer</name>
+        <qualifiedname>VoxelPoolsBase::hasXfer</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>comptIndex</declname>
+        </param>
+        <briefdescription>
+<para>True when this voxel has data to be transferred. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns the <ref refid="classId" kindref="compound">Id</ref> and volume of the specified x-reac coupled compartment void setComptVolume( unsigned int comptIndex, Id id, double vol ); </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="164" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="266" bodyend="271"/>
+        <references refid="classVoxelPoolsBase_1af601347ce52e5d23cac52e3df3ba74cb" compoundref="VoxelPoolsBase_8h" startline="253">proxyPoolVoxels_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ac70f1257a3c915310e8d5e6890e41e8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool VoxelPoolsBase::isVoxelJunctionPresent</definition>
+        <argsstring>(Id i1, Id i2) const</argsstring>
+        <name>isVoxelJunctionPresent</name>
+        <qualifiedname>VoxelPoolsBase::isVoxelJunctionPresent</qualifiedname>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type><ref refid="classId" kindref="compound">Id</ref></type>
+          <declname>i2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True when there is a junction. i1 must match, and if i2 is non-zero then it too must match. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="170" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="273" bodyend="285"/>
+        <references refid="classId_1ac094968605676d63b55ca33b7e318948" compoundref="Id_8cpp" startline="18" endline="23">Id::Id</references>
+        <references refid="classId_1a38206d79367649ab0056b93e6da3b789" compoundref="Id_8h" startline="127" endline="131">Id::operator==</references>
+        <references refid="classVoxelPoolsBase_1a66a70fc1f59e0a8acd314158bd35e6ad" compoundref="VoxelPoolsBase_8h" startline="265">proxyComptMap_</references>
+        <referencedby refid="classVoxelPoolsBase_1a7b46a598d44eac6ee37d3a1757de92d7" compoundref="VoxelPoolsBase_8cpp" startline="325" endline="378">filterCrossRateTerms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::print</definition>
+        <argsstring>() const</argsstring>
+        <name>print</name>
+        <qualifiedname>VoxelPoolsBase::print</qualifiedname>
+        <briefdescription>
+<para>Debugging utility. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="211" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="381" bodyend="424"/>
+        <references refid="classRateTerm_1a59765605f8379adff7e8d53f9fa691e3">RateTerm::getR1</references>
+        <references refid="classRateTerm_1af29746384131d9238627a763c795739c">RateTerm::getR2</references>
+        <references refid="classVoxelPoolsBase_1af601347ce52e5d23cac52e3df3ba74cb" compoundref="VoxelPoolsBase_8h" startline="253">proxyPoolVoxels_</references>
+        <references refid="classVoxelPoolsBase_1ac9df7df8fa087890a966d4841ab5026c" compoundref="VoxelPoolsBase_8h" startline="260">proxyTransferIndex_</references>
+        <references refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" compoundref="VoxelPoolsBase_8h" startline="215">rates_</references>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <references refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" compoundref="VoxelPoolsBase_8h" startline="275">volume_</references>
+        <references refid="classVoxelPoolsBase_1aa00420e8ae72e277924861393b7254ed" compoundref="VoxelPoolsBase_8h" startline="291">xReacScaleProducts_</references>
+        <references refid="classVoxelPoolsBase_1a278c9646ea46d2965b81d9ae56212367" compoundref="VoxelPoolsBase_8h" startline="283">xReacScaleSubstrates_</references>
+        <referencedby refid="classVoxelPools_1a10836f94f76055f37aeb2d5fd68c8765" compoundref="VoxelPools_8cpp" startline="459" endline="464">VoxelPools::print</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a6c9c831d491fa62b8baeb84a6d91e2ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::reinit</definition>
+        <argsstring>()</argsstring>
+        <name>reinit</name>
+        <qualifiedname>VoxelPoolsBase::reinit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns S = NA * vol * Cinit and sets up initial dt. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="78" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="46" bodyend="52"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <references refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" compoundref="VoxelPoolsBase_8h" startline="275">volume_</references>
+        <referencedby refid="classGssaVoxelPools_1a3a83f5ee0406fe9fffda7546c3aaeabc" compoundref="GssaVoxelPools_8cpp" startline="213" endline="254">GssaVoxelPools::reinit</referencedby>
+        <referencedby refid="classVoxelPools_1a7fd3f5f0f7a229f2c5c3f752f31b1481" compoundref="VoxelPools_8cpp" startline="58" endline="76">VoxelPools::reinit</referencedby>
+        <referencedby refid="classVoxelPools_1a6137168b093bf6196c2f218697247358" compoundref="VoxelPools_8cpp" startline="78" endline="100">VoxelPools::setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a49a8827268426b9ef57c23fc533dd0b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::resetXreacScale</definition>
+        <argsstring>(unsigned int size)</argsstring>
+        <name>resetXreacScale</name>
+        <qualifiedname>VoxelPoolsBase::resetXreacScale</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize/reset the vector xReacScaling_ for scale factors for each cross reaction in this voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="178" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="291" bodyend="295"/>
+        <references refid="classVoxelPoolsBase_1aa00420e8ae72e277924861393b7254ed" compoundref="VoxelPoolsBase_8h" startline="291">xReacScaleProducts_</references>
+        <references refid="classVoxelPoolsBase_1a278c9646ea46d2965b81d9ae56212367" compoundref="VoxelPoolsBase_8h" startline="283">xReacScaleSubstrates_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1aacd119b7fc41a573c1fcb477a7fc4325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::resizeArrays</definition>
+        <argsstring>(unsigned int totNumPools)</argsstring>
+        <name>resizeArrays</name>
+        <qualifiedname>VoxelPoolsBase::resizeArrays</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>totNumPools</declname>
+        </param>
+        <briefdescription>
+<para>Allocate # of pools. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Using the computed array sizes, now allocate space for them. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="41" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="40" bodyend="44"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <referencedby refid="classKsolve_1a7b8fd9685bb071318964ac4d9b903c06" compoundref="Ksolve_8cpp" startline="849" endline="858">Ksolve::notifyAddPool</referencedby>
+        <referencedby refid="classGsolve_1a0dc52535f4560916c01c7716fa519529" compoundref="Gsolve_8cpp" startline="1040" endline="1048">Gsolve::setNumPools</referencedby>
+        <referencedby refid="classKsolve_1a34ed2d806559b67d7e025c03cd4c2e88" compoundref="Ksolve_8cpp" startline="803" endline="810">Ksolve::setNumPools</referencedby>
+        <referencedby refid="classKsolve_1a728791febabf1f6ee4cb512b430d3a34" compoundref="Ksolve_8cpp" startline="812" endline="819">Ksolve::setNumVarTotPools</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a14f40161f05d91149be12bdcd5fc5f79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double *</type>
+        <definition>const double * VoxelPoolsBase::S</definition>
+        <argsstring>() const</argsstring>
+        <name>S</name>
+        <qualifiedname>VoxelPoolsBase::S</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the array of doubles of current mol #s at the specified mesh index </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="52" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="57" bodyend="60"/>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <referencedby refid="classGsolve_1ae3263e36e69b24e76d8f5788c04539c0" compoundref="Gsolve_8cpp" startline="1061" endline="1082">Gsolve::getBlock</referencedby>
+        <referencedby refid="classKsolve_1a1e2ca729ecb9d7115c22e607b7f9a4f3" compoundref="Ksolve_8cpp" startline="878" endline="899">Ksolve::getBlock</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" compoundref="GssaVoxelPools_8cpp" startline="130" endline="144">GssaVoxelPools::refreshAtot</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a930db119e72272d520c45e1fb99793c9" compoundref="GssaVoxelPools_8cpp" startline="84" endline="92">GssaVoxelPools::updateDependentRates</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::scaleVolsBufsRates</definition>
+        <argsstring>(double ratio, const Stoich *stoichPtr)</argsstring>
+        <name>scaleVolsBufsRates</name>
+        <qualifiedname>VoxelPoolsBase::scaleVolsBufsRates</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>ratio</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classStoich" kindref="compound">Stoich</ref> *</type>
+          <declname>stoichPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="206" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="109" bodyend="140"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+        <references refid="classRateTerm_1a1ed45d040641861c18c1e896c2512e90">RateTerm::copyWithVolScaling</references>
+        <references refid="classStoich_1abdc7954b16ce9514e72b8489347fecfa" compoundref="Stoich_8cpp" startline="530" endline="533">Stoich::getNumBufPools</references>
+        <references refid="classStoich_1aa81bfbaf5389d4ee173aa18cfaf15fd4" compoundref="Stoich_8cpp" startline="595" endline="600">Stoich::getNumCoreRates</references>
+        <references refid="classStoich_1a9b29e415b8c69dc92a59c06d943d1094" compoundref="Stoich_8cpp" startline="525" endline="528">Stoich::getNumVarPools</references>
+        <references refid="classStoich_1a05ba653fd2112861f21bd2c27b3a76a3" compoundref="Stoich_8cpp" startline="608" endline="611">Stoich::getRateTerms</references>
+        <references refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" compoundref="VoxelPoolsBase_8cpp" startline="92" endline="95">getVolume</references>
+        <references refid="classVoxelPoolsBase_1a39840280ada4fe2b44567c5d90aff845" compoundref="VoxelPoolsBase_8cpp" startline="316" endline="319">getXreacScaleProducts</references>
+        <references refid="classVoxelPoolsBase_1a2a6aa77950aca1807968ca4be966760f" compoundref="VoxelPoolsBase_8cpp" startline="311" endline="314">getXreacScaleSubstrates</references>
+        <references refid="classStoich_1ac27b0e2c8c95de32105377404ff5270e" compoundref="Stoich_8cpp" startline="625" endline="629">Stoich::isFuncTarget</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" compoundref="VoxelPoolsBase_8h" startline="215">rates_</references>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <references refid="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" compoundref="VoxelPoolsBase_8h" startline="214">stoichPtr_</references>
+        <references refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" compoundref="VoxelPoolsBase_8h" startline="275">volume_</references>
+        <referencedby refid="classStoich_1a7cc2e02786fe7253be61adf68c1a3ed5" compoundref="Stoich_8cpp" startline="2079" endline="2084">Stoich::scaleBufsAndRates</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1aad9070d9804ae9f2afc9b33212f04432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::setConcInit</definition>
+        <argsstring>(unsigned int, double v)</argsstring>
+        <name>setConcInit</name>
+        <qualifiedname>VoxelPoolsBase::setConcInit</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="98" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="169" bodyend="174"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+        <referencedby refid="classGsolve_1ae9dacc0488b805d5cbaf49b206e6fa6e" compoundref="Gsolve_8cpp" startline="1001" endline="1014">Gsolve::setConcInit</referencedby>
+        <referencedby refid="classKsolve_1a7b2059f37836c559ec0e4aa01faca034" compoundref="Ksolve_8cpp" startline="772" endline="777">Ksolve::setConcInit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a977a10a12723ed1f3c46bd611a3ae70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::setDiffConst</definition>
+        <argsstring>(unsigned int, double v)</argsstring>
+        <name>setDiffConst</name>
+        <qualifiedname>VoxelPoolsBase::setDiffConst</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="100" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a89dadc3f6348282a295a8a29e8338829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::setN</definition>
+        <argsstring>(unsigned int i, double v)</argsstring>
+        <name>setN</name>
+        <qualifiedname>VoxelPoolsBase::setN</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="95" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="151" bodyend="156"/>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <referencedby refid="classGsolve_1a90b6c968aaa0c4fb5aa199e9606e8aab" compoundref="Gsolve_8cpp" startline="965" endline="983">Gsolve::setN</referencedby>
+        <referencedby refid="classKsolve_1a1ef0c618cb9fca2280427ba11ae85a46" compoundref="Ksolve_8cpp" startline="749" endline="754">Ksolve::setN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ae0667fdb032724686f4d3cd0771946a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::setNumVoxels</definition>
+        <argsstring>(unsigned int)</argsstring>
+        <name>setNumVoxels</name>
+        <qualifiedname>VoxelPoolsBase::setNumVoxels</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="208" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="142" bodyend="145"/>
+        <references refid="classVoxelPoolsBase_1ab6644df6bb543b848651c02d06fb0da0" compoundref="VoxelPoolsBase_8h" startline="220">numVoxels_</references>
+        <referencedby refid="classKsolve_1a7bb4889f57026475d9f2b5b6673ef960" compoundref="Ksolve_8cpp" startline="655" endline="683">Ksolve::reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ae1ddc05cd455fdde8ceb51673a61d674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::setVolume</definition>
+        <argsstring>(double vol)</argsstring>
+        <name>setVolume</name>
+        <qualifiedname>VoxelPoolsBase::setVolume</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <briefdescription>
+<para>Just assigns the volume without any cascading to other values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="81" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="87" bodyend="90"/>
+        <references refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" compoundref="VoxelPoolsBase_8h" startline="275">volume_</references>
+        <referencedby refid="classKsolveBase_1a6ed77ac8af133e020a81d2fcca38a124" compoundref="KsolveBase_8cpp" startline="49" endline="64">KsolveBase::setCompartment</referencedby>
+        <referencedby refid="classGsolve_1ac870aa97d290f08d6bfc53b605c99bb8" compoundref="Gsolve_8cpp" startline="272" endline="287">Gsolve::setCompartment</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a8c740ddc9e1e61c9a0533b31720b31b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::setVolumeAndDependencies</definition>
+        <argsstring>(double vol)</argsstring>
+        <name>setVolumeAndDependencies</name>
+        <qualifiedname>VoxelPoolsBase::setVolumeAndDependencies</qualifiedname>
+        <reimplementedby refid="classGssaVoxelPools_1a1a4ecc59c4d07dfb139574c44d74196f">setVolumeAndDependencies</reimplementedby>
+        <reimplementedby refid="classVoxelPools_1afe65f03338ce56fdcd4bdc506fa65baf">setVolumeAndDependencies</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign the volume, and handle the cascading effects by scaling all the dependent values of n. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="89" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="97" bodyend="107"/>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <references refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" compoundref="VoxelPoolsBase_8h" startline="275">volume_</references>
+        <referencedby refid="classGssaVoxelPools_1a1a4ecc59c4d07dfb139574c44d74196f" compoundref="GssaVoxelPools_8cpp" startline="335" endline="339">GssaVoxelPools::setVolumeAndDependencies</referencedby>
+        <referencedby refid="classVoxelPools_1afe65f03338ce56fdcd4bdc506fa65baf" compoundref="VoxelPools_8cpp" startline="470" endline="474">VoxelPools::setVolumeAndDependencies</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ab77b743ec417b4879106490e5663816b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int VoxelPoolsBase::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>VoxelPoolsBase::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns # of pools </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="46" column="18" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="82" bodyend="85"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+        <referencedby refid="classVoxelPools_1a51be6a923d1147f72e665be2a1f5fb41" compoundref="VoxelPools_8cpp" startline="108" endline="311">VoxelPools::advance</referencedby>
+        <referencedby refid="classGsolve_1ae3263e36e69b24e76d8f5788c04539c0" compoundref="Gsolve_8cpp" startline="1061" endline="1082">Gsolve::getBlock</referencedby>
+        <referencedby refid="classKsolve_1a1e2ca729ecb9d7115c22e607b7f9a4f3" compoundref="Ksolve_8cpp" startline="878" endline="899">Ksolve::getBlock</referencedby>
+        <referencedby refid="classGsolve_1abc65b1993348b637fac781d24ac12da8" compoundref="Gsolve_8cpp" startline="1054" endline="1059">Gsolve::getNumPools</referencedby>
+        <referencedby refid="classKsolve_1a79eaff86bf0e6609c23a848c04be19ff" compoundref="Ksolve_8cpp" startline="821" endline="826">Ksolve::getNumPools</referencedby>
+        <referencedby refid="classVoxelPools_1a9fea259924a72a148ec3307eacb72354" compoundref="VoxelPools_8cpp" startline="348" endline="363">VoxelPools::lsodaSys</referencedby>
+        <referencedby refid="classKsolve_1a7b8fd9685bb071318964ac4d9b903c06" compoundref="Ksolve_8cpp" startline="849" endline="858">Ksolve::notifyAddPool</referencedby>
+        <referencedby refid="classGsolve_1a28b2eef67f156528448a96cbb76e21c2" compoundref="Gsolve_8cpp" startline="1084" endline="1104">Gsolve::setBlock</referencedby>
+        <referencedby refid="classKsolve_1a75af3cd45399052b3104963c02108f48" compoundref="Ksolve_8cpp" startline="901" endline="922">Ksolve::setBlock</referencedby>
+        <referencedby refid="classGsolve_1aa4839e4180f01a7d984d30aaca5a1096" compoundref="Gsolve_8cpp" startline="342" endline="362">Gsolve::setNvec</referencedby>
+        <referencedby refid="classKsolve_1a4b60162796b1f75c558631bf49382b19" compoundref="Ksolve_8cpp" startline="484" endline="498">Ksolve::setNvec</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1af5e1c75777f866323c53c267f6eae9c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt; &amp;</type>
+        <definition>vector&lt; double &gt; &amp; VoxelPoolsBase::Svec</definition>
+        <argsstring>()</argsstring>
+        <name>Svec</name>
+        <qualifiedname>VoxelPoolsBase::Svec</qualifiedname>
+        <briefdescription>
+<para>Returns a handle to the mol # vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="55" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="62" bodyend="65"/>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <referencedby refid="classVoxelPools_1a51be6a923d1147f72e665be2a1f5fb41" compoundref="VoxelPools_8cpp" startline="108" endline="311">VoxelPools::advance</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a74bee940e747819eafbdb179df6833e9" compoundref="GssaVoxelPools_8cpp" startline="162" endline="211">GssaVoxelPools::advance</referencedby>
+        <referencedby refid="classGsolve_1a9c6fd61816d1aa0a15a901cf85c85a6a" compoundref="Gsolve_8cpp" startline="332" endline="340">Gsolve::getNvec</referencedby>
+        <referencedby refid="classKsolve_1a12eecef784f79687f1d96c9da6154092" compoundref="Ksolve_8cpp" startline="474" endline="482">Ksolve::getNvec</referencedby>
+        <referencedby refid="classVoxelPools_1a9fea259924a72a148ec3307eacb72354" compoundref="VoxelPools_8cpp" startline="348" endline="363">VoxelPools::lsodaSys</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1abb7908611bb545c9d705c7a8a3e00550" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void VoxelPoolsBase::updateAllRateTerms</definition>
+        <argsstring>(const vector&lt; RateTerm * &gt; &amp;rates, unsigned int numCoreRates)=0</argsstring>
+        <name>updateAllRateTerms</name>
+        <qualifiedname>VoxelPoolsBase::updateAllRateTerms</qualifiedname>
+        <reimplementedby refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed">updateAllRateTerms</reimplementedby>
+        <reimplementedby refid="classVoxelPools_1abda1b74b70b1b86408f9f239169bf9af">updateAllRateTerms</reimplementedby>
+        <param>
+          <type>const vector&lt; <ref refid="classRateTerm" kindref="compound">RateTerm</ref> * &gt; &amp;</type>
+          <declname>rates</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numCoreRates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reassign entire rate vector. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="108" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1aab3d2a89d6c633727dcee7b87593635a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void VoxelPoolsBase::updateRateTerms</definition>
+        <argsstring>(const vector&lt; RateTerm * &gt; &amp;rates, unsigned int numCoreRates, unsigned int index)=0</argsstring>
+        <name>updateRateTerms</name>
+        <qualifiedname>VoxelPoolsBase::updateRateTerms</qualifiedname>
+        <reimplementedby refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795">updateRateTerms</reimplementedby>
+        <reimplementedby refid="classVoxelPools_1acf619908fabad6579dd94eb927c65c96">updateRateTerms</reimplementedby>
+        <param>
+          <type>const vector&lt; <ref refid="classRateTerm" kindref="compound">RateTerm</ref> * &gt; &amp;</type>
+          <declname>rates</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numCoreRates</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update specified index on rate terms. The entire rates vector is passed in for the source values, the index specifies which entry on the local rate vector is to be updated. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="116" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a33e8434f9f11241c89d5c904979e8fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * VoxelPoolsBase::varCinit</definition>
+        <argsstring>()</argsstring>
+        <name>varCinit</name>
+        <qualifiedname>VoxelPoolsBase::varCinit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the array of doubles of initial mol #s at the specified mesh index, as a writable array. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="73" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="77" bodyend="80"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double *</type>
+        <definition>double * VoxelPoolsBase::varS</definition>
+        <argsstring>()</argsstring>
+        <name>varS</name>
+        <qualifiedname>VoxelPoolsBase::varS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the array of doubles of current mol #s at the specified mesh index. Dangerous, allows one to modify the values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="61" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="67" bodyend="70"/>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <referencedby refid="classVoxelPools_1a51be6a923d1147f72e665be2a1f5fb41" compoundref="VoxelPools_8cpp" startline="108" endline="311">VoxelPools::advance</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a74bee940e747819eafbdb179df6833e9" compoundref="GssaVoxelPools_8cpp" startline="162" endline="211">GssaVoxelPools::advance</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a646ded62d273f2ca7b17d0ffeb87c966" compoundref="GssaVoxelPools_8cpp" startline="130" endline="144">GssaVoxelPools::refreshAtot</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a3a83f5ee0406fe9fffda7546c3aaeabc" compoundref="GssaVoxelPools_8cpp" startline="213" endline="254">GssaVoxelPools::reinit</referencedby>
+        <referencedby refid="classGsolve_1a28b2eef67f156528448a96cbb76e21c2" compoundref="Gsolve_8cpp" startline="1084" endline="1104">Gsolve::setBlock</referencedby>
+        <referencedby refid="classKsolve_1a75af3cd45399052b3104963c02108f48" compoundref="Ksolve_8cpp" startline="901" endline="922">Ksolve::setBlock</referencedby>
+        <referencedby refid="classGsolve_1aa4839e4180f01a7d984d30aaca5a1096" compoundref="Gsolve_8cpp" startline="342" endline="362">Gsolve::setNvec</referencedby>
+        <referencedby refid="classKsolve_1a4b60162796b1f75c558631bf49382b19" compoundref="Ksolve_8cpp" startline="484" endline="498">Ksolve::setNvec</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a2423e059de906fb9f63f4626c484b338" compoundref="GssaVoxelPools_8cpp" startline="56" endline="82">GssaVoxelPools::updateDependentMathExpn</referencedby>
+        <referencedby refid="classGssaVoxelPools_1aace8f5b93c2890d5f5da51395856f06a" compoundref="GssaVoxelPools_8cpp" startline="342" endline="376">GssaVoxelPools::xferIn</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a890a325f98612eed6cff7d4dd476708e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VoxelPoolsBase::VoxelPoolsBase</definition>
+        <argsstring>()</argsstring>
+        <name>VoxelPoolsBase</name>
+        <qualifiedname>VoxelPoolsBase::VoxelPoolsBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="34" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="24" bodyend="31"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <references refid="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" compoundref="VoxelPoolsBase_8h" startline="214">stoichPtr_</references>
+        <references refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" compoundref="VoxelPoolsBase_8h" startline="275">volume_</references>
+        <referencedby refid="classGssaVoxelPools_1a1f144adca2e32830cb8dc07a9c378dbb" compoundref="GssaVoxelPools_8cpp" startline="43" endline="44">GssaVoxelPools::GssaVoxelPools</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a7fbc9a8222cc19309432c7db9716b320" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::xferIn</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;poolIndex, const vector&lt; double &gt; &amp;values, const vector&lt; double &gt; &amp;lastValues, unsigned int voxelIndex)</argsstring>
+        <name>xferIn</name>
+        <qualifiedname>VoxelPoolsBase::xferIn</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>poolIndex</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>lastValues</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxelIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Digests incoming data values for cross-compt reactions. Sums the changes in the values onto the specified pools. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="131" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="194" bodyend="208"/>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ac612c9bd8abeb799fae6e56b8b63095e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::xferInOnlyProxies</definition>
+        <argsstring>(const vector&lt; unsigned int &gt; &amp;poolIndex, const vector&lt; double &gt; &amp;values, unsigned int numProxyPools, unsigned int voxelIndex)</argsstring>
+        <name>xferInOnlyProxies</name>
+        <qualifiedname>VoxelPoolsBase::xferInOnlyProxies</qualifiedname>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>poolIndex</declname>
+        </param>
+        <param>
+          <type>const vector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numProxyPools</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxelIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used during initialization: Takes only the proxy pool values from the incoming transfer data, and assigns it to the proxy pools on current solver </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="141" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="210" bodyend="230"/>
+        <references refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" compoundref="VoxelPoolsBase_8h" startline="246">Cinit_</references>
+        <references refid="classStoich_1a86f47a6a3bddbdcf16fa7dad956a4287" compoundref="Stoich_8cpp" startline="546" endline="549">Stoich::getNumProxyPools</references>
+        <references refid="classStoich_1a9b29e415b8c69dc92a59c06d943d1094" compoundref="Stoich_8cpp" startline="525" endline="528">Stoich::getNumVarPools</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+        <references refid="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" compoundref="VoxelPoolsBase_8h" startline="214">stoichPtr_</references>
+        <references refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" compoundref="VoxelPoolsBase_8h" startline="275">volume_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1a66e7b120d1a183cebe1f53a066a38d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelPoolsBase::xferOut</definition>
+        <argsstring>(unsigned int voxelIndex, vector&lt; double &gt; &amp;values, const vector&lt; unsigned int &gt; &amp;poolIndex)</argsstring>
+        <name>xferOut</name>
+        <qualifiedname>VoxelPoolsBase::xferOut</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>voxelIndex</declname>
+        </param>
+        <param>
+          <type>vector&lt; double &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>const vector&lt; unsigned int &gt; &amp;</type>
+          <declname>poolIndex</declname>
+        </param>
+        <briefdescription>
+<para>Assembles data values for sending out for x-compt reacs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="148" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="232" bodyend="244"/>
+        <references refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" compoundref="VoxelPoolsBase_8h" startline="237">S_</references>
+      </memberdef>
+      <memberdef kind="function" id="classVoxelPoolsBase_1ad4039dade724223b5ae17b490fe86c37" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>VoxelPoolsBase::~VoxelPoolsBase</definition>
+        <argsstring>()</argsstring>
+        <name>~VoxelPoolsBase</name>
+        <qualifiedname>VoxelPoolsBase::~VoxelPoolsBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="35" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.cpp" bodystart="33" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the base class for voxels used in reac-diffusion systems. Each voxel manages all the molecular pools that live in it. This is the S_ and Cinit_ vectors. Additionally, the last set of entries in S_ and Cinit_ refer to the proxy pools that participate in cross-node reactions, but are really located on other compartments. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GssaVoxelPools</label>
+        <link refid="classGssaVoxelPools"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>VoxelPools</label>
+        <link refid="classVoxelPools"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>VoxelPoolsBase</label>
+        <link refid="classVoxelPoolsBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="18">
+        <label>K</label>
+      </node>
+      <node id="8">
+        <label>KinSparseMatrix</label>
+        <link refid="classKinSparseMatrix"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-rowTruncated_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>KsolveBase</label>
+        <link refid="classKsolveBase"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#compartment_</edgelabel>
+          <edgelabel>#stoich_</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="10">
+        <label>SparseMatrix&lt; T &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>SparseMatrix&lt; int &gt;</label>
+        <link refid="classSparseMatrix"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#colIndex_</edgelabel>
+          <edgelabel>#rowStart_</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Stoich</label>
+        <link refid="classStoich"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-compartment_</edgelabel>
+          <edgelabel>-dsolve_</edgelabel>
+          <edgelabel>-ksolve_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-dinterface_</edgelabel>
+          <edgelabel>-kinterface_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-funcTarget_</edgelabel>
+          <edgelabel>-species_</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-N_</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-bufPoolVec_</edgelabel>
+          <edgelabel>-enzVec_</edgelabel>
+          <edgelabel>-funcTargetPoolVec_</edgelabel>
+          <edgelabel>-incrementFuncVec_</edgelabel>
+          <edgelabel>-mmEnzVec_</edgelabel>
+          <edgelabel>-offSolverEnzVec_</edgelabel>
+          <edgelabel>-offSolverMMenzVec_</edgelabel>
+          <edgelabel>-offSolverPoolVec_</edgelabel>
+          <edgelabel>-offSolverReacVec_</edgelabel>
+          <edgelabel>-poolFuncVec_</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>VoxelPoolsBase</label>
+        <link refid="classVoxelPoolsBase"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#stoichPtr_</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#rates_</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-Cinit_</edgelabel>
+          <edgelabel>-S_</edgelabel>
+          <edgelabel>-xReacScaleProducts_</edgelabel>
+          <edgelabel>-xReacScaleSubstrates_</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-proxyPoolVoxels_</edgelabel>
+          <edgelabel>-proxyTransferIndex_</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-proxyComptMap_</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>std::map&lt; Id, unsigned int &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="template-instance">
+          <edgelabel>&lt; Id, unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>std::vector&lt; Id &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; Id &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>std::vector&lt; RateTerm * &gt;</label>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; RateTerm * &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>std::vector&lt; double &gt;</label>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; double &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; unsigned int &gt;</label>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>std::vector&lt; vector&lt; unsigned int &gt; &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; vector&lt; unsigned int &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" line="31" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/VoxelPoolsBase.h" bodystart="32" bodyend="292"/>
+    <listofallmembers>
+      <member refid="classVoxelPoolsBase_1ae0bb4057b92023ca352f34d2975f48a4" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>addProxyTransferIndex</name></member>
+      <member refid="classVoxelPoolsBase_1adf7a12fe5817136cd12150fc7639f60c" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>addProxyVoxy</name></member>
+      <member refid="classVoxelPoolsBase_1affe56b0a0b74a833e111b1f2d2760246" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>backwardReacVolumeFactor</name></member>
+      <member refid="classVoxelPoolsBase_1ad620dfdd7a80491a4a32aa9f3e214690" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>Cinit</name></member>
+      <member refid="classVoxelPoolsBase_1a20ecc86b1ce782cc97e31ab828db7571" prot="private" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>Cinit_</name></member>
+      <member refid="classVoxelPoolsBase_1a7b46a598d44eac6ee37d3a1757de92d7" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>filterCrossRateTerms</name></member>
+      <member refid="classVoxelPoolsBase_1acb2cd03e4980f53c0d9316c68d1b7b10" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>forwardReacVolumeFactor</name></member>
+      <member refid="classVoxelPoolsBase_1a4d43731c339c22c7943759f82f87d770" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>getConcInit</name></member>
+      <member refid="classVoxelPoolsBase_1a86699946666d18588f6939199b2d771f" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>getDiffConst</name></member>
+      <member refid="classVoxelPoolsBase_1a3ebc384ed8c94aab9df2a6ab2fa56e32" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>getN</name></member>
+      <member refid="classVoxelPoolsBase_1a2c4c0263d71fccd67d8a3b377d11e3da" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>getR1</name></member>
+      <member refid="classVoxelPoolsBase_1ae89797985d5e90bf95c6463cccc8fc1b" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>getVolume</name></member>
+      <member refid="classVoxelPoolsBase_1a39840280ada4fe2b44567c5d90aff845" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>getXreacScaleProducts</name></member>
+      <member refid="classVoxelPoolsBase_1a2a6aa77950aca1807968ca4be966760f" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>getXreacScaleSubstrates</name></member>
+      <member refid="classVoxelPoolsBase_1a8caeca2de946284211312108bb19e484" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>hasXfer</name></member>
+      <member refid="classVoxelPoolsBase_1ac70f1257a3c915310e8d5e6890e41e8d" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>isVoxelJunctionPresent</name></member>
+      <member refid="classVoxelPoolsBase_1ab6644df6bb543b848651c02d06fb0da0" prot="protected" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>numVoxels_</name></member>
+      <member refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>print</name></member>
+      <member refid="classVoxelPoolsBase_1a66a70fc1f59e0a8acd314158bd35e6ad" prot="private" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>proxyComptMap_</name></member>
+      <member refid="classVoxelPoolsBase_1af601347ce52e5d23cac52e3df3ba74cb" prot="private" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>proxyPoolVoxels_</name></member>
+      <member refid="classVoxelPoolsBase_1ac9df7df8fa087890a966d4841ab5026c" prot="private" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>proxyTransferIndex_</name></member>
+      <member refid="classVoxelPoolsBase_1a97617f0211a863b7eaccbd320a77f00d" prot="protected" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>rates_</name></member>
+      <member refid="classVoxelPoolsBase_1a6c9c831d491fa62b8baeb84a6d91e2ea" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>reinit</name></member>
+      <member refid="classVoxelPoolsBase_1a49a8827268426b9ef57c23fc533dd0b0" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>resetXreacScale</name></member>
+      <member refid="classVoxelPoolsBase_1aacd119b7fc41a573c1fcb477a7fc4325" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>resizeArrays</name></member>
+      <member refid="classVoxelPoolsBase_1a14f40161f05d91149be12bdcd5fc5f79" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>S</name></member>
+      <member refid="classVoxelPoolsBase_1a538963b005eee9d74afa8cffd8b7b72d" prot="private" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>S_</name></member>
+      <member refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>scaleVolsBufsRates</name></member>
+      <member refid="classVoxelPoolsBase_1aad9070d9804ae9f2afc9b33212f04432" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>setConcInit</name></member>
+      <member refid="classVoxelPoolsBase_1a977a10a12723ed1f3c46bd611a3ae70e" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>setDiffConst</name></member>
+      <member refid="classVoxelPoolsBase_1a89dadc3f6348282a295a8a29e8338829" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>setN</name></member>
+      <member refid="classVoxelPoolsBase_1ae0667fdb032724686f4d3cd0771946a5" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>setNumVoxels</name></member>
+      <member refid="classVoxelPoolsBase_1ae1ddc05cd455fdde8ceb51673a61d674" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>setVolume</name></member>
+      <member refid="classVoxelPoolsBase_1a8c740ddc9e1e61c9a0533b31720b31b6" prot="public" virt="virtual"><scope>VoxelPoolsBase</scope><name>setVolumeAndDependencies</name></member>
+      <member refid="classVoxelPoolsBase_1ab77b743ec417b4879106490e5663816b" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>size</name></member>
+      <member refid="classVoxelPoolsBase_1af17458eff8ec39b1190eeef564cea494" prot="protected" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>stoichPtr_</name></member>
+      <member refid="classVoxelPoolsBase_1af5e1c75777f866323c53c267f6eae9c5" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>Svec</name></member>
+      <member refid="classVoxelPoolsBase_1abb7908611bb545c9d705c7a8a3e00550" prot="public" virt="pure-virtual"><scope>VoxelPoolsBase</scope><name>updateAllRateTerms</name></member>
+      <member refid="classVoxelPoolsBase_1aab3d2a89d6c633727dcee7b87593635a" prot="public" virt="pure-virtual"><scope>VoxelPoolsBase</scope><name>updateRateTerms</name></member>
+      <member refid="classVoxelPoolsBase_1a33e8434f9f11241c89d5c904979e8fb5" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>varCinit</name></member>
+      <member refid="classVoxelPoolsBase_1ad248a47e4e7e09ccf040649179096007" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>varS</name></member>
+      <member refid="classVoxelPoolsBase_1a2df6bf37c33a3eb1aeea5957ef210e06" prot="private" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>volume_</name></member>
+      <member refid="classVoxelPoolsBase_1a890a325f98612eed6cff7d4dd476708e" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>VoxelPoolsBase</name></member>
+      <member refid="classVoxelPoolsBase_1a7fbc9a8222cc19309432c7db9716b320" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>xferIn</name></member>
+      <member refid="classVoxelPoolsBase_1ac612c9bd8abeb799fae6e56b8b63095e" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>xferInOnlyProxies</name></member>
+      <member refid="classVoxelPoolsBase_1a66e7b120d1a183cebe1f53a066a38d61" prot="public" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>xferOut</name></member>
+      <member refid="classVoxelPoolsBase_1aa00420e8ae72e277924861393b7254ed" prot="private" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>xReacScaleProducts_</name></member>
+      <member refid="classVoxelPoolsBase_1a278c9646ea46d2965b81d9ae56212367" prot="private" virt="non-virtual"><scope>VoxelPoolsBase</scope><name>xReacScaleSubstrates_</name></member>
+      <member refid="classVoxelPoolsBase_1ad4039dade724223b5ae17b490fe86c37" prot="public" virt="virtual"><scope>VoxelPoolsBase</scope><name>~VoxelPoolsBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structSpikeGenStruct" kind="struct" language="C++" prot="public">
+    <compoundname>SpikeGenStruct</compoundname>
+    <includes refid="HSolveStruct_8h" local="no">HSolveStruct.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structSpikeGenStruct_1aaefeb29421dee8af4a0b3260f67cb94d" prot="public" static="no" mutable="no">
+        <type><ref refid="classEref" kindref="compound">Eref</ref></type>
+        <definition>Eref SpikeGenStruct::e_</definition>
+        <argsstring></argsstring>
+        <name>e_</name>
+        <qualifiedname>SpikeGenStruct::e_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" line="123" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="structSpikeGenStruct_1a83b38806b3b88d4378d849a4629411ec" compoundref="HSolveStruct_8cpp" startline="67" endline="72">reinit</referencedby>
+        <referencedby refid="structSpikeGenStruct_1aa8d95cdde9d592e496d69b4151711633" compoundref="HSolveStruct_8cpp" startline="74" endline="80">send</referencedby>
+        <referencedby refid="structSpikeGenStruct_1af6ee3a3b9f0f81c93e48821690c107e5" compoundref="HSolveStruct_8h" startline="116" endline="120">SpikeGenStruct</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structSpikeGenStruct_1a26e572a79b197b7d79b732f4362d07e8" prot="public" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* SpikeGenStruct::Vm_</definition>
+        <argsstring></argsstring>
+        <name>Vm_</name>
+        <qualifiedname>SpikeGenStruct::Vm_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" line="122" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="structSpikeGenStruct_1aa8d95cdde9d592e496d69b4151711633" compoundref="HSolveStruct_8cpp" startline="74" endline="80">send</referencedby>
+        <referencedby refid="structSpikeGenStruct_1af6ee3a3b9f0f81c93e48821690c107e5" compoundref="HSolveStruct_8h" startline="116" endline="120">SpikeGenStruct</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structSpikeGenStruct_1a83b38806b3b88d4378d849a4629411ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpikeGenStruct::reinit</definition>
+        <argsstring>(ProcPtr info)</argsstring>
+        <name>reinit</name>
+        <qualifiedname>SpikeGenStruct::reinit</qualifiedname>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds the spikegen object using e_ and calls reinit on the spikegen </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" line="126" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.cpp" bodystart="67" bodyend="72"/>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="structSpikeGenStruct_1aaefeb29421dee8af4a0b3260f67cb94d" compoundref="HSolveStruct_8h" startline="123">e_</references>
+        <references refid="classSpikeGen_1ac81f8afc36e021a5ba22629d5e11bd82" compoundref="SpikeGen_8cpp" startline="219" endline="222">SpikeGen::reinit</references>
+        <referencedby refid="classHSolveActive_1a4f77ec4dfd3bdb9f63080e95d2659eae" compoundref="HSolveActiveSetup_8cpp" startline="54" endline="59">HSolveActive::reinitSpikeGens</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structSpikeGenStruct_1aa8d95cdde9d592e496d69b4151711633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpikeGenStruct::send</definition>
+        <argsstring>(ProcPtr info)</argsstring>
+        <name>send</name>
+        <qualifiedname>SpikeGenStruct::send</qualifiedname>
+        <param>
+          <type><ref refid="ProcInfo_8h_1a7ec1efd74aaf0f8e901f7bd715f12823" kindref="member">ProcPtr</ref></type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" line="127" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.cpp" bodystart="74" bodyend="80"/>
+        <references refid="classEref_1ac605440cdeae71e424022cd849a2866d" compoundref="Eref_8cpp" startline="47" endline="51">Eref::data</references>
+        <references refid="structSpikeGenStruct_1aaefeb29421dee8af4a0b3260f67cb94d" compoundref="HSolveStruct_8h" startline="123">e_</references>
+        <references refid="classSpikeGen_1ae10fa1cbeeda4e0357962117e3fa79b3" compoundref="SpikeGen_8cpp" startline="224" endline="227">SpikeGen::handleVm</references>
+        <references refid="classSpikeGen_1ab9e1fb615ebef7828656af3e0d059218" compoundref="SpikeGen_8cpp" startline="202" endline="216">SpikeGen::process</references>
+        <references refid="structSpikeGenStruct_1a26e572a79b197b7d79b732f4362d07e8" compoundref="HSolveStruct_8h" startline="122">Vm_</references>
+        <referencedby refid="classHSolveActive_1a55b273e4f4ddfb1a6b18e02954d49287" compoundref="HSolveActive_8cpp" startline="343" endline="348">HSolveActive::sendSpikes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structSpikeGenStruct_1af6ee3a3b9f0f81c93e48821690c107e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SpikeGenStruct::SpikeGenStruct</definition>
+        <argsstring>(double *Vm, Eref e)</argsstring>
+        <name>SpikeGenStruct</name>
+        <qualifiedname>SpikeGenStruct::SpikeGenStruct</qualifiedname>
+        <param>
+          <type>double *</type>
+          <declname>Vm</declname>
+        </param>
+        <param>
+          <type><ref refid="classEref" kindref="compound">Eref</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" line="116" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" bodystart="116" bodyend="120"/>
+        <references refid="structSpikeGenStruct_1aaefeb29421dee8af4a0b3260f67cb94d" compoundref="HSolveStruct_8h" startline="123">e_</references>
+        <references refid="classEref_1aa05fb98d7f557217fc66c20810d87a83" compoundref="Eref_8cpp" startline="19" endline="23">Eref::Eref</references>
+        <references refid="structSpikeGenStruct_1a26e572a79b197b7d79b732f4362d07e8" compoundref="HSolveStruct_8h" startline="122">Vm_</references>
+        <referencedby refid="classHSolveActive_1a7b93aa070063129e8f68f02db5583619" compoundref="HSolveActiveSetup_8cpp" startline="535" endline="574">HSolveActive::readSynapses</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains information about the spikegens that the <ref refid="classHSolve" kindref="compound">HSolve</ref> object needs to talk with </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>Cinfo</label>
+        <link refid="classCinfo"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-baseCinfo_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-dinfo_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-doc_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DinfoBase</label>
+        <link refid="classDinfoBase"/>
+      </node>
+      <node id="3">
+        <label>Element</label>
+        <link refid="classElement"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-id_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-cinfo_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Eref</label>
+        <link refid="classEref"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-e_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="11">
+        <label>K</label>
+      </node>
+      <node id="1">
+        <label>SpikeGenStruct</label>
+        <link refid="structSpikeGenStruct"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+e_</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>T</label>
+      </node>
+      <node id="7">
+        <label>std::map&lt; std::string, std::string &gt;</label>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; std::string, std::string &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="10">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::string</label>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" line="114" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/hsolve/HSolveStruct.h" bodystart="115" bodyend="128"/>
+    <listofallmembers>
+      <member refid="structSpikeGenStruct_1aaefeb29421dee8af4a0b3260f67cb94d" prot="public" virt="non-virtual"><scope>SpikeGenStruct</scope><name>e_</name></member>
+      <member refid="structSpikeGenStruct_1a83b38806b3b88d4378d849a4629411ec" prot="public" virt="non-virtual"><scope>SpikeGenStruct</scope><name>reinit</name></member>
+      <member refid="structSpikeGenStruct_1aa8d95cdde9d592e496d69b4151711633" prot="public" virt="non-virtual"><scope>SpikeGenStruct</scope><name>send</name></member>
+      <member refid="structSpikeGenStruct_1af6ee3a3b9f0f81c93e48821690c107e5" prot="public" virt="non-virtual"><scope>SpikeGenStruct</scope><name>SpikeGenStruct</name></member>
+      <member refid="structSpikeGenStruct_1a26e572a79b197b7d79b732f4362d07e8" prot="public" virt="non-virtual"><scope>SpikeGenStruct</scope><name>Vm_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

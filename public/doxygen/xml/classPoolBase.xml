@@ -1,0 +1,1268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPoolBase" kind="class" language="C++" prot="public">
+    <compoundname>PoolBase</compoundname>
+    <includes refid="PoolBase_8h" local="no">PoolBase.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classPoolBase_1ada4bd25c3cc04551885180a1c9626394" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PoolBase::concInit_</definition>
+        <argsstring></argsstring>
+        <name>concInit_</name>
+        <qualifiedname>PoolBase::concInit_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="123" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classPoolBase_1a0272e00fea6a52295909e55c63b42674" compoundref="PoolBase_8cpp" startline="497" endline="500">getConcInit</referencedby>
+        <referencedby refid="classPoolBase_1a4d0bec233ff4337f6eaa8b675e3a6d3a" compoundref="PoolBase_8cpp" startline="458" endline="464">getN</referencedby>
+        <referencedby refid="classPoolBase_1a9f55d80c40b677d257c804eae809c795" compoundref="PoolBase_8cpp" startline="472" endline="475">getNinit</referencedby>
+        <referencedby refid="classPoolBase_1ad86a7a97755ff921d631d9dbeef43fb3" compoundref="PoolBase_8cpp" startline="439" endline="448">innerSetConcInit</referencedby>
+        <referencedby refid="classPoolBase_1a8ed3dd2e9ca22d744fa567257881b790" compoundref="PoolBase_8cpp" startline="325" endline="332">PoolBase</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPoolBase_1a4aa29e2d5aec4b3a126eddc98f49c7b7" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PoolBase::diffConst_</definition>
+        <argsstring></argsstring>
+        <name>diffConst_</name>
+        <qualifiedname>PoolBase::diffConst_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="124" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="classPoolBase_1a04079709f81887141d7e87f806965b48" compoundref="PoolBase_8cpp" startline="511" endline="514">getDiffConst</referencedby>
+        <referencedby refid="classPoolBase_1a8ed3dd2e9ca22d744fa567257881b790" compoundref="PoolBase_8cpp" startline="325" endline="332">PoolBase</referencedby>
+        <referencedby refid="classPoolBase_1a1959a6afc1703e0d390977f2a5f59ad0" compoundref="PoolBase_8cpp" startline="502" endline="509">setDiffConst</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" prot="protected" static="no" mutable="no">
+        <type><ref refid="classKsolveBase" kindref="compound">KsolveBase</ref> *</type>
+        <definition>KsolveBase* PoolBase::dsolve_</definition>
+        <argsstring></argsstring>
+        <name>dsolve_</name>
+        <qualifiedname>PoolBase::dsolve_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="classKsolveBase" kindref="compound">KsolveBase</ref> pointers hold the solvers for the <ref refid="classPoolBase" kindref="compound">PoolBase</ref>. At least one must be assigned. <ref refid="classField" kindref="compound">Field</ref> assignments propagate from the pool to whichever is assigned. <ref refid="classField" kindref="compound">Field</ref> lookups first check the dsolve, then the ksolve. The <ref refid="classPoolBase" kindref="compound">PoolBase</ref> may be managed by the diffusion solver without the involvement of the <ref refid="classStoich" kindref="compound">Stoich</ref> class at all. So instead of routing the zombie operations through the <ref refid="classStoich" kindref="compound">Stoich</ref>, we have pointers directly into the <ref refid="classDsolve" kindref="compound">Dsolve</ref> and <ref refid="classKsolve" kindref="compound">Ksolve</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="120" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="classPoolBase_1ad86a7a97755ff921d631d9dbeef43fb3" compoundref="PoolBase_8cpp" startline="439" endline="448">innerSetConcInit</referencedby>
+        <referencedby refid="classPoolBase_1afeeb5f2f001aba5023b65b2c1636cde5" compoundref="PoolBase_8cpp" startline="429" endline="437">innerSetN</referencedby>
+        <referencedby refid="classPoolBase_1addb687802ffdeff7509160dbfbf9de5a" compoundref="PoolBase_8cpp" startline="386" endline="399">notifyCopy</referencedby>
+        <referencedby refid="classPoolBase_1afa54bfc9e30aab8c3e1ac9deb8df617d" compoundref="PoolBase_8cpp" startline="377" endline="384">notifyCreate</referencedby>
+        <referencedby refid="classPoolBase_1ac15a2a3ec8e0f61457eabc55db6c805d" compoundref="PoolBase_8cpp" startline="369" endline="375">notifyDestroy</referencedby>
+        <referencedby refid="classPoolBase_1a1c65ea2aa17c1fc0f1157ff2d8eb6674" compoundref="PoolBase_8cpp" startline="401" endline="411">notifyMove</referencedby>
+        <referencedby refid="classPoolBase_1a8ed3dd2e9ca22d744fa567257881b790" compoundref="PoolBase_8cpp" startline="325" endline="332">PoolBase</referencedby>
+        <referencedby refid="classPoolBase_1a1959a6afc1703e0d390977f2a5f59ad0" compoundref="PoolBase_8cpp" startline="502" endline="509">setDiffConst</referencedby>
+        <referencedby refid="classPoolBase_1af513d8cea86049164f27acd55661a6bd" compoundref="PoolBase_8cpp" startline="606" endline="622">setIsBuffered</referencedby>
+        <referencedby refid="classPoolBase_1a5b4d35db97bd660eeb3a903dbb3bf1e8" compoundref="PoolBase_8cpp" startline="516" endline="521">setMotorConst</referencedby>
+        <referencedby refid="classPoolBase_1a31ca4d8f4eb21dc21027f93698cd5fdb" compoundref="PoolBase_8cpp" startline="566" endline="601">setSolvers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classKsolveBase" kindref="compound">KsolveBase</ref> *</type>
+        <definition>KsolveBase* PoolBase::ksolve_</definition>
+        <argsstring></argsstring>
+        <name>ksolve_</name>
+        <qualifiedname>PoolBase::ksolve_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="121" column="16" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classPoolBase_1a4d0bec233ff4337f6eaa8b675e3a6d3a" compoundref="PoolBase_8cpp" startline="458" endline="464">getN</referencedby>
+        <referencedby refid="classPoolBase_1ad86a7a97755ff921d631d9dbeef43fb3" compoundref="PoolBase_8cpp" startline="439" endline="448">innerSetConcInit</referencedby>
+        <referencedby refid="classPoolBase_1afeeb5f2f001aba5023b65b2c1636cde5" compoundref="PoolBase_8cpp" startline="429" endline="437">innerSetN</referencedby>
+        <referencedby refid="classPoolBase_1a585515f1b2f3fb86816c8c3c23d54b02" compoundref="PoolBase_8cpp" startline="419" endline="423">notifyAddMsgDest</referencedby>
+        <referencedby refid="classPoolBase_1ab542ca42c113db070fec35b31741e3df" compoundref="PoolBase_8cpp" startline="413" endline="417">notifyAddMsgSrc</referencedby>
+        <referencedby refid="classPoolBase_1addb687802ffdeff7509160dbfbf9de5a" compoundref="PoolBase_8cpp" startline="386" endline="399">notifyCopy</referencedby>
+        <referencedby refid="classPoolBase_1afa54bfc9e30aab8c3e1ac9deb8df617d" compoundref="PoolBase_8cpp" startline="377" endline="384">notifyCreate</referencedby>
+        <referencedby refid="classPoolBase_1ac15a2a3ec8e0f61457eabc55db6c805d" compoundref="PoolBase_8cpp" startline="369" endline="375">notifyDestroy</referencedby>
+        <referencedby refid="classPoolBase_1a1c65ea2aa17c1fc0f1157ff2d8eb6674" compoundref="PoolBase_8cpp" startline="401" endline="411">notifyMove</referencedby>
+        <referencedby refid="classPoolBase_1a8ed3dd2e9ca22d744fa567257881b790" compoundref="PoolBase_8cpp" startline="325" endline="332">PoolBase</referencedby>
+        <referencedby refid="classPoolBase_1af513d8cea86049164f27acd55661a6bd" compoundref="PoolBase_8cpp" startline="606" endline="622">setIsBuffered</referencedby>
+        <referencedby refid="classPoolBase_1a31ca4d8f4eb21dc21027f93698cd5fdb" compoundref="PoolBase_8cpp" startline="566" endline="601">setSolvers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classPoolBase_1a020eb6eddcf1259347799ae6c4556349" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PoolBase::motorConst_</definition>
+        <argsstring></argsstring>
+        <name>motorConst_</name>
+        <qualifiedname>PoolBase::motorConst_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="125" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="classPoolBase_1a0f2445d7adb7cf025ee80058df4ddd62" compoundref="PoolBase_8cpp" startline="523" endline="526">getMotorConst</referencedby>
+        <referencedby refid="classPoolBase_1a8ed3dd2e9ca22d744fa567257881b790" compoundref="PoolBase_8cpp" startline="325" endline="332">PoolBase</referencedby>
+        <referencedby refid="classPoolBase_1a5b4d35db97bd660eeb3a903dbb3bf1e8" compoundref="PoolBase_8cpp" startline="516" endline="521">setMotorConst</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classPoolBase_1a1fad240bc294096a8e4024e41e7acd24" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void checkVal</definition>
+        <argsstring>(double time, const PoolBase *m, unsigned int size)</argsstring>
+        <name>checkVal</name>
+        <qualifiedname>PoolBase::checkVal</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classPoolBase" kindref="compound">PoolBase</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="31" column="17"/>
+      </memberdef>
+      <memberdef kind="friend" id="classPoolBase_1a2b9e1522d3a8c4c7116a1432a4fb854c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void forceCheckVal</definition>
+        <argsstring>(double time, Element *e, unsigned int size)</argsstring>
+        <name>forceCheckVal</name>
+        <qualifiedname>PoolBase::forceCheckVal</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="classElement" kindref="compound">Element</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="32" column="17"/>
+      </memberdef>
+      <memberdef kind="friend" id="classPoolBase_1a5bca9c601017f5985fea06b337b7e638" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testSyncArray</definition>
+        <argsstring>(unsigned int size, unsigned int numThreads, unsigned int method)</argsstring>
+        <name>testSyncArray</name>
+        <qualifiedname>PoolBase::testSyncArray</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>numThreads</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>method</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="29" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPoolBase_1a7a4fc2109471fb6180f2bd6a77b53623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::decrement</definition>
+        <argsstring>(double val)</argsstring>
+        <name>decrement</name>
+        <qualifiedname>PoolBase::decrement</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="90" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="349" bodyend="351"/>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a7c8588797bf1483dd8be1db6dc7c9880" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+        <definition>ObjId PoolBase::getCompartment</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getCompartment</name>
+        <qualifiedname>PoolBase::getCompartment</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Lookup up parent compartment of pool, return &apos;/&apos; if not found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="69" column="7" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="538" bodyend="541"/>
+        <references refid="lookupVolumeFromMesh_8h_1a51f3e9542a775f4655e1bd6801e23268" compoundref="lookupVolumeFromMesh_8cpp" startline="17" endline="25">getCompt</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1aaa0262bdda9ede3607ad5fb9a897c317" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PoolBase::getConc</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getConc</name>
+        <qualifiedname>PoolBase::getConc</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="54" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="485" bodyend="488"/>
+        <references refid="classPoolBase_1a4d0bec233ff4337f6eaa8b675e3a6d3a" compoundref="PoolBase_8cpp" startline="458" endline="464">getN</references>
+        <references refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" compoundref="PoolBase_8cpp" startline="533" endline="536">getVolume</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a0272e00fea6a52295909e55c63b42674" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PoolBase::getConcInit</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getConcInit</name>
+        <qualifiedname>PoolBase::getConcInit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="56" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="497" bodyend="500"/>
+        <references refid="classPoolBase_1ada4bd25c3cc04551885180a1c9626394" compoundref="PoolBase_8h" startline="123">concInit_</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a1f27df1fcbb12a854313ad7895122868" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PoolBase::getCoords</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getCoords</name>
+        <qualifiedname>PoolBase::getCoords</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return coords of current pool from parent compt.voxel. The entries differ depending on the kind of voxel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="73" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="550" bodyend="554"/>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classLookupField_1aaa155f8ae409468aac92967e21e949be" compoundref="SetGet_8h" startline="570" endline="607">LookupField&lt; L, A &gt;::get</references>
+        <references refid="lookupVolumeFromMesh_8h_1a51f3e9542a775f4655e1bd6801e23268" compoundref="lookupVolumeFromMesh_8cpp" startline="17" endline="25">getCompt</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a04079709f81887141d7e87f806965b48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PoolBase::getDiffConst</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getDiffConst</name>
+        <qualifiedname>PoolBase::getDiffConst</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="49" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="511" bodyend="514"/>
+        <references refid="classPoolBase_1a4aa29e2d5aec4b3a126eddc98f49c7b7" compoundref="PoolBase_8h" startline="124">diffConst_</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+        <referencedby refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" compoundref="Dsolve_8cpp" startline="586" endline="627">Dsolve::setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a89219d88e7e45f0032d43ddfef46d19e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PoolBase::getIsBuffered</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getIsBuffered</name>
+        <qualifiedname>PoolBase::getIsBuffered</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="83" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="624" bodyend="628"/>
+        <references refid="PoolBase_8cpp_1a04f57a794aec7a50c70eb399f5b5a22c" compoundref="PoolBase_8cpp" startline="314">bufPoolCinfo</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classEref_1a47b59ab86165cceb0bde80c76c3f7fa2" compoundref="Eref_8h" startline="30" endline="33">Eref::element</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+        <referencedby refid="classPoolBase_1a958abcd37211c1811df1ba74843ac435" compoundref="PoolBase_8cpp" startline="490" endline="495">setConcInit</referencedby>
+        <referencedby refid="classPoolBase_1a4969b0915581dd46fa75274748859d88" compoundref="PoolBase_8cpp" startline="450" endline="456">setN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ad5f464334ae184eb6b4caf1eaf48a271" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt; double &gt; PoolBase::getMidPoint</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getMidPoint</name>
+        <qualifiedname>PoolBase::getMidPoint</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Return [x,y,z] of midpoint of current pool from parent compt.voxel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="75" column="8" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="543" bodyend="547"/>
+        <references refid="classEref_1aca13ad32862935d4a33109785d0f01d7" compoundref="Eref_8h" startline="38" endline="41">Eref::dataIndex</references>
+        <references refid="classLookupField_1aaa155f8ae409468aac92967e21e949be" compoundref="SetGet_8h" startline="570" endline="607">LookupField&lt; L, A &gt;::get</references>
+        <references refid="lookupVolumeFromMesh_8h_1a51f3e9542a775f4655e1bd6801e23268" compoundref="lookupVolumeFromMesh_8cpp" startline="17" endline="25">getCompt</references>
+        <references refid="classEref_1aa96699f886e00b8eb3759c71cc8747bb" compoundref="Eref_8cpp" startline="68" endline="71">Eref::id</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a0f2445d7adb7cf025ee80058df4ddd62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PoolBase::getMotorConst</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getMotorConst</name>
+        <qualifiedname>PoolBase::getMotorConst</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="51" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="523" bodyend="526"/>
+        <references refid="classPoolBase_1a020eb6eddcf1259347799ae6c4556349" compoundref="PoolBase_8h" startline="125">motorConst_</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+        <referencedby refid="classDsolve_1af193e9125bbde5cf23a4c4cfe20477b6" compoundref="Dsolve_8cpp" startline="586" endline="627">Dsolve::setStoich</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a4d0bec233ff4337f6eaa8b675e3a6d3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PoolBase::getN</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getN</name>
+        <qualifiedname>PoolBase::getN</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="44" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="458" bodyend="464"/>
+        <references refid="classPoolBase_1ada4bd25c3cc04551885180a1c9626394" compoundref="PoolBase_8h" startline="123">concInit_</references>
+        <references refid="classKsolveBase_1ad40e63ce9bb94cfe89cb299b02dac4c5">KsolveBase::getN</references>
+        <references refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" compoundref="PoolBase_8cpp" startline="533" endline="536">getVolume</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <referencedby refid="classPoolBase_1aaa0262bdda9ede3607ad5fb9a897c317" compoundref="PoolBase_8cpp" startline="485" endline="488">getConc</referencedby>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a9f55d80c40b677d257c804eae809c795" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PoolBase::getNinit</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getNinit</name>
+        <qualifiedname>PoolBase::getNinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="47" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="472" bodyend="475"/>
+        <references refid="classPoolBase_1ada4bd25c3cc04551885180a1c9626394" compoundref="PoolBase_8h" startline="123">concInit_</references>
+        <references refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" compoundref="PoolBase_8cpp" startline="533" endline="536">getVolume</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ac14c21fb11f8b3e06e1b2ae1769dd687" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="PoolBase_8h_1a1ba04ce2f8dc7751c70802229a3ae703" kindref="member">SpeciesId</ref></type>
+        <definition>unsigned int PoolBase::getSpecies</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getSpecies</name>
+        <qualifiedname>PoolBase::getSpecies</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="78" column="15" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="561" bodyend="564"/>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PoolBase::getVolume</definition>
+        <argsstring>(const Eref &amp;e) const</argsstring>
+        <name>getVolume</name>
+        <qualifiedname>PoolBase::getVolume</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="66" column="12" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="533" bodyend="536"/>
+        <references refid="lookupVolumeFromMesh_8h_1a4295275d2a86a64a9c7f66ca44ab3207" compoundref="lookupVolumeFromMesh_8cpp" startline="30" endline="37">lookupVolumeFromMesh</references>
+        <referencedby refid="classPoolBase_1aaa0262bdda9ede3607ad5fb9a897c317" compoundref="PoolBase_8cpp" startline="485" endline="488">getConc</referencedby>
+        <referencedby refid="classPoolBase_1a4d0bec233ff4337f6eaa8b675e3a6d3a" compoundref="PoolBase_8cpp" startline="458" endline="464">getN</referencedby>
+        <referencedby refid="classPoolBase_1a9f55d80c40b677d257c804eae809c795" compoundref="PoolBase_8cpp" startline="472" endline="475">getNinit</referencedby>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+        <referencedby refid="classPoolBase_1aa65b7f1a3f539db84868cb702a69567b" compoundref="PoolBase_8cpp" startline="478" endline="482">setConc</referencedby>
+        <referencedby refid="classPoolBase_1a958abcd37211c1811df1ba74843ac435" compoundref="PoolBase_8cpp" startline="490" endline="495">setConcInit</referencedby>
+        <referencedby refid="classPoolBase_1a4969b0915581dd46fa75274748859d88" compoundref="PoolBase_8cpp" startline="450" endline="456">setN</referencedby>
+        <referencedby refid="classPoolBase_1ad3567ab193f5160c9605aa941126d7b7" compoundref="PoolBase_8cpp" startline="466" endline="470">setNinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a842ab3f6c789ad418333fd5eb8174568" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::handleMolWt</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>handleMolWt</name>
+        <qualifiedname>PoolBase::handleMolWt</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="88" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="361" bodyend="363"/>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a9e054ec2efdeeac4e8697c81be768f77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::increment</definition>
+        <argsstring>(double val)</argsstring>
+        <name>increment</name>
+        <qualifiedname>PoolBase::increment</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="89" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="345" bodyend="347"/>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ad86a7a97755ff921d631d9dbeef43fb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::innerSetConcInit</definition>
+        <argsstring>(const Eref &amp;e, double conc)</argsstring>
+        <name>innerSetConcInit</name>
+        <qualifiedname>PoolBase::innerSetConcInit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>conc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="57" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="439" bodyend="448"/>
+        <references refid="classPoolBase_1ada4bd25c3cc04551885180a1c9626394" compoundref="PoolBase_8h" startline="123">concInit_</references>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classKsolveBase_1a1fbdc3623dd0a5aa64ed53b1b6b1ba99">KsolveBase::setConcInit</references>
+        <referencedby refid="classPoolBase_1a958abcd37211c1811df1ba74843ac435" compoundref="PoolBase_8cpp" startline="490" endline="495">setConcInit</referencedby>
+        <referencedby refid="classPoolBase_1a4969b0915581dd46fa75274748859d88" compoundref="PoolBase_8cpp" startline="450" endline="456">setN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1afeeb5f2f001aba5023b65b2c1636cde5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::innerSetN</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>innerSetN</name>
+        <qualifiedname>PoolBase::innerSetN</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="45" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="429" bodyend="437"/>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classKsolveBase_1ab9f3d8b0ce33886df13377a90d11a114">KsolveBase::setN</references>
+        <referencedby refid="classPoolBase_1a958abcd37211c1811df1ba74843ac435" compoundref="PoolBase_8cpp" startline="490" endline="495">setConcInit</referencedby>
+        <referencedby refid="classPoolBase_1a4969b0915581dd46fa75274748859d88" compoundref="PoolBase_8cpp" startline="450" endline="456">setN</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a3e9b34350151c9af33f1a6bc3f9dfe2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::nIn</definition>
+        <argsstring>(double val)</argsstring>
+        <name>nIn</name>
+        <qualifiedname>PoolBase::nIn</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="91" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="353" bodyend="355"/>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a585515f1b2f3fb86816c8c3c23d54b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::notifyAddMsgDest</definition>
+        <argsstring>(const Eref &amp;e, ObjId msgId)</argsstring>
+        <name>notifyAddMsgDest</name>
+        <qualifiedname>PoolBase::notifyAddMsgDest</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>msgId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="99" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="419" bodyend="423"/>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classKsolveBase_1aa2faf565d1f4c22045e0a203fca6603b" compoundref="KsolveBase_8cpp" startline="78" endline="79">KsolveBase::notifyAddMsgDestPool</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ab542ca42c113db070fec35b31741e3df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::notifyAddMsgSrc</definition>
+        <argsstring>(const Eref &amp;e, ObjId msgId)</argsstring>
+        <name>notifyAddMsgSrc</name>
+        <qualifiedname>PoolBase::notifyAddMsgSrc</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>msgId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="98" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="413" bodyend="417"/>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classKsolveBase_1a9c346e62e1928ec519ff994e7174ad07" compoundref="KsolveBase_8cpp" startline="75" endline="76">KsolveBase::notifyAddMsgSrcPool</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1addb687802ffdeff7509160dbfbf9de5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::notifyCopy</definition>
+        <argsstring>(const Eref &amp;e, ObjId orig)</argsstring>
+        <name>notifyCopy</name>
+        <qualifiedname>PoolBase::notifyCopy</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>orig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="96" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="386" bodyend="399"/>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classField_1a68f396e801461be38ddbada6ce3fdfd9" compoundref="SetGet_8h" startline="307" endline="340">Field&lt; A &gt;::get</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classKsolveBase_1aa8569740017fad3818a8cfaa412feb89" compoundref="KsolveBase_8cpp" startline="69" endline="70">KsolveBase::notifyAddPool</references>
+        <references refid="classPoolBase_1aa65b7f1a3f539db84868cb702a69567b" compoundref="PoolBase_8cpp" startline="478" endline="482">setConc</references>
+        <references refid="classPoolBase_1a958abcd37211c1811df1ba74843ac435" compoundref="PoolBase_8cpp" startline="490" endline="495">setConcInit</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1afa54bfc9e30aab8c3e1ac9deb8df617d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::notifyCreate</definition>
+        <argsstring>(const Eref &amp;e, ObjId parent)</argsstring>
+        <name>notifyCreate</name>
+        <qualifiedname>PoolBase::notifyCreate</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="95" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="377" bodyend="384"/>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classKsolveBase_1aa8569740017fad3818a8cfaa412feb89" compoundref="KsolveBase_8cpp" startline="69" endline="70">KsolveBase::notifyAddPool</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ac15a2a3ec8e0f61457eabc55db6c805d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::notifyDestroy</definition>
+        <argsstring>(const Eref &amp;e)</argsstring>
+        <name>notifyDestroy</name>
+        <qualifiedname>PoolBase::notifyDestroy</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>notification functions </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="93" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="369" bodyend="375"/>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classKsolveBase_1a3f7c84fc7d53e7b35ccf783121268a21" compoundref="KsolveBase_8cpp" startline="72" endline="73">KsolveBase::notifyRemovePool</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a1c65ea2aa17c1fc0f1157ff2d8eb6674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::notifyMove</definition>
+        <argsstring>(const Eref &amp;e, ObjId newParent)</argsstring>
+        <name>notifyMove</name>
+        <qualifiedname>PoolBase::notifyMove</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>newParent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="97" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="401" bodyend="411"/>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classKsolveBase_1a3f7c84fc7d53e7b35ccf783121268a21" compoundref="KsolveBase_8cpp" startline="72" endline="73">KsolveBase::notifyRemovePool</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a8ed3dd2e9ca22d744fa567257881b790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PoolBase::PoolBase</definition>
+        <argsstring>()</argsstring>
+        <name>PoolBase</name>
+        <qualifiedname>PoolBase::PoolBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="35" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="325" bodyend="332"/>
+        <references refid="classPoolBase_1ada4bd25c3cc04551885180a1c9626394" compoundref="PoolBase_8h" startline="123">concInit_</references>
+        <references refid="classPoolBase_1a4aa29e2d5aec4b3a126eddc98f49c7b7" compoundref="PoolBase_8h" startline="124">diffConst_</references>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classPoolBase_1a020eb6eddcf1259347799ae6c4556349" compoundref="PoolBase_8h" startline="125">motorConst_</references>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a6b88b4c6ed7c742b3d9009d09742f9cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::reac</definition>
+        <argsstring>(double A, double B)</argsstring>
+        <name>reac</name>
+        <qualifiedname>PoolBase::reac</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>B</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="87" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="357" bodyend="359"/>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1aa65b7f1a3f539db84868cb702a69567b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setConc</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setConc</name>
+        <qualifiedname>PoolBase::setConc</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="53" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="478" bodyend="482"/>
+        <references refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" compoundref="PoolBase_8cpp" startline="533" endline="536">getVolume</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classPoolBase_1a4969b0915581dd46fa75274748859d88" compoundref="PoolBase_8cpp" startline="450" endline="456">setN</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+        <referencedby refid="classPoolBase_1addb687802ffdeff7509160dbfbf9de5a" compoundref="PoolBase_8cpp" startline="386" endline="399">notifyCopy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a958abcd37211c1811df1ba74843ac435" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setConcInit</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setConcInit</name>
+        <qualifiedname>PoolBase::setConcInit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="55" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="490" bodyend="495"/>
+        <references refid="classPoolBase_1a89219d88e7e45f0032d43ddfef46d19e" compoundref="PoolBase_8cpp" startline="624" endline="628">getIsBuffered</references>
+        <references refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" compoundref="PoolBase_8cpp" startline="533" endline="536">getVolume</references>
+        <references refid="classPoolBase_1ad86a7a97755ff921d631d9dbeef43fb3" compoundref="PoolBase_8cpp" startline="439" endline="448">innerSetConcInit</references>
+        <references refid="classPoolBase_1afeeb5f2f001aba5023b65b2c1636cde5" compoundref="PoolBase_8cpp" startline="429" endline="437">innerSetN</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+        <referencedby refid="classPoolBase_1addb687802ffdeff7509160dbfbf9de5a" compoundref="PoolBase_8cpp" startline="386" endline="399">notifyCopy</referencedby>
+        <referencedby refid="classPoolBase_1ad3567ab193f5160c9605aa941126d7b7" compoundref="PoolBase_8cpp" startline="466" endline="470">setNinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a1959a6afc1703e0d390977f2a5f59ad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setDiffConst</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setDiffConst</name>
+        <qualifiedname>PoolBase::setDiffConst</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="48" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="502" bodyend="509"/>
+        <references refid="classPoolBase_1a4aa29e2d5aec4b3a126eddc98f49c7b7" compoundref="PoolBase_8h" startline="124">diffConst_</references>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classKsolveBase_1a5f66248bc41afc44ff5ac3ffbf7a5d9e">KsolveBase::setDiffConst</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1af513d8cea86049164f27acd55661a6bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setIsBuffered</definition>
+        <argsstring>(const Eref &amp;e, bool v)</argsstring>
+        <name>setIsBuffered</name>
+        <qualifiedname>PoolBase::setIsBuffered</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Functions to examine and change class between Pool and BufPool.</para>
+<para>Changing the buffering flag changes the class between Pool and BufPool. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="82" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="606" bodyend="622"/>
+        <references refid="PoolBase_8cpp_1a04f57a794aec7a50c70eb399f5b5a22c" compoundref="PoolBase_8cpp" startline="314">bufPoolCinfo</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classEref_1a47b59ab86165cceb0bde80c76c3f7fa2" compoundref="Eref_8h" startline="30" endline="33">Eref::element</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="PoolBase_8cpp_1a2785ef326025d0f50209f7ddadff655b" compoundref="PoolBase_8cpp" startline="313">poolCinfo</references>
+        <references refid="classElement_1ad8bd882dd3ced9d59b35335069b2f880" compoundref="Element_8cpp" startline="740" endline="744">Element::replaceCinfo</references>
+        <references refid="classKsolveBase_1a0109b576e8726d6035b305b9df60ef76" compoundref="KsolveBase_8h" startline="38" endline="38">KsolveBase::setIsBuffered</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a5b4d35db97bd660eeb3a903dbb3bf1e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setMotorConst</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setMotorConst</name>
+        <qualifiedname>PoolBase::setMotorConst</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="50" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="516" bodyend="521"/>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classPoolBase_1a020eb6eddcf1259347799ae6c4556349" compoundref="PoolBase_8h" startline="125">motorConst_</references>
+        <references refid="classKsolveBase_1a3caf6ea4c3d8bb7fe1e8e2b4eb1f659d" compoundref="KsolveBase_8h" startline="49" endline="50">KsolveBase::setMotorConst</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a4969b0915581dd46fa75274748859d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setN</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setN</name>
+        <qualifiedname>PoolBase::setN</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="43" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="450" bodyend="456"/>
+        <references refid="classPoolBase_1a89219d88e7e45f0032d43ddfef46d19e" compoundref="PoolBase_8cpp" startline="624" endline="628">getIsBuffered</references>
+        <references refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" compoundref="PoolBase_8cpp" startline="533" endline="536">getVolume</references>
+        <references refid="classPoolBase_1ad86a7a97755ff921d631d9dbeef43fb3" compoundref="PoolBase_8cpp" startline="439" endline="448">innerSetConcInit</references>
+        <references refid="classPoolBase_1afeeb5f2f001aba5023b65b2c1636cde5" compoundref="PoolBase_8cpp" startline="429" endline="437">innerSetN</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+        <referencedby refid="classPoolBase_1aa65b7f1a3f539db84868cb702a69567b" compoundref="PoolBase_8cpp" startline="478" endline="482">setConc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ad3567ab193f5160c9605aa941126d7b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setNinit</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setNinit</name>
+        <qualifiedname>PoolBase::setNinit</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="46" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="466" bodyend="470"/>
+        <references refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" compoundref="PoolBase_8cpp" startline="533" endline="536">getVolume</references>
+        <references refid="header_8h_1a96ca746c612c2987b88bcf97ae55f9e5" compoundref="header_8h" startline="29">NA</references>
+        <references refid="classPoolBase_1a958abcd37211c1811df1ba74843ac435" compoundref="PoolBase_8cpp" startline="490" endline="495">setConcInit</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a31ca4d8f4eb21dc21027f93698cd5fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setSolvers</definition>
+        <argsstring>(const Eref &amp;e, ObjId ksolve, ObjId dsolve)</argsstring>
+        <name>setSolvers</name>
+        <qualifiedname>PoolBase::setSolvers</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>ksolve</declname>
+        </param>
+        <param>
+          <type><ref refid="classObjId" kindref="compound">ObjId</ref></type>
+          <declname>dsolve</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="102" column="6" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="566" bodyend="601"/>
+        <references refid="classObjId_1a79e041eb24b2bcfcdf62a488cf7b0572" compoundref="ObjId_8cpp" startline="18" endline="36">ObjId::bad</references>
+        <references refid="classElement_1a33610036b72724ca3b7fedaf7e692841" compoundref="Element_8cpp" startline="66" endline="69">Element::cinfo</references>
+        <references refid="classObjId_1a1e5933713d6a73550b0923cf63f5bfd8" compoundref="ObjId_8cpp" startline="113" endline="118">ObjId::data</references>
+        <references refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" compoundref="PoolBase_8h" startline="120">dsolve_</references>
+        <references refid="classObjId_1ad87d6d712e4bceb381d1d324aa137d6e" compoundref="ObjId_8cpp" startline="125" endline="128">ObjId::element</references>
+        <references refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" compoundref="PoolBase_8h" startline="121">ksolve_</references>
+        <references refid="classCinfo_1a39589a49d135a9be7e3a59db0232541b" compoundref="Cinfo_8cpp" startline="301" endline="304">Cinfo::name</references>
+        <references refid="classKsolveBase_1aa8569740017fad3818a8cfaa412feb89" compoundref="KsolveBase_8cpp" startline="69" endline="70">KsolveBase::notifyAddPool</references>
+        <references refid="classKsolveBase_1a3f7c84fc7d53e7b35ccf783121268a21" compoundref="KsolveBase_8cpp" startline="72" endline="73">KsolveBase::notifyRemovePool</references>
+        <references refid="classObjId_1aad3d714ee57757ed3754a58edc9ad4a9" compoundref="ObjId_8h" startline="30" endline="34">ObjId::ObjId</references>
+        <references refid="classObjId_1a6a7e5a3ee84c58803fe025943941e67e" compoundref="ObjId_8cpp" startline="71" endline="75">ObjId::operator==</references>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a0a76da9630d0e16774a7570cc2098c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setSpecies</definition>
+        <argsstring>(const Eref &amp;e, SpeciesId v)</argsstring>
+        <name>setSpecies</name>
+        <qualifiedname>PoolBase::setSpecies</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="PoolBase_8h_1a1ba04ce2f8dc7751c70802229a3ae703" kindref="member">SpeciesId</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="77" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="556" bodyend="559"/>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1a39ea9db95683cd5596e04e14d48a72e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PoolBase::setVolume</definition>
+        <argsstring>(const Eref &amp;e, double v)</argsstring>
+        <name>setVolume</name>
+        <qualifiedname>PoolBase::setVolume</qualifiedname>
+        <param>
+          <type>const <ref refid="classEref" kindref="compound">Eref</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Volume is usually volume, but we also permit areal density This is obtained by looking up the corresponding spatial mesh entry in the parent compartment. If the message isn&apos;t set then it defaults to 1.0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="65" column="10" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="528" bodyend="531"/>
+        <referencedby refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ad560d0f68184cca850c23deb606510a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PoolBase::~PoolBase</definition>
+        <argsstring>()</argsstring>
+        <name>~PoolBase</name>
+        <qualifiedname>PoolBase::~PoolBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="36" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="334" bodyend="338"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classPoolBase_1aa1dccbc9ddb85bc4be60826c59ae5fd5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * PoolBase::initBufPoolCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initBufPoolCinfo</name>
+        <qualifiedname>PoolBase::initBufPoolCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="108" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="289" bodyend="307"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</references>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * PoolBase::initPoolBaseCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initPoolBaseCinfo</name>
+        <qualifiedname>PoolBase::initPoolBaseCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="106" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="23" bodyend="267"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classPoolBase_1a7a4fc2109471fb6180f2bd6a77b53623" compoundref="PoolBase_8cpp" startline="349" endline="351">decrement</references>
+        <references refid="classDestFinfo_1a200c3d77c0c62f54de9cb3fb0ff30d25" compoundref="DestFinfo_8cpp" startline="18" endline="22">DestFinfo::DestFinfo</references>
+        <references refid="classElementValueFinfo_1a920b84a2ae5d17c07322009467413ca1" compoundref="ElementValueFinfo_8h" startline="26" endline="45">ElementValueFinfo&lt; T, F &gt;::ElementValueFinfo</references>
+        <references refid="classEpFunc0_1a65a165d2b5236827e20b5f84536e3ecb" compoundref="EpFunc_8h" startline="54" endline="56">EpFunc0&lt; T &gt;::EpFunc0</references>
+        <references refid="classEpFunc1_1aa6a9cc9446afac48f3e2f51a116766c0" compoundref="EpFunc_8h" startline="70" endline="72">EpFunc1&lt; T, A &gt;::EpFunc1</references>
+        <references refid="classEpFunc2_1a449f38ac36c9f1fdc9cc7a244841bbee" compoundref="EpFunc_8h" startline="87" endline="89">EpFunc2&lt; T, A1, A2 &gt;::EpFunc2</references>
+        <references refid="classPoolBase_1a7c8588797bf1483dd8be1db6dc7c9880" compoundref="PoolBase_8cpp" startline="538" endline="541">getCompartment</references>
+        <references refid="classPoolBase_1aaa0262bdda9ede3607ad5fb9a897c317" compoundref="PoolBase_8cpp" startline="485" endline="488">getConc</references>
+        <references refid="classPoolBase_1a0272e00fea6a52295909e55c63b42674" compoundref="PoolBase_8cpp" startline="497" endline="500">getConcInit</references>
+        <references refid="classPoolBase_1a1f27df1fcbb12a854313ad7895122868" compoundref="PoolBase_8cpp" startline="550" endline="554">getCoords</references>
+        <references refid="classPoolBase_1a04079709f81887141d7e87f806965b48" compoundref="PoolBase_8cpp" startline="511" endline="514">getDiffConst</references>
+        <references refid="classPoolBase_1a89219d88e7e45f0032d43ddfef46d19e" compoundref="PoolBase_8cpp" startline="624" endline="628">getIsBuffered</references>
+        <references refid="classPoolBase_1ad5f464334ae184eb6b4caf1eaf48a271" compoundref="PoolBase_8cpp" startline="543" endline="547">getMidPoint</references>
+        <references refid="classPoolBase_1a0f2445d7adb7cf025ee80058df4ddd62" compoundref="PoolBase_8cpp" startline="523" endline="526">getMotorConst</references>
+        <references refid="classPoolBase_1a4d0bec233ff4337f6eaa8b675e3a6d3a" compoundref="PoolBase_8cpp" startline="458" endline="464">getN</references>
+        <references refid="classPoolBase_1a9f55d80c40b677d257c804eae809c795" compoundref="PoolBase_8cpp" startline="472" endline="475">getNinit</references>
+        <references refid="classPoolBase_1ac14c21fb11f8b3e06e1b2ae1769dd687" compoundref="PoolBase_8cpp" startline="561" endline="564">getSpecies</references>
+        <references refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" compoundref="PoolBase_8cpp" startline="533" endline="536">getVolume</references>
+        <references refid="classPoolBase_1a842ab3f6c789ad418333fd5eb8174568" compoundref="PoolBase_8cpp" startline="361" endline="363">handleMolWt</references>
+        <references refid="classPoolBase_1a9e054ec2efdeeac4e8697c81be768f77" compoundref="PoolBase_8cpp" startline="345" endline="347">increment</references>
+        <references refid="classNeutral_1a70fe1de93fce8611988faacd5cc96dd3" compoundref="Neutral_8cpp" startline="16" endline="253">Neutral::initCinfo</references>
+        <references refid="classPoolBase_1a3e9b34350151c9af33f1a6bc3f9dfe2d" compoundref="PoolBase_8cpp" startline="353" endline="355">nIn</references>
+        <references refid="classPoolBase_1a585515f1b2f3fb86816c8c3c23d54b02" compoundref="PoolBase_8cpp" startline="419" endline="423">notifyAddMsgDest</references>
+        <references refid="classPoolBase_1ab542ca42c113db070fec35b31741e3df" compoundref="PoolBase_8cpp" startline="413" endline="417">notifyAddMsgSrc</references>
+        <references refid="classPoolBase_1addb687802ffdeff7509160dbfbf9de5a" compoundref="PoolBase_8cpp" startline="386" endline="399">notifyCopy</references>
+        <references refid="classPoolBase_1afa54bfc9e30aab8c3e1ac9deb8df617d" compoundref="PoolBase_8cpp" startline="377" endline="384">notifyCreate</references>
+        <references refid="classPoolBase_1ac15a2a3ec8e0f61457eabc55db6c805d" compoundref="PoolBase_8cpp" startline="369" endline="375">notifyDestroy</references>
+        <references refid="classPoolBase_1a1c65ea2aa17c1fc0f1157ff2d8eb6674" compoundref="PoolBase_8cpp" startline="401" endline="411">notifyMove</references>
+        <references refid="classOpFunc1_1abc0aeb50c1657a6777c508d17c872809" compoundref="OpFunc_8h" startline="31" endline="33">OpFunc1&lt; T, A &gt;::OpFunc1</references>
+        <references refid="classOpFunc2_1ab65f04db60efc5074270db7e1cd73232" compoundref="OpFunc_8h" startline="46" endline="48">OpFunc2&lt; T, A1, A2 &gt;::OpFunc2</references>
+        <references refid="classPoolBase_1a6b88b4c6ed7c742b3d9009d09742f9cd" compoundref="PoolBase_8cpp" startline="357" endline="359">reac</references>
+        <references refid="classReadOnlyElementValueFinfo_1a3b23da3d750c77a21335cbd66535dbe1" compoundref="ElementValueFinfo_8h" startline="79" endline="90">ReadOnlyElementValueFinfo&lt; T, F &gt;::ReadOnlyElementValueFinfo</references>
+        <references refid="classPoolBase_1aa65b7f1a3f539db84868cb702a69567b" compoundref="PoolBase_8cpp" startline="478" endline="482">setConc</references>
+        <references refid="classPoolBase_1a958abcd37211c1811df1ba74843ac435" compoundref="PoolBase_8cpp" startline="490" endline="495">setConcInit</references>
+        <references refid="classPoolBase_1a1959a6afc1703e0d390977f2a5f59ad0" compoundref="PoolBase_8cpp" startline="502" endline="509">setDiffConst</references>
+        <references refid="classPoolBase_1af513d8cea86049164f27acd55661a6bd" compoundref="PoolBase_8cpp" startline="606" endline="622">setIsBuffered</references>
+        <references refid="classPoolBase_1a5b4d35db97bd660eeb3a903dbb3bf1e8" compoundref="PoolBase_8cpp" startline="516" endline="521">setMotorConst</references>
+        <references refid="classPoolBase_1a4969b0915581dd46fa75274748859d88" compoundref="PoolBase_8cpp" startline="450" endline="456">setN</references>
+        <references refid="classPoolBase_1ad3567ab193f5160c9605aa941126d7b7" compoundref="PoolBase_8cpp" startline="466" endline="470">setNinit</references>
+        <references refid="classPoolBase_1a31ca4d8f4eb21dc21027f93698cd5fdb" compoundref="PoolBase_8cpp" startline="566" endline="601">setSolvers</references>
+        <references refid="classPoolBase_1a0a76da9630d0e16774a7570cc2098c91" compoundref="PoolBase_8cpp" startline="556" endline="559">setSpecies</references>
+        <references refid="classPoolBase_1a39ea9db95683cd5596e04e14d48a72e0" compoundref="PoolBase_8cpp" startline="528" endline="531">setVolume</references>
+        <references refid="classSharedFinfo_1a64b94efcbd56f0e785f92d027541ae29" compoundref="SharedFinfo_8cpp" startline="16" endline="30">SharedFinfo::SharedFinfo</references>
+        <references refid="classSrcFinfo0_1ad745034ee6ac2953f8927282cae2fb87" compoundref="SrcFinfo_8cpp" startline="65" endline="67">SrcFinfo0::SrcFinfo0</references>
+        <references refid="classSrcFinfo1_1a530c4cec4de6226aa2a32c28f8448b7e" compoundref="SrcFinfo_8h" startline="95" endline="97">SrcFinfo1&lt; T &gt;::SrcFinfo1</references>
+        <referencedby refid="classPoolBase_1aa1dccbc9ddb85bc4be60826c59ae5fd5" compoundref="PoolBase_8cpp" startline="289" endline="307">initBufPoolCinfo</referencedby>
+        <referencedby refid="classPoolBase_1ac24e395c1def55e706526d5031e8f528" compoundref="PoolBase_8cpp" startline="269" endline="287">initPoolCinfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classPoolBase_1ac24e395c1def55e706526d5031e8f528" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classCinfo" kindref="compound">Cinfo</ref> *</type>
+        <definition>const Cinfo * PoolBase::initPoolCinfo</definition>
+        <argsstring>()</argsstring>
+        <name>initPoolCinfo</name>
+        <qualifiedname>PoolBase::initPoolCinfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="107" column="24" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.cpp" bodystart="269" bodyend="287"/>
+        <references refid="classCinfo_1ac9f6af2943b20ce3b02c1adc84504cd2" compoundref="Cinfo_8cpp" startline="21" endline="46">Cinfo::Cinfo</references>
+        <references refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" compoundref="PoolBase_8cpp" startline="23" endline="267">initPoolBaseCinfo</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classPoolBase" kindref="compound">PoolBase</ref> class is the base class for molecular pools. A pool is a set of molecules of a given species, in a uniform chemical context. Note that the same species might be present in other compartments, or be handled by other solvers. <ref refid="classPoolBase" kindref="compound">PoolBase</ref> is the base class for mass-action, single particle and other numerical variants of pools. Note that in this version it only acts as an interface for the solvers. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>Id</label>
+        <link refid="classId"/>
+      </node>
+      <node id="2">
+        <label>KsolveBase</label>
+        <link refid="classKsolveBase"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#compartment_</edgelabel>
+          <edgelabel>#stoich_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PoolBase</label>
+        <link refid="classPoolBase"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#dsolve_</edgelabel>
+          <edgelabel>#ksolve_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" line="27" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/kinetics/PoolBase.h" bodystart="28" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classPoolBase_1a1fad240bc294096a8e4024e41e7acd24" prot="private" virt="non-virtual"><scope>PoolBase</scope><name>checkVal</name></member>
+      <member refid="classPoolBase_1ada4bd25c3cc04551885180a1c9626394" prot="protected" virt="non-virtual"><scope>PoolBase</scope><name>concInit_</name></member>
+      <member refid="classPoolBase_1a7a4fc2109471fb6180f2bd6a77b53623" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>decrement</name></member>
+      <member refid="classPoolBase_1a4aa29e2d5aec4b3a126eddc98f49c7b7" prot="protected" virt="non-virtual"><scope>PoolBase</scope><name>diffConst_</name></member>
+      <member refid="classPoolBase_1a5324cbff0e30556adba1f905f5b69066" prot="protected" virt="non-virtual"><scope>PoolBase</scope><name>dsolve_</name></member>
+      <member refid="classPoolBase_1a2b9e1522d3a8c4c7116a1432a4fb854c" prot="private" virt="non-virtual"><scope>PoolBase</scope><name>forceCheckVal</name></member>
+      <member refid="classPoolBase_1a7c8588797bf1483dd8be1db6dc7c9880" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getCompartment</name></member>
+      <member refid="classPoolBase_1aaa0262bdda9ede3607ad5fb9a897c317" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getConc</name></member>
+      <member refid="classPoolBase_1a0272e00fea6a52295909e55c63b42674" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getConcInit</name></member>
+      <member refid="classPoolBase_1a1f27df1fcbb12a854313ad7895122868" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getCoords</name></member>
+      <member refid="classPoolBase_1a04079709f81887141d7e87f806965b48" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getDiffConst</name></member>
+      <member refid="classPoolBase_1a89219d88e7e45f0032d43ddfef46d19e" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getIsBuffered</name></member>
+      <member refid="classPoolBase_1ad5f464334ae184eb6b4caf1eaf48a271" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getMidPoint</name></member>
+      <member refid="classPoolBase_1a0f2445d7adb7cf025ee80058df4ddd62" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getMotorConst</name></member>
+      <member refid="classPoolBase_1a4d0bec233ff4337f6eaa8b675e3a6d3a" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getN</name></member>
+      <member refid="classPoolBase_1a9f55d80c40b677d257c804eae809c795" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getNinit</name></member>
+      <member refid="classPoolBase_1ac14c21fb11f8b3e06e1b2ae1769dd687" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getSpecies</name></member>
+      <member refid="classPoolBase_1aaddc85ba033ee59ed20c42c611e75d0d" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>getVolume</name></member>
+      <member refid="classPoolBase_1a842ab3f6c789ad418333fd5eb8174568" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>handleMolWt</name></member>
+      <member refid="classPoolBase_1a9e054ec2efdeeac4e8697c81be768f77" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>increment</name></member>
+      <member refid="classPoolBase_1aa1dccbc9ddb85bc4be60826c59ae5fd5" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>initBufPoolCinfo</name></member>
+      <member refid="classPoolBase_1ab1f8c9dd618b024f576b9cfb9872ac41" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>initPoolBaseCinfo</name></member>
+      <member refid="classPoolBase_1ac24e395c1def55e706526d5031e8f528" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>initPoolCinfo</name></member>
+      <member refid="classPoolBase_1ad86a7a97755ff921d631d9dbeef43fb3" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>innerSetConcInit</name></member>
+      <member refid="classPoolBase_1afeeb5f2f001aba5023b65b2c1636cde5" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>innerSetN</name></member>
+      <member refid="classPoolBase_1ab4f1f31da3ce1c078c0ca78f03030ba6" prot="protected" virt="non-virtual"><scope>PoolBase</scope><name>ksolve_</name></member>
+      <member refid="classPoolBase_1a020eb6eddcf1259347799ae6c4556349" prot="protected" virt="non-virtual"><scope>PoolBase</scope><name>motorConst_</name></member>
+      <member refid="classPoolBase_1a3e9b34350151c9af33f1a6bc3f9dfe2d" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>nIn</name></member>
+      <member refid="classPoolBase_1a585515f1b2f3fb86816c8c3c23d54b02" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>notifyAddMsgDest</name></member>
+      <member refid="classPoolBase_1ab542ca42c113db070fec35b31741e3df" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>notifyAddMsgSrc</name></member>
+      <member refid="classPoolBase_1addb687802ffdeff7509160dbfbf9de5a" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>notifyCopy</name></member>
+      <member refid="classPoolBase_1afa54bfc9e30aab8c3e1ac9deb8df617d" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>notifyCreate</name></member>
+      <member refid="classPoolBase_1ac15a2a3ec8e0f61457eabc55db6c805d" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>notifyDestroy</name></member>
+      <member refid="classPoolBase_1a1c65ea2aa17c1fc0f1157ff2d8eb6674" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>notifyMove</name></member>
+      <member refid="classPoolBase_1a8ed3dd2e9ca22d744fa567257881b790" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>PoolBase</name></member>
+      <member refid="classPoolBase_1a6b88b4c6ed7c742b3d9009d09742f9cd" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>reac</name></member>
+      <member refid="classPoolBase_1aa65b7f1a3f539db84868cb702a69567b" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setConc</name></member>
+      <member refid="classPoolBase_1a958abcd37211c1811df1ba74843ac435" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setConcInit</name></member>
+      <member refid="classPoolBase_1a1959a6afc1703e0d390977f2a5f59ad0" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setDiffConst</name></member>
+      <member refid="classPoolBase_1af513d8cea86049164f27acd55661a6bd" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setIsBuffered</name></member>
+      <member refid="classPoolBase_1a5b4d35db97bd660eeb3a903dbb3bf1e8" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setMotorConst</name></member>
+      <member refid="classPoolBase_1a4969b0915581dd46fa75274748859d88" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setN</name></member>
+      <member refid="classPoolBase_1ad3567ab193f5160c9605aa941126d7b7" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setNinit</name></member>
+      <member refid="classPoolBase_1a31ca4d8f4eb21dc21027f93698cd5fdb" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setSolvers</name></member>
+      <member refid="classPoolBase_1a0a76da9630d0e16774a7570cc2098c91" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setSpecies</name></member>
+      <member refid="classPoolBase_1a39ea9db95683cd5596e04e14d48a72e0" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>setVolume</name></member>
+      <member refid="classPoolBase_1a5bca9c601017f5985fea06b337b7e638" prot="private" virt="non-virtual"><scope>PoolBase</scope><name>testSyncArray</name></member>
+      <member refid="classPoolBase_1ad560d0f68184cca850c23deb606510a8" prot="public" virt="non-virtual"><scope>PoolBase</scope><name>~PoolBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

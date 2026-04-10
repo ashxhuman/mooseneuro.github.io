@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classRateTerm" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>RateTerm</compoundname>
+    <derivedcompoundref refid="classBidirectionalReaction" prot="public" virt="non-virtual">BidirectionalReaction</derivedcompoundref>
+    <derivedcompoundref refid="classExternReac" prot="public" virt="non-virtual">ExternReac</derivedcompoundref>
+    <derivedcompoundref refid="classMMEnzymeBase" prot="public" virt="non-virtual">MMEnzymeBase</derivedcompoundref>
+    <derivedcompoundref refid="classZeroOrder" prot="public" virt="non-virtual">ZeroOrder</derivedcompoundref>
+    <includes refid="RateTerm_8h" local="no">RateTerm.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classRateTerm_1a211734fd07c0ef1949907d832d9d03fd" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double RateTerm::EPSILON</definition>
+        <argsstring></argsstring>
+        <name>EPSILON</name>
+        <qualifiedname>RateTerm::EPSILON</qualifiedname>
+        <initializer>= 1.0e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="52" column="25" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classMMEnzyme_1a085602b16accdb2a5ea3b6f4bb2a9270" compoundref="RateTerm_8h" startline="193" endline="201">MMEnzyme::operator()</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRateTerm_1a1ed45d040641861c18c1e896c2512e90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classRateTerm" kindref="compound">RateTerm</ref> *</type>
+        <definition>virtual RateTerm * RateTerm::copyWithVolScaling</definition>
+        <argsstring>(double vol, double sub, double prd) const =0</argsstring>
+        <name>copyWithVolScaling</name>
+        <qualifiedname>RateTerm::copyWithVolScaling</qualifiedname>
+        <reimplementedby refid="classFuncRate_1a1a1d41e75591df8cbb3b5192a346400b">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classFuncReac_1a260022d0af68d05324d2546ebcdb3d7c">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classMMEnzyme1_1ac7cb66cd4d8a63a3eca26960bbbe5f1e">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classMMEnzyme_1a1c1204787c2b301dfe85a371f87a9a17">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classExternReac_1a37e229b9b2cc6c6a061d97fd9489634d">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1ac522544cf77a7e6c40ec569849be8160">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classFlux_1a0f4c633df367ab303e2251109a7f9bb4">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classFirstOrder_1a9907ad90638a1c9e68666d5e68a1b768">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classSecondOrder_1a7eb3f96eb04e97e87b96e86b29da32b9">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classStochSecondOrderSingleSubstrate_1a7bd32436d3f3d792d3a30414cd9b9174">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classNOrder_1a15de3563ebd52d34c5bf1335d12d6931">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classStochNOrder_1ae89488e586bcfb9306d28278e69406b5">copyWithVolScaling</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1a43a337dcb7175572b7270970e14f767c">copyWithVolScaling</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>vol</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>prd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duplicates rate term and then applies volume scaling. Arguments are volume of reference voxel, product of vol/refVol for all substrates: applied to R1 product of vol/refVol for all products: applied to R2</para>
+<para>Note that unless the reaction is cross-compartment, the vol/refVol will be one. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="75" column="22"/>
+        <referencedby refid="classVoxelPoolsBase_1a836b1e7b77b9be1016061a28022800b2" compoundref="VoxelPoolsBase_8cpp" startline="109" endline="140">VoxelPoolsBase::scaleVolsBufsRates</referencedby>
+        <referencedby refid="classGssaVoxelPools_1a757695a5885eeac8222b16c88b3dc1ed" compoundref="GssaVoxelPools_8cpp" startline="265" endline="280">GssaVoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1abda1b74b70b1b86408f9f239169bf9af" compoundref="VoxelPools_8cpp" startline="369" endline="390">VoxelPools::updateAllRateTerms</referencedby>
+        <referencedby refid="classGssaVoxelPools_1af878071f53bb21b6d62ff5a6ce71f795" compoundref="GssaVoxelPools_8cpp" startline="282" endline="298">GssaVoxelPools::updateRateTerms</referencedby>
+        <referencedby refid="classVoxelPools_1acf619908fabad6579dd94eb927c65c96" compoundref="VoxelPools_8cpp" startline="392" endline="409">VoxelPools::updateRateTerms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1a59765605f8379adff7e8d53f9fa691e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double RateTerm::getR1</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getR1</name>
+        <qualifiedname>RateTerm::getR1</qualifiedname>
+        <reimplementedby refid="classFuncRate_1a5d30239aba1a0768ae923de8e2a15d6c">getR1</reimplementedby>
+        <reimplementedby refid="classMMEnzymeBase_1afbf677f8d8d6f53a19f9a9a1b66c0c99">getR1</reimplementedby>
+        <reimplementedby refid="classExternReac_1ad265194288c77054ed6b5b3788fd46b5">getR1</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1a4f1253a6b404035ac256fc9c873b8074">getR1</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1abca2c90741ca0eb6d37ceb60aa4c41e0">getR1</reimplementedby>
+        <briefdescription>
+<para>Used by Zombie to return rate terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="38" column="20"/>
+        <referencedby refid="classStoich_1a08295665d027898de0471e13921af9d6" compoundref="Stoich_8cpp" startline="1177" endline="1195">Stoich::convertRatesToStochasticForm</referencedby>
+        <referencedby refid="classStoich_1af8b18c898cc0569360f64edbfb337680" compoundref="Stoich_8cpp" startline="1893" endline="1896">Stoich::getR1</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a2c4c0263d71fccd67d8a3b377d11e3da" compoundref="VoxelPoolsBase_8cpp" startline="163" endline="166">VoxelPoolsBase::getR1</referencedby>
+        <referencedby refid="classStoich_1a4d6ead42de3f2b8f6e9d2c6d305e95ef" compoundref="Stoich_8cpp" startline="1897" endline="1900">Stoich::getR1offset1</referencedby>
+        <referencedby refid="classStoich_1a458909a88e7567997387a6bd9d33322e" compoundref="Stoich_8cpp" startline="1901" endline="1904">Stoich::getR1offset2</referencedby>
+        <referencedby refid="classStoich_1a6d85bca9ec449a768b8b5d22f51e8145" compoundref="Stoich_8cpp" startline="1139" endline="1175">Stoich::installAndUnschedFuncReac</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">VoxelPoolsBase::print</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1af29746384131d9238627a763c795739c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double RateTerm::getR2</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getR2</name>
+        <qualifiedname>RateTerm::getR2</qualifiedname>
+        <reimplementedby refid="classMMEnzymeBase_1a724fb7e7956059c2b19a8184167fed66">getR2</reimplementedby>
+        <reimplementedby refid="classExternReac_1a4545b555adfbe40f2badf1eaae823d8b">getR2</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1af276750427ae4d85a4fe10ca3285f371">getR2</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1a44e7c726a49f31125472bccef27dfb69">getR2</reimplementedby>
+        <briefdescription>
+<para>Used by Zombie to return rate terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="41" column="20"/>
+        <referencedby refid="classStoich_1a3eb5cdeae6c9cde2b417eba38ae5f530" compoundref="Stoich_8cpp" startline="1910" endline="1913">Stoich::getR2</referencedby>
+        <referencedby refid="classVoxelPoolsBase_1a90f9899ba862c77d2fdf0f85290dd794" compoundref="VoxelPoolsBase_8cpp" startline="381" endline="424">VoxelPoolsBase::print</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1af4d74f9d0b9e5c0d5dd42536e99c73d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned int</type>
+        <definition>virtual unsigned int RateTerm::getReactants</definition>
+        <argsstring>(vector&lt; unsigned int &gt; &amp;molIndex) const =0</argsstring>
+        <name>getReactants</name>
+        <qualifiedname>RateTerm::getReactants</qualifiedname>
+        <reimplementedby refid="classFuncRate_1aedce749d1c83cf817a58800572de498d">getReactants</reimplementedby>
+        <reimplementedby refid="classFuncReac_1ae823f3ba14f3c3d4a719b0749169f30e">getReactants</reimplementedby>
+        <reimplementedby refid="classMMEnzyme1_1aaaf035a5ece5aaf8f8149475258a644c">getReactants</reimplementedby>
+        <reimplementedby refid="classMMEnzyme_1a34a7d14f2d533d5931cf1fd4ffff8b64">getReactants</reimplementedby>
+        <reimplementedby refid="classExternReac_1a04f289a7f892a7dc328a923a3d9451f4">getReactants</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1a2ca165a4cbce02de259a494b525119f0">getReactants</reimplementedby>
+        <reimplementedby refid="classFlux_1a2254fc07844800af0ddb6ad9623488d1">getReactants</reimplementedby>
+        <reimplementedby refid="classFirstOrder_1af852a66796e0ca627a9ada92f9c0b018">getReactants</reimplementedby>
+        <reimplementedby refid="classSecondOrder_1a57cf28154228430cca859c5f8a497e52">getReactants</reimplementedby>
+        <reimplementedby refid="classStochSecondOrderSingleSubstrate_1aa4ca1ec42c693b5b9ea7d30bd4db8be1">getReactants</reimplementedby>
+        <reimplementedby refid="classNOrder_1a2035e90249b181f9f774807b324f8b31">getReactants</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1a8ba2c95f17ca1eef5ff7fb46b0f6c0cb">getReactants</reimplementedby>
+        <param>
+          <type>vector&lt; unsigned int &gt; &amp;</type>
+          <declname>molIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finds the reactant indices in the vector S. It returns the number of substrates found, which are the first entries in molIndex. The products are the remaining ones. Note that it does NOT find products for unidirectional reactions, which is a bit of a problem. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="50" column="27"/>
+        <referencedby refid="classStoich_1a08295665d027898de0471e13921af9d6" compoundref="Stoich_8cpp" startline="1177" endline="1195">Stoich::convertRatesToStochasticForm</referencedby>
+        <referencedby refid="classGsolve_1a32d30dfc9149e4589b9ad99108aab01d" compoundref="Gsolve_8cpp" startline="667" endline="705">Gsolve::fillMmEnzDep</referencedby>
+        <referencedby refid="classMMEnzyme_1a34a7d14f2d533d5931cf1fd4ffff8b64" compoundref="RateTerm_8h" startline="203" endline="208">MMEnzyme::getReactants</referencedby>
+        <referencedby refid="classStoich_1a6d85bca9ec449a768b8b5d22f51e8145" compoundref="Stoich_8cpp" startline="1139" endline="1175">Stoich::installAndUnschedFuncReac</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1a47058d3e308f2499045035f4f76a9ec6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double RateTerm::operator()</definition>
+        <argsstring>(const double *S) const =0</argsstring>
+        <name>operator()</name>
+        <qualifiedname>RateTerm::operator()</qualifiedname>
+        <reimplementedby refid="classFuncRate_1ab82985ce0b81640207fcb13e8c09815c">operator()</reimplementedby>
+        <reimplementedby refid="classFuncReac_1a245b28caa4148981a5d0fb98fd4fd8c9">operator()</reimplementedby>
+        <reimplementedby refid="classMMEnzyme1_1a178c815b1173cb226fe8996b9de43267">operator()</reimplementedby>
+        <reimplementedby refid="classMMEnzyme_1a085602b16accdb2a5ea3b6f4bb2a9270">operator()</reimplementedby>
+        <reimplementedby refid="classExternReac_1acc87c8c1450d1693e84792510494a193">operator()</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1ad0f005da0a5505713d797630dd1d6e83">operator()</reimplementedby>
+        <reimplementedby refid="classFlux_1a8e13856e18ea51216546ca5821061758">operator()</reimplementedby>
+        <reimplementedby refid="classFirstOrder_1a9e2ee1d9673ca111ca16f471c0f985a6">operator()</reimplementedby>
+        <reimplementedby refid="classSecondOrder_1a0a5d88bf861c8382a047d82fb28c4a98">operator()</reimplementedby>
+        <reimplementedby refid="classStochSecondOrderSingleSubstrate_1a932c63dfc97c5a00b30221be049882d8">operator()</reimplementedby>
+        <reimplementedby refid="classNOrder_1a4d59b0b6cf668fe80cf3fab4c840c12c">operator()</reimplementedby>
+        <reimplementedby refid="classStochNOrder_1a940712b3135c9a7cb606f9b05e382cdd">operator()</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1aaa82e355b9fe7d46b4b77467fbae73ac">operator()</reimplementedby>
+        <param>
+          <type>const double *</type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Computes the rate. The argument is the molecule array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="24" column="20"/>
+        <referencedby refid="classGssaVoxelPools_1a6f675fb978d518280508c0dfdbe0fd27" compoundref="GssaVoxelPools_8cpp" startline="322" endline="327">GssaVoxelPools::getReacVelocity</referencedby>
+        <referencedby refid="classMMEnzyme_1a085602b16accdb2a5ea3b6f4bb2a9270" compoundref="RateTerm_8h" startline="193" endline="201">MMEnzyme::operator()</referencedby>
+        <referencedby refid="classVoxelPools_1ab473f3886b4c10ba216a3e09c659c045" compoundref="VoxelPools_8cpp" startline="411" endline="433">VoxelPools::updateRates</referencedby>
+        <referencedby refid="classVoxelPools_1ad752502b7293130ca142bb7dd9b17fdf" compoundref="VoxelPools_8cpp" startline="440" endline="456">VoxelPools::updateReacVelocities</referencedby>
+        <referencedby refid="classGssaVoxelPools_1ad4fc6515575ad28ed614c09647fdf20d" compoundref="GssaVoxelPools_8cpp" startline="304" endline="320">GssaVoxelPools::updateReacVelocities</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1a3fe9a3f2a9c5701276de7aaf89e4bd06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RateTerm::RateTerm</definition>
+        <argsstring>()</argsstring>
+        <name>RateTerm</name>
+        <qualifiedname>RateTerm::RateTerm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="21" column="5" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1ab6098472ad4346f4a5325b4c408fadbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RateTerm::rescaleVolume</definition>
+        <argsstring>(short comptIndex, const vector&lt; short &gt; &amp;compartmentLookup, double ratio)=0</argsstring>
+        <name>rescaleVolume</name>
+        <qualifiedname>RateTerm::rescaleVolume</qualifiedname>
+        <reimplementedby refid="classMMEnzymeBase_1a9bfacd134240187cfae9544173bde5bf">rescaleVolume</reimplementedby>
+        <reimplementedby refid="classExternReac_1aa4240abdc85f23ed33e3b5dcd92359bc">rescaleVolume</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1ab31d8b34ef0bd4b26930aef697a3c117">rescaleVolume</reimplementedby>
+        <reimplementedby refid="classFlux_1a8bd9f5427706e96e4c3081e25304b48d">rescaleVolume</reimplementedby>
+        <reimplementedby refid="classFirstOrder_1aec5783db9cb2a2b4cf0d38a9248cd6ff">rescaleVolume</reimplementedby>
+        <reimplementedby refid="classSecondOrder_1a41a12a78b1910c8dad1168728f37d11f">rescaleVolume</reimplementedby>
+        <reimplementedby refid="classStochSecondOrderSingleSubstrate_1a6c601680f921ae18634d14026c6fb9d1">rescaleVolume</reimplementedby>
+        <reimplementedby refid="classNOrder_1abbf59897c9683da697a60e00f760389c">rescaleVolume</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1ad56b482431c0fcf33bc1c816fbe1a597">rescaleVolume</reimplementedby>
+        <param>
+          <type>short</type>
+          <declname>comptIndex</declname>
+        </param>
+        <param>
+          <type>const vector&lt; short &gt; &amp;</type>
+          <declname>compartmentLookup</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used to rescale the <ref refid="classRateTerm" kindref="compound">RateTerm</ref> kinetics when the compartment volume changes. This is needed because the kinetics are in extensive units, that is, mol numbers, rather than in intensive units like concentration. So when the volume changes the rate terms change. Each Rate term checks if any of its reactant molecules are affected, and if so, rescales. Ratio is newVol / oldVol </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="63" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1ad6eefe002f1444d133e8e65263b7a51b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RateTerm::setR1</definition>
+        <argsstring>(double k1)=0</argsstring>
+        <name>setR1</name>
+        <qualifiedname>RateTerm::setR1</qualifiedname>
+        <reimplementedby refid="classExternReac_1acde3d620c1c91b78d32fe02cbcc2272e">setR1</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1a4c4982b8242f448f63a1377f2b867998">setR1</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1a3460430f9fcfd477ba289d0df012e698">setR1</reimplementedby>
+        <reimplementedby refid="classMMEnzymeBase_1abbb0f107f94834cd81792bc6ad63aa3b">setR1</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>k1</declname>
+        </param>
+        <briefdescription>
+<para>Used by Zombie to assign rate terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="32" column="18"/>
+        <referencedby refid="classStoich_1a8f92d31a5ca706a09931be66343b4779" compoundref="Stoich_8cpp" startline="1834" endline="1840">Stoich::setEnzK1</referencedby>
+        <referencedby refid="classStoich_1a612ab31b2b50b21e2d93596b5c2a5908" compoundref="Stoich_8cpp" startline="1842" endline="1853">Stoich::setEnzK2</referencedby>
+        <referencedby refid="classStoich_1a8e92480473e4133e310f58d3b1ad0ad8" compoundref="Stoich_8cpp" startline="1855" endline="1866">Stoich::setEnzK3</referencedby>
+        <referencedby refid="classStoich_1a06b44dc528b044f90e3cde83d05ee393" compoundref="Stoich_8cpp" startline="1786" endline="1810">Stoich::setMMenzKm</referencedby>
+        <referencedby refid="classStoich_1a854d8c2c49e723bc7a8e3093de486651" compoundref="Stoich_8cpp" startline="1767" endline="1781">Stoich::setReacKb</referencedby>
+        <referencedby refid="classStoich_1ae42b320ff5cd7c073577c8d291582f4a" compoundref="Stoich_8cpp" startline="1744" endline="1752">Stoich::setReacKf</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1af99710d5df81d4deee95303a615a63d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RateTerm::setR2</definition>
+        <argsstring>(double k2)=0</argsstring>
+        <name>setR2</name>
+        <qualifiedname>RateTerm::setR2</qualifiedname>
+        <reimplementedby refid="classExternReac_1a669c9bc33a149e21b54a7e32acc7fd25">setR2</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1a2c84e13c671f27cea28f56957b9eceab">setR2</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1a02e1563e2a55aa193f84ad45e6259866">setR2</reimplementedby>
+        <reimplementedby refid="classMMEnzymeBase_1a761428894fe11dc319ef3c35288a810f">setR2</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+<para>Used by Zombie to assign rate terms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="35" column="18"/>
+        <referencedby refid="classStoich_1a612ab31b2b50b21e2d93596b5c2a5908" compoundref="Stoich_8cpp" startline="1842" endline="1853">Stoich::setEnzK2</referencedby>
+        <referencedby refid="classStoich_1a1745f0f8590244a5c2399cbef5e624e7" compoundref="Stoich_8cpp" startline="1817" endline="1826">Stoich::setMMenzKcat</referencedby>
+        <referencedby refid="classStoich_1a854d8c2c49e723bc7a8e3093de486651" compoundref="Stoich_8cpp" startline="1767" endline="1781">Stoich::setReacKb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1a39cdb3995b885bb809fe50ad0bf62da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RateTerm::setRates</definition>
+        <argsstring>(double k1, double k2)=0</argsstring>
+        <name>setRates</name>
+        <qualifiedname>RateTerm::setRates</qualifiedname>
+        <reimplementedby refid="classExternReac_1afd3413c0b1c04d67ecd596f4d5523d8a">setRates</reimplementedby>
+        <reimplementedby refid="classZeroOrder_1af20df8df444598cdd6f23584b278b5f1">setRates</reimplementedby>
+        <reimplementedby refid="classBidirectionalReaction_1a0cdb0c927097e047ac8d9524d3f7873c">setRates</reimplementedby>
+        <reimplementedby refid="classMMEnzymeBase_1a17f0f7659bae0ce980177c347532b93b">setRates</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign the rates. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="29" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRateTerm_1a097b1971a7652a8771245f17f28356a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual RateTerm::~RateTerm</definition>
+        <argsstring>()</argsstring>
+        <name>~RateTerm</name>
+        <qualifiedname>RateTerm::~RateTerm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="22" column="13" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BidirectionalReaction</label>
+        <link refid="classBidirectionalReaction"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ExternReac</label>
+        <link refid="classExternReac"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>FirstOrder</label>
+        <link refid="classFirstOrder"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Flux</label>
+        <link refid="classFlux"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>FuncRate</label>
+        <link refid="classFuncRate"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>FuncReac</label>
+        <link refid="classFuncReac"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MMEnzyme</label>
+        <link refid="classMMEnzyme"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MMEnzyme1</label>
+        <link refid="classMMEnzyme1"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MMEnzymeBase</label>
+        <link refid="classMMEnzymeBase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>NOrder</label>
+        <link refid="classNOrder"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+      <node id="14">
+        <label>SecondOrder</label>
+        <link refid="classSecondOrder"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>StochNOrder</label>
+        <link refid="classStochNOrder"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>StochSecondOrderSingleSubstrate</label>
+        <link refid="classStochSecondOrderSingleSubstrate"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ZeroOrder</label>
+        <link refid="classZeroOrder"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>RateTerm</label>
+        <link refid="classRateTerm"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" line="18" column="1" bodyfile="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/ksolve/RateTerm.h" bodystart="19" bodyend="77"/>
+    <listofallmembers>
+      <member refid="classRateTerm_1a1ed45d040641861c18c1e896c2512e90" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>copyWithVolScaling</name></member>
+      <member refid="classRateTerm_1a211734fd07c0ef1949907d832d9d03fd" prot="public" virt="non-virtual"><scope>RateTerm</scope><name>EPSILON</name></member>
+      <member refid="classRateTerm_1a59765605f8379adff7e8d53f9fa691e3" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>getR1</name></member>
+      <member refid="classRateTerm_1af29746384131d9238627a763c795739c" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>getR2</name></member>
+      <member refid="classRateTerm_1af4d74f9d0b9e5c0d5dd42536e99c73d1" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>getReactants</name></member>
+      <member refid="classRateTerm_1a47058d3e308f2499045035f4f76a9ec6" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>operator()</name></member>
+      <member refid="classRateTerm_1a3fe9a3f2a9c5701276de7aaf89e4bd06" prot="public" virt="non-virtual"><scope>RateTerm</scope><name>RateTerm</name></member>
+      <member refid="classRateTerm_1ab6098472ad4346f4a5325b4c408fadbd" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>rescaleVolume</name></member>
+      <member refid="classRateTerm_1ad6eefe002f1444d133e8e65263b7a51b" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>setR1</name></member>
+      <member refid="classRateTerm_1af99710d5df81d4deee95303a615a63d1" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>setR2</name></member>
+      <member refid="classRateTerm_1a39cdb3995b885bb809fe50ad0bf62da9" prot="public" virt="pure-virtual"><scope>RateTerm</scope><name>setRates</name></member>
+      <member refid="classRateTerm_1a097b1971a7652a8771245f17f28356a1" prot="public" virt="virtual"><scope>RateTerm</scope><name>~RateTerm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

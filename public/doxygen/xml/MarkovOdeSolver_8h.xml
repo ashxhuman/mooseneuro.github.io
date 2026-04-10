@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="MarkovOdeSolver_8h" kind="file" language="C++">
+    <compoundname>MarkovOdeSolver.h</compoundname>
+    <includedby refid="MarkovOdeSolver_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovOdeSolver.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovOdeSolver.cpp</label>
+        <link refid="MarkovOdeSolver_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovOdeSolver.h</label>
+        <link refid="MarkovOdeSolver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classMarkovOdeSolver" prot="public">MarkovOdeSolver</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2011<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_MARKOVGSLSOLVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_MARKOVGSLSOLVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">//<sp/>Class<sp/>:<sp/>MarkovOdeSolver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>:<sp/>Vishaka<sp/>Datta<sp/>S,<sp/>2011,<sp/>NCBS.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>GslIntegrator<sp/>class<sp/>in<sp/>ksolve<sp/>deals<sp/>with<sp/>a<sp/>system<sp/>whose<sp/>coefficients<sp/>stay</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>constant.<sp/>In<sp/>the<sp/>case<sp/>of<sp/>a<sp/>Markov<sp/>channel,<sp/>the<sp/>coefficients<sp/>of<sp/>the<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>vary<sp/>with<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>makes<sp/>it<sp/>necessary<sp/>for<sp/>the<sp/>system<sp/>to<sp/>keep<sp/>track<sp/>of<sp/>changes<sp/>in<sp/>the<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>matrix,<sp/>which<sp/>is<sp/>implemented<sp/>by<sp/>the<sp/>message<sp/>handler.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>USE_GSL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_odeiv.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----<sp/><sp/>not<sp/>USE_GSL<sp/><sp/>-----<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classMarkovOdeSolver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMarkovOdeSolver" kindref="compound">MarkovOdeSolver</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovOdeSolver_1a480fd0e4fb17e7d0de8b3877a20da3c4" kindref="member">MarkovOdeSolver</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMarkovOdeSolver_1a2149a88e40802598c783d48fc5a898b6" kindref="member">~MarkovOdeSolver</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">//<sp/>Field<sp/>function<sp/>definitions</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a594b6d0730ca81b031285251dafd8bc0" kindref="member">getIsInitialized</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a9d2df6951041fdc6eeea539989cfd0db" kindref="member">getMethod</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a7d02bccbd61536ffa6799bd5fe75f59a" kindref="member">setMethod</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>method<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a91a5dd6774c565efdb3f0f2118da549b" kindref="member">getRelativeAccuracy</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1aadc73bb776e88af7b871cdfe29a4a3d5" kindref="member">setRelativeAccuracy</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a2dfcfcc215d3c98ae94a22f657342ea5" kindref="member">getAbsoluteAccuracy</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a742e5da60c6f5a9d973c482a3a5aca99" kindref="member">setAbsoluteAccuracy</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a71c1edf7fd10b1618d41cd3555b12275" kindref="member">getInternalDt</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1ae7b03440bb61ea31638331709a34c463" kindref="member">setInternalDt</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="comment">//<sp/>Dest<sp/>function<sp/>definitions</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a071ef64f2b1907497c1968de71c66538" kindref="member">process</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>info<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1afd916cfa13581620afcef096d45c0e9d" kindref="member">reinit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classEref" kindref="compound">Eref</ref>&amp;<sp/>e,<sp/><ref refid="classProcInfo" kindref="compound">ProcPtr</ref><sp/>info<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a4b3cdafb0cb028c056d75ec0802805ca" kindref="member">init</ref>(<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a4bb2fd6c9958730f8e9511720a02a2af" kindref="member">handleQ</ref>(<sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCinfo" kindref="compound">Cinfo</ref>*<sp/><ref refid="classMarkovOdeSolver_1a3b0385e0b20fb573b021f8f531b4f2a6" kindref="member">initCinfo</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="classMarkovOdeSolver_1a9de6535ea0b04ddda869c2499aedbf88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a9de6535ea0b04ddda869c2499aedbf88" kindref="member">isInitialized_</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classMarkovOdeSolver_1a38bcfe44e40ef08259cb41898008d908" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a38bcfe44e40ef08259cb41898008d908" kindref="member">method_</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classMarkovOdeSolver_1a34561635ebeaa31f281485d8b6716322" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a34561635ebeaa31f281485d8b6716322" kindref="member">absAccuracy_</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classMarkovOdeSolver_1abc9edc8dcee76f93c5212719ecbbe44b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1abc9edc8dcee76f93c5212719ecbbe44b" kindref="member">relAccuracy_</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classMarkovOdeSolver_1a8188f1fd57e70c4d889159b31105331a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a8188f1fd57e70c4d889159b31105331a" kindref="member">internalStepSize_</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classMarkovOdeSolver_1a59336efcab767bfa803645ffdb631431" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;double&gt;<sp/><ref refid="classMarkovOdeSolver_1a59336efcab767bfa803645ffdb631431" kindref="member">stateOde_</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//The<sp/>following<sp/>four<sp/>variables<sp/>should<sp/>be<sp/>members<sp/>of<sp/>any<sp/>solver<sp/>class<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//will<sp/>be<sp/>implmented.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classMarkovOdeSolver_1af60739348cd98a876769bed21708fbd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1af60739348cd98a876769bed21708fbd0" kindref="member">nVars_</ref>;</highlight></codeline>
+<codeline lineno="72" refid="classMarkovOdeSolver_1abafc0557ddbcee69ada9a5975125ab2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classMarkovOdeSolver_1abafc0557ddbcee69ada9a5975125ab2f" kindref="member">state_</ref>;</highlight></codeline>
+<codeline lineno="73" refid="classMarkovOdeSolver_1ac2b6fa9b6e68718ace2928324f78e411" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classMarkovOdeSolver_1ac2b6fa9b6e68718ace2928324f78e411" kindref="member">initialState_</ref>;</highlight></codeline>
+<codeline lineno="74" refid="classMarkovOdeSolver_1a348ce8dbf413c60e5e60a0f36bb05d9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;<sp/>vector&lt;<sp/>double<sp/>&gt;<sp/>&gt;<sp/><ref refid="classMarkovOdeSolver_1a348ce8dbf413c60e5e60a0f36bb05d9a" kindref="member">Q_</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>USE_GSL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gsl_odeiv_step_type*<sp/>gslStepType_;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>gsl_odeiv_step*<sp/>gslStep_;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>gsl_odeiv_control*<sp/>gslControl_;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>gsl_odeiv_evolve*<sp/>gslEvolve_;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>gsl_odeiv_system<sp/>gslSys_;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>evalSystem(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----<sp/><sp/>not<sp/>USE_GSL<sp/><sp/>-----<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Using<sp/>Boost</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classMarkovOdeSolver_1a8838f7dd426972d115285b5dc43c4cd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMarkovOdeSolver_1a8838f7dd426972d115285b5dc43c4cd9" kindref="member">OdeSystem</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;double&gt;&amp;<sp/>y,<sp/>vector&lt;double&gt;&amp;<sp/>dydt<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----<sp/><sp/>not<sp/>USE_GSL<sp/><sp/>-----<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/MarkovOdeSolver.h"/>
+  </compounddef>
+</doxygen>

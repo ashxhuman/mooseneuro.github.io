@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="SpikeRingBuffer_8h" kind="file" language="C++">
+    <compoundname>SpikeRingBuffer.h</compoundname>
+    <includedby refid="SpikeRingBuffer_8cpp" local="yes">/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/SpikeRingBuffer.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/SpikeRingBuffer.cpp</label>
+        <link refid="SpikeRingBuffer_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/SpikeRingBuffer.h</label>
+        <link refid="SpikeRingBuffer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSpikeRingBuffer" prot="public">SpikeRingBuffer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>This<sp/>program<sp/>is<sp/>part<sp/>of<sp/>&apos;MOOSE&apos;,<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Messaging<sp/>Object<sp/>Oriented<sp/>Simulation<sp/>Environment.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2003-2013<sp/>Upinder<sp/>S.<sp/>Bhalla.<sp/>and<sp/>NCBS</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>It<sp/>is<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>version<sp/>2.1</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/>See<sp/>the<sp/>file<sp/>COPYING.LIB<sp/>for<sp/>the<sp/>full<sp/>notice.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_SPIKE_RING_BUFFER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SPIKE_RING_BUFFER</highlight></codeline>
+<codeline lineno="19" refid="classSpikeRingBuffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSpikeRingBuffer" kindref="compound">SpikeRingBuffer</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSpikeRingBuffer_1a5ed21ab1bbc228d712cdd291c2e49f14" kindref="member">SpikeRingBuffer</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSpikeRingBuffer_1a0324824d3e7ee1c56c7d5be61cd50d02" kindref="member">reinit</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>bufferTime<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSpikeRingBuffer_1a663be7b23d79d84b13afad1f6dcdbc37" kindref="member">addSpike</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>timestamp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>weight<sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSpikeRingBuffer_1ab75da486b4788ff48b1da9c801ba8778" kindref="member">pop</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>currTime<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classSpikeRingBuffer_1a81489ebe3598bdeacb2a2342b5d0716c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSpikeRingBuffer_1a81489ebe3598bdeacb2a2342b5d0716c" kindref="member">MAXBIN</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classSpikeRingBuffer_1ad840921f978d6b6d44953215d626eeb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSpikeRingBuffer_1ad840921f978d6b6d44953215d626eeb2" kindref="member">dt_</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classSpikeRingBuffer_1a4525e3a1e4b3b94bac6ca0a73c843204" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSpikeRingBuffer_1a4525e3a1e4b3b94bac6ca0a73c843204" kindref="member">currTime_</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classSpikeRingBuffer_1a31d66fff15baf890539523ecaf660291" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSpikeRingBuffer_1a31d66fff15baf890539523ecaf660291" kindref="member">currentBin_</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classSpikeRingBuffer_1a07fb150505ff259295940abbb1ac9f9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<sp/>double<sp/>&gt;<sp/><ref refid="classSpikeRingBuffer_1a07fb150505ff259295940abbb1ac9f9e" kindref="member">weightSum_</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_SPIKE_RING_BUFFER</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/mooseneuro.github.io/mooseneuro.github.io/docs/moose-core/biophysics/SpikeRingBuffer.h"/>
+  </compounddef>
+</doxygen>

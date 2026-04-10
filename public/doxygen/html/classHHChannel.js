@@ -1,0 +1,28 @@
+var classHHChannel =
+[
+    [ "HHChannel", "classHHChannel.html#a65f926c9f3808e5551d659db4ce9a24d", null ],
+    [ "~HHChannel", "classHHChannel.html#a53a456d24af6fbe1440ad623ea8218a3", null ],
+    [ "checkOriginal", "classHHChannel.html#af99fd659b088b19e70069c2f41a3c70c", null ],
+    [ "destroyGate", "classHHChannel.html#a629f02c43a7893ea95ec1a5c04894d0e", null ],
+    [ "getNumXgates", "classHHChannel.html#a596579fd9c1dcfa8e3e72c1871807c50", null ],
+    [ "getNumYgates", "classHHChannel.html#a07861bdd19a598c90e55ab7b4fa29ad5", null ],
+    [ "getNumZgates", "classHHChannel.html#a3166a7f95179014597d6d8fcb173ea10", null ],
+    [ "getXgate", "classHHChannel.html#a77aa85cb7ae12fb5af4540d00c3f1a36", null ],
+    [ "getYgate", "classHHChannel.html#ad5ed67b449fed3431844d6d866efbd5e", null ],
+    [ "getZgate", "classHHChannel.html#a80198af9ca8b47c84e09cba6cc0c3803", null ],
+    [ "initCinfo", "classHHChannel.html#a8b1b7177a3d0b0c06b671d9d1242a4ec", null ],
+    [ "innerCreateGate", "classHHChannel.html#a66ceac62368e1dc33fc408379e05e5dc", null ],
+    [ "innerDestroyGate", "classHHChannel.html#aa1046d9b6fadc75050bb60c65e271531", null ],
+    [ "innerSetXpower", "classHHChannel.html#a1eb80d3675f519fe8473e408c7e73bd3", null ],
+    [ "innerSetYpower", "classHHChannel.html#aa7e1197b2d016b939e891d127408f6ea", null ],
+    [ "innerSetZpower", "classHHChannel.html#a73bb303c88c9bc5298766f177b922c5c", null ],
+    [ "setNumGates", "classHHChannel.html#a9fd0cb69f8439b208923748485223197", null ],
+    [ "vCreateGate", "classHHChannel.html#ae0a3ec99ce129c5170c601a022b825ab", null ],
+    [ "vHandleConc", "classHHChannel.html#ac98b9dec681231a5933aad0004e44d8f", null ],
+    [ "vProcess", "classHHChannel.html#ae4ae24e811e1d298a9ea5e1129d40c44", null ],
+    [ "vReinit", "classHHChannel.html#a6aff0899c46ba1dc65bb99835e90924a", null ],
+    [ "conc_", "classHHChannel.html#a51c2908dbe35126d68adc40bc97405c1", null ],
+    [ "xGate_", "classHHChannel.html#a49da7fcfc17efe4cc356c31ff8f8b790", null ],
+    [ "yGate_", "classHHChannel.html#ab070f9c7e20a40f7c102fe00ba3aa16f", null ],
+    [ "zGate_", "classHHChannel.html#a69c7d034da207e6ca66db343c7d3e42a", null ]
+];
