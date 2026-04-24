@@ -29,6 +29,11 @@ jobs:
       - name: Install Sphinx dependencies
         run: pip install -r docs/requirements.txt
 
+      - name: Install pymoose and generate class references
+        run: |
+          pip install pymoose
+          python docs/source/generate_references.py
+
       - name: Build Sphinx docs
         env:
           MOOSE_CORE_PATH: ${{ github.workspace }}/docs/moose-core
@@ -38,16 +43,10 @@ jobs:
       - name: Add CNAME for docs subdomain
         run: echo "docs.mooseneuro.org" > public/docs/CNAME
 
-      - name: Install Doxygen
-        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
-
-      - name: Build Doxygen docs
-        run: cd docs/doxygen && doxygen Doxyfile
-
       - name: Commit and push built docs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f public/docs/ public/doxygen/
+          git add -f public/docs/
           git diff --cached --quiet || git commit -m "chore: update built docs [skip ci]"
           git push

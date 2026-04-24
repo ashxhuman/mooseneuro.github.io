@@ -41,9 +41,14 @@ CHINTA, 2nd Floor, Tower 1, Bengal Eco Intelligent Park, Block EM, Sector V, Sal
 
 Researchers and students from neuroscience, systems biology, computational biology, computer science, physics, and researchers from industries who are interested in or working on computational modelling of biological systems.
 
-## Programme Schedule
+## Tentative Programme Schedule
 
-To be announced.
+  1. Introduction to Neuroscience.
+  2. Introduction to Jardesigner (GUI).
+  3. Hands-on with Jardesigner.
+  4. Installation and set-up of MOOSE.
+  5. Biophysical Neuronal Modeling (Lecture + Hands-on)
+  6. Simplified Neuronal Models and Neural Networks (Lecture + Hands-on)
 
 ## Funders
 
@@ -57,3 +62,5 @@ To be announced.
 ## Contact Information
 
 Email: mooseneuro@gmail.com
+
+> Please note that accommodation and travel expenses are not covered for this workshop.
