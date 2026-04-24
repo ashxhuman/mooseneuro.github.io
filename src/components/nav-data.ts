@@ -21,19 +21,19 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Documentation",
-    href: "/docs",
+    href: "/docs/",
     dropdown: [
       {
         title: "Introduction",
-        href: "https://mooseneuro.org/docs/introduction/introduction.html",
+        href: "/docs/html/introduction/introduction.html",
       },
       {
         title: "Quick Start",
-        href: "https://mooseneuro.org/docs/user/py/quickstart/index_qs.html",
+        href: "/docs/html/user/py/quickstart/index_qs.html",
       },
       {
         title: "Cookbook Examples",
-        href: "https://mooseneuro.org/docs/user/py/cookbook/index_ckbk.html",
+        href: "/docs/html/user/py/cookbook/index_ckbk.html",
       },
       {
         title: "FAQ",
