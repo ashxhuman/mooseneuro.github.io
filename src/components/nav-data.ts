@@ -36,6 +36,10 @@ export const navItems: NavItem[] = [
         href: "/docs/html/user/py/cookbook/index_ckbk.html",
       },
       {
+        title: "Moose Notebooks",
+        href: "https://github.com/mooseNeuro/moose-notebooks",
+      },
+      {
         title: "FAQ",
         href: "/faq",
       },
