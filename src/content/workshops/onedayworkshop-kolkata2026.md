@@ -26,7 +26,7 @@ CHINTA, 2nd Floor, Tower 1, Bengal Eco Intelligent Park, Block EM, Sector V, Sal
 
 ## Registration form: [Link](https://forms.gle/AMeuMm5Ces2ceEBYA)
 
-## Application Deadline: 21st April 2026, 23:59 IST
+## Application Deadline: 21st April 2026, 23:59 IST [Extended 26th April 2026, 23:59 IST]
 
 ## What to Expect
 
