@@ -128,6 +128,7 @@ def generate():
         f.write('.. toctree::\n')
         f.write('   :maxdepth: 1\n')
         f.write('   :glob:\n\n')
+        f.write('   moose_classes\n')
         for classname in generated:
             f.write(f'   {classname}\n')
 

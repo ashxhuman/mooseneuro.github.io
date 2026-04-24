@@ -12,6 +12,7 @@
    known_issues
    contribute
    changelog
+   /doxygen
    /LegacyFeatures/legacy
 
 .. toctree::
