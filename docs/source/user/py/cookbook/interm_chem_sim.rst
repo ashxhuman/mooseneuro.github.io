@@ -1,7 +1,6 @@
 ***************
 Simple Examples
 ***************
-
 .. hidden-code-block:: reStructuredText
    :label: How to run these examples
 
@@ -29,35 +28,69 @@ Simple Examples
    ``.py`` added at the end of it. In this case, the file name would be
    ``cubeMeshSigNeur.py``.
 
-Voltage Clamping
-----------------
 
-.. automodule:: vclamp
+Models' Demonstration
+---------------------
+
+Oscillation Model
+^^^^^^^^^^^^^^^^^
+
+.. automodule:: repressillator
    :members:
    :no-index:
 
-Generate Pulse
-----------------
-
-.. automodule:: pulsegen
+.. automodule:: relaxationOsc
    :members:
    :no-index:
 
-.. automodule:: pulsegen2
+
+Manipulating Chemical Models
+----------------------------
+
+Running with different numerical methods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. automodule:: switchKineticSolvers
    :members:
    :no-index:
 
-Synapse
--------
+Changing volumes
+^^^^^^^^^^^^^^^^
 
-.. automodule:: synapse
+.. automodule:: scaleVolumes
+   :members:
+   :noindex:
+
+Feeding tabulated input to a model
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. automodule:: analogStimTable
    :members:
    :no-index:
 
-Message transmission via synapse
---------------------------------
+Finding steady states
+^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: intfire
+.. automodule:: findChemSteadyState
    :members:
    :no-index:
 
+Making a dose-response curve
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ../../../images/chemDoseResponse.png
+   :alt: Dose-response curve example for a bistable system.
+
+.. automodule:: chemDoseResponse
+   :members:
+   :no-index:
+
+Transport in branching dendritic tree
+-------------------------------------
+
+.. figure:: ../../../images/reacDiffBranchingNeuron.png
+   :alt: Pseudo-3-D rendition of branching neuron and the concs in it.
+
+.. automodule:: transportBranchingNeuron
+   :members:
+   :no-index:

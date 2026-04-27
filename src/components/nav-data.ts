@@ -21,7 +21,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Documentation",
-    href: "/docs/",
+    href: "/docs/html/",
     dropdown: [
       {
         title: "Introduction",
@@ -55,7 +55,7 @@ export const navItems: NavItem[] = [
       },
       {
         title: "Installation Guide",
-        href: "https://github.com/MooseNeuro/moose-core/blob/master/docs/source/install/INSTALL.md",
+        href: "/docs/html/install/index_install.html",
       },
     ],
   },

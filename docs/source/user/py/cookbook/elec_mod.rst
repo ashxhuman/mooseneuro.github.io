@@ -24,7 +24,7 @@ To understand channel kinetics and neuronal action potentials, run the Squid Axo
 
 Read more about compartmental modelling in the first few chapters of the `Book of Genesis <http://www.genesis-sim.org/GENESIS/iBoG/iBoGpdf/index.html>`_.
 
-Models can be defined in `NeuroML <http://www.neuroml.org>`_, an XML format which is mostly supported across simulators. Channels, neuronal morphology (compartments), and networks can be specified using various levels of NeuroML, namely ChannelML, MorphML and NetworkML. Importing of cell models in the `GENESIS <http://www.genesis-sim.org/GENESIS>`_ .p format is supported for backward compatibitility.
+Models can be defined in `NeuroML <https://neuroml.org/>`_, an XML format which is mostly supported across simulators. Channels, neuronal morphology (compartments), and networks can be specified using various levels of NeuroML, namely ChannelML, MorphML and NetworkML. Importing of cell models in the `GENESIS <http://www.genesis-sim.org/GENESIS>`_ .p format is supported for backward compatibitility.
 
 Modeling details
 ================

@@ -1,6 +1,6 @@
-**************************
-Load and Run simple models
-**************************
+***************
+Simple Examples
+***************
 
 .. hidden-code-block:: reStructuredText
    :label: How to run these examples
@@ -28,26 +28,33 @@ Load and Run simple models
    The filename is the bit that comes before the ``.`` in the blue boxes, with
    ``.py`` added at the end of it. In this case, the file name would be
    ``cubeMeshSigNeur.py``.
-|
 
-Single Cubicle Compartmental Neuron
------------------------------------
 
-.. automodule:: cubeMeshSigNeur
+Providing random input to a cell
+--------------------------------
+
+.. automodule:: randomspike
    :members:
    :no-index:
 
-Single Neuron Model
--------------------
+.. figure:: ../../../images/randomSpike.png
+   :scale: 50%
+   :alt: Random spike input to a cell
 
-.. automodule:: testSigNeur
+Recurrent integrate-and-fire network
+------------------------------------
+
+.. automodule:: recurrentIntFire
    :members:
    :no-index:
 
-Load neuron model from GENESIS
-------------------------------
+Demonstration Models
+--------------------
 
-.. automodule:: neuronFromDotp
+.. automodule:: compartment_net
    :members:
    :no-index:
 
+.. automodule:: compartment_net_no_array
+   :members:
+   :no-index:

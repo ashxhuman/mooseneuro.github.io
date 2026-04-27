@@ -2,6 +2,9 @@
 Getting started with python scripting for MOOSE
 ***********************************************
 
+.. contents::
+   :class: this-will-duplicate-information-and-it-is-still-useful-here
+
 .. figure:: ../../../images/Gallery_Moose_Multiscale.png
    :alt: **multiple scales in moose**
    :scale: 100%
@@ -14,10 +17,10 @@ MOOSE is based on an object-based approach. Biological concepts are mapped into 
 
 MOOSE provides support for several model formats, including SBML, NeuroML, GENESIS kkit, and cell.p for models, HDF5 and NSDF for data writing. MOOSE uses SI units for all calculations.
 
-.. contents::
+Contents:
+
    :local:
    :depth: 1
-   :class: this-will-duplicate-information-and-it-is-still-useful-here
 
 Coding basics and how to use this document
 ==========================================
@@ -556,7 +559,7 @@ Finally, we run the simulation for 300 ms ::
 The data will be recorded by the ``soma_vm`` table, which is referenced
 by the variable ``vmtab``. The ``Table`` class provides a numpy array
 interface to its content. The field is ``vector``. So you can easily plot
-the membrane potential using the `matplotlib <http://matplotlib.org/>`__
+the membrane potential using the `matplotlib <https://matplotlib.org/>`__
 library. ::
 
         >>> import pylab

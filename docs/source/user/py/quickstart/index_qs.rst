@@ -8,3 +8,4 @@ Quick Start
    moose_quickstart_edited
    index_demonstration
    classes_demos
+   graphics

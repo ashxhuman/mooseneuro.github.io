@@ -8,5 +8,3 @@ Chemical Aspects
    chem_load_save
    chem_sim_eg
    chem_tut
-   intem_chem_tut
-   interm_chem_tut
