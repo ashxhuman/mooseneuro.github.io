@@ -123,8 +123,6 @@ def generate():
     with open(index_path, 'w') as f:
         f.write('MOOSE Class Reference\n')
         f.write('=====================\n\n')
-        f.write('Auto-generated from ``moose.doc()`` — do not edit manually.\n')
-        f.write('Re-run ``generate_references.py`` to update.\n\n')
         f.write('.. toctree::\n')
         f.write('   :maxdepth: 1\n')
         f.write('   :glob:\n\n')
