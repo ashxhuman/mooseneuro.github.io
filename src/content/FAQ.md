@@ -74,7 +74,7 @@ Another source of frustration is that dimensions of neurons are usually expresse
 
 ### A: Use `wildcardFind` in the form `moose.wildcardFind('{root}/#[TYPE={typename}]')` where `root` is the element under which to search.
 
-Example: You loaded the [Kholodenko 2000 model](https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalOscillators.html#slow-feedback-oscillator) as `'/Kholodenko'` , then the container for the chemicals and reactions is `'/Kholodenko/kinetics/MAPK'` . You want to search for elements of type `Pool` (which represents a pool of molecules or ions) directly under `MAPK`.
+Example: You loaded the [Kholodenko 2000 model](/docs/html/user/py/Tutorials/interm_chem_osc_tut.html#slow-feedback-oscillator) as `'/Kholodenko'` , then the container for the chemicals and reactions is `'/Kholodenko/kinetics/MAPK'` . You want to search for elements of type `Pool` (which represents a pool of molecules or ions) directly under `MAPK`.
 
     In [19]: moose.wildcardFind('/Kholodenko/kinetics[0]/MAPK[0]/#[TYPE==Pool]')
     Out[19]: [<moose.Reac id=521 dataIndex=0 path=/Kholodenko[0]/kinetics[0]/MAPK[0]/Neg_feedback[0]>]
@@ -87,7 +87,7 @@ This returns a list of elements of type `Pool` that are children of `/Kholodenko
 
 ### A: Use `wildcardFind` in the form `moose.wildcardFind('{root}/##[TYPE={typename}]')`
 
-Example: In the [Kholodenko 2000 model](https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalOscillators.html#slow-feedback-oscillator) you want to search for elements of type `Pool` (which represents a pool of molecules or ions) you loaded the model as `"/Kholodenko\"`, then
+Example: In the [Kholodenko 2000 model](/docs/html/user/py/Tutorials/interm_chem_osc_tut.html#slow-feedback-oscillator) you want to search for elements of type `Pool` (which represents a pool of molecules or ions) you loaded the model as `"/Kholodenko\"`, then
 
     In [19]: moose.wildcardFind('/Kholodenko/##[TYPE==Pool]')
     Out[19]: [<moose.Reac id=521 dataIndex=0 path=/Kholodenko[0]/kinetics[0]/MAPK[0]/Neg_feedback[0]>]
@@ -101,7 +101,7 @@ The `##` here tells `wildcardFind` to do a recursive seach, i.e., starting at `{
 ### A: Use `wildcardFind` in the form `moose.wildcardFind('{root}/##[FIELD(name)={name}]')`
 
 This always returns a list of elements. If the name is unique under root, it will be a list with a single element. If there are multiple elements with the same name, this will return a list containing all those elements.
-Example: In the [Kholodenko 2000 model](https://moose.ncbs.res.in/readthedocs/user/py/tutorials/ChemicalOscillators.html#slow-feedback-oscillator) you want to search for the element `"Neg_feedback"`, and you loaded the model as `"/Kholodenko\"`, then
+Example: In the [Kholodenko 2000 model](/docs/html/user/py/Tutorials/interm_chem_osc_tut.html#slow-feedback-oscillator) you want to search for the element `"Neg_feedback"`, and you loaded the model as `"/Kholodenko\"`, then
 
     In [19]: moose.wildcardFind('/Kholodenko/##[FIELD(name)==Neg_feedback]')
     Out[19]: [<moose.Reac id=521 dataIndex=0 path=/Kholodenko[0]/kinetics[0]/MAPK[0]/Neg_feedback[0]>]

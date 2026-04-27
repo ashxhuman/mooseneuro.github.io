@@ -228,6 +228,7 @@ html_css_files = ['custom.css']
 html_js_files = ['custom.js']
 
 html_theme_options = {
+    "logo_url": "https://mooseneuro.org",
     "light_css_variables": {
         "color-brand-primary": "#41729f",
         "color-brand-content": "#41729f",

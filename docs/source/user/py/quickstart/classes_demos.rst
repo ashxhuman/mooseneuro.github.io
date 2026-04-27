@@ -67,11 +67,13 @@ Interpolation
 
 .. literalinclude:: ../../../../moose-examples/snippets/interpol.py
    :language: python
+   :start-after: # block 1 start
    :end-before: # block 1 end
 
 
 .. literalinclude:: ../../../../moose-examples/snippets/loadKineticModel.py
    :language: python
+   :start-after: # block 2 start
    :end-before: # block 2 end
 
 2-dimentional interpolation
@@ -82,6 +84,7 @@ Interpolation
    :no-index:
 .. literalinclude:: ../../../../moose-examples/snippets/interpol2d.py
    :language: python
+   :start-after: # block 1 start
    :end-before: # block 1 end 
 
 SymCompartment

@@ -1,8 +1,6 @@
 name: Build Docs
 
 on:
-  # push:
-  #   branches: [main]
   workflow_dispatch:
 
 env:
@@ -16,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -30,6 +28,9 @@ jobs:
         run: pip install -r docs/requirements.txt
 
       - name: Install pymoose and generate class references
+        env:
+          MOOSE_CORE_PATH: ${{ github.workspace }}/docs/moose-core
+          MOOSE_EXAMPLES_PATH: ${{ github.workspace }}/docs/moose-examples
         run: |
           pip install pymoose
           python docs/source/generate_references.py
@@ -38,15 +39,15 @@ jobs:
         env:
           MOOSE_CORE_PATH: ${{ github.workspace }}/docs/moose-core
           MOOSE_EXAMPLES_PATH: ${{ github.workspace }}/docs/moose-examples
-        run: sphinx-build -b html docs/source public/docs
+        run: sphinx-build -b html docs/source public/docs/html
 
       - name: Add CNAME for docs subdomain
-        run: echo "docs.mooseneuro.org" > public/docs/CNAME
+        run: echo "docs.mooseneuro.org" > public/docs/html/CNAME
 
       - name: Commit and push built docs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f public/docs/
+          git add -f public/docs/html/
           git diff --cached --quiet || git commit -m "chore: update built docs [skip ci]"
           git push

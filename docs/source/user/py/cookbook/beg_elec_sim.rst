@@ -60,3 +60,4 @@ Message transmission via synapse
 .. automodule:: intfire
    :members:
    :no-index:
+

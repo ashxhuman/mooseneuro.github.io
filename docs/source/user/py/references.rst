@@ -21,8 +21,7 @@ To get documentation about a particular field::
    >>> moose.doc('Neutral.childMsg')
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Python API
+   :maxdepth: 2
 
-   /references/moose_functions
-   /references/index_ref
+   ../../references/moose_functions
+   ../../references/moose_classes

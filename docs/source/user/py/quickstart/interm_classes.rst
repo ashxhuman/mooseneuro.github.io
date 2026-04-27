@@ -47,6 +47,7 @@ Interpolation
    :no-index:
 .. literalinclude:: ../../../../moose-examples/snippets/interpol2d.py
    :language: python
+   :start-after: # block 1 start
    :end-before: # block 1 end 
 
 SymCompartment
@@ -54,7 +55,7 @@ SymCompartment
 
 .. automodule:: symcompartment
   :members:
-  :no-index:
+  :no-index
 
 PyMoose
 ^^^^^^^

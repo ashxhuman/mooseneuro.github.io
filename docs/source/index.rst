@@ -3,16 +3,15 @@
 
    /introduction/introduction
    /install/index_install
+   /user/py/quickstart/qs_GUI.rst
    beginner
    intermediate
-   /user/py/quickstart/qs_GUI.rst
-   /user/py/quickstart/index_qs.rst
-   /user/py/cookbook/index_ckbk
-   /user/py/references
+   advanced
+   doxygen
    known_issues
-   contribute
    changelog
    /LegacyFeatures/legacy
+   references/index_ref
 
 .. toctree::
    :maxdepth: 1

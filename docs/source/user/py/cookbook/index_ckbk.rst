@@ -12,6 +12,7 @@ The MOOSE Cookbook contains recipes showing you, how to do specific tasks in MOO
    :maxdepth: 2
    
    beginner
+
    elec
    chem
    network

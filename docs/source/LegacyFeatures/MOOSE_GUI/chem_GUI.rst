@@ -107,7 +107,7 @@ icons, arrows, and grey boxes surrounding these. This is a schematic of
 the reaction scheme being modeled. You can view and change parameters,
 and change the layout of the model.
 
-.. figure:: ../../../images/Moose1.png
+.. figure:: ../../images/Moose1.png
   :alt:
 
 Resizing the model layout and icons:
@@ -204,7 +204,7 @@ irreversibility. In the illustration below, **'D'** and **'A'** are
 substrates, and **'B'** is the product of the reaction. This is
 indicated by the direction of the green arrow.
 
-.. figure:: ../../../images/KkitReaction.png
+.. figure:: ../../images/KkitReaction.png
   :alt:
 
 -  **Icon**: |image2| Reversible reaction arrow.
@@ -246,7 +246,7 @@ named **'MassActionEnz'**, the substrate is **'C'**, and the product is
 **'E'**. The direction of the enzyme reaction is indicated by the red
 arrows.
 
-.. figure:: ../../../images/MassActionEnzReac.png
+.. figure:: ../../images/MassActionEnzReac.png
   :alt:
 
 -  **Icon**: |image3| Colored ellipse atop a small square. The ellipse represents the enzyme. The small square represents **'E.S'**, the enzyme-substrate complex. The ellipse icon has the same color as the enzyme pool **'E'**. It is connected to the enzyme pool **'E'** with a straight line of the same color.
@@ -319,7 +319,7 @@ In the example below, the enzyme pool is named **MM\_Enz**, the
 substrate is **E**, and the product is **P**. The direction of the
 enzyme reaction is indicated by the red arrows.
 
-.. figure:: ../../../images/MM_EnzReac.png
+.. figure:: ../../images/MM_EnzReac.png
    :alt:
 
 - **Icon**: |image4| Colored ellipse. The ellipse represents the enzyme
@@ -369,7 +369,7 @@ variables can be input from pool object.
   editor widget and an **object editor** will pop up with lots of
   parameters with respect to moose object.
 
-.. figure:: ../../../images/chemical_CS.png
+.. figure:: ../../images/chemical_CS.png
   :alt:
 
 **Rules**:
@@ -392,16 +392,16 @@ variables can be input from pool object.
   (Currently **conc** is plotted as default field) Plots are
   color-coded as per in model.
 
-.. figure:: ../../../images/Chemical_run.png
+.. figure:: ../../images/Chemical_run.png
   :alt:
 
 - Model can be run by clicking **start** button. One can stop button in
   mid-stream and start up again without affectiong the calculations.
   The reset button clears the simulation.
 
-.. |image0| image:: ../../../images/Pool.png
-.. |image1| image:: ../../../images/BufPool.png
-.. |image2| image:: ../../../images/KkitReacIcon.png
-.. |image3| image:: ../../../images/MassActionEnzIcon.png
-.. |image4| image:: ../../../images/MM_EnzIcon.png
-.. |image5| image:: ../../../images/func.png
+.. |image0| image:: ../../images/Pool.png
+.. |image1| image:: ../../images/BufPool.png
+.. |image2| image:: ../../images/KkitReacIcon.png
+.. |image3| image:: ../../images/MassActionEnzIcon.png
+.. |image4| image:: ../../images/MM_EnzIcon.png
+.. |image5| image:: ../../images/func.png

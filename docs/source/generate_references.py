@@ -50,6 +50,11 @@ def doc_to_rst(classname, raw):
         line = lines[i]
         stripped = line.strip()
 
+        # Skip raw separator lines from moose.doc() output (e.g. "======", "------")
+        if stripped and all(c in '=-~#^' for c in stripped):
+            i += 1
+            continue
+
         # Section headers (e.g. "Attributes:", "Value Attributes:", "Source messages:")
         if stripped.endswith(':') and stripped == stripped.strip() and len(stripped) < 60:
             rst.append('')
@@ -121,15 +126,25 @@ def generate():
     # Generate index_ref.rst
     index_path = os.path.join(OUT_DIR, 'index_ref.rst')
     with open(index_path, 'w') as f:
-        f.write('MOOSE Class Reference\n')
-        f.write('=====================\n\n')
-        f.write('Auto-generated from ``moose.doc()`` — do not edit manually.\n')
-        f.write('Re-run ``generate_references.py`` to update.\n\n')
+        f.write('References\n')
+        f.write('==========\n\n')
+        f.write('How to use the documentation\n')
+        f.write('----------------------------\n\n')
+        f.write('MOOSE documentation is split into Python documentation and builtin\n')
+        f.write('documentation. The functions and classes that are only part of the\n')
+        f.write('Python interface can be viewed via Python\'s builtin ``help``\n')
+        f.write('function::\n\n')
+        f.write('   >>> help(moose.connect)\n\n')
+        f.write('The documentation built into main C++ code of MOOSE can be accessed\n')
+        f.write('via the module function ``doc``::\n\n')
+        f.write('   >>> moose.doc(\'Neutral\')\n\n')
+        f.write('To get documentation about a particular field::\n\n')
+        f.write('   >>> moose.doc(\'Neutral.childMsg\')\n\n')
         f.write('.. toctree::\n')
         f.write('   :maxdepth: 1\n')
         f.write('   :glob:\n\n')
-        for classname in generated:
-            f.write(f'   {classname}\n')
+        f.write('   moose_functions\n')
+        f.write('   moose_classes\n')
 
     print(f"\nDone: {len(generated)} files written, {len(skipped)} skipped.")
     if skipped:
