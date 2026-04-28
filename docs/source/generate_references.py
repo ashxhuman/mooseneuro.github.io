@@ -8,6 +8,8 @@ Output goes to ../../references/
 
 import io
 import os
+import re
+import shutil
 import sys
 
 import moose
@@ -29,10 +31,25 @@ def get_doc(name):
     return buf.getvalue().strip()
 
 
+def escape_rst_text(text):
+    """Escape RST special sequences in plain text from moose.doc().
+
+    Fixes:
+    - Trailing underscores on words (e.g. baseDt_, dt_) parsed as hyperlink refs
+    - Underscore sequences before non-word chars (e.g. |_________|) parsed as substitutions
+    """
+    # Escape _ when preceded by a word char and followed by a non-word char or end of string
+    return re.sub(r'(\w)_(?=\W|$)', r'\1\_', text)
+
+
 def doc_to_rst(classname, raw):
     """Convert moose.doc() plain-text output to RST."""
     lines = raw.splitlines()
     rst = []
+
+    # Mark as orphan so Sphinx doesn't warn about missing toctree entry
+    rst.append(':orphan:')
+    rst.append('')
 
     # Title
     title = classname
@@ -46,6 +63,7 @@ def doc_to_rst(classname, raw):
         start = 1
 
     i = start
+    in_bullet = False
     while i < len(lines):
         line = lines[i]
         stripped = line.strip()
@@ -56,7 +74,9 @@ def doc_to_rst(classname, raw):
             continue
 
         # Section headers (e.g. "Attributes:", "Value Attributes:", "Source messages:")
-        if stripped.endswith(':') and stripped == stripped.strip() and len(stripped) < 60:
+        # Exclude lines ending with :: (those are literal block intros, not headers)
+        if stripped.endswith(':') and not stripped.endswith('::') and stripped == stripped.strip() and len(stripped) < 60:
+            in_bullet = False
             rst.append('')
             rst.append(stripped)
             rst.append('-' * len(stripped))
@@ -69,26 +89,54 @@ def doc_to_rst(classname, raw):
             field_line = stripped
             rst.append('.. describe:: ' + field_line)
             i += 1
-            # Collect description lines (indented)
-            desc_lines = []
+            # Collect description lines — preserve relative indentation
+            raw_desc = []
             while i < len(lines) and (lines[i].startswith('  ') or lines[i].strip() == ''):
-                desc = lines[i].strip()
-                if desc:
-                    desc_lines.append(desc)
+                raw_desc.append(lines[i])
                 i += 1
-            if desc_lines:
+            # Expand tabs and find minimum indentation of non-empty lines
+            raw_desc = [l.expandtabs(4) for l in raw_desc]
+            non_empty = [l for l in raw_desc if l.strip()]
+            if non_empty:
+                min_ind = min(len(l) - len(l.lstrip()) for l in non_empty)
                 rst.append('')
-                for d in desc_lines:
-                    rst.append('   ' + d)
+                for l in raw_desc:
+                    if l.strip():
+                        # lstrip() removes any excess indent beyond min_ind (tabs/spaces from moose.doc)
+                        rst.append('   ' + escape_rst_text(l[min_ind:].lstrip().rstrip()))
+                    else:
+                        rst.append('')
             rst.append('')
             continue
 
         # Regular text (class description, author, etc.)
+        # Track bullet list context so continuation lines get proper indent
         if stripped:
-            rst.append(stripped)
+            escaped = escape_rst_text(stripped)
+            if escaped.startswith('- ') or escaped.startswith('* '):
+                in_bullet = True
+            elif in_bullet and not escaped.startswith(' '):
+                escaped = '  ' + escaped
+            rst.append(escaped)
+            i += 1
+            # If line ends with ::, indent following content as a literal block
+            if escaped.endswith('::'):
+                in_bullet = False
+                # Skip blank lines and separator lines between :: and the block content
+                while i < len(lines) and (
+                    not lines[i].strip() or
+                    (lines[i].strip() and all(c in '=-~#^' for c in lines[i].strip()))
+                ):
+                    i += 1
+                # Emit indented literal block until next blank line
+                rst.append('')
+                while i < len(lines) and lines[i].strip():
+                    rst.append('   ' + lines[i].rstrip())
+                    i += 1
         else:
+            in_bullet = False
             rst.append('')
-        i += 1
+            i += 1
 
     return '\n'.join(rst)
 
@@ -145,6 +193,37 @@ def generate():
         f.write('   :glob:\n\n')
         f.write('   moose_functions\n')
         f.write('   moose_classes\n')
+
+    # Copy moose_functions.rst and moose_classes.rst from moose-core
+    moose_core = os.environ.get('MOOSE_CORE_PATH') or os.path.join(
+        os.path.dirname(__file__), '..', 'moose-core')
+    moose_core_refs = os.path.join(moose_core, 'docs', 'source', 'user', 'py', 'references')
+    for fname in ('moose_functions.rst', 'moose_classes.rst'):
+        src = os.path.join(moose_core_refs, fname)
+        dst = os.path.join(OUT_DIR, fname)
+        if os.path.isfile(src):
+            shutil.copy2(src, dst)
+            print(f"  copied {fname} from moose-core")
+        else:
+            print(f"  WARNING: {fname} not found in moose-core at {src}")
+
+    # Strip :doc:`ClassName` links in moose_classes.rst for classes that
+    # have no generated RST file (pymoose returned no doc for them).
+    classes_rst = os.path.join(OUT_DIR, 'moose_classes.rst')
+    if os.path.isfile(classes_rst):
+        with open(classes_rst) as f:
+            content = f.read()
+
+        def _strip_missing_doc(m):
+            name = m.group(1)
+            if os.path.isfile(os.path.join(OUT_DIR, name + '.rst')):
+                return m.group(0)
+            print(f"  moose_classes.rst: replacing :doc:`{name}` with plain text (no RST file)")
+            return name
+
+        content = re.sub(r':doc:`([^`]+)`', _strip_missing_doc, content)
+        with open(classes_rst, 'w') as f:
+            f.write(content)
 
     print(f"\nDone: {len(generated)} files written, {len(skipped)} skipped.")
     if skipped:
