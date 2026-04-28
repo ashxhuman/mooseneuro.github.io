@@ -21,19 +21,23 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Documentation",
-    href: "/docs",
+    href: "/docs/html/",
     dropdown: [
       {
         title: "Introduction",
-        href: "https://mooseneuro.org/docs/introduction/introduction.html",
+        href: "/docs/html/introduction/introduction.html",
       },
       {
         title: "Quick Start",
-        href: "https://mooseneuro.org/docs/user/py/quickstart/index_qs.html",
+        href: "/docs/html/user/py/quickstart/index_qs.html",
       },
       {
         title: "Cookbook Examples",
-        href: "https://mooseneuro.org/docs/user/py/cookbook/index_ckbk.html",
+        href: "/docs/html/user/py/cookbook/index_ckbk.html",
+      },
+      {
+        title: "Moose Notebooks",
+        href: "https://github.com/mooseNeuro/moose-notebooks",
       },
       {
         title: "FAQ",
@@ -51,7 +55,7 @@ export const navItems: NavItem[] = [
       },
       {
         title: "Installation Guide",
-        href: "https://github.com/MooseNeuro/moose-core/blob/master/docs/source/install/INSTALL.md",
+        href: "/docs/html/install/index_install.html",
       },
     ],
   },

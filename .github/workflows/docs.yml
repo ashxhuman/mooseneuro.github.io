@@ -1,9 +1,12 @@
 name: Build Docs
 
 on:
-  # push:
-  #   branches: [main]
   workflow_dispatch:
+    inputs:
+      rebuild_doxygen:
+        description: 'Rebuild Doxygen C++ API docs (slow, one-time)'
+        type: boolean
+        default: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -16,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -30,23 +33,36 @@ jobs:
         run: pip install -r docs/requirements.txt
 
       - name: Install pymoose and generate class references
+        env:
+          MOOSE_CORE_PATH: ${{ github.workspace }}/docs/moose-core
+          MOOSE_EXAMPLES_PATH: ${{ github.workspace }}/docs/moose-examples
         run: |
           pip install pymoose
           python docs/source/generate_references.py
+
+      - name: Build Doxygen C++ API docs
+        if: ${{ inputs.rebuild_doxygen }}
+        run: |
+          sudo apt-get install -y doxygen graphviz
+          cd docs/moose-core/docs
+          (cat doxygen/Doxyfile; echo "OUTPUT_DIRECTORY = ${{ github.workspace }}/public/doxygen") | doxygen -
 
       - name: Build Sphinx docs
         env:
           MOOSE_CORE_PATH: ${{ github.workspace }}/docs/moose-core
           MOOSE_EXAMPLES_PATH: ${{ github.workspace }}/docs/moose-examples
-        run: sphinx-build -b html docs/source public/docs
+        run: sphinx-build -b html docs/source public/docs/html
 
       - name: Add CNAME for docs subdomain
-        run: echo "docs.mooseneuro.org" > public/docs/CNAME
+        run: echo "docs.mooseneuro.org" > public/docs/html/CNAME
 
       - name: Commit and push built docs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f public/docs/
+          git add -f public/docs/html/
+          if [ "${{ inputs.rebuild_doxygen }}" = "true" ]; then
+            git add -f public/doxygen/
+          fi
           git diff --cached --quiet || git commit -m "chore: update built docs [skip ci]"
           git push
