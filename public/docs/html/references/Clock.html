@@ -254,6 +254,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../install/install.html#installing-from-source-code-in-github-repository">Installing from source code in Github repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install/install.html#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install/install.html#uninstall">Uninstall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/WindowsBuild.html">Building and Installing MOOSE on Windows with MSVC</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../user/py/quickstart/qs_GUI.html">Jardesigner: Graphical User Interface</a><input aria-label="Toggle navigation of Jardesigner: Graphical User Interface" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -393,7 +394,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="index_ref.html">References</a><input aria-label="Toggle navigation of References" class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="index_ref.html">References</a><input aria-label="Toggle navigation of References" class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="moose_functions.html">MOOSE Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moose_classes.html">Class Hierarchy</a></li>
 </ul>
 </li>
 </ul>
@@ -437,7 +440,7 @@
           <section id="clock">
 <h1>Clock<a class="headerlink" href="#clock" title="Link to this heading">¶</a></h1>
 <p>Every object scheduled for operations in MOOSE is connected to oneof the 'Tick' entries on the Clock.
-The Clock manages 32 'Ticks', each of which has its own dt,which is an integral multiple of the clock <a href="#id5"><span class="problematic" id="id6">baseDt_</span></a>. On every clock step the ticks are examined to see which of themis due for updating. When a tick is updated, the 'process' call of all the objects scheduled on that tick is called. Order of execution: If a subset of ticks are scheduled for execution at a given timestep, then they will be executed in numerical order, lowest tick first and highest last. There is no guarantee of execution order for objects within a clock tick.
+The Clock manages 32 'Ticks', each of which has its own dt,which is an integral multiple of the clock baseDt_. On every clock step the ticks are examined to see which of themis due for updating. When a tick is updated, the 'process' call of all the objects scheduled on that tick is called. Order of execution: If a subset of ticks are scheduled for execution at a given timestep, then they will be executed in numerical order, lowest tick first and highest last. There is no guarantee of execution order for objects within a clock tick.
 The clock provides default scheduling for all objects which can be accessed using Clock::lookupDefaultTick( className ). Specific items of note are that the output/file dump objects are second-last, and the postmaster is last on the order of Ticks. The clock also starts up with some default timesteps for each of these ticks, and this can be overridden using the shell command setClock, or by directly assigning tickStep values on the clock object.Which objects use which tick? As a rule of thumb, try this:
 Electrical/compartmental model calculations: Ticks 0-7
 Tables and output objects for electrical output: Tick 8
@@ -760,7 +763,7 @@ SrcFinfo</p>
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">tickDt</span> <span class="pre">(type:</span> <span class="pre">unsigned</span> <span class="pre">int,double,</span> <span class="pre">class:</span> <span class="pre">Clock)</span></span></dt>
-<dd><p>Timestep dt of specified Tick. Always integral multiple of <a href="#id7"><span class="problematic" id="id8">dt_</span></a>. If you
+<dd><p>Timestep dt of specified Tick. Always integral multiple of dt_. If you
 assign a non-integer multiple it will round off. A zero timestep means
 that the Tick is inactive</p>
 </dd></dl>
@@ -768,7 +771,7 @@ that the Tick is inactive</p>
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">tickStep</span> <span class="pre">(type:</span> <span class="pre">unsigned</span> <span class="pre">int,unsigned</span> <span class="pre">int,</span> <span class="pre">class:</span> <span class="pre">Clock)</span></span></dt>
-<dd><p>Step size of specified Tick, as integral multiple of <a href="#id9"><span class="problematic" id="id10">dt_</span></a> A zero step
+<dd><p>Step size of specified Tick, as integral multiple of dt_ A zero step
 size means that the Tick is inactive</p>
 </dd></dl>
 
@@ -1817,6 +1820,6 @@ actually in use.</p>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/custom.js?v=1f83c2a5"></script>
+    <script src="../_static/custom.js?v=e02e8bd8"></script>
     </body>
 </html>

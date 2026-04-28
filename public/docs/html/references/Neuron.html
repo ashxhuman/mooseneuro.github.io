@@ -254,6 +254,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../install/install.html#installing-from-source-code-in-github-repository">Installing from source code in Github repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install/install.html#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install/install.html#uninstall">Uninstall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/WindowsBuild.html">Building and Installing MOOSE on Windows with MSVC</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../user/py/quickstart/qs_GUI.html">Jardesigner: Graphical User Interface</a><input aria-label="Toggle navigation of Jardesigner: Graphical User Interface" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -393,7 +394,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="index_ref.html">References</a><input aria-label="Toggle navigation of References" class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="index_ref.html">References</a><input aria-label="Toggle navigation of References" class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="moose_functions.html">MOOSE Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moose_classes.html">Class Hierarchy</a></li>
 </ul>
 </li>
 </ul>
@@ -483,12 +486,12 @@ by the expression. The <em>expression</em> argument is a mathematical expression
 in the muparser framework, which permits most operations including trig
 and transcendental ones. Of course it also handles simple numerical values
 like 1.0, 1e-10 and so on. Available arguments for muParser are: p, g,
-L, len, dia, maxP, maxG, maxL        p: path distance from soma, measured along
-dendrite, in metres.         g: geometrical distance from soma, in metres.   L:
+L, len, dia, maxP, maxG, maxL     p: path distance from soma, measured along
+dendrite, in metres.  g: geometrical distance from soma, in metres.   L:
 electrotonic distance (# of lambdas) from soma, along dend. No units.
-len: length of compartment, in metres.       dia: for diameter of compartment,
-in metres.   maxP: Maximum value of <em>p</em> for this neuron.     maxG: Maximum
-value of <em>g</em> for this neuron.        maxL: Maximum value of <em>L</em> for this neuron.
+len: length of compartment, in metres.  dia: for diameter of compartment,
+in metres.    maxP: Maximum value of <em>p</em> for this neuron.     maxG: Maximum
+value of <em>g</em> for this neuron.     maxL: Maximum value of <em>L</em> for this neuron.
 The expression for the first field must evaluate to &gt; 0 for the channel
 to be installed. For example, for channels, if Field == Gbar, and func(
 r, L, len, dia) &lt; 0, then the channel is not installed. This feature
@@ -502,7 +505,7 @@ Gbar is automatically scaled by the area of the compartment, and the
 user does not need to insert this scaling into the calculations. All
 parameters are expressed in SI units. Conductance, for example, is Siemens/sq
 metre. Some example function forms might be for a channel Gbar: p &lt; 10e-6
-? 400 : 0.0          equivalently, H(10e-6 - p) * 400                equivalently, ( sign(10e-6
+? 400 : 0.0       equivalently, H(10e-6 - p) * 400        equivalently, ( sign(10e-6
 - p) + 1) * 200 Each of these forms instruct the function to set channel
 Gbar to 400 S/m^2 only within 10 microns path distance of soma L &lt; 1.0
 ? 100 * exp( -L ) : 0.0 -&gt;Set channel Gbar to an exponentially falling
@@ -667,12 +670,12 @@ the parameter that is to be assigned by the expression. The <em>expression</em>
 argument is a mathematical expression in the muparser framework, which
 permits most operations including trig and transcendental ones. Of course
 it also handles simple numerical values like 1.0, 1e-10 and so on. Available
-arguments for muParser are: p, g, L, len, dia, maxP, maxG, maxL      p: path
-distance from soma, measured along dendrite, in metres.      g: geometrical
-distance from soma, in metres.       L: electrotonic distance (# of lambdas)
-from soma, along dend. No units.     len: length of compartment, in metres.
-dia: for diameter of compartment, in metres.         maxP: Maximum value of
-<em>p</em> for this neuron.         maxG: Maximum value of <em>g</em> for this neuron.     maxL:
+arguments for muParser are: p, g, L, len, dia, maxP, maxG, maxL   p: path
+distance from soma, measured along dendrite, in metres.   g: geometrical
+distance from soma, in metres.    L: electrotonic distance (# of lambdas)
+from soma, along dend. No units.  len: length of compartment, in metres.
+dia: for diameter of compartment, in metres.    maxP: Maximum value of
+<em>p</em> for this neuron.  maxG: Maximum value of <em>g</em> for this neuron.     maxL:
 Maximum value of <em>L</em> for this neuron. Available fields are: RM, RA, CM,
 Rm, Ra, Cm, Em, initVm The first three fields are scaled appropriately
 by the dimensions of their compartment. Thus the membrane resistivity
@@ -736,15 +739,15 @@ also handles simple numerical values like 1.0, 1e-10 and so on. The paired
 arguments are as follows: The <em>field</em> argument specifies the name of
 the parameter that is to be assigned by the expression. The <em>expression</em>
 argument is a mathematical expression as above. Available arguments for
-muParser are: p, g, L, len, dia, maxP, maxG, maxL    p: path distance from
-soma, measured along dendrite, in metres.    g: geometrical distance from
-soma, in metres.     L: electrotonic distance (# of lambdas) from soma,
-along dend. No units.        len: length of compartment, in metres.  dia: for
-diameter of compartment, in metres.  maxP: Maximum value of <em>p</em> for this
-neuron.      maxG: Maximum value of <em>g</em> for this neuron.     maxL: Maximum value
+muParser are: p, g, L, len, dia, maxP, maxG, maxL     p: path distance from
+soma, measured along dendrite, in metres.     g: geometrical distance from
+soma, in metres.  L: electrotonic distance (# of lambdas) from soma,
+along dend. No units.     len: length of compartment, in metres.  dia: for
+diameter of compartment, in metres.   maxP: Maximum value of <em>p</em> for this
+neuron.   maxG: Maximum value of <em>g</em> for this neuron.     maxL: Maximum value
 of <em>L</em> for this neuron. The expression for the <em>spacing</em> field must evaluate
 to &gt; 0 for the spine to be installed. For example, if the expresssion
-is           H(1 - L) then the systemwill only put spines closer than one length
+is        H(1 - L) then the systemwill only put spines closer than one length
 constant from the soma, and zero elsewhere. Available spine parameters
 are: spacing, minSpacing, size, sizeDistrib angle, angleDistrib minSpacing
 sets the granularity of sampling (typically about 0.1*spacing) for the
@@ -1475,6 +1478,6 @@ spines.</p>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/custom.js?v=1f83c2a5"></script>
+    <script src="../_static/custom.js?v=e02e8bd8"></script>
     </body>
 </html>
