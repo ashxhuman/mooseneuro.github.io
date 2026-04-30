@@ -7,7 +7,8 @@ import BlogsLayout from "@/layouts/BlogsLayout.astro";
 ---
 
 <BlogsLayout>
-  <section class="p-12 h-full">
+  <Hero title="Blogs" />
+  <section class="py-12 lg:py-16">
     <BlogCarouselWrapper client:load blogs={await getCollection("blogs")} />
   </section>
 </BlogsLayout>

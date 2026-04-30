@@ -5,7 +5,6 @@ import Footer from "../components/footer.astro";
 import { SITE_TITLE } from "../constants";
 import Navbar from "@/components/Navbar";
 import { seoData } from "../data/schema";
-import Banner from "@/components/banner";
 import DiscussionButton from "@/components/ui/DiscussionButton.jsx";
 interface Props {
   title?: string;
@@ -80,7 +79,6 @@ const fullTitle = `${SITE_TITLE} | ${title}`;
     <title>{fullTitle}</title>
   </head>
   <body>
-    <Banner client:only="react" />
     <Navbar client:only="react" transparentOnTop={transparentNav} />
     <slot />
     <DiscussionButton client:only="react" />
