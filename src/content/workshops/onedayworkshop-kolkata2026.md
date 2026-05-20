@@ -50,6 +50,10 @@ Researchers and students from neuroscience, systems biology, computational biolo
   5. Biophysical Neuronal Modeling (Lecture + Hands-on)
   6. Simplified Neuronal Models and Neural Networks (Lecture + Hands-on)
 
+<a href="/assets/workshops/Programme_Schedule_1DayWorkshop.pdf" target="_blank" rel="noopener noreferrer">
+  Programme Schedule
+</a>
+
 ## Funders
 
 <img src="/assets/funders/The_Kavli_Foundation_Logo_Blue_Red.png" alt="The Kavli Foundation" width="200"/>
