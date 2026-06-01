@@ -83,7 +83,7 @@ If you use morphology conversion or reduction features in your research, please 
 
 ---
 
-<div align='center'>
+<div style="text-align: center">
 
 *Thank you to everyone who contributed to this release and a special thanks to the **ICGenealogy project**, [**Prof. Tim Vogels' group**](https://ista.ac.at/en/research/vogels-group/) at IST Austria, and [**Prof. Avrama Blackwell's group**](https://engineering.uiowa.edu/directory/kim-avrama-blackwell) at University of Iowa ([ShapeShifter](https://github.com/neurord/ShapeShifter)) for the foundational work that made two of this release's major features possible.*
 
