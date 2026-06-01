@@ -19,7 +19,7 @@ CHINTA, TCG CREST, Bengal Eco Intelligent Park, Block EM, Sector V, Salt Lake, K
 
 ## To apply, complete this and submit: [Application Form](https://docs.google.com/forms/d/e/1FAIpQLScfMZ3s0Y9lH8E25fKVVBNV1RTWwpaodLbchqyQbauijY6j5A/viewform?usp=dialog)
 
-## Application Deadline: 31st May 2026, 23:59 IST
+## Application Deadline: ~~31st May, 2026~~ <span style="color:#776fff;">10th June 2026, 23:59 IST</span> <span style="color:#776fff;font-weight:bold;">[Extended]</span>
 
 ## About the Workshop
 
