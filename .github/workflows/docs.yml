@@ -1,6 +1,13 @@
 name: Build Docs
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/moose-core'
+      - 'docs/source/**'
+      - 'docs/requirements.txt'
+      - '.github/workflows/docs.yml'
   workflow_dispatch:
     inputs:
       rebuild_doxygen:
@@ -58,7 +65,7 @@ jobs:
         run: python docs/source/generate_references.py
 
       - name: Build Doxygen C++ API docs
-        if: ${{ inputs.rebuild_doxygen }}
+        if: ${{ inputs.rebuild_doxygen == true }}
         run: |
           sudo apt-get install -y doxygen graphviz
           cd docs/moose-core/docs
@@ -84,7 +91,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -fA public/docs/html/
+          git add -fA public/docs/html/ docs/source/references/
           if [ "${{ inputs.rebuild_doxygen }}" = "true" ]; then
             git add -fA public/doxygen/
           fi
