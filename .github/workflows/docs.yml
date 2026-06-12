@@ -91,6 +91,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/moose-core
           git add -fA public/docs/html/ docs/source/references/
           if [ "${{ inputs.rebuild_doxygen }}" = "true" ]; then
             git add -fA public/doxygen/
