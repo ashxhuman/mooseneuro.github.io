@@ -21,6 +21,8 @@ CHINTA, TCG CREST, Bengal Eco Intelligent Park, Block EM, Sector V, Salt Lake, K
 
 ## Application Deadline: ~~31st May, 2026~~ <span style="color:#776fff;">10th June 2026, 23:59 IST</span> <span style="color:#776fff;font-weight:bold;">[Extended]</span>
 
+<span style="color:red" class="text-xl">[Closed]</span>
+
 ## About the Workshop
 
 **Multiscale Modelling with MOOSE** *From Molecules to Neural Networks*
@@ -60,17 +62,9 @@ We encourage you to apply even with beginners level of coding experience.
 
   <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
     <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;border:2px solid #41729f;">
-      <img src="/assets/workshops/speakers/poirazi.jpg" alt="Dr. Panayiota Poirazi" style="width:100%;height:100%;object-fit:cover;object-position:center;" />
-    </div>
-    <a href="https://www.imbb.forth.gr/en/research/Panayiota-Poirazi.46/" target="_blank" rel="noopener noreferrer" style="margin-top:0.75rem;font-weight:600;color:#41729f;text-decoration:none;">Dr. Panayiota Poirazi <em style="font-size:0.8rem;">(tentative)</em></a>
-    <span style="font-size:0.85rem;color:#6b7280;">IMBB-FORTH, Greece</span>
-  </div>
-
-  <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-    <div style="width:120px;height:120px;border-radius:50%;overflow:hidden;border:2px solid #41729f;">
       <img src="/assets/workshops/speakers/chintaluri.jpg" alt="Dr. Chaitanya Chintaluri" style="width:100%;height:100%;object-fit:cover;object-position:center;" />
     </div>
-    <a href="https://ista.ac.at/en/research/vogels-group/" target="_blank" rel="noopener noreferrer" style="margin-top:0.75rem;font-weight:600;color:#41729f;text-decoration:none;">Dr. Chaitanya Chintaluri <em style="font-size:0.8rem;">(tentative)</em></a>
+    <a href="https://ista.ac.at/en/research/vogels-group/" target="_blank" rel="noopener noreferrer" style="margin-top:0.75rem;font-weight:600;color:#41729f;text-decoration:none;">Dr. Chaitanya Chintaluri</a>
     <span style="font-size:0.85rem;color:#6b7280;">IST Austria</span>
   </div>
 
@@ -148,6 +142,8 @@ Coming Soon.
     <img src="/assets/funders/The_Kavli_Foundation_Logo_Blue_Red.png" alt="The Kavli Foundation" style="max-width:100%;max-height:100%;object-fit:contain;" />
   </div>
 </div>
+
+We thank the Kavli Foundation for support through the EOSS Grant Cycle 6.
 
 ## Supported By
 
