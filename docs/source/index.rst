@@ -12,6 +12,7 @@
    changelog
    /LegacyFeatures/legacy
    references/index_ref
+   database_resources
 
 .. toctree::
    :maxdepth: 1

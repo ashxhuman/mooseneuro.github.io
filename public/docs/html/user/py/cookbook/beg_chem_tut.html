@@ -7,7 +7,7 @@
         <link rel="prefetch" href="../../../_static/moose_logo.png" as="image">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Tutorials - MOOSE Kalakand 4.2.0</title>
+        <title>Tutorials - MOOSE Lavang Latika 4.3.0</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -213,7 +213,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">MOOSE Kalakand 4.2.0</div></a>
+      <a href="../../../index.html"><div class="brand">MOOSE Lavang Latika 4.3.0</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -237,7 +237,7 @@
     <img class="sidebar-logo" src="../../../_static/moose_logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">MOOSE Kalakand 4.2.0</span>
+  <span class="sidebar-brand-text">MOOSE Lavang Latika 4.3.0</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -247,14 +247,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../introduction/introduction.html">Introduction</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../install/index_install.html">Installation</a><input aria-label="Toggle navigation of Installation" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/install.html">Installing MOOSE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/install.html#installing-released-version-from-pypi-using-pip">Installing released version from PyPI using pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/install.html#installing-from-a-binary-wheel-using-pip">Installing from a binary wheel using pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/install.html#installing-from-source-code-in-github-repository">Installing from source code in Github repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/install.html#troubleshooting">Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/install.html#uninstall">Uninstall</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../install/WindowsBuild.html">Building and Installing MOOSE on Windows with MSVC</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../install/index_install.html">Installation</a><input aria-label="Toggle navigation of Installation" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../quickstart/qs_GUI.html">Jardesigner: Graphical User Interface</a><input aria-label="Toggle navigation of Jardesigner: Graphical User Interface" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
@@ -399,6 +392,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../references/moose_classes.html">Class Hierarchy</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../database_resources.html">Resources</a><input aria-label="Toggle navigation of Resources" class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="simple">
+</ul>
+</li>
 </ul>
 
 </div>
@@ -477,54 +473,6 @@ The filename is the bit that comes before the <span class="s">``.``</span> in th
 </div>
 </div><section id="finding-steady-state-cspace">
 <h2>Finding Steady State (CSpace)<a class="headerlink" href="#finding-steady-state-cspace" title="Link to this heading">¶</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-prename descclassname"><span class="pre">cspaceSteadyState.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/cspaceSteadyState.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
-<dd><p>This example sets up the kinetic solver and steady-state finder, on
-a bistable model.
-It looks for the fixed points 100 times, as follows:
-- Set up the random initial condition that fits the conservation laws
-- Run for 2 seconds. This should not be mathematically necessary, but</p>
-<blockquote>
-<div><p>for obscure numerical reasons it is much more likely that the
-steady state solver will succeed in finding a state.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>Find the fixed point</p></li>
-<li><p>Print out the fixed point vector and various diagnostics.</p></li>
-<li><p>Run for 10 seconds. This is completely unnecessary, and is done here
-just so that the resultant graph will show what kind of state has been
-found.</p></li>
-</ul>
-<p>After it does all this, the program runs for 100 more seconds on the last
-found fixed point (which turns out to be a saddle node), then
-is hard-switched in the script to the first attractor basin from which
-it runs for another 100 seconds till it settles there, and then
-is hard-switched yet again to the second attractor and runs for 100
-seconds.
-Looking at the output you will see many features of note:
-- the first attractor (stable point) and the saddle point</p>
-<blockquote>
-<div><p>(unstable fixed point) are both found quite often. But the second
-attractor is found just once. Has a very small basin of attraction.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>The values found for each of the fixed points match well with the
-values found by running the system to steady-state at the end.</p></li>
-<li><p>There are a large number of failures to find a fixed point. These are
-found and reported in the diagnostics. They show up on the plot
-as cases where the 10-second runs are not flat.</p></li>
-</ul>
-<p>If you wanted to find fixed points in a production model, you would
-not need to do the 10-second runs, and you would need to eliminate the
-cases where the state-finder failed. Then you could identify the good
-points and keep track of how many of each were found.
-There is no way to guarantee that all fixed points have been found using
-this algorithm!
-You may wish to sample concentration space logarithmically rather than
-linearly.</p>
-</dd></dl>
-
 </section>
 <section id="define-a-kinetic-model-using-the-scripting">
 <h2>Define a kinetic model using the scripting<a class="headerlink" href="#define-a-kinetic-model-using-the-scripting" title="Link to this heading">¶</a></h2>
@@ -614,7 +562,7 @@ Runge-Kutta-Fehlberg integration scheme on this same model.</p>
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=c2a7f565"></script>
+</div><script src="../../../_static/documentation_options.js?v=ea1a204b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/scripts/furo.js?v=46bd48cc"></script>

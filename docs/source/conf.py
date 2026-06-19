@@ -151,7 +151,7 @@ todo_include_todos = True
 templates_path = ['_templates']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
@@ -418,7 +418,8 @@ numpydoc_show_class_members = False
 
 # autodoc options to mock MOOSE module
 autodoc_mock_imports = [ 'numpy' , 'moose.sbml' , 'moose.genesis' , 'moose.LIF'
-        , 'moogli.extensions.moose' , 'extensions.moose', 'moose' , 'moose.SBML'
+        , 'moogli.extensions.moose' , 'extensions.moose', 'moose._moose', 'moose.SBML'
+        , 'moose.neuroml2'
         , 'pylab' , 'moose.genesis' , 'datetime' , 'getpass' , 'h5py'
         , 'matplotlib' , 'squid' , 'PyQt4' , 'moogli' , 'moose.utils'
         , 'math' , 'SquidAxon' , '_moogli' , 'XRRRates' , 'neuroml.NeuroML'
