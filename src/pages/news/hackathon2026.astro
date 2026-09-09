@@ -27,8 +27,8 @@ const SUBMISSION_FORM_URL = "https://forms.gle/tFnPUknXHUAgmhhA9";
       <div class="hero-inner p-12">
         <div>
           <div class="eyebrow">
-            <span class="dot"><span class="ping"></span></span>
-            Hackathon open now
+            <span class="dot"></span>
+            Hackathon closed
           </div>
           <h1>MOOSE Hackathon 2026</h1>
           <p class="tagline">
@@ -295,16 +295,25 @@ const SUBMISSION_FORM_URL = "https://forms.gle/tFnPUknXHUAgmhhA9";
         <div class="card side-card">
           <h3><span class="em">📅</span> Key Dates</h3>
           <div class="date-row">
-            <span class="d-label">Registration closed</span>
+            <span class="d-label"
+              ><span class="cross" aria-hidden="true">✕</span> Registration
+              closed</span
+            >
             <span class="d-value past">14 Aug, 11:59pm IST</span>
           </div>
           <div class="date-row">
-            <span class="d-label">Hackathon starts</span>
-            <span class="d-value">15 Aug, 10:00am IST</span>
+            <span class="d-label"
+              ><span class="cross" aria-hidden="true">✕</span> Hackathon
+              started</span
+            >
+            <span class="d-value past">15 Aug, 10:00am IST</span>
           </div>
           <div class="date-row">
-            <span class="d-label">Hackathon closes</span>
-            <span class="d-value">30 Aug, 11:59pm IST</span>
+            <span class="d-label"
+              ><span class="cross" aria-hidden="true">✕</span> Hackathon
+              closed</span
+            >
+            <span class="d-value past">30 Aug, 11:59pm IST</span>
           </div>
           <div class="countdown" id="countdown">
             <div class="cd-unit">
@@ -505,9 +514,9 @@ const SUBMISSION_FORM_URL = "https://forms.gle/tFnPUknXHUAgmhhA9";
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #c7d2fe;
-    background: rgba(99, 102, 241, 0.14);
-    border: 1px solid rgba(99, 102, 241, 0.35);
+    color: #fde68a;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(251, 191, 36, 0.4);
     font-size: 12.5px;
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -522,23 +531,7 @@ const SUBMISSION_FORM_URL = "https://forms.gle/tFnPUknXHUAgmhhA9";
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #16a34a;
-  }
-  /* Expanding ring, matching the live indicator on the promo banners */
-  .eyebrow .dot .ping {
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: #22c55e;
-    opacity: 0.75;
-    animation: dotPing 3s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
-  @keyframes dotPing {
-    75%,
-    100% {
-      transform: scale(2.4);
-      opacity: 0;
-    }
+    background: #d97706;
   }
   .hero h1 {
     color: #fff;
@@ -856,6 +849,20 @@ const SUBMISSION_FORM_URL = "https://forms.gle/tFnPUknXHUAgmhhA9";
     font-size: 13.5px;
     color: var(--text-secondary);
   }
+  .date-row .cross {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    margin-right: 2px;
+    background: #f3f4f6;
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+  }
   .date-row .d-value {
     font-size: 13.5px;
     font-weight: 600;
@@ -1039,8 +1046,7 @@ const SUBMISSION_FORM_URL = "https://forms.gle/tFnPUknXHUAgmhhA9";
 
   @media (prefers-reduced-motion: reduce) {
     .pool.a,
-    .pool.b,
-    .eyebrow .dot .ping {
+    .pool.b {
       animation: none;
     }
   }
