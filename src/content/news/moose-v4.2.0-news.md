@@ -1,6 +1,13 @@
 ---
 title: "MOOSE v4.2.0 Kalakand is here!"
 date: 2026-04-02
+image: "/assets/news/photos/kalakand.jpg"
+overlay:
+  kicker: "Release"
+  heading: "v4.2.0"
+  subheading: "Kalakand"
+credit: "Photo: Biswarup Ganguly · CC BY 3.0"
+creditUrl: "https://commons.wikimedia.org/wiki/File:Kalakand_Sandesh_-_The_Indismart_Hotel_-_Salt_Lake_City_-_Kolkata_2023-08-13_3303.jpg"
 ---
 
 ### v4.2.0 &mdash; *`Kalakand`*

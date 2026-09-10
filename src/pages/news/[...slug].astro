@@ -22,7 +22,16 @@ const relatedNews = allNews
 ---
 
 <BaseLayout title={news_item.data.title}>
-  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+  <!-- Hero: the darkened photograph, or the brand gradient when the entry has
+       no image of its own (there is no heading here to carry an empty band) -->
+  <div
+    class:list={[
+      "relative isolate overflow-hidden py-24 sm:py-32",
+      news_item.data.image
+        ? "bg-gray-900"
+        : "bg-gradient-to-br from-brand-secondary to-brand-tertiary",
+    ]}
+  >
     {news_item.data.image && (
       <img
         src={news_item.data.image}
@@ -30,11 +39,19 @@ const relatedNews = allNews
         class="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
       />
     )}
-    <div class="mx-auto max-w-7xl px-6 h-[5rem] lg:px-8">
-      <div class="mx-auto max-w-2xl lg:mx-0">
-        <h1 class="text-5xl font-semibold text-white sm:text-7xl">News</h1>
-      </div>
-    </div>
+    {
+      news_item.data.image && news_item.data.credit && (
+        <p class="absolute bottom-2 right-4 text-[8px] text-white/60">
+          {news_item.data.creditUrl ? (
+            <a href={news_item.data.creditUrl} rel="noopener" class="hover:text-white/90">
+              {news_item.data.credit}
+            </a>
+          ) : (
+            news_item.data.credit
+          )}
+        </p>
+      )
+    }
   </div>
 
   <main class="min-h-screen">
