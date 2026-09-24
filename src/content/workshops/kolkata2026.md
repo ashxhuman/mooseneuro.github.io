@@ -128,7 +128,11 @@ We encourage you to apply even with beginners level of coding experience.
 
 ## Programme Schedule
 
-Coming Soon.
+### MOOSE 2026 Workshop Calendar
+
+<div class="not-prose" style="margin:0rem 0rem;overflow-x:auto;">
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FKolkata&showPrint=0&showCalendars=0&mode=WEEK&dates=20261005/20261008&title=MOOSE%202026&src=NTM0NWM2MjMzMmYzYzhjZjUwODBlYjk2MzdiYzEzMjc4NWVkNTJiNDQzNTNjZjg3YThjNmYxNDRjYzIxNzgzMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
 
 ## Organizers
 
