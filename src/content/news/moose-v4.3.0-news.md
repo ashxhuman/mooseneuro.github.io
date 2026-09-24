@@ -1,6 +1,13 @@
 ---
 title: "MOOSE v4.3.0 Lavang Latika is here!"
 date: 2026-05-21
+image: "/assets/news/photos/lavang-latika.jpg"
+overlay:
+  kicker: "Release"
+  heading: "v4.3.0"
+  subheading: "Lavang Latika"
+credit: "Photo: Biswarup Ganguly · CC BY 3.0"
+creditUrl: "https://commons.wikimedia.org/wiki/File:Labanga_Latika_-_Dum_Dum_-_Kolkata_2012-04-22_2092_2217.JPG"
 ---
 
 ### v4.3.0 &mdash; *Lavang Latika*

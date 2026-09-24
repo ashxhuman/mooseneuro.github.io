@@ -1,6 +1,9 @@
 ---
 title: "Meet MOOSE! "
 date: 2026-02-11
+overlay:
+  kicker: "Webinar"
+  heading: "Meet MOOSE!"
 ---
 ### Learn | Explore | Build | Connect
 
