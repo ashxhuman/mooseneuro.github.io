@@ -1,0 +1,89 @@
+---
+// Card artwork for a news entry: the photograph (or the brand gradient when
+// there is none) with the MOOSE logo, the overlay wording and the photo credit
+// composited on top as HTML. Everything textual comes from the entry's
+// frontmatter, so it is edited in the markdown rather than in an image editor.
+//
+// Sizes are in cqw (container-query units), so the same overlay holds its
+// proportions whether it renders in a small grid card or a full-width hero.
+// The cqw figures match the 1200x600 card the artwork was previously baked at;
+// the max() floors stop the text going illegibly small in a narrow grid cell.
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  entry: CollectionEntry<"news">;
+  /** Show the credit chip over the picture. Off for the entry page, which
+      prints the credit beneath the hero instead. */
+  showCredit?: boolean;
+  class?: string;
+}
+
+const { entry, showCredit = true, class: className = "" } = Astro.props;
+const { image, overlay, credit, title } = entry.data;
+const showLogo = overlay?.logo ?? false;
+const hasText = Boolean(
+  overlay?.kicker || overlay?.heading || overlay?.subheading,
+);
+---
+
+<div class={`@container relative w-full overflow-hidden ${className}`}>
+  {
+    image ? (
+      <img
+        src={image}
+        alt={title}
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+    ) : (
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-secondary to-brand-tertiary" />
+    )
+  }
+
+  <!-- brand-tertiary scrim so the overlay stays legible over any photograph -->
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-brand-tertiary/95 via-brand-tertiary/40 to-transparent"
+  >
+  </div>
+
+  {
+    (showLogo || hasText) && (
+      <div class="absolute inset-0 flex flex-col justify-center px-[6cqw]">
+        {showLogo && (
+          <img
+            src="/moose_logo.png"
+            alt="MOOSE"
+            class="mb-[3.3cqw] w-[max(44px,10.3cqw)] object-contain"
+          />
+        )}
+        {overlay?.kicker && (
+          <p class="text-[max(9px,1.67cqw)] font-bold uppercase leading-none tracking-[0.18em] text-[#9fc3e8]">
+            {overlay.kicker}
+          </p>
+        )}
+        {overlay?.heading && (
+          <p class="mt-[1.2cqw] text-[max(20px,5.17cqw)] font-bold leading-none text-white">
+            {overlay.heading}
+          </p>
+        )}
+        {(overlay?.heading || overlay?.subheading) && (
+          <span class="my-[1.8cqw] block h-[0.42cqw] w-[4.3cqw] rounded-full bg-[#9fc3e8]" />
+        )}
+        {overlay?.subheading && (
+          <p class="font-serif text-[max(14px,3.67cqw)] italic leading-none text-[#ecf4fc]">
+            {overlay.subheading}
+          </p>
+        )}
+      </div>
+    )
+  }
+
+  {
+    showCredit && credit && (
+      // fixed size rather than cqw: at card scale a proportional credit line
+      // would be too small to read
+      <p class="absolute bottom-0.5 right-0.5 max-w-[92%] truncate rounded bg-black/40 px-[2px] py-0 text-[5px] leading-snug text-white/70">
+        {credit}
+      </p>
+    )
+  }
+</div>

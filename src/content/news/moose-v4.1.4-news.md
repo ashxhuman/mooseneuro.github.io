@@ -1,6 +1,13 @@
 ---
 title: "New Incremental Release of MOOSE v4.1.4 is here!"
 date: 2026-01-14
+image: "/assets/news/photos/jhangri-v4.1.4.jpg"
+overlay:
+  kicker: "Release"
+  heading: "v4.1.4"
+  subheading: "Jhangri"
+credit: "Photo: Biswarup Ganguly · CC BY 3.0"
+creditUrl: "https://commons.wikimedia.org/wiki/File:Ghee_Fried_Amriti_-_Kolkata_2015-02-06_5756.JPG"
 ---
 
 ### **v4.1.4** — Incremental Release over **v4.1.1**

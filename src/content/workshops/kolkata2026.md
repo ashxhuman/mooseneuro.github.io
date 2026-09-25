@@ -31,7 +31,7 @@ CHINTA, TCG CREST, Bengal Eco Intelligent Park, Block EM, Sector V, Salt Lake, K
 
 The program combines expert-led pedagogical lectures with guided tutorials and intensive hands-on sessions, equipping participants with the theoretical foundations and practical skills to construct, simulate, and analyse multiscale models. Training covers both Python-based scripting workflows and MOOSE's dedicated GUI **Jardesigner**, ensuring accessibility to participants with basic or no coding experience.
 
-As part of the workshop, we will also host a public lecture by **Prof. Michele Migliore ([CNR-IBF](https://www.ibf.cnr.it/), Italy)** titled **"Cognitive functions and dysfunctions emerging from multiscale models of brain systems"**. Aimed at a broad scientific audience, this session will highlight the relevance of multiscale approaches in understanding brain function.
+As part of the workshop, we will also host a public lecture by **Prof. Michele Migliore ([CNR-IBF](https://www.ibf.cnr.it/), Italy)** titled **["Cognitive functions and dysfunctions emerging from multiscale models of brain systems"](/news/migliore-public-talk-2026)**. Aimed at a broad scientific audience, this session will highlight the relevance of multiscale approaches in understanding brain function.
 
 ## What to Expect?
 
@@ -128,7 +128,11 @@ We encourage you to apply even with beginners level of coding experience.
 
 ## Programme Schedule
 
-Coming Soon.
+### MOOSE 2026 Workshop Calendar
+
+<div class="not-prose" style="margin:0rem 0rem;overflow-x:auto;">
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FKolkata&showPrint=0&showCalendars=0&mode=WEEK&dates=20261005/20261008&title=MOOSE%202026&src=NTM0NWM2MjMzMmYzYzhjZjUwODBlYjk2MzdiYzEzMjc4NWVkNTJiNDQzNTNjZjg3YThjNmYxNDRjYzIxNzgzMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
 
 ## Organizers
 
